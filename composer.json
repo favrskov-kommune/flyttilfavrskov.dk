@@ -1,0 +1,121 @@
+{
+  "name": "novicell/dds_core",
+  "description": "Novicell Premium package for Drupal 8 projects with composer",
+  "type": "project",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Novicell Drupal Team",
+      "role": ""
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    },
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.dk/php/"
+    },
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ],
+  "require": {
+    "composer/installers": "^1.2",
+    "drupal-composer/drupal-scaffold": "^2.5",
+    "cweagans/composer-patches": "^1.6.5",
+    "zaporylie/composer-drupal-optimizations": "^1.1",
+    "drush/drush": "^9.0",
+    "drupal/core": "~8.0",
+    "symfony/filesystem": "~3.0",
+    "drupal/console": "^1.8",
+    "novicell/dds_content": "~1.0",
+    "novicell/dds_content_hierarchy": "~2.1",
+    "novicell/dds_cookieinfo": "~2.0",
+    "novicell/dds_editors": "~1.0",
+    "novicell/dds_media": "~2.0",
+    "novicell/dds_monitor": "~1.0",
+    "novicell/dds_paragraph_widgets": "~2.0",
+    "novicell/dds_paragraphs": "~2.0",
+    "novicell/dds_seo": "~1.0",
+    "novicell/dds_site_settings": "~2.0",
+    "novicell/dds_premium_installer": "~1.0"
+  },
+  "require-dev": {
+    "behat/mink": "~1.7",
+    "behat/mink-goutte-driver": "~1.2",
+    "jcalderonzumba/gastonjs": "~1.0.2",
+    "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
+    "mikey179/vfsstream": "~1.2",
+    "phpunit/phpunit": "~4.8",
+    "symfony/css-selector": "~2.8",
+    "drupal/devel": "~1.0"
+  },
+  "conflict": {
+    "drupal/drupal": "*"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "sort-packages": true
+  },
+  "autoload": {
+    "classmap": [
+      "scripts/composer/ScriptHandler.php"
+    ]
+  },
+  "scripts": {
+    "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+    "pre-install-cmd": [
+      "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+    ],
+    "pre-update-cmd": [
+      "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+    ],
+    "post-install-cmd": [
+      "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+      "DrupalProject\\composer\\ScriptHandler::copyDropzoneLibrary",
+      "DrupalProject\\composer\\ScriptHandler::askForRemovingGitDirs"
+    ],
+    "post-update-cmd": [
+      "DrupalProject\\composer\\ScriptHandler::copyDropzoneLibrary",
+      "DrupalProject\\composer\\ScriptHandler::askForRemovingGitDirs"
+    ]
+  },
+  "extra": {
+    "installer-types": [
+      "npm-asset",
+      "bower-asset"
+    ],
+    "installer-paths": {
+      "webroot/core": [
+        "type:drupal-core"
+      ],
+      "webroot/libraries/{$name}": [
+        "type:drupal-library",
+        "type:npm-asset",
+        "type:bower-asset"
+      ],
+      "webroot/modules/contrib/{$name}": [
+        "type:drupal-module"
+      ],
+      "webroot/profiles/contrib/{$name}": [
+        "type:drupal-profile"
+      ],
+      "webroot/themes/contrib/{$name}": [
+        "type:drupal-theme"
+      ],
+      "drush/contrib/{$name}": [
+        "type:drupal-drush"
+      ]
+    },
+    "patches": {
+      "drupal/paragraphs": {
+        "Add new hooks to allow easier editing of paragraph forms": "https://www.drupal.org/files/issues/2868155-16.patch"
+      }
+    }
+  }
+}
