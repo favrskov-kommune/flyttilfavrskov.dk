@@ -1,0 +1,41 @@
+<nav :class="{ 'burger-menu--open': isOpen }" class="burger-menu" id="js-burger-menu">
+  <div @click="closeBurgerMenu()" class="burger-menu__close">
+    <div class="burger-menu__close-label">{{ 'Close (Esc)'|t({}, {'context' : 'premium'}) }}</div>
+    {% include '@dds_premium/components/atoms/a-svg-icon.html.twig' with {
+      'svgIconName': 'close'
+    } %}
+  </div>
+  <div class="container">
+    <div class="burger-menu__inner">
+      <div class="row">
+        <div class="col-xs-12 col-md-6 col-md-offset-1">
+          {{ main_navigation }}
+        </div>
+        <div class="col-xs-12 col-md-2 col-md-offset-1">
+          {{ meta_menu }}
+        </div>
+      </div>
+      {% if contacts|length > 0 %}
+        <div class="row">
+          {% for contact in contacts %}
+            <div class="col-xs-6 col-md-2 {{ loop.first ? 'col-md-offset-1' }}">
+              <div class="burger-menu-contact-info">
+                <h3 class="burger-menu-contact-info__title">{{ contact.title }}</h3>
+                {% if contact.info_lines|length > 0 %}
+                  <p class="burger-menu-contact-info__text">
+                    {% for info_line in contact.info_lines %}
+                      {% if info_line is not empty %}
+                        {{ info_line }}<br>
+                      {% endif %}
+                    {% endfor %}
+                  </p>
+                {% endif %}
+                <a href="{{ contact.link.url }}" class="burger-menu-contact-info__link">{{ contact.link.title }}</a>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</nav>

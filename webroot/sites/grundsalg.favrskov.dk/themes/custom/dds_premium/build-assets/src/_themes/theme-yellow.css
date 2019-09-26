@@ -1,0 +1,7 @@
+.theme-yellow {
+    --theme-background-color: #f0cf61;
+    --theme-color: #232323;
+    --theme-button-background-color: #ebe8e1;
+    --theme-button-color: #232323;
+    --theme-link-color: #232323;
+}

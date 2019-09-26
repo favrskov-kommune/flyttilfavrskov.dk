@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * Theme override to display a single Drupal page while offline.
+ *
+ * All available variables are mirrored in page.html.twig.
+ * Some may be blank but they are provided for consistency.
+ *
+ * @see template_preprocess_maintenance_page()
+ */
+#}
+{% extends "page.html.twig" %}
+
+{% block page_top %}
+  {% include '@dds_premium/components/organisms/o-header.html.twig' with {
+    'site_branding': sitebranding
+  } %}
+{% endblock %}
+
+{% block page_main %}
+  <main role="main" vocab="http://schema.org" typeof="WebPageElement" property="mainContentOfPage">
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+    <div class="layout-content maintenance-page">
+      <h1 class="maintenance-page__title">{{ page_title }}</h1>
+      <div class="maintenance-page__content">{{ page.content }}</div>
+    </div>{# /.layout-content #}
+  </main>
+{% endblock %}

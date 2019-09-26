@@ -1,0 +1,12 @@
+<div class="sub-navigation">
+  <div class="sub-navigation__list">
+    {%- for item in items -%}
+      <a href="{{ item.url }}" class="sub-navigation__item">
+        {{ item.title }}
+        {% include '@dds_premium/components/atoms/a-svg-icon.html.twig' with {
+          'svgIconName': 'arrow-right'
+        } %}
+      </a>
+    {%- endfor -%}
+  </div>
+</div>

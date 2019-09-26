@@ -1,0 +1,17 @@
+<div class="search-overlay" :class="{'search-overlay--open' : isOpen }" id="js-search-overlay">
+    <div class="search-overlay__close" @click="closeSearchOverlay()">
+        {{> '@svg-icon' svgIconName="close" }}
+        <span class="search-overlay__close-label">Luk (Esc)</span>
+    </div>
+
+    <div class="search-overlay__content">
+        <div class="container">
+            <div class="search-overlay__input-field">
+                <input placeholder="Skriv søgeord" type="text" class="input" id="js-search-overlay-input">
+                <button type="submit" class="search-overlay__submit">
+                    {{> '@svg-icon' svgIconName="search" }}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

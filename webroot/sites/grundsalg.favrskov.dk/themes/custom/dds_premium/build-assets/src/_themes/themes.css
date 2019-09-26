@@ -1,0 +1,32 @@
+.section.theme {
+    background-color: var(--theme-background-color);
+    color: var(--theme-color);
+
+    a {
+        color: var(--theme-link-color);
+    }
+    
+    .button {
+        background-color: var(--theme-button-background-color);
+        color: var(--theme-button-color);
+    }
+
+    .button--ghost {
+        background-color: transparent;
+        border-color: var(--theme-button-background-color);
+        color: var(--theme-color);
+    }
+
+    .text-link {
+        color: var(--theme-color);
+
+        &::after {
+            background-color: var(--theme-button-background-color);
+        }
+
+        &:hover,
+        &:focus {
+            color: var(--theme-button-color);
+        }
+    }
+}

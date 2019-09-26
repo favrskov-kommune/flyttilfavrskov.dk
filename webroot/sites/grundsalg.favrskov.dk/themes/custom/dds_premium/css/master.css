@@ -1,0 +1,20 @@
+/* Drupal */
+@import "drupal/header.css";
+@import "drupal/burger-menu.css";
+@import "drupal/local-tasks.css";
+@import "drupal/status-messages.css";
+@import "drupal/login-form.css";
+@import "drupal/reset-password-form.css";
+@import "drupal/maintenance-page.css";
+@import "drupal/forms.css";
+
+/* Site specific */
+@import "site-specific/header.css";
+@import "site-specific/logo.css";
+@import "site-specific/burger.css";
+@import "site-specific/search-toggle.css";
+@import "site-specific/meta-menu.css";
+@import "site-specific/language-menu.css";
+@import "site-specific/input.css";
+@import "site-specific/label.css";
+@import "site-specific/breadcrumb.css";

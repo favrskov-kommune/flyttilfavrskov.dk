@@ -1,0 +1,12 @@
+/* We are changing order of meta menu and hide the navigation */
+@media (max-width: 991px) {
+  .meta-menu {
+    display: block;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+  .meta-menu-list {
+    display: none;
+  }
+}

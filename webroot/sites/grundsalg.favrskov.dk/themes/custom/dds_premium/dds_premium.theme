@@ -1,0 +1,479 @@
+<?php
+
+use Drupal\Core\Entity\ContentEntityInterface;
+use Drupal\Core\Entity\EntityTypeManager;
+use Drupal\Core\File\FileSystemInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
+use Drupal\block\Entity\Block;
+use Drupal\Core\Template\Attribute;
+use Drupal\dds_media\MediaHelper;
+use Drupal\file\Entity\File;
+use Drupal\media\Entity\Media;
+use Drupal\node\Entity\Node;
+use Drupal\node\NodeInterface;
+use GuzzleHttp\Client;
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * @param $variables
+ */
+function dds_premium_preprocess_links__language_block(&$variables) {
+  if (!empty($links = $variables['links'])) {
+    foreach ($links as $key => $link) {
+      $variables['links'][$key]['link']['#options']['attributes']['class'][] = 'language-menu-list-item__link';
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * @param $variables
+ */
+function dds_premium_preprocess_menu__meta_menu(&$variables) {
+  $region = $variables['attributes']['region'] ?? '';
+  // Based on region we will define special classes
+  if ($region == 'header') {
+    $variables['attributes']['class'][] = 'meta-menu-list';
+  } elseif ($region == 'burgermenu') {
+    $variables['attributes']['class'][] = 'burger-menu-list';
+    $variables['attributes']['class'][] = 'burger-menu-list--highlighted';
+  }
+  if (!empty($items = $variables['items'])) {
+    // Based on region we will add a "headline" to the menu
+    if ($region == 'burgermenu') {
+      $headline = [
+        'headline' => [
+          'title' => t('Highlighted', ['context' => 'premium']),
+          'attributes' => (new Attribute)->addClass('burger-menu-list__label')
+        ],
+      ];
+      $variables['items'] = $headline + $variables['items'];
+    }
+    foreach ($items as $key => $item) {
+      if ($region == 'header') {
+        $variables['items'][$key]['attributes']->addClass('meta-menu-item');
+        $variables['items'][$key]['link_options']['class'][] = 'meta-menu-item__link';
+      } elseif ($region == 'burgermenu') {
+        $variables['items'][$key]['attributes']->addClass('burger-menu-list-item');
+        $variables['items'][$key]['link_options']['class'][] = 'burger-menu-list-item__link';
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * @param $variables
+ */
+function dds_premium_preprocess_block(&$variables) {
+  if (isset($variables['elements']['#id'])) {
+    $region = Block::load($variables['elements']['#id'])->getRegion();
+    $variables['content']['#attributes']['region'] = $region;
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ *
+ * @param array $suggestions
+ * @param array $variables
+ */
+function dds_premium_theme_suggestions_menu_alter(array &$suggestions, array $variables) {
+  if (isset($variables['attributes']['region'])) {
+    $suggestions[] = 'menu__' . $variables['menu_name'] . '__' . $variables['attributes']['region'];
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * @param $variables
+ */
+function dds_premium_preprocess_menu__main__burgermenu(&$variables) {
+  $variables['attributes']['class'][] = 'burger-menu-list';
+  $variables['next_level_attributes'] = (new Attribute)
+    ->addClass('burger-menu-list')
+    ->addClass('burger-menu-list--secondary');
+
+  if (!empty($items = $variables['items'])) {
+    $headline = [
+      'headline' => [
+        'title' => t('Menu', ['context' => 'premium']),
+        'attributes' => (new Attribute)->addClass('burger-menu-list__label')
+      ],
+    ];
+    $variables['items'] = $headline + $variables['items'];
+    foreach ($items as $key => $item) {
+      $attributes = $variables['items'][$key]['attributes'];
+      $attributes->addClass('burger-menu-list-item');
+      $attributes->addClass('js-burger-menu-list-item');
+      $variables['items'][$key]['link_options']['class'][] = 'burger-menu-list-item__link';
+
+      // Add same attributes to items under below for next level
+      if (!empty($item['below'])) {
+        $variables['items'][$key]['svg_icon']['name'] = 'arrow-line-down';
+        $variables['items'][$key]['svg_icon']['clickAction'] = 'triggerSubNavigation($event)';
+        $variables['items'][$key]['below'] = $headline + $variables['items'][$key]['below'];
+        foreach ($variables['items'][$key]['below'] as $key_below => $below_value) {
+          if ($key_below == 'headline') {
+            continue;
+          }
+          $attributes = $variables['items'][$key]['below'][$key_below]['attributes'];
+          $attributes->addClass('burger-menu-list-item');
+          $variables['items'][$key]['below'][$key_below]['link_options']['class'][] = 'burger-menu-list-item__link';
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * @param $variables
+ */
+function dds_premium_preprocess_region__burgermenu(&$variables) {
+  $variables['contacts'] = [];
+  // Load contacts from site settings if it exists
+  $contact_infos = $variables['site_settings']['site_settings']['contact_info'] ?? [];
+
+  if (!empty($contact_infos) && is_array($contact_infos)) {
+    foreach ($contact_infos as $contact_info) {
+      $contact_info = _siteContactInfoMapping($contact_info);
+      $variables['contacts'][] = [
+        'title' => $contact_info['title'] ?? '',
+        'info_lines' => [
+          (!empty($contact_info['telephone']) ? [
+            '#type' => 'link',
+            '#title' => $contact_info['telephone'],
+            '#url' => Url::fromUri('tel:' . $contact_info['telephone'])
+          ] : ''),
+          (!empty($contact_info['email']) ? [
+            '#type' => 'link',
+            '#title' => $contact_info['email'],
+            '#url' => Url::fromUri('mailto:' . $contact_info['email'])
+          ] : ''),
+          $contact_info['address'],
+          $contact_info['zip_city'],
+          $contact_info['cvr']
+        ],
+      ];
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * @param $variables
+ */
+function dds_premium_preprocess_page(&$variables) {
+  if (isset($variables['node'])) {
+    /** @var Node $node */
+    if (!empty($node = $variables['node'])) {
+      $variables['pageheader'] = _createPageheader($node);
+    }
+  }
+  $variables['footer'] = _createFooter($variables);
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * @param $variables
+ */
+function dds_premium_preprocess_image(&$variables) {
+  if (isset($variables['attributes']['class'])) {
+    $classes = $variables['attributes']['class'];
+    $implode = implode(' ', $classes);
+    $explode = explode(' ', $implode);
+    if (!empty($explode) && in_array('lazyload', $explode)) {
+      $variables['attributes']['data-src'] = $variables['attributes']['src'];
+      $variables['attributes']['data-query-obj'] = '{}';
+      unset($variables['attributes']['src']);
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * @param $variables
+ */
+function dds_premium_preprocess_maintenance_page(&$variables) {
+  /** @var EntityTypeManager $entity_type_manager */
+  $entity_type_manager = \Drupal::entityTypeManager();
+  $block = Block::load('sitebranding');
+  $variables['sitebranding'] = $entity_type_manager->getViewBuilder('block')->view($block);
+  $variables['page_title'] = $variables['page']['#title'];
+  $variables['footer'] = _createFooter($variables);
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * @param $variables
+ */
+function dds_premium_preprocess_dds_cookieinfo(&$variables) {
+  $variables['section_attributes']->addClass('theme')
+    ->addClass('theme-primary');
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * @param $variables
+ */
+function dds_premium_preprocess_input(&$variables) {
+  $type = $variables['element']['#type'];
+  if ($type == 'checkbox') {
+    $variables['attributes']['class'][] = 'checkbox';
+  }
+  if ($type == 'radio') {
+    $variables['attributes']['class'][] = 'radio';
+  }
+  $excluded_types = [
+    'search',
+    'textfield',
+    'password',
+    'datetime',
+    'datetime-local',
+    'date',
+    'month',
+    'time',
+    'week',
+    'number',
+    'email',
+    'url',
+    'tel',
+    'color',
+  ];
+  if (in_array($type, $excluded_types)) {
+    $variables['attributes']['class'][] = 'input';
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter()
+ *
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ */
+function dds_premium_form_user_pass_alter(&$form, FormStateInterface $form_state) {
+  $form['mail']['#prefix'] = '<div class="input__description">';
+  $form['mail']['#suffix'] = '</div>';
+}
+
+/**
+ * Add schema.org implementation
+ * Add ability to make the breadcrumb white and to float above the hero
+ *
+ * @param $variables
+ */
+function dds_premium_preprocess_breadcrumb(&$variables) {
+  $variables['attributes']['class'][] = 'breadcrumb--pull-down';
+  $variables['attributes']['class'][] = 'breadcrumb--shadow';
+  $variables['#cache']['contexts'][] = 'url';
+
+  $breadcrumb_json_data = [
+    '@context' => 'http://schema.org',
+    '@type' => 'BreadcrumbList',
+    'itemListElement' => [],
+  ];
+  if (!empty($variables['links'])) {
+    /** @var Link $item */
+    foreach ($variables['links'] as $key => $item) {
+      $breadcrumb_json_data['itemListElement'] = [
+        '@type' => 'ListItem',
+        'position' => $key,
+        'item' => [
+          '@id' => $item->getUrl()->toString(),
+          'name' => $item->getText(),
+        ],
+      ];
+    }
+  }
+  $variables['breadcrumb_json_data'] = [
+    '#type' => 'html_tag',
+    '#tag' => 'script',
+    '#attributes' => [
+      'type' => 'application/ld+json',
+    ],
+    '#value' => json_encode($breadcrumb_json_data),
+  ];
+  $variables['disable'] = FALSE;
+  $node = Drupal::routeMatch()->getParameter('node');
+  if ($node instanceof NodeInterface) {
+    $variables['disable'] = $node->hasField('field_hide_breadcrumb') && $node->get('field_hide_breadcrumb')->value == 1;
+  }
+
+  /** @var Attribute $attribute */
+  $attribute = new Attribute();
+  $attribute->addClass('container');
+  $variables['items_attributes'] = (!empty($variables['items_attributes']) ? $variables['items_attributes'] : $attribute);
+}
+
+/**
+ * Return a mapping as we can understand in our preprocess
+ *
+ * @param array $contact_info
+ *
+ * @return array
+ */
+function _siteContactInfoMapping($contact_info): array {
+  return [
+    'title' => $contact_info['field_name'] ?? '',
+    'address' => $contact_info['field_address'] ?? '',
+    'zip_city' => implode(', ', [
+      $contact_info['field_zip'] ?? '',
+      $contact_info['field_city'] ?? '',
+    ]),
+    'cvr' => $contact_info['field_cvr'] ?? '',
+    'email' => '',
+    'telephone' => $contact_info['field_telephone'] ?? '',
+  ];
+}
+
+/**
+ * @param ContentEntityInterface $entity
+ *
+ * @return array
+ */
+function _createPageheader(ContentEntityInterface $entity): array {
+  $pageheader_attributes = new Attribute();
+  $section_attributes = new Attribute();
+  $background_image_uri = '';
+  $text_color = 'dark';
+  $orientation = 'left';
+  $color_theme = 'primary';
+  $video_oembed = ['url' => 'null', 'oEmbed' => 'null'];
+
+  // Finding file uri from media
+  if ($entity->hasField('field_header_background') && !$entity->get('field_header_background')->isEmpty()) {
+    /** @var Media $media */
+    $media = $entity->get('field_header_background')->entity;
+    if (!empty($media) && $media->hasField('field_media_image')) {
+      /** @var File $file */
+      if (!empty($file = $media->get('field_media_image')->entity)) {
+        $background_image_uri = $file->getFileUri() ?? '';
+      }
+    } elseif (!empty($media) && $media->hasField('field_media_video_embed')) {
+      if (Drupal::hasService('dds_media.media_helper')) {
+        /** @var MediaHelper $service */
+        $service = Drupal::service('dds_media.media_helper');
+        $video_data = $service->get_video_data($media->get('field_media_video_embed')->value);
+        $video_oembed['url'] = $video_data['url'];
+        $video_oembed['oEmbed'] = ['html' => $video_data['player']];
+        $background_image_uri = $video_data['image']['uri'];
+      }
+    }
+  }
+
+  if ($entity->hasField('field_header_text_color') && !$entity->get('field_header_text_color')->isEmpty()) {
+    $text_color = $entity->get('field_header_text_color')->value;
+  }
+
+  if ($entity->hasField('field_header_orientation') && !$entity->get('field_header_orientation')->isEmpty()) {
+    $orientation = $entity->get('field_header_orientation')->value;
+  }
+
+  if ($entity->hasField('field_header_color_theme') && !$entity->get('field_header_color_theme')->isEmpty()) {
+    $color_theme = $entity->get('field_header_color_theme')->value;
+  }
+
+  $section_attributes->addClass('section')
+    ->addClass('section--no-spacing')
+    ->addClass('theme')
+    ->addClass('theme-' . $color_theme);
+
+  $attributes = $pageheader_attributes
+    ->addClass(($orientation !== 'left' ? 'hero--' . $orientation : ''))
+    ->addClass($text_color != 'dark' ? 'hero--inverted' : '');
+
+  $pageheader = [
+    'attributes' => $attributes,
+    'position' => 'default',
+    'title' => $entity->label(),
+    'video_oembed' => json_encode($video_oembed),
+    'cta' => [],
+    'section_attributes' => $section_attributes
+  ];
+
+  if ($entity->hasField('field_teaser') && !$entity->get('field_teaser')->isEmpty()) {
+    $pageheader['teaser'] = $entity->get('field_teaser')->value;
+  }
+
+  if ($entity->hasField('field_header_cta') && !$entity->get('field_header_cta')->isEmpty()) {
+    $cta = $entity->get('field_header_cta')->getValue();
+    $pageheader['cta'] = _modifyCTA(reset($cta));
+  }
+
+  if ($background_image_uri) {
+    $pageheader['background_image'] = [
+      '#theme' => 'image_style',
+      '#style_name' => 'hero',
+      '#uri' => $background_image_uri,
+      '#attributes' => [
+        'class' => ['lazyload', 'lazyload-measure', 'lazyload-bg']
+      ],
+    ];
+  }
+
+  return $pageheader;
+}
+
+/**
+ * @param $variables
+ *
+ * @return array
+ */
+function _createFooter(array $variables): array {
+  $footer_data = $variables['site_settings']['site_settings']['footer'] ?? [];
+
+  /* @var Attribute $attributes */
+  $attributes = new Attribute();
+  $attributes->addClass('section');
+  $attributes->addClass('theme');
+  $attributes->addClass('theme-primary');
+
+  $footer = [
+    'attributes' => $attributes,
+    'cols' => []
+  ];
+
+  // Add header and content for left, center and right to footer
+  $footer['cols'][] = [
+    'headline' => $footer_data['field_header_left'] ?? '',
+    'content' => check_markup($footer_data['field_content_left']['value'] ?? '', $footer_data['field_content_left']['format'] ?? NULL)
+  ];
+  $footer['cols'][] = [
+    'headline' => $footer_data['field_header_center'] ?? '',
+    'content' => check_markup($footer_data['field_content_center']['value'] ?? '', $footer_data['field_content_center']['format'] ?? NULL)
+  ];
+  $footer['cols'][] = [
+    'headline' => $footer_data['field_header_right'] ?? '',
+    'content' => check_markup($footer_data['field_content_right']['value'] ?? '', $footer_data['field_content_right']['format'] ?? NULL)
+  ];
+
+  return $footer;
+}
+
+/**
+ * @param array $cta
+ *
+ * @return array
+ */
+function _modifyCTA(array $cta): array {
+  /** @var Attribute $cta_attributes */
+  $cta_attributes = new Attribute();
+  $cta['url'] = Url::fromUri($cta['uri'])->toString();
+  if (isset($cta['target_blank']) && $cta['target_blank'] == 1) {
+    $cta_attributes->setAttribute('target', 'blank');
+  }
+  $cta['attributes'] = $cta_attributes;
+  return $cta;
+}

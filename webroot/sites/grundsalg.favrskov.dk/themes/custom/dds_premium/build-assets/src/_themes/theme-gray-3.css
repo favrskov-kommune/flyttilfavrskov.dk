@@ -1,0 +1,8 @@
+
+.theme-gray-3 {
+    --theme-background-color: #8a8a8a;
+    --theme-color: #232323;
+    --theme-button-background-color: #232323;
+    --theme-button-color: #8a8a8a;
+    --theme--link-color: #232323;
+}
