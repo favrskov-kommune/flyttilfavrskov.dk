@@ -48,8 +48,8 @@ COPY httpd.conf /etc/apache2/apache2.conf
 
 ENV APP_ENV=dev
 # Install libraries
-ARG current_env
+ARG current_env=dev
 ARG sites_folder
-RUN if [ "$current_env" != "dev" ]; then composer install --optimize-autoloader; fi
-RUN if [ "$current_env" != "dev" ]; then cd webroot/sites/$sites_folder/themes/custom/dds_premium/build-assets/ && npm install && npm run build:dev; fi
+RUN if [ "${current_env}" != "dev" ]; then composer install --optimize-autoloader; fi
+RUN if [ "${current_env}" != "dev" ]; then cd webroot/sites/${sites_folder}/themes/custom/dds_premium/build-assets/ && npm install && npm run build:dev; fi
 USER root
