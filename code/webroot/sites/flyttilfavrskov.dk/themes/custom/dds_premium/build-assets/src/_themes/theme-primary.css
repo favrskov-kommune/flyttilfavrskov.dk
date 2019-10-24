@@ -1,7 +1,7 @@
 .theme-primary {
-    --theme-background-color: #263ed3;
-    --theme-color: white;
-    --theme-button-background-color: white;
-    --theme-button-color: #263ed3;
-    --theme-link-color: white;
+    --theme-background-color: #C6D9DF;
+    --theme-color: #00655D;
+    --theme-button-background-color: #00655D;
+    --theme-button-color: white;
+    --theme-link-color: #00655D;
 }

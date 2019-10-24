@@ -5,10 +5,16 @@ dependencies:
   enforced:
     module:
       - dds_paragraphs_rte
+  module:
+    - dds_layouts
+    - dds_paragraph_widgets
+    - entity_reference_layout
 _core:
   default_config_hash: K3YoHZWB3FuYx9XjlBzjbbbA0vRiEsaZqczmoWg2D8s
 id: rte
 label: Text
 icon_uuid: null
 description: ''
-behavior_plugins: {  }
+behavior_plugins:
+  paragraph_widget:
+    enabled: true

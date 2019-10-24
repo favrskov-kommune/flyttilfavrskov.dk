@@ -5,10 +5,16 @@ dependencies:
   enforced:
     module:
       - dds_paragraphs_button
+  module:
+    - dds_layouts
+    - dds_paragraph_widgets
+    - entity_reference_layout
 _core:
   default_config_hash: UZWTEuwuD7s7i3YSAMHMYoI9WP6EUhrbLRBA9EQlR2E
 id: divider
 label: Divider
 icon_uuid: null
 description: ''
-behavior_plugins: {  }
+behavior_plugins:
+  paragraph_widget:
+    enabled: true

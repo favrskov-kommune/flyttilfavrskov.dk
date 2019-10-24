@@ -5,10 +5,16 @@ dependencies:
   enforced:
     module:
       - dds_paragraphs_appetizer
+  module:
+    - dds_layouts
+    - dds_paragraph_widgets
+    - entity_reference_layout
 _core:
   default_config_hash: i5TK0lFt1bgI2T9leYwKRV15erO4ZuFIqKc653FZv8Q
 id: appetizer
 label: Appetizer
 icon_uuid: null
 description: ''
-behavior_plugins: {  }
+behavior_plugins:
+  paragraph_widget:
+    enabled: true

@@ -5,10 +5,16 @@ dependencies:
   enforced:
     module:
       - dds_paragraphs_video
+  module:
+    - dds_layouts
+    - dds_paragraph_widgets
+    - entity_reference_layout
 _core:
   default_config_hash: ugQleVwYAMcc0fu-tSIc88gx7qNAUo5DXUqXmsDPMtY
 id: video
 label: Video
 icon_uuid: null
 description: ''
-behavior_plugins: {  }
+behavior_plugins:
+  paragraph_widget:
+    enabled: true
