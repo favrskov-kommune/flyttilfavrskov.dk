@@ -16,11 +16,20 @@ class DDSSiteInstallCommands extends DrushCommands
   {
     $profile = $input->getArgument('profile');
     if(in_array('dds_premium', $profile)) {
-      $dds_project_name = $this->io()->ask('Project name (used for creating sites.php)', 'premium');
-      $dds_project_domain = $this->io()->ask('Project domain (used for creating sites folder)', 'premium.test');
+      if(getenv('SITES_FOLDER')) {
+        //this is probably running in a docker container
+        $dds_project_domain = getenv('SITES_FOLDER');
+        $input->setOption('db-url', 'mysql://'.getenv('DB_USER').':'.getenv('DB_PASS').'@'.getenv('DB_HOST').':'.getenv('DB_PORT').'/'.getenv('DB_NAME'));
+        $input->setOption('sites-subdir', $dds_project_domain);
+
+      } else {
+        //this is probably not a docker container
+        $dds_project_domain = $this->io()->ask('Project domain (used for creating sites folder)', 'premium.test');
+        $input->setOption('sites-subdir', $dds_project_domain);
+        $input->setOption('db-url', 'mysql://root:root@127.0.0.1:3306/premium');
+      }
       $profile = [
         'dds_premium_installer',
-        'dds_installer_configuration_form.project_name='.$dds_project_name,
         'dds_installer_configuration_form.project_domain='.$dds_project_domain,
         'install_configure_form.enable_update_status_module=NULL',
       ];

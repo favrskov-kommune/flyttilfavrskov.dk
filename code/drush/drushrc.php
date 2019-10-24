@@ -1,3 +1,3 @@
 <?php
 
-$options['uri'] = 'grundsalg.favrskov.dk';
+$options['uri'] = 'flyttilfavrskov.dk';
