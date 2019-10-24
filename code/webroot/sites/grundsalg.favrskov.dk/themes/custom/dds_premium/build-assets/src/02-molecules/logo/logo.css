@@ -1,8 +1,0 @@
-.logo {
-    margin-right: auto;
-    z-index: 3;
-
-    @media (--viewport-sm-max) {
-        display: none;
-    }
-}
