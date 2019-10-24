@@ -1,0 +1,14 @@
+uuid: 3c8eb3d4-34f7-4c62-ac86-816afaecb94d
+name: 'Flyt til Favrskov'
+mail: php@novicell.dk
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /user/login
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

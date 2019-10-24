@@ -1,0 +1,14 @@
+uuid: 0bbf4f56-4e15-4502-9a8e-21f6ad84b4c6
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_paragraphs_inline_navigation
+_core:
+  default_config_hash: eXYVjpwrFGe8yFTiEL7P9UjLaJiXOBGCHHhfO-Uoc1U
+id: inline_navigation
+label: 'Inline Navigation'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

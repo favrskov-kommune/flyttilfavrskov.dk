@@ -1,0 +1,30 @@
+uuid: 73dfd78b-edcf-44e9-bfcc-f24c472e8829
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.slideshow.field_slideshow_autoplay
+    - field.field.paragraph.slideshow.field_slideshow_media
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.slideshow
+  module:
+    - media
+_core:
+  default_config_hash: ap7tLzqnpPZSGnwbXraD_cF4KzwEiN-qX0hB41MqU2Q
+id: paragraph.slideshow.preview
+targetEntityType: paragraph
+bundle: slideshow
+mode: preview
+content:
+  field_slideshow_media:
+    type: media_thumbnail
+    weight: 0
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_slideshow_autoplay: true

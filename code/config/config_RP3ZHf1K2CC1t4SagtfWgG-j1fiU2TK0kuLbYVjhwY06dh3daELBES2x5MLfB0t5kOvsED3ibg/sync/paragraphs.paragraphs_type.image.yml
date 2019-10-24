@@ -1,0 +1,14 @@
+uuid: 82d3f466-b212-47cc-9483-6a189a0c7178
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_paragraphs_image
+_core:
+  default_config_hash: MPz5vZpOmoJw-_xMyw0nm2BJULHl6Pml7E7oCf5Dgyc
+id: image
+label: Image
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,32 @@
+uuid: f3cf2c51-ee2c-4614-9894-ba23e78e1aa6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.dds_file.field_media_category
+    - field.field.media.dds_file.field_media_file
+    - media.type.dds_file
+  module:
+    - image
+_core:
+  default_config_hash: 4OPa3DAaFNwqtREESSiDmk1WGgQ6Yy6LMjcRzjsA6LE
+id: media.dds_file.default
+targetEntityType: media
+bundle: dds_file
+mode: default
+content:
+  thumbnail:
+    type: image
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: file
+    region: content
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_media_category: true
+  field_media_file: true
+  name: true
+  uid: true

@@ -1,0 +1,25 @@
+uuid: dd93bbd3-a171-4b0d-93c8-1cff83cedaa3
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_paragraphs_video
+  module:
+    - media
+    - paragraphs
+_core:
+  default_config_hash: g5jV2n78AtDQbDFlc_xmEm9WCXoXxD4b3LZCx0MsBQY
+id: paragraph.field_video_media
+field_name: field_video_media
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

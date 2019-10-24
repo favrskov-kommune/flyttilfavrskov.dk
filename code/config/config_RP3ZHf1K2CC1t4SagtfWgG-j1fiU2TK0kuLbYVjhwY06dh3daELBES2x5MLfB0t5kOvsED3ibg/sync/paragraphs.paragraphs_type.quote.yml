@@ -1,0 +1,14 @@
+uuid: e0d8c3f5-99e7-4838-906f-95b01b77272a
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_paragraphs_quote
+_core:
+  default_config_hash: WYqC1wNvOc0j0QDsjvSVdzfnJyAiq6xudLDyXL__Zjg
+id: quote
+label: Quote
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

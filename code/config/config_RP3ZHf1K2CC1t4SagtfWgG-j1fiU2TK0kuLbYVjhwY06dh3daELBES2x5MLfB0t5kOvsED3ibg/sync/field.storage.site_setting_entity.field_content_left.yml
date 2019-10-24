@@ -1,0 +1,24 @@
+uuid: d6782e8d-6406-4c37-8138-ed1fa47326c0
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_site_settings
+  module:
+    - site_settings
+    - text
+_core:
+  default_config_hash: h_rjxHJzrNNvSaHHzCGSefgg4Fj4GShgp_qTwdMrLUE
+id: site_setting_entity.field_content_left
+field_name: field_content_left
+entity_type: site_setting_entity
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,28 @@
+uuid: c99a87d8-c1f2-4b2a-95ef-aee9d4209d4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.inline_navigation.field_inline_navigation_mode
+    - field.field.paragraph.inline_navigation.field_inline_navigation_pages
+    - field.field.paragraph.inline_navigation.field_inline_navigation_parent
+    - paragraphs.paragraphs_type.inline_navigation
+_core:
+  default_config_hash: 8F9czMiufiHWvoeIQVtMp_C952hYwwob4Do4U_y5334
+id: paragraph.inline_navigation.default
+targetEntityType: paragraph
+bundle: inline_navigation
+mode: default
+content:
+  field_inline_navigation_pages:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: inline_navigation
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  field_inline_navigation_mode: true
+  field_inline_navigation_parent: true

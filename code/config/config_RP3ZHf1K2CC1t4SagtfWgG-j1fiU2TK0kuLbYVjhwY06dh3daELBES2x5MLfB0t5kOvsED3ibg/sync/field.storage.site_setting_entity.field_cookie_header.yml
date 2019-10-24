@@ -1,0 +1,26 @@
+uuid: fcd73f24-6f57-4780-a114-c95e22ebe5fb
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_cookieinfo
+  module:
+    - site_settings
+_core:
+  default_config_hash: I5K3MXo8dGAgO2ZcLKMQrluHiLBTjiOY5RlRQLLKrl0
+id: site_setting_entity.field_cookie_header
+field_name: field_cookie_header
+entity_type: site_setting_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

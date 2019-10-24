@@ -1,0 +1,16 @@
+uuid: ac38329f-19d4-4430-a421-58e6767a1730
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: rpwvgyEURXLz_JjgMCrkS1rUv-0k3L79BpO-ReN7fDI
+id: node
+label: Content
+tags:
+  title: '[node:title] | [site:name]'
+  description: '[node:field_teaser]'
+  canonical_url: '[node:url]'
+  image_src: '[dds_content:dds_content_primary_image]'
+  og_image: '[dds_content:dds_content_primary_image]'
+  og_description: '[node:field_teaser]'
+  og_title: '[node:title] | [site:name]'

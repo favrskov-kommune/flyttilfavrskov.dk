@@ -1,0 +1,23 @@
+uuid: 78300bc3-d582-4f32-9b70-baab3319338c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text
+    - paragraphs.paragraphs_type.rte
+  module:
+    - text
+_core:
+  default_config_hash: 5DDmuEZV7GJGEP5nnqA_5JtT2fY0-lqFkYiUAnzam-E
+id: paragraph.rte.field_text
+field_name: field_text
+entity_type: paragraph
+bundle: rte
+label: Text
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

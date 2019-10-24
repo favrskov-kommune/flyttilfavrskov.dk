@@ -1,0 +1,9 @@
+uuid: b92f7d45-e5c3-4218-8b5e-4f7f21eac952
+langcode: en
+status: true
+dependencies: {  }
+id: '1'
+label: Search
+path: search
+index: content
+limit: 10

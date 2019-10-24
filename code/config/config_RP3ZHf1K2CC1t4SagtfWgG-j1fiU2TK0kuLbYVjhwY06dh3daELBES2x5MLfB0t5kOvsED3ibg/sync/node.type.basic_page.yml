@@ -1,0 +1,35 @@
+uuid: 8a8ca288-5a1f-486f-ac33-92fd8783e54f
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_content
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_required: false
+    publish_revision: false
+    publish_touch: true
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: false
+_core:
+  default_config_hash: 63QPmiGtTkqsMcWoBllAS8Cr10H5NxNx8LB5PNiD_60
+name: 'Basic page'
+type: basic_page
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

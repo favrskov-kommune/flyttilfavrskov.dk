@@ -1,0 +1,42 @@
+uuid: e137b647-58cd-47e4-ac04-7ba66d4ba03f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.inline_navigation
+    - field.field.node.basic_page.field_header_background
+    - field.field.node.basic_page.field_header_color_theme
+    - field.field.node.basic_page.field_header_cta
+    - field.field.node.basic_page.field_header_orientation
+    - field.field.node.basic_page.field_header_subline
+    - field.field.node.basic_page.field_header_text_color
+    - field.field.node.basic_page.field_hide_breadcrumb
+    - field.field.node.basic_page.field_meta_tags
+    - field.field.node.basic_page.field_sections
+    - field.field.node.basic_page.field_teaser
+    - node.type.basic_page
+  module:
+    - user
+_core:
+  default_config_hash: 9UutnXgDHKkaFbu6xK6A2yjeVdsUY5jTczfqLnFDnxs
+id: node.basic_page.inline_navigation
+targetEntityType: node
+bundle: basic_page
+mode: inline_navigation
+content:
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_header_background: true
+  field_header_color_theme: true
+  field_header_cta: true
+  field_header_orientation: true
+  field_header_subline: true
+  field_header_text_color: true
+  field_hide_breadcrumb: true
+  field_meta_tags: true
+  field_sections: true
+  field_teaser: true

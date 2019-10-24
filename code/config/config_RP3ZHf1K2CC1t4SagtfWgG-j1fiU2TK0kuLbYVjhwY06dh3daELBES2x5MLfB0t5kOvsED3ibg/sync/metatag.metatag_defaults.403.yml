@@ -1,0 +1,16 @@
+uuid: a13560d8-7b13-4ec1-a3ef-9dcc7b688092
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Da5YWhJdKLxaJ9gDRI1u5oCbm5WBxiiDgA4M1QrOEPQ
+id: '403'
+label: '403 access denied'
+tags:
+  canonical_url: '[site:url]'
+  shortlink: '[site:url]'
+  image_src: '[dds_content:dds_content_primary_image]'
+  description: '[node:field_teaser]'
+  og_image: '[dds_content:dds_content_primary_image]'
+  og_description: '[node:field_teaser]'
+  og_title: '[node:title] | [site:name]'

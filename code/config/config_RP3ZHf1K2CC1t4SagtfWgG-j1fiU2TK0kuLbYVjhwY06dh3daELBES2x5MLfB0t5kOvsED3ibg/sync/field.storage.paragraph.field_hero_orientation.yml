@@ -1,0 +1,35 @@
+uuid: c4ba2c18-2181-4ec7-ba22-7d26366752c4
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_paragraphs_hero
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: 8ZWldYcts-MopC-FFV3SjA-j_h3epvvmmRRBIE3MlHI
+id: paragraph.field_hero_orientation
+field_name: field_hero_orientation
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: left
+      label: 'Align left'
+    -
+      value: center
+      label: 'Align center'
+    -
+      value: right
+      label: 'Align right'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

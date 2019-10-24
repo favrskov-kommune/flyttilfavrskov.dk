@@ -1,0 +1,35 @@
+uuid: aabe76f1-3d2c-418a-a99d-6bfafb789c8d
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_paragraphs_button
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: V13bYrSggi8UtUCHAIphoAjKoZFAFyLdNiG12vc0wiw
+id: paragraph.field_button_alignment
+field_name: field_button_alignment
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: left
+      label: Left
+    -
+      value: center
+      label: Center
+    -
+      value: right
+      label: Right
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,69 @@
+uuid: add72483-41cb-4e43-8b23-26365c55ecc5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero.field_hero_background
+    - field.field.paragraph.hero.field_hero_button
+    - field.field.paragraph.hero.field_hero_color
+    - field.field.paragraph.hero.field_hero_headline
+    - field.field.paragraph.hero.field_hero_orientation
+    - field.field.paragraph.hero.field_hero_subline
+    - paragraphs.paragraphs_type.hero
+  module:
+    - dds_content
+    - options
+_core:
+  default_config_hash: PT0rDL15xqUnMy6YVc35hVVOofjpEV5VsLvJ_NAQVjE
+id: paragraph.hero.default
+targetEntityType: paragraph
+bundle: hero
+mode: default
+content:
+  field_hero_background:
+    type: entity_reference_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_hero_button:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: dds_link_with_target
+    region: content
+  field_hero_color:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_hero_headline:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_hero_orientation:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_hero_subline:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

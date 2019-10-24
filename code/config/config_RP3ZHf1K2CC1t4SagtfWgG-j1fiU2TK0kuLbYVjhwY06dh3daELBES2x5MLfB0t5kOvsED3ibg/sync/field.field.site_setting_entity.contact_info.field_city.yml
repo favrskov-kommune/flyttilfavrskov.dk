@@ -1,0 +1,21 @@
+uuid: ad8cab2e-8d94-4980-a9d6-9ff2fd8b1c86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_city
+    - site_settings.site_setting_entity_type.contact_info
+_core:
+  default_config_hash: zmM2JPJc8JvZs8QfVPEqxIAncGK1Y5DoTEFtbPzpvn4
+id: site_setting_entity.contact_info.field_city
+field_name: field_city
+entity_type: site_setting_entity
+bundle: contact_info
+label: City
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

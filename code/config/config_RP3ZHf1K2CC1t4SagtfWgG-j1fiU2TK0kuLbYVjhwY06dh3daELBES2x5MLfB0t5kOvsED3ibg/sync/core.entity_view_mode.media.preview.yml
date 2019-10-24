@@ -1,0 +1,15 @@
+uuid: a8928901-ffd6-479c-9268-c9cddd6f649a
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_media
+  module:
+    - media
+_core:
+  default_config_hash: HPPCCIeDr8xfuZGTOafQ__OOyn-XehROGvkYRmzARnI
+id: media.preview
+label: Preview
+targetEntityType: media
+cache: true

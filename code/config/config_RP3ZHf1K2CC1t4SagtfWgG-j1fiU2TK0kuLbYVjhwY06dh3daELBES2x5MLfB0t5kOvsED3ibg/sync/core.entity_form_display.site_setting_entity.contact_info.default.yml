@@ -1,0 +1,102 @@
+uuid: 1ac4f226-08f2-4337-9666-a3dd82129f3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.site_setting_entity.contact_info.field_address
+    - field.field.site_setting_entity.contact_info.field_city
+    - field.field.site_setting_entity.contact_info.field_cvr
+    - field.field.site_setting_entity.contact_info.field_email
+    - field.field.site_setting_entity.contact_info.field_name
+    - field.field.site_setting_entity.contact_info.field_telephone
+    - field.field.site_setting_entity.contact_info.field_zip
+    - site_settings.site_setting_entity_type.contact_info
+_core:
+  default_config_hash: H22sacy7ESwh7n2ADde3ocj9u89POGQLgfpozMLBxA8
+id: site_setting_entity.contact_info.default
+targetEntityType: site_setting_entity
+bundle: contact_info
+mode: default
+content:
+  field_address:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_city:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_cvr:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_email:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_telephone:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_zip:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  fieldset:
+    type: string_textfield
+    weight: 9
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 8
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

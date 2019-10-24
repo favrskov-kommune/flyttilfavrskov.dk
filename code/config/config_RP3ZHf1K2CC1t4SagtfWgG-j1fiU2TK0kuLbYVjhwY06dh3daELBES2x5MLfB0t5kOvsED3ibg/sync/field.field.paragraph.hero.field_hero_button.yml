@@ -1,0 +1,25 @@
+uuid: bf9c54cb-ebb7-46ab-b6f7-23e3600466fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hero_button
+    - paragraphs.paragraphs_type.hero
+  module:
+    - dds_content
+_core:
+  default_config_hash: Rj9GrrRUtDlf3t5x0h2Bxm7o9TYLvdjLaaVbgO4dtwU
+id: paragraph.hero.field_hero_button
+field_name: field_hero_button
+entity_type: paragraph
+bundle: hero
+label: Button
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: '17'
+  title: '2'
+field_type: dds_link_with_target

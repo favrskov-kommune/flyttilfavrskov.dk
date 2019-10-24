@@ -1,0 +1,14 @@
+uuid: d0a483ca-1271-4f04-ba61-42724f68ac74
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_paragraphs_hero
+_core:
+  default_config_hash: YkkgGP3raHnLbNkqXD_eQ2wtVY9vjOYKadEz_2up-_k
+id: hero
+label: Hero
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

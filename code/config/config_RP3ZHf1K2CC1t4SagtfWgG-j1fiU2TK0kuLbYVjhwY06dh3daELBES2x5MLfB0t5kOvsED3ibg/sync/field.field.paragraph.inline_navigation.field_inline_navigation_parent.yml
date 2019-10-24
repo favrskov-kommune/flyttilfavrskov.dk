@@ -1,0 +1,32 @@
+uuid: ec07969e-d3c0-431d-98dd-29a6e5cda6dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_inline_navigation_parent
+    - node.type.basic_page
+    - node.type.special_page
+    - paragraphs.paragraphs_type.inline_navigation
+_core:
+  default_config_hash: rq9Wxl6TjQd2ZTCHVE-KfOO0fD5NSLMZDMwa75C23f0
+id: paragraph.inline_navigation.field_inline_navigation_parent
+field_name: field_inline_navigation_parent
+entity_type: paragraph
+bundle: inline_navigation
+label: 'Parent page'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      basic_page: basic_page
+      special_page: special_page
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: basic_page
+field_type: entity_reference

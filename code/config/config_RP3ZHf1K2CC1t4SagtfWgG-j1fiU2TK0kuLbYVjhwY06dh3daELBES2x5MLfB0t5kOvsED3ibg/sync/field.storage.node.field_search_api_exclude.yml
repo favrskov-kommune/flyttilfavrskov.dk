@@ -1,0 +1,24 @@
+uuid: 700ea28b-3468-4b28-b21b-d4be83881b7c
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_content
+  module:
+    - node
+    - search_api_exclude_entity
+_core:
+  default_config_hash: gwTdU8oD5QGjasPL3ob-MCthE6x1DIFWB4T5pEPEaLI
+id: node.field_search_api_exclude
+field_name: field_search_api_exclude
+entity_type: node
+type: search_api_exclude_entity
+settings: {  }
+module: search_api_exclude_entity
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,46 @@
+uuid: 7e6434d9-5961-452a-98f5-37aeae355e57
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.dds_file.field_media_category
+    - field.field.media.dds_file.field_media_file
+    - media.type.dds_file
+  module:
+    - file
+_core:
+  default_config_hash: bKp45edYTFwWXXSJ7CkRy59CXNsJdfrG_lBHHjKoqyU
+id: media.dds_file.default
+targetEntityType: media
+bundle: dds_file
+mode: default
+content:
+  field_media_category:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+    region: content
+  field_media_file:
+    type: file_generic
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  status: true
+  uid: true

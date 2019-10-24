@@ -1,0 +1,16 @@
+uuid: 93a3c2f2-e7b3-40bb-a84e-11844ce77592
+langcode: en
+status: '1'
+dependencies: {  }
+_core:
+  default_config_hash: tuxiS9vQkHoq0RbmOyN0hHFM0mxUMUenRu_C5U7-Y-0
+cluster_id: content
+name: Content
+url: 'http://localhost:9200'
+options:
+  multiple_nodes_connection: false
+  use_authentication: 0
+  authentication_type: Basic
+  username: ''
+  password: ''
+  timeout: '3'

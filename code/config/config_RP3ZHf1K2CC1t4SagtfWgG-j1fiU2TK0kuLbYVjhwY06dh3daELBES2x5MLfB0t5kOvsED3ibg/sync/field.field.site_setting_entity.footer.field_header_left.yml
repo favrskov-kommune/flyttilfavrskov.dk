@@ -1,0 +1,21 @@
+uuid: 2e85e97c-d679-4b47-a97b-4405fdb58c5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_header_left
+    - site_settings.site_setting_entity_type.footer
+_core:
+  default_config_hash: 0fAHbZRUgPN5hLh1-DeK2x5_Ntwegzk8Q1A4Y7SXt1g
+id: site_setting_entity.footer.field_header_left
+field_name: field_header_left
+entity_type: site_setting_entity
+bundle: footer
+label: 'Header left'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,32 @@
+uuid: 622aeaee-8bb7-455b-bda0-255be7eef1fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.dds_video.field_media_category
+    - field.field.media.dds_video.field_media_video_embed
+    - media.type.dds_video
+  module:
+    - image
+_core:
+  default_config_hash: 3YieI2Zz_e17PF98N_WWAOHQKQD3NCcuMVTPIYfrVu4
+id: media.dds_video.default
+targetEntityType: media
+bundle: dds_video
+mode: default
+content:
+  thumbnail:
+    type: image
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    region: content
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_media_category: true
+  field_media_video_embed: true
+  name: true
+  uid: true

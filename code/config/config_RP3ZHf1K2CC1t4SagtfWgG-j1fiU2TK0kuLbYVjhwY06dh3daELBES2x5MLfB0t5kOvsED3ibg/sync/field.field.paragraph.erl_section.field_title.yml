@@ -1,0 +1,24 @@
+uuid: c29e93d0-f747-4d25-9300-1130b70ce08b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.erl_section
+  enforced:
+    module:
+      - erl_paragraphs
+_core:
+  default_config_hash: 70k__fYwdJ61Nx0ps2_swalQ7zEQi2vFnGz8LGo9CUA
+id: paragraph.erl_section.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: erl_section
+label: 'Title '
+description: 'Add an optional heading for this section.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

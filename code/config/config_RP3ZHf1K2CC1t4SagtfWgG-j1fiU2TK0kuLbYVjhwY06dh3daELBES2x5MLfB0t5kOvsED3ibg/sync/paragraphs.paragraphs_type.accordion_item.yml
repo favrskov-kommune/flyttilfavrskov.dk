@@ -1,0 +1,14 @@
+uuid: 2b49776e-27b4-494c-a8d7-1e4d91d01538
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_paragraphs_accordion
+_core:
+  default_config_hash: kao8fWNgdOZcYDqKrpDeREWjixKYRLQXQPlLKbux5a0
+id: accordion_item
+label: 'Accordion Item'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

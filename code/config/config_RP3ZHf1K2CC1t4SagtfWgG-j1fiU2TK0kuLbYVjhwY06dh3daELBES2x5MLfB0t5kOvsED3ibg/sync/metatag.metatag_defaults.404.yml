@@ -1,0 +1,16 @@
+uuid: 42811066-eec5-4dca-a1c8-9367ccfa319a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: puBstSLDz8mbaWU357zaqQDBGMGsJzG0j-TQNQkjg20
+id: '404'
+label: '404 page not found'
+tags:
+  canonical_url: '[site:url]'
+  shortlink: '[site:url]'
+  image_src: '[dds_content:dds_content_primary_image]'
+  description: '[node:field_teaser]'
+  og_image: '[dds_content:dds_content_primary_image]'
+  og_description: '[node:field_teaser]'
+  og_title: '[node:title] | [site:name]'

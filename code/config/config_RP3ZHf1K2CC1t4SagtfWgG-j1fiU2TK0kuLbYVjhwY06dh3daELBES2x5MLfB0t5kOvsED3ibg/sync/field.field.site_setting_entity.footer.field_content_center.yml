@@ -1,0 +1,23 @@
+uuid: 5636f857-7e59-41b5-bf7a-3d30e34f1556
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_content_center
+    - site_settings.site_setting_entity_type.footer
+  module:
+    - text
+_core:
+  default_config_hash: GoSCEslWK8idUcF5skaCZooz7_Lh1LTeeg-k-Sn_5K8
+id: site_setting_entity.footer.field_content_center
+field_name: field_content_center
+entity_type: site_setting_entity
+bundle: footer
+label: 'Content center'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

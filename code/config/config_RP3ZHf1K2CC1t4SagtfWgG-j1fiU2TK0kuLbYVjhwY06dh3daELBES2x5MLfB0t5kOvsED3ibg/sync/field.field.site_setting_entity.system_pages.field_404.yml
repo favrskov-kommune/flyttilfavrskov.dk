@@ -1,0 +1,30 @@
+uuid: 41ae8740-58fa-43d6-ac2a-fb03400f6697
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_404
+    - node.type.special_page
+    - site_settings.site_setting_entity_type.system_pages
+_core:
+  default_config_hash: hsVCiaPclxdEMKAkwhEW-PRfbn97CWAnB2SbXVE90MM
+id: site_setting_entity.system_pages.field_404
+field_name: field_404
+entity_type: site_setting_entity
+bundle: system_pages
+label: '404'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      special_page: special_page
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

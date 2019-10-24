@@ -1,0 +1,23 @@
+uuid: 37d39b19-f83a-42a5-b669-8717223d8bbe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_content_left
+    - site_settings.site_setting_entity_type.footer
+  module:
+    - text
+_core:
+  default_config_hash: giFIEsEmd5AZwlLnnsysjP9KPmqPEimKyCmJGRK_dFg
+id: site_setting_entity.footer.field_content_left
+field_name: field_content_left
+entity_type: site_setting_entity
+bundle: footer
+label: 'Content left'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,53 @@
+uuid: d0275e73-b171-4eb5-830a-9004f2b41719
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sections_special_pages
+    - node.type.special_page
+    - paragraphs.paragraphs_type.erl_section
+  module:
+    - entity_reference_layout
+_core:
+  default_config_hash: oSxzRsD73mxY9DxRRMw1QIcDemACt5A5xZlx3dB8OkQ
+id: node.special_page.field_sections_special_pages
+field_name: field_sections_special_pages
+entity_type: node
+bundle: special_page
+label: Sections
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: '0'
+    target_bundles:
+      erl_section: erl_section
+      inline_navigation: inline_navigation
+      appetizer: appetizer
+      button: button
+      divider: divider
+      hero: hero
+      image: image
+      accordion: accordion
+      quote: quote
+      rte: rte
+      slideshow: slideshow
+      video: video
+    target_bundles_drag_drop: {  }
+    layout_bundles:
+      - erl_section
+    allowed_layouts:
+      'Columns: 1':
+        dds_layout_fullwidth: 'Full Width Section'
+        dds_layout_onecolumn: 'One Column'
+      'Columns: 2':
+        dds_layout_twocolumn_5050: 'Two Column'
+        dds_layout_twocolumn_3367: 'Two Column'
+        dds_layout_twocolumn_6733: 'Two Column'
+      'Columns: 3':
+        dds_layout_threecolumn: 'Three Column'
+field_type: entity_reference_layout_revisioned

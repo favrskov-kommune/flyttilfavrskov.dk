@@ -1,0 +1,25 @@
+uuid: e4181ff4-496e-420d-8c3d-3a06c15641ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_appetizer_orientation
+    - paragraphs.paragraphs_type.appetizer
+  module:
+    - options
+_core:
+  default_config_hash: RFhI8IQWJdPwPPNdZyZ5OZFcjbwuDFZGsP5gtbNYbbM
+id: paragraph.appetizer.field_appetizer_orientation
+field_name: field_appetizer_orientation
+entity_type: paragraph
+bundle: appetizer
+label: Orientation
+description: 'Decide of image is shown to the left or the right. Only works in one-column layout.'
+required: true
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

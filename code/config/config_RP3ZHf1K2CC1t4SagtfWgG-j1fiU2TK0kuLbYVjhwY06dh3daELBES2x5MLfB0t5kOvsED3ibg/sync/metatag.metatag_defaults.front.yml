@@ -1,0 +1,16 @@
+uuid: 67d20b7b-c179-4f4f-a0e8-731e82d2072e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1noCXlegCr5HFehQRF1ViXy1jhU1jZ_sNN99a8Sj5jo
+id: front
+label: 'Front page'
+tags:
+  canonical_url: '[site:url]'
+  shortlink: '[site:url]'
+  image_src: '[dds_content:dds_content_primary_image]'
+  description: '[node:field_teaser]'
+  og_image: '[dds_content:dds_content_primary_image]'
+  og_description: '[node:field_teaser]'
+  og_title: '[node:title] | [site:name]'

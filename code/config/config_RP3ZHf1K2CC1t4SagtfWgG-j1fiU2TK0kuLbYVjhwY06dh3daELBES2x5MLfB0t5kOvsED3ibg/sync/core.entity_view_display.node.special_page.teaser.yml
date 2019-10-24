@@ -1,0 +1,42 @@
+uuid: 6b1638a3-a3a5-4569-98ad-ba4e369043ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.special_page.field_header_background
+    - field.field.node.special_page.field_header_color_theme
+    - field.field.node.special_page.field_header_cta
+    - field.field.node.special_page.field_header_orientation
+    - field.field.node.special_page.field_header_subline
+    - field.field.node.special_page.field_header_text_color
+    - field.field.node.special_page.field_hide_breadcrumb
+    - field.field.node.special_page.field_meta_tags
+    - field.field.node.special_page.field_sections_special_pages
+    - field.field.node.special_page.field_teaser
+    - node.type.special_page
+  module:
+    - user
+_core:
+  default_config_hash: CFQi0eNDKfsuPnUvJMnZa6CoJaa-NiI6yo_kh1r7-w0
+id: node.special_page.teaser
+targetEntityType: node
+bundle: special_page
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_header_background: true
+  field_header_color_theme: true
+  field_header_cta: true
+  field_header_orientation: true
+  field_header_subline: true
+  field_header_text_color: true
+  field_hide_breadcrumb: true
+  field_meta_tags: true
+  field_sections_special_pages: true
+  field_teaser: true

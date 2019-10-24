@@ -1,0 +1,70 @@
+uuid: c0a6d42b-cc87-47eb-b8ce-766e05b1dea7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero.field_hero_background
+    - field.field.paragraph.hero.field_hero_button
+    - field.field.paragraph.hero.field_hero_color
+    - field.field.paragraph.hero.field_hero_headline
+    - field.field.paragraph.hero.field_hero_orientation
+    - field.field.paragraph.hero.field_hero_subline
+    - paragraphs.paragraphs_type.hero
+  module:
+    - dds_content
+    - media_library
+_core:
+  default_config_hash: AW-0IvT2Uh3FPrbKyFeQJv2aooXHPGWiiHSKlgJ2lkw
+id: paragraph.hero.default
+targetEntityType: paragraph
+bundle: hero
+mode: default
+content:
+  field_hero_background:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_hero_button:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      target_blank: 0
+    third_party_settings: {  }
+    type: dds_link_with_target
+    region: content
+  field_hero_color:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_hero_headline:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_hero_orientation:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_hero_subline:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

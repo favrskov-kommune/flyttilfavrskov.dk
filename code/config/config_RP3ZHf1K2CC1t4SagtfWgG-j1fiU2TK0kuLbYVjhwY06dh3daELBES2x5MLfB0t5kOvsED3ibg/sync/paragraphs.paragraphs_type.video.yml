@@ -1,0 +1,14 @@
+uuid: 40d24d18-7390-4a1e-8fb4-e0281c6ac5a8
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_paragraphs_video
+_core:
+  default_config_hash: ugQleVwYAMcc0fu-tSIc88gx7qNAUo5DXUqXmsDPMtY
+id: video
+label: Video
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

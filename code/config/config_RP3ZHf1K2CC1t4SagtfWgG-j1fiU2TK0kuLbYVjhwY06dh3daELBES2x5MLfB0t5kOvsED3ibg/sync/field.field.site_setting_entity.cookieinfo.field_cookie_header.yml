@@ -1,0 +1,21 @@
+uuid: 7426cd90-c976-4f4c-90f3-45aae09600d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_cookie_header
+    - site_settings.site_setting_entity_type.cookieinfo
+_core:
+  default_config_hash: HduIxw7z-ZJPsOkRo_XD63vNVU3yztiKrrkO7kSP_Oo
+id: site_setting_entity.cookieinfo.field_cookie_header
+field_name: field_cookie_header
+entity_type: site_setting_entity
+bundle: cookieinfo
+label: Header
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

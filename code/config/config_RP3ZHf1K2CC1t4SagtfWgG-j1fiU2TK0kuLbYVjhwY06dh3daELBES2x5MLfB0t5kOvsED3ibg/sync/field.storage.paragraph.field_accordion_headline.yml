@@ -1,0 +1,26 @@
+uuid: f1034662-4626-484e-ac50-3d12b12d55cc
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_paragraphs_accordion
+  module:
+    - paragraphs
+_core:
+  default_config_hash: zUc92WX5Zff23hUz9qjD0r74vX1Tk2EQ7wqGD137814
+id: paragraph.field_accordion_headline
+field_name: field_accordion_headline
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

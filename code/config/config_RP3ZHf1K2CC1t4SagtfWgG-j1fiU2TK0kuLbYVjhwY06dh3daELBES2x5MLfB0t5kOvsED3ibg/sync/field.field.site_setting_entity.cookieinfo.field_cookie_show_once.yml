@@ -1,0 +1,25 @@
+uuid: c20d4bce-bad5-465e-a9e2-af44ef0032e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_cookie_show_once
+    - site_settings.site_setting_entity_type.cookieinfo
+_core:
+  default_config_hash: j9Sfp2VK-3XGIx6HA3Rwmtmo1q2zPZ1l_PcgxC0RhKI
+id: site_setting_entity.cookieinfo.field_cookie_show_once
+field_name: field_cookie_show_once
+entity_type: site_setting_entity
+bundle: cookieinfo
+label: 'Show only once'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

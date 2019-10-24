@@ -1,0 +1,13 @@
+uuid: 9b3fa0b9-bd21-4ff0-97f9-9c93ab7ae968
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_site_settings
+_core:
+  default_config_hash: VyHmjU37rQCpFWyX_cAPhd1141ucM3LWnfT-avGfe1I
+id: system_pages
+label: 'System pages'
+fieldset: 'Site settings'
+multiple: false

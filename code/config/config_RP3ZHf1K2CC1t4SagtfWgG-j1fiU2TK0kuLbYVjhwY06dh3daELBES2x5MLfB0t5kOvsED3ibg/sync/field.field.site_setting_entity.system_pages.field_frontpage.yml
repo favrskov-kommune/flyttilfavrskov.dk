@@ -1,0 +1,30 @@
+uuid: a5b8258b-0180-4110-b795-57cf98c9ed34
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_frontpage
+    - node.type.special_page
+    - site_settings.site_setting_entity_type.system_pages
+_core:
+  default_config_hash: CUAn0v8ytr8TbUkFTnFQLnyXd1Tr91vxUENufmIbfFY
+id: site_setting_entity.system_pages.field_frontpage
+field_name: field_frontpage
+entity_type: site_setting_entity
+bundle: system_pages
+label: Frontpage
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      special_page: special_page
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

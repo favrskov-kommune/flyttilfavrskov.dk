@@ -1,0 +1,25 @@
+uuid: 810d5d9b-62ba-42a3-8699-e84e79e472f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_orientation
+    - node.type.special_page
+  module:
+    - options
+_core:
+  default_config_hash: W4uA0Frib2poCV1i2AeL967mSb3-56fhNRiE4PDmp3w
+id: node.special_page.field_header_orientation
+field_name: field_header_orientation
+entity_type: node
+bundle: special_page
+label: 'Header text orientation'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

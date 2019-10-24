@@ -1,0 +1,32 @@
+uuid: 8eae6dc2-2cdc-47e6-9c24-9cf857d2b12d
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_paragraphs_appetizer
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: xUBy63w4fyBNIcyVXMYl46amkm6ayqCoL3CtqaU5VxQ
+id: paragraph.field_appetizer_orientation
+field_name: field_appetizer_orientation
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: left
+      label: 'Image on the left'
+    -
+      value: right
+      label: 'Image on the right'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

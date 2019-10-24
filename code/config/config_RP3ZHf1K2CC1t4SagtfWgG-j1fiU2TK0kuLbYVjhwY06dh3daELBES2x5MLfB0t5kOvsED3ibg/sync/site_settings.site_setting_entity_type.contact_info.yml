@@ -1,0 +1,13 @@
+uuid: 185060bd-390c-4b93-93bf-db1b0f801e5a
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_site_settings
+_core:
+  default_config_hash: 4CmyuOG5rvTIScsVUiSq_B4Smz99TIOD89rdydNF8a8
+id: contact_info
+label: 'Contact information'
+fieldset: 'Contact information'
+multiple: true

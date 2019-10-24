@@ -1,0 +1,32 @@
+uuid: f8b20b74-5b62-4f60-be21-d19014e9f1e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hero_background
+    - media.type.dds_image
+    - media.type.dds_video
+    - paragraphs.paragraphs_type.hero
+_core:
+  default_config_hash: v1RuTzd6fdHMgYxqy2c_vx0sig_wVHk8Kg8L-Lj7uys
+id: paragraph.hero.field_hero_background
+field_name: field_hero_background
+entity_type: paragraph
+bundle: hero
+label: Background
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      dds_image: dds_image
+      dds_video: dds_video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

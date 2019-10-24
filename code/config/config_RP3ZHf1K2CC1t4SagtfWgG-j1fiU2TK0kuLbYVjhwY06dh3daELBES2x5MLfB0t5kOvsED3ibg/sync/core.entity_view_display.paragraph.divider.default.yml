@@ -1,0 +1,14 @@
+uuid: 68859081-e8f1-446f-833e-a4a4373f3937
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.divider
+_core:
+  default_config_hash: D8yh9pwMmlgaVtxVrOhnj7o-m_mrcqeCDlLkyzuHTP0
+id: paragraph.divider.default
+targetEntityType: paragraph
+bundle: divider
+mode: default
+content: {  }
+hidden: {  }

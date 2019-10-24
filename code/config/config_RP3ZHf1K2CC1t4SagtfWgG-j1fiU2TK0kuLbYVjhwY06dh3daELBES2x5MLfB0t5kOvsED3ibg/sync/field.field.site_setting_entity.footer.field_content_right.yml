@@ -1,0 +1,23 @@
+uuid: 7407c4e4-6de2-45b4-bbc3-26acd2391c16
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_content_right
+    - site_settings.site_setting_entity_type.footer
+  module:
+    - text
+_core:
+  default_config_hash: _-juu0LylDlgB1npqXBjqelNDw8VnXN_l2FPSB3ePfI
+id: site_setting_entity.footer.field_content_right
+field_name: field_content_right
+entity_type: site_setting_entity
+bundle: footer
+label: 'Content right'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

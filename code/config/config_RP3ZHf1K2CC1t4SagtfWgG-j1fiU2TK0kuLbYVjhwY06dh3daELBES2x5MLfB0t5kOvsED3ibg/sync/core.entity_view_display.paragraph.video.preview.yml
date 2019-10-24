@@ -1,0 +1,34 @@
+uuid: 14f4fd1b-6021-45f7-9a1f-2d4eaeec9788
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.video.field_video_headline
+    - field.field.paragraph.video.field_video_media
+    - field.field.paragraph.video.field_video_subline
+    - field.field.paragraph.video.field_video_text_color
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.video
+  module:
+    - media
+_core:
+  default_config_hash: M-tM0EsMba_UEVrs1idF6IeID36V087k9nOLUJTocKk
+id: paragraph.video.preview
+targetEntityType: paragraph
+bundle: video
+mode: preview
+content:
+  field_video_media:
+    type: media_thumbnail
+    weight: 0
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_video_headline: true
+  field_video_subline: true
+  field_video_text_color: true

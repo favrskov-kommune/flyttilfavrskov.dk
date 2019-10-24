@@ -1,0 +1,23 @@
+uuid: 758c4bef-fa72-4208-915f-fc68d2cfb729
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_media
+_core:
+  default_config_hash: tRaTwJdUWIpphlQC0MbehKJajwqkK44KGMpNXnKu1ps
+id: dds_video
+label: 'Video Embed'
+description: ''
+source: 'oembed:video'
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  thumbnails_directory: 'public://oembed_thumbnails'
+  providers:
+    - YouTube
+    - Vimeo
+  source_field: field_media_video_embed
+field_map:
+  title: name

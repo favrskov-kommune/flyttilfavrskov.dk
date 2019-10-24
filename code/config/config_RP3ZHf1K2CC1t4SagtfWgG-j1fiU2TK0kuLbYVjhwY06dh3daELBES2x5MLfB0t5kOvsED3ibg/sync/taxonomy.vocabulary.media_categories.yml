@@ -1,0 +1,13 @@
+uuid: ce53a6c5-2944-477e-b718-f57b3ce49bd0
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_media
+_core:
+  default_config_hash: mPEAG2PTKeFV3bX7Z64EO6UICF4gmykf2RGBg7zMMDg
+name: 'Media categories'
+vid: media_categories
+description: 'Used to organize media'
+weight: 0

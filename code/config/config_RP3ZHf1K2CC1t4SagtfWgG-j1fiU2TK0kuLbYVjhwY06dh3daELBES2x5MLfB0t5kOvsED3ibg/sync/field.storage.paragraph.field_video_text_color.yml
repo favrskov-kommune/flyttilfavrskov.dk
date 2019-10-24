@@ -1,0 +1,32 @@
+uuid: 60835097-9406-4482-b351-938890f2f8d9
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_paragraphs_video
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: kQWVkzByikLw3WtmldAT3FFs-gm3rncnwHze6vRwBZY
+id: paragraph.field_video_text_color
+field_name: field_video_text_color
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: dark
+      label: Dark
+    -
+      value: light
+      label: Light
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

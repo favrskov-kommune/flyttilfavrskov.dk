@@ -1,0 +1,21 @@
+uuid: 6c888774-8841-4a6e-8b54-58ba2d40279e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_subline
+    - node.type.special_page
+_core:
+  default_config_hash: fCG0ke_xdyZK5vCqPVO2C3gz7DUR4KIKfwdoIGQNScw
+id: node.special_page.field_header_subline
+field_name: field_header_subline
+entity_type: node
+bundle: special_page
+label: Subline
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,58 @@
+uuid: dc808a2c-799d-4a46-8c81-5e96a238f6d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.special_page.field_header_background
+    - field.field.node.special_page.field_header_color_theme
+    - field.field.node.special_page.field_header_cta
+    - field.field.node.special_page.field_header_orientation
+    - field.field.node.special_page.field_header_subline
+    - field.field.node.special_page.field_header_text_color
+    - field.field.node.special_page.field_hide_breadcrumb
+    - field.field.node.special_page.field_meta_tags
+    - field.field.node.special_page.field_sections_special_pages
+    - field.field.node.special_page.field_teaser
+    - node.type.special_page
+  module:
+    - entity_reference_layout
+    - metatag
+    - user
+_core:
+  default_config_hash: aCfUQ_1NPrHuoxNHlQFm2s954xFA2i6r9jF0IP8qggA
+id: node.special_page.default
+targetEntityType: node
+bundle: special_page
+mode: default
+content:
+  field_meta_tags:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_sections_special_pages:
+    weight: 9
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_layout
+    region: content
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_header_background: true
+  field_header_color_theme: true
+  field_header_cta: true
+  field_header_orientation: true
+  field_header_subline: true
+  field_header_text_color: true
+  field_hide_breadcrumb: true
+  field_parent: true
+  field_teaser: true

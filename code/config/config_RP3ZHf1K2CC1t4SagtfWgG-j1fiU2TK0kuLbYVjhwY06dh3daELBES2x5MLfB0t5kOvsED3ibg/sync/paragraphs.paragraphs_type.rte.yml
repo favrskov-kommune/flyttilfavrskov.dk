@@ -1,0 +1,14 @@
+uuid: 09f8acd8-ebff-4c0d-a1a8-ea68140648a4
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_paragraphs_rte
+_core:
+  default_config_hash: K3YoHZWB3FuYx9XjlBzjbbbA0vRiEsaZqczmoWg2D8s
+id: rte
+label: Text
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

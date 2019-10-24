@@ -1,0 +1,24 @@
+uuid: ad305450-3a56-4dc5-acd0-39e9f8a964d9
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_paragraphs_accordion
+  module:
+    - paragraphs
+    - text
+_core:
+  default_config_hash: BQwWKj5Jt9A-I80D1yRUnAyEAhtGDcVVc6-8j8aA9E0
+id: paragraph.field_accordion_item_text
+field_name: field_accordion_item_text
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

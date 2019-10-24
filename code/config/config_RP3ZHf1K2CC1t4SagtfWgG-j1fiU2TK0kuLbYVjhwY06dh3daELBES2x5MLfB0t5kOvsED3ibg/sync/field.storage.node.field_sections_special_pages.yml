@@ -1,0 +1,26 @@
+uuid: 238b9495-97d3-445c-8c19-2a721d2cd40a
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_content
+  module:
+    - entity_reference_layout
+    - node
+    - paragraphs
+_core:
+  default_config_hash: fjSMDsZxYKXBvytRB6YCOQX0JXRYGVhNFQs1tccwn7A
+id: node.field_sections_special_pages
+field_name: field_sections_special_pages
+entity_type: node
+type: entity_reference_layout_revisioned
+settings:
+  target_type: paragraph
+module: entity_reference_layout
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

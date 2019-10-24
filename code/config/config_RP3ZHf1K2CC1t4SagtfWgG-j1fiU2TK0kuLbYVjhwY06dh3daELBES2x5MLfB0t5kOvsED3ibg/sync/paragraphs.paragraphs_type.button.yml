@@ -1,0 +1,14 @@
+uuid: 64b26e7f-a4aa-45d4-964c-41cb79122bbe
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_paragraphs_button
+_core:
+  default_config_hash: mlkI81K9RoHAFcUiFJL0Jm3ytVFp9Zx-hEnQKB7v2hk
+id: button
+label: Button
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

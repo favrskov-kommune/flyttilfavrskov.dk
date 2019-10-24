@@ -1,0 +1,26 @@
+uuid: bc8336d8-5a92-4081-b325-10bef186f372
+langcode: en
+status: true
+dependencies:
+  module:
+    - elasticsearch_connector
+_core:
+  default_config_hash: TudQ9bPrK_3sY1a51ia1hkDiIXbt7qnWYZh9bfcNQ7Q
+id: elasticsearch
+name: Elasticsearch
+description: ''
+backend: elasticsearch
+backend_config:
+  cluster_settings:
+    cluster: content
+  fuzziness: auto
+  scheme: http
+  host: localhost
+  port: '9200'
+  path: ''
+  excerpt: false
+  retrieve_data: false
+  highlight_data: false
+  http_method: AUTO
+  autocorrect_spell: true
+  autocorrect_suggest_words: true

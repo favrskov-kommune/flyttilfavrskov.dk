@@ -1,0 +1,29 @@
+uuid: 4e3c75d2-133d-456b-be12-107d0afc2c1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.erl_section
+  enforced:
+    module:
+      - erl_paragraphs
+_core:
+  default_config_hash: Q4pKIoLeOE5MhFBrIfMsFjvto6ae3-dbP14STHCVrSg
+id: paragraph.erl_section.default
+targetEntityType: paragraph
+bundle: erl_section
+mode: default
+content:
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  moderation_state: true
+  status: true
+  uid: true

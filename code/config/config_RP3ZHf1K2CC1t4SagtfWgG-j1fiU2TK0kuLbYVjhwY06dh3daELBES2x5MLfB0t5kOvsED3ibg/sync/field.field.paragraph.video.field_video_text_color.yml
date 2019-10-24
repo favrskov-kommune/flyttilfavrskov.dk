@@ -1,0 +1,25 @@
+uuid: 8c447775-8cb8-44d3-a6c8-2b358f21f97f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_video_text_color
+    - paragraphs.paragraphs_type.video
+  module:
+    - options
+_core:
+  default_config_hash: 8shW8BUIOZQCfofOddGqXmUG0JeiXBB6MSmOxPs5hvc
+id: paragraph.video.field_video_text_color
+field_name: field_video_text_color
+entity_type: paragraph
+bundle: video
+label: 'Text color'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: dark
+default_value_callback: ''
+settings: {  }
+field_type: list_string

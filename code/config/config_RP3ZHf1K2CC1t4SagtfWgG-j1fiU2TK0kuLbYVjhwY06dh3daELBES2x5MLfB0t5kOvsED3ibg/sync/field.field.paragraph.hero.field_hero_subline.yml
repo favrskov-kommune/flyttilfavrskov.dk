@@ -1,0 +1,21 @@
+uuid: 17c4a0c2-d34f-4b9d-94a8-d280cfd37675
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hero_subline
+    - paragraphs.paragraphs_type.hero
+_core:
+  default_config_hash: 1od5bht-B2IXRu1xBeDUWAp2gMxWSi2ly3s1uH3K000
+id: paragraph.hero.field_hero_subline
+field_name: field_hero_subline
+entity_type: paragraph
+bundle: hero
+label: Subline
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

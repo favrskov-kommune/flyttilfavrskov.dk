@@ -1,0 +1,29 @@
+uuid: 74cdbb3c-7fed-4f41-a8e6-5abe66f87d23
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_file
+    - media.type.dds_file
+  module:
+    - file
+_core:
+  default_config_hash: KVUnfRHJlEMS0hyzShvZZ6ZUE71jOxY7AevOpyj6Vqw
+id: media.dds_file.field_media_file
+field_name: field_media_file
+entity_type: media
+bundle: dds_file
+label: File
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_extensions: 'txt doc docx pdf'
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

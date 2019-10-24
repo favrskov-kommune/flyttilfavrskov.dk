@@ -1,0 +1,23 @@
+uuid: 2c681f86-25f6-4c8a-b430-2cbe2966b897
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_cookieinfo
+  module:
+    - site_settings
+_core:
+  default_config_hash: _CsM51XzlePZw9_3rrkW7JQAG20wrIWm6aL0SrYaqys
+id: site_setting_entity.field_cookie_show_once
+field_name: field_cookie_show_once
+entity_type: site_setting_entity
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

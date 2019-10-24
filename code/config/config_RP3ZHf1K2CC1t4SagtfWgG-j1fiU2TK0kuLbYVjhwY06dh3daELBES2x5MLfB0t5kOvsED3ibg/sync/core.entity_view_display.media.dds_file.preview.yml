@@ -1,0 +1,34 @@
+uuid: 1205af08-f69a-48cd-983a-76a7c98d3000
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.preview
+    - field.field.media.dds_file.field_media_category
+    - field.field.media.dds_file.field_media_file
+    - image.style.thumbnail
+    - media.type.dds_file
+  module:
+    - image
+_core:
+  default_config_hash: '-y-QyzeevsQpMzPcmdXnbhIPNNGAKSFKA2UD4G0hvzI'
+id: media.dds_file.preview
+targetEntityType: media
+bundle: dds_file
+mode: preview
+content:
+  thumbnail:
+    type: image
+    weight: 0
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: file
+    region: content
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_media_category: true
+  field_media_file: true
+  name: true
+  uid: true

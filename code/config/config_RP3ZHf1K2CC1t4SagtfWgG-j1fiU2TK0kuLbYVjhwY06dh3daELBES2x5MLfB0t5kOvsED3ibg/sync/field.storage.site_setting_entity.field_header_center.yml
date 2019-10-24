@@ -1,0 +1,26 @@
+uuid: 2f1fca83-3aa3-4008-bb83-839f1b9ef4cd
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_site_settings
+  module:
+    - site_settings
+_core:
+  default_config_hash: KsS81QRDx90B9Ck0MjQ_Kpy0i9NJQWizbwonbO4Pgkg
+id: site_setting_entity.field_header_center
+field_name: field_header_center
+entity_type: site_setting_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

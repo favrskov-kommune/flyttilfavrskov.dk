@@ -1,0 +1,25 @@
+uuid: 3c6f3903-d14f-4dab-9e87-70f3b9ad44ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_inline_navigation_mode
+    - paragraphs.paragraphs_type.inline_navigation
+  module:
+    - options
+_core:
+  default_config_hash: lb-WBtiKcH03WdUYujtV3KoEcPv0M5twqgKWcVq6QH0
+id: paragraph.inline_navigation.field_inline_navigation_mode
+field_name: field_inline_navigation_mode
+entity_type: paragraph
+bundle: inline_navigation
+label: 'Selection mode'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: parent
+default_value_callback: ''
+settings: {  }
+field_type: list_string

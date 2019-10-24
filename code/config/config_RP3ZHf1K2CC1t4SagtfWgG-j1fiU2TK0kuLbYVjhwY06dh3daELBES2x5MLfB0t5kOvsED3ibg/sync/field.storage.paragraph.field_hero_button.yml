@@ -1,0 +1,24 @@
+uuid: 2063e81b-0ee2-49b3-b583-d3d5152b9364
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_paragraphs_hero
+  module:
+    - dds_content
+    - paragraphs
+_core:
+  default_config_hash: JZw0tf7dZwQ1R3ZCOmU5c_CACW5GTMMCOsFaKV16pjo
+id: paragraph.field_hero_button
+field_name: field_hero_button
+entity_type: paragraph
+type: dds_link_with_target
+settings: {  }
+module: dds_content
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

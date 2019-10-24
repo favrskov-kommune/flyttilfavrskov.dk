@@ -1,0 +1,21 @@
+uuid: 03076dce-a04b-4504-a314-b152b8d2acfb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser
+    - node.type.special_page
+_core:
+  default_config_hash: kHfFa8mKMKgQ_TLNyGi21nBZuAml2Ot6JHYSru1XH_4
+id: node.special_page.field_teaser
+field_name: field_teaser
+entity_type: node
+bundle: special_page
+label: Teaser
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

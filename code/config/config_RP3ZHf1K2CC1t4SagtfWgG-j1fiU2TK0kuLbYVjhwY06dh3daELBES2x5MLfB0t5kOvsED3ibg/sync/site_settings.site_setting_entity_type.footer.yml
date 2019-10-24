@@ -1,0 +1,13 @@
+uuid: 54649b63-e2b7-4cf4-a8ff-78808592e99b
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_site_settings
+_core:
+  default_config_hash: 9ETaYyAKhQl5A1ktrGIQYldx9eiDR1kIxBZVnBLNuJE
+id: footer
+label: 'Footer content'
+fieldset: 'Site settings'
+multiple: false

@@ -1,0 +1,26 @@
+uuid: 97d52e74-82de-4105-b67a-984e8aad7589
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_paragraphs_appetizer
+  module:
+    - paragraphs
+_core:
+  default_config_hash: kNiKGeXkIW8RSPPB7nsOidjqcujsI6gNs_B6o6-KTnU
+id: paragraph.field_appetizer_headline
+field_name: field_appetizer_headline
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

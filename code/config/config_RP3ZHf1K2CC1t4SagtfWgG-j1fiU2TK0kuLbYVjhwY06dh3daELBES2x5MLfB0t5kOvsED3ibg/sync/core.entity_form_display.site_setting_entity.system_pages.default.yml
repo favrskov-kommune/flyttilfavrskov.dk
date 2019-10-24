@@ -1,0 +1,69 @@
+uuid: f35fd4ee-111d-4b37-a47b-2079da7c0a19
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.site_setting_entity.system_pages.field_403
+    - field.field.site_setting_entity.system_pages.field_404
+    - field.field.site_setting_entity.system_pages.field_frontpage
+    - site_settings.site_setting_entity_type.system_pages
+_core:
+  default_config_hash: n3oi3oKcuN_q_nUrS_TOjh8Yd-APU9z7Qr_btCtVGc0
+id: site_setting_entity.system_pages.default
+targetEntityType: site_setting_entity
+bundle: system_pages
+mode: default
+content:
+  field_403:
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_404:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_frontpage:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  fieldset:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

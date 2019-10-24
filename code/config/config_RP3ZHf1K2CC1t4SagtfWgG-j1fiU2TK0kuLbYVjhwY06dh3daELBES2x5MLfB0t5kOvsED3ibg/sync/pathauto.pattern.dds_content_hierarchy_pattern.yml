@@ -1,0 +1,23 @@
+uuid: 9f12da70-9eca-4ee6-b5bf-c4912f10a499
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: dds_content_hierarchy_pattern
+label: 'Content Hierarchy Pattern'
+type: 'canonical_entities:node'
+pattern: '[node:ancestors-joined-path]/[node:title]'
+selection_criteria:
+  55c00b48-efa9-492c-b3bd-424674c77096:
+    id: node_type
+    bundles:
+      basic_page: basic_page
+      special_page: special_page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 55c00b48-efa9-492c-b3bd-424674c77096
+selection_logic: and
+weight: 0
+relationships: {  }

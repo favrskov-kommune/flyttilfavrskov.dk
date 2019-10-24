@@ -1,0 +1,25 @@
+uuid: 1d6fe623-826e-485a-b5cf-f60e6f15d9ed
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_media
+  module:
+    - media
+    - taxonomy
+_core:
+  default_config_hash: _3twfhFcLmrqR_7TfNNYU5kTxLIOfG7KdGvIVSyf7U0
+id: media.field_media_category
+field_name: field_media_category
+entity_type: media
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

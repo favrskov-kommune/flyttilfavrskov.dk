@@ -1,0 +1,11 @@
+page_alter: false
+raw_names: false
+error_handlers:
+  1: 1
+rebuild_theme: false
+debug_mail_file_format: '%to-%subject-%datetime.mail.txt'
+debug_mail_directory: 'temporary://devel-mails'
+devel_dumper: kint
+langcode: da
+_core:
+  default_config_hash: ZEJ28z8dHor_pqkh54pFbLAFU5HqUb09j_fY5WOF7Ds

@@ -1,0 +1,24 @@
+uuid: 1789b743-e30b-4037-a102-993254f65f21
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_content
+  module:
+    - dds_content
+    - node
+_core:
+  default_config_hash: zAyfFtA2YIf-1iH_5nARlmYkgwPMZfbWSoFjtVCBDZc
+id: node.field_header_cta
+field_name: field_header_cta
+entity_type: node
+type: dds_link_with_target
+settings: {  }
+module: dds_content
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,25 @@
+uuid: ec9d4021-a3a5-4efd-99ce-5c0fc4330d7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_text_color
+    - node.type.basic_page
+  module:
+    - options
+_core:
+  default_config_hash: rLsQWiK8MlybDrrduIAoMDtnheR2-sSmjsVsy1dClNI
+id: node.basic_page.field_header_text_color
+field_name: field_header_text_color
+entity_type: node
+bundle: basic_page
+label: 'Text color'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: light
+default_value_callback: ''
+settings: {  }
+field_type: list_string

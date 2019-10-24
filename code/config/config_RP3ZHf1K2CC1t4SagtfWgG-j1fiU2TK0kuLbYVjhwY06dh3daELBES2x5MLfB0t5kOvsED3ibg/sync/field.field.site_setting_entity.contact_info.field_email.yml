@@ -1,0 +1,21 @@
+uuid: c7431ff1-8dd8-44ed-9aef-58481e32f40f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_email
+    - site_settings.site_setting_entity_type.contact_info
+_core:
+  default_config_hash: HjYj7FL1h2zxv4ATvi809nne5rhj56jAOCxXFGQ9duI
+id: site_setting_entity.contact_info.field_email
+field_name: field_email
+entity_type: site_setting_entity
+bundle: contact_info
+label: Email
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

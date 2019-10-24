@@ -1,0 +1,25 @@
+uuid: 6b6f6533-b0c1-485e-9cbf-40a931d21b66
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_cta
+    - node.type.special_page
+  module:
+    - dds_content
+_core:
+  default_config_hash: RVI8jg44Mk2y4X_0d5UI5mgWQsc_SFEeadTeHZhDCqU
+id: node.special_page.field_header_cta
+field_name: field_header_cta
+entity_type: node
+bundle: special_page
+label: 'Header CTA'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: '17'
+  title: '2'
+field_type: dds_link_with_target

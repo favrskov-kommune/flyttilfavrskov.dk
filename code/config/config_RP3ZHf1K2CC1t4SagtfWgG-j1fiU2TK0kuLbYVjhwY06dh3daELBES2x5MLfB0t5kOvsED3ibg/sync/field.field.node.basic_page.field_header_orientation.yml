@@ -1,0 +1,25 @@
+uuid: b7885170-14ff-47d5-9478-3b5cce7ac4dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_orientation
+    - node.type.basic_page
+  module:
+    - options
+_core:
+  default_config_hash: gx5-C4twjzkjk6G4EQfC8GmGOtnJ1h3oNSK_Wzl_hXo
+id: node.basic_page.field_header_orientation
+field_name: field_header_orientation
+entity_type: node
+bundle: basic_page
+label: 'Header text orientation'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

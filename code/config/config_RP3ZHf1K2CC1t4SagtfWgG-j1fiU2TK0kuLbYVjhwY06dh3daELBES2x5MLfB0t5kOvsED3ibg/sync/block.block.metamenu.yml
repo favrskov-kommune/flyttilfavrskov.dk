@@ -1,0 +1,27 @@
+uuid: d706680a-13f3-4373-91e4-4b5e4b850d6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.meta-menu
+  module:
+    - system
+  theme:
+    - dds_premium
+_core:
+  default_config_hash: KyBxSiQTXzc4MX_XLU1ZXVA5RpP0LgT7zIwWTJXz57c
+id: metamenu
+theme: dds_premium
+region: header
+weight: 0
+provider: null
+plugin: 'system_menu_block:meta-menu'
+settings:
+  id: 'system_menu_block:meta-menu'
+  label: 'Meta menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

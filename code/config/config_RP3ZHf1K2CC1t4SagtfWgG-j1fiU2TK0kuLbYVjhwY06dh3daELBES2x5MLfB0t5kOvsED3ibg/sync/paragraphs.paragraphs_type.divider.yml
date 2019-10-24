@@ -1,0 +1,14 @@
+uuid: 0c0f202a-552f-4129-9590-36b78ab5fa73
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_paragraphs_button
+_core:
+  default_config_hash: UZWTEuwuD7s7i3YSAMHMYoI9WP6EUhrbLRBA9EQlR2E
+id: divider
+label: Divider
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

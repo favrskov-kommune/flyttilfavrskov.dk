@@ -1,0 +1,35 @@
+uuid: 32a24a34-fcfa-494a-be6f-9f294ddfd100
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_content
+  module:
+    - node
+    - options
+_core:
+  default_config_hash: DxPEjoo-aoATz9JlGtz2RBs3Sv_DWABy1i3L6Cp315Y
+id: node.field_header_orientation
+field_name: field_header_orientation
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: left
+      label: 'Align left'
+    -
+      value: center
+      label: 'Align center'
+    -
+      value: right
+      label: 'Align right'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

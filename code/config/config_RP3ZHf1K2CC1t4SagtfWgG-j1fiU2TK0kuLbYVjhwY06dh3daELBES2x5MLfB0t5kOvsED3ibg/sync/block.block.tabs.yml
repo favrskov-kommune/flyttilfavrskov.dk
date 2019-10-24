@@ -1,0 +1,22 @@
+uuid: 39ab1801-e002-4aef-98a9-8f55ddc3c10e
+langcode: en
+status: true
+dependencies:
+  theme:
+    - dds_premium
+_core:
+  default_config_hash: 2BjXy8YZelnuSTuCtAxaVOSeOUsL6r0AP1hfEtofdgY
+id: tabs
+theme: dds_premium
+region: preheader
+weight: -3
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

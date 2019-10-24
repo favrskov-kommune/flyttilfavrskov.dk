@@ -1,0 +1,37 @@
+uuid: bf1f398c-2fb8-4538-ba99-d929f075c536
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.quote.field_quote_image
+    - field.field.paragraph.quote.field_quote_source
+    - field.field.paragraph.quote.field_quote_text
+    - paragraphs.paragraphs_type.quote
+_core:
+  default_config_hash: g3iGz2dvstTv88AxkRGxw3j_E2z6AAMZUZpG_OV28Ws
+id: paragraph.quote.default
+targetEntityType: paragraph
+bundle: quote
+mode: default
+content:
+  field_quote_source:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_quote_text:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+hidden:
+  created: true
+  field_quote_image: true
+  status: true
+  uid: true

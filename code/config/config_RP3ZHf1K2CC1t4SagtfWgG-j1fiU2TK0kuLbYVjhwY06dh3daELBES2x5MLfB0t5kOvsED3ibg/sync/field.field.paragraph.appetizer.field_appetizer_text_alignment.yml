@@ -1,0 +1,25 @@
+uuid: 8f8b6228-4f6c-44ff-99d5-e2a2f8a2d1e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_appetizer_text_alignment
+    - paragraphs.paragraphs_type.appetizer
+  module:
+    - options
+_core:
+  default_config_hash: CkRgWgcW-DUW73KEidQ-DXsATaovX0pZzstIWDsQqUs
+id: paragraph.appetizer.field_appetizer_text_alignment
+field_name: field_appetizer_text_alignment
+entity_type: paragraph
+bundle: appetizer
+label: 'Text alignment'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

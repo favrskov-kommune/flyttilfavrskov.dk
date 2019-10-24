@@ -1,0 +1,36 @@
+uuid: f913c5c2-8fed-45fc-8359-2b2f0c5e8ed1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_parent
+    - node.type.basic_page
+    - node.type.special_page
+  module:
+    - entity_hierarchy
+_core:
+  default_config_hash: tl74OehMyKTJmqltzr_E4Ax5dIhYw2BgYOYZm275wMo
+id: node.special_page.field_parent
+field_name: field_parent
+entity_type: node
+bundle: special_page
+label: Parent
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      basic_page: basic_page
+      special_page: special_page
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: basic_page
+  weight_min: -50
+  weight_max: 50
+  weight_label: Weight
+field_type: entity_reference_hierarchy

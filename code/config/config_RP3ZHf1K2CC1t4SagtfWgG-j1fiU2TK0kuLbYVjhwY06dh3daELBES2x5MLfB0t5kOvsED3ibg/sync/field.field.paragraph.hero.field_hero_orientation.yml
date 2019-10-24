@@ -1,0 +1,25 @@
+uuid: 6cb73cde-4b83-4291-a09b-bf6a181d8926
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hero_orientation
+    - paragraphs.paragraphs_type.hero
+  module:
+    - options
+_core:
+  default_config_hash: iCceibRwjwa4WsgvqZ-VL9AouZI4n6yDYmDHKa1CmnM
+id: paragraph.hero.field_hero_orientation
+field_name: field_hero_orientation
+entity_type: paragraph
+bundle: hero
+label: 'Text orientation'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

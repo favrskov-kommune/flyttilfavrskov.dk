@@ -1,0 +1,25 @@
+uuid: e42a3349-c287-4184-8c0a-11a900ff6832
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_paragraphs_appetizer
+  module:
+    - media
+    - paragraphs
+_core:
+  default_config_hash: IPiILiT937DXVUPfNvkkaoP1zh84rBrmO2-VS7wt4zI
+id: paragraph.field_appetizer_image
+field_name: field_appetizer_image
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

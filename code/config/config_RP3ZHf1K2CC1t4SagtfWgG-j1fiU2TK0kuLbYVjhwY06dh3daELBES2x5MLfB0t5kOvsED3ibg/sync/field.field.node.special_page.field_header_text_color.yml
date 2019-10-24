@@ -1,0 +1,25 @@
+uuid: 1ed51039-a2ed-4960-b056-06b2dbb98a3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_text_color
+    - node.type.special_page
+  module:
+    - options
+_core:
+  default_config_hash: lE9faLZ_v6jqHV2pPL_B9dqq3ahK5OQyUg8Sq4k-UnA
+id: node.special_page.field_header_text_color
+field_name: field_header_text_color
+entity_type: node
+bundle: special_page
+label: 'Text color'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: light
+default_value_callback: ''
+settings: {  }
+field_type: list_string

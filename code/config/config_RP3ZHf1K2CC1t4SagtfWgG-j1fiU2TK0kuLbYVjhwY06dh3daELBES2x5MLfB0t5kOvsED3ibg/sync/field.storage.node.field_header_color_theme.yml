@@ -1,0 +1,32 @@
+uuid: f2da969f-90f8-4895-8495-58c333a6d9ee
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_content
+  module:
+    - node
+    - options
+_core:
+  default_config_hash: '-KglTasvd4mH2kQ91qWMfvplVn5BT3H8slYFQvOM1_4'
+id: node.field_header_color_theme
+field_name: field_header_color_theme
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: primary
+      label: Primary
+    -
+      value: secondary
+      label: Secondary
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

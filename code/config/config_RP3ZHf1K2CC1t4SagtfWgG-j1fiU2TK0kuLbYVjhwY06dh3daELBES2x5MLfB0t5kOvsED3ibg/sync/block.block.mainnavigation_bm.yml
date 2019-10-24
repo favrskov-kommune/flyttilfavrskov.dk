@@ -1,0 +1,27 @@
+uuid: 4fd44a56-acf5-4568-babc-e5c6bb965f1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - dds_premium
+_core:
+  default_config_hash: IERIwdQlTNTTAQylEkhxvSLSyYv2fBvmzm9kA15BDsE
+id: mainnavigation_bm
+theme: dds_premium
+region: burgermenu
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 2
+  expand_all_items: false
+visibility: {  }

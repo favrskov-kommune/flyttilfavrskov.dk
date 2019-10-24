@@ -1,0 +1,25 @@
+uuid: cabb861b-003a-47cd-b592-10d3cf215f1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hide_breadcrumb
+    - node.type.special_page
+_core:
+  default_config_hash: 8V6jaK-T8wsTuAQqWNA__gOZp-dbSJC9pkJeiINA2fI
+id: node.special_page.field_hide_breadcrumb
+field_name: field_hide_breadcrumb
+entity_type: node
+bundle: special_page
+label: 'Hide breadcrumb'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

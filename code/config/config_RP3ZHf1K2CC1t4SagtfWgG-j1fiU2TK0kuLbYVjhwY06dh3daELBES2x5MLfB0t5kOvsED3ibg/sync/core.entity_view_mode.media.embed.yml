@@ -1,0 +1,15 @@
+uuid: fcaa6e17-706f-43fb-86e8-ffd95e6d0042
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_media
+  module:
+    - media
+_core:
+  default_config_hash: bkcJcCxUMYDvHhTWgNWBg9ujrbiUjI-4xx8qVQyQelE
+id: media.embed
+label: Embed
+targetEntityType: media
+cache: true

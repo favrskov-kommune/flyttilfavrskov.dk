@@ -1,0 +1,21 @@
+uuid: 1224de59-5fe0-4c1b-b302-e8cc0190035b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_cookie_open
+    - site_settings.site_setting_entity_type.cookieinfo
+_core:
+  default_config_hash: UueYA8mYdlhfRByd11JIjxb76GdSKva2BslEa6OSMwM
+id: site_setting_entity.cookieinfo.field_cookie_open
+field_name: field_cookie_open
+entity_type: site_setting_entity
+bundle: cookieinfo
+label: 'Open label'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,22 @@
+uuid: 8b824adb-c37e-46ec-aa7b-d3b7ae5e1dda
+langcode: en
+status: false
+dependencies: {  }
+_core:
+  default_config_hash: 1SwKPbR2e2wCnCHzZQeadzDjHXzF1UJvrKahoE6vx8M
+id: develop
+label: Develop
+description: ''
+folder: ../config/develop/sync
+module:
+  devel: 0
+  kint: 0
+theme: {  }
+blacklist:
+  - devel.settings
+  - devel.toolbar.settings
+  - system.menu.devel
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0
