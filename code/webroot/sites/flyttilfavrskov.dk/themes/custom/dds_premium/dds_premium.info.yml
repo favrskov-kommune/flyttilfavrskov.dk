@@ -1,0 +1,19 @@
+name: DDS Premium
+type: theme
+description: 'DDS Premium theme'
+package: Drupal Design Suite
+version: VERSION
+core: '8.x'
+
+libraries:
+  - dds_premium/master
+
+regions:
+  preheader: Pre header
+  header: Header
+  breadcrumb: Breadcrumb
+  content: Content
+  burgermenu: Burgermenu
+
+interface translation project: dds_premium
+interface translation server pattern: dds_premium/translations/%language.po

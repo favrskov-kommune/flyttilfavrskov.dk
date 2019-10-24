@@ -1,0 +1,7 @@
+/* Make more space to logo, instead of 50% add a border-left */
+@media (max-width: 991px) {
+  .search-toggle {
+    width: 33.33%;
+    border-left: 1px solid #ededed;
+  }
+}

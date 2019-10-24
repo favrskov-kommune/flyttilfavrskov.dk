@@ -1,0 +1,24 @@
+/* Center the language menu and change opening direction */
+.language-menu-list:not(.language-menu-list--open) {
+  pointer-events: none;
+}
+
+@media(max-width: 991px) {
+  .language-menu {
+    margin-left: auto;
+  }
+  .language-menu__trigger .icon--arrow-down {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  .language-menu-list {
+    bottom: 100%;
+    top: auto;
+  }
+  .language-menu-list:not(.language-menu-list--open) {
+    -webkit-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+}

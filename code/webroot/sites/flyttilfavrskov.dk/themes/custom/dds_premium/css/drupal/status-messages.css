@@ -1,0 +1,39 @@
+/* Status messages - default styling */
+.status-messages {
+  margin: 0 auto;
+}
+
+.status-message-container {
+  position: relative;
+  z-index: 5;
+}
+
+.status-message {
+  background-color: #c6c6c6;
+  color: #363636;
+  padding: 10px;
+  line-height: 23px;
+  font-size: 14px;
+  text-align: center;
+  position: relative;
+}
+
+.status-message ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.status-message--status {
+  background-color: #DFF0D8;
+  color: #3C763D;
+}
+
+.status-message--warning {
+  background-color: #FCF8E3;
+  color: #8A6D3B;
+}
+
+.status-message--error {
+  background-color: #fce3e3;
+  color: #763c3c;
+}

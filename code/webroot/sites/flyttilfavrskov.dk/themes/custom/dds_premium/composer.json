@@ -1,0 +1,11 @@
+{
+  "name": "novicell/dds_premium",
+  "type": "drupal-theme",
+  "description": "Novicell Drupal Design Suite Premium Theme",
+  "keywords": [
+    "Novicell"
+  ],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.novicell.dk",
+  "minimum-stability": "dev"
+}

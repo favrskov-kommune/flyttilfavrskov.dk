@@ -1,0 +1,15 @@
+/* Default styling for label */
+.label {
+  color: currentColor;
+  display: inline-block;
+  max-width: 100%; /* Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)*/
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.label.form-required:after {
+  content: '*';
+  color: #f00;
+  display: inline-block;
+  margin-left: 5px;
+}

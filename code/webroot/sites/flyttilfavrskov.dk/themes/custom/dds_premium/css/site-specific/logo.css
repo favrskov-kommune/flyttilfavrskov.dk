@@ -1,0 +1,17 @@
+/* We will always display logo */
+.logo {
+  display: block;
+}
+
+/* Add styling so we can use a logo as svg */
+.logo img {
+  display: block;
+  height: 60px;
+  width: auto;
+}
+
+@media(max-width: 991px) {
+  .logo img {
+    height: 55px;
+  }
+}

@@ -55,9 +55,9 @@
  * @see \Drupal\Core\DrupalKernel::getSitePath()
  * @see https://www.drupal.org/documentation/install/multi-site
  */
-$sites['grundsalg.favrskov.dk'] = 'grundsalg.favrskov.dk';
-$sites['grundsalg.favrskov.dk.staging.drupal08.novicell.dk'] = 'grundsalg.favrskov.dk';
-$sites['grundsalg.favrskov.ditnyewebsite.dk'] = 'grundsalg.favrskov.dk';
+$sites['flyttilfavrskov.dk'] = 'flyttilfavrskov.dk';
+$sites['flyttilfavrskov.dk.staging.drupal08.novicell.dk'] = 'flyttilfavrskov.dk';
+$sites['flyttilfavrskov.ditnyewebsite.dk'] = 'flyttilfavrskov.dk';
 
 if (file_exists(__DIR__ . '/sites.local.php')) {
   include __DIR__ . '/sites.local.php';

@@ -1,0 +1,8 @@
+<figure>
+  <div{{ (not attributes ? create_attribute() : attributes).addClass('image') }}>
+    {{ image|image(image_style, 'lazyload lazyload-measure lazyload-bg') }}
+  </div>
+  {% if caption %}
+    <figcaption>{{ caption }}</figcaption>
+  {% endif %}
+</figure>

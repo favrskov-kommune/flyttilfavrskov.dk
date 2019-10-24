@@ -1,0 +1,7 @@
+.appetiser {
+  width: 100%;
+}
+
+.appetiser--small .appetiser__content {
+  max-width: none;
+}

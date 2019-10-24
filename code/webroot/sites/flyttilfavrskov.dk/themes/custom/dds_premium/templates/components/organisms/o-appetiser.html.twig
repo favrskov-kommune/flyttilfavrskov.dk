@@ -1,0 +1,26 @@
+<div {{ attributes.addClass('appetiser').addClass(text_alignment ? 'appetiser--content-' ~ text_alignment).addClass(orientation and not is_small_version ? 'appetiser--image-' ~ orientation).addClass(is_small_version ? 'appetiser--small') }}>
+  <div class="appetiser__content-wrapper">
+    {% if not is_small_version %}
+    <div class="container">
+      {% endif %}
+      <div class="appetiser__content">
+        <h2 class="appetiser__title">{{ title }}</h2>
+        <div class="appetiser__description">{{ text }}</div>
+        {% if cta.url and cta.title %}
+          {% include '@dds_premium/components/molecules/m-cta.html.twig' with {
+            'url': cta.url,
+            'text': cta.title,
+            'attributes': cta.attributes
+          } %}
+        {% endif %}
+      </div>
+      {% if not is_small_version %}
+    </div>
+    {% endif %}
+  </div>
+  {% if image %}
+    <figure{{ image_figure_attributes.addClass('appetiser__image') }}>
+      {{ image|image(image_style, 'lazyload lazyload-measure lazyload-bg') }}
+    </figure>
+  {% endif %}
+</div>

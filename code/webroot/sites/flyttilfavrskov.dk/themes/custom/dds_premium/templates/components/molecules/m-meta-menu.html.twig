@@ -1,0 +1,12 @@
+{% block meta_menu %}
+  <div class="meta-menu">
+    <div class="container">
+      <div class="meta-menu__inner">
+        {% block meta_menu_content %}
+          {{ language_switcher }}
+          {{ meta_menu }}
+        {% endblock %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

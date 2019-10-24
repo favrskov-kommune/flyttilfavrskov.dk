@@ -1,0 +1,54 @@
+.button,
+a.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: var(--button-border-radius);
+    height: var(--button-height);
+    padding: var(--button-padding);
+    background-color: var(--theme-button-background-color, black);
+    color: var(--theme-button-color, white);
+    font-weight: var(--button-font-weight);
+    font-family: var(--button-font-family);
+    font-size: var(--button-font-size);
+    border: solid var(--button-border-width) var(--button-border-color);
+    position: relative;
+    overflow: hidden;
+
+    .icon--arrow-right {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(-100%, -50%);
+        width: 16px;
+        height: 16px;
+        fill: currentColor;
+        transition: transform 0.2s;
+        will-change: transform;
+    }
+
+    &:hover,
+    &:focus {
+        .icon--arrow-right {
+            transform: translate(100%, -50%);
+        }
+    }
+
+    &--ghost {
+        border: solid 1px var(--theme-button-background-color, black);
+        background-color: transparent;
+        color: currentColor;
+    }
+
+    &--center {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &--right {
+        left: 100%;
+        transform: translateX(-100%);
+    }
+}

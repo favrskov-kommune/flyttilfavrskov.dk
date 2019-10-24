@@ -1,0 +1,29 @@
+.header {
+    position: fixed;
+    background-color: var(--header-background-color);
+    font-family: var(--header-font-family);
+    font-weight: var(--header-font-weight);
+    color: var(--header-text-color);
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    box-shadow: 0 25px 75px rgba(0, 0, 0, 0.1);
+
+    @media (--viewport-md-min) {
+        bottom: auto;
+        top: 0;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: var(--header-height-mobile);
+
+        @media (--viewport-md-min) {
+            height: var(--header-height);
+            justify-content: flex-end;
+        }
+    }
+}

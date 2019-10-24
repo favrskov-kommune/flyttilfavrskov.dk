@@ -1,0 +1,10 @@
+{
+    "title": "Video",
+    "status": "wip",
+    "context": {
+        "videoId": "",
+        "videoService": "",
+        "title": "This is a video container which opens and plays in an overlay",
+        "subtitle": ""
+    }
+}

@@ -1,0 +1,11 @@
+.image {
+  width: 100%;
+}
+
+figure {
+  width: 100%;
+}
+
+figure figcaption {
+  margin-top: 8px;
+}

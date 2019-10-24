@@ -1,0 +1,14 @@
+{
+    "title": "appetiser",
+    "status": "wip",
+    "context": {
+        "image": "/dist/images/building.jpg",
+        "title": "I am a headline – I can be placed left, center or right",
+        "description": "I am a subline. I have a maximum amount of characters and can also be placed left, center or right…",
+        "cta": "CTA - I Have different colors",
+        "imageAlign": "right",
+        "size": "",
+        "isLarge": "yes",
+        "position": "content-left"
+    }
+}

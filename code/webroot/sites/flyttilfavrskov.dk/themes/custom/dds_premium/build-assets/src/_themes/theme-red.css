@@ -1,0 +1,7 @@
+.theme-red {
+    --theme-background-color: #ef3e4a;
+    --theme-color: #ffefe5;
+    --theme-button-background-color: #ffefe5;
+    --theme-button-color: #ef3e4a;
+    --theme-link-color: #ffefe5;
+}

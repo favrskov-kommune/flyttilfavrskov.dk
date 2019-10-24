@@ -1,0 +1,12 @@
+<div{{ (not attributes ? create_attribute() : attributes).addClass('quote') }}>
+  {% include '@dds_premium/components/atoms/a-svg-icon.html.twig' with {
+    'svgIconName': 'quote'
+  } %}
+  <p>{{ quote_text }}</p>
+  {% include '@dds_premium/components/atoms/a-svg-icon.html.twig' with {
+    'svgIconName': 'quote'
+  } %}
+  {% if quote_source %}
+    <div class="quote__author">{{ quote_source }}</div>
+  {% endif %}
+</div>

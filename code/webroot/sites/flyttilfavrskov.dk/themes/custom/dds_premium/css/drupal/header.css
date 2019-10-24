@@ -1,0 +1,6 @@
+/* When user is logged in, we remove fixed from header */
+@media (min-width: 992px) {
+  body.adminimal-admin-toolbar header.header {
+    position: relative;
+  }
+}

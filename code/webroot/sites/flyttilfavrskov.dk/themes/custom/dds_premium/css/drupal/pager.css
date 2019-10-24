@@ -1,0 +1,29 @@
+.pager {
+  padding-left: 0;
+  margin-top: 50px;
+}
+
+.pager__items {
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.pager__item {
+  background-color: #eee;
+  display: inline-block;
+  padding: 11px 9px 11px;
+  min-width: 35px;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 2px 0 0 #ccc;
+}
+
+.pager__item.is-active {
+  font-weight: bold;
+}
+
+.pager__item a {
+  text-decoration: none;
+  color: #000;
+}

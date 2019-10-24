@@ -1,0 +1,7 @@
+.theme-primary {
+    --theme-background-color: #263ed3;
+    --theme-color: white;
+    --theme-button-background-color: white;
+    --theme-button-color: #263ed3;
+    --theme-link-color: white;
+}

@@ -1,0 +1,32 @@
+
+{% set columns = {
+  'layout_twocolumn_5050': {'left': 'two-column__section', 'right': 'two-column__section'},
+  'layout_twocolumn_3367': {'left': 'two-column__section__narrow', 'right': 'two-column__section__wide'},
+  'layout_twocolumn_6733': {'left': 'two-column__section__wide', 'right': 'two-column__section__narrow'}
+} %}
+{% set column_style = layout.id ? layout.id : 'layout_twocolumn_5050' %}
+
+{% set allow_spacing = settings.column_spacing and settings.column_spacing != 'none' %}
+
+{% set classes = [
+  'paragraph',
+  'paragraph--type-' ~ layout.getTemplate|clean_class,
+  view_mode ? 'paragraph--view-mode-' ~ view_mode|clean_class,
+  settings.color_theme != 'none' ? 'theme theme-' ~ settings.color_theme,
+  'section',
+  not allow_spacing ? 'section--no-spacing'
+] %}
+
+
+<section {{ attributes.addClass(classes) }}>
+  <div class="container">
+    <div class="row">
+      <div class="{{ columns[column_style].left }}">
+        {{ content.primary }}
+      </div>
+      <div class="{{ columns[column_style].right }}">
+        {{ content.secondary }}
+      </div>
+    </div>
+  </div>
+</section>

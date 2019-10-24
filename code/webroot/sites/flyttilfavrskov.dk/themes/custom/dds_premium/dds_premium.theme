@@ -1,0 +1,757 @@
+<?php
+
+use Drupal\Core\Entity\ContentEntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
+use Drupal\block\Entity\Block;
+use Drupal\Core\Template\Attribute;
+use Drupal\crop\Entity\Crop;
+use Drupal\node\NodeInterface;
+
+/**
+ * Add theme suggestion to menus.
+ *
+ * @param array $suggestions
+ *   Suggestion array by reference.
+ * @param array $variables
+ *   Template variables.
+ */
+function dds_premium_theme_suggestions_menu_alter(array &$suggestions, array $variables) {
+  if (isset($variables['attributes']['region'])) {
+    $suggestions[] = 'menu__' . $variables['menu_name'] . '__' . $variables['attributes']['region'];
+  }
+}
+
+/**
+ * Altering the user reset password form.
+ *
+ * @param array $form
+ *   Form render array.
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ *   Form state.
+ */
+function dds_premium_form_user_pass_alter(array &$form, FormStateInterface $form_state) {
+  $form['mail']['#prefix'] = '<div class="input__description">';
+  $form['mail']['#suffix'] = '</div>';
+}
+
+/**
+ * Altering the user reset password form.
+ *
+ * @param array $form
+ *   Form render array.
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ *   Form state.
+ */
+function dds_premium_form_search_form_alter(array &$form, FormStateInterface $form_state) {
+  unset($form['keys']['#title']);
+  $container = [
+    '#type' => 'container',
+    '#attributes' => [
+      'class' => ['search-page__keys-submit']
+    ]
+  ];
+  $container['keys'] = $form['keys'];
+  $container['submit_search'] = $form['submit_search'];
+  $form['keys_submit'] = $container;
+  unset($form['keys'], $form['submit_search']);
+}
+
+/**
+ * Add classes to language block.
+ *
+ * @param array $variables
+ *   Template variables.
+ */
+function dds_premium_preprocess_links__language_block(array &$variables) {
+  if (!empty($links = $variables['links'])) {
+    foreach ($links as $key => $link) {
+      $variables['links'][$key]['link']['#options']['attributes']['class'][] = 'language-menu-list-item__link';
+    }
+  }
+}
+
+/**
+ * Modify meta menu, by adding classes and adding a headline.
+ *
+ * @param array $variables
+ *   Template variables.
+ */
+function dds_premium_preprocess_menu__meta_menu(array &$variables) {
+  $region = $variables['attributes']['region'] ?? '';
+  // Based on region we will define special classes.
+  if ($region == 'header') {
+    $variables['attributes']['class'][] = 'meta-menu-list';
+  }
+  elseif ($region == 'burgermenu') {
+    $variables['attributes']['class'][] = 'burger-menu-list';
+    $variables['attributes']['class'][] = 'burger-menu-list--highlighted';
+  }
+  if (!empty($items = $variables['items'])) {
+    // Based on region we will add a "headline" to the menu.
+    if ($region == 'burgermenu') {
+      $headline = [
+        'headline' => [
+          'title' => t('Highlighted', ['context' => 'premium']),
+          'attributes' => (new Attribute)->addClass('burger-menu-list__label'),
+        ],
+      ];
+      $variables['items'] = $headline + $variables['items'];
+    }
+    foreach ($items as $key => $item) {
+      if ($region == 'header') {
+        $variables['items'][$key]['attributes']->addClass('meta-menu-item');
+        $variables['items'][$key]['link_options']['class'][] = 'meta-menu-item__link';
+      }
+      elseif ($region == 'burgermenu') {
+        $variables['items'][$key]['attributes']->addClass('burger-menu-list-item');
+        $variables['items'][$key]['link_options']['class'][] = 'burger-menu-list-item__link';
+      }
+    }
+  }
+}
+
+/**
+ * Modify the main menu in burger menu.
+ *
+ * @param array $variables
+ *   Template variables.
+ */
+function dds_premium_preprocess_menu__main__burgermenu(array &$variables) {
+  $variables['attributes']['class'][] = 'burger-menu-list';
+  $variables['next_level_attributes'] = (new Attribute)
+    ->addClass('burger-menu-list')
+    ->addClass('burger-menu-list--secondary');
+
+  if (!empty($items = $variables['items'])) {
+    $headline = [
+      'headline' => [
+        'title' => t('Menu', ['context' => 'premium']),
+        'attributes' => (new Attribute)->addClass('burger-menu-list__label'),
+      ],
+    ];
+    $variables['items'] = $headline + $variables['items'];
+    foreach ($items as $key => $item) {
+      $attributes = $variables['items'][$key]['attributes'];
+      $attributes->addClass('burger-menu-list-item');
+      $attributes->addClass('js-burger-menu-list-item');
+      $variables['items'][$key]['link_options']['class'][] = 'burger-menu-list-item__link';
+
+      // Add same attributes to items under below for next level.
+      if (!empty($item['below'])) {
+        $variables['items'][$key]['svg_icon']['name'] = 'arrow-line-down';
+        $variables['items'][$key]['svg_icon']['clickAction'] = 'triggerSubNavigation($event)';
+        $variables['items'][$key]['below'] = $headline + $variables['items'][$key]['below'];
+        foreach ($variables['items'][$key]['below'] as $key_below => $below_value) {
+          if ($key_below == 'headline') {
+            continue;
+          }
+          $attributes = $variables['items'][$key]['below'][$key_below]['attributes'];
+          $attributes->addClass('burger-menu-list-item');
+          $variables['items'][$key]['below'][$key_below]['link_options']['class'][] = 'burger-menu-list-item__link';
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Add region to blocks.
+ *
+ * @param array $variables
+ *   Template variables.
+ */
+function dds_premium_preprocess_block(array &$variables) {
+  if (isset($variables['elements']['#id'])) {
+    $region = Block::load($variables['elements']['#id'])->getRegion();
+    $variables['content']['#attributes']['region'] = $region;
+  }
+}
+
+/**
+ * Add contact information to burger menu.
+ *
+ * @param array $variables
+ *   Template variables.
+ */
+function dds_premium_preprocess_region__burgermenu(array &$variables) {
+  $variables['contacts'] = [];
+  // Load contacts from site settings if it exists.
+  $variables['#cache']['tags'][] = 'site_settings_bundle:contact_info';
+  $contact_infos = $variables['site_settings']['contact_information']['contact_info'] ?? [];
+  if (!empty($contact_infos) && is_array($contact_infos)) {
+    foreach ($contact_infos as $contact_info) {
+      $variables['contacts'][] = [
+        'title' => $contact_info['field_name'] ?? '',
+        'address' => $contact_info['field_address'] ?? '',
+        'zip' => $contact_info['field_zip'] ?? '',
+        'city' => $contact_info['field_city'] ?? '',
+        'cvr' => $contact_info['field_cvr'] ?? '',
+        'email' => $contact_info['field_email'] ?? '',
+        'telephone' => $contact_info['field_telephone'] ?? '',
+      ];
+    }
+  }
+}
+
+/**
+ * Add hero if its a node and footer to all pages.
+ *
+ * @param array $variables
+ *   Template variables.
+ */
+function dds_premium_preprocess_page(array &$variables) {
+  if (isset($variables['node'])) {
+    /** @var Drupal\node\Entity\Node $node */
+    if (!empty($node = $variables['node'])) {
+      $variables['hero'] = _create_hero($node, [
+        'title' => 'title',
+        'background_image' => 'field_header_background',
+        'text_color' => 'field_header_text_color',
+        'orientation' => 'field_header_orientation',
+        'color_theme' => 'field_header_color_theme',
+        'teaser' => 'field_header_subline',
+        'cta' => 'field_header_cta',
+      ]);
+    }
+  }
+  $variables['footer'] = _create_footer($variables);
+}
+
+/**
+ * Modify and change template variables.
+ *
+ * @param array $variables
+ *   Template variables.
+ */
+function dds_premium_preprocess_node__inline_navigation(array &$variables) {
+  /** @var \Drupal\node\Entity\Node $node */
+  $node = $variables['node'];
+  $image_uri = '';
+  $variables['image_container_attribute'] = new Attribute();
+  if ($node->hasField('field_header_background') && !$node->get('field_header_background')->isEmpty()) {
+    /** @var Drupal\media\Entity\Media $media */
+    $media = $node->get('field_header_background')->entity;
+    if (!empty($media) && $media->hasField('field_media_image')) {
+      /** @var Drupal\file\Entity\File $file */
+      if (!empty($file = $media->get('field_media_image')->entity)) {
+        $image_uri = $file->getFileUri() ?? '';
+      }
+    }
+  }
+
+  /*
+   * Using focal point and not responsive image style,
+   * then we need coordinates from focal point
+   * @todo Change it to responsive image style
+   * @todo Change image style to a more correct when we know the size
+   */
+  if (!empty($image_uri)) {
+    $variables['image'] = [
+      '#theme' => 'image_style',
+      '#style_name' => 'large',
+      '#uri' => $image_uri,
+      '#attributes' => [
+        'class' => ['lazyload', 'lazyload-measure', 'lazyload-bg'],
+        'height' => 'auto',
+        'width' => 'auto',
+      ],
+    ];
+    $focal_point_data = _get_xy_in_percentage_focalpoint($image_uri, file_create_url($image_uri));
+    $variables['image_container_attribute']->setAttribute('style', 'background-position:' . $focal_point_data['x'] . '% ' . $focal_point_data['y'] . '%');
+  }
+}
+
+/**
+ * Add data-src if image have a lazyload class.
+ *
+ * @param array $variables
+ *   Template variables.
+ */
+function dds_premium_preprocess_image(array &$variables) {
+  if (isset($variables['attributes']['class'])) {
+    $classes = $variables['attributes']['class'];
+    $implode = implode(' ', $classes);
+    $explode = explode(' ', $implode);
+    if (!empty($explode) && in_array('lazyload', $explode)) {
+      $variables['attributes']['data-src'] = $variables['attributes']['src'];
+      $variables['attributes']['data-query-obj'] = '{}';
+      unset($variables['attributes']['src']);
+    }
+  }
+}
+
+/**
+ * Add site branding and footer to maintenance page.
+ *
+ * @param array $variables
+ *   Template variables.
+ */
+function dds_premium_preprocess_maintenance_page(array &$variables) {
+  /** @var Drupal\Core\Entity\EntityTypeManager $entity_type_manager */
+  $entity_type_manager = \Drupal::entityTypeManager();
+  $block = Block::load('sitebranding');
+  if (!empty($block)) {
+    $variables['sitebranding'] = $entity_type_manager->getViewBuilder('block')->view($block);
+  }
+  $variables['page_title'] = $variables['page']['#title'];
+  $variables['footer'] = _create_footer($variables);
+}
+
+/**
+ * Add theme information to cooke info.
+ *
+ * @param array $variables
+ *   Template variables.
+ */
+function dds_premium_preprocess_dds_cookieinfo(array &$variables) {
+  $variables['section_attributes']->addClass('theme')
+    ->addClass('theme-primary');
+}
+
+/**
+ * Input preprocess for adding checkbox, radio or input classes.
+ *
+ * @param array $variables
+ *   Template variables.
+ */
+function dds_premium_preprocess_input(array &$variables) {
+  $type = $variables['element']['#type'];
+  if ($type == 'checkbox') {
+    $variables['attributes']['class'][] = 'checkbox';
+  }
+  if ($type == 'radio') {
+    $variables['attributes']['class'][] = 'radio';
+  }
+  $excluded_types = [
+    'search',
+    'textfield',
+    'password',
+    'datetime',
+    'datetime-local',
+    'date',
+    'month',
+    'time',
+    'week',
+    'number',
+    'email',
+    'url',
+    'tel',
+    'color',
+  ];
+  if (in_array($type, $excluded_types)) {
+    $variables['attributes']['class'][] = 'input';
+  }
+}
+
+/**
+ * Add ability to make the breadcrumb to float above the hero and schema.
+ *
+ * @param array $variables
+ *   Template variables.
+ */
+function dds_premium_preprocess_breadcrumb(array &$variables) {
+  $variables['#cache']['contexts'][] = 'url';
+
+  $breadcrumb_json_data = [
+    '@context' => 'http://schema.org',
+    '@type' => 'BreadcrumbList',
+    'itemListElement' => [],
+  ];
+  if (!empty($variables['links'])) {
+    /** @var \Drupal\Core\Link $item */
+    foreach ($variables['links'] as $key => $item) {
+      $breadcrumb_json_data['itemListElement'] = [
+        '@type' => 'ListItem',
+        'position' => $key,
+        'item' => [
+          '@id' => $item->getUrl()->toString(),
+          'name' => $item->getText(),
+        ],
+      ];
+    }
+  }
+  $variables['breadcrumb_json_data'] = [
+    '#type' => 'html_tag',
+    '#tag' => 'script',
+    '#attributes' => [
+      'type' => 'application/ld+json',
+    ],
+    '#value' => json_encode($breadcrumb_json_data),
+  ];
+  $variables['disable'] = FALSE;
+  $node = Drupal::routeMatch()->getParameter('node');
+  if ($node instanceof NodeInterface) {
+    $variables['disable'] = $node->hasField('field_hide_breadcrumb') && $node->get('field_hide_breadcrumb')->value == 1;
+  }
+
+  /** @var Drupal\Core\Template\Attribute $attribute */
+  $attribute = new Attribute();
+  $attribute->addClass('container');
+  $variables['items_attributes'] = (!empty($variables['items_attributes']) ? $variables['items_attributes'] : $attribute);
+
+  $node = Drupal::routeMatch()->getParameter('node');
+  if (!empty($node)) {
+    $variables['attributes']['class'][] = 'breadcrumb--pull-down';
+    $variables['attributes']['class'][] = 'breadcrumb--shadow';
+  }
+}
+
+/**
+ * Button paragraph preprocess.
+ *
+ * @param array $variables
+ *   Template variables.
+ */
+function dds_premium_preprocess_paragraph_widget__button(array &$variables) {
+  /** @var Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['paragraph'];
+  if ($paragraph->hasField('field_button') && !$paragraph->get('field_button')->isEmpty()) {
+    $cta = $paragraph->get('field_button')->getValue();
+    /** @var Drupal\Core\Template\Attribute $attribute */
+    $attribute = new Attribute();
+    if ($paragraph->hasField('field_button_alignment') && !$paragraph->get('field_button_alignment')->isEmpty()) {
+      $attribute->addClass('button--' . $paragraph->get('field_button_alignment')->value);
+    }
+    $variables['cta'] = _modify_cta(reset($cta), $attribute);
+  }
+}
+
+/**
+ * Image paragraph preprocess.
+ *
+ * @param array $variables
+ *   Template variables.
+ */
+function dds_premium_preprocess_paragraph_widget__image(array &$variables) {
+  // @todo Add image style when we know the size.
+  $variables['image_style'] = '';
+}
+
+/**
+ * Slideshow paragraph preprocess.
+ *
+ * @param array $variables
+ *   Template variables.
+ */
+function dds_premium_preprocess_paragraph_widget__slideshow(array &$variables) {
+  $items = $variables['fields']['field_slideshow_media'];
+  if (!empty($items)) {
+    foreach ($items as $item) {
+      $variables['items'][] = ['image' => $item['field_media_image']];
+    }
+  }
+
+  // @todo Add image style when we know the size.
+  $variables['image_style'] = '';
+}
+
+/**
+ * Accordion paragraph preprocess.
+ *
+ * @param array $variables
+ *   Template variables.
+ */
+function dds_premium_preprocess_paragraph_widget__accordion(array &$variables) {
+  $items = $variables['fields']['field_accordion_items'];
+  if (!empty($items)) {
+    foreach ($items as $item) {
+      $variables['items'][] = [
+        'id' => $item['entity_id'],
+        'headline' => $item['field_accordion_item_headline'],
+        'text' => $item['field_accordion_item_text'],
+      ];
+    }
+  }
+}
+
+/**
+ * Hero paragraph preprocess.
+ *
+ * @param array $variables
+ *   Template variables.
+ */
+function dds_premium_preprocess_paragraph_widget__hero(array &$variables) {
+  /** @var Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['paragraph'];
+  $variables['hero'] = _create_hero($paragraph, [
+    'title' => 'field_hero_headline',
+    'background_image' => 'field_hero_background',
+    'text_color' => 'field_hero_color',
+    'orientation' => 'field_hero_orientation',
+    'teaser' => 'field_hero_subline',
+    'cta' => 'field_hero_button',
+  ]);
+}
+
+/**
+ * Video paragraph preprocess.
+ *
+ * @param array $variables
+ *   Template variables.
+ */
+function dds_premium_preprocess_paragraph_widget__video(array &$variables) {
+  $video_oembed = ['url' => 'null', 'oEmbed' => 'null'];
+  if (Drupal::hasService('dds_media.media_helper')) {
+    /** @var Drupal\dds_media\MediaHelper $service */
+    $service = Drupal::service('dds_media.media_helper');
+    $video_data = $service->get_video_data($variables['video_url']);
+    $video_oembed['url'] = $video_data['url'];
+    $video_oembed['oEmbed'] = ['html' => $video_data['player']];
+  }
+  $variables['attributes']['data-video'] = json_encode($video_oembed);
+
+  // @todo Add image style when we know the size.
+  $variables['image_style'] = '';
+}
+
+
+/**
+ * Appetizer paragraph preprocess.
+ *
+ * @param array $variables
+ *   Template variables.
+ */
+function dds_premium_preprocess_paragraph_widget__appetizer(array &$variables) {
+  $variables['image_figure_attributes'] = new Attribute();
+  $background_image_uri = '';
+
+  /** @var Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['paragraph'];
+  if ($paragraph->hasField('field_appetizer_cta') && !$paragraph->get('field_appetizer_cta')->isEmpty()) {
+    $cta = $paragraph->get('field_appetizer_cta')->getValue();
+    /** @var Drupal\Core\Template\Attribute $attribute */
+    $attribute = new Attribute();
+    $attribute->addClass('button--ghost');
+    $variables['cta'] = _modify_cta(reset($cta), $attribute);
+  }
+
+  // Load background uri.
+  if ($paragraph->hasField('field_appetizer_image') && !$paragraph->get('field_appetizer_image')->isEmpty()) {
+    /** @var Drupal\media\Entity\Media $media */
+    $media = $paragraph->get('field_appetizer_image')->entity;
+    if (!empty($media) && $media->hasField('field_media_image')) {
+      /** @var Drupal\file\Entity\File $file */
+      if (!empty($file = $media->get('field_media_image')->entity)) {
+        $background_image_uri = $file->getFileUri() ?? '';
+      }
+    }
+  }
+
+  $variables['is_small_version'] = in_array($variables['parent_bundle'], ['two_column', 'three_column']);
+
+  // @todo Add image style when we know the size.
+  $variables['image_style'] = '';
+
+  /*
+   * Using focal point and not responsive image style,
+   * then we need coordinates from focal point
+   * @todo Change it to responsive image style
+   */
+  if (!empty($background_image_uri)) {
+    $focal_point_data = _get_xy_in_percentage_focalpoint($background_image_uri, file_create_url($background_image_uri));
+    $variables['image_figure_attributes']->setAttribute('style', 'background-position:' . $focal_point_data['x'] . '% ' . $focal_point_data['y'] . '%');
+  }
+}
+
+/**
+ * Create hero.
+ *
+ * @param Drupal\Core\Entity\ContentEntityInterface $entity
+ *   Could eg. be a node or a paragraph.
+ * @param array $fields
+ *   Mapping array containing fields from the entity.
+ *
+ * @return array
+ *   Contains template variables for building hero.
+ */
+function _create_hero(ContentEntityInterface $entity, array $fields): array {
+  $hero_attributes = new Attribute();
+  $section_attributes = new Attribute();
+  $background_image_uri = '';
+  $text_color = 'dark';
+  $orientation = 'left';
+  $color_theme = '';
+  $title = '';
+  $video_oembed = ['url' => 'null', 'oEmbed' => 'null'];
+
+  if (isset($fields['background_image']) && $entity->hasField($fields['background_image']) && !$entity->get($fields['background_image'])->isEmpty()) {
+    /** @var Drupal\media\Entity\Media $media */
+    $media = $entity->get($fields['background_image'])->entity;
+    if (!empty($media) && $media->hasField('field_media_image')) {
+      /** @var Drupal\file\Entity\File $file */
+      if (!empty($file = $media->get('field_media_image')->entity)) {
+        $background_image_uri = $file->getFileUri() ?? '';
+      }
+    }
+    elseif (!empty($media) && $media->hasField('field_media_video_embed')) {
+      if (Drupal::hasService('dds_media.media_helper')) {
+        /** @var Drupal\dds_media\MediaHelper $service */
+        $service = Drupal::service('dds_media.media_helper');
+        $video_data = $service->get_video_data($media->get('field_media_video_embed')->value);
+        $video_oembed['url'] = $video_data['url'];
+        $video_oembed['oEmbed'] = ['html' => $video_data['player']];
+        $background_image_uri = $video_data['image']['uri'];
+      }
+    }
+  }
+
+  if (isset($fields['text_color']) && $entity->hasField($fields['text_color']) && !$entity->get($fields['text_color'])->isEmpty()) {
+    $text_color = $entity->get($fields['text_color'])->value;
+  }
+
+  if (isset($fields['orientation']) && $entity->hasField($fields['orientation']) && !$entity->get($fields['orientation'])->isEmpty()) {
+    $orientation = $entity->get($fields['orientation'])->value;
+  }
+
+  if (isset($fields['color_theme']) && $entity->hasField($fields['color_theme']) && !$entity->get($fields['color_theme'])->isEmpty()) {
+    $color_theme = $entity->get($fields['color_theme'])->value;
+  }
+
+  $section_attributes->addClass('section')
+    ->addClass('section--no-spacing');
+
+  if (!empty($color_theme)) {
+    $section_attributes->addClass('theme');
+    $section_attributes->addClass('theme-' . $color_theme);
+  }
+
+  $attributes = $hero_attributes
+    ->addClass(($orientation !== 'left' ? 'hero--' . $orientation : ''))
+    ->addClass($text_color != 'dark' ? 'hero--inverted' : '');
+
+  if (isset($fields['title']) && $entity->hasField($fields['title']) && !$entity->get($fields['title'])->isEmpty()) {
+    $title = $entity->get($fields['title'])->value;
+  }
+
+  $hero = [
+    'attributes' => $attributes,
+    'position' => 'default',
+    'title' => $title,
+    'video_oembed' => json_encode($video_oembed),
+    'cta' => [],
+    'section_attributes' => $section_attributes,
+  ];
+
+  if (isset($fields['teaser']) && $entity->hasField($fields['teaser']) && !$entity->get($fields['teaser'])->isEmpty()) {
+    $hero['teaser'] = $entity->get($fields['teaser'])->value;
+  }
+
+  if (isset($fields['cta']) && $entity->hasField($fields['cta']) && !$entity->get($fields['cta'])->isEmpty()) {
+    $cta = $entity->get($fields['cta'])->getValue();
+    $hero['cta'] = _modify_cta(reset($cta));
+  }
+
+  /*
+   * Using focal point and not responsive image style,
+   * then we need coordinates from focal point
+   * @todo Change it to responsive image style
+   */
+  if (!empty($background_image_uri)) {
+    $hero['background_image'] = [
+      '#theme' => 'image_style',
+      '#style_name' => 'hero',
+      '#uri' => $background_image_uri,
+      '#attributes' => [
+        'class' => ['lazyload', 'lazyload-measure', 'lazyload-bg'],
+        'height' => 'auto',
+        'width' => 'auto',
+      ],
+    ];
+    $focal_point_data = _get_xy_in_percentage_focalpoint($background_image_uri, file_create_url($background_image_uri));
+    $hero_attributes->setAttribute('style', 'background-position:' . $focal_point_data['x'] . '% ' . $focal_point_data['y'] . '%');
+  }
+
+  return $hero;
+}
+
+/**
+ * Create footer.
+ *
+ * @param array $variables
+ *   Template variables.
+ *
+ * @return array
+ *   Cols with information like headline and content.
+ */
+function _create_footer(array $variables): array {
+  $footer_data = $variables['site_settings']['site_settings']['footer'] ?? [];
+
+  /* @var Attribute $attributes */
+  $attributes = new Attribute();
+  $attributes->addClass('section');
+  $attributes->addClass('theme');
+  $attributes->addClass('theme-primary');
+
+  $footer = [
+    'attributes' => $attributes,
+    'cols' => [],
+  ];
+
+  // Add header and content for left, center and right to footer.
+  $footer['cols'][] = [
+    'headline' => $footer_data['field_header_left'] ?? '',
+    'content' => check_markup($footer_data['field_content_left']['value'] ?? '', $footer_data['field_content_left']['format'] ?? NULL),
+  ];
+  $footer['cols'][] = [
+    'headline' => $footer_data['field_header_center'] ?? '',
+    'content' => check_markup($footer_data['field_content_center']['value'] ?? '', $footer_data['field_content_center']['format'] ?? NULL),
+  ];
+  $footer['cols'][] = [
+    'headline' => $footer_data['field_header_right'] ?? '',
+    'content' => check_markup($footer_data['field_content_right']['value'] ?? '', $footer_data['field_content_right']['format'] ?? NULL),
+  ];
+
+  return $footer;
+}
+
+/**
+ * Change and build the CTA, you can pass attributes directly to the CTA.
+ *
+ * @param array $cta
+ *   Link field there contains uri and more eg. target_blank.
+ * @param Drupal\Core\Template\Attribute $cta_attributes
+ *   Drupals template attribute.
+ *
+ * @return array
+ *   CTA with attributes.
+ */
+function _modify_cta(array $cta, Attribute $cta_attributes = NULL): array {
+  /** @var Drupal\Core\Template\Attribute $cta_attributes */
+  if (is_null($cta_attributes)) {
+    $cta_attributes = new Attribute();
+  }
+  $cta['url'] = Url::fromUri($cta['uri'])->toString();
+  if (isset($cta['target_blank']) && $cta['target_blank'] == 1) {
+    $cta_attributes->setAttribute('target', 'blank');
+  }
+  $cta['attributes'] = $cta_attributes;
+  return $cta;
+}
+
+/**
+ * Gives back x and y coordinates so we can use for background position.
+ *
+ * @param string $uri
+ *   Finding crop based on Uri.
+ * @param string $url
+ *   Image Url.
+ *
+ * @return array
+ *   Array with information about x and y
+ */
+function _get_xy_in_percentage_focalpoint($uri, $url) {
+  $focal_point_data = ['x' => 0, 'y' => 0];
+  $crop_type = \Drupal::config('focal_point.settings')->get('crop_type');
+  $crop = Crop::findCrop($uri, $crop_type);
+  if ($crop) {
+    list($width, $height) = @getimagesize($url);
+    if ($width && $height) {
+      $anchor = \Drupal::service('focal_point.manager')
+        ->absoluteToRelative($crop->x->value, $crop->y->value, $width, $height);
+      $focal_point_data['x'] = $anchor['x'];
+      $focal_point_data['y'] = $anchor['y'];
+    }
+  }
+  return $focal_point_data;
+}

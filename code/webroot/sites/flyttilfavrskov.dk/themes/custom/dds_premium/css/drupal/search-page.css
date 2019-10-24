@@ -1,0 +1,27 @@
+.search-page__keys-submit {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.search-page__keys-submit .form-item {
+  margin-bottom: 0;
+  margin-right: 20px;
+  width: 100%;
+}
+
+.search-page__keys-submit input[type="search"] {
+  height: 100%;
+}
+
+.search-page__form,
+.search-page__no-of-results {
+  margin-top: 25px;
+}
+
+.search-page__results {
+  margin-top: 60px;
+}
+
+.search-page__pager {
+  margin-bottom: 40px;
+}

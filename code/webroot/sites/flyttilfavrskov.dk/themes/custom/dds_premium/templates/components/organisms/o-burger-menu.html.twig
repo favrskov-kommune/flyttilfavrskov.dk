@@ -1,0 +1,64 @@
+<nav :class="{ 'burger-menu--open': isOpen }" class="burger-menu" id="js-burger-menu">
+  <div @click="closeBurgerMenu()" class="burger-menu__close">
+    <div class="burger-menu__close-label">{{ 'Close (Esc)'|t({}, {'context' : 'premium'}) }}</div>
+    {% include '@dds_premium/components/atoms/a-svg-icon.html.twig' with {
+      'svgIconName': 'close'
+    } %}
+  </div>
+  <div class="container">
+    <div class="burger-menu__inner">
+      <div class="row">
+        <div class="col-xs-12 col-md-6 col-md-offset-1">
+          {{ main_navigation }}
+        </div>
+        <div class="col-xs-12 col-md-2 col-md-offset-1">
+          {{ meta_menu }}
+        </div>
+      </div>
+      {% if contacts|length > 0 %}
+        <div class="row">
+          {% for contact in contacts %}
+            <div class="col-xs-6 col-md-2 {{ loop.first ? 'col-md-offset-1' }}">
+              <address vocab="http://schema.org/" typeof="Organization">
+                <div class="burger-menu-contact-info">
+                  <h3 class="burger-menu-contact-info__title" property="name">{{ contact.title }}</h3>
+                  <p class="burger-menu-contact-info__text">
+                    {% if contact.cvr is not empty %}
+                      <span property="identifier">{{ contact.cvr }}</span>
+                      <br>
+                    {% endif %}
+                    {% if contact.address is not empty or contact.zip is not empty or contact.city is not empty %}
+                      <span property="address" typeof="PostalAddress">
+                        <span property="streetAddress">{{ contact.address }}</span>
+                        <br>
+                        {% if contact.zip is not empty %}
+                          <span property="postalCode">{{ contact.zip }}</span>
+                        {% endif %}
+                        {% if contact.city is not empty %}
+                          <span property="addressLocality">{{ contact.city }}</span>
+                        {% endif %}
+                      </span>
+                      <br>
+                    {% endif %}
+                    {% if contact.telephone is not empty %}
+                      <span property="telephone">
+                        <a href="tel:{{ contact.telephone }}">{{ contact.telephone }}</a>
+                      </span>
+                      <br>
+                    {% endif %}
+                    {% if contact.email is not empty %}
+                      <span property="email">
+                        <a href="mailto:{{ contact.email }}">{{ contact.email }}</a>
+                      </span>
+                      <br>
+                    {% endif %}
+                  </p>
+                </div>
+              </address>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</nav>

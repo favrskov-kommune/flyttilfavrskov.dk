@@ -1,0 +1,9 @@
+{
+    "title": "Link",
+    "status": "wip",
+    "context": {
+        "text": "This is a text-link",
+        "url": "https://google.dk",
+        "target": "_blank"
+    }
+}

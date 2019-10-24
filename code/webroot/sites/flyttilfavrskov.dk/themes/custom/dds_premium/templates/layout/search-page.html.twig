@@ -1,0 +1,45 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present a searchpage entity.
+ *
+ * This template is used when viewing a registered searchpage's page,
+ * e.g., /admin/content/searchpage)/123. 123 being the searchpage's ID.
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ *   print a subset such as 'content.title'.
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_searchpage()
+ */
+#}
+
+<div{{ attributes.addClass('container') }}>
+  <div class="search-page">
+    <div class="search-page__title">
+      {% if search_title %}
+        <h2>{{ search_title }}</h2>
+      {% endif %}
+    </div>
+    <div class="search-page__no-of-results">
+      {{ no_results_found }}
+      {% if no_of_results %}
+        <p>{{ no_of_results }}</p>
+      {% endif %}
+    </div>
+    <div class="search-page__form">
+      {% if form %}
+        {{- form -}}
+      {% endif %}
+    </div>
+    <div class="search-page__results">
+      <div class="row">
+        {{ results }}
+      </div>
+    </div>
+    <div class="search-page__pager">
+      {{ pager }}
+    </div>
+  </div>
+</div>
