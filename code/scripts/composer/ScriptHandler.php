@@ -59,40 +59,16 @@ class ScriptHandler {
    * @param Event $event
    */
   public static function askForRemovingGitDirs(Event $event) {
-//    if ($event->getIO()->askConfirmation('<question>Do you want to delete all .git dirs in (vendor/, webroot/modules/, webroot/themes/, webroot/libraries/, webroot/profiles/) [Y/n] - (default is Y) ? </question>', TRUE)) {
-    shell_exec('cd vendor/ && find . -type d | grep .git | xargs rm -rf');
-    shell_exec('cd webroot/modules/ && find . -type d | grep .git | xargs rm -rf');
-    shell_exec('cd webroot/themes/ && find . -type d | grep .git | xargs rm -rf');
-    shell_exec('cd webroot/libraries/ && find . -type d | grep .git | xargs rm -rf');
-    shell_exec('cd webroot/profiles/ && find . -type d | grep .git | xargs rm -rf');
-    $event->getIO()->write("<info>Now all .git dirs in (vendor/, webroot/modules/, webroot/themes/, webroot/libraries/, webroot/profiles/) are deleted!</info>");
-//    }
-  }
-
-  /**
-   * The dropzone library should be placed in webroot/libraries, but composer is unable to do so
-   *
-   * @param Event $event
-   */
-  public static function copyDropzoneLibrary(Event $event) {
-    $root = static::getDrupalRoot(getcwd());
-    $source = realpath($root . '/../vendor/enyo/dropzone');
-    if (is_dir($source)) {
-      $destination = $root . '/libraries';
-      // If the destination directory does not exist create it
-      if (!is_dir($destination)) {
-        if (!mkdir($destination, 0777, true)) {
-          $event->getIO()->write("<error>Libraries folder could not be created</error>");
-          return;
-        }
-      }
-      if (!static::rcopy($source, $destination . '/dropzone')) {
-        $event->getIO()->write("<error>Dropzone library could not be copied</error>");
-      } else {
-        $event->getIO()->write("<info>Dropzone library was copied</info>");
-      }
+    if ($event->getIO()->askConfirmation('<question>Do you want to delete all .git dirs in (vendor/, webroot/modules/, webroot/themes/, webroot/libraries/, webroot/profiles/) [Y/n] - (default is Y) ? </question>', TRUE)) {
+      shell_exec('cd vendor/ && find . -type d | grep .git | xargs rm -rf');
+      shell_exec('cd webroot/modules/ && find . -type d | grep .git | xargs rm -rf');
+      shell_exec('cd webroot/themes/ && find . -type d | grep .git | xargs rm -rf');
+      shell_exec('cd webroot/libraries/ && find . -type d | grep .git | xargs rm -rf');
+      shell_exec('cd webroot/profiles/ && find . -type d | grep .git | xargs rm -rf');
+      $event->getIO()->write("<info>Now all .git dirs in (vendor/, webroot/modules/, webroot/themes/, webroot/libraries/, webroot/profiles/) are deleted!</info>");
     }
   }
+
   /**
    * Recursively copy files from one directory to another
    *

@@ -25,24 +25,27 @@
   ],
   "require": {
     "composer/installers": "^1.2",
-    "drupal-composer/drupal-scaffold": "^2.5",
     "cweagans/composer-patches": "^1.6.5",
-    "zaporylie/composer-drupal-optimizations": "^1.1",
-    "drush/drush": "^9.0",
-    "drupal/core": "~8.0",
-    "symfony/filesystem": "~3.0",
+    "drupal-composer/drupal-scaffold": "^2.5",
     "drupal/console": "^1.8",
+    "drupal/core": "~8.0",
+    "drupal/mailchimp": "^1.11",
+    "drush/drush": "^9.0",
     "novicell/dds_content": "~1.0",
     "novicell/dds_content_hierarchy": "~2.1",
     "novicell/dds_cookieinfo": "~2.0",
     "novicell/dds_editors": "~1.0",
     "novicell/dds_media": "~2.0",
     "novicell/dds_monitor": "~1.0",
+    "novicell/dds_news": "^1.1",
     "novicell/dds_paragraph_widgets": "~2.0",
     "novicell/dds_paragraphs": "~2.0",
+    "novicell/dds_premium_installer": "~2.0",
+    "novicell/dds_search": "~1.0",
     "novicell/dds_seo": "~1.0",
     "novicell/dds_site_settings": "~2.0",
-    "novicell/dds_premium_installer": "~1.0"
+    "symfony/filesystem": "~3.0",
+    "zaporylie/composer-drupal-optimizations": "^1.1"
   },
   "require-dev": {
     "behat/mink": "~1.7",
@@ -77,11 +80,9 @@
     ],
     "post-install-cmd": [
       "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-      "DrupalProject\\composer\\ScriptHandler::copyDropzoneLibrary",
       "DrupalProject\\composer\\ScriptHandler::askForRemovingGitDirs"
     ],
     "post-update-cmd": [
-      "DrupalProject\\composer\\ScriptHandler::copyDropzoneLibrary",
       "DrupalProject\\composer\\ScriptHandler::askForRemovingGitDirs"
     ]
   },
@@ -111,11 +112,6 @@
       "drush/contrib/{$name}": [
         "type:drupal-drush"
       ]
-    },
-    "patches": {
-      "drupal/paragraphs": {
-        "Add new hooks to allow easier editing of paragraph forms": "https://www.drupal.org/files/issues/2868155-16.patch"
-      }
     }
   }
 }
