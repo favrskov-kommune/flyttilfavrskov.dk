@@ -5,39 +5,42 @@ services:
     image: mysql:8.0
     command: --default-authentication-plugin=mysql_native_password
     volumes:
-      - favrskov-grundsalg:/var/lib/mysql
+      - flyttilfavrskov:/var/lib/mysql
     environment:
-      - MYSQL_DATABASE=$DATABASE_SCHEMA
+      - MYSQL_DATABASE=$DATABASE_NAME
       - MYSQL_USER=$DATABASE_USER
-      - MYSQL_PASSWORD=$DATABASE_PASSWORD
-      - MYSQL_ROOT_PASSWORD=$DATABASE_ROOT_PASSWORD
+      - MYSQL_PASSWORD=$DATABASE_PASS
+      - MYSQL_ROOT_PASSWORD=$DATABASE_ROOT
     restart: always
     ports:
       - "3306:3306"
 
   app:
-    image: favrskov-grundsalg:dev
+    image: flyttilfavrskov_app:dev
     build:
       context: .
+      args:
+        current_env: $ENV
+        sites_folder: $SITES_FOLDER
     depends_on:
       - database
     environment:
+      - DDS_DOCKER=true
       - APP_ENV=$ENV
-      - DATABASE_URL=$DATABASE_URL
-      - DB_HOST=$DATABASE_HOST
-      - DB_SCHEMA=$DATABASE_SCHEMA
+      - DB_HOST=database
+      - DB_NAME=$DATABASE_NAME
       - DB_USER=$DATABASE_USER
-      - DB_PASS=$DATABASE_PASSWORD
+      - DB_PASS=$DATABASE_PASS
+      - DB_PORT=3306
+      - DOMAIN=$LOCAL_DOMAIN
+      - SITES_FOLDER=$SITES_FOLDER
     ports:
-      - "8081:80"
-    volumes:
-      - ./code/webroot:/src/webroot:ro
-      - ./code/webroot/sites:/src/webroot/sites:rw
-      - ./code/config:/src/config:ro
-      - ./code/scripts:/src/scripts:ro
+      - "80:80"
     links:
       - database
     restart: on-failure:50
+    volumes:
+      - ./code:/src:rw
 
   elastic:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.3.2
@@ -48,4 +51,4 @@ services:
       - 9300:9300
 
 volumes:
-  favrskov-grundsalg:
+  flyttilfavrskov:

@@ -1,4 +1,5 @@
+# are these necessary, since they are placed outside the code folder?
 Dockerfile
 docker-compose.yaml
-code/vendor/
-code/composer.lock
+.git
+.idea
