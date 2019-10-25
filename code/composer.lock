@@ -6039,10 +6039,10 @@
         },
         {
             "name": "novicell/dds_paragraph_widgets",
-            "version": "2.2.5",
+            "version": "2.2.6",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_6TKAM/novicelldds_paragraph_widgets-2-2-5.zip",
+                "url": "https://packages.drupal.dk/php/~/up/ver_10K5V5/novicelldds_paragraph_widgets-2-2-6.zip",
                 "reference": null,
                 "shasum": null
             },
