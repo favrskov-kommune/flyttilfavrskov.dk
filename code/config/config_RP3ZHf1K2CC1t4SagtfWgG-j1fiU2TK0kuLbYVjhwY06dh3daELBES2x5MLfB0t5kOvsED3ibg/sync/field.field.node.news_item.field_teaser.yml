@@ -1,0 +1,21 @@
+uuid: b4c70806-d803-4689-b5cf-8b43b70e6577
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser
+    - node.type.news_item
+_core:
+  default_config_hash: STctBGO4ZlnoUh3ltQUEX-POxfAnGNld2LqKsdBc_WI
+id: node.news_item.field_teaser
+field_name: field_teaser
+entity_type: node
+bundle: news_item
+label: Teaser
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

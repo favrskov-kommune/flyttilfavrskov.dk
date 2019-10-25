@@ -1,0 +1,32 @@
+uuid: d363a702-2a9b-4552-a1a9-0235cc8dce5e
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_paragraphs_news_list
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: 4X6suK4qR7VZHIUA0vQo79_jHShf-drhriWwJmxPyKk
+id: paragraph.field_newslist_selection
+field_name: field_newslist_selection
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: automatic
+      label: 'Select by tag'
+    -
+      value: manual
+      label: 'Select manually'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

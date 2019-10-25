@@ -1,0 +1,20 @@
+uuid: 359108e0-2d9f-48db-8ad0-38ab4ce5adb0
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_paragraphs_mailchimp
+  module:
+    - dds_layouts
+    - dds_paragraph_widgets
+    - entity_reference_layout
+_core:
+  default_config_hash: ZQ615ufbUZJisnShfVxY7EI1bbtKC9n0Gh9OXtswWeo
+id: mailchimp
+label: 'Mailchimp signup'
+icon_uuid: null
+description: ''
+behavior_plugins:
+  paragraph_widget:
+    enabled: true

@@ -37,6 +37,8 @@ settings:
       rte: rte
       slideshow: slideshow
       video: video
+      news_list: news_list
+      mailchimp: mailchimp
     target_bundles_drag_drop: {  }
     layout_bundles:
       - erl_section

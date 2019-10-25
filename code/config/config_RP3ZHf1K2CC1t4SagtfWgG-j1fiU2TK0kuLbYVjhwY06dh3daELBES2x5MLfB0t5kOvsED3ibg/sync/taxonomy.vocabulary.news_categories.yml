@@ -1,0 +1,13 @@
+uuid: 81fab696-c6a4-4055-8e74-d9623bbb9813
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_news
+_core:
+  default_config_hash: dYbtBj9eyd78q6yTmO15QleJUDu0-fV-lfhAs__Djxk
+name: 'News categories'
+vid: news_categories
+description: ''
+weight: 0

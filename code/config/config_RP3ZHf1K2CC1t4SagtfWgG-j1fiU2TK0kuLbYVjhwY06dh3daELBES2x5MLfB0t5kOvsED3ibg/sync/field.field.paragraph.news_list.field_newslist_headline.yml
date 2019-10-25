@@ -1,0 +1,21 @@
+uuid: 67b88755-14af-460c-b40b-4f6f6ff995b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_newslist_headline
+    - paragraphs.paragraphs_type.news_list
+_core:
+  default_config_hash: p7gBHlT1TyHraDlXY2ZzysLk7Zh81h_sQHbNriqjKuk
+id: paragraph.news_list.field_newslist_headline
+field_name: field_newslist_headline
+entity_type: paragraph
+bundle: news_list
+label: Headline
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

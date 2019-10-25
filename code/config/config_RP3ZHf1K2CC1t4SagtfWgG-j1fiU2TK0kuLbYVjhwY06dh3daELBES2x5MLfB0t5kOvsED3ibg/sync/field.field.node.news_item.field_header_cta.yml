@@ -1,0 +1,25 @@
+uuid: 1d41f30f-d332-4915-8328-b0aa4bbbb26a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_cta
+    - node.type.news_item
+  module:
+    - dds_content
+_core:
+  default_config_hash: sFsO-EF4E9dxTz9uApxKj1K3UtE0phK3tUZTMVBMCrs
+id: node.news_item.field_header_cta
+field_name: field_header_cta
+entity_type: node
+bundle: news_item
+label: 'Header CTA'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: '17'
+  title: '2'
+field_type: dds_link_with_target

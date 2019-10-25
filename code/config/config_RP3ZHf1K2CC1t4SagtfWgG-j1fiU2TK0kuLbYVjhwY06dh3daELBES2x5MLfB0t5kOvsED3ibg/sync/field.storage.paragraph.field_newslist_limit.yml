@@ -1,0 +1,25 @@
+uuid: 993cbfa4-c068-4e3e-ad67-a5b5068a0744
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_paragraphs_news_list
+  module:
+    - paragraphs
+_core:
+  default_config_hash: s0-_jzQeY-rIzsOltV9xJDOWPjiPbpwaV0NFk8g64bQ
+id: paragraph.field_newslist_limit
+field_name: field_newslist_limit
+entity_type: paragraph
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,22 @@
+uuid: e07127c1-6f80-4e64-a0dd-88f46edcde94
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: dds_news_pattern
+label: 'News Item Pattern'
+type: 'canonical_entities:node'
+pattern: 'news/[node:title]'
+selection_criteria:
+  5a0fe4e0-1516-405f-9cad-97638154ea50:
+    id: node_type
+    bundles:
+      news_item: news_item
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 5a0fe4e0-1516-405f-9cad-97638154ea50
+selection_logic: and
+weight: 0
+relationships: {  }

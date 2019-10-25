@@ -1,0 +1,23 @@
+uuid: f3feb5fd-2336-411c-9ad4-8abb0fa8c556
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_color_theme
+    - node.type.news_item
+  module:
+    - options
+_core:
+  default_config_hash: UoVlekJ8XYvuYWlzqPYv6NaZF-9maDV0OEHwROMUSIE
+id: node.news_item.field_header_color_theme
+field_name: field_header_color_theme
+entity_type: node
+bundle: news_item
+label: 'Header color theme'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

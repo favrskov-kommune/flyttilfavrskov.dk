@@ -1,0 +1,25 @@
+uuid: 45d73e2b-d026-4177-b773-a911692479ba
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_paragraphs_mailchimp
+  module:
+    - mailchimp_signup
+    - paragraphs
+_core:
+  default_config_hash: sQWUq0rb7iys6MaMaVbfj0_fyNBcUkPe9MCIXjJ3j8k
+id: paragraph.field_mailchimp_form
+field_name: field_mailchimp_form
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: mailchimp_signup
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

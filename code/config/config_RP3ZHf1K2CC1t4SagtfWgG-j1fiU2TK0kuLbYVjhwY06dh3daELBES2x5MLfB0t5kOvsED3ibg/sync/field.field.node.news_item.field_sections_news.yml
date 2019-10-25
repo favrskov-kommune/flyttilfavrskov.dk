@@ -1,19 +1,30 @@
-uuid: d0275e73-b171-4eb5-830a-9004f2b41719
+uuid: 9688a597-c125-4f22-91bd-4824b5fbe3ea
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_sections_special_pages
-    - node.type.special_page
+    - field.storage.node.field_sections_news
+    - node.type.news_item
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.appetizer
+    - paragraphs.paragraphs_type.button
+    - paragraphs.paragraphs_type.divider
     - paragraphs.paragraphs_type.erl_section
+    - paragraphs.paragraphs_type.hero
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.inline_navigation
+    - paragraphs.paragraphs_type.quote
+    - paragraphs.paragraphs_type.rte
+    - paragraphs.paragraphs_type.slideshow
+    - paragraphs.paragraphs_type.video
   module:
     - entity_reference_layout
 _core:
-  default_config_hash: oSxzRsD73mxY9DxRRMw1QIcDemACt5A5xZlx3dB8OkQ
-id: node.special_page.field_sections_special_pages
-field_name: field_sections_special_pages
+  default_config_hash: X_JeehWRt9J-qOBslyi-Rxt9sC5N5_s2uXd2ArUGc-c
+id: node.news_item.field_sections_news
+field_name: field_sections_news
 entity_type: node
-bundle: special_page
+bundle: news_item
 label: Sections
 description: ''
 required: false

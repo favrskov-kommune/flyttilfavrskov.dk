@@ -1,0 +1,63 @@
+uuid: 49202d1b-b893-420f-8bbc-0b3aa1dc9afe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.news_list.field_newslist_category
+    - field.field.paragraph.news_list.field_newslist_headline
+    - field.field.paragraph.news_list.field_newslist_items
+    - field.field.paragraph.news_list.field_newslist_limit
+    - field.field.paragraph.news_list.field_newslist_selection
+    - paragraphs.paragraphs_type.news_list
+  module:
+    - options
+_core:
+  default_config_hash: ICXwYl1L0GimCWNG01GbEt6wJpTNe6nMKuLRJtEMYU8
+id: paragraph.news_list.default
+targetEntityType: paragraph
+bundle: news_list
+mode: default
+content:
+  field_newslist_category:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_newslist_headline:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_newslist_items:
+    weight: 3
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_newslist_limit:
+    weight: 4
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_newslist_selection:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,26 @@
+uuid: 47a4dd89-0e54-42d7-aaff-4d12b5b3992c
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_paragraphs_news_list
+  module:
+    - paragraphs
+_core:
+  default_config_hash: GhM-hvd1uO7T3HaTdn25tMQnfJLkUMWXYLhfwHxSjkw
+id: paragraph.field_newslist_headline
+field_name: field_newslist_headline
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

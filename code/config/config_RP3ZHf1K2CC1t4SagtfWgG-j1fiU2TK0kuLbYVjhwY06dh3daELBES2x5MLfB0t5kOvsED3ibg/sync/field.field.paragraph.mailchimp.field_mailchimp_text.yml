@@ -1,0 +1,23 @@
+uuid: e13b0ed9-160f-41ad-b4e6-a0f4af7acaeb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mailchimp_text
+    - paragraphs.paragraphs_type.mailchimp
+  module:
+    - text
+_core:
+  default_config_hash: RJDOHAV4mNT5zi5Roi_zjimfeDZNTRu9hJaV-0DT5G0
+id: paragraph.mailchimp.field_mailchimp_text
+field_name: field_mailchimp_text
+entity_type: paragraph
+bundle: mailchimp
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

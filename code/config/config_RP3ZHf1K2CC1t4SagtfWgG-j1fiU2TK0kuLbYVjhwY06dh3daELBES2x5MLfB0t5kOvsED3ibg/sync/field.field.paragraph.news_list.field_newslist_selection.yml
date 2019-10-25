@@ -1,0 +1,25 @@
+uuid: 37f515d5-a48f-448e-b1ea-7b40b2f578c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_newslist_selection
+    - paragraphs.paragraphs_type.news_list
+  module:
+    - options
+_core:
+  default_config_hash: GQdtq5pPmAsIssOs3_hmu5iFxt_L92B1xmLozfRVpFM
+id: paragraph.news_list.field_newslist_selection
+field_name: field_newslist_selection
+entity_type: paragraph
+bundle: news_list
+label: 'Selection type'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: automatic
+default_value_callback: ''
+settings: {  }
+field_type: list_string

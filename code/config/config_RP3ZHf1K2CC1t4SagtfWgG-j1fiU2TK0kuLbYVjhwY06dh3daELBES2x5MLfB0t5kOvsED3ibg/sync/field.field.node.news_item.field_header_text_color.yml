@@ -1,0 +1,25 @@
+uuid: c21b0c78-169a-4d00-a41e-b18fe7372b73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_text_color
+    - node.type.news_item
+  module:
+    - options
+_core:
+  default_config_hash: hEB4d6s1p2FJU9jmK63e6i7BQn1n0CpS0qMWOS-oH1w
+id: node.news_item.field_header_text_color
+field_name: field_header_text_color
+entity_type: node
+bundle: news_item
+label: 'Text color'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: light
+default_value_callback: ''
+settings: {  }
+field_type: list_string

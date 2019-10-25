@@ -1,0 +1,61 @@
+uuid: 2c9286ff-42d6-4c84-bfae-b9accf1da803
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.news_list.field_newslist_category
+    - field.field.paragraph.news_list.field_newslist_headline
+    - field.field.paragraph.news_list.field_newslist_items
+    - field.field.paragraph.news_list.field_newslist_limit
+    - field.field.paragraph.news_list.field_newslist_selection
+    - paragraphs.paragraphs_type.news_list
+_core:
+  default_config_hash: wFqI_np60HRTsXGZQQlBTNF5rXrdc-F6t1yj6EzRDAU
+id: paragraph.news_list.default
+targetEntityType: paragraph
+bundle: news_list
+mode: default
+content:
+  field_newslist_category:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_newslist_headline:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_newslist_items:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_newslist_limit:
+    weight: 4
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_newslist_selection:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

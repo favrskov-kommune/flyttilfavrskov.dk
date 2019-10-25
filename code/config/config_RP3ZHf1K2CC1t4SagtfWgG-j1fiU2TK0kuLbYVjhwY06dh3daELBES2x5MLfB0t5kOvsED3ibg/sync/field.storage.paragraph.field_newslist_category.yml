@@ -1,0 +1,22 @@
+uuid: 4a5c6d8b-f7a2-42f6-beb3-07db9093cab4
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - taxonomy
+_core:
+  default_config_hash: sdFBXbOq5nM6E8JAYIPs0w4BqWzLxQ6sZkWl0Qrf_GI
+id: paragraph.field_newslist_category
+field_name: field_newslist_category
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
