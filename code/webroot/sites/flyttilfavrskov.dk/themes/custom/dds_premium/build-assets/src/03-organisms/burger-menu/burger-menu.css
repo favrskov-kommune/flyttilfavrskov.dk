@@ -53,6 +53,7 @@
         transform: translateX(0);
         pointer-events: auto;
     }
+
     &__logo {
         position: absolute;
         top: 40px;
@@ -61,7 +62,7 @@
         align-items: center;
         justify-content: space-between;
         cursor: pointer;
-        
+
         @media (--viewport-md-min) {
             display: none;
         }
@@ -152,7 +153,7 @@
         .icon--arrow-line-down {
             width: 32px;
             height: 32px;
-            transition: transform .3s;
+            transition: transform 0.3s;
             will-change: transform;
             padding: 8px;
             margin-left: 5px;
@@ -171,10 +172,12 @@
             visibility: visible;
             transform: translateX(0);
             width: 100%;
+
             @media (--viewport-sm-max) {
                 max-height: none;
             }
         }
+
         .icon--arrow-line-down {
             transform: rotate(-90deg);
 

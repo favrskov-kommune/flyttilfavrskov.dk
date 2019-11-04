@@ -1,12 +1,11 @@
-
 {% set columns = {
-  'layout_twocolumn_5050': {'left': 'two-column__section', 'right': 'two-column__section'},
-  'layout_twocolumn_3367': {'left': 'two-column__section__narrow', 'right': 'two-column__section__wide'},
-  'layout_twocolumn_6733': {'left': 'two-column__section__wide', 'right': 'two-column__section__narrow'}
+  'dds_layout_twocolumn_5050': { left: 'col-xs-12 col-md-6', right: 'col-xs-12 col-md-6' },
+  'dds_layout_twocolumn_3367': { left: 'col-xs-12 col-md-4', right: 'col-xs-12 col-md-8' },
+  'dds_layout_twocolumn_6733': { left: 'col-xs-12 col-md-8', right: 'col-xs-12 col-md-4' }
 } %}
-{% set column_style = layout.id ? layout.id : 'layout_twocolumn_5050' %}
 
 {% set allow_spacing = settings.column_spacing and settings.column_spacing != 'none' %}
+{% set column_style = layout.id ? layout.id : 'layout_twocolumn_5050' %}
 
 {% set classes = [
   'paragraph',
@@ -16,7 +15,6 @@
   'section',
   not allow_spacing ? 'section--no-spacing'
 ] %}
-
 
 <section {{ attributes.addClass(classes) }}>
   <div class="container">

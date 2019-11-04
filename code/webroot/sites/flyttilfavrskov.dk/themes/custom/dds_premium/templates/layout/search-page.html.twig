@@ -14,32 +14,31 @@
  * @see template_preprocess_searchpage()
  */
 #}
-
 <div{{ attributes.addClass('container') }}>
   <div class="search-page">
     <div class="search-page__title">
-      {% if search_title %}
-        <h2>{{ search_title }}</h2>
+      {% if title %}
+        <h2>{{ title }}</h2>
       {% endif %}
     </div>
     <div class="search-page__no-of-results">
-      {{ no_results_found }}
-      {% if no_of_results %}
-        <p>{{ no_of_results }}</p>
+      {% if content.no_of_results %}
+        <p>{{ content.no_of_results }}</p>
       {% endif %}
     </div>
     <div class="search-page__form">
-      {% if form %}
-        {{- form -}}
+      {% if content.form %}
+        {{- content.form -}}
       {% endif %}
     </div>
+    {{ content.facets }}
     <div class="search-page__results">
       <div class="row">
-        {{ results }}
+        {{ content.results }}
       </div>
     </div>
     <div class="search-page__pager">
-      {{ pager }}
+      {{ content.pager }}
     </div>
   </div>
 </div>

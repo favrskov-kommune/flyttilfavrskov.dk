@@ -5,7 +5,6 @@ master:
       build-assets/dist/css/master.min.css: {}
       css/master.css: {}
   js:
-    build-assets/dist/scripts/manifest.bundle.js: {}
-    build-assets/dist/scripts/vendor.bundle.js: {}
-    build-assets/dist/scripts/app.bundle.js: {}
-    js/accordion.js: {}
+    build-assets/dist/scripts/manifest.bundle.js: { preprocess: false }
+    build-assets/dist/scripts/vendor.bundle.js: { preprocess: false }
+    build-assets/dist/scripts/app.bundle.js: { preprocess: false}

@@ -2,6 +2,7 @@
     "title": "Image",
     "status": "wip",
     "context": {
+        "caption_text": "Text",
         "image": "",
         "modifier": "",
         "url": "/dist/images/hero.jpg"

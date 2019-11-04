@@ -2,6 +2,12 @@
     --theme-background-color: #E7EBE3;
     --theme-color: #474747;
     --theme-button-background-color: #DB6010;
-    --theme-button-color: #FFFFFF;
+    --theme-button-color: #E7EBE3;
     --theme-link-color: #474747;
+    --theme-divider-background-color: #474747;
+    --theme-accordion-border-color: #E7EBE3;
+    --theme-accordion-background-color: #fff;
+    --theme-accordion-text-color: #474747;
+    --theme-input-border: #474747;
+    --theme-input-color-marked: #474747;
 }

@@ -5,16 +5,75 @@
     a {
         color: var(--theme-link-color);
     }
-    
+
     .button {
         background-color: var(--theme-button-background-color);
         color: var(--theme-button-color);
+    }
+
+    .divider::before {
+        background-color: var(--theme-divider-background-color);
     }
 
     .button--ghost {
         background-color: transparent;
         border-color: var(--theme-button-background-color);
         color: var(--theme-color);
+    }
+
+    .accordion {
+        &__items--has-children,
+        &__content--active,
+        &__headline {
+            border-color: var(--theme-accordion-border-color);
+        }
+
+        &__content,
+        &__headline {
+            background-color: var(--theme-accordion-background-color);
+            color: var(--theme-accordion-text-color);
+        }
+    }
+
+    .checkbox,
+    .radio {
+        &:checked + label::before,
+        &:not(:checked) + label::before {
+            border-color: var(--theme-input-border);
+        }
+
+        &:checked + label::after,
+        &:not(:checked) + label::after {
+            border-bottom-color: var(--theme-input-color-marked);
+            border-right-color: var(--theme-input-color-marked);
+        }
+    }
+
+    .radio {
+        &:checked + label::after,
+        &:not(:checked) + label::after {
+            background: var(--theme-input-color-marked);
+        }
+    }
+
+    .input,
+    .textarea,
+    .select {
+        color: var(--theme-color);
+        background-color: var(--theme-background-color);
+        border-color: var(--theme-input-border);
+
+        &:focus {
+            border-color: var(--theme-color);
+        }
+
+        &__description {
+            color: color-mod(var(--theme-color) alpha(50%));
+        }
+
+        &__icon {
+            fill: var(--theme-color);
+        }
     }
 
     .text-link {

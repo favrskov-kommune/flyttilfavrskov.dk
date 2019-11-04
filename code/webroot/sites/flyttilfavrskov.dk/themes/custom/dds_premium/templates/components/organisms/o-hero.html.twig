@@ -3,8 +3,10 @@
   'right': 'col-xs-10 col-md-8 col-xs-offset-2 col-md-offset-4',
   'default': 'col-xs-10 col-xs-offset-1 col-md-8'
 } %}
-<div{{ (not attributes ? create_attribute() : attributes).addClass(['hero', 'js-hero']).setAttribute('data-video', video_oembed) }}>
-  {{ background_image }}
+<div{{ (not attributes ? create_attribute() : attributes).addClass(['hero', 'js-hero']).setAttribute('data-video', video_oembed).addClass(background_image ? 'hero--image-added') }}>
+  {% if background_image %}
+    {{ background_image|responsive_image('wide', 'lazyload') }}
+  {% endif %}
   <div class="hero__iframe-wrapper js-hero-iframe-wrapper"></div>
   <div class="container">
     <div class="row">

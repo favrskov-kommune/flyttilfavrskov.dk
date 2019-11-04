@@ -11,3 +11,10 @@
 .form-actions .button+.button {
   margin-left: 5px;
 }
+
+.label.form-required:after {
+  content: '*';
+  color: #f00;
+  display: inline-block;
+  margin-left: 5px;
+}

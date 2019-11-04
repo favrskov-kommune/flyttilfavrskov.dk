@@ -31,7 +31,7 @@ module.exports = {
                 'color-mod-function': {unresolved: 'warn'},
                 'custom-media-queries': {}
             },
-            browsers: ['>= 5% in DK', 'ie 11']
+            browsers: ['>= 5% in DK']
         }),
         require('postcss-nested'),
         require('cssnano')({

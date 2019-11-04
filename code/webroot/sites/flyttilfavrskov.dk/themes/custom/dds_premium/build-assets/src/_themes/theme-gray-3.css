@@ -1,8 +1,13 @@
-
 .theme-gray-3 {
     --theme-background-color: #8a8a8a;
     --theme-color: #232323;
     --theme-button-background-color: #232323;
     --theme-button-color: #8a8a8a;
-    --theme--link-color: #232323;
+    --theme-link-color: #232323;
+    --theme-divider-background-color: #232323;
+    --theme-accordion-border-color: #8a8a8a;
+    --theme-accordion-background-color: #fff;
+    --theme-accordion-text-color: #232323;
+    --theme-input-border: #232323;
+    --theme-input-color-marked: #232323;
 }

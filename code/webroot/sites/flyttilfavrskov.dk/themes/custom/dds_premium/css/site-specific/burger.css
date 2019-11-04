@@ -1,6 +1,0 @@
-/* Make more space to logo, instead of 50% */
-@media (max-width: 991px) {
-  .burger {
-    width: 33.33%;
-  }
-}

@@ -3,8 +3,19 @@
  */
 
 :root {
-    /* Colors
-********************/
+    /* Default theme-colors
+  ********************/
+    --theme-background-color: #fff;
+    --theme-color: #000;
+    --theme-button-background-color: #000;
+    --theme-button-color: #fff;
+    --theme-link-color: #000;
+    --theme-divider-background-color: #000;
+    --theme-accordion-border-color: #d4d4d4;
+    --theme-accordion-background-color: transparent;
+    --theme-accordion-text-color: #000;
+    --theme-input-border: #e5e3de;
+    --theme-input-color-marked: #263ed3;
 
     /* Typography
   ********************/

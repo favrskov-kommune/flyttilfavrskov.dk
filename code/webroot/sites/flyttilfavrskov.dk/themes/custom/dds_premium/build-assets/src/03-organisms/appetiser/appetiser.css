@@ -5,6 +5,7 @@
     background-size: 50%;
     background-position: right 10%;
     position: relative;
+    width: 100%;
 
     @media (--viewport-md-min) {
         min-height: calc(70vh - var(--header-height));
@@ -92,6 +93,7 @@
 
         .appetiser__content {
             width: 100%;
+            max-width: none;
         }
     }
 

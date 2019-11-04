@@ -1,0 +1,20 @@
+<div class="accordion js-accordion">
+    <h2 class="accordion__headline-title">{{ headline }}</h2>
+    <div class="accordion__items {{#compare accordions.length 1 operator=">=" }}accordion__items--has-children{{/compare}}">
+        {{#each accordions }}
+            <div aria-expanded="false" aria-controls="content-{{ id }}" id="accordion-control-{{ id }}" class="js-accordion-item accordion__headline {{#compare id ../limit operator=">" }}accordion__headline--hidden{{/compare}}">
+                <h3 class="accordion__title">{{ title }}</h3>
+                <div class="accordion__icon"></div>
+            </div>
+            <div class="accordion__content" aria-hidden="true" id="content-{{ id }}">
+                <div class="accordion__text">
+                    <p>{{ text }}</p>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+    {{#compare accordions.length limit operator=">" }}
+        <br>
+        {{ render '@cta' button }}
+    {{/compare}}
+</div>

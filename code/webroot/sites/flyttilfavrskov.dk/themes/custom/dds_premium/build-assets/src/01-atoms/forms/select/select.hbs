@@ -1,0 +1,11 @@
+<div class="select__wrapper">
+    <select class="select" name="{{ name }}" id="{{ id }}" aria-label="{{ label }}">
+        <option selected="selected" disabled="disabled">{{ label }}</option>
+
+        {{#each options}}
+            <option value="{{ value }}">{{ name }}</option>
+         {{/each}}
+
+    </select>
+    {{> @svg-icon modifier="select__icon" svgIconName="arrow-down"}}
+</div>

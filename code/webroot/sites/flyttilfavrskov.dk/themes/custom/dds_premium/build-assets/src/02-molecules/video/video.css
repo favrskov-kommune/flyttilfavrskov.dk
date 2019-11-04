@@ -7,11 +7,12 @@
     color: black;
     font-family: var(--heading-font-family);
     display: flex;
+    width: 100%;
 
     &--inverted {
         color: white;
     }
-    
+
     @media (--viewport-ms-max) {
         height: 100vh;
     }

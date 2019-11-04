@@ -44,7 +44,7 @@
 ] %}
 
 <div {{ attributes.addClass(classes) }}>
-  {% if parent_bundle == 'one_column' %}
+  {% if fields.dds_layout.layout_id == 'dds_layout_onecolumn' %}
     <div class="row">
       <div class="col-xs-12 col-md-8 col-md-offset-2">
         {{ fields.field_text }}

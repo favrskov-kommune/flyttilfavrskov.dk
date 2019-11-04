@@ -50,9 +50,6 @@
   {% block page_top %}
     {{ page.header }}
   {% endblock %}
-  {% block page_breadcrumb %}
-    {{ page.breadcrumb }}
-  {% endblock %}
   {% block hero %}
     {% if hero %}
       <section{{ hero.section_attributes }}>
@@ -65,8 +62,11 @@
           'cta': hero.cta,
           'video_oembed': hero.video_oembed
         } %}
-      {% endif %}
-    </section>
+      </section>
+    {% endif %}
+  {% endblock %}
+  {% block page_breadcrumb %}
+    {{ page.breadcrumb }}
   {% endblock %}
   {% block page_main %}
     <main role="main" vocab="http://schema.org" typeof="WebPageElement" property="mainContentOfPage">
