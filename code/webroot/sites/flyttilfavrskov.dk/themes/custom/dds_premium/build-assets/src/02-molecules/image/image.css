@@ -4,6 +4,7 @@
     background-repeat: no-repeat;
     position: relative;
     padding-top: 75%;
+    width: 100%;
 
     &--square {
         padding-top: 100%;

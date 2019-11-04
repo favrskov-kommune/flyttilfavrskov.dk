@@ -1,10 +1,10 @@
 <div{{ attributes.addClass(['accordion', 'js-accordion']) }}>
   <h2 class="accordion__headline-title">{{ headline }}</h2>
-  <div class="accordion__items {{ items|length >= 1 ? 'has-children' }}">
+  <div class="accordion__items {{ items|length >= 1 ? 'accordion__items--has-children' }}">
     {% set counter = 0 %}
     {% for item in items %}
       {% set counter = counter + 1 %}
-      <div aria-expanded="false" aria-controls="accordion-{{ item.id }}" id="accordion-control-{{ item.id }}" class="js-accordion-item accordion__headline {{ counter > 5 ? 'hidden' }}">
+      <div aria-expanded="false" aria-controls="accordion-{{ item.id }}" id="accordion-control-{{ item.id }}" class="js-accordion-item accordion__headline {{ counter > 5 ? 'accordion__headline--hidden' }}">
         <h3 class="accordion__title">{{ item.headline }}</h3>
         <div class="accordion__icon"></div>
       </div>

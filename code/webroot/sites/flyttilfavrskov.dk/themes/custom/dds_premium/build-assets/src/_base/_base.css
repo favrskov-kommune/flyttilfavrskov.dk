@@ -115,6 +115,7 @@ figure {
     background-size: auto 100%;
     background-position: center center;
     background-repeat: no-repeat;
+    width: 100%;
 
     img {
         max-width: 100%;
@@ -122,6 +123,10 @@ figure {
         display: block;
         margin: 0 auto;
         transition: opacity 0.2s;
+    }
+
+    figcaption {
+        margin-top: 8px;
     }
 
     &.contain-width img {

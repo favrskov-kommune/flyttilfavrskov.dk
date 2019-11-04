@@ -3,4 +3,11 @@
     --theme-color: #232323;
     --theme-button-background-color: #232323;
     --theme-button-color: #bdbdbd;
+    --theme-link-color: #232323;
+    --theme-divider-background-color: #232323;
+    --theme-accordion-border-color: #bdbdbd;
+    --theme-accordion-background-color: #fff;
+    --theme-accordion-text-color: #232323;
+    --theme-input-border: #232323;
+    --theme-input-color-marked: #232323;
 }

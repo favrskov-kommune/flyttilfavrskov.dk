@@ -1,0 +1,18 @@
+{#
+/**
+ * @file
+ * Theme override for an 'input' #type form element.
+ *
+ * Available variables:
+ * - attributes: A list of HTML attributes for the input element.
+ * - children: Optional additional rendered elements.
+ *
+ * @see template_preprocess_input()
+ */
+#}
+{% include '@dds_premium/components/molecules/m-cta.html.twig' with {
+ 'type': 'button',
+ 'text': attributes.value,
+ 'attributes': attributes
+} %}
+{{ children }}

@@ -9,6 +9,11 @@
     text-decoration: none;
     color: currentColor;
     margin-bottom: 60px;
+    flex-direction: column;
+
+    @media (--viewport-md-min) {
+        flex-direction: row;
+    }
 
     &__image {
         background-repeat: no-repeat;
@@ -16,9 +21,13 @@
         background-position: 50% 50%;
         width: 100%;
         flex-shrink: 0;
+        height: 200px;
+        margin-bottom: 20px;
 
         @media (--viewport-md-min) {
             margin-right: 20px;
+            margin-bottom: 0;
+            height: auto;
             width: 30%;
         }
     }

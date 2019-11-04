@@ -1,6 +1,6 @@
 <div{{ (not attributes ? create_attribute() : attributes).addClass('video').addClass('js-video').setAttribute('data-autoplay', 'false').addClass(text_color != 'dark' ? 'video--inverted') }}>
   <div class="video__iframe-wrapper js-video-iframe-wrapper"></div>
-  {{ image|image(image_style, 'lazyload lazyload-measure lazyload-bg') }}
+  {{ image|responsive_image(image_style, 'lazyload') }}
   <div class="video__play-icon js-video-play-icon">
     {% include '@dds_premium/components/atoms/a-svg-icon.html.twig' with {
       'svgIconName': 'play'

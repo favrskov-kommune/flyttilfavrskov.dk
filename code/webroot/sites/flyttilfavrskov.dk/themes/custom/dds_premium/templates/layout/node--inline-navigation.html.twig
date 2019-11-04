@@ -71,8 +71,14 @@
  */
 #}
 <a href="{{ url }}" class="inline-navigation-item">
-  <figure{{ image_container_attribute.addClass('inline-navigation-item__image') }}>
-    {{ image }}
+  <figure{{ image_container_attribute.addClass('inline-navigation-item__image').addClass(not image ? 'inline-navigation-item__image--fallback') }}>
+    {% if image %}
+      {{ image|responsive_image('inline_navigation_1_1', 'lazyload') }}
+    {% else %}
+      {% include '@dds_premium/components/atoms/a-svg-icon.html.twig' with {
+        'svgIconName': 'no-image'
+      } %}
+    {% endif %}
   </figure>
   <h3 class="inline-navigation-item__title">{{ label }}</h3>
   {% if node.hasField('field_header_subline') %}

@@ -1,7 +1,5 @@
 <nav :class="{ 'burger-menu--open': isOpen }" class="burger-menu" id="js-burger-menu">
-    <div class="burger-menu__logo">
-        <a href="/">Logo</a>
-    </div>
+    {{!-- language picker? --}}
     <div @click="closeBurgerMenu()" class="burger-menu__close">
         <div class="burger-menu__close-label">Close (Esc)</div>
         {{> '@svg-icon' svgIconName="close" }}

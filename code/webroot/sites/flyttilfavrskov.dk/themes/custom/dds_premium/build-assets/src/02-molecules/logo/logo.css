@@ -5,4 +5,28 @@
     @media (--viewport-sm-max) {
         display: none;
     }
+
+    &--mobile {
+        display: none;
+
+        @media (--viewport-sm-max) {
+            display: block;
+            margin: var(--grid-section-spacing--mobile) auto 0;
+            text-align: center;
+        }
+    }
+
+    &--floating {
+        @media (--viewport-sm-max) {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, calc(var(--grid-section-spacing--mobile) / 2));
+        }
+    }
+
+    &__image {
+        display: block;
+        margin: 0 auto;
+        height: 35px;
+    }
 }

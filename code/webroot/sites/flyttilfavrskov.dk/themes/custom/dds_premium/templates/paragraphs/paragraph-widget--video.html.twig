@@ -45,7 +45,7 @@
 
 {% include '@dds_premium/components/molecules/m-video.html.twig' with {
   'attributes': attributes.addClass(classes),
-  'image': fields.field_video_media.field_media_video_embed.image,
+  'image': fields.field_video_media.thumbnail,
   'title': fields.field_video_headline,
   'subtitle': fields.field_video_subline,
   'text_color': paragraph.field_video_text_color.value,

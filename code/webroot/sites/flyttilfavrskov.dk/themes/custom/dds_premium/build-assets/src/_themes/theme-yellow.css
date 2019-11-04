@@ -4,4 +4,10 @@
     --theme-button-background-color: #ebe8e1;
     --theme-button-color: #232323;
     --theme-link-color: #232323;
+    --theme-divider-background-color: #232323;
+    --theme-accordion-border-color: #f0cf61;
+    --theme-accordion-background-color: #fff;
+    --theme-accordion-text-color: #232323;
+    --theme-input-border: #232323;
+    --theme-input-color-marked: #232323;
 }

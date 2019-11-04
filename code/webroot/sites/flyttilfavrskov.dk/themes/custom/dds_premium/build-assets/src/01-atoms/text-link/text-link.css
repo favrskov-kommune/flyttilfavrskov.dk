@@ -5,7 +5,7 @@
     letter-spacing: 0.39px;
     line-height: 19px;
     position: relative;
-    color: var(--theme-color, black);
+    color: var(--theme-color);
     font-family: var(--heading-font-family);
     transition: all 0.3s;
     will-change: transform;
@@ -18,7 +18,7 @@
         left: 0;
         bottom: -7px;
         width: 100%;
-        background-color: var(--theme-button-background-color, black);
+        background-color: var(--theme-button-background-color);
         transition: transform 0.3s;
         will-change: transform;
         transform-origin: bottom;
@@ -29,7 +29,7 @@
 
     &:hover,
     &:focus {
-        color: var(--theme-button-color, white);
+        color: var(--theme-button-color);
 
         &::after {
             transform: translateY(0);

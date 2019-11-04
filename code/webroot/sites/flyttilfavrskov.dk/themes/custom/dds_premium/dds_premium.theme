@@ -5,7 +5,6 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
 use Drupal\block\Entity\Block;
 use Drupal\Core\Template\Attribute;
-use Drupal\crop\Entity\Crop;
 use Drupal\node\NodeInterface;
 
 /**
@@ -48,8 +47,8 @@ function dds_premium_form_search_form_alter(array &$form, FormStateInterface $fo
   $container = [
     '#type' => 'container',
     '#attributes' => [
-      'class' => ['search-page__keys-submit']
-    ]
+      'class' => ['search-page__keys-submit'],
+    ],
   ];
   $container['keys'] = $form['keys'];
   $container['submit_search'] = $form['submit_search'];
@@ -68,6 +67,19 @@ function dds_premium_preprocess_links__language_block(array &$variables) {
     foreach ($links as $key => $link) {
       $variables['links'][$key]['link']['#options']['attributes']['class'][] = 'language-menu-list-item__link';
     }
+  }
+}
+
+/**
+ * Add floating class to site branding so on mobile it will lay on top of hero.
+ *
+ * @param array $variables
+ *   Template variables.
+ */
+function dds_premium_preprocess_block__sitebranding_mobile(array &$variables) {
+  $node = Drupal::routeMatch()->getParameter('node');
+  if (!empty($node)) {
+    $variables['attributes']['class'][] = 'logo--floating';
   }
 }
 
@@ -240,25 +252,13 @@ function dds_premium_preprocess_node__inline_navigation(array &$variables) {
     }
   }
 
-  /*
-   * Using focal point and not responsive image style,
-   * then we need coordinates from focal point
-   * @todo Change it to responsive image style
-   * @todo Change image style to a more correct when we know the size
-   */
   if (!empty($image_uri)) {
     $variables['image'] = [
-      '#theme' => 'image_style',
-      '#style_name' => 'large',
-      '#uri' => $image_uri,
-      '#attributes' => [
-        'class' => ['lazyload', 'lazyload-measure', 'lazyload-bg'],
-        'height' => 'auto',
-        'width' => 'auto',
-      ],
+      'title' => '',
+      'alt' => '',
+      'url' => file_create_url($image_uri),
+      'uri' => $image_uri,
     ];
-    $focal_point_data = _get_xy_in_percentage_focalpoint($image_uri, file_create_url($image_uri));
-    $variables['image_container_attribute']->setAttribute('style', 'background-position:' . $focal_point_data['x'] . '% ' . $focal_point_data['y'] . '%');
   }
 }
 
@@ -274,6 +274,7 @@ function dds_premium_preprocess_image(array &$variables) {
     $implode = implode(' ', $classes);
     $explode = explode(' ', $implode);
     if (!empty($explode) && in_array('lazyload', $explode)) {
+//      kint($variables);
       $variables['attributes']['data-src'] = $variables['attributes']['src'];
       $variables['attributes']['data-query-obj'] = '{}';
       unset($variables['attributes']['src']);
@@ -306,7 +307,7 @@ function dds_premium_preprocess_maintenance_page(array &$variables) {
  */
 function dds_premium_preprocess_dds_cookieinfo(array &$variables) {
   $variables['section_attributes']->addClass('theme')
-    ->addClass('theme-primary');
+    ->addClass('theme-secondary');
 }
 
 /**
@@ -389,12 +390,6 @@ function dds_premium_preprocess_breadcrumb(array &$variables) {
   $attribute = new Attribute();
   $attribute->addClass('container');
   $variables['items_attributes'] = (!empty($variables['items_attributes']) ? $variables['items_attributes'] : $attribute);
-
-  $node = Drupal::routeMatch()->getParameter('node');
-  if (!empty($node)) {
-    $variables['attributes']['class'][] = 'breadcrumb--pull-down';
-    $variables['attributes']['class'][] = 'breadcrumb--shadow';
-  }
 }
 
 /**
@@ -424,8 +419,29 @@ function dds_premium_preprocess_paragraph_widget__button(array &$variables) {
  *   Template variables.
  */
 function dds_premium_preprocess_paragraph_widget__image(array &$variables) {
-  // @todo Add image style when we know the size.
-  $variables['image_style'] = '';
+  $layout_id = $variables['fields']['dds_layout']['layout_id'] ?? FALSE;
+  $parent_bundle = $layout_id ? $layout_id : $variables['parent_bundle'];
+
+  if (in_array($parent_bundle, [
+    'dds_layout_fullwidth',
+    'full_width_column',
+  ])) {
+    $variables['image_style'] = 'full_width_16_9';
+  }
+  elseif (in_array($parent_bundle, ['dds_layout_onecolumn', 'one_column'])) {
+    $variables['image_style'] = '1_column';
+  }
+  elseif (in_array($parent_bundle, [
+    'dds_layout_twocolumn_5050',
+    'dds_layout_twocolumn_3367',
+    'dds_layout_twocolumn_6733',
+    'two_column',
+  ])) {
+    $variables['image_style'] = '2_column';
+  }
+  elseif (in_array($parent_bundle, ['dds_layout_threecolumn', 'three_column'])) {
+    $variables['image_style'] = '3_column';
+  }
 }
 
 /**
@@ -441,9 +457,6 @@ function dds_premium_preprocess_paragraph_widget__slideshow(array &$variables) {
       $variables['items'][] = ['image' => $item['field_media_image']];
     }
   }
-
-  // @todo Add image style when we know the size.
-  $variables['image_style'] = '';
 }
 
 /**
@@ -495,14 +508,35 @@ function dds_premium_preprocess_paragraph_widget__video(array &$variables) {
   if (Drupal::hasService('dds_media.media_helper')) {
     /** @var Drupal\dds_media\MediaHelper $service */
     $service = Drupal::service('dds_media.media_helper');
-    $video_data = $service->get_video_data($variables['video_url']);
+    $video_data = $service->get_video_data($variables['fields']['field_video_media']['field_media_video_embed']['#markup']);
     $video_oembed['url'] = $video_data['url'];
     $video_oembed['oEmbed'] = ['html' => $video_data['player']];
   }
   $variables['attributes']['data-video'] = json_encode($video_oembed);
 
-  // @todo Add image style when we know the size.
-  $variables['image_style'] = '';
+  $layout_id = $variables['fields']['dds_layout']['layout_id'] ?? FALSE;
+  $parent_bundle = $layout_id ? $layout_id : $variables['parent_bundle'];
+
+  if (in_array($parent_bundle, [
+    'dds_layout_fullwidth',
+    'full_width_column',
+  ])) {
+    $variables['image_style'] = 'wide';
+  }
+  elseif (in_array($parent_bundle, ['dds_layout_onecolumn', 'one_column'])) {
+    $variables['image_style'] = '1_column';
+  }
+  elseif (in_array($parent_bundle, [
+    'dds_layout_twocolumn_5050',
+    'dds_layout_twocolumn_3367',
+    'dds_layout_twocolumn_6733',
+    'two_column',
+  ])) {
+    $variables['image_style'] = '2_column';
+  }
+  elseif (in_array($parent_bundle, ['dds_layout_threecolumn', 'three_column'])) {
+    $variables['image_style'] = '3_column';
+  }
 }
 
 
@@ -538,19 +572,61 @@ function dds_premium_preprocess_paragraph_widget__appetizer(array &$variables) {
     }
   }
 
-  $variables['is_small_version'] = in_array($variables['parent_bundle'], ['two_column', 'three_column']);
+  $layout_id = $variables['fields']['dds_layout']['layout_id'] ?? FALSE;
+  $parent_bundle = $layout_id ? $layout_id : $variables['parent_bundle'];
 
-  // @todo Add image style when we know the size.
-  $variables['image_style'] = '';
+  $variables['is_small_version'] = in_array($parent_bundle, [
+    'dds_layout_twocolumn_5050',
+    'dds_layout_twocolumn_3367',
+    'dds_layout_twocolumn_6733',
+    'dds_layout_threecolumn',
+    'two_column',
+    'three_column',
+  ]);
 
-  /*
-   * Using focal point and not responsive image style,
-   * then we need coordinates from focal point
-   * @todo Change it to responsive image style
-   */
-  if (!empty($background_image_uri)) {
-    $focal_point_data = _get_xy_in_percentage_focalpoint($background_image_uri, file_create_url($background_image_uri));
-    $variables['image_figure_attributes']->setAttribute('style', 'background-position:' . $focal_point_data['x'] . '% ' . $focal_point_data['y'] . '%');
+  if (in_array($parent_bundle, [
+    'dds_layout_fullwidth',
+    'full_width_column',
+  ])) {
+    $variables['image_style'] = 'appetiser_wide';
+  }
+  elseif (in_array($parent_bundle, ['dds_layout_onecolumn', 'one_column'])) {
+    $variables['image_style'] = 'appetiser';
+  }
+  elseif (in_array($parent_bundle, [
+    'dds_layout_twocolumn_5050',
+    'dds_layout_twocolumn_3367',
+    'dds_layout_twocolumn_6733',
+    'two_column',
+  ])) {
+    $variables['image_style'] = '2_column';
+  }
+  elseif (in_array($parent_bundle, ['dds_layout_threecolumn', 'three_column'])) {
+    $variables['image_style'] = '3_column';
+  }
+}
+
+/**
+ * Search results.
+ *
+ * @todo Add image style when we know the size.
+ *
+ * @param array $variables
+ *   Template variables.
+ */
+function dds_premium_preprocess_search_page__results(array &$variables) {
+  if (!empty($variables['results'])) {
+    foreach ($variables['results'] as &$result) {
+      if (isset($result['#image'])) {
+        $image = $result['#image'];
+        $result['#image'] = [
+          'title' => $image['#attributes']['alt'],
+          'alt' => $image['#attributes']['alt'],
+          'url' => file_create_url($image['#uri']),
+          'uri' => $image['#uri'],
+        ];
+      }
+    }
   }
 }
 
@@ -642,24 +718,13 @@ function _create_hero(ContentEntityInterface $entity, array $fields): array {
     $hero['cta'] = _modify_cta(reset($cta));
   }
 
-  /*
-   * Using focal point and not responsive image style,
-   * then we need coordinates from focal point
-   * @todo Change it to responsive image style
-   */
   if (!empty($background_image_uri)) {
     $hero['background_image'] = [
-      '#theme' => 'image_style',
-      '#style_name' => 'hero',
-      '#uri' => $background_image_uri,
-      '#attributes' => [
-        'class' => ['lazyload', 'lazyload-measure', 'lazyload-bg'],
-        'height' => 'auto',
-        'width' => 'auto',
-      ],
+      'title' => '',
+      'alt' => '',
+      'url' => file_create_url($background_image_uri),
+      'uri' => $background_image_uri,
     ];
-    $focal_point_data = _get_xy_in_percentage_focalpoint($background_image_uri, file_create_url($background_image_uri));
-    $hero_attributes->setAttribute('style', 'background-position:' . $focal_point_data['x'] . '% ' . $focal_point_data['y'] . '%');
   }
 
   return $hero;
@@ -727,31 +792,4 @@ function _modify_cta(array $cta, Attribute $cta_attributes = NULL): array {
   }
   $cta['attributes'] = $cta_attributes;
   return $cta;
-}
-
-/**
- * Gives back x and y coordinates so we can use for background position.
- *
- * @param string $uri
- *   Finding crop based on Uri.
- * @param string $url
- *   Image Url.
- *
- * @return array
- *   Array with information about x and y
- */
-function _get_xy_in_percentage_focalpoint($uri, $url) {
-  $focal_point_data = ['x' => 0, 'y' => 0];
-  $crop_type = \Drupal::config('focal_point.settings')->get('crop_type');
-  $crop = Crop::findCrop($uri, $crop_type);
-  if ($crop) {
-    list($width, $height) = @getimagesize($url);
-    if ($width && $height) {
-      $anchor = \Drupal::service('focal_point.manager')
-        ->absoluteToRelative($crop->x->value, $crop->y->value, $width, $height);
-      $focal_point_data['x'] = $anchor['x'];
-      $focal_point_data['y'] = $anchor['y'];
-    }
-  }
-  return $focal_point_data;
 }

@@ -25,11 +25,20 @@
  * @see template_preprocess_block()
  */
 #}
+
 {% if site_logo %}
-<a href="{{ path('<front>') }}" title="{{ 'Home'|t({}, {'context' : 'premium'}) }}" rel="home" class="logo">
-  <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
-</a>
+  {% include '@dds_premium/components/molecules/m-logo.html.twig' with {
+    'attributes': attributes.setAttribute('title', 'Home'|t({}, {'context' : 'premium'})).setAttribute('rel', 'home'),
+    'href': path('<front>'),
+    'logo_path': site_logo,
+    'alt':  'Home'|t
+  } %}
 {% endif %}
+
 {% if site_name %}
-  <a href="{{ path('<front>') }}" title="{{ 'Home'|t({}, {'context' : 'premium'}) }}" rel="home"class="logo">{{ site_name }}</a>
+  {% include '@dds_premium/components/molecules/m-logo.html.twig' with {
+    'attributes': attributes.setAttribute('title', 'Home'|t({}, {'context' : 'premium'})).setAttribute('rel', 'home'),
+    'href': path('<front>'),
+    'site_name': site_name
+  } %}
 {% endif %}

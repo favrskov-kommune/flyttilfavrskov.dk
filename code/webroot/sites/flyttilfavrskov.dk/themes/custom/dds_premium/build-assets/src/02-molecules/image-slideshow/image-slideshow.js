@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
           contain: true,
           pageDots: false,
           prevNextButtons: false,
-          asNavFor: '.js-image-slideshow',
+          asNavFor: slideshow,
         });
       });
     }
