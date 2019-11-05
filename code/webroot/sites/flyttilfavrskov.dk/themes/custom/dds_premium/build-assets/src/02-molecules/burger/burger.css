@@ -13,7 +13,7 @@
     }
 
     @media (--viewport-md-min) {
-        margin-left: 20px;
+        margin-left: 50px;
     }
 
     &__lines {

@@ -1,0 +1,56 @@
+.footer {
+    background-image: url('/sites/flyttilfavrskov.dk/themes/custom/dds_premium/build-assets/dist/images/footer.png');
+    min-height: 298px;
+    background-repeat: no-repeat;
+    background-position: 50% top;
+    padding-top: 150px;
+    position: relative;
+
+    &__inner {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        background-color: var(--color-primary);
+        min-height: 149px;
+        color: #fff;
+        letter-spacing: 0.19px;
+
+        div[class^="col-"] {
+            @media (--viewport-sm-max) {
+                &:not(:first-child) {
+                    margin-top: 20px;
+                }
+            }
+
+            &:last-child {
+                @media (--viewport-md-min) {
+                    display: flex;
+                    text-align: right;
+                    align-items: flex-end;
+                }
+            }
+        }
+
+        a {
+            color: #fff;
+        }
+
+        p {
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &::before {
+            content: '';
+            background-color: var(--color-primary);
+            width: 100%;
+            height: 11px;
+            display: block;
+            position: absolute;
+            top: 139px;
+            max-width: calc(50% - 800px);
+        }
+    }
+}

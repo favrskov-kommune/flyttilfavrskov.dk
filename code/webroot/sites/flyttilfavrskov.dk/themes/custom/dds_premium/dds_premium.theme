@@ -744,9 +744,6 @@ function _create_footer(array $variables): array {
 
   /* @var Attribute $attributes */
   $attributes = new Attribute();
-  $attributes->addClass('section');
-  $attributes->addClass('theme');
-  $attributes->addClass('theme-primary');
 
   $footer = [
     'attributes' => $attributes,

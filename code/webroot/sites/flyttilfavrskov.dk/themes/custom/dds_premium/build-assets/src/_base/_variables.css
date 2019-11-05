@@ -19,7 +19,7 @@
 
     /* Typography
   ********************/
-    --base-font-family: 'Roboto Slab', 'sans-serif';
+    --base-font-family: 'Arial', 'Helvetica', 'sans-serif';
     --base-font-size: 18px;
     --base-font-weight: 300;
     --heading-font-family: 'Roboto', 'sans-serif';
@@ -27,7 +27,7 @@
 
     /* Layout
   ********************/
-    --container-width: 1560px;
+    --container-width: 1600px;
     --text-width: 1240px;
     --grid-section-spacing: 100px;
     --grid-section-spacing--mobile: calc(var(--grid-section-spacing) / 2);
@@ -46,15 +46,16 @@
 
     /* Theme variables
     ****************/
-    --color-primary: #263ed3;
+    --color-primary: #00665f;
+    --color-link: var(--color-primary);
 
     /* Header */
     --header-height: 95px;
     --header-height-mobile: 80px;
     --header-background-color: #fff;
     --header-font-family: 'Roboto', 'sans-serif';
-    --header-text-color: #232323;
-    --header-font-weight: 500;
+    --header-text-color: #474747;
+    --header-font-weight: 400;
     --header-selected-text-color: var(--color-primary);
     --header-border-color: #ededed;
 
