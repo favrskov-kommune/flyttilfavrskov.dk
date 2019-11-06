@@ -6,7 +6,7 @@
     padding: 0;
     list-style: none;
 
-    @media (--viewport-sm-max) {
+    @media (--viewport-md-max) {
         display: none;
     }
 }
@@ -18,8 +18,13 @@
     height: 100%;
     color: var(--header-text-color);
     cursor: pointer;
+    transition: margin-left 0.2s;
 
-    @media (--viewport-lg-min) {
+    @media (--viewport-md-min) {
+        margin: 0 13px;
+    }
+
+    @media (--viewport-xl-min) {
         margin: 0 22px;
     }
 

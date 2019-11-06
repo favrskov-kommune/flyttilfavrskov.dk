@@ -1,15 +1,9 @@
 {% if type == 'button' %}
   <button{{ (not attributes ? create_attribute() : attributes).addClass('button') }}>
     {{ text }}
-    {% include '@dds_premium/components/atoms/a-svg-icon.html.twig' with {
-      'svgIconName': 'arrow-right'
-    } %}
   </button>
 {% else %}
   <a{{ (not attributes ? create_attribute() : attributes).setAttribute('href', url).addClass('button') }}>
     {{ text }}
-    {% include '@dds_premium/components/atoms/a-svg-icon.html.twig' with {
-      'svgIconName': 'arrow-right'
-    } %}
   </a>
 {% endif %}

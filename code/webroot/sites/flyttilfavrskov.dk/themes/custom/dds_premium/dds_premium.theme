@@ -71,19 +71,6 @@ function dds_premium_preprocess_links__language_block(array &$variables) {
 }
 
 /**
- * Add floating class to site branding so on mobile it will lay on top of hero.
- *
- * @param array $variables
- *   Template variables.
- */
-function dds_premium_preprocess_block__sitebranding_mobile(array &$variables) {
-  $node = Drupal::routeMatch()->getParameter('node');
-  if (!empty($node)) {
-    $variables['attributes']['class'][] = 'logo--floating';
-  }
-}
-
-/**
  * Modify meta menu, by adding classes and adding a headline.
  *
  * @param array $variables

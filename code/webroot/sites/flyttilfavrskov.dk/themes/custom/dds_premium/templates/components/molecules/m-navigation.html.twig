@@ -5,6 +5,9 @@
       <li{{ create_attribute().addClass(['navigation-item', 'js-navigation-item']).addClass(item.in_active_trail ? 'navigation-item--active').addClass(item.below ? 'navigation-item--has-children') }}>
         {{ link(item.title, item.url, {'class': 'navigation-item__link'}) }}
         {% if item.below %}
+          {% include '@dds_premium/components/atoms/a-svg-icon.html.twig' with {
+            'svgIconName': 'arrow-line-down'
+          } %}
           {% include '@dds_premium/components/molecules/m-sub-navigation.html.twig' with {
             'items': item.below
           } %}
