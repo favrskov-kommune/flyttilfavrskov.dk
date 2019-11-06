@@ -11,8 +11,12 @@
 
         @media (--viewport-sm-max) {
             display: block;
-            margin: var(--grid-section-spacing--mobile) auto 0;
+            margin: 0 auto;
             text-align: center;
+
+            .logo__image {
+                height: 55px;
+            }
         }
     }
 

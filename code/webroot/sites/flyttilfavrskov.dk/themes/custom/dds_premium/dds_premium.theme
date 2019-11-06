@@ -555,9 +555,7 @@ function dds_premium_preprocess_paragraph_widget__appetizer(array &$variables) {
   if ($paragraph->hasField('field_appetizer_cta') && !$paragraph->get('field_appetizer_cta')->isEmpty()) {
     $cta = $paragraph->get('field_appetizer_cta')->getValue();
     /** @var Drupal\Core\Template\Attribute $attribute */
-    $attribute = new Attribute();
-    $attribute->addClass('button--ghost');
-    $variables['cta'] = _modify_cta(reset($cta), $attribute);
+    $variables['cta'] = _modify_cta(reset($cta));
   }
 
   // Load background uri.
@@ -644,6 +642,7 @@ function dds_premium_preprocess_search_page__results(array &$variables) {
 function _create_hero(ContentEntityInterface $entity, array $fields): array {
   $hero_attributes = new Attribute();
   $section_attributes = new Attribute();
+  $content_attributes = new Attribute();
   $background_image_uri = '';
   $text_color = 'dark';
   $orientation = 'left';
@@ -700,13 +699,19 @@ function _create_hero(ContentEntityInterface $entity, array $fields): array {
     $title = $entity->get($fields['title'])->value;
   }
 
+  if ($entity instanceof \Drupal\node\Entity\Node && !\Drupal::service('path.matcher')->isFrontPage()) {
+    $attributes->addClass('hero--medium');
+    $content_attributes->addClass('hero__content--medium');
+  }
+
   $hero = [
     'attributes' => $attributes,
-    'position' => 'default',
+    'position' => $orientation,
     'title' => $title,
     'video_oembed' => json_encode($video_oembed),
     'cta' => [],
     'section_attributes' => $section_attributes,
+    'content_attributes' => $content_attributes,
   ];
 
   if (isset($fields['teaser']) && $entity->hasField($fields['teaser']) && !$entity->get($fields['teaser'])->isEmpty()) {

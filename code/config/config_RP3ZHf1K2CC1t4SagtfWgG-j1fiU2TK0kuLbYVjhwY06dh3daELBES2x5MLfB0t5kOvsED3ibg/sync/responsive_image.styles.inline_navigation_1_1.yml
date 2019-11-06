@@ -1,11 +1,12 @@
+uuid: 8a435e61-72f2-41b0-9762-59f74ab1f74a
 langcode: en
 status: true
 dependencies:
   config:
-    - image.style.inline_navigation_1_1_xs_
     - image.style.inline_navigation_1_1_lg_
     - image.style.inline_navigation_1_1_md_
     - image.style.inline_navigation_1_1_sm_
+    - image.style.inline_navigation_1_1_xs_
     - image.style.inline_navigation_1_1_xsx2_
     - image.style.inline_navigation_1_1_xxs_
     - image.style.inline_navigation_1_1_xxsx2_
@@ -39,7 +40,7 @@ image_style_mappings:
     breakpoint_id: dds_premium.xs
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: inline_navigation_1_1_
+    image_mapping: inline_navigation_1_1_xs_
   -
     breakpoint_id: dds_premium.xs
     multiplier: 2x

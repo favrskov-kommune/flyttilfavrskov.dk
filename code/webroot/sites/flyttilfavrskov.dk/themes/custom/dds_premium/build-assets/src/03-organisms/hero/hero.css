@@ -3,7 +3,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    color: black;
 
     &::before {
         content: '';
@@ -32,11 +31,6 @@
         align-items: flex-start;
         position: relative;
         z-index: 2;
-        height: 100vh;
-
-        @media (--viewport-md-min) {
-            height: calc(90vh - var(--header-height));
-        }
     }
 
     &__title {
@@ -44,11 +38,11 @@
         font-size: 30px;
         letter-spacing: 0.2px;
         line-height: 35px;
-        margin-bottom: ¨18px;
+        font-family: var(--heading-font-family);
 
         @media (--viewport-sm-min) {
             margin-bottom: 25px;
-            font-size: 55px;
+            font-size: 60px;
             letter-spacing: 0.37px;
             line-height: 60px;
         }
@@ -59,13 +53,15 @@
         font-size: 18px;
         letter-spacing: 0.44px;
         line-height: 24px;
-        margin-bottom: 25px;
+        margin-bottom: 0;
+
+        & + .button { margin-top: 25px; }
 
         @media (--viewport-sm-min) {
-            font-size: 25px;
+            font-size: 40px;
             letter-spacing: 0.61px;
-            line-height: 29px;
-            margin-bottom: 30px;
+            line-height: 56px;
+            & + .button { margin-top: 30px; }
         }
     }
 
@@ -131,5 +127,31 @@
 
     &--inverted {
         color: white;
+    }
+}
+
+/* Add height for hero */
+.hero,
+.hero__content {
+    height: 460px;
+
+    &--medium {
+        @media (--viewport-ms-min) {
+            height: 540px;
+        }
+    }
+
+    &:not(&--medium) {
+        @media (--viewport-ms-min) {
+            height: 580px;
+        }
+
+        @media (--viewport-sm-min) {
+            height: 750px;
+        }
+
+        @media (--viewport-md-min) {
+            height: 800px;
+        }
     }
 }

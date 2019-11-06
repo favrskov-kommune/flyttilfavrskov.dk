@@ -1,9 +1,4 @@
 /* Add responsive image support for Hero */
-.hero,
-.hero__content {
-  max-height: 1500px;
-}
-
 .hero.hero--image-added picture,
 .hero.hero--image-added img,
 .hero.hero--image-added .container {
@@ -22,17 +17,6 @@
   top: 0;
   left: 0;
   right: 0;
-}
-
-.hero.hero--image-added {
-  height: 100vh;
-}
-
-@media (min-width: 992px) {
-  /* 95px = --header-height from _variables.css */
-  .hero.hero--image-added {
-    height: calc(90vh - 95px);
-  }
 }
 
 /* Add responsive image support for Slideshow */

@@ -6,16 +6,16 @@
     /* Default theme-colors
   ********************/
     --theme-background-color: #fff;
-    --theme-color: #000;
-    --theme-button-background-color: #000;
+    --theme-color: #474747;
+    --theme-button-background-color: #00655d;
     --theme-button-color: #fff;
-    --theme-link-color: #000;
-    --theme-divider-background-color: #000;
-    --theme-accordion-border-color: #d4d4d4;
+    --theme-link-color: #00655d;
+    --theme-divider-background-color: #00655d;
+    --theme-accordion-border-color: #fff;
     --theme-accordion-background-color: transparent;
-    --theme-accordion-text-color: #000;
-    --theme-input-border: #e5e3de;
-    --theme-input-color-marked: #263ed3;
+    --theme-accordion-text-color: #474747;
+    --theme-input-border: #474747;
+    --theme-input-color-marked: #474747;
 
     /* Typography
   ********************/
@@ -48,13 +48,14 @@
     ****************/
     --color-primary: #00665f;
     --color-link: var(--color-primary);
+    --color-text: var(--theme-color);
 
     /* Header */
     --header-height: 95px;
     --header-height-mobile: 80px;
     --header-background-color: #fff;
     --header-font-family: 'Roboto', 'sans-serif';
-    --header-text-color: #474747;
+    --header-text-color: var(--color-text);
     --header-font-weight: 400;
     --header-selected-text-color: var(--color-primary);
     --header-border-color: #ededed;
@@ -62,19 +63,18 @@
     /* Meta menu */
     --meta-menu-height: 40px;
     --meta-menu-background-color: #f7f7f7;
-    --meta-menu-text-color: #263ed3;
+    --meta-menu-text-color: #00655d;
 
     /* Button */
-    --button-border-radius: 50px;
+    --button-border-radius: 33px;
     --button-border-width: 1px;
     --button-border-color: transparent;
-    --button-height: 60px;
-    --button-padding: 0 60px;
-    --button-bg-color: #263ed3;
+    --button-height: 48px;
+    --button-padding: 0 30px;
     --button-text-color: #fff;
-    --button-font-weight: 500;
-    --button-font-family: var(--heading-font-family);
-    --button-font-size: 16px;
+    --button-font-weight: 700;
+    --button-font-family: var(--base-font-family);
+    --button-font-size: 18px;
 
     /* Easing functions
   ********************/
