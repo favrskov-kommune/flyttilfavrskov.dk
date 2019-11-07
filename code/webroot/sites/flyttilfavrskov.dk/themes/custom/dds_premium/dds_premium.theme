@@ -278,9 +278,13 @@ function dds_premium_preprocess_image(array &$variables) {
 function dds_premium_preprocess_maintenance_page(array &$variables) {
   /** @var Drupal\Core\Entity\EntityTypeManager $entity_type_manager */
   $entity_type_manager = \Drupal::entityTypeManager();
-  $block = Block::load('sitebranding');
-  if (!empty($block)) {
-    $variables['sitebranding'] = $entity_type_manager->getViewBuilder('block')->view($block);
+  $sitebranding = Block::load('sitebranding');
+  $sitebranding_mobile = Block::load('sitebranding_mobile');
+  if (!empty($sitebranding)) {
+    $variables['sitebranding'] = $entity_type_manager->getViewBuilder('block')->view($sitebranding);
+  }
+  if (!empty($sitebranding_mobile)) {
+    $variables['sitebranding_mobile'] = $entity_type_manager->getViewBuilder('block')->view($sitebranding_mobile);
   }
   $variables['page_title'] = $variables['page']['#title'];
   $variables['footer'] = _create_footer($variables);
@@ -689,6 +693,11 @@ function _create_hero(ContentEntityInterface $entity, array $fields): array {
   if ($entity instanceof \Drupal\node\Entity\Node && !\Drupal::service('path.matcher')->isFrontPage()) {
     $attributes->addClass('hero--medium');
     $content_attributes->addClass('hero__content--medium');
+  }
+
+  if ($entity instanceof \Drupal\paragraphs\Entity\Paragraph) {
+    $attributes->addClass('hero--small');
+    $content_attributes->addClass('hero__content--small');
   }
 
   $hero = [

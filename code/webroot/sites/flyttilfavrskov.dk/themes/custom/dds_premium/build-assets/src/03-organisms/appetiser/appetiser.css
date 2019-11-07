@@ -7,8 +7,10 @@
     position: relative;
     width: 100%;
 
-    @media (--viewport-md-min) {
-        min-height: 900px;
+    &:not(.appetiser--small) {
+        @media (--viewport-md-min) {
+            min-height: 900px;
+        }
     }
 
     &__content-wrapper {
@@ -72,6 +74,7 @@
         flex-direction: column;
 
         .appetiser__image {
+            box-shadow: 5px 10px 10px rgba(35, 35, 35, 0.1);
             width: 100%;
             height: auto;
             position: relative;
@@ -85,9 +88,17 @@
             }
         }
 
+        .appetiser__title {
+            font-size: 25px;
+            line-height: 35px;
+            font-weight: 700;
+        }
+
         .appetiser__content {
             width: 100%;
             max-width: none;
+            padding-top: 0;
+            padding-bottom: 0;
         }
     }
 

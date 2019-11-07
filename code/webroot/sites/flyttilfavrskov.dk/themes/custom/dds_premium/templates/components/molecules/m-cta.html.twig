@@ -2,6 +2,10 @@
   <button{{ (not attributes ? create_attribute() : attributes).addClass('button') }}>
     {{ text }}
   </button>
+{% elseif type == 'plain_link' %}
+  <a{{ (not attributes ? create_attribute() : attributes).setAttribute('href', url) }}>
+    {{ text }}
+  </a>
 {% else %}
   <a{{ (not attributes ? create_attribute() : attributes).setAttribute('href', url).addClass('button') }}>
     {{ text }}

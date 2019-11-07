@@ -140,13 +140,36 @@
 .hero__content {
     height: 460px;
 
+    &--small {
+        height: 440px;
+
+        .hero__title {
+            @media (--viewport-sm-min) {
+                margin-bottom: 40px;
+                font-size: 40px;
+                letter-spacing: 0.23px;
+                line-height: 55px;
+            }
+        }
+
+        .hero__description {
+            @media (--viewport-sm-min) {
+                font-size: 18px;
+                letter-spacing: 0.48px;
+                line-height: 24px;
+
+                & + .button { margin-top: 45px; }
+            }
+        }
+    }
+
     &--medium {
         @media (--viewport-ms-min) {
             height: 540px;
         }
     }
 
-    &:not(&--medium) {
+    &:not(&--medium, &--small) {
         @media (--viewport-ms-min) {
             height: 580px;
         }

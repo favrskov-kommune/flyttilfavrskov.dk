@@ -1,12 +1,14 @@
 /* Maintenance page */
-.maintenance-page {
-  text-align: center;
+div.maintenance-page {
+  margin-top: 30px;
+  margin-bottom: 100px;
 }
 
 .maintenance-page__title {
   font-size: 22px;
   letter-spacing: 0.14px;
   line-height: 30px;
+  margin-bottom: 10px;
 }
 
 .maintenance-page__content {
@@ -14,8 +16,14 @@
 }
 
 @media (max-width: 991px) {
-  .maintenance-page {
+  div.maintenance-page {
     margin-top: 40px;
+  }
+  .header {
+    display: none;
+  }
+  body {
+    padding: 0;
   }
 }
 
@@ -25,4 +33,8 @@
     letter-spacing: 0.24px;
     line-height: 55px;
   }
+}
+
+.maintenance-page .layout-container {
+  margin: 0;
 }

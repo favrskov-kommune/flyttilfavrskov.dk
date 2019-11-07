@@ -93,6 +93,7 @@ a {
     color: var(--color-link, blue);
     text-decoration: underline;
     text-decoration-skip-ink: auto;
+    transition: filter 0.2s;
 
     &:hover,
     &:focus {

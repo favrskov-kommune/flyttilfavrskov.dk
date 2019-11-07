@@ -97,6 +97,18 @@
         box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
         margin-bottom: 20px;
 
+        &--fallback {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                width: 20%;
+                height: 20%;
+                opacity: 0.5;
+            }
+        }
+
         &::before {
             content: '';
             display: block;
