@@ -1,8 +1,17 @@
 .accordion {
     position: relative;
     width: 100%;
+    margin: 0 auto;
+    max-width: 980px;
 
-    &__items--has-children { border-bottom: 2px solid var(--theme-accordion-border-color); }
+    &__headline {
+        margin-bottom: 50px;
+    }
+}
+
+.accordion-item {
+    margin-bottom: 30px;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.1);
 
     &__headline {
         padding: 10px 30px;
@@ -16,54 +25,31 @@
         border: 2px solid var(--theme-accordion-border-color);
         border-bottom: 0;
 
-        &--hidden { display: none; }
-
         &--active {
-            .accordion__icon {
+            .accordion-item__icon {
                 margin-top: 7px;
                 transform: rotate(-135deg);
             }
         }
     }
 
-    &__headline-title {
-        margin-bottom: 25px;
-    }
-
     &__title {
-        line-height: 30px;
-        font-size: 20px;
+        line-height: 31px;
+        font-size: 25px;
         margin-bottom: 0;
-        font-weight: 500;
+        font-weight: 700;
+        font-family: var(--heading-font-family);
         padding-right: 20px;
-    }
-
-    &__content {
-        color: var(--theme-accordion-text-color);
-        background-color: var(--theme-accordion-background-color);
-
-        &--active {
-            border: 2px solid var(--theme-accordion-border-color);
-            padding: 20px 30px;
-            border-bottom: 0;
-
-            .accordion__text {
-                font-size: 16px;
-                visibility: visible;
-                opacity: 1;
-                height: auto;
-            }
-        }
     }
 
     &__icon {
         transition: transform 0.2s;
-        border: 2px solid #232323;
-        height: 14px;
-        width: 14px;
+        border: 2px solid currentColor;
+        height: 20px;
+        width: 20px;
         border-top: 0;
         border-left: 0;
-        margin-top: -7px;
+        margin-top: -10px;
         transform: rotate(45deg);
         flex-shrink: 0;
     }
@@ -74,5 +60,23 @@
         visibility: hidden;
         opacity: 0;
         height: 0;
+    }
+
+    &__content {
+        color: var(--theme-accordion-text-color);
+        background-color: var(--theme-accordion-background-color);
+
+        &--active {
+            border: 2px solid var(--theme-accordion-border-color);
+            padding: 0 30px 10px;
+            border-bottom: 0;
+
+            .accordion-item__text {
+                font-size: 16px;
+                visibility: visible;
+                opacity: 1;
+                height: auto;
+            }
+        }
     }
 }

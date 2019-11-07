@@ -5,9 +5,9 @@
     --theme-button-color: #fff;
     --theme-link-color: #fff;
     --theme-divider-background-color: #fff;
-    --theme-accordion-border-color: #e7ebe3;
-    --theme-accordion-background-color: #fff;
-    --theme-accordion-text-color: #474747;
+    --theme-accordion-border-color: #474747;
+    --theme-accordion-background-color: #474747;
+    --theme-accordion-text-color: #fff;
     --theme-input-border: #474747;
     --theme-input-color-marked: #474747;
 }

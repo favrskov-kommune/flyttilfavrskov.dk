@@ -1,26 +1,22 @@
 <div{{ attributes.addClass(['accordion', 'js-accordion']) }}>
-  <h2 class="accordion__headline-title">{{ headline }}</h2>
+  <h2 class="accordion__headline">{{ headline }}</h2>
   <div class="accordion__items {{ items|length >= 1 ? 'accordion__items--has-children' }}">
     {% set counter = 0 %}
     {% for item in items %}
       {% set counter = counter + 1 %}
-      <div aria-expanded="false" aria-controls="accordion-{{ item.id }}" id="accordion-control-{{ item.id }}" class="js-accordion-item accordion__headline {{ counter > 5 ? 'accordion__headline--hidden' }}">
-        <h3 class="accordion__title">{{ item.headline }}</h3>
-        <div class="accordion__icon"></div>
-      </div>
-      <div class="accordion__content" aria-hidden="true" id="accordion-{{ item.id }}">
-        <div class="accordion__text">
-          {{ item.text }}
-        </div>
-      </div>
+      <accordion-item title="{{ item.headline }}" id="{{ item.id }}" {{ counter > 5 ? ':hidden="!showAllHiddenItems"' }}>
+        {{ item.text }}
+      </accordion-item>
     {% endfor %}
   </div>
   {% if items|length > 5 and show_more_text %}
+  <div v-show="!showAllHiddenItems">
     <br>
     {% include '@dds_premium/components/molecules/m-cta.html.twig' with {
       'type': 'button',
       'text': show_more_text,
-      'attributes': create_attribute().addClass('js-display-all-items')
+      'attributes': create_attribute().setAttribute('@click.prevent', 'displayHiddenItems')
     } %}
-  {% endif %}
+    {% endif %}
+  </div>
 </div>

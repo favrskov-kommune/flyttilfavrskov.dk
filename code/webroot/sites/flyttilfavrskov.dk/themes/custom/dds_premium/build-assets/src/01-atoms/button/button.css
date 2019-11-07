@@ -16,6 +16,7 @@ a.button {
     border: solid var(--button-border-width) var(--button-border-color);
     position: relative;
     overflow: hidden;
+    transition: filter 0.2s;
 
     .icon--arrow-right {
         position: absolute;
@@ -31,6 +32,7 @@ a.button {
 
     &:hover,
     &:focus {
+        filter: brightness(0.9);
         .icon--arrow-right {
             transform: translate(100%, -50%);
         }

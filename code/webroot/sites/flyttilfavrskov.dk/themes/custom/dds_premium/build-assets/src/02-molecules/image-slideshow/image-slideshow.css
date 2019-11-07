@@ -13,7 +13,7 @@
     background-position: 50% 50%;
     position: relative;
 
-    @media(--viewport-md-min) {
+    @media (--viewport-md-min) {
         height: 700px;
     }
 

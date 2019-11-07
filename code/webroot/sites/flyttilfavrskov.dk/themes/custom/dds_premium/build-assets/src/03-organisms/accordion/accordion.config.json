@@ -6,7 +6,8 @@
         "limit": 10,
         "button": {
             "text": "See all items",
-            "modifier": "js-display-all-items"
+            "modifier": "js-display-all-items",
+            "clickMethod": "displayHiddenItems"
         },
         "accordions": [
             {
