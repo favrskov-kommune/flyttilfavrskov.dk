@@ -44,12 +44,12 @@ COPY code/ /src
 WORKDIR /src
 RUN chown -R www-data:www-data /src /var/www
 USER www-data
-COPY httpd.conf /etc/apache2/apache2.conf
+COPY apache2.conf /etc/apache2/apache2.conf
 
-ENV APP_ENV=dev
+ENV APP_ENV=staging
 # Install libraries
-ARG current_env=dev
-ARG sites_folder
+ARG current_env=staging
+ARG sites_folder=flyttilfavrskov.dk
 RUN if [ "${current_env}" != "dev" ]; then composer install --optimize-autoloader; fi
 RUN if [ "${current_env}" != "dev" ]; then cd webroot/sites/${sites_folder}/themes/custom/dds_premium/build-assets/ && npm install && npm run build:dev; fi
 USER root

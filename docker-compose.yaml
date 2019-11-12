@@ -40,7 +40,7 @@ services:
       - database
     restart: on-failure:50
     volumes:
-      - ./code:/src:rw
+      - ./code/webroot/sites:/src/webroot/sites:rw
 
   elastic:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.3.2
