@@ -14,8 +14,10 @@
     --theme-accordion-border-color: #e7ebe3;
     --theme-accordion-background-color: #e7ebe3;
     --theme-accordion-text-color: #474747;
-    --theme-input-border: #474747;
+    --theme-input-border: #afafaf;
     --theme-input-color-marked: #474747;
+    --theme-input-background-color: #fff;
+    --theme-background-svg-background-color: rgba(0, 101, 93, 0.2);
 
     /* Typography
   ********************/

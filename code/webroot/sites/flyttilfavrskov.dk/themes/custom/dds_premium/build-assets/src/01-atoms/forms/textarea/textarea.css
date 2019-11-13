@@ -2,18 +2,20 @@
     display: block;
     width: 100%;
     min-height: 100px;
-    padding: 10px;
+    padding: 20px 40px 20px 30px;
     font-size: 16px;
     line-height: 1;
     font-family: var(--base-font-family);
     color: var(--theme-color);
-    background-color: var(--theme-background-color);
+    background-color: var(--theme-input-background-color);
 
     /* Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214 */
     background-image: none;
     border: 1px solid var(--theme-input-border);
     resize: none;
     appearance: none;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 25px;
 
     &:focus {
         outline: none;
