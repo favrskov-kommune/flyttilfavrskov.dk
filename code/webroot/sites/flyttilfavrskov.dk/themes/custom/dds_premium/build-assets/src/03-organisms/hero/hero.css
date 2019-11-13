@@ -51,6 +51,7 @@
 
     &__description {
         font-family: var(--heading-font-family);
+        font-weight: 300;
         font-size: 18px;
         letter-spacing: 0.44px;
         line-height: 24px;

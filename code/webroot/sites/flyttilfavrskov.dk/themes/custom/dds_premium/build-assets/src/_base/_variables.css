@@ -22,7 +22,7 @@
     --base-font-family: 'Arial', 'Helvetica', 'sans-serif';
     --base-font-size: 18px;
     --base-font-weight: 300;
-    --heading-font-family: 'Roboto', 'sans-serif';
+    --heading-font-family: 'Arial', 'Helvetica', 'sans-serif';
     --heading-font-weight: 700;
 
     /* Layout
@@ -54,7 +54,7 @@
     --header-height: 95px;
     --header-height-mobile: 80px;
     --header-background-color: #fff;
-    --header-font-family: 'Roboto', 'sans-serif';
+    --header-font-family: 'Arial', 'Helvetica', 'sans-serif';
     --header-text-color: var(--color-text);
     --header-font-weight: 400;
     --header-selected-text-color: var(--color-primary);
