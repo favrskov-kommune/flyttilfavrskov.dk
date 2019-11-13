@@ -7,9 +7,9 @@
 ## Spinning the setup
 
 We need to create a docker image now. One will be created automatically by the docker-compose, but for good practices it's better to just create one ourselves. Go into the folder, at the level where Dockerfile and docker-compose is and type
-```docker build --build-arg=env=dev --target http -t flyttilfavrskov:dev .
-docker build --build-arg=env=staging --target https -t flyttilfavrskov:staging .
-docker build --build-arg=env=prod --target https -t flyttilfavrskov:prod .```
+```docker build --build-arg=env=dev --target http -t flyttilfavrskov:dev .``` or
+```docker build --build-arg=env=staging --target https -t flyttilfavrskov:staging . ``` or
+```docker build --build-arg=env=prod --target https -t flyttilfavrskov:prod .```
 
 After this, all we need to do is create an ```.env``` file containing the is described below
 
