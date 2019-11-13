@@ -1,0 +1,35 @@
+uuid: 6dffc39c-7c92-4765-b6cd-0c658323f0f7
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_layout_block_appetizer
+  module:
+    - block_content
+    - options
+_core:
+  default_config_hash: rBb8kXyYe-4ILzzt2s-8QhBR84rTnXoZ0pnW4oZmSpY
+id: block_content.field_appetizer_text_alignment
+field_name: field_appetizer_text_alignment
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: left
+      label: Left
+    -
+      value: center
+      label: Center
+    -
+      value: right
+      label: Right
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

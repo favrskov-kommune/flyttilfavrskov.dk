@@ -1,0 +1,25 @@
+uuid: b434eac6-4ce8-4576-b77f-b50e5e28aa1b
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_layout_block_mailchimp
+  module:
+    - block_content
+    - mailchimp_signup
+_core:
+  default_config_hash: t7vW31H0OIqX03Xhnc7CAlitvpyhsZxn7t1pBlMZznk
+id: block_content.field_mailchimp_form
+field_name: field_mailchimp_form
+entity_type: block_content
+type: entity_reference
+settings:
+  target_type: mailchimp_signup
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

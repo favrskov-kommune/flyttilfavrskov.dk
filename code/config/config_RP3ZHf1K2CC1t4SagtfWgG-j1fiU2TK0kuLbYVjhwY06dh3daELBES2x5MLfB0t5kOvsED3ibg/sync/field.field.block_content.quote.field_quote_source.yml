@@ -1,0 +1,24 @@
+uuid: 297c1798-34c6-4065-a0aa-a0a0c03ab15c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.quote
+    - field.storage.block_content.field_quote_source
+  enforced:
+    module:
+      - dds_layout_block_quote
+_core:
+  default_config_hash: JSvP2p-4Bay9EmqE2bodsaShjhVfAoO28psZpCYafz8
+id: block_content.quote.field_quote_source
+field_name: field_quote_source
+entity_type: block_content
+bundle: quote
+label: Source
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

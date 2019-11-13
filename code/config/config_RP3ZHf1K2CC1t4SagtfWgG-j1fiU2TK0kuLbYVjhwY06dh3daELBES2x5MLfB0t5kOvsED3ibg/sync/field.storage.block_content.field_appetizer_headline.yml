@@ -1,17 +1,17 @@
-uuid: ad4ad70b-27c6-4b8e-9744-c6346dad2e99
+uuid: a77ad089-5777-4093-a370-9fa9246afe57
 langcode: en
 status: true
 dependencies:
   enforced:
     module:
-      - erl_paragraphs
+      - dds_layout_block_appetizer
   module:
-    - paragraphs
+    - block_content
 _core:
-  default_config_hash: roeMiH-AsB90bTGenXdqOVjf_JtIXyZM0hTHfQEPWIw
-id: paragraph.field_title
-field_name: field_title
-entity_type: paragraph
+  default_config_hash: QZ2NWIbsM39xF44NYZc5vU74RVYCdzhdKytipPvY6dg
+id: block_content.field_appetizer_headline
+field_name: field_appetizer_headline
+entity_type: block_content
 type: string
 settings:
   max_length: 255

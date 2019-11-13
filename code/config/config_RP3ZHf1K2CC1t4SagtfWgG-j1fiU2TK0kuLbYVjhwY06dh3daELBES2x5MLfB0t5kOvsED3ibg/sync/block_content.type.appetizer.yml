@@ -1,0 +1,13 @@
+uuid: 65d191c0-7c64-441b-a56e-c8490fc0a1dc
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_layout_block_appetizer
+_core:
+  default_config_hash: kVaewzCqG7yHS_laUBgRAdjA7Tr3RJDrEHzaDGp1NM8
+id: appetizer
+label: Appetizer
+revision: 0
+description: 'A block that contains image, text and a CTA-button.'

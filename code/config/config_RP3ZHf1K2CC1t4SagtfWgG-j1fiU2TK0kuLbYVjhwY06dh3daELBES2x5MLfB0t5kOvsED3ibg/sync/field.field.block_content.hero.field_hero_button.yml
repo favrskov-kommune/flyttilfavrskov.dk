@@ -1,0 +1,28 @@
+uuid: a979137d-2852-4a90-af32-7fac808786ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero
+    - field.storage.block_content.field_hero_button
+  enforced:
+    module:
+      - dds_layout_block_hero
+  module:
+    - dds_content
+_core:
+  default_config_hash: KbNf5QvCsCRYh7SY0bmB9v8n6PezxaWxh1pGtzt87uk
+id: block_content.hero.field_hero_button
+field_name: field_hero_button
+entity_type: block_content
+bundle: hero
+label: Button
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: '17'
+  title: '2'
+field_type: dds_link_with_target

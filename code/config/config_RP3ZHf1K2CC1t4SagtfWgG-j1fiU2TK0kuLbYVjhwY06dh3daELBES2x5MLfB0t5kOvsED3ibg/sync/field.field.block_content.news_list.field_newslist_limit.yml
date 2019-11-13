@@ -1,0 +1,28 @@
+uuid: e7c564eb-259f-4fec-91fe-b365fd297799
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.news_list
+    - field.storage.block_content.field_newslist_limit
+  enforced:
+    module:
+      - dds_layout_block_news_list
+_core:
+  default_config_hash: yqKZe17FFuXqwi8u8eQW4YUsYmmoeevS7d7CqyXRYa8
+id: block_content.news_list.field_newslist_limit
+field_name: field_newslist_limit
+entity_type: block_content
+bundle: news_list
+label: Limitations
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,35 @@
+uuid: 6b0f43c9-057b-4c2d-88c8-d5f918de6d27
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_layout_block_hero
+  module:
+    - block_content
+    - options
+_core:
+  default_config_hash: ENe2qXy8T1HcouMvVZoxbvVmK4qTBEU2OYHc1LQ7TJ0
+id: block_content.field_hero_orientation
+field_name: field_hero_orientation
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: left
+      label: 'Align left'
+    -
+      value: center
+      label: 'Align center'
+    -
+      value: right
+      label: 'Align right'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

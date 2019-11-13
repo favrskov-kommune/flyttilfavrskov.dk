@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.special_page.field_parent
     - field.field.node.special_page.field_search_api_exclude
     - field.field.node.special_page.field_teaser
+    - field.field.node.special_page.layout_builder__layout
     - node.type.special_page
   module:
     - dds_content
@@ -133,6 +134,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
   path:
     type: path
     weight: 7
@@ -181,6 +189,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     region: content
     third_party_settings: {  }
   unpublish_on:
@@ -197,3 +206,4 @@ content:
 hidden:
   field_search_api_exclude: true
   field_teaser: true
+  layout_builder__layout: true

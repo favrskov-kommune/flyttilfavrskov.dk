@@ -1,0 +1,35 @@
+uuid: 32805cf4-6492-4ea8-bec7-e277be4edf5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.inline_navigation
+    - field.storage.block_content.field_inline_navigation_pages
+    - node.type.basic_page
+    - node.type.special_page
+  enforced:
+    module:
+      - dds_layout_block_inline_navigation
+_core:
+  default_config_hash: 8MaXNE2mkSfBA5Me7QapoR4Znmhj_gYsrOO15mDlxys
+id: block_content.inline_navigation.field_inline_navigation_pages
+field_name: field_inline_navigation_pages
+entity_type: block_content
+bundle: inline_navigation
+label: Pages
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      basic_page: basic_page
+      special_page: special_page
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: basic_page
+field_type: entity_reference

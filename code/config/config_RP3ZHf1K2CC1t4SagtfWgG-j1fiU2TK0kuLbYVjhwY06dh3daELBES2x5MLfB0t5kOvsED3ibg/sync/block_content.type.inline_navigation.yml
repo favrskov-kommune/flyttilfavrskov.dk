@@ -1,0 +1,13 @@
+uuid: 853b03c0-78a8-4f95-996b-940a22a25aba
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_layout_block_inline_navigation
+_core:
+  default_config_hash: XCiTux_uKkZKgdUWSjGRuUPIiDVV4fiUer9VrNvvNyc
+id: inline_navigation
+label: 'Inline Navigation'
+revision: 0
+description: ''

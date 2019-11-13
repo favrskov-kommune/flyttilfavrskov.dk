@@ -1,0 +1,13 @@
+uuid: 4a92cb59-55a3-4f6c-be5d-c96199bf473b
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_layout_block_news_list
+_core:
+  default_config_hash: 5k6aPRCxX6H4e9Ds8ZpKmPml6w48LDMwoN6B62C5-h4
+id: news_list
+label: 'News list'
+revision: 0
+description: ''

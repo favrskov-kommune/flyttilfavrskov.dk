@@ -1,0 +1,25 @@
+uuid: 7601311b-fe90-4b62-9a9b-3aafa8373b2f
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_layout_block_appetizer
+  module:
+    - block_content
+    - media
+_core:
+  default_config_hash: wh2WEXAUNlR8aVxVU0jc0seoZ5hLIrWlEJRZiw2J-gI
+id: block_content.field_appetizer_image
+field_name: field_appetizer_image
+entity_type: block_content
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

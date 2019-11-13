@@ -1,0 +1,34 @@
+uuid: 1fec2b81-ba13-4d05-8513-01983bf17e11
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_editor_manual
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: false
+    publish_past_date: error
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: false
+_core:
+  default_config_hash: bTfce_qosI6CdCWHP8JNOxcXYo_2WgpVqpujbZTqFag
+name: 'Editor Manual Page'
+type: editor_manual
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

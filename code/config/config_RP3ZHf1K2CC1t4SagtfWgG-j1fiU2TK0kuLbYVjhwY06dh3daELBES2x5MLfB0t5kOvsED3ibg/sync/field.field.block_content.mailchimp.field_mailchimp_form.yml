@@ -1,0 +1,28 @@
+uuid: 9bf50d61-2af2-4bc2-bcb1-7bd5487d0c5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.mailchimp
+    - field.storage.block_content.field_mailchimp_form
+  enforced:
+    module:
+      - dds_layout_block_mailchimp
+_core:
+  default_config_hash: HreTBg2V5OwUggdmhX0VtI1biqrCmK6UoddjiLzumD4
+id: block_content.mailchimp.field_mailchimp_form
+field_name: field_mailchimp_form
+entity_type: block_content
+bundle: mailchimp
+label: Form
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:mailchimp_signup'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

@@ -1,0 +1,13 @@
+uuid: 94e1eb12-060a-4f45-847f-fc61e3654038
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_layout_block_hero
+_core:
+  default_config_hash: VxMtFkoB0GwYT_L274XZtSHQJdLlPk2hM5ApZzoPKkc
+id: hero
+label: Hero
+revision: 0
+description: ''

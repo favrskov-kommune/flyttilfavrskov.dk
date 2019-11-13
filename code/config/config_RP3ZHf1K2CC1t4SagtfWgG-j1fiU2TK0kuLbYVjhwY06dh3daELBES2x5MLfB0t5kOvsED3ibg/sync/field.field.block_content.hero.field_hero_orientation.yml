@@ -1,0 +1,28 @@
+uuid: ea637060-1759-4296-9874-71459decc216
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero
+    - field.storage.block_content.field_hero_orientation
+  enforced:
+    module:
+      - dds_layout_block_hero
+  module:
+    - options
+_core:
+  default_config_hash: qslShzHozfgDTdP2u0lM35y_Cl2iq-GxrWin0xj-E1o
+id: block_content.hero.field_hero_orientation
+field_name: field_hero_orientation
+entity_type: block_content
+bundle: hero
+label: 'Text orientation'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,61 @@
+uuid: d9f58b3c-1525-43e5-8b32-7b44ebf74dc7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.inline_navigation
+    - field.field.block_content.inline_navigation.field_inline_navigation_mode
+    - field.field.block_content.inline_navigation.field_inline_navigation_pages
+    - field.field.block_content.inline_navigation.field_inline_navigation_parent
+  enforced:
+    module:
+      - dds_layout_block_inline_navigation
+_core:
+  default_config_hash: RZQvvrOtNgbJU_lsRBzRXIVMTaIdhUVWfBcm0ysFukE
+id: block_content.inline_navigation.default
+targetEntityType: block_content
+bundle: inline_navigation
+mode: default
+content:
+  field_inline_navigation_mode:
+    weight: 28
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_inline_navigation_pages:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_inline_navigation_parent:
+    weight: 27
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

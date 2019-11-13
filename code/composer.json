@@ -28,7 +28,7 @@
     "cweagans/composer-patches": "^1.6.5",
     "drupal-composer/drupal-scaffold": "^2.5",
     "drupal/console": "^1.8",
-    "drupal/core": "~8.0",
+    "drupal/core": "~8.8",
     "drupal/mailchimp": "^1.11",
     "drush/drush": "^9.0",
     "novicell/dds_content": "~1.0",
@@ -44,6 +44,7 @@
     "novicell/dds_search": "~1.0",
     "novicell/dds_seo": "~1.0",
     "novicell/dds_site_settings": "~2.0",
+    "novicell/dds_translation": "^1.0",
     "symfony/filesystem": "~3.0",
     "zaporylie/composer-drupal-optimizations": "^1.1"
   },
@@ -112,6 +113,15 @@
       "drush/contrib/{$name}": [
         "type:drupal-drush"
       ]
+    },
+    "patches": {
+      "drupal/core": {
+        "(#2999491) Allow creation of reuseable inline blocks": "https://www.drupal.org/files/issues/2019-07-17/drupal8-layout-builder-reusable-2999491-24.patch",
+        "(#3042190) Creating a block that uses Ajax adds multiple blocks": "https://www.drupal.org/files/issues/2019-05-04/3042190-3.patch"
+      },
+      "drupal/paragraphs": {
+        "(#2901390) Integrity constraint violation: 1048 Column 'langcode' cannot be null": "https://www.drupal.org/files/issues/2019-08-10/paragraphs-set_langcode_widgets-290139_updated.patch"
+      }
     }
   }
 }

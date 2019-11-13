@@ -1,0 +1,32 @@
+uuid: 051c1ede-0dfe-4cee-839d-28a1a5fcf4a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_background
+    - media.type.dds_image
+    - media.type.dds_video
+    - node.type.editor_manual
+_core:
+  default_config_hash: oiqmKHF9dZjGMkFgwPHFVkeqq6t3oes9QwjG9klr8mk
+id: node.editor_manual.field_header_background
+field_name: field_header_background
+entity_type: node
+bundle: editor_manual
+label: 'Header background image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      dds_image: dds_image
+      dds_video: dds_video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: dds_image
+field_type: entity_reference

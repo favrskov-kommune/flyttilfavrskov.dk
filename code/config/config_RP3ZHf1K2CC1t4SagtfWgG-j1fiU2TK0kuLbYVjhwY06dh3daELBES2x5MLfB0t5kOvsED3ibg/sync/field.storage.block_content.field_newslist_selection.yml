@@ -1,0 +1,32 @@
+uuid: 3e1e0878-00a9-46b4-8536-ac21bf455d77
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_layout_block_news_list
+  module:
+    - block_content
+    - options
+_core:
+  default_config_hash: RSYDWt3bu0mkw7JB9TAOtq62oRGCs3Pt8XJ1mO1_IRQ
+id: block_content.field_newslist_selection
+field_name: field_newslist_selection
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: automatic
+      label: 'Select by tag'
+    -
+      value: manual
+      label: 'Select manually'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

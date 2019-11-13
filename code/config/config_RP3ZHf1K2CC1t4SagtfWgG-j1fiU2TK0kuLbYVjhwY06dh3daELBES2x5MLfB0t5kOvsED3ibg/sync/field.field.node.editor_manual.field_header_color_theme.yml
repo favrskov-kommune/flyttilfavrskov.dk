@@ -1,0 +1,23 @@
+uuid: 58a3b7fa-f675-4e9f-aa0a-ea1a70665f19
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_color_theme
+    - node.type.editor_manual
+  module:
+    - options
+_core:
+  default_config_hash: CM6cINpaDab_mvkmUpacarwt9gRb9kB-TQUiRye7Jbk
+id: node.editor_manual.field_header_color_theme
+field_name: field_header_color_theme
+entity_type: node
+bundle: editor_manual
+label: 'Header color theme'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

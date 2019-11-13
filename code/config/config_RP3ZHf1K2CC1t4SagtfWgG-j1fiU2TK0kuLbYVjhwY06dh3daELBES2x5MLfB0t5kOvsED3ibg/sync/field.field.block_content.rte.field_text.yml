@@ -1,0 +1,26 @@
+uuid: 585df3ca-2dbb-48ce-94c6-1baff6f2ad7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.rte
+    - field.storage.block_content.field_text
+  enforced:
+    module:
+      - dds_layout_block_rte
+  module:
+    - text
+_core:
+  default_config_hash: 1lS2R1uRl8c3l36JtOTeAn3xoZYr8gZSbu5-v-geShU
+id: block_content.rte.field_text
+field_name: field_text
+entity_type: block_content
+bundle: rte
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

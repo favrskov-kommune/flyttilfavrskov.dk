@@ -1,0 +1,13 @@
+uuid: 1c40eadb-7c04-476c-b523-8aa45abd3593
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_layout_block_button
+_core:
+  default_config_hash: 07UdTVVGnJfv6ClzvA799Gd9dseZ2prlMgeBePsnrPo
+id: button
+label: Button
+revision: 0
+description: ''

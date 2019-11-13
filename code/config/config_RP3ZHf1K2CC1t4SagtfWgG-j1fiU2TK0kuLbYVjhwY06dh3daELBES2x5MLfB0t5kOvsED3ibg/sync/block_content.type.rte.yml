@@ -1,0 +1,13 @@
+uuid: 8946d86f-3702-40cf-bc34-f7ca5546d049
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_layout_block_rte
+_core:
+  default_config_hash: 31BsNUh9ZJsWpe-8n-e_nQVgyOKTM5ydnKjeVIGEEzw
+id: rte
+label: Text
+revision: 0
+description: 'A block containing an rich text editor.'

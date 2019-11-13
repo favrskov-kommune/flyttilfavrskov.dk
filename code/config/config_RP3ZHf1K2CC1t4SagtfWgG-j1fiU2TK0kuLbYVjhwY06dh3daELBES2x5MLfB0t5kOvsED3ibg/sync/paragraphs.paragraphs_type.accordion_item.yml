@@ -1,0 +1,14 @@
+uuid: a0831f14-660a-4300-9868-067b26b40a53
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_layout_block_accordion
+_core:
+  default_config_hash: BlWpGYWjMO-_RXhXJoPIjU9w9rsfcdKzvSODTuB3WTI
+id: accordion_item
+label: 'Accordion Item'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

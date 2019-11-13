@@ -1,0 +1,24 @@
+uuid: 6db6df26-0f5e-4635-b641-325a98ef6b2e
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_layout_block_appetizer
+  module:
+    - block_content
+    - dds_content
+_core:
+  default_config_hash: p3CcIGoay5KzQTf0yh1mgtlp0hRnvTQK0XWChmygxT0
+id: block_content.field_appetizer_cta
+field_name: field_appetizer_cta
+entity_type: block_content
+type: dds_link_with_target
+settings: {  }
+module: dds_content
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,34 @@
+uuid: 7976d7e4-f4e8-4ca2-ab8a-54f56031a569
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.news_list
+    - field.storage.block_content.field_newslist_category
+    - taxonomy.vocabulary.news_categories
+  enforced:
+    module:
+      - dds_layout_block_news_list
+_core:
+  default_config_hash: AN6vWJOH5cQoWp_8GaVSf1rItd3WLOBXzGbUtRfFLPs
+id: block_content.news_list.field_newslist_category
+field_name: field_newslist_category
+entity_type: block_content
+bundle: news_list
+label: 'News category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      news_categories: news_categories
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

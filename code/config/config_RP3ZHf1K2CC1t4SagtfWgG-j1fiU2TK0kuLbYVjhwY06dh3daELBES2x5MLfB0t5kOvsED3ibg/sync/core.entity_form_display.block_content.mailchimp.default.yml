@@ -1,0 +1,56 @@
+uuid: 56999f2b-64ec-41ae-8763-dabb7ed88e7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.mailchimp
+    - field.field.block_content.mailchimp.field_mailchimp_form
+    - field.field.block_content.mailchimp.field_mailchimp_headline
+    - field.field.block_content.mailchimp.field_mailchimp_text
+  enforced:
+    module:
+      - dds_layout_block_mailchimp
+  module:
+    - text
+_core:
+  default_config_hash: 7QUSIxFjH_n5Tl3uw-g0id_-alobsJVYnUCJfvNZEto
+id: block_content.mailchimp.default
+targetEntityType: block_content
+bundle: mailchimp
+mode: default
+content:
+  field_mailchimp_form:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_mailchimp_headline:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_mailchimp_text:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden:
+  info: true

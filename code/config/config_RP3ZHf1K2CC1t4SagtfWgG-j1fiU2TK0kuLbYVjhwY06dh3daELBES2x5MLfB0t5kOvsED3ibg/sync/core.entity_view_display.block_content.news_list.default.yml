@@ -1,0 +1,66 @@
+uuid: a60e7464-4482-43a4-9a5d-5fea6e9838f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.news_list
+    - field.field.block_content.news_list.field_newslist_category
+    - field.field.block_content.news_list.field_newslist_headline
+    - field.field.block_content.news_list.field_newslist_items
+    - field.field.block_content.news_list.field_newslist_limit
+    - field.field.block_content.news_list.field_newslist_selection
+  enforced:
+    module:
+      - dds_layout_block_news_list
+  module:
+    - options
+_core:
+  default_config_hash: k00fprKR6AcdXquUdppG3J5XBkC2P5zNIupTA9mQiUE
+id: block_content.news_list.default
+targetEntityType: block_content
+bundle: news_list
+mode: default
+content:
+  field_newslist_category:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_newslist_headline:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_newslist_items:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_newslist_limit:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_newslist_selection:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

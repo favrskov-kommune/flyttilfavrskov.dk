@@ -1,0 +1,13 @@
+uuid: 2bb16338-69d4-4b60-aded-3608dc2a8b85
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_layout_block_divider
+_core:
+  default_config_hash: 6At_3GQSMeVzuhp0A_wrNrScQnDxuUkAZmqzXxO4Ze0
+id: divider
+label: Divider
+revision: 0
+description: ''

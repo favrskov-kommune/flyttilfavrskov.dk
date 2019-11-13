@@ -1,0 +1,26 @@
+uuid: 507ee7b6-ba09-4e82-96ea-7d40125f1596
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.appetizer
+    - field.storage.block_content.field_appetizer_text
+  enforced:
+    module:
+      - dds_layout_block_appetizer
+  module:
+    - text
+_core:
+  default_config_hash: mFC58UtrZ_bQdud9WJ5ZIdMH6xB9fL0HRxHVbp4dLns
+id: block_content.appetizer.field_appetizer_text
+field_name: field_appetizer_text
+entity_type: block_content
+bundle: appetizer
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

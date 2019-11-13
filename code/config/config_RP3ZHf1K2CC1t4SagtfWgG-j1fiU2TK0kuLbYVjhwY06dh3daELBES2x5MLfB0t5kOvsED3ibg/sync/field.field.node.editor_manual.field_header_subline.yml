@@ -1,0 +1,21 @@
+uuid: aca62d91-8dc9-4a7e-bb9b-08de58a44de3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_subline
+    - node.type.editor_manual
+_core:
+  default_config_hash: UrkqL3LGsi2DEa-4iY5r_XzE8rBnlEj2YnjuHfW2mkk
+id: node.editor_manual.field_header_subline
+field_name: field_header_subline
+entity_type: node
+bundle: editor_manual
+label: Subline
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

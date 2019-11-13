@@ -1,0 +1,25 @@
+uuid: 37af9130-ec70-4d6b-a4d5-1073633f077c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hide_breadcrumb
+    - node.type.editor_manual
+_core:
+  default_config_hash: fKl62gyC3fIhPgr_y7Ei3bJtrqnwKOPrnRfIwNpse-U
+id: node.editor_manual.field_hide_breadcrumb
+field_name: field_hide_breadcrumb
+entity_type: node
+bundle: editor_manual
+label: 'Hide breadcrumb'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

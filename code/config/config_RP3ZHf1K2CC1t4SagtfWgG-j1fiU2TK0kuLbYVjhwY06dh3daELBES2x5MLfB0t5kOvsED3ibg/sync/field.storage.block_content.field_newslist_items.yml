@@ -1,0 +1,25 @@
+uuid: 87138b0c-44b6-4968-ac40-d86bc2654e4e
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_layout_block_news_list
+  module:
+    - block_content
+    - node
+_core:
+  default_config_hash: kZ9t5zLhhoSLRsPhwP1LW7BI6RFIrqmV0SIMTYYRfKw
+id: block_content.field_newslist_items
+field_name: field_newslist_items
+entity_type: block_content
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

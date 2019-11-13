@@ -1,0 +1,13 @@
+uuid: c8301847-4587-493d-a5ae-603f848e992e
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_layout_block_mailchimp
+_core:
+  default_config_hash: ibHM0BDd0Ra7NV6Aiw0ok0pZtQ9qRrb4PQ6DPSt67kw
+id: mailchimp
+label: 'Mailchimp signup'
+revision: 0
+description: ''

@@ -1,0 +1,24 @@
+uuid: 0345e979-0bd6-489c-a926-b742c76918e7
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_layout_block_rte
+  module:
+    - block_content
+    - text
+_core:
+  default_config_hash: Fde164gCRqwygIY-oaNyAGt-VdGDpvuQBMqSACFeZoQ
+id: block_content.field_text
+field_name: field_text
+entity_type: block_content
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

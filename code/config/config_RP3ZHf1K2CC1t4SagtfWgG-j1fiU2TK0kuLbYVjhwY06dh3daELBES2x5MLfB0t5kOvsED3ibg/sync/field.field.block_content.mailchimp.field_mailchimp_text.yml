@@ -1,0 +1,26 @@
+uuid: 71c88357-946f-4a2e-a2c7-05d153346515
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.mailchimp
+    - field.storage.block_content.field_mailchimp_text
+  enforced:
+    module:
+      - dds_layout_block_mailchimp
+  module:
+    - text
+_core:
+  default_config_hash: CbjENQDW3DODxcqzFIHc8rNAEtvtiVvhsNohapBptFQ
+id: block_content.mailchimp.field_mailchimp_text
+field_name: field_mailchimp_text
+entity_type: block_content
+bundle: mailchimp
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

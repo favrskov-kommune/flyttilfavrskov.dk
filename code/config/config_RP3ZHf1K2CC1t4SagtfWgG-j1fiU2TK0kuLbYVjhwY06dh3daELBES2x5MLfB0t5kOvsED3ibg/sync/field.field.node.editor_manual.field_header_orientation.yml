@@ -1,0 +1,25 @@
+uuid: 92aac769-e518-42d2-a1a6-2338c9d0d60d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_orientation
+    - node.type.editor_manual
+  module:
+    - options
+_core:
+  default_config_hash: UasbxKumrnm7VOXnU71ZZUtLQBGVTCsP2kTj_J-vRpA
+id: node.editor_manual.field_header_orientation
+field_name: field_header_orientation
+entity_type: node
+bundle: editor_manual
+label: 'Text orientation'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string
