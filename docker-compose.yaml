@@ -21,7 +21,6 @@ services:
       context: .
       args:
         current_env: $ENV
-        sites_folder: $SITES_FOLDER
     depends_on:
       - database
     environment:
