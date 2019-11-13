@@ -1,5 +1,4 @@
 FROM drupal:8.7.7-apache AS base
-
 RUN apt-get update && apt-get install -y \
         git \
         libicu-dev \
@@ -43,13 +42,26 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
 COPY code/ /src
 WORKDIR /src
 RUN chown -R www-data:www-data /src /var/www
-USER www-data
-COPY httpd.conf /etc/apache2/apache2.conf
 
-ENV APP_ENV=dev
-# Install libraries
-ARG current_env=dev
-ARG sites_folder
-RUN if [ "${current_env}" != "dev" ]; then composer install --optimize-autoloader; fi
-RUN if [ "${current_env}" != "dev" ]; then cd webroot/sites/${sites_folder}/themes/custom/dds_premium/build-assets/ && npm install && npm run build:dev; fi
+COPY entrypoint.sh .
 USER root
+RUN chmod +x entrypoint.sh
+
+USER www-data
+COPY apache2.conf /etc/apache2/apache2.conf
+ARG env
+ENV APP_ENV=$env
+
+FROM base AS http
+USER root
+ENTRYPOINT ["./entrypoint.sh", "http"]
+
+FROM base AS https
+ENV APP_ENV=$env
+# Install libraries
+RUN composer install --optimize-autoloader && \
+    cd webroot/sites/flyttilfavrskov.dk/themes/custom/dds_premium/build-assets/ &&\
+    npm install && \
+    npm run build:prod
+USER root
+ENTRYPOINT ["./entrypoint.sh", "https"]

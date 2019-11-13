@@ -16,12 +16,11 @@ services:
       - "3306:3306"
 
   app:
-    image: flyttilfavrskov_app:dev
+    image: flyttilfavrskov:dev
     build:
       context: .
       args:
         current_env: $ENV
-        sites_folder: $SITES_FOLDER
     depends_on:
       - database
     environment:
@@ -40,7 +39,7 @@ services:
       - database
     restart: on-failure:50
     volumes:
-      - ./code:/src:rw
+      - ./code/webroot/sites:/src/webroot/sites:rw
 
   elastic:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.3.2
