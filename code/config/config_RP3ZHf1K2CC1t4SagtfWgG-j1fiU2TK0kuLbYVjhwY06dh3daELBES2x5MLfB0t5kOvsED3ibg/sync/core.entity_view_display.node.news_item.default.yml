@@ -12,11 +12,9 @@ dependencies:
     - field.field.node.news_item.field_hide_breadcrumb
     - field.field.node.news_item.field_meta_tags
     - field.field.node.news_item.field_news_categories
-    - field.field.node.news_item.field_sections_news
     - field.field.node.news_item.field_teaser
     - node.type.news_item
   module:
-    - entity_reference_layout
     - metatag
     - user
 _core:
@@ -32,15 +30,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
-    region: content
-  field_sections_news:
-    weight: 110
-    label: hidden
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
-    type: entity_reference_layout
     region: content
   field_teaser:
     weight: 105

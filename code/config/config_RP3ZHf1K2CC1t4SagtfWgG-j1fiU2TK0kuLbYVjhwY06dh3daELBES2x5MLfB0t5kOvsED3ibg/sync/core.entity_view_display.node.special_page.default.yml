@@ -11,11 +11,11 @@ dependencies:
     - field.field.node.special_page.field_header_text_color
     - field.field.node.special_page.field_hide_breadcrumb
     - field.field.node.special_page.field_meta_tags
-    - field.field.node.special_page.field_sections_special_pages
+    - field.field.node.special_page.field_parent
+    - field.field.node.special_page.field_search_api_exclude
     - field.field.node.special_page.field_teaser
     - node.type.special_page
   module:
-    - entity_reference_layout
     - metatag
     - user
 _core:
@@ -32,15 +32,6 @@ content:
     third_party_settings: {  }
     type: metatag_empty_formatter
     region: content
-  field_sections_special_pages:
-    weight: 9
-    label: hidden
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
-    type: entity_reference_layout
-    region: content
   links:
     weight: 1
     region: content
@@ -55,4 +46,6 @@ hidden:
   field_header_text_color: true
   field_hide_breadcrumb: true
   field_parent: true
+  field_search_api_exclude: true
   field_teaser: true
+  search_api_excerpt: true

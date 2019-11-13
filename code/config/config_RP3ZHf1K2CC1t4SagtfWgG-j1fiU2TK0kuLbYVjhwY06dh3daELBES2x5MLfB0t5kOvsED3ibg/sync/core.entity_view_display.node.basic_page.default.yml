@@ -11,11 +11,11 @@ dependencies:
     - field.field.node.basic_page.field_header_text_color
     - field.field.node.basic_page.field_hide_breadcrumb
     - field.field.node.basic_page.field_meta_tags
-    - field.field.node.basic_page.field_sections
+    - field.field.node.basic_page.field_parent
+    - field.field.node.basic_page.field_search_api_exclude
     - field.field.node.basic_page.field_teaser
     - node.type.basic_page
   module:
-    - entity_reference_layout
     - metatag
     - user
 _core:
@@ -31,15 +31,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
-    region: content
-  field_sections:
-    weight: 110
-    label: hidden
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
-    type: entity_reference_layout
     region: content
   field_teaser:
     weight: 105
@@ -61,4 +52,6 @@ hidden:
   field_header_text_color: true
   field_hide_breadcrumb: true
   field_parent: true
+  field_search_api_exclude: true
   field_teaser: true
+  search_api_excerpt: true

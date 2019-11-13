@@ -13,7 +13,6 @@ dependencies:
     - field.field.node.news_item.field_hide_breadcrumb
     - field.field.node.news_item.field_meta_tags
     - field.field.node.news_item.field_news_categories
-    - field.field.node.news_item.field_sections_news
     - field.field.node.news_item.field_teaser
     - node.type.news_item
   module:
@@ -40,6 +39,5 @@ hidden:
   field_hide_breadcrumb: true
   field_meta_tags: true
   field_news_categories: true
-  field_sections_news: true
   field_teaser: true
   search_api_excerpt: true

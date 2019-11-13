@@ -11,12 +11,13 @@ dependencies:
     - field.field.node.basic_page.field_header_text_color
     - field.field.node.basic_page.field_hide_breadcrumb
     - field.field.node.basic_page.field_meta_tags
-    - field.field.node.basic_page.field_sections
+    - field.field.node.basic_page.field_parent
+    - field.field.node.basic_page.field_search_api_exclude
     - field.field.node.basic_page.field_teaser
     - node.type.basic_page
   module:
     - dds_content
-    - entity_reference_layout
+    - dds_content_hierarchy
     - field_group
     - media_library
     - metatag
@@ -132,24 +133,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_sections:
-    weight: 27
-    settings:
-      form_mode: default
-      override_labels: false
-      label_singular: ''
-      label_plural: ''
-      collapsible: false
-      collapsed: false
-      allow_new: true
-      allow_existing: false
-      match_operator: CONTAINS
-      allow_duplicate: false
-      full_screen_editing: false
-      always_show_options_form: false
-    third_party_settings: {  }
-    type: entity_reference_layout_widget
-    region: content
   path:
     type: path
     weight: 7
@@ -217,4 +200,5 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_search_api_exclude: true
   field_teaser: true
