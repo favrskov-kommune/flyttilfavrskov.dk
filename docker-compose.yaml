@@ -16,7 +16,7 @@ services:
       - "3306:3306"
 
   app:
-    image: flyttilfavrskov_app:dev
+    image: flyttilfavrskov:dev
     build:
       context: .
       args:
