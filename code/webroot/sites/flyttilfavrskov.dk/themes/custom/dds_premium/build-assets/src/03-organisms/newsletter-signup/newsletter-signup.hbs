@@ -1,0 +1,19 @@
+<div class="newsletter-signup">
+    <h2 class="newsletter-signup__title">{{ title }}</h2>
+    <div class="newsletter-signup__text">{{{ text }}}</div>
+    <form action="" method="post">
+        <div>
+            <div class="form-item">
+              {{> @label text="E-mail address" }}
+              {{ render '@input' }}
+            </div>
+            <div class="form-item">
+              {{> @label text="First name" }}
+              {{ render '@input' }}
+            </div>
+        </div>
+        <div class="form-actions">
+            {{ render "@cta" cta }}
+        </div>
+    </form>
+</div>

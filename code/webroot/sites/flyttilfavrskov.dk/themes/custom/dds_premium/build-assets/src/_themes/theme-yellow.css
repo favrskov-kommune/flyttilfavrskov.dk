@@ -8,6 +8,7 @@
     --theme-accordion-border-color: #f0cf61;
     --theme-accordion-background-color: #fff;
     --theme-accordion-text-color: #232323;
-    --theme-input-border: #232323;
+    --theme-input-border: #fff;
     --theme-input-color-marked: #232323;
+    --theme-background-svg-background-color: rgba(255, 255, 255, 0.5);
 }
