@@ -11,10 +11,14 @@
  */
 #}
 
+{% set allow_spacing = settings.column_spacing and settings.column_spacing != 'none' %}
+
 {% set classes = [
   'layout',
   'layout--onecol',
   'section',
+  settings.color_theme != 'none' ? 'theme theme-' ~ settings.color_theme,
+  not allow_spacing ? 'section--no-spacing'
 ] %}
 
 <section {{ attributes.addClass(classes) }}>

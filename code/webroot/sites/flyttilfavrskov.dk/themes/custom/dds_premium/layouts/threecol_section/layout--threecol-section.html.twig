@@ -11,8 +11,12 @@
  */
 #}
 
+{% set allow_spacing = settings.column_spacing and settings.column_spacing != 'none' %}
+
 {% set classes = [
   'section',
+  settings.color_theme != 'none' ? 'theme theme-' ~ settings.color_theme,
+  not allow_spacing ? 'section--no-spacing'
 ] %}
 
 
