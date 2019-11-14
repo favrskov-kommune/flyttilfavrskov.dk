@@ -17,3 +17,13 @@ regions:
 
 interface translation project: dds_premium
 interface translation server pattern: dds_premium/translations/%language.po
+
+libraries-override:
+  layout_builder/twocol_section:
+    css:
+      theme:
+        layouts/twocol_section/twocol_section.css: layouts/twocol_section/twocol_section.css
+  layout_builder/threecol_section:
+    css:
+      theme:
+        layouts/threecol_section/threecol_section.css: layouts/threecol_section/threecol_section.css

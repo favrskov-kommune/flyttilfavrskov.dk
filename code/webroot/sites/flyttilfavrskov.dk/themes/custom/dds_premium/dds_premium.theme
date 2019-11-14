@@ -389,15 +389,14 @@ function dds_premium_preprocess_breadcrumb(array &$variables) {
  * @param array $variables
  *   Template variables.
  */
-function dds_premium_preprocess_paragraph_widget__button(array &$variables) {
-  /** @var Drupal\paragraphs\Entity\Paragraph $paragraph */
-  $paragraph = $variables['paragraph'];
-  if ($paragraph->hasField('field_button') && !$paragraph->get('field_button')->isEmpty()) {
-    $cta = $paragraph->get('field_button')->getValue();
+function dds_premium_preprocess_layout_block__button(array &$variables) {
+  $entity = $variables['entity'];
+  if ($entity->hasField('field_button') && !$entity->get('field_button')->isEmpty()) {
+    $cta = $entity->get('field_button')->getValue();
     /** @var Drupal\Core\Template\Attribute $attribute */
     $attribute = new Attribute();
-    if ($paragraph->hasField('field_button_alignment') && !$paragraph->get('field_button_alignment')->isEmpty()) {
-      $attribute->addClass('button--' . $paragraph->get('field_button_alignment')->value);
+    if ($entity->hasField('field_button_alignment') && !$entity->get('field_button_alignment')->isEmpty()) {
+      $attribute->addClass('button--' . $entity->get('field_button_alignment')->value);
     }
     $variables['cta'] = _modify_cta(reset($cta), $attribute);
   }
@@ -409,28 +408,20 @@ function dds_premium_preprocess_paragraph_widget__button(array &$variables) {
  * @param array $variables
  *   Template variables.
  */
-function dds_premium_preprocess_paragraph_widget__image(array &$variables) {
-  $layout_id = $variables['fields']['dds_layout']['layout_id'] ?? FALSE;
-  $parent_bundle = $layout_id ? $layout_id : $variables['parent_bundle'];
+function dds_premium_preprocess_layout_block__image(array &$variables) {
+  $layout_id = $variables['layout']['layout_id'];
+  $layout_settings = $variables['layout']['settings'];
 
-  if (in_array($parent_bundle, [
-    'dds_layout_fullwidth',
-    'full_width_column',
-  ])) {
+  if ($layout_id === 'layout_onecol' && $layout_settings['column_width'] === 'fullwidth') {
     $variables['image_style'] = 'full_width_16_9';
   }
-  elseif (in_array($parent_bundle, ['dds_layout_onecolumn', 'one_column'])) {
+  elseif ($layout_id === 'layout_onecol') {
     $variables['image_style'] = '1_column';
   }
-  elseif (in_array($parent_bundle, [
-    'dds_layout_twocolumn_5050',
-    'dds_layout_twocolumn_3367',
-    'dds_layout_twocolumn_6733',
-    'two_column',
-  ])) {
+  elseif ($layout_id === 'layout_twocol_section') {
     $variables['image_style'] = '2_column';
   }
-  elseif (in_array($parent_bundle, ['dds_layout_threecolumn', 'three_column'])) {
+  elseif ($layout_id === 'layout_threecol_section') {
     $variables['image_style'] = '3_column';
   }
 }
@@ -441,8 +432,8 @@ function dds_premium_preprocess_paragraph_widget__image(array &$variables) {
  * @param array $variables
  *   Template variables.
  */
-function dds_premium_preprocess_paragraph_widget__slideshow(array &$variables) {
-  $items = $variables['fields']['field_slideshow_media'];
+function dds_premium_preprocess_layout_block__slideshow(array &$variables) {
+  $items = $variables['fields']['field_slideshow_images'];
   if (!empty($items)) {
     foreach ($items as $item) {
       $variables['items'][] = ['image' => $item['field_media_image']];
@@ -456,14 +447,16 @@ function dds_premium_preprocess_paragraph_widget__slideshow(array &$variables) {
  * @param array $variables
  *   Template variables.
  */
-function dds_premium_preprocess_paragraph_widget__accordion(array &$variables) {
-  $items = $variables['fields']['field_accordion_items'];
+function dds_premium_preprocess_layout_block__accordion(array &$variables) {
+  $entity = $variables['entity'];
+  $items = $entity->get('field_accordion_items');
   if (!empty($items)) {
     foreach ($items as $item) {
+      $item = $item->entity;
       $variables['items'][] = [
-        'id' => $item['entity_id'],
-        'headline' => $item['field_accordion_item_headline'],
-        'text' => $item['field_accordion_item_text'],
+        'id' => $item->id(),
+        'headline' => $item->get('field_accordion_item_headline')->value,
+        'text' => $item->get('field_accordion_item_text')->value,
       ];
     }
   }
@@ -475,10 +468,11 @@ function dds_premium_preprocess_paragraph_widget__accordion(array &$variables) {
  * @param array $variables
  *   Template variables.
  */
-function dds_premium_preprocess_paragraph_widget__hero(array &$variables) {
+function dds_premium_preprocess_layout_block__hero(array &$variables) {
   /** @var Drupal\paragraphs\Entity\Paragraph $paragraph */
-  $paragraph = $variables['paragraph'];
-  $variables['hero'] = _create_hero($paragraph, [
+  $entity = $variables['entity'];
+
+  $variables['hero'] = _create_hero($entity, [
     'title' => 'field_hero_headline',
     'background_image' => 'field_hero_background',
     'text_color' => 'field_hero_color',
@@ -494,7 +488,7 @@ function dds_premium_preprocess_paragraph_widget__hero(array &$variables) {
  * @param array $variables
  *   Template variables.
  */
-function dds_premium_preprocess_paragraph_widget__video(array &$variables) {
+function dds_premium_preprocess_layout_block___video(array &$variables) {
   $video_oembed = ['url' => 'null', 'oEmbed' => 'null'];
   if (Drupal::hasService('dds_media.media_helper')) {
     /** @var Drupal\dds_media\MediaHelper $service */
@@ -505,27 +499,19 @@ function dds_premium_preprocess_paragraph_widget__video(array &$variables) {
   }
   $variables['attributes']['data-video'] = json_encode($video_oembed);
 
-  $layout_id = $variables['fields']['dds_layout']['layout_id'] ?? FALSE;
-  $parent_bundle = $layout_id ? $layout_id : $variables['parent_bundle'];
+  $layout_id = $variables['layout']['layout_id'];
+  $layout_settings = $variables['layout']['settings'];
 
-  if (in_array($parent_bundle, [
-    'dds_layout_fullwidth',
-    'full_width_column',
-  ])) {
+  if ($layout_id === 'layout_onecol' && $layout_settings['column_width'] === 'fullwidth') {
     $variables['image_style'] = 'wide';
   }
-  elseif (in_array($parent_bundle, ['dds_layout_onecolumn', 'one_column'])) {
+  elseif ($layout_id === 'layout_onecol') {
     $variables['image_style'] = '1_column';
   }
-  elseif (in_array($parent_bundle, [
-    'dds_layout_twocolumn_5050',
-    'dds_layout_twocolumn_3367',
-    'dds_layout_twocolumn_6733',
-    'two_column',
-  ])) {
+  elseif ($layout_id === 'layout_twocol_section') {
     $variables['image_style'] = '2_column';
   }
-  elseif (in_array($parent_bundle, ['dds_layout_threecolumn', 'three_column'])) {
+  elseif ($layout_id === 'layout_threecol_section') {
     $variables['image_style'] = '3_column';
   }
 }
@@ -537,61 +523,74 @@ function dds_premium_preprocess_paragraph_widget__video(array &$variables) {
  * @param array $variables
  *   Template variables.
  */
-function dds_premium_preprocess_paragraph_widget__appetizer(array &$variables) {
+function dds_premium_preprocess_layout_block__appetizer(array &$variables) {
   $variables['image_figure_attributes'] = new Attribute();
-  $background_image_uri = '';
 
   /** @var Drupal\paragraphs\Entity\Paragraph $paragraph */
-  $paragraph = $variables['paragraph'];
+  $paragraph = $variables['entity'];
   if ($paragraph->hasField('field_appetizer_cta') && !$paragraph->get('field_appetizer_cta')->isEmpty()) {
     $cta = $paragraph->get('field_appetizer_cta')->getValue();
     /** @var Drupal\Core\Template\Attribute $attribute */
     $variables['cta'] = _modify_cta(reset($cta));
   }
 
-  // Load background uri.
-  if ($paragraph->hasField('field_appetizer_image') && !$paragraph->get('field_appetizer_image')->isEmpty()) {
-    /** @var Drupal\media\Entity\Media $media */
-    $media = $paragraph->get('field_appetizer_image')->entity;
-    if (!empty($media) && $media->hasField('field_media_image')) {
-      /** @var Drupal\file\Entity\File $file */
-      if (!empty($file = $media->get('field_media_image')->entity)) {
-        $background_image_uri = $file->getFileUri() ?? '';
-      }
-    }
+  $layout_id = $variables['layout']['layout_id'];
+  $layout_settings = $variables['layout']['settings'];
+
+  if($layout_id === 'layout_twocol_section' || $layout_id === 'layout_threecol_section') {
+    $variables['is_small_version'] = TRUE;
   }
 
-  $layout_id = $variables['fields']['dds_layout']['layout_id'] ?? FALSE;
-  $parent_bundle = $layout_id ? $layout_id : $variables['parent_bundle'];
-
-  $variables['is_small_version'] = in_array($parent_bundle, [
-    'dds_layout_twocolumn_5050',
-    'dds_layout_twocolumn_3367',
-    'dds_layout_twocolumn_6733',
-    'dds_layout_threecolumn',
-    'two_column',
-    'three_column',
-  ]);
-
-  if (in_array($parent_bundle, [
-    'dds_layout_fullwidth',
-    'full_width_column',
-  ])) {
+  if ($layout_id === 'layout_onecol' && isset($layout_settings['column_width']) && $layout_settings['column_width'] === 'fullwidth') {
     $variables['image_style'] = 'appetiser_wide';
   }
-  elseif (in_array($parent_bundle, ['dds_layout_onecolumn', 'one_column'])) {
+  elseif ($layout_id === 'layout_onecol') {
     $variables['image_style'] = 'appetiser';
   }
-  elseif (in_array($parent_bundle, [
-    'dds_layout_twocolumn_5050',
-    'dds_layout_twocolumn_3367',
-    'dds_layout_twocolumn_6733',
-    'two_column',
-  ])) {
+  elseif ($layout_id === 'layout_twocol_section') {
     $variables['image_style'] = '2_column';
   }
-  elseif (in_array($parent_bundle, ['dds_layout_threecolumn', 'three_column'])) {
+  elseif ($layout_id === 'layout_threecol_section') {
     $variables['image_style'] = '3_column';
+  }
+  else {
+    $variables['image_style'] = 'appetiser';
+  }
+}
+
+function dds_premium_preprocess_layout_block__usp_item(&$variables) {
+  /** @var \Drupal\paragraphs\Entity\Paragraph $item */
+  $item = $variables['entity'];
+
+  if ($item->hasField('field_headline') && !$item->field_headline->isEmpty()) {
+    $variables['title'] = ['#markup' => $item->field_headline->value];
+  }
+
+  if ($item->hasField('field_description') && !$item->field_description->isEmpty()) {
+    $variables['description'] = ['#markup' => $item->field_description->value];
+  }
+
+  if ($item->hasField('field_icon') && !$item->field_icon->isEmpty()) {
+    $file = $item->field_icon->entity;
+
+    if ($file) {
+      $image = \Drupal::service('image.factory')->get($file->getFileUri());
+    }
+
+    if (!empty($image)) {
+      // Check if image is SVG or similar with no scale defined.
+      if ($file->getMimeType() != 'image/svg+xml') {
+        $variables['image'] = [
+            '#theme' => 'image_style',
+            '#height' => 70,
+            '#style_name' => 'thumbnail',
+            '#uri' => $file->getFileUri(),
+        ];
+      }
+      else {
+        $variables['image'] = $variables['content']['field_image'];
+      }
+    }
   }
 }
 
