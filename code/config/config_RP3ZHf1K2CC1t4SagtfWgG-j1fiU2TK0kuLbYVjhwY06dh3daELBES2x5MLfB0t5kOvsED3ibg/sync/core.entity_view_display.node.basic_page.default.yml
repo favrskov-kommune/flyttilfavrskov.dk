@@ -29,6 +29,9 @@ third_party_settings:
       -
         layout_id: layout_onecol
         layout_settings:
+          color_theme: none
+          column_spacing: normal
+          column_width: normal
           label: ''
         components:
           e7ff1168-f33a-4c6a-b2d2-524af1ea4fb9:
