@@ -1,5 +1,5 @@
 uuid: 69516486-b4b8-461d-a0c8-2ef1b7444e16
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -15,7 +15,7 @@ id: block_content.quote.field_quote_image
 field_name: field_quote_image
 entity_type: block_content
 bundle: quote
-label: Billede
+label: Image
 description: ''
 required: false
 translatable: false

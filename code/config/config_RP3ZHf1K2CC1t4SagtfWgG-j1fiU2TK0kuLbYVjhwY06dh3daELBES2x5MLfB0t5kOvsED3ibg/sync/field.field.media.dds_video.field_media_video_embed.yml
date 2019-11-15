@@ -1,5 +1,5 @@
 uuid: fa285513-8be3-4274-812a-aa60f7a899ee
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -11,7 +11,7 @@ id: media.dds_video.field_media_video_embed
 field_name: field_media_video_embed
 entity_type: media
 bundle: dds_video
-label: 'Video URL'
+label: 'Remote video URL'
 description: ''
 required: true
 translatable: true

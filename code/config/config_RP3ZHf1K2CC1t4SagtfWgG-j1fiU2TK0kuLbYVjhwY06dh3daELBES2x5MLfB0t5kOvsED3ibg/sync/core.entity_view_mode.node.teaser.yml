@@ -1,5 +1,5 @@
 uuid: d5ab72e8-6c0e-48f2-a139-956ae4ef8cf0
-langcode: da
+langcode: en
 status: true
 dependencies:
   module:
@@ -7,6 +7,6 @@ dependencies:
 _core:
   default_config_hash: Mz9qWr1kUYK0mjRAGDsr5XS6PvtZ24en_7ndt-pyWe4
 id: node.teaser
-label: Indledning
+label: Teaser
 targetEntityType: node
 cache: true

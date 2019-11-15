@@ -1,5 +1,5 @@
 uuid: 3209c5a5-40dc-4645-9d02-efc27639ceb2
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -11,7 +11,7 @@ id: node.basic_page.field_header_subline
 field_name: field_header_subline
 entity_type: node
 bundle: basic_page
-label: Tekst
+label: Subline
 description: ''
 required: false
 translatable: false

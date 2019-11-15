@@ -1,5 +1,5 @@
 uuid: 7d905c15-b32b-478e-8b6a-f7685a24eb33
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -17,7 +17,7 @@ id: block_content.accordion.field_accordion_items
 field_name: field_accordion_items
 entity_type: block_content
 bundle: accordion
-label: Overskrifter
+label: Items
 description: ''
 required: false
 translatable: false

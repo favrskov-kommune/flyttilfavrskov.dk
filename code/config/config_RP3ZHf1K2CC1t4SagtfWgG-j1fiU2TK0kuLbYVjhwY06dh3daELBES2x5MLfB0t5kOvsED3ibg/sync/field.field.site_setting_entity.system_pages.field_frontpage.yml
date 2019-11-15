@@ -1,5 +1,5 @@
 uuid: a5b8258b-0180-4110-b795-57cf98c9ed34
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -12,7 +12,7 @@ id: site_setting_entity.system_pages.field_frontpage
 field_name: field_frontpage
 entity_type: site_setting_entity
 bundle: system_pages
-label: Forside
+label: Frontpage
 description: ''
 required: false
 translatable: false

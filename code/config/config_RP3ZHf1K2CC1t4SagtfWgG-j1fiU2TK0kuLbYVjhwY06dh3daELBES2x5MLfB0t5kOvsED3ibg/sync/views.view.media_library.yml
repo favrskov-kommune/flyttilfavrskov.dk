@@ -1,5 +1,5 @@
 uuid: 9e671e16-f20c-4c0f-b122-a210b5e780cc
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -16,7 +16,7 @@ dependencies:
 _core:
   default_config_hash: 5sfZZetHlReG1VQx9CbyIBhKFWYSZEU94dOy0yy0deE
 id: media_library
-label: Mediebibliotek
+label: 'Media library'
 module: views
 description: ''
 tag: ''
@@ -47,13 +47,13 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: 'Tilføj filtre'
+          submit_button: 'Apply filters'
           reset_button: false
-          reset_button_label: Gendan
-          exposed_sorts_label: 'Sortér efter'
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
           expose_sort_order: false
-          sort_asc_label: Stigende
-          sort_desc_label: Faldende
+          sort_asc_label: Asc
+          sort_desc_label: Desc
       pager:
         type: mini
         options:
@@ -63,12 +63,12 @@ display:
           total_pages: null
           expose:
             items_per_page: false
-            items_per_page_label: 'Antal elementer'
+            items_per_page_label: 'Items per page'
             items_per_page_options: '6, 12, 24, 48'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- Alle -'
+            items_per_page_options_all_label: '- All -'
             offset: false
-            offset_label: Forskydning
+            offset_label: Offset
           tags:
             previous: ‹‹
             next: ››
@@ -134,7 +134,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          action_title: Handling
+          action_title: Action
           include_exclude: exclude
           selected_actions: {  }
           entity_type: media
@@ -204,7 +204,7 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: Publiceringsstatus
+            label: 'Publishing status'
             description: null
             use_operator: false
             operator: status_op
@@ -218,7 +218,7 @@ display:
             operator_list: {  }
           is_grouped: true
           group_info:
-            label: Udgivet
+            label: Published
             description: ''
             identifier: status
             optional: true
@@ -229,11 +229,11 @@ display:
             default_group_multiple: {  }
             group_items:
               1:
-                title: Udgivet
+                title: Published
                 operator: '='
                 value: '1'
               2:
-                title: 'Ikke udgivet'
+                title: Unpublished
                 operator: '='
                 value: '0'
           plugin_id: boolean
@@ -252,7 +252,7 @@ display:
           exposed: true
           expose:
             operator_id: name_op
-            label: Navn
+            label: Name
             description: ''
             use_operator: false
             operator: name_op
@@ -294,7 +294,7 @@ display:
           exposed: true
           expose:
             operator_id: bundle_op
-            label: 'Medie type'
+            label: 'Media type'
             description: ''
             use_operator: false
             operator: bundle_op
@@ -311,7 +311,7 @@ display:
             operator_list: {  }
           is_grouped: false
           group_info:
-            label: 'Medie type'
+            label: 'Media type'
             description: null
             identifier: bundle
             optional: true
@@ -346,7 +346,7 @@ display:
             description: ''
             required: false
             reduce: false
-            label: Sprog
+            label: Language
             operator_limit_selection: false
             operator: langcode_op
             identifier: langcode
@@ -420,7 +420,7 @@ display:
           order: DESC
           exposed: true
           expose:
-            label: 'Nyeste først'
+            label: 'Newest first'
           granularity: second
           entity_type: media
           entity_field: created
@@ -435,7 +435,7 @@ display:
           order: ASC
           exposed: true
           expose:
-            label: 'Navn (A-Z)'
+            label: 'Name (A-Z)'
           entity_type: media
           entity_field: name
           plugin_id: standard
@@ -449,7 +449,7 @@ display:
           order: DESC
           exposed: true
           expose:
-            label: 'Navn (Z-A)'
+            label: 'Name (Z-A)'
           entity_type: media
           entity_field: name
           plugin_id: standard
@@ -466,7 +466,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: 'Ingen tilgængelige media'
+          content: 'No media available.'
           plugin_id: text_custom
       relationships: {  }
       display_extenders: {  }
@@ -492,7 +492,7 @@ display:
   page:
     display_plugin: page
     id: page
-    display_title: Side
+    display_title: Page
     position: 1
     display_options:
       display_extenders: {  }
@@ -546,7 +546,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          action_title: Handling
+          action_title: Action
           include_exclude: exclude
           selected_actions: {  }
           entity_type: media
@@ -664,7 +664,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          text: Redigér
+          text: Edit
           output_url_as_text: false
           absolute: false
           entity_type: media
@@ -717,7 +717,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          text: Slet
+          text: Delete
           output_url_as_text: false
           absolute: false
           entity_type: media
@@ -970,7 +970,7 @@ display:
           exposed: true
           expose:
             operator_id: name_op
-            label: Navn
+            label: Name
             description: ''
             use_operator: false
             operator: name_op
@@ -1055,7 +1055,7 @@ display:
           exception:
             value: all
             title_enable: false
-            title: Alle
+            title: All
           title_enable: false
           title: ''
           default_argument_type: fixed
@@ -1091,7 +1091,7 @@ display:
           table: views
           field: display_link
           display_id: widget
-          label: Gitter
+          label: Grid
           plugin_id: display_link
           empty: true
         display_link_table:
@@ -1099,7 +1099,7 @@ display:
           table: views
           field: display_link
           display_id: widget_table
-          label: Tabel
+          label: Table
           plugin_id: display_link
           empty: true
       css_class: 'media-library-view js-media-library-view media-library-view--widget'
@@ -1123,7 +1123,7 @@ display:
   widget_table:
     display_plugin: page
     id: widget_table
-    display_title: 'Widget (tabel)'
+    display_title: 'Widget (table)'
     position: 3
     display_options:
       display_extenders: {  }
@@ -1171,7 +1171,7 @@ display:
             image_link: ''
         name:
           id: name
-          label: Navn
+          label: Name
           table: media_field_data
           field: name
           relationship: none
@@ -1183,7 +1183,7 @@ display:
             link_to_entity: false
         uid:
           id: uid
-          label: Forfatter
+          label: Author
           table: media_field_revision
           field: uid
           relationship: none
@@ -1195,7 +1195,7 @@ display:
             link: true
         changed:
           id: changed
-          label: Opdateret
+          label: Updated
           table: media_field_data
           field: changed
           relationship: none
@@ -1265,7 +1265,7 @@ display:
           exposed: true
           expose:
             operator_id: name_op
-            label: Navn
+            label: Name
             description: ''
             use_operator: false
             operator: name_op
@@ -1350,7 +1350,7 @@ display:
           exception:
             value: all
             title_enable: false
-            title: Alle
+            title: All
           title_enable: false
           title: ''
           default_argument_type: fixed
@@ -1386,7 +1386,7 @@ display:
           table: views
           field: display_link
           display_id: widget
-          label: Gitter
+          label: Grid
           plugin_id: display_link
           empty: true
         display_link_table:
@@ -1394,7 +1394,7 @@ display:
           table: views
           field: display_link
           display_id: widget_table
-          label: Tabel
+          label: Table
           plugin_id: display_link
           empty: true
       css_class: 'media-library-view js-media-library-view media-library-view--widget'

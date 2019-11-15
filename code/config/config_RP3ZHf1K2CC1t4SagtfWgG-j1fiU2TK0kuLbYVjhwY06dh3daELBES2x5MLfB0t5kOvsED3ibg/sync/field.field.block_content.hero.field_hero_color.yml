@@ -1,5 +1,5 @@
 uuid: eabe3d3d-8118-4ec0-9762-d48913ac2ee3
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -16,7 +16,7 @@ id: block_content.hero.field_hero_color
 field_name: field_hero_color
 entity_type: block_content
 bundle: hero
-label: Tekstfarve
+label: 'Text color'
 description: ''
 required: true
 translatable: false

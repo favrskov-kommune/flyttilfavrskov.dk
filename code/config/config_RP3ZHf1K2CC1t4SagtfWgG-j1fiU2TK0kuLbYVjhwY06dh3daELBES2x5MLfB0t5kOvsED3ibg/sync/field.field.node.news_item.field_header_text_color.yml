@@ -1,5 +1,5 @@
 uuid: c21b0c78-169a-4d00-a41e-b18fe7372b73
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ id: node.news_item.field_header_text_color
 field_name: field_header_text_color
 entity_type: node
 bundle: news_item
-label: Tekstfarve
+label: 'Text color'
 description: ''
 required: true
 translatable: true

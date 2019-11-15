@@ -1,5 +1,5 @@
 uuid: a8928901-ffd6-479c-9268-c9cddd6f649a
-langcode: da
+langcode: en
 status: true
 dependencies:
   enforced:
@@ -10,6 +10,6 @@ dependencies:
 _core:
   default_config_hash: HPPCCIeDr8xfuZGTOafQ__OOyn-XehROGvkYRmzARnI
 id: media.preview
-label: Gennemse
+label: Preview
 targetEntityType: media
 cache: true

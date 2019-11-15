@@ -1,11 +1,11 @@
 uuid: 09994450-bb18-4c5a-9745-9cc6a694385b
-langcode: da
+langcode: en
 status: true
 dependencies: {  }
 _core:
   default_config_hash: qUgYjFyoRJM_2wudOJvVzw4YsQwhTOQDowKDSVWKJv4
 id: anonymous
-label: 'Anonym bruger'
+label: 'Anonymous user'
 weight: 0
 is_admin: false
 permissions:

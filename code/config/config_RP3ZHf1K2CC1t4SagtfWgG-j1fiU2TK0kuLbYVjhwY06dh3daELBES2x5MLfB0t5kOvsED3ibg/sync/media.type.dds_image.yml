@@ -1,5 +1,5 @@
 uuid: 0880fc0f-3aea-438d-875d-8681bcd66ab3
-langcode: da
+langcode: en
 status: true
 dependencies:
   enforced:
@@ -8,7 +8,7 @@ dependencies:
 _core:
   default_config_hash: H9WAQxE9AIY-UonQ2XD0ISotb1JUvsmlNMFCWD2_qfk
 id: dds_image
-label: Billede
+label: Image
 description: ''
 source: image
 queue_thumbnail_downloads: false

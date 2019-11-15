@@ -1,5 +1,5 @@
 uuid: 5d440f50-9ce1-4005-af10-dcac5ad293e5
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -11,7 +11,7 @@ id: site_setting_entity.contact_info.field_zip
 field_name: field_zip
 entity_type: site_setting_entity
 bundle: contact_info
-label: Postnr
+label: Zipcode
 description: ''
 required: false
 translatable: true

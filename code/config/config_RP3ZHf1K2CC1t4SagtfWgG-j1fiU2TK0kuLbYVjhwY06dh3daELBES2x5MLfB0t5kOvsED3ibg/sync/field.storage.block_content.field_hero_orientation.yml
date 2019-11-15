@@ -1,5 +1,5 @@
 uuid: 6b0f43c9-057b-4c2d-88c8-d5f918de6d27
-langcode: da
+langcode: en
 status: true
 dependencies:
   enforced:
@@ -18,13 +18,13 @@ settings:
   allowed_values:
     -
       value: left
-      label: Venstrejusteret
+      label: 'Align left'
     -
       value: center
-      label: Centreret
+      label: 'Align center'
     -
       value: right
-      label: Højrejusteret
+      label: 'Align right'
   allowed_values_function: ''
 module: options
 locked: false

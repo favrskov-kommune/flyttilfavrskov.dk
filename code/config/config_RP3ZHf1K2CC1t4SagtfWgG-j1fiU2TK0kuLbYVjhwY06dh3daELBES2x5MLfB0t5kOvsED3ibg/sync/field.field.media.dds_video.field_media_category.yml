@@ -1,5 +1,5 @@
 uuid: b8020527-e451-4c65-91d4-8bf2d4d23762
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -12,7 +12,7 @@ id: media.dds_video.field_media_category
 field_name: field_media_category
 entity_type: media
 bundle: dds_video
-label: 'Medie kategori'
+label: 'Media category'
 description: ''
 required: false
 translatable: true

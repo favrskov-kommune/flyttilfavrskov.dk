@@ -1,5 +1,5 @@
 uuid: 648115c6-f65b-425b-a901-18c801ae8b7e
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ id: node.news_item.field_header_background
 field_name: field_header_background
 entity_type: node
 bundle: news_item
-label: 'Header baggrund'
+label: 'Header background'
 description: ''
 required: false
 translatable: false

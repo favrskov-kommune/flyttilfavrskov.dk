@@ -1,5 +1,5 @@
 uuid: 97250867-1493-4722-b9d5-28bc16a1c296
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -16,7 +16,7 @@ id: block_content.hero.field_hero_background
 field_name: field_hero_background
 entity_type: block_content
 bundle: hero
-label: Baggrund
+label: Background
 description: ''
 required: false
 translatable: false

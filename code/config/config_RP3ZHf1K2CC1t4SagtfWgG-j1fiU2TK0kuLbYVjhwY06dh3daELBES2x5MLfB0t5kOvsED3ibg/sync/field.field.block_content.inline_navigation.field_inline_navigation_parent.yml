@@ -1,5 +1,5 @@
 uuid: d3aa063a-2c9a-4176-b0dc-4c7f963f0485
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -16,7 +16,7 @@ id: block_content.inline_navigation.field_inline_navigation_parent
 field_name: field_inline_navigation_parent
 entity_type: block_content
 bundle: inline_navigation
-label: 'Overordnet side'
+label: 'Parent page'
 description: ''
 required: false
 translatable: false

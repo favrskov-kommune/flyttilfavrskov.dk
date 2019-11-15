@@ -1,5 +1,5 @@
 uuid: 758c4bef-fa72-4208-915f-fc68d2cfb729
-langcode: da
+langcode: en
 status: true
 dependencies:
   enforced:
@@ -8,7 +8,7 @@ dependencies:
 _core:
   default_config_hash: tRaTwJdUWIpphlQC0MbehKJajwqkK44KGMpNXnKu1ps
 id: dds_video
-label: 'Indlejret video'
+label: 'Video Embed'
 description: ''
 source: 'oembed:video'
 queue_thumbnail_downloads: false

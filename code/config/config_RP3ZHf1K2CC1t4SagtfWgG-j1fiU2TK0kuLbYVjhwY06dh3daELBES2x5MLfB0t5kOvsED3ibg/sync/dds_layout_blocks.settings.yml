@@ -11,4 +11,3 @@ allowed_blocks:
   'inline_block:quote': 'inline_block:quote'
   'inline_block:rte': 'inline_block:rte'
   'inline_block:slideshow': 'inline_block:slideshow'
-langcode: da

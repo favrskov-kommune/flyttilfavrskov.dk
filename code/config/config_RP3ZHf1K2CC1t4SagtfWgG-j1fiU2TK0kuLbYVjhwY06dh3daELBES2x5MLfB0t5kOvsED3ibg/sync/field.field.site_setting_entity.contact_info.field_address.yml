@@ -1,5 +1,5 @@
 uuid: 9072452e-9e38-4b67-b29a-dc38523a78ed
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -11,7 +11,7 @@ id: site_setting_entity.contact_info.field_address
 field_name: field_address
 entity_type: site_setting_entity
 bundle: contact_info
-label: Adresse
+label: Address
 description: ''
 required: false
 translatable: true

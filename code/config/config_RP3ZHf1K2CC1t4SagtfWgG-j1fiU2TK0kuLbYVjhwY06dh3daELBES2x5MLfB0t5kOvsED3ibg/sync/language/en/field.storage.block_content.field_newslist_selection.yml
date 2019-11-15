@@ -1,6 +1,0 @@
-settings:
-  allowed_values:
-    -
-      label: 'Select by tag'
-    -
-      label: 'Select manually'

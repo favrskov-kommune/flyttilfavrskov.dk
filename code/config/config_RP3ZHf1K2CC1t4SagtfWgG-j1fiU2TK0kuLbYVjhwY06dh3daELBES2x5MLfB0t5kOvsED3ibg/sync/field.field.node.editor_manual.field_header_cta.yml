@@ -1,5 +1,5 @@
 uuid: b5aedbed-efce-44dd-a192-f07087de0d73
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ id: node.editor_manual.field_header_cta
 field_name: field_header_cta
 entity_type: node
 bundle: editor_manual
-label: 'Header knap (call-to-action)'
+label: 'Header CTA'
 description: ''
 required: false
 translatable: true

@@ -1,5 +1,5 @@
 uuid: 507ee7b6-ba09-4e82-96ea-7d40125f1596
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -16,7 +16,7 @@ id: block_content.appetizer.field_appetizer_text
 field_name: field_appetizer_text
 entity_type: block_content
 bundle: appetizer
-label: Tekst
+label: Text
 description: ''
 required: false
 translatable: false

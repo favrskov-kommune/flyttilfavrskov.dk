@@ -1,5 +1,5 @@
 uuid: b036dab0-e022-4624-9f93-0fe01c6cd4e1
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -15,7 +15,7 @@ id: block_content.appetizer.field_appetizer_image
 field_name: field_appetizer_image
 entity_type: block_content
 bundle: appetizer
-label: Billede
+label: Image
 description: ''
 required: false
 translatable: false

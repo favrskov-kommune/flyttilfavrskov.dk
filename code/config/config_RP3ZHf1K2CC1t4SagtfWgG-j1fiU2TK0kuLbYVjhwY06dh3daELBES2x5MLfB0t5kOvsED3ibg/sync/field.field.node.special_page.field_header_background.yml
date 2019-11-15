@@ -1,5 +1,5 @@
 uuid: 54833b9a-00d2-4a00-af61-c56c4d93b81d
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ id: node.special_page.field_header_background
 field_name: field_header_background
 entity_type: node
 bundle: special_page
-label: 'Header baggrund'
+label: 'Header background image'
 description: ''
 required: false
 translatable: true

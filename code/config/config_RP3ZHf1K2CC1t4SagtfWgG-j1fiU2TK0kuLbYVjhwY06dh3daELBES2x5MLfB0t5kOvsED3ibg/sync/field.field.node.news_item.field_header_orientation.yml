@@ -1,5 +1,5 @@
 uuid: cba8a8da-3d5f-4fa8-829c-6b4f2c0381d0
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ id: node.news_item.field_header_orientation
 field_name: field_header_orientation
 entity_type: node
 bundle: news_item
-label: 'Header tekst-position'
+label: 'Header text orientation'
 description: ''
 required: true
 translatable: false

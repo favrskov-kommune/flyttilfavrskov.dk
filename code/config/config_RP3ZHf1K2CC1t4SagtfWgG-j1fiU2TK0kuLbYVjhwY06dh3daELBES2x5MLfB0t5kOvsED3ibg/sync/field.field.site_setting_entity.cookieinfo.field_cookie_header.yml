@@ -1,5 +1,5 @@
 uuid: 7426cd90-c976-4f4c-90f3-45aae09600d2
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -11,7 +11,7 @@ id: site_setting_entity.cookieinfo.field_cookie_header
 field_name: field_cookie_header
 entity_type: site_setting_entity
 bundle: cookieinfo
-label: Overskrift
+label: Header
 description: ''
 required: false
 translatable: false

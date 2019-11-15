@@ -1,5 +1,5 @@
 uuid: 4fc42577-1bfc-46b4-a5ce-cab9b22e20e1
-langcode: da
+langcode: en
 status: true
 dependencies:
   module:
@@ -8,9 +8,9 @@ dependencies:
 _core:
   default_config_hash: rRWxAX-IQkJ5viACQRovRkC784EyCl9493GU_G23n2Q
 id: files
-label: Filer
+label: Files
 module: file
-description: 'Find og håndtér filer.'
+description: 'Find and manage files.'
 tag: default
 base_table: file_managed
 base_field: fid
@@ -41,11 +41,11 @@ display:
         options:
           submit_button: Filter
           reset_button: false
-          reset_button_label: Gendan
-          exposed_sorts_label: 'Sortér efter'
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
           expose_sort_order: true
-          sort_asc_label: Stigende
-          sort_desc_label: Faldende
+          sort_asc_label: Asc
+          sort_desc_label: Desc
       pager:
         type: mini
         options:
@@ -54,16 +54,16 @@ display:
           id: 0
           total_pages: 0
           tags:
-            previous: '‹ Forrige'
-            next: 'Næste ›'
+            previous: '‹ Previous'
+            next: 'Next ›'
           expose:
             items_per_page: false
-            items_per_page_label: 'Antal elementer'
+            items_per_page_label: 'Items per page'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- Alle -'
+            items_per_page_options_all_label: '- All -'
             offset: false
-            offset_label: Forskydning
+            offset_label: Offset
       style:
         type: table
         options:
@@ -186,7 +186,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Navn
+          label: Name
           exclude: false
           alter:
             alter_text: false
@@ -301,7 +301,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Størrelse
+          label: Size
           exclude: false
           alter:
             alter_text: false
@@ -397,7 +397,7 @@ display:
           type: boolean
           settings:
             format: custom
-            format_custom_false: Midlertidig
+            format_custom_false: Temporary
             format_custom_true: Permanent
           plugin_id: field
           entity_type: file
@@ -409,7 +409,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Upload-dato
+          label: 'Upload date'
           exclude: false
           alter:
             alter_text: false
@@ -465,7 +465,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Ændringsdato
+          label: 'Changed date'
           exclude: false
           alter:
             alter_text: false
@@ -521,7 +521,7 @@ display:
           relationship: fid
           group_type: sum
           admin_label: ''
-          label: 'Brugt i'
+          label: 'Used in'
           exclude: false
           alter:
             alter_text: false
@@ -567,7 +567,7 @@ display:
           decimal: .
           separator: ','
           format_plural: true
-          format_plural_string: !!binary MSBzdGVkA0Bjb3VudCBzdGVkZXI=
+          format_plural_string: !!binary MSBwbGFjZQNAY291bnQgcGxhY2Vz
           prefix: ''
           suffix: ''
           plugin_id: numeric
@@ -585,7 +585,7 @@ display:
           exposed: true
           expose:
             operator_id: filemime_op
-            label: Filnavn
+            label: Filename
             description: ''
             use_operator: false
             operator: filename_op
@@ -700,7 +700,7 @@ display:
           entity_type: file
           entity_field: status
       sorts: {  }
-      title: Filer
+      title: Files
       header: {  }
       footer: {  }
       empty:
@@ -709,7 +709,7 @@ display:
           table: views
           field: area_text_custom
           empty: true
-          content: 'Ingen tilgængelige filer.'
+          content: 'No files available.'
           plugin_id: text_custom
       relationships:
         fid:
@@ -736,13 +736,13 @@ display:
   page_1:
     display_plugin: page
     id: page_1
-    display_title: Filoversigt
+    display_title: 'Files overview'
     position: 1
     display_options:
       path: admin/content/files
       menu:
         type: tab
-        title: Filer
+        title: Files
         description: ''
         menu_name: admin
         weight: 0
@@ -799,16 +799,16 @@ display:
           id: 0
           total_pages: 0
           tags:
-            previous: '‹ Forrige'
-            next: 'Næste ›'
+            previous: '‹ Previous'
+            next: 'Next ›'
           expose:
             items_per_page: false
-            items_per_page_label: 'Antal elementer'
+            items_per_page_label: 'Items per page'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- Alle -'
+            items_per_page_options_all_label: '- All -'
             offset: false
-            offset_label: Forskydning
+            offset_label: Offset
       filters: {  }
       filter_groups:
         operator: AND
@@ -871,7 +871,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Entity-type
+          label: 'Entity type'
           exclude: false
           alter:
             alter_text: false
@@ -920,7 +920,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Registrerer modul'
+          label: 'Registering module'
           exclude: false
           alter:
             alter_text: false
@@ -969,7 +969,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Brug antal'
+          label: 'Use count'
           exclude: false
           alter:
             alter_text: false
@@ -1033,9 +1033,9 @@ display:
           exception:
             value: all
             title_enable: false
-            title: Alle
+            title: All
           title_enable: true
-          title: 'Information om brug af filen {{ arguments.fid }}'
+          title: 'File usage information for {{ arguments.fid }}'
           default_argument_type: fixed
           default_argument_options:
             argument: ''

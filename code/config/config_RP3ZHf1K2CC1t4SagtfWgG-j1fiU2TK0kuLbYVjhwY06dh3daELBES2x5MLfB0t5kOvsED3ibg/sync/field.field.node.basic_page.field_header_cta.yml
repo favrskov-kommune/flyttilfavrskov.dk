@@ -1,5 +1,5 @@
 uuid: d8ffd9bc-12ea-4a2f-8db7-53cf0eb92f94
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ id: node.basic_page.field_header_cta
 field_name: field_header_cta
 entity_type: node
 bundle: basic_page
-label: 'Header knap (call-to-action)'
+label: 'Header CTA'
 description: ''
 required: false
 translatable: false

@@ -1,5 +1,5 @@
 uuid: 33273e25-3fae-4e1b-919c-e4cb7936031e
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ id: node.basic_page.field_meta_tags
 field_name: field_meta_tags
 entity_type: node
 bundle: basic_page
-label: Metadata
+label: 'Meta data'
 description: ''
 required: false
 translatable: false

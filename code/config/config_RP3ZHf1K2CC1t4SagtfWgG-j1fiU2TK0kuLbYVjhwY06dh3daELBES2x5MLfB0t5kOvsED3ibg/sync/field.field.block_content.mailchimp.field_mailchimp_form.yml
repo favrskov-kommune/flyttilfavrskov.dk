@@ -1,5 +1,5 @@
 uuid: 9bf50d61-2af2-4bc2-bcb1-7bd5487d0c5e
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -14,7 +14,7 @@ id: block_content.mailchimp.field_mailchimp_form
 field_name: field_mailchimp_form
 entity_type: block_content
 bundle: mailchimp
-label: Formular
+label: Form
 description: ''
 required: false
 translatable: false

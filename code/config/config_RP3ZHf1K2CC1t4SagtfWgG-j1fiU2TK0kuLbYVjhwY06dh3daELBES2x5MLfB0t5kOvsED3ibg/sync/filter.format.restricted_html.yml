@@ -1,5 +1,5 @@
 uuid: d86b4545-5cb6-4b52-9ce9-96fae36c5560
-langcode: da
+langcode: en
 status: true
 dependencies:
   enforced:
@@ -7,7 +7,7 @@ dependencies:
       - dds_editors
 _core:
   default_config_hash: yMgiHhca0XtAeF41XW5Z9mznHf62RXjQSCk5d6rJQ6w
-name: 'Begrænset HTML'
+name: 'Restricted HTML'
 format: restricted_html
 weight: 0
 filters:

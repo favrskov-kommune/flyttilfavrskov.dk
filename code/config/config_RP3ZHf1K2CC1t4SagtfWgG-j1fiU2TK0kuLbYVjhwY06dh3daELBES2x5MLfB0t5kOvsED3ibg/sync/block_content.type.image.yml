@@ -1,5 +1,5 @@
 uuid: e0ddd168-7c18-4232-8852-ce3d447311e8
-langcode: da
+langcode: en
 status: true
 dependencies:
   enforced:
@@ -8,6 +8,6 @@ dependencies:
 _core:
   default_config_hash: BhXD6EE44yswPaTm-OG7uvj7j_4dR52Nz2sykw_l7FI
 id: image
-label: Billede
+label: Image
 revision: 0
 description: ''

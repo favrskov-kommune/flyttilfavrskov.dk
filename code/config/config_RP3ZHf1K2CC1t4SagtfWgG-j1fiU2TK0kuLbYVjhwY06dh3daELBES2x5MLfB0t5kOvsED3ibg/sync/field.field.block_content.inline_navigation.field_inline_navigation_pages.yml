@@ -1,5 +1,5 @@
 uuid: 32805cf4-6492-4ea8-bec7-e277be4edf5f
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -16,7 +16,7 @@ id: block_content.inline_navigation.field_inline_navigation_pages
 field_name: field_inline_navigation_pages
 entity_type: block_content
 bundle: inline_navigation
-label: Sider
+label: Pages
 description: ''
 required: false
 translatable: false

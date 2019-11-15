@@ -1,8 +1,0 @@
-settings:
-  allowed_values:
-    -
-      label: 'Align left'
-    -
-      label: 'Align center'
-    -
-      label: 'Align right'

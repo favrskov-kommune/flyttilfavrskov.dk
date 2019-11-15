@@ -1,5 +1,5 @@
 uuid: 76755555-504e-49cf-9cfb-54e35bacdf27
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -16,7 +16,7 @@ id: block_content.button.field_button_alignment
 field_name: field_button_alignment
 entity_type: block_content
 bundle: button
-label: Placering
+label: Alignment
 description: ''
 required: true
 translatable: false

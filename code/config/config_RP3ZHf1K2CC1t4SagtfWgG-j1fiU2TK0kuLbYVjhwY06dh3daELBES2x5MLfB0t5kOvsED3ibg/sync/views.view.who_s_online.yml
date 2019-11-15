@@ -1,5 +1,5 @@
 uuid: 070edd87-adef-4279-b55f-6956e550fcc6
-langcode: da
+langcode: en
 status: true
 dependencies:
   module:
@@ -7,9 +7,9 @@ dependencies:
 _core:
   default_config_hash: m0vmYmhrzMR6S_IC0UlK0Cl-q5lEvL8-EbxbbcDtk34
 id: who_s_online
-label: 'Hvem er online'
+label: 'Who''s online block'
 module: user
-description: 'Viser navnene på de brugere, der senste har været aktive, og det totale antal af aktive brugere.'
+description: 'Shows the user names of the most recently active users, and the total number of active users.'
 tag: default
 base_table: users_field_data
 base_field: uid
@@ -38,13 +38,13 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Udfør
+          submit_button: Apply
           reset_button: false
-          reset_button_label: Gendan
-          exposed_sorts_label: 'Sortér efter'
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
           expose_sort_order: true
-          sort_asc_label: Stigende
-          sort_desc_label: Faldende
+          sort_asc_label: Asc
+          sort_desc_label: Desc
       pager:
         type: some
         options:
@@ -127,8 +127,8 @@ display:
           exposed: false
           expose:
             operator_id: access_op
-            label: 'Seneste tilgang'
-            description: 'En bruger bliver opfattet som online i dette tidsrum efter hun sidst har set en side.'
+            label: 'Last access'
+            description: 'A user is considered online for this long after they have last viewed a page.'
             use_operator: false
             operator: access_op
             identifier: access
@@ -172,7 +172,7 @@ display:
           plugin_id: date
           entity_type: user
           entity_field: access
-      title: 'Hvem er online'
+      title: 'Who''s online'
       header:
         result:
           id: result
@@ -182,7 +182,7 @@ display:
           group_type: group
           admin_label: ''
           empty: false
-          content: 'Der er i øjeblikket @total brugere online.'
+          content: 'There are currently @total users online.'
           plugin_id: result
       footer: {  }
       empty:
@@ -195,7 +195,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: 'Der er i øjeblikket 0 brugere online.'
+          content: 'There are currently 0 users online.'
           plugin_id: text_custom
       relationships: {  }
       arguments: {  }
@@ -210,11 +210,11 @@ display:
   who_s_online_block:
     display_plugin: block
     id: who_s_online_block
-    display_title: 'Hvem er online'
+    display_title: 'Who''s online'
     position: 1
     display_options:
-      block_description: 'Hvem er online'
-      display_description: 'En liste af indloggede brugere.'
+      block_description: 'Who''s online'
+      display_description: 'A list of users that are currently logged in.'
       display_extenders: {  }
     cache_metadata:
       contexts:

@@ -1,5 +1,5 @@
 uuid: 92aac769-e518-42d2-a1a6-2338c9d0d60d
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ id: node.editor_manual.field_header_orientation
 field_name: field_header_orientation
 entity_type: node
 bundle: editor_manual
-label: Tekst-position
+label: 'Text orientation'
 description: ''
 required: true
 translatable: true

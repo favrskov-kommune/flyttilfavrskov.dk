@@ -1,5 +1,5 @@
 uuid: fb12587d-8ea5-4fe2-9ba5-32b292b332ff
-langcode: da
+langcode: en
 status: true
 dependencies:
   enforced:
@@ -25,7 +25,7 @@ third_party_settings:
     unpublish_revision: false
 _core:
   default_config_hash: 8rtsoZUw88xlkebiu53qvHi_VlWxSMqQm2k6rgzfA1E
-name: 'Special side'
+name: 'Special page'
 type: special_page
 description: ''
 help: ''

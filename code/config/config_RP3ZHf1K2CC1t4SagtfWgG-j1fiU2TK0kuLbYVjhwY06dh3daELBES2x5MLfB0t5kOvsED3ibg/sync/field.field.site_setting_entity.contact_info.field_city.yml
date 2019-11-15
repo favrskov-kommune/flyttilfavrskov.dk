@@ -1,5 +1,5 @@
 uuid: ad8cab2e-8d94-4980-a9d6-9ff2fd8b1c86
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -11,7 +11,7 @@ id: site_setting_entity.contact_info.field_city
 field_name: field_city
 entity_type: site_setting_entity
 bundle: contact_info
-label: By
+label: City
 description: ''
 required: false
 translatable: true

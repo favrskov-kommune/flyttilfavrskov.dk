@@ -1,5 +1,5 @@
 uuid: a2e818e5-a7e1-4e54-9cc0-961b3e13bf17
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -23,6 +23,6 @@ default_value:
     value: 0
 default_value_callback: ''
 settings:
-  on_label: Tilsluttet
-  off_label: Afbrudt
+  on_label: 'On'
+  off_label: 'Off'
 field_type: boolean

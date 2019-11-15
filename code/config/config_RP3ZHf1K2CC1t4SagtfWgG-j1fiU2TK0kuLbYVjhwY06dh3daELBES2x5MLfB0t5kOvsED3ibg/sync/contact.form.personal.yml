@@ -1,13 +1,13 @@
 uuid: 99d2612a-f8e8-4974-bca2-f1b11e41a2c4
-langcode: da
+langcode: en
 status: true
 dependencies: {  }
 _core:
   default_config_hash: jonvgt3CkUM2eMLTFwWfHileWWDC4YtXCuIlCahTk_I
 id: personal
-label: 'Personlig kontaktformular'
+label: 'Personal contact form'
 recipients: {  }
 reply: ''
 weight: 0
-message: 'Din besked er blevet sendt.'
+message: 'Your message has been sent.'
 redirect: ''

@@ -1,5 +1,5 @@
 uuid: 428a7a62-b01c-4871-b151-be52221d21a8
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -14,7 +14,7 @@ id: block_content.mailchimp.field_mailchimp_headline
 field_name: field_mailchimp_headline
 entity_type: block_content
 bundle: mailchimp
-label: Overskrift
+label: Headline
 description: ''
 required: false
 translatable: false

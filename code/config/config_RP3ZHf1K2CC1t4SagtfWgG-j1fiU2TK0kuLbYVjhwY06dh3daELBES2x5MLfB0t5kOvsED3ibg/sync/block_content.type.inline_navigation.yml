@@ -1,5 +1,5 @@
 uuid: 853b03c0-78a8-4f95-996b-940a22a25aba
-langcode: da
+langcode: en
 status: true
 dependencies:
   enforced:
@@ -8,6 +8,6 @@ dependencies:
 _core:
   default_config_hash: XCiTux_uKkZKgdUWSjGRuUPIiDVV4fiUer9VrNvvNyc
 id: inline_navigation
-label: 'Inline navigation'
+label: 'Inline Navigation'
 revision: 0
 description: ''

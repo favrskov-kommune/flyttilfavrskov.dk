@@ -1,5 +1,5 @@
 uuid: 606f8494-ab75-4fc6-afbe-30db2bf7d2ee
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -15,7 +15,7 @@ id: block_content.slideshow.field_slideshow_images
 field_name: field_slideshow_images
 entity_type: block_content
 bundle: slideshow
-label: Billeder
+label: Images
 description: ''
 required: true
 translatable: false

@@ -1,5 +1,5 @@
 uuid: d64dea28-312a-4768-ba11-d9d915ee0b7d
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -14,7 +14,7 @@ id: block_content.accordion.field_accordion_headline
 field_name: field_accordion_headline
 entity_type: block_content
 bundle: accordion
-label: Overskrift
+label: Headline
 description: ''
 required: false
 translatable: false

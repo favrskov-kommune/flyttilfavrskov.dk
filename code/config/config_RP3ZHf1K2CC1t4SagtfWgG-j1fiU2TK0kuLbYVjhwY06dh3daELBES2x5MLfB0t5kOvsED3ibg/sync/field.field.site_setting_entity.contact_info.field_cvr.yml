@@ -1,5 +1,5 @@
 uuid: f7dfd8b8-9bef-406a-93d1-70d9c6256237
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -11,7 +11,7 @@ id: site_setting_entity.contact_info.field_cvr
 field_name: field_cvr
 entity_type: site_setting_entity
 bundle: contact_info
-label: CVR-nummer
+label: CVR-number
 description: ''
 required: false
 translatable: true

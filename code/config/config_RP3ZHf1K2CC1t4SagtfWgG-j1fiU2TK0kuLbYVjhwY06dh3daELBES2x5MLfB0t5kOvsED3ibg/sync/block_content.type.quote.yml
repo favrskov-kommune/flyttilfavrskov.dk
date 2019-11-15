@@ -1,5 +1,5 @@
 uuid: 0fd1cef1-b747-45e4-b039-c1c5e403afa0
-langcode: da
+langcode: en
 status: true
 dependencies:
   enforced:
@@ -8,6 +8,6 @@ dependencies:
 _core:
   default_config_hash: QRuZ71Am2uF17mIFfPd4bJRweAgWLJeVB3oK4pIIFwY
 id: quote
-label: Citat
+label: Quote
 revision: 0
 description: ''

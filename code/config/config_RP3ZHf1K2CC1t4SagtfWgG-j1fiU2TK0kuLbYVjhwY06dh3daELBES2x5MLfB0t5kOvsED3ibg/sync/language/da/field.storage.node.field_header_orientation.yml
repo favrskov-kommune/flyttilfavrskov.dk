@@ -1,8 +1,0 @@
-settings:
-  allowed_values:
-    -
-      label: Venstrejusteret
-    -
-      label: Centreret
-    -
-      label: Højrejusteret

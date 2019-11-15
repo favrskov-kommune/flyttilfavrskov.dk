@@ -1,5 +1,5 @@
 uuid: 3753f9e8-9559-4efc-b1e9-50b4bf9f5b5f
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ id: site_setting_entity.cookieinfo.field_cookie_body
 field_name: field_cookie_body
 entity_type: site_setting_entity
 bundle: cookieinfo
-label: Tekst
+label: Body
 description: ''
 required: false
 translatable: false

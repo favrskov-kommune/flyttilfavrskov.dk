@@ -1,5 +1,5 @@
 uuid: c20d4bce-bad5-465e-a9e2-af44ef0032e4
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -11,7 +11,7 @@ id: site_setting_entity.cookieinfo.field_cookie_show_once
 field_name: field_cookie_show_once
 entity_type: site_setting_entity
 bundle: cookieinfo
-label: 'Vis kun popup én gang'
+label: 'Show only once'
 description: ''
 required: false
 translatable: false
@@ -20,6 +20,6 @@ default_value:
     value: 0
 default_value_callback: ''
 settings:
-  on_label: Tilsluttet
-  off_label: Afbrudt
+  on_label: 'On'
+  off_label: 'Off'
 field_type: boolean

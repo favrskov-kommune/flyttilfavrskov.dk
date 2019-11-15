@@ -1,5 +1,5 @@
 uuid: 6dffc39c-7c92-4765-b6cd-0c658323f0f7
-langcode: da
+langcode: en
 status: true
 dependencies:
   enforced:
@@ -18,13 +18,13 @@ settings:
   allowed_values:
     -
       value: left
-      label: Venstre
+      label: Left
     -
       value: center
-      label: Centreret
+      label: Center
     -
       value: right
-      label: Højre
+      label: Right
   allowed_values_function: ''
 module: options
 locked: false

@@ -1,5 +1,5 @@
 uuid: 37d39b19-f83a-42a5-b669-8717223d8bbe
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ id: site_setting_entity.footer.field_content_left
 field_name: field_content_left
 entity_type: site_setting_entity
 bundle: footer
-label: 'Indhold venstre'
+label: 'Content left'
 description: ''
 required: false
 translatable: false

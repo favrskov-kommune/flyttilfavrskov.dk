@@ -1,5 +1,5 @@
 uuid: f913c5c2-8fed-45fc-8359-2b2f0c5e8ed1
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -14,7 +14,7 @@ id: node.special_page.field_parent
 field_name: field_parent
 entity_type: node
 bundle: special_page
-label: 'Overordnet element'
+label: Parent
 description: ''
 required: false
 translatable: true
@@ -32,5 +32,5 @@ settings:
     auto_create_bundle: basic_page
   weight_min: -50
   weight_max: 50
-  weight_label: Vægt
+  weight_label: Weight
 field_type: entity_reference_hierarchy

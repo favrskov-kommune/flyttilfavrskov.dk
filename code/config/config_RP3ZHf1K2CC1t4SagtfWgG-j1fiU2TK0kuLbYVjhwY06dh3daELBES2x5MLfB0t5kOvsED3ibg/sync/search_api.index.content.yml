@@ -1,5 +1,5 @@
 uuid: 78a9c310-9bcc-4004-8505-6c4b83df1113
-langcode: da
+langcode: en
 status: true
 dependencies:
   module:
@@ -12,7 +12,7 @@ dependencies:
 _core:
   default_config_hash: pwMPEkA4BNVyg7OEu4pR7rFsKLdEmi49lyk1EkNlo6k
 id: content
-name: Indhold
+name: Content
 description: ''
 read_only: false
 field_settings:

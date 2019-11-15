@@ -1,5 +1,5 @@
 uuid: d186c11c-e55c-481a-ba94-70276ec2baa3
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -14,7 +14,7 @@ id: block_content.hero.field_hero_headline
 field_name: field_hero_headline
 entity_type: block_content
 bundle: hero
-label: Overskrift
+label: Headline
 description: ''
 required: false
 translatable: false

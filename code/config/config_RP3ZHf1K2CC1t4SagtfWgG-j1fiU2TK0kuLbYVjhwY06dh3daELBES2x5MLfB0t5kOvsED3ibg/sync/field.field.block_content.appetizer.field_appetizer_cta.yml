@@ -1,5 +1,5 @@
 uuid: a80b0f3e-a58f-4985-972c-4bbc8eade531
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -16,7 +16,7 @@ id: block_content.appetizer.field_appetizer_cta
 field_name: field_appetizer_cta
 entity_type: block_content
 bundle: appetizer
-label: Knap
+label: CTA
 description: ''
 required: false
 translatable: false

@@ -1,5 +1,5 @@
 uuid: 9d4f3bb1-3aae-4edf-916e-e3745f4241f7
-langcode: da
+langcode: en
 status: true
 dependencies:
   module:
@@ -16,7 +16,7 @@ provider: null
 plugin: system_breadcrumb_block
 settings:
   id: system_breadcrumb_block
-  label: Brødkrummer
+  label: Breadcrumbs
   provider: system
   label_display: '0'
 visibility: {  }

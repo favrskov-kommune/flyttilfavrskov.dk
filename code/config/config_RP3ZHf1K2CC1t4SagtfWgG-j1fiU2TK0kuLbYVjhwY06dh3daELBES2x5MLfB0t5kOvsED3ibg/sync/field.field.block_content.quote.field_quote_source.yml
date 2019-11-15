@@ -1,5 +1,5 @@
 uuid: 297c1798-34c6-4065-a0aa-a0a0c03ab15c
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -14,7 +14,7 @@ id: block_content.quote.field_quote_source
 field_name: field_quote_source
 entity_type: block_content
 bundle: quote
-label: Kilde
+label: Source
 description: ''
 required: false
 translatable: false

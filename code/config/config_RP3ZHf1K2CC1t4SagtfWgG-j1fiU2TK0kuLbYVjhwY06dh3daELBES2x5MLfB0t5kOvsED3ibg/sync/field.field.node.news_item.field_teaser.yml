@@ -1,5 +1,5 @@
 uuid: b4c70806-d803-4689-b5cf-8b43b70e6577
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -11,7 +11,7 @@ id: node.news_item.field_teaser
 field_name: field_teaser
 entity_type: node
 bundle: news_item
-label: Indledning
+label: Teaser
 description: ''
 required: false
 translatable: false

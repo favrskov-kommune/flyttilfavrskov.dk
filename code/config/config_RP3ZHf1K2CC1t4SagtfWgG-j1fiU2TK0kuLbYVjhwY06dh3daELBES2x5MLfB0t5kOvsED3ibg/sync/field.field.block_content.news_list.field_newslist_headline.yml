@@ -1,5 +1,5 @@
 uuid: 6ac8fe5b-8144-42a0-bae9-dca4e8f71791
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -14,7 +14,7 @@ id: block_content.news_list.field_newslist_headline
 field_name: field_newslist_headline
 entity_type: block_content
 bundle: news_list
-label: Overskrift
+label: Headline
 description: ''
 required: false
 translatable: false

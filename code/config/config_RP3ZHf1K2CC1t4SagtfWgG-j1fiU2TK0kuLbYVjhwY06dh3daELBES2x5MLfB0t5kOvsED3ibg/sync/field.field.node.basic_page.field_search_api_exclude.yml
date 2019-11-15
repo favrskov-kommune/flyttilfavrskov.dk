@@ -1,5 +1,5 @@
 uuid: da0861e1-c456-4c1b-b919-a7b1771966d9
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ id: node.basic_page.field_search_api_exclude
 field_name: field_search_api_exclude
 entity_type: node
 bundle: basic_page
-label: Ekskludér
+label: Exclude
 description: ''
 required: false
 translatable: false

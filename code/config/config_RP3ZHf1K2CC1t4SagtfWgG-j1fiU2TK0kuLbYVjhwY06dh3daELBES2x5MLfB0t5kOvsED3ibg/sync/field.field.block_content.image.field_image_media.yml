@@ -1,5 +1,5 @@
 uuid: a3cdfe96-125f-405f-982e-2d9b71e0be9f
-langcode: da
+langcode: en
 status: true
 dependencies:
   config:
@@ -15,7 +15,7 @@ id: block_content.image.field_image_media
 field_name: field_image_media
 entity_type: block_content
 bundle: image
-label: Billede
+label: Image
 description: ''
 required: true
 translatable: false
