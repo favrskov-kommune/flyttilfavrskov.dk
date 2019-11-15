@@ -30,6 +30,8 @@
     "drupal/console": "^1.8",
     "drupal/core": "~8.8",
     "drupal/mailchimp": "^1.11",
+    "drupal/entity_reference_layout": "1.x-dev",
+    "drupal/paragraphs_asymmetric_translation_widgets": "^1.0@beta",
     "drush/drush": "^9.0",
     "novicell/dds_content": "~1.0",
     "novicell/dds_content_hierarchy": "~2.1",
