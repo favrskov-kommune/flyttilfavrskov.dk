@@ -1,5 +1,5 @@
 uuid: ea637060-1759-4296-9874-71459decc216
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
@@ -16,7 +16,7 @@ id: block_content.hero.field_hero_orientation
 field_name: field_hero_orientation
 entity_type: block_content
 bundle: hero
-label: 'Text orientation'
+label: Tekst-position
 description: ''
 required: true
 translatable: false

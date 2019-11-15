@@ -1,5 +1,5 @@
 uuid: 86f7bc7c-2352-477d-95fc-b387ee93307b
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
@@ -14,7 +14,7 @@ id: block_content.image.field_image_caption
 field_name: field_image_caption
 entity_type: block_content
 bundle: image
-label: Caption
+label: Billedtekst
 description: ''
 required: false
 translatable: false

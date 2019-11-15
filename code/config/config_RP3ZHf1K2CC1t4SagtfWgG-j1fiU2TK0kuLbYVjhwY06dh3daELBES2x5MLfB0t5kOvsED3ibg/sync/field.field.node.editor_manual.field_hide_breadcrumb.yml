@@ -1,5 +1,5 @@
 uuid: 37af9130-ec70-4d6b-a4d5-1073633f077c
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
@@ -11,7 +11,7 @@ id: node.editor_manual.field_hide_breadcrumb
 field_name: field_hide_breadcrumb
 entity_type: node
 bundle: editor_manual
-label: 'Hide breadcrumb'
+label: 'Skjul brødkrummer på denne side'
 description: ''
 required: false
 translatable: true
@@ -20,6 +20,6 @@ default_value:
     value: 0
 default_value_callback: ''
 settings:
-  on_label: 'On'
-  off_label: 'Off'
+  on_label: Tilsluttet
+  off_label: Afbrudt
 field_type: boolean

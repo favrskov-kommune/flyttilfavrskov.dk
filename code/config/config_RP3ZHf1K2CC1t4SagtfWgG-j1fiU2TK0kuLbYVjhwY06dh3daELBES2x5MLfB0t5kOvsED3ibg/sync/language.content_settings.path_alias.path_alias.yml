@@ -1,5 +1,5 @@
 uuid: e8568a19-a036-4802-a256-0e6d1986d258
-langcode: en
+langcode: da
 status: true
 dependencies:
   module:
@@ -10,4 +10,4 @@ id: path_alias.path_alias
 target_entity_type_id: path_alias
 target_bundle: path_alias
 default_langcode: und
-language_alterable: true
+language_alterable: false

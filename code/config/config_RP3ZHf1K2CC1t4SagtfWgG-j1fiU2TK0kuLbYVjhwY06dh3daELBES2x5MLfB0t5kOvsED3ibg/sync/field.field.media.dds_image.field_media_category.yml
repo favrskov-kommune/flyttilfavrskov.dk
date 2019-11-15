@@ -1,5 +1,5 @@
 uuid: cce0a5ab-6af1-4010-bf99-bdb3d3a690ae
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
@@ -12,7 +12,7 @@ id: media.dds_image.field_media_category
 field_name: field_media_category
 entity_type: media
 bundle: dds_image
-label: 'Media category'
+label: 'Medie kategori'
 description: ''
 required: false
 translatable: false

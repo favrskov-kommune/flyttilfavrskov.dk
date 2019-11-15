@@ -1,5 +1,5 @@
 uuid: 6c888774-8841-4a6e-8b54-58ba2d40279e
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
@@ -11,7 +11,7 @@ id: node.special_page.field_header_subline
 field_name: field_header_subline
 entity_type: node
 bundle: special_page
-label: Subline
+label: Tekst
 description: ''
 required: false
 translatable: false

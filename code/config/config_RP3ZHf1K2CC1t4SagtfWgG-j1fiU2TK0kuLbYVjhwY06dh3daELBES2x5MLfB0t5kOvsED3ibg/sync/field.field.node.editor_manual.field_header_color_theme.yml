@@ -1,5 +1,5 @@
 uuid: 58a3b7fa-f675-4e9f-aa0a-ea1a70665f19
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ id: node.editor_manual.field_header_color_theme
 field_name: field_header_color_theme
 entity_type: node
 bundle: editor_manual
-label: 'Header color theme'
+label: 'Header farvetema'
 description: ''
 required: false
 translatable: true

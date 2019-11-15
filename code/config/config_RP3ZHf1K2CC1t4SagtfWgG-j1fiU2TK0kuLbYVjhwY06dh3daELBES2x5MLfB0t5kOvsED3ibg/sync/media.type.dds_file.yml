@@ -1,5 +1,5 @@
 uuid: 36613b2e-32f2-4936-8ba7-6f93ea18180c
-langcode: en
+langcode: da
 status: true
 dependencies:
   enforced:
@@ -8,7 +8,7 @@ dependencies:
 _core:
   default_config_hash: XhMAYJwtr0pjM0KgqQS9I-i-dioO2Ze1i83BKE5WiMI
 id: dds_file
-label: File
+label: Fil
 description: ''
 source: file
 queue_thumbnail_downloads: false

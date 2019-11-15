@@ -1,5 +1,5 @@
 uuid: a979137d-2852-4a90-af32-7fac808786ff
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
@@ -16,7 +16,7 @@ id: block_content.hero.field_hero_button
 field_name: field_hero_button
 entity_type: block_content
 bundle: hero
-label: Button
+label: Knap
 description: ''
 required: false
 translatable: false

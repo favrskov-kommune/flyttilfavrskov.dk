@@ -1,5 +1,5 @@
 uuid: a01ec82a-eeb9-4ac3-9a30-84f389d6a8be
-langcode: en
+langcode: da
 status: true
 dependencies:
   enforced:
@@ -8,7 +8,7 @@ dependencies:
 _core:
   default_config_hash: nuk5p-cpRYLwcf1VGmQvbB5_Sin79ld__vm9i4eOXAo
 id: editor
-label: Editor
+label: Redaktør
 weight: 4
 is_admin: null
 permissions:

@@ -12,7 +12,6 @@ module:
   config: 0
   config_filter: 0
   config_split: 0
-  config_translation: 0
   contact: 0
   contextual: 0
   crop: 0
@@ -48,7 +47,6 @@ module:
   dds_search: 0
   dds_seo: 0
   dds_site_settings: 0
-  dds_translation: 0
   dynamic_page_cache: 0
   editor: 0
   elasticsearch_connector: 0
@@ -72,7 +70,6 @@ module:
   inline_block_title_automatic: 0
   language: 0
   layout_builder: 0
-  layout_builder_at: 0
   layout_builder_modal: 0
   layout_discovery: 0
   link: 0
@@ -87,7 +84,6 @@ module:
   node: 0
   options: 0
   page_cache: 0
-  paragraphs_asymmetric_translation_widgets: 0
   path: 0
   path_alias: 0
   quickedit: 0
@@ -109,7 +105,6 @@ module:
   views_ui: 0
   menu_link_content: 1
   pathauto: 1
-  content_translation: 10
   views: 10
   paragraphs: 11
   dds_layout_blocks: 100
@@ -123,3 +118,4 @@ theme:
 profile: dds_premium_installer
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
+langcode: da

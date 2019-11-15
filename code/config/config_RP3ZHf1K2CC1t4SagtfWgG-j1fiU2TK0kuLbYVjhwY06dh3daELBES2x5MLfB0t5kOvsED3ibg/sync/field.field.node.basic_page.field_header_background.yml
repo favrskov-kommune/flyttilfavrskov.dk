@@ -1,5 +1,5 @@
 uuid: e3060208-3b13-45ab-bda6-fbce4a3a4c4b
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ id: node.basic_page.field_header_background
 field_name: field_header_background
 entity_type: node
 bundle: basic_page
-label: 'Header background'
+label: 'Header baggrund'
 description: ''
 required: false
 translatable: false

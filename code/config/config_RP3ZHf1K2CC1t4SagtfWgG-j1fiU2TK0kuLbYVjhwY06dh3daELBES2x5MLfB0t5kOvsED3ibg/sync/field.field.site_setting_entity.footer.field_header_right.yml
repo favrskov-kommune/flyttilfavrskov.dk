@@ -1,5 +1,5 @@
 uuid: 93d886e8-5829-45af-a008-cac3beddc856
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
@@ -11,7 +11,7 @@ id: site_setting_entity.footer.field_header_right
 field_name: field_header_right
 entity_type: site_setting_entity
 bundle: footer
-label: 'Header right'
+label: 'Overskrift højre'
 description: ''
 required: false
 translatable: false

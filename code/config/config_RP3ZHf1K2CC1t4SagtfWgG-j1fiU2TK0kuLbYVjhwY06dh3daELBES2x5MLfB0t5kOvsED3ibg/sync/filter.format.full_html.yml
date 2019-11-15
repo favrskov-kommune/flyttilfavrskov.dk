@@ -1,5 +1,5 @@
 uuid: f509762f-f986-4469-8342-cd36d289cd31
-langcode: en
+langcode: da
 status: true
 dependencies:
   enforced:
@@ -9,7 +9,7 @@ dependencies:
     - editor
 _core:
   default_config_hash: 1KZgvgMjBgPJc4UPO2yR-zr8eqIbjVavFTt_O0Ajzvc
-name: 'Full HTML'
+name: 'Fuld HTML'
 format: full_html
 weight: 1
 filters:

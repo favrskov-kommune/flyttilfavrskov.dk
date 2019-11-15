@@ -1,5 +1,5 @@
 uuid: 2bb16338-69d4-4b60-aded-3608dc2a8b85
-langcode: en
+langcode: da
 status: true
 dependencies:
   enforced:
@@ -8,6 +8,6 @@ dependencies:
 _core:
   default_config_hash: 6At_3GQSMeVzuhp0A_wrNrScQnDxuUkAZmqzXxO4Ze0
 id: divider
-label: Divider
+label: Delelinje
 revision: 0
 description: ''

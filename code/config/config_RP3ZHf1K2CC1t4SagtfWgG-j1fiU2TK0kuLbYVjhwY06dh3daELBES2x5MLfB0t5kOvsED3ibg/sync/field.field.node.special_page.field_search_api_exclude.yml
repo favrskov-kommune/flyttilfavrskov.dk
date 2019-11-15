@@ -1,5 +1,5 @@
 uuid: 17010647-a32e-4a87-87bf-142a2a0b0e79
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ id: node.special_page.field_search_api_exclude
 field_name: field_search_api_exclude
 entity_type: node
 bundle: special_page
-label: Exclude
+label: Ekskludér
 description: ''
 required: false
 translatable: true

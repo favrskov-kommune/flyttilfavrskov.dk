@@ -1,5 +1,5 @@
 uuid: b7885170-14ff-47d5-9478-3b5cce7ac4dd
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ id: node.basic_page.field_header_orientation
 field_name: field_header_orientation
 entity_type: node
 bundle: basic_page
-label: 'Header text orientation'
+label: 'Header tekst-position'
 description: ''
 required: true
 translatable: false

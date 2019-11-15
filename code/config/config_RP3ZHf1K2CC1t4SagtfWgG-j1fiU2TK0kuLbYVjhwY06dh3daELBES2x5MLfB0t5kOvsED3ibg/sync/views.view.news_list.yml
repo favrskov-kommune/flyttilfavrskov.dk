@@ -1,5 +1,5 @@
 uuid: b0f9da5f-8595-4d3f-a9a2-936f291625f0
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
@@ -35,20 +35,20 @@ display:
         options:
           submit_button: Filter
           reset_button: true
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          reset_button_label: Gendan
+          exposed_sorts_label: 'Sortér efter'
           expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_asc_label: Stigende
+          sort_desc_label: Faldende
       pager:
         type: full
         options:
           items_per_page: 50
           tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
-            first: '« First'
-            last: 'Last »'
+            previous: '‹ Forrige'
+            next: 'Næste ›'
+            first: '« Første'
+            last: 'Sidste »'
       style:
         type: table
         options:
@@ -158,7 +158,7 @@ display:
           id: title
           table: node_field_data
           field: title
-          label: Title
+          label: Titel
           exclude: false
           alter:
             alter_text: false
@@ -179,7 +179,7 @@ display:
           table: users_field_data
           field: name
           relationship: uid
-          label: Author
+          label: Forfatter
           exclude: false
           alter:
             alter_text: false
@@ -210,8 +210,8 @@ display:
           type: boolean
           settings:
             format: custom
-            format_custom_true: Published
-            format_custom_false: Unpublished
+            format_custom_true: Udgivet
+            format_custom_false: 'Ikke udgivet'
           plugin_id: field
           entity_type: node
           entity_field: status
@@ -219,7 +219,7 @@ display:
           id: changed
           table: node_field_data
           field: changed
-          label: Updated
+          label: Opdateret
           exclude: false
           alter:
             alter_text: false
@@ -244,7 +244,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Operations
+          label: Handlinger
           exclude: false
           alter:
             alter_text: false
@@ -301,7 +301,7 @@ display:
           exposed: true
           expose:
             operator_id: title_op
-            label: Title
+            label: Titel
             description: ''
             use_operator: false
             operator: title_op
@@ -344,7 +344,7 @@ display:
           exposed: false
           expose:
             operator_id: type_op
-            label: 'Content type'
+            label: Indholdstype
             description: ''
             use_operator: false
             operator: type_op
@@ -401,7 +401,7 @@ display:
             operator_list: {  }
           is_grouped: true
           group_info:
-            label: 'Published status'
+            label: Publiceringsstatus
             description: ''
             identifier: status
             optional: true
@@ -412,11 +412,11 @@ display:
             default_group_multiple: {  }
             group_items:
               1:
-                title: Published
+                title: Udgivet
                 operator: '='
                 value: '1'
               2:
-                title: Unpublished
+                title: 'Ikke udgivet'
                 operator: '='
                 value: '0'
           plugin_id: boolean
@@ -435,7 +435,7 @@ display:
           exposed: true
           expose:
             operator_id: langcode_op
-            label: Language
+            label: Sprog
             description: ''
             use_operator: false
             operator: langcode_op
@@ -478,14 +478,14 @@ display:
             operator_limit_selection: false
             operator_list: {  }
       sorts: {  }
-      title: Content
+      title: Indhold
       empty:
         area_text_custom:
           id: area_text_custom
           table: views
           field: area_text_custom
           empty: true
-          content: 'No content available.'
+          content: 'Der er intet indhold at vise.'
           plugin_id: text_custom
       arguments: {  }
       relationships:
@@ -536,7 +536,7 @@ display:
         weight: -10
       display_extenders: {  }
     display_plugin: page
-    display_title: Page
+    display_title: Side
     id: page_1
     position: 1
     cache_metadata:

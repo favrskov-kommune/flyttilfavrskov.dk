@@ -1,5 +1,5 @@
 uuid: 7407c4e4-6de2-45b4-bbc3-26acd2391c16
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ id: site_setting_entity.footer.field_content_right
 field_name: field_content_right
 entity_type: site_setting_entity
 bundle: footer
-label: 'Content right'
+label: 'Indhold højre'
 description: ''
 required: false
 translatable: false

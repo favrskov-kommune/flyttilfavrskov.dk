@@ -1,11 +1,11 @@
 uuid: ac38329f-19d4-4430-a421-58e6767a1730
-langcode: en
+langcode: da
 status: true
 dependencies: {  }
 _core:
   default_config_hash: rpwvgyEURXLz_JjgMCrkS1rUv-0k3L79BpO-ReN7fDI
 id: node
-label: Content
+label: Indhold
 tags:
   title: '[node:title] | [site:name]'
   description: '[node:field_teaser]'

@@ -1,5 +1,5 @@
 uuid: 08919555-09ed-442a-9d8b-3faa0bf79c24
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
@@ -14,7 +14,7 @@ id: block_content.hero.field_hero_subline
 field_name: field_hero_subline
 entity_type: block_content
 bundle: hero
-label: Subline
+label: Tekst
 description: ''
 required: false
 translatable: false

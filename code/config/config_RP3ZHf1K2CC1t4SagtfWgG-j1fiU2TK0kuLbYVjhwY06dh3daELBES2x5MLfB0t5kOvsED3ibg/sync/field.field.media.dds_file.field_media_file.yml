@@ -1,5 +1,5 @@
 uuid: 74cdbb3c-7fed-4f41-a8e6-5abe66f87d23
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ id: media.dds_file.field_media_file
 field_name: field_media_file
 entity_type: media
 bundle: dds_file
-label: File
+label: Fil
 description: ''
 required: true
 translatable: true

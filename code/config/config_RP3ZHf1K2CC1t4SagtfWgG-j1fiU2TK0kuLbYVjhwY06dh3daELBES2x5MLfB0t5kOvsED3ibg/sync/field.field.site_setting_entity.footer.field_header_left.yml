@@ -1,5 +1,5 @@
 uuid: 2e85e97c-d679-4b47-a97b-4405fdb58c5e
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
@@ -11,7 +11,7 @@ id: site_setting_entity.footer.field_header_left
 field_name: field_header_left
 entity_type: site_setting_entity
 bundle: footer
-label: 'Header left'
+label: 'Overskrift venstre'
 description: ''
 required: false
 translatable: false

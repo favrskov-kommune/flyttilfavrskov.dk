@@ -1,0 +1,11 @@
+uuid: f5248188-8ca5-48cd-b7d2-3d2f8d3c8de4
+langcode: da
+status: true
+dependencies:
+  config:
+    - media.type.dds_video
+id: media.dds_video
+target_entity_type_id: media
+target_bundle: dds_video
+default_langcode: site_default
+language_alterable: false

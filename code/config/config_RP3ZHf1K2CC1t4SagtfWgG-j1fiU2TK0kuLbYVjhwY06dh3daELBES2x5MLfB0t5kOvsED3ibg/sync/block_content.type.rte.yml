@@ -1,5 +1,5 @@
 uuid: 8946d86f-3702-40cf-bc34-f7ca5546d049
-langcode: en
+langcode: da
 status: true
 dependencies:
   enforced:
@@ -8,6 +8,6 @@ dependencies:
 _core:
   default_config_hash: 31BsNUh9ZJsWpe-8n-e_nQVgyOKTM5ydnKjeVIGEEzw
 id: rte
-label: Text
+label: Tekst
 revision: 0
 description: 'A block containing an rich text editor.'

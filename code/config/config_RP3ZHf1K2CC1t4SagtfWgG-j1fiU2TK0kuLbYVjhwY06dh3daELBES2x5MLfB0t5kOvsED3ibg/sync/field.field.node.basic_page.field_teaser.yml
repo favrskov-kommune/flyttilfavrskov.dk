@@ -1,5 +1,5 @@
 uuid: e22bea64-9fcd-4a4d-ac29-cb5693a31efa
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
@@ -11,7 +11,7 @@ id: node.basic_page.field_teaser
 field_name: field_teaser
 entity_type: node
 bundle: basic_page
-label: Teaser
+label: Indledning
 description: ''
 required: false
 translatable: false

@@ -1,10 +1,10 @@
 uuid: 996fb098-1456-4f9b-87af-7809a72f84a2
-langcode: en
+langcode: da
 status: true
 dependencies: {  }
 _core:
   default_config_hash: 7yrlW5z9zdg2eBucB2GPqXKSMQfH9lSRSO4DbWF7AFc
 id: footer
-label: Footer
-description: 'Site information links'
+label: Sidefod
+description: 'Links til informationen om sitet'
 locked: true

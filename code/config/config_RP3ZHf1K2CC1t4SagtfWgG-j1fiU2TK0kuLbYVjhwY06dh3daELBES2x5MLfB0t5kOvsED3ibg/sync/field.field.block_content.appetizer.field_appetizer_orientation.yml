@@ -1,5 +1,5 @@
 uuid: 070c0338-a445-4d68-8e73-be134b5c3bf4
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
@@ -16,7 +16,7 @@ id: block_content.appetizer.field_appetizer_orientation
 field_name: field_appetizer_orientation
 entity_type: block_content
 bundle: appetizer
-label: Orientation
+label: Retning
 description: ''
 required: true
 translatable: false

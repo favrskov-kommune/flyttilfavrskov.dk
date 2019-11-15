@@ -1,5 +1,5 @@
 uuid: 8eaba96b-2b82-45b9-a6a7-a8442783aa40
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
@@ -11,7 +11,7 @@ id: site_setting_entity.cookieinfo.field_cookie_close
 field_name: field_cookie_close
 entity_type: site_setting_entity
 bundle: cookieinfo
-label: 'Close label'
+label: 'Tekst på acceptér knap'
 description: ''
 required: false
 translatable: false

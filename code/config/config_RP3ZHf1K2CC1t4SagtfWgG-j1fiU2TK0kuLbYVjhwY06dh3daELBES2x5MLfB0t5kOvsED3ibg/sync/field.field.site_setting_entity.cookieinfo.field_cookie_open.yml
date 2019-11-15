@@ -1,5 +1,5 @@
 uuid: 1224de59-5fe0-4c1b-b302-e8cc0190035b
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
@@ -11,7 +11,7 @@ id: site_setting_entity.cookieinfo.field_cookie_open
 field_name: field_cookie_open
 entity_type: site_setting_entity
 bundle: cookieinfo
-label: 'Open label'
+label: 'Knap til at åbne cookie popup'
 description: ''
 required: false
 translatable: false

@@ -1,5 +1,5 @@
 uuid: 185060bd-390c-4b93-93bf-db1b0f801e5a
-langcode: en
+langcode: da
 status: true
 dependencies:
   enforced:
@@ -8,6 +8,6 @@ dependencies:
 _core:
   default_config_hash: 4CmyuOG5rvTIScsVUiSq_B4Smz99TIOD89rdydNF8a8
 id: contact_info
-label: 'Contact information'
+label: Kontaktinformation
 fieldset: 'Contact information'
 multiple: true

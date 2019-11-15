@@ -1,5 +1,5 @@
 uuid: fbd1c330-f484-4ab4-9277-9c38549d55ce
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ id: node.editor_manual.field_meta_tags
 field_name: field_meta_tags
 entity_type: node
 bundle: editor_manual
-label: 'Meta data'
+label: Metadata
 description: ''
 required: false
 translatable: true

@@ -1,0 +1,11 @@
+uuid: ece61d35-3b1c-40b6-9a6a-f60492b7ae64
+langcode: da
+status: true
+dependencies:
+  config:
+    - media.type.dds_file
+id: media.dds_file
+target_entity_type_id: media
+target_bundle: dds_file
+default_langcode: site_default
+language_alterable: false

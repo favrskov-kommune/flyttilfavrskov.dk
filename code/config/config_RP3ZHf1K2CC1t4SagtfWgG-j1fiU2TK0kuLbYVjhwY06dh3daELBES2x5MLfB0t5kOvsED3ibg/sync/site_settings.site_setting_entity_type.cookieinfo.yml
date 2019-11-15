@@ -1,5 +1,5 @@
 uuid: c6070df3-256a-403d-aaea-96be5f62b24e
-langcode: en
+langcode: da
 status: true
 dependencies:
   enforced:
@@ -8,6 +8,6 @@ dependencies:
 _core:
   default_config_hash: JU4jrBPDg1C6rxmNPMdnIc78s9i3bx3gUzUIZHsgLes
 id: cookieinfo
-label: Cookieinfo
+label: 'Cookie popup'
 fieldset: 'Site settings'
 multiple: false

@@ -1,5 +1,5 @@
 uuid: 1ec8858d-9c88-49cc-882f-e83e54677dee
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
@@ -31,7 +31,7 @@ content:
     type: entity_reference_paragraphs
     weight: 28
     settings:
-      title: Paragraph
+      title: Paragraf
       title_plural: Paragraphs
       edit_mode: open
       add_mode: dropdown

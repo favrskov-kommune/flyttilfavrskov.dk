@@ -1,5 +1,5 @@
 uuid: 46ba3fbb-6042-43c8-9b0c-3897301f494b
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ id: media.dds_image.field_media_image
 field_name: field_media_image
 entity_type: media
 bundle: dds_image
-label: Image
+label: Billede
 description: ''
 required: true
 translatable: true

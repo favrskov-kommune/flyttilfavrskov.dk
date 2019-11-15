@@ -1,5 +1,5 @@
 uuid: 8c0bdad5-34f4-4530-a752-c75e29bf13c7
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ id: node.basic_page.field_header_color_theme
 field_name: field_header_color_theme
 entity_type: node
 bundle: basic_page
-label: 'Header color theme'
+label: 'Header farvetema'
 description: ''
 required: false
 translatable: false

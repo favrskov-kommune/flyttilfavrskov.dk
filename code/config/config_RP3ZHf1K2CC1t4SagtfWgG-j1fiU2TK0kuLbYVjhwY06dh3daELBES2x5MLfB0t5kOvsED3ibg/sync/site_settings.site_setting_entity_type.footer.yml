@@ -1,5 +1,5 @@
 uuid: 54649b63-e2b7-4cf4-a8ff-78808592e99b
-langcode: en
+langcode: da
 status: true
 dependencies:
   enforced:
@@ -8,6 +8,6 @@ dependencies:
 _core:
   default_config_hash: 9ETaYyAKhQl5A1ktrGIQYldx9eiDR1kIxBZVnBLNuJE
 id: footer
-label: 'Footer content'
+label: 'Footer indhold'
 fieldset: 'Site settings'
 multiple: false

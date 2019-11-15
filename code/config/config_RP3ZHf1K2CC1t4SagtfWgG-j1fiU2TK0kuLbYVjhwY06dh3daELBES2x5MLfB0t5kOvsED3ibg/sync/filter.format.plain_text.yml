@@ -1,10 +1,10 @@
 uuid: 4c908a22-8ee5-4023-a88a-5fec453a4146
-langcode: en
+langcode: da
 status: true
 dependencies: {  }
 _core:
   default_config_hash: NIKBt6kw_uPhNI0qtR2DnRf7mSOgAQdx7Q94SKMjXbQ
-name: 'Plain text'
+name: 'Ren tekst'
 format: plain_text
 weight: 10
 filters:

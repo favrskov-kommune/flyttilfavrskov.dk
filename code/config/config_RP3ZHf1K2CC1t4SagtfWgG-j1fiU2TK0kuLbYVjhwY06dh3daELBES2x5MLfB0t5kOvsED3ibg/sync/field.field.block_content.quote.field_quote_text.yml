@@ -1,5 +1,5 @@
 uuid: f9f276e6-20c9-4039-b107-f214bca09009
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
@@ -14,7 +14,7 @@ id: block_content.quote.field_quote_text
 field_name: field_quote_text
 entity_type: block_content
 bundle: quote
-label: Text
+label: Tekst
 description: ''
 required: false
 translatable: false

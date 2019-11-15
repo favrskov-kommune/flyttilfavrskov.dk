@@ -1,5 +1,5 @@
 uuid: ec9d4021-a3a5-4efd-99ce-5c0fc4330d7d
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ id: node.basic_page.field_header_text_color
 field_name: field_header_text_color
 entity_type: node
 bundle: basic_page
-label: 'Text color'
+label: Tekstfarve
 description: ''
 required: true
 translatable: true

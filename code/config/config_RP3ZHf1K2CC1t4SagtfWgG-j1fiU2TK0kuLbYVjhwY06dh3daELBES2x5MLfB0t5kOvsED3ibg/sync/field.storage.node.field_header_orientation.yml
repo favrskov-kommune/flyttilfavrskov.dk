@@ -1,5 +1,5 @@
 uuid: 32a24a34-fcfa-494a-be6f-9f294ddfd100
-langcode: en
+langcode: da
 status: true
 dependencies:
   enforced:
@@ -18,13 +18,13 @@ settings:
   allowed_values:
     -
       value: left
-      label: 'Align left'
+      label: Venstrejusteret
     -
       value: center
-      label: 'Align center'
+      label: Centreret
     -
       value: right
-      label: 'Align right'
+      label: Højrejusteret
   allowed_values_function: ''
 module: options
 locked: false

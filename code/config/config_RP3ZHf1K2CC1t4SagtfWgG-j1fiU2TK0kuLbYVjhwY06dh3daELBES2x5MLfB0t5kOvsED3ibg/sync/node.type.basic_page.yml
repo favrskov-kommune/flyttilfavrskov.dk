@@ -1,5 +1,5 @@
 uuid: 8a8ca288-5a1f-486f-ac33-92fd8783e54f
-langcode: en
+langcode: da
 status: true
 dependencies:
   enforced:
@@ -26,7 +26,7 @@ third_party_settings:
     unpublish_revision: false
 _core:
   default_config_hash: 63QPmiGtTkqsMcWoBllAS8Cr10H5NxNx8LB5PNiD_60
-name: 'Basic page'
+name: 'Simpel side'
 type: basic_page
 description: ''
 help: ''

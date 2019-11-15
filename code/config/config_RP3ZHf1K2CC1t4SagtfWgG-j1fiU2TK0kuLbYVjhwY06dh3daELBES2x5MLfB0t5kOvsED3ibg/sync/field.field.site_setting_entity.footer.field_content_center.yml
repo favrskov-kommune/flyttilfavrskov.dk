@@ -1,5 +1,5 @@
 uuid: 5636f857-7e59-41b5-bf7a-3d30e34f1556
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ id: site_setting_entity.footer.field_content_center
 field_name: field_content_center
 entity_type: site_setting_entity
 bundle: footer
-label: 'Content center'
+label: 'Indhold midt'
 description: ''
 required: false
 translatable: false

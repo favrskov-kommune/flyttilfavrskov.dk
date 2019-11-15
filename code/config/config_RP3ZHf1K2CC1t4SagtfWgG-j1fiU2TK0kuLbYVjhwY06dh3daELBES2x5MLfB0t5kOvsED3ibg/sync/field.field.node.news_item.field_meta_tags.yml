@@ -1,5 +1,5 @@
 uuid: 36fbbe66-bc27-4af4-8450-65265f248fe6
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ id: node.news_item.field_meta_tags
 field_name: field_meta_tags
 entity_type: node
 bundle: news_item
-label: 'Meta data'
+label: Metadata
 description: ''
 required: false
 translatable: false

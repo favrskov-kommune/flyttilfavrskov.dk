@@ -1,5 +1,5 @@
 uuid: ec2beca4-28e3-421b-bf35-1ff8b78ffd9b
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
@@ -14,7 +14,7 @@ id: paragraph.accordion_item.field_accordion_item_headline
 field_name: field_accordion_item_headline
 entity_type: paragraph
 bundle: accordion_item
-label: Headline
+label: Overskrift
 description: ''
 required: false
 translatable: false

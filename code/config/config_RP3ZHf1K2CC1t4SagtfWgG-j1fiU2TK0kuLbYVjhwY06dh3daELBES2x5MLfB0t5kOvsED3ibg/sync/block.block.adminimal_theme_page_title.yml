@@ -1,5 +1,5 @@
 uuid: 4fb89727-2fab-4173-882e-8594059b4f39
-langcode: en
+langcode: da
 status: true
 dependencies:
   theme:
@@ -14,7 +14,7 @@ provider: null
 plugin: page_title_block
 settings:
   id: page_title_block
-  label: 'Page title'
+  label: Sidetitel
   provider: core
   label_display: '0'
 visibility: {  }

@@ -1,0 +1,11 @@
+uuid: da3632c7-92ac-4071-9716-ca2f3ba94650
+langcode: da
+status: true
+dependencies:
+  config:
+    - media.type.dds_image
+id: media.dds_image
+target_entity_type_id: media
+target_bundle: dds_image
+default_langcode: site_default
+language_alterable: false

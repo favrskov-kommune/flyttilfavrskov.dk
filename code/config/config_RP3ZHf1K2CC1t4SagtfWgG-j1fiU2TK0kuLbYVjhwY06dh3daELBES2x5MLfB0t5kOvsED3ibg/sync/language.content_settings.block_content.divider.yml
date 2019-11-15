@@ -1,0 +1,11 @@
+uuid: 0da28cbc-b9de-4583-b1fd-297728f2cab1
+langcode: da
+status: true
+dependencies:
+  config:
+    - block_content.type.divider
+id: block_content.divider
+target_entity_type_id: block_content
+target_bundle: divider
+default_langcode: site_default
+language_alterable: false

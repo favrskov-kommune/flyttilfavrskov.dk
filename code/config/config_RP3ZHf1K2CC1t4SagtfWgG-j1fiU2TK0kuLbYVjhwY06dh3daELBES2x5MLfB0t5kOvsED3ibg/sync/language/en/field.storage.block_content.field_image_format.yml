@@ -1,0 +1,8 @@
+settings:
+  allowed_values:
+    -
+      label: '1:1'
+    -
+      label: '4:3'
+    -
+      label: '4:2'

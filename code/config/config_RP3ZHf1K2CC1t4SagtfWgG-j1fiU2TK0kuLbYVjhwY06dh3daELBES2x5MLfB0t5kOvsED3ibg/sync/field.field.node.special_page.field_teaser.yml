@@ -1,5 +1,5 @@
 uuid: 03076dce-a04b-4504-a314-b152b8d2acfb
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
@@ -11,7 +11,7 @@ id: node.special_page.field_teaser
 field_name: field_teaser
 entity_type: node
 bundle: special_page
-label: Teaser
+label: Indledning
 description: ''
 required: false
 translatable: true

@@ -1,5 +1,5 @@
 uuid: 5cae1c66-be6a-4529-bfeb-1eef7b49668f
-langcode: en
+langcode: da
 status: true
 dependencies:
   module:
@@ -8,9 +8,9 @@ dependencies:
 _core:
   default_config_hash: sqwEJaSgef4rCaRMf-JdNAdV_kCICU1SfQh5Wl2sUrc
 id: content_recent
-label: 'Recent content'
+label: 'Seneste indhold'
 module: node
-description: 'Recent content.'
+description: 'Seneste indhold.'
 tag: default
 base_table: node_field_data
 base_field: nid
@@ -39,13 +39,13 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Udfør
           reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          reset_button_label: Gendan
+          exposed_sorts_label: 'Sortér efter'
           expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_asc_label: Stigende
+          sort_desc_label: Faldende
       pager:
         type: some
         options:
@@ -261,7 +261,7 @@ display:
           entity_type: node
           entity_field: changed
           plugin_id: date
-      title: 'Recent content'
+      title: 'Seneste indhold'
       header: {  }
       footer: {  }
       empty:
@@ -274,7 +274,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: 'No content available.'
+          content: 'Der er intet indhold at vise.'
           plugin_id: text_custom
       relationships:
         uid:
@@ -292,7 +292,7 @@ display:
       display_extenders: {  }
       use_more: false
       use_more_always: false
-      use_more_text: More
+      use_more_text: Mere
       link_url: ''
       link_display: '0'
     cache_metadata:
@@ -307,7 +307,7 @@ display:
   block_1:
     display_plugin: block
     id: block_1
-    display_title: Block
+    display_title: Blok
     position: 1
     display_options:
       display_extenders: {  }

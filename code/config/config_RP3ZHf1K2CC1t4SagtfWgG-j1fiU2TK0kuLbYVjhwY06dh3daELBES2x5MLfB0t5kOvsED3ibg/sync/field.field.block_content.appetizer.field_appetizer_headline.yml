@@ -1,5 +1,5 @@
 uuid: 04d60ae1-701d-40b2-8cd3-3c39a4b98fa4
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
@@ -14,7 +14,7 @@ id: block_content.appetizer.field_appetizer_headline
 field_name: field_appetizer_headline
 entity_type: block_content
 bundle: appetizer
-label: Headline
+label: Overskrift
 description: ''
 required: false
 translatable: false

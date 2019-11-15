@@ -1,5 +1,5 @@
 uuid: 6c815b86-2658-438d-98b1-c55dd8e06e15
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
@@ -11,7 +11,7 @@ id: site_setting_entity.contact_info.field_telephone
 field_name: field_telephone
 entity_type: site_setting_entity
 bundle: contact_info
-label: Telephone
+label: Telefon
 description: ''
 required: false
 translatable: true

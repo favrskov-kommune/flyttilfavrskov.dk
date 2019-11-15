@@ -1,5 +1,5 @@
 uuid: aca62d91-8dc9-4a7e-bb9b-08de58a44de3
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
@@ -11,7 +11,7 @@ id: node.editor_manual.field_header_subline
 field_name: field_header_subline
 entity_type: node
 bundle: editor_manual
-label: Subline
+label: Tekst
 description: ''
 required: false
 translatable: false

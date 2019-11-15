@@ -1,5 +1,5 @@
 uuid: ce53a6c5-2944-477e-b718-f57b3ce49bd0
-langcode: en
+langcode: da
 status: true
 dependencies:
   enforced:
@@ -7,7 +7,7 @@ dependencies:
       - dds_media
 _core:
   default_config_hash: mPEAG2PTKeFV3bX7Z64EO6UICF4gmykf2RGBg7zMMDg
-name: 'Media categories'
+name: 'Medie kategorier'
 vid: media_categories
-description: 'Used to organize media'
+description: 'Bruges til at organisere media entiteter'
 weight: 0
