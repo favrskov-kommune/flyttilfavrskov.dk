@@ -9,6 +9,7 @@
 @import "drupal/forms.css";
 @import "drupal/search-page.css";
 @import "drupal/pager.css";
+@import "drupal/off-canvas.button.css";
 
 /* Site specific */
 @import "site-specific/base.css";

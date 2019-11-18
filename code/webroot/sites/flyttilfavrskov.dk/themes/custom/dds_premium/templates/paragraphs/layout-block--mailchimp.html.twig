@@ -38,14 +38,14 @@
 #}
 
 {% set classes = [
-  'paragraph',
-  'paragraph--type-' ~ paragraph.bundle|clean_class,
-  view_mode ? 'paragraph--view-mode-' ~ view_mode|clean_class,
+  'layout-block',
+  view_mode ? 'layout-block--view-mode-' ~ view_mode|clean_class,
 ] %}
 
+{% include '@dds_premium/components/atoms/a-svg-background.html.twig' %}
 {% include '@dds_premium/components/organisms/o-mailchimp.html.twig' with {
   'attributes': attributes.addClass(classes),
   'content': content,
-  'headline': headline,
+  'title': headline,
   'text': text
 } %}

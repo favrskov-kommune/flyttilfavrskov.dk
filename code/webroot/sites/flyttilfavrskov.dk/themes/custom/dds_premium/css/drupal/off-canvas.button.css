@@ -1,0 +1,20 @@
+/**
+ * @file
+ * Visual styling for buttons in the off-canvas dialog.
+ */
+
+#drupal-off-canvas button,
+#drupal-off-canvas .button {
+  border-radius: 0;
+  height: inherit;
+  margin-top: 15px;
+  background-color: #555;
+  padding: 10px;
+  display: block;
+  width: 100%;
+}
+
+#drupal-off-canvas button svg,
+#drupal-off-canvas .button svg {
+  display: none;
+}

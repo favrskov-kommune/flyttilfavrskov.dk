@@ -38,13 +38,13 @@
 #}
 
 {% set classes = [
-  'paragraph',
-  'paragraph--type-' ~ paragraph.bundle|clean_class,
-  view_mode ? 'paragraph--view-mode-' ~ view_mode|clean_class,
+  'layout-block',
+  view_mode ? 'layout-block--view-mode-' ~ view_mode|clean_class,
 ] %}
 
 {% include '@dds_premium/components/organisms/o-hero.html.twig' with {
   'attributes': hero.attributes,
+  'content_attributes': hero.content_attributes,
   'background_image': hero.background_image,
   'position': hero.position,
   'title': hero.title,

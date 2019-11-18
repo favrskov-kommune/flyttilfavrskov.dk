@@ -16,19 +16,19 @@
 {% set classes = [
   'layout',
   'layout--onecol',
-  'section',
   settings.color_theme != 'none' ? 'theme theme-' ~ settings.color_theme,
+  'section',
   not allow_spacing ? 'section--no-spacing'
 ] %}
 
 <section {{ attributes.addClass(classes) }}>
   {% if settings.column_width == 'fullwidth' %}
-    {{ content.content }}
+    <div {{ region_attributes.content.addClass('layout__region') }}>
+      {{ content.content }}
+    </div>
   {% else %}
-    <div class="container">
-{#      <div class="row">#}
-        {{ content.content }}
-{#      </div>#}
+    <div {{ region_attributes.content.addClass(['container', 'layout__region']) }}>
+      {{ content.content }}
     </div>
   {% endif %}
 </section>

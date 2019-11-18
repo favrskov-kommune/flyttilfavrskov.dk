@@ -38,9 +38,8 @@
 #}
 
 {% set classes = [
-  'paragraph',
-  'paragraph--type-' ~ paragraph.bundle|clean_class,
-  view_mode ? 'paragraph--view-mode-' ~ view_mode|clean_class,
+  'layout-block',
+  view_mode ? 'layout-block--view-mode-' ~ view_mode|clean_class,
 ] %}
 
 {% include '@dds_premium/components/molecules/m-divider.html.twig' with {

@@ -38,9 +38,8 @@
 #}
 
 {% set classes = [
-  'paragraph',
-  'paragraph--type-' ~ paragraph.bundle|clean_class,
-  view_mode ? 'paragraph--view-mode-' ~ view_mode|clean_class,
+  'layout-block',
+  view_mode ? 'layout-block--view-mode-' ~ view_mode|clean_class,
 ] %}
 
 {% include '@dds_premium/components/molecules/m-video.html.twig' with {
@@ -48,6 +47,6 @@
   'image': fields.field_video_media.thumbnail,
   'title': fields.field_video_headline,
   'subtitle': fields.field_video_subline,
-  'text_color': paragraph.field_video_text_color.value,
+  'text_color': entity.field_video_text_color.value,
   'image_style': image_style
 } %}

@@ -11,46 +11,28 @@
  */
 #}
 
-{% set columns = {
-  '25-50-25': { left: 'col-xs-12 col-md-3', center: 'col-xs-12 col-md-6', right: 'col-xs-12 col-md-3' },
-  '33-34-33': { left: 'col-xs-12 col-md-4', center: 'col-xs-12 col-md-4', right: 'col-xs-12 col-md-4' },
-  '25-25-50': { left: 'col-xs-12 col-md-3', center: 'col-xs-12 col-md-3', right: 'col-xs-12 col-md-6' },
-  '50-25-25': { left: 'col-xs-12 col-md-6', center: 'col-xs-12 col-md-3', right: 'col-xs-12 col-md-3' }
-} %}
-
-{% set column_style = settings.column_widths ? settings.column_widths : '33-34-33' %}
-
 {% set allow_spacing = settings.column_spacing and settings.column_spacing != 'none' %}
 
 {% set classes = [
-  'section',
+  'layout',
+  'layout--threecol',
   settings.color_theme != 'none' ? 'theme theme-' ~ settings.color_theme,
+  'section',
   not allow_spacing ? 'section--no-spacing'
 ] %}
 
-
-{% if content %}
-  <section {{ attributes.addClass(classes) }}>
-    <div class="container">
-      <div class="row">
-        {% if content.first %}
-          <div {{ region_attributes.first.addClass('layout__region', 'layout__region--first', columns[column_style].left) }}>
-            {{ content.first }}
-          </div>
-        {% endif %}
-
-        {% if content.second %}
-          <div {{ region_attributes.second.addClass('layout__region', 'layout__region--second', columns[column_style].center) }}>
-            {{ content.second }}
-          </div>
-        {% endif %}
-
-        {% if content.third %}
-          <div {{ region_attributes.third.addClass('layout__region', 'layout__region--third', columns[column_style].right) }}>
-            {{ content.third }}
-          </div>
-        {% endif %}
+<section {{ attributes.addClass(classes) }}>
+  <div class="container">
+    <div class="row">
+      <div {{ region_attributes.first.addClass(['col-xs-12', 'col-md-4', 'layout__region']) }}>
+        {{ content.first }}
+      </div>
+      <div {{ region_attributes.second.addClass(['col-xs-12', 'col-md-4', 'layout__region']) }}>
+        {{ content.second }}
+      </div>
+      <div {{ region_attributes.third.addClass(['col-xs-12', 'col-md-4', 'layout__region']) }}>
+        {{ content.third }}
       </div>
     </div>
-  </section>
-{% endif %}
+  </div>
+</section>
