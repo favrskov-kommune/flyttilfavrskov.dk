@@ -1,0 +1,11 @@
+uuid: 188a2e3e-2e7c-4a72-a719-16aee0a067de
+langcode: da
+status: true
+dependencies:
+  config:
+    - node.type.special_page
+id: node.special_page
+target_entity_type_id: node
+target_bundle: special_page
+default_langcode: da
+language_alterable: false

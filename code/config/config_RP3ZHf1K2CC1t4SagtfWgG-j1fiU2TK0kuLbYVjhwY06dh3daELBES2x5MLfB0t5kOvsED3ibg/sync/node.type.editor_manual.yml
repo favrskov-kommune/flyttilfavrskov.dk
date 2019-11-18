@@ -23,6 +23,7 @@ third_party_settings:
     unpublish_enable: false
     unpublish_required: false
     unpublish_revision: false
+    publish_past_date_created: false
 _core:
   default_config_hash: bTfce_qosI6CdCWHP8JNOxcXYo_2WgpVqpujbZTqFag
 name: 'Editor Manual Page'

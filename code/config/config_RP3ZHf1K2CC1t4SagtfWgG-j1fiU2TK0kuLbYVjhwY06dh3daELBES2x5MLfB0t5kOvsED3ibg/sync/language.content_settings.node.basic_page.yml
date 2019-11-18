@@ -1,0 +1,11 @@
+uuid: aa9afa08-626b-4f10-8cdd-345cb86fa973
+langcode: da
+status: true
+dependencies:
+  config:
+    - node.type.basic_page
+id: node.basic_page
+target_entity_type_id: node
+target_bundle: basic_page
+default_langcode: da
+language_alterable: false
