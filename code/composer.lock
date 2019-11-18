@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "e5c8d153e2338d5959732b172cef8c47",
@@ -6106,9 +6106,7 @@
             "version": "2.0.8",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/d/novicell%2Fdds/novicell%2Fdds-2.0.8",
-                "reference": null,
-                "shasum": null
+                "url": "https://packages.drupal.dk/php/~/d/novicell%2Fdds/novicell%2Fdds-2.0.8"
             },
             "require": {
                 "php": ">=5.6.0"
@@ -6127,9 +6125,7 @@
             "version": "1.3.2",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_1lYhks/novicelldds_content-1-3-2.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://packages.drupal.dk/php/~/up/ver_1lYhks/novicelldds_content-1-3-2.zip"
             },
             "require": {
                 "drupal/autosave_form": "~1.0",
@@ -6147,9 +6143,7 @@
             "version": "2.2.7",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_23uh7v/novicelldds_content_hierarchy-2-2-7.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://packages.drupal.dk/php/~/up/ver_23uh7v/novicelldds_content_hierarchy-2-2-7.zip"
             },
             "require": {
                 "drupal/ctools": "~3.0",
@@ -6164,9 +6158,7 @@
             "version": "2.1.0",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/d/novicell%2Fdds_cookieinfo/novicell%2Fdds_cookieinfo-2.1.0",
-                "reference": null,
-                "shasum": null
+                "url": "https://packages.drupal.dk/php/~/d/novicell%2Fdds_cookieinfo/novicell%2Fdds_cookieinfo-2.1.0"
             },
             "require": {
                 "novicell/dds_site_settings": "^2.0"
@@ -6178,9 +6170,7 @@
             "version": "1.0.7",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_1Tw7GG/novicelldds_editors-1-0-7.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://packages.drupal.dk/php/~/up/ver_1Tw7GG/novicelldds_editors-1-0-7.zip"
             },
             "require": {
                 "drupal/role_delegation": "^1.0"
@@ -6192,9 +6182,7 @@
             "version": "1.6.3",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_1o1Nbg/novicelldds_elasticsearch-1-6-3.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://packages.drupal.dk/php/~/up/ver_1o1Nbg/novicelldds_elasticsearch-1-6-3.zip"
             },
             "require": {
                 "drupal/elasticsearch_connector": "^6.0@alpha",
@@ -6208,9 +6196,7 @@
             "version": "1.1.0",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/d/novicell%2Fdds_entity_data/novicell%2Fdds_entity_data-1.1.0",
-                "reference": null,
-                "shasum": null
+                "url": "https://packages.drupal.dk/php/~/d/novicell%2Fdds_entity_data/novicell%2Fdds_entity_data-1.1.0"
             },
             "require": {
                 "novicell/dds": "^2.0"
@@ -6219,12 +6205,10 @@
         },
         {
             "name": "novicell/dds_layouts",
-            "version": "1.1.14",
+            "version": "1.1.15",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_1ST2R3/novicelldds_layouts-1-1-14.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://packages.drupal.dk/php/~/up/ver_ldgmP/novicelldds_layouts-1-1-15.zip"
             },
             "require": {
                 "drupal/inline_block_title_automatic": "^1.0@alpha",
@@ -6238,9 +6222,7 @@
             "version": "2.2.2",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_1xQtZ8/novicelldds_media-2-2-2.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://packages.drupal.dk/php/~/up/ver_1xQtZ8/novicelldds_media-2-2-2.zip"
             },
             "require": {
                 "drupal/ctools": "^3.0",
@@ -6255,9 +6237,7 @@
             "version": "1.2.1",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/d/novicell%2Fdds_monitor/novicell%2Fdds_monitor-1.2.1",
-                "reference": null,
-                "shasum": null
+                "url": "https://packages.drupal.dk/php/~/d/novicell%2Fdds_monitor/novicell%2Fdds_monitor-1.2.1"
             },
             "type": "drupal-module"
         },
@@ -6266,9 +6246,7 @@
             "version": "1.1.2",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_NfWwg/novicelldds_news-1-1-2.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://packages.drupal.dk/php/~/up/ver_NfWwg/novicelldds_news-1-1-2.zip"
             },
             "require": {
                 "novicell/dds_content": "~1.0"
@@ -6280,9 +6258,7 @@
             "version": "2.2.6",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_10K5V5/novicelldds_paragraph_widgets-2-2-6.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://packages.drupal.dk/php/~/up/ver_10K5V5/novicelldds_paragraph_widgets-2-2-6.zip"
             },
             "require": {
                 "drupal/paragraphs": "^1.6"
@@ -6294,9 +6270,7 @@
             "version": "2.3.6",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_1h5Qm/novicelldds_paragraphs-2-3-6.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://packages.drupal.dk/php/~/up/ver_1h5Qm/novicelldds_paragraphs-2-3-6.zip"
             },
             "require": {
                 "drupal/paragraphs": "^1.6"
@@ -6308,9 +6282,7 @@
             "version": "2.0.17",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_1J7bkL/novicelldds_premium_installer-2-0-17.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://packages.drupal.dk/php/~/up/ver_1J7bkL/novicelldds_premium_installer-2-0-17.zip"
             },
             "require": {
                 "drupal/admin_toolbar": "~1.17",
@@ -6326,9 +6298,7 @@
             "version": "1.0.3",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_KshRf/novicelldds_search-1-0-3.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://packages.drupal.dk/php/~/up/ver_KshRf/novicelldds_search-1-0-3.zip"
             },
             "require": {
                 "drupal/search_api_exclude_entity": "^1.0",
@@ -6341,9 +6311,7 @@
             "version": "1.0.4",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_16aE20/novicelldds_seo-1-0-4.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://packages.drupal.dk/php/~/up/ver_16aE20/novicelldds_seo-1-0-4.zip"
             },
             "require": {
                 "drupal/gtm": "^1.1",
@@ -6361,9 +6329,7 @@
             "version": "2.1.5",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_1y3PGv/novicelldds_site_settings-2-1-5.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://packages.drupal.dk/php/~/up/ver_1y3PGv/novicelldds_site_settings-2-1-5.zip"
             },
             "require": {
                 "drupal/site_settings": "^1.13",
@@ -6376,9 +6342,7 @@
             "version": "1.0.5",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_1S5HbX/novicelldds_translation-1-0-5.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://packages.drupal.dk/php/~/up/ver_1S5HbX/novicelldds_translation-1-0-5.zip"
             },
             "require": {
                 "drupal/layout_builder_at": "^2.10"
