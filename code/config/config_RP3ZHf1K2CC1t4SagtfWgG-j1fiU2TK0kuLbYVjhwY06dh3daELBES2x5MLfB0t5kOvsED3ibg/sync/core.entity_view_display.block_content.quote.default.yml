@@ -1,0 +1,46 @@
+uuid: c2d5eea2-4797-4ed1-acb4-fc272f450199
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.quote
+    - field.field.block_content.quote.field_quote_image
+    - field.field.block_content.quote.field_quote_source
+    - field.field.block_content.quote.field_quote_text
+  enforced:
+    module:
+      - dds_layout_block_quote
+_core:
+  default_config_hash: mf_v5IBgNRKunRw6fSjxJVjGGgr6wchckiUbjf-0ebg
+id: block_content.quote.default
+targetEntityType: block_content
+bundle: quote
+mode: default
+content:
+  field_quote_image:
+    type: entity_reference_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_quote_source:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_quote_text:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

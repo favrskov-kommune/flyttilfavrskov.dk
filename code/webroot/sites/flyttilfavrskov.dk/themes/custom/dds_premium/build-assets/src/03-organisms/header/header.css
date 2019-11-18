@@ -10,7 +10,7 @@
     z-index: 100;
     box-shadow: 0 25px 75px rgba(0, 0, 0, 0.1);
 
-    @media (--viewport-md-min) {
+    @media (--viewport-lg-min) {
         bottom: auto;
         top: 0;
     }
@@ -21,7 +21,7 @@
         justify-content: space-between;
         height: var(--header-height-mobile);
 
-        @media (--viewport-md-min) {
+        @media (--viewport-lg-min) {
             height: var(--header-height);
             justify-content: flex-end;
         }

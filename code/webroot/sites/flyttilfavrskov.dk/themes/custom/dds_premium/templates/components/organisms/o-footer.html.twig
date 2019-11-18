@@ -1,15 +1,17 @@
 {% set number_of_cols = 12 / cols|length %}
 <footer class="footer">
-  <section{{ attributes }}>
+  <div{{ attributes.addClass('footer__inner') }}>
     <div class="container">
       <div class="row">
         {% for col in cols %}
           <div class="col-xs-12 col-md-{{ number_of_cols }}">
-            <h4>{{ col.headline }}</h4>
+            {% if col.headline %}
+              <div><b>{{ col.headline }}</b></div>
+            {% endif %}
             {{ col.content }}
           </div>
         {% endfor %}
       </div>
     </div>
-  </section>
+  </div>
 </footer>

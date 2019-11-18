@@ -1,13 +1,14 @@
 .theme-secondary {
-    --theme-background-color: #E7EBE3;
+    --theme-background-color: #e7ebe3;
     --theme-color: #474747;
-    --theme-button-background-color: #DB6010;
-    --theme-button-color: #E7EBE3;
-    --theme-link-color: #474747;
-    --theme-divider-background-color: #474747;
-    --theme-accordion-border-color: #E7EBE3;
-    --theme-accordion-background-color: #fff;
-    --theme-accordion-text-color: #474747;
-    --theme-input-border: #474747;
+    --theme-button-background-color: #db6010;
+    --theme-button-color: #fff;
+    --theme-link-color: #fff;
+    --theme-divider-background-color: #fff;
+    --theme-accordion-border-color: #474747;
+    --theme-accordion-background-color: #474747;
+    --theme-accordion-text-color: #fff;
+    --theme-input-border: #fff;
     --theme-input-color-marked: #474747;
+    --theme-background-svg-background-color: #d1e0dc;
 }

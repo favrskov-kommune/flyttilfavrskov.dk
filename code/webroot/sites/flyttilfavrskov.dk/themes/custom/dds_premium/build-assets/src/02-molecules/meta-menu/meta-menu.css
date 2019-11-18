@@ -1,7 +1,7 @@
 .meta-menu {
     background-color: var(--meta-menu-background-color);
 
-    @media (--viewport-sm-max) {
+    @media (--viewport-md-max) {
         display: none;
     }
 

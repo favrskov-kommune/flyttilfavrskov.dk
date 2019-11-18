@@ -1,4 +1,5 @@
 .section {
+    position: relative;
     padding-top: var(--grid-section-spacing--mobile);
     padding-bottom: var(--grid-section-spacing--mobile);
 
@@ -24,6 +25,16 @@
         position: relative;
         z-index: 10;
         margin-top: var(--move-up-amount);
+    }
+
+    .svg-background {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        height: 100%;
+        fill: var(--theme-background-svg-background-color);
+        background: var(--theme-background-color);
+        transform: translateX(-50%);
     }
 }
 
@@ -67,12 +78,6 @@
 
 .col.reverse {
     flex-direction: column-reverse;
-}
-
-[class^='col-'] {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
 }
 
 .col-xs,

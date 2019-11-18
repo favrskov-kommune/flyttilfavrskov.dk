@@ -1,0 +1,25 @@
+uuid: 6831a961-9221-47d2-82ad-ff2b6ee7f6a5
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_layout_block_inline_navigation
+  module:
+    - block_content
+    - node
+_core:
+  default_config_hash: c0cN2hNPHsNibeo4hxlu479j9Qp7hYqbWmsLV09pvOM
+id: block_content.field_inline_navigation_pages
+field_name: field_inline_navigation_pages
+entity_type: block_content
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

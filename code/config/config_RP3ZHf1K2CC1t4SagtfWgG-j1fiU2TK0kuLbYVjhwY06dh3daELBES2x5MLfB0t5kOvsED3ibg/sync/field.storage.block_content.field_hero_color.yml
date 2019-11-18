@@ -1,0 +1,32 @@
+uuid: 676aa764-3b99-4ebc-861b-ea3c66bdf642
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_layout_block_hero
+  module:
+    - block_content
+    - options
+_core:
+  default_config_hash: 9z2drO_C-juF4LfUFKYxv3vBCgK42pE0z5-lRbhAbjg
+id: block_content.field_hero_color
+field_name: field_hero_color
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: dark
+      label: Dark
+    -
+      value: light
+      label: Light
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

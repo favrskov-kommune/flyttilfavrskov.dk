@@ -1,4 +1,4 @@
-<a href="#" class="button {{ modifier }}">
+<a href="#" class="button {{ modifier }}" {{#if clickMethod }}@click.prevent="{{ clickMethod }}"{{/if}}>
     {{ text }}
     {{> '@svg-icon' svgIconName="arrow-right" }}
 </a>

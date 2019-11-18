@@ -24,6 +24,7 @@ third_party_settings:
     unpublish_enable: true
     unpublish_required: false
     unpublish_revision: false
+    publish_past_date_created: false
 _core:
   default_config_hash: 9H8T1b7qkkO2Ay8ypbbAcBFRQ_f9YGXFOFFphBQ9DqQ
 name: 'News item'

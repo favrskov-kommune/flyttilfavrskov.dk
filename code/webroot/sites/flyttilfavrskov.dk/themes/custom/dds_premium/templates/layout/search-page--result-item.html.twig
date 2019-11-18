@@ -1,8 +1,12 @@
 <div class="col-xs-12 col-md-6">
   <a href="{{ url }}" class="list-view-item">
-    <figure class="list-view-item__image">
+    <figure{{ create_attribute.addClass('list-view-item__image').addClass(not image ? 'list-view-item__image--fallback') }}>
       {% if content.image %}
         {{ content.image }}
+      {% else %}
+        {% include '@dds_premium/components/atoms/a-svg-icon.html.twig' with {
+          'svgIconName': 'no-image'
+        } %}
       {% endif %}
     </figure>
     <div class="list-view-item__content">

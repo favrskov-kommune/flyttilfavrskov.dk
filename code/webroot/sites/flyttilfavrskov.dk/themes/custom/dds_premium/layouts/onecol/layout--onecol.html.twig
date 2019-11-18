@@ -1,0 +1,34 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a one-column layout.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% set allow_spacing = settings.column_spacing and settings.column_spacing != 'none' %}
+
+{% set classes = [
+  'layout',
+  'layout--onecol',
+  settings.color_theme != 'none' ? 'theme theme-' ~ settings.color_theme,
+  'section',
+  not allow_spacing ? 'section--no-spacing'
+] %}
+
+<section {{ attributes.addClass(classes) }}>
+  {% if settings.column_width == 'fullwidth' %}
+    <div {{ region_attributes.content.addClass('layout__region') }}>
+      {{ content.content }}
+    </div>
+  {% else %}
+    <div {{ region_attributes.content.addClass(['container', 'layout__region']) }}>
+      {{ content.content }}
+    </div>
+  {% endif %}
+</section>

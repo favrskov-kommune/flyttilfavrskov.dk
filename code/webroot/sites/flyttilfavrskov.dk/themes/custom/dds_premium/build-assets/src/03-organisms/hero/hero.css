@@ -3,7 +3,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    color: black;
 
     &::before {
         content: '';
@@ -12,7 +11,8 @@
         right: 0;
         bottom: 0;
         left: 0;
-        background-color: rgba(0, 0, 0, 0.3);
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), linear-gradient(0deg, #fff, #fff);
+        opacity: 0.25;
         z-index: 1;
     }
 
@@ -32,11 +32,6 @@
         align-items: flex-start;
         position: relative;
         z-index: 2;
-        height: 100vh;
-
-        @media (--viewport-md-min) {
-            height: calc(90vh - var(--header-height));
-        }
     }
 
     &__title {
@@ -44,11 +39,11 @@
         font-size: 30px;
         letter-spacing: 0.2px;
         line-height: 35px;
-        margin-bottom: ¨18px;
+        font-family: var(--heading-font-family);
 
         @media (--viewport-sm-min) {
             margin-bottom: 25px;
-            font-size: 55px;
+            font-size: 60px;
             letter-spacing: 0.37px;
             line-height: 60px;
         }
@@ -56,16 +51,19 @@
 
     &__description {
         font-family: var(--heading-font-family);
+        font-weight: 300;
         font-size: 18px;
         letter-spacing: 0.44px;
         line-height: 24px;
-        margin-bottom: 25px;
+        margin-bottom: 0;
+
+        & + .button { margin-top: 25px; }
 
         @media (--viewport-sm-min) {
-            font-size: 25px;
+            font-size: 40px;
             letter-spacing: 0.61px;
-            line-height: 29px;
-            margin-bottom: 30px;
+            line-height: 56px;
+            & + .button { margin-top: 30px; }
         }
     }
 
@@ -131,5 +129,58 @@
 
     &--inverted {
         color: white;
+
+        &::before {
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.0001) 100%), linear-gradient(0deg, #000, #000);
+        }
+    }
+}
+
+/* Add height for hero */
+.hero,
+.hero__content {
+    height: 460px;
+
+    &--small {
+        height: 440px;
+
+        .hero__title {
+            @media (--viewport-sm-min) {
+                margin-bottom: 40px;
+                font-size: 40px;
+                letter-spacing: 0.23px;
+                line-height: 55px;
+            }
+        }
+
+        .hero__description {
+            @media (--viewport-sm-min) {
+                font-size: 18px;
+                letter-spacing: 0.48px;
+                line-height: 24px;
+
+                & + .button { margin-top: 45px; }
+            }
+        }
+    }
+
+    &--medium {
+        @media (--viewport-ms-min) {
+            height: 540px;
+        }
+    }
+
+    &:not(&--medium, &--small) {
+        @media (--viewport-ms-min) {
+            height: 580px;
+        }
+
+        @media (--viewport-sm-min) {
+            height: 750px;
+        }
+
+        @media (--viewport-md-min) {
+            height: 800px;
+        }
     }
 }

@@ -1,0 +1,28 @@
+uuid: 5690f9ea-55ba-49d8-97ce-f562e16b22a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.news_list
+    - field.storage.block_content.field_newslist_selection
+  enforced:
+    module:
+      - dds_layout_block_news_list
+  module:
+    - options
+_core:
+  default_config_hash: DTUL7QTdxWQ6GXs7KMKX6bBbeC4bJ8K9pookGT16o2g
+id: block_content.news_list.field_newslist_selection
+field_name: field_newslist_selection
+entity_type: block_content
+bundle: news_list
+label: 'Selection type'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: automatic
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,2 +1,3 @@
 ignored_nodes:
   news_item: news_item
+  editor_manual: editor_manual

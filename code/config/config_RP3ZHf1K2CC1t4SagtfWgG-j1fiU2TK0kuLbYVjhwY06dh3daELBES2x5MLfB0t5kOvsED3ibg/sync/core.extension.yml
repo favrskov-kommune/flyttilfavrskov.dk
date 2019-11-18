@@ -1,5 +1,6 @@
 module:
   admin_toolbar: 0
+  admin_toolbar_links_access_filter: 0
   admin_toolbar_tools: 0
   adminimal_admin_toolbar: 0
   automated_cron: 0
@@ -23,26 +24,25 @@ module:
   dds_content_hierarchy_breadcrumb: 0
   dds_content_hierarchy_path: 0
   dds_cookieinfo: 0
+  dds_editor_manual: 0
   dds_editors: 0
   dds_elasticsearch: 0
+  dds_entity_data: 0
+  dds_layout_block_accordion: 0
+  dds_layout_block_appetizer: 0
+  dds_layout_block_button: 0
+  dds_layout_block_divider: 0
+  dds_layout_block_hero: 0
+  dds_layout_block_image: 0
+  dds_layout_block_inline_navigation: 0
+  dds_layout_block_mailchimp: 0
+  dds_layout_block_news_list: 0
+  dds_layout_block_quote: 0
+  dds_layout_block_rte: 0
+  dds_layout_block_slideshow: 0
   dds_layouts: 0
   dds_media: 0
   dds_news: 0
-  dds_paragraph_widgets: 0
-  dds_paragraphs: 0
-  dds_paragraphs_accordion: 0
-  dds_paragraphs_appetizer: 0
-  dds_paragraphs_button: 0
-  dds_paragraphs_divider: 0
-  dds_paragraphs_hero: 0
-  dds_paragraphs_image: 0
-  dds_paragraphs_inline_navigation: 0
-  dds_paragraphs_mailchimp: 0
-  dds_paragraphs_news_list: 0
-  dds_paragraphs_quote: 0
-  dds_paragraphs_rte: 0
-  dds_paragraphs_slideshow: 0
-  dds_paragraphs_video: 0
   dds_search: 0
   dds_seo: 0
   dds_site_settings: 0
@@ -66,8 +66,13 @@ module:
   history: 0
   hreflang: 0
   image: 0
+  inline_block_title_automatic: 0
+  language: 0
+  layout_builder: 0
+  layout_builder_modal: 0
   layout_discovery: 0
   link: 0
+  locale: 0
   mailchimp: 0
   mailchimp_signup: 0
   media: 0
@@ -79,6 +84,7 @@ module:
   options: 0
   page_cache: 0
   path: 0
+  path_alias: 0
   quickedit: 0
   rdf: 0
   responsive_image: 0
@@ -100,6 +106,7 @@ module:
   pathauto: 1
   views: 10
   paragraphs: 11
+  dds_layout_blocks: 100
   dds_premium_installer: 1000
 theme:
   stable: 0

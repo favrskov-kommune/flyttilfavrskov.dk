@@ -1,0 +1,17 @@
+uuid: c7d55677-5374-46dd-b5e8-00e27065fc68
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: appetiser_wide_md_
+label: 'Appetiser wide (MD)'
+effects:
+  a68033bc-f10b-4773-9163-4f25f1719a7c:
+    uuid: a68033bc-f10b-4773-9163-4f25f1719a7c
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 900
+      crop_type: focal_point

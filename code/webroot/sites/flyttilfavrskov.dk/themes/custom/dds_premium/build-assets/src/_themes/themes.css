@@ -22,7 +22,12 @@
     }
 
     .accordion {
-        &__items--has-children,
+        &__items--has-children {
+            border-color: var(--theme-accordion-border-color);
+        }
+    }
+
+    .accordion-item {
         &__content--active,
         &__headline {
             border-color: var(--theme-accordion-border-color);
@@ -60,7 +65,7 @@
     .textarea,
     .select {
         color: var(--theme-color);
-        background-color: var(--theme-background-color);
+        background-color: var(--theme-input-background-color);
         border-color: var(--theme-input-border);
 
         &:focus {

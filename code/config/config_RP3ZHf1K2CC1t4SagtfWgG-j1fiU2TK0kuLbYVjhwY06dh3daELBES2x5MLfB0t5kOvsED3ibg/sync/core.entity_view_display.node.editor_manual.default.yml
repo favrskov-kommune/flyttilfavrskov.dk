@@ -1,0 +1,45 @@
+uuid: eee57871-f15d-4945-87ce-c6aa0d481b1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.editor_manual.field_header_background
+    - field.field.node.editor_manual.field_header_color_theme
+    - field.field.node.editor_manual.field_header_cta
+    - field.field.node.editor_manual.field_header_orientation
+    - field.field.node.editor_manual.field_header_subline
+    - field.field.node.editor_manual.field_header_text_color
+    - field.field.node.editor_manual.field_hide_breadcrumb
+    - field.field.node.editor_manual.field_meta_tags
+    - field.field.node.editor_manual.field_teaser
+    - field.field.node.editor_manual.layout_builder__layout
+    - node.type.editor_manual
+  module:
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: true
+    enabled: true
+_core:
+  default_config_hash: 4j7pdYkril9-3vDhPSeUUDoJwpxxbryu0ZlyFAGxi2Q
+id: node.editor_manual.default
+targetEntityType: node
+bundle: editor_manual
+mode: default
+content: {  }
+hidden:
+  field_header_background: true
+  field_header_color_theme: true
+  field_header_cta: true
+  field_header_orientation: true
+  field_header_subline: true
+  field_header_text_color: true
+  field_hide_breadcrumb: true
+  field_meta_tags: true
+  field_parent: true
+  field_teaser: true
+  langcode: true
+  layout_builder__layout: true
+  links: true
+  search_api_excerpt: true

@@ -1,0 +1,60 @@
+uuid: 54316988-9af7-4014-bf89-5236dfc4636f
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.large
+    - image.style.list_view_xs_
+    - image.style.list_view_lg_
+    - image.style.list_view_md_
+    - image.style.list_view_sm_
+    - image.style.list_view_xsx2_
+    - image.style.list_view_xxs_
+    - image.style.list_view_xxsx2_
+  theme:
+    - dds_premium
+id: list_view
+label: 'List view'
+image_style_mappings:
+  -
+    breakpoint_id: dds_premium.xl
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: list_view_lg_
+  -
+    breakpoint_id: dds_premium.lg
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: list_view_lg_
+  -
+    breakpoint_id: dds_premium.md
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: list_view_md_
+  -
+    breakpoint_id: dds_premium.sm
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: list_view_sm_
+  -
+    breakpoint_id: dds_premium.xs
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: list_view_
+  -
+    breakpoint_id: dds_premium.xs
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: list_view_xsx2_
+  -
+    breakpoint_id: dds_premium.xxs
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: list_view_xxs_
+  -
+    breakpoint_id: dds_premium.xxs
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: list_view_xxsx2_
+breakpoint_group: dds_premium
+fallback_image_style: large

@@ -25,9 +25,8 @@
             <span class="text-link">Link – I am a text link</span>
         </a>
         <a href="/" class="inline-navigation-item">
-            <figure class="inline-navigation-item__image">
-                <img class="lazyload lazyload-measure lazyload-bg" data-src="/dist/images/hero.jpg" alt="Image"
-                    data-query-obj='{"mode":"crop", "quality":"70", "center": "0.8,0.3"}' />
+            <figure class="inline-navigation-item__image inline-navigation-item__image--fallback">
+                {{> '@svg-icon' svgIconName="no-image" }}
             </figure>
             <h3 class="inline-navigation-item__title">I am a smaller headline and I am bold</h3>
             <p class="inline-navigation-item__text">

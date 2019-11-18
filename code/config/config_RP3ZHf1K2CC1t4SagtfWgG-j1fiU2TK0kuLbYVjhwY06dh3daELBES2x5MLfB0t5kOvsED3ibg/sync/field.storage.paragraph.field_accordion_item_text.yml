@@ -1,15 +1,15 @@
-uuid: ad305450-3a56-4dc5-acd0-39e9f8a964d9
+uuid: 73f0779c-3f17-4ab6-a46b-bfee36f7c63c
 langcode: en
 status: true
 dependencies:
   enforced:
     module:
-      - dds_paragraphs_accordion
+      - dds_layout_block_accordion
   module:
     - paragraphs
     - text
 _core:
-  default_config_hash: BQwWKj5Jt9A-I80D1yRUnAyEAhtGDcVVc6-8j8aA9E0
+  default_config_hash: l3MYUp4QRP63yAAwOnnWLXeWUKJ2bSzQSz_BdPdsFO8
 id: paragraph.field_accordion_item_text
 field_name: field_accordion_item_text
 entity_type: paragraph

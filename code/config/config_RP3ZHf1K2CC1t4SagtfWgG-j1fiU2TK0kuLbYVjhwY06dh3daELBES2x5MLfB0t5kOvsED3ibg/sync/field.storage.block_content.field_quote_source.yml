@@ -1,0 +1,26 @@
+uuid: 437e9187-5e52-4f1e-85c2-c70d7b47ba6f
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_layout_block_quote
+  module:
+    - block_content
+_core:
+  default_config_hash: iZHCcuXmY4156V9EyZVKgagIY27DAh0_6c0_p1k_e8M
+id: block_content.field_quote_source
+field_name: field_quote_source
+entity_type: block_content
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

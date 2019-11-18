@@ -5,10 +5,11 @@
     height: 100%;
     display: inline-flex;
     align-items: center;
-    font-weight: 300;
-    font-size: 15px;
+    color: #232323;
+    letter-spacing: 0.37px;
+    transition: margin-left 0.2s;
 
-    @media (--viewport-sm-max) {
+    @media (--viewport-md-max) {
         width: 50%;
         flex-shrink: 0;
         flex-grow: 0;
@@ -17,17 +18,21 @@
         justify-content: center;
     }
 
-    @media (--viewport-md-min) {
-        height: 70%;
-        margin-left: 40px;
+    @media (--viewport-lg-min) {
+        margin-left: 20px;
         padding-left: 40px;
-        border-left: solid 1px #a7a7a7;
+        border-left: solid 1px #ee8027;
+        height: 72%;
+    }
+
+    @media (--viewport-xl-min) {
+        margin-left: 77px;
     }
 
     .icon--search {
         width: 26px;
         height: 26px;
         fill: var(--header-selected-text-color);
-        margin-right: 10px;
+        margin-right: 13px;
     }
 }

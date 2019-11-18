@@ -34,7 +34,7 @@
     }
 
     &__close-label {
-        @media (--viewport-sm-max) {
+        @media (--viewport-md-max) {
             display: none;
         }
     }

@@ -1,0 +1,43 @@
+uuid: 721ebf4a-f5dd-4031-87ee-fdfc1c650c52
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.rte
+    - field.field.block_content.rte.field_text
+  enforced:
+    module:
+      - dds_layout_block_rte
+  module:
+    - text
+_core:
+  default_config_hash: j6gpGdp3TmN8Yf0M8o9JfFBPeWbHIRRwdinUhC6e1do
+id: block_content.rte.default
+targetEntityType: block_content
+bundle: rte
+mode: default
+content:
+  field_text:
+    weight: 27
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

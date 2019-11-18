@@ -10,6 +10,7 @@
     color: currentColor;
     margin-bottom: 60px;
     flex-direction: column;
+    width: 100%;
 
     @media (--viewport-md-min) {
         flex-direction: row;
@@ -21,14 +22,27 @@
         background-position: 50% 50%;
         width: 100%;
         flex-shrink: 0;
-        height: 200px;
         margin-bottom: 20px;
+        min-height: 200px;
+
+        &--fallback {
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                width: 20%;
+                height: 20%;
+                opacity: 0.5;
+            }
+        }
 
         @media (--viewport-md-min) {
             margin-right: 20px;
             margin-bottom: 0;
             height: auto;
-            width: 30%;
+            width: 25%;
         }
     }
 

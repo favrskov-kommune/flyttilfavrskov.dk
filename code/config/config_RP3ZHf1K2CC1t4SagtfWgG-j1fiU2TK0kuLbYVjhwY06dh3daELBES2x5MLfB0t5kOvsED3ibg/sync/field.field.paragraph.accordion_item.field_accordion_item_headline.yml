@@ -1,12 +1,15 @@
-uuid: 720c9197-782a-4df6-8a70-2a466482d222
+uuid: ec2beca4-28e3-421b-bf35-1ff8b78ffd9b
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_accordion_item_headline
     - paragraphs.paragraphs_type.accordion_item
+  enforced:
+    module:
+      - dds_layout_block_accordion
 _core:
-  default_config_hash: 7AO7iIWhxSPrF8e2RnNMxVqrYVFcmd7If9PnZjLYcZU
+  default_config_hash: dXd_RuDI4Mzpts97Iz97Ra0fuCSH7HhoIAQpmqe8jNI
 id: paragraph.accordion_item.field_accordion_item_headline
 field_name: field_accordion_item_headline
 entity_type: paragraph

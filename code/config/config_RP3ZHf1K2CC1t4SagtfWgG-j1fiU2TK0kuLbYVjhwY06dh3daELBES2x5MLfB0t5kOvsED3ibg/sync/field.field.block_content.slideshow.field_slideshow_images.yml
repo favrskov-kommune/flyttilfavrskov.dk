@@ -1,0 +1,33 @@
+uuid: 606f8494-ab75-4fc6-afbe-30db2bf7d2ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.slideshow
+    - field.storage.block_content.field_slideshow_images
+    - media.type.dds_image
+  enforced:
+    module:
+      - dds_layout_block_slideshow
+_core:
+  default_config_hash: sc1IcCpotPLIhxzMfkkKSHjyzbY19TISMRr3RRFQb0Y
+id: block_content.slideshow.field_slideshow_images
+field_name: field_slideshow_images
+entity_type: block_content
+bundle: slideshow
+label: Images
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      dds_image: dds_image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

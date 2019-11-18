@@ -1,38 +1,53 @@
+import Vue from 'vue';
+
 document.addEventListener('DOMContentLoaded', () => {
   const accordions = document.querySelectorAll('.js-accordion');
   if (accordions.length === 0) {
     return;
   }
 
-  for (let i = 0; i < accordions.length; i += 1) {
-    const accordion = accordions[i];
-    const items = accordion.querySelectorAll('.js-accordion-item');
-    for (let x = 0; x < items.length; x += 1) {
-      const element = items[x];
-      element.addEventListener('click', () => {
-        if (element.classList.contains('accordion__headline--active')) {
-          element.setAttribute('aria-expanded', 'false');
-          element.classList.remove('accordion__headline--active');
-          element.nextElementSibling.classList.remove('accordion__content--active');
-          element.nextElementSibling.setAttribute('aria-hidden', 'true');
-        } else {
-          element.setAttribute('aria-expanded', 'true');
-          element.classList.add('accordion__headline--active');
-          element.nextElementSibling.classList.add('accordion__content--active');
-          element.nextElementSibling.setAttribute('aria-hidden', 'false');
-        }
-      });
-    }
+  const accordionItem = {
+    props: ['title', 'id', 'hidden'],
+    data() {
+      return {
+        isOpen: false,
+      };
+    },
+    methods: {
+      toggleAccordionItem() {
+        this.isOpen = !this.isOpen;
+      },
+    },
+    template: `
+      <div class="accordion-item" v-show="!hidden">
+        <div :aria-expanded="isOpen ? 'true' : 'false'" :aria-controls="'accordion-content-' + id" :class="{'accordion-item__headline--active': isOpen}" class="accordion-item__headline" @click="toggleAccordionItem">
+          <h3 class="accordion-item__title">{{ title }}</h3>
+          <div class="accordion-item__icon"></div>
+        </div>
+        <div class="accordion-item__content" :aria-hidden="!isOpen ? 'true' : 'false'" :id="'accordion-content-' + id" :class="{'accordion-item__content--active': isOpen}">
+          <div class="accordion-item__text">
+            <slot />
+          </div>
+        </div>
+      </div>
+    `,
+  };
 
-    const button = accordion.querySelector('.js-display-all-items');
-    if (button) {
-      button.addEventListener('click', () => {
-        button.style.display = 'none';
-        const hiddenItems = accordion.querySelectorAll('.js-accordion-item .accordion__headline--hidden');
-        for (let x = 0; x < hiddenItems.length; x += 1) {
-          hiddenItems[x].classList.remove('accordion__headline--hidden');
-        }
-      });
-    }
+  for (let i = 0; i < accordions.length; i += 1) {
+    const vm = new Vue({
+      delimiters: ['${', '}'],
+      el: accordions[i],
+      data: {
+        showAllHiddenItems: false,
+      },
+      components: {
+        accordionItem,
+      },
+      methods: {
+        displayHiddenItems() {
+          this.showAllHiddenItems = true;
+        },
+      },
+    });
   }
 });

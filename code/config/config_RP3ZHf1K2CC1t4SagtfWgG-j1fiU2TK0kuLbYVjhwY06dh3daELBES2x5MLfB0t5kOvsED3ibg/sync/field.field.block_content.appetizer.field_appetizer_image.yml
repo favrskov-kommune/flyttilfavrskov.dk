@@ -1,0 +1,33 @@
+uuid: b036dab0-e022-4624-9f93-0fe01c6cd4e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.appetizer
+    - field.storage.block_content.field_appetizer_image
+    - media.type.dds_image
+  enforced:
+    module:
+      - dds_layout_block_appetizer
+_core:
+  default_config_hash: G1XkddlCZS7Eqk9ZczsBBxPNkfYxCvcGXZj7_CYiiCQ
+id: block_content.appetizer.field_appetizer_image
+field_name: field_appetizer_image
+entity_type: block_content
+bundle: appetizer
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      dds_image: dds_image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

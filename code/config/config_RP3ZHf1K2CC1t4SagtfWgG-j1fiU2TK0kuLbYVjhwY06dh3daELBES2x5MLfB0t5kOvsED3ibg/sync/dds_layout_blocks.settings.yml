@@ -1,0 +1,13 @@
+allowed_blocks:
+  'inline_block:accordion': 'inline_block:accordion'
+  'inline_block:appetizer': 'inline_block:appetizer'
+  'inline_block:button': 'inline_block:button'
+  'inline_block:divider': 'inline_block:divider'
+  'inline_block:hero': 'inline_block:hero'
+  'inline_block:image': 'inline_block:image'
+  'inline_block:inline_navigation': 'inline_block:inline_navigation'
+  'inline_block:mailchimp': 'inline_block:mailchimp'
+  'inline_block:news_list': 'inline_block:news_list'
+  'inline_block:quote': 'inline_block:quote'
+  'inline_block:rte': 'inline_block:rte'
+  'inline_block:slideshow': 'inline_block:slideshow'

@@ -1,0 +1,17 @@
+uuid: e6ff72f9-64b5-4509-b145-03d8a944f183
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: appetiser_wide_xs_
+label: 'Appetiser wide (XS)'
+effects:
+  a68033bc-f10b-4773-9163-4f25f1719a7c:
+    uuid: a68033bc-f10b-4773-9163-4f25f1719a7c
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 767
+      height: 432
+      crop_type: focal_point

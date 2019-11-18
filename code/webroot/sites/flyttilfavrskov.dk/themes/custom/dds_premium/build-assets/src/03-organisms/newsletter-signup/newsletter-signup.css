@@ -1,0 +1,55 @@
+.newsletter-signup {
+    position: relative;
+    width: 100%;
+    min-height: 330px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &__title {
+        text-align: center;
+    }
+
+    &__text {
+        margin-top: 10px;
+    }
+
+    form {
+        display: flex;
+        width: 100%;
+        max-width: 990px;
+        margin: 0 -25px;
+        flex-direction: column;
+
+        > div:first-child {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+
+            @media (--viewport-md-min) {
+                flex-direction: row;
+            }
+        }
+    }
+
+    .form-item {
+        width: 100%;
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-top: 20px;
+
+        @media (--viewport-md-min) {
+            width: 50%;
+        }
+
+        input {
+            height: 80px;
+        }
+    }
+
+    .form-actions {
+        width: 100%;
+        text-align: center;
+        margin: 60px 0 0;
+    }
+}

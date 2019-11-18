@@ -1,0 +1,13 @@
+uuid: f0ccaa13-6287-43ec-a1c2-c16f367a21e0
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_layout_block_accordion
+_core:
+  default_config_hash: NdDl4oahyt6TIL8MQUEVqyjdMVGAAejtSmnW8toTGxI
+id: accordion
+label: Accordion
+revision: 0
+description: 'A block that contains an accordion'

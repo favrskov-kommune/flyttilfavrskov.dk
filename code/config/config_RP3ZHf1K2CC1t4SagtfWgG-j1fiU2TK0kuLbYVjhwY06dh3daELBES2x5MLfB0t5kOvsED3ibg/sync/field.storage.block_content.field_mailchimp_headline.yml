@@ -1,0 +1,26 @@
+uuid: 7e988155-675c-4579-818d-eba59a71e4bd
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_layout_block_mailchimp
+  module:
+    - block_content
+_core:
+  default_config_hash: _aA6Zr1x_M1CFOp0ZEUVW7xO64GVNCxmiV5cttM6P9A
+id: block_content.field_mailchimp_headline
+field_name: field_mailchimp_headline
+entity_type: block_content
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

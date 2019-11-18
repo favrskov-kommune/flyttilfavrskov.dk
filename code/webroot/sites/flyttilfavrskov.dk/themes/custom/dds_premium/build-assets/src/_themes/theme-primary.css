@@ -1,13 +1,11 @@
 .theme-primary {
-    --theme-background-color: #C6D9DF;
-    --theme-color: #00655D;
-    --theme-button-background-color: #00655D;
-    --theme-button-color: #C6D9DF;
-    --theme-link-color: #00655D;
-    --theme-divider-background-color: #00655D;
-    --theme-accordion-border-color: #C6D9DF;
-    --theme-accordion-background-color: #00655D;
-    --theme-accordion-text-color: #000;
-    --theme-input-border: #00655D;
-    --theme-input-color-marked: #00655D;
+    --theme-background-color: #c6d9df;
+    --theme-color: #00655d;
+    --theme-button-background-color: #00655d;
+    --theme-button-color: #fff;
+    --theme-link-color: #fff;
+    --theme-divider-background-color: #fff;
+    --theme-input-border: #fff;
+    --theme-input-color-marked: #00655d;
+    --theme-background-svg-background-color: #b5d2db;
 }

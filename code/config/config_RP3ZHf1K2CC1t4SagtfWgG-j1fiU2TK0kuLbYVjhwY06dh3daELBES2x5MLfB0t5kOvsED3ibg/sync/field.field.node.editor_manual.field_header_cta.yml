@@ -1,0 +1,25 @@
+uuid: b5aedbed-efce-44dd-a192-f07087de0d73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_cta
+    - node.type.editor_manual
+  module:
+    - dds_content
+_core:
+  default_config_hash: JvJ9Qlu2syzuIlj4Tq_Yhqh8dzAlKuhTdNUJ1CHFL8s
+id: node.editor_manual.field_header_cta
+field_name: field_header_cta
+entity_type: node
+bundle: editor_manual
+label: 'Header CTA'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: '17'
+  title: '2'
+field_type: dds_link_with_target

@@ -1,4 +1,4 @@
-uuid: 60cfec4b-b71e-421a-b220-338296fcc8be
+uuid: 26cfd065-f109-4121-9af5-458bcb9d1e4f
 langcode: en
 status: true
 dependencies:
@@ -6,10 +6,13 @@ dependencies:
     - field.field.paragraph.accordion_item.field_accordion_item_headline
     - field.field.paragraph.accordion_item.field_accordion_item_text
     - paragraphs.paragraphs_type.accordion_item
+  enforced:
+    module:
+      - dds_layout_block_accordion
   module:
     - text
 _core:
-  default_config_hash: mbNiIYuDA08gYJ5nAx5sPo9rLT3tUuNPHewaGZn61jk
+  default_config_hash: VuOA0Wsmvr1xaPfxQ9smcp7libNxuLNAgkxvALFarlo
 id: paragraph.accordion_item.default
 targetEntityType: paragraph
 bundle: accordion_item
@@ -30,4 +33,5 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-hidden: {  }
+hidden:
+  search_api_excerpt: true

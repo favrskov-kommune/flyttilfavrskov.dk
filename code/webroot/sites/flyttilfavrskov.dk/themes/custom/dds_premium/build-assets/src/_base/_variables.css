@@ -6,28 +6,30 @@
     /* Default theme-colors
   ********************/
     --theme-background-color: #fff;
-    --theme-color: #000;
-    --theme-button-background-color: #000;
+    --theme-color: #474747;
+    --theme-button-background-color: #00655d;
     --theme-button-color: #fff;
-    --theme-link-color: #000;
-    --theme-divider-background-color: #000;
-    --theme-accordion-border-color: #d4d4d4;
-    --theme-accordion-background-color: transparent;
-    --theme-accordion-text-color: #000;
-    --theme-input-border: #e5e3de;
-    --theme-input-color-marked: #263ed3;
+    --theme-link-color: #00655d;
+    --theme-divider-background-color: #00655d;
+    --theme-accordion-border-color: #e7ebe3;
+    --theme-accordion-background-color: #e7ebe3;
+    --theme-accordion-text-color: #474747;
+    --theme-input-border: #afafaf;
+    --theme-input-color-marked: #474747;
+    --theme-input-background-color: #fff;
+    --theme-background-svg-background-color: rgba(0, 101, 93, 0.2);
 
     /* Typography
   ********************/
-    --base-font-family: 'Roboto Slab', 'sans-serif';
+    --base-font-family: 'Arial', 'Helvetica', 'sans-serif';
     --base-font-size: 18px;
     --base-font-weight: 300;
-    --heading-font-family: 'Roboto', 'sans-serif';
+    --heading-font-family: 'Arial', 'Helvetica', 'sans-serif';
     --heading-font-weight: 700;
 
     /* Layout
   ********************/
-    --container-width: 1560px;
+    --container-width: 1600px;
     --text-width: 1240px;
     --grid-section-spacing: 100px;
     --grid-section-spacing--mobile: calc(var(--grid-section-spacing) / 2);
@@ -46,34 +48,35 @@
 
     /* Theme variables
     ****************/
-    --color-primary: #263ed3;
+    --color-primary: #00665f;
+    --color-link: var(--color-primary);
+    --color-text: var(--theme-color);
 
     /* Header */
     --header-height: 95px;
     --header-height-mobile: 80px;
     --header-background-color: #fff;
-    --header-font-family: 'Roboto', 'sans-serif';
-    --header-text-color: #232323;
-    --header-font-weight: 500;
+    --header-font-family: 'Arial', 'Helvetica', 'sans-serif';
+    --header-text-color: var(--color-text);
+    --header-font-weight: 400;
     --header-selected-text-color: var(--color-primary);
     --header-border-color: #ededed;
 
     /* Meta menu */
     --meta-menu-height: 40px;
     --meta-menu-background-color: #f7f7f7;
-    --meta-menu-text-color: #263ed3;
+    --meta-menu-text-color: #00655d;
 
     /* Button */
-    --button-border-radius: 50px;
+    --button-border-radius: 33px;
     --button-border-width: 1px;
     --button-border-color: transparent;
-    --button-height: 60px;
-    --button-padding: 0 60px;
-    --button-bg-color: #263ed3;
+    --button-height: 48px;
+    --button-padding: 0 25px;
     --button-text-color: #fff;
-    --button-font-weight: 500;
-    --button-font-family: var(--heading-font-family);
-    --button-font-size: 16px;
+    --button-font-weight: 700;
+    --button-font-family: var(--base-font-family);
+    --button-font-size: 18px;
 
     /* Easing functions
   ********************/

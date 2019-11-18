@@ -1,0 +1,17 @@
+uuid: 934c5258-dbfd-4a65-85be-87e2f59bad2d
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: wide_xs_
+label: 'Wide (XS)'
+effects:
+  470a04fe-7f51-41a8-ada2-956a36ffa1ef:
+    uuid: 470a04fe-7f51-41a8-ada2-956a36ffa1ef
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 768
+      height: 580
+      crop_type: focal_point

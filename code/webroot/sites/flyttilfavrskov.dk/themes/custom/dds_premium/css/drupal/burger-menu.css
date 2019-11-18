@@ -9,9 +9,11 @@ body.adminimal-admin-toolbar.toolbar-tray-open .burger-menu {
   top: 79px;
 }
 
-/* When user is logged in, we change position of secondary menu in burger menu */
-body.adminimal-admin-toolbar .burger-menu-list--secondary {
-  top: 41px;
+@media(min-width: 1200px) {
+  /* When user is logged in, we change position of secondary menu in burger menu */
+  body.adminimal-admin-toolbar .burger-menu-list--secondary {
+    top: 41px;
+  }
 }
 
 /* When user is logged in, we change height for burger menu inner element */

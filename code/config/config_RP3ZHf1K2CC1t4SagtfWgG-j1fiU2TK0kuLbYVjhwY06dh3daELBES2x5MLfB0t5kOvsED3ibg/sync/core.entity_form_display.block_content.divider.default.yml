@@ -1,0 +1,32 @@
+uuid: e80eb616-1493-45f8-b4c9-544d97784f5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.divider
+  enforced:
+    module:
+      - dds_layout_block_divider
+_core:
+  default_config_hash: MygvgmZMM2t2MyNBXpyN7IHEbVOegEuCcjDtO94B7LM
+id: block_content.divider.default
+targetEntityType: block_content
+bundle: divider
+mode: default
+content:
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

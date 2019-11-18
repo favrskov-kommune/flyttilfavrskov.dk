@@ -1,0 +1,61 @@
+uuid: 69544d12-929a-45b6-b81c-b4c5db3fd282
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.appetiser_wide_lg_
+    - image.style.appetiser_wide_md_
+    - image.style.appetiser_wide_sm_
+    - image.style.appetiser_wide_xl_
+    - image.style.appetiser_wide_xs_
+    - image.style.appetiser_wide_xsx2_
+    - image.style.appetiser_wide_xxs_
+    - image.style.appetiser_wide_xxsx2_
+    - image.style.large
+  theme:
+    - dds_premium
+id: appetiser_wide
+label: 'Appetiser wide'
+image_style_mappings:
+  -
+    breakpoint_id: dds_premium.xl
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: appetiser_wide_xl_
+  -
+    breakpoint_id: dds_premium.lg
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: appetiser_wide_lg_
+  -
+    breakpoint_id: dds_premium.md
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: appetiser_wide_md_
+  -
+    breakpoint_id: dds_premium.sm
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: appetiser_wide_sm_
+  -
+    breakpoint_id: dds_premium.xs
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: appetiser_wide_xs_
+  -
+    breakpoint_id: dds_premium.xs
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: appetiser_wide_xsx2_
+  -
+    breakpoint_id: dds_premium.xxs
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: appetiser_wide_xxs_
+  -
+    breakpoint_id: dds_premium.xxs
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: appetiser_wide_xxsx2_
+breakpoint_group: dds_premium
+fallback_image_style: large

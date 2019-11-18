@@ -1,0 +1,60 @@
+uuid: d48a8dcc-76e8-41c9-8cc2-8c4787290255
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.3_column_lg_
+    - image.style.3_column_md_
+    - image.style.3_column_sm_
+    - image.style.3_column_xs_
+    - image.style.3_column_xsx2_
+    - image.style.3_column_xxs_
+    - image.style.3_column_xxsx2_
+    - image.style.large
+  theme:
+    - dds_premium
+id: 3_column
+label: '3 column'
+image_style_mappings:
+  -
+    breakpoint_id: dds_premium.xl
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: 3_column_lg_
+  -
+    breakpoint_id: dds_premium.lg
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: 3_column_lg_
+  -
+    breakpoint_id: dds_premium.md
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: 3_column_md_
+  -
+    breakpoint_id: dds_premium.sm
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: 3_column_sm_
+  -
+    breakpoint_id: dds_premium.xs
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: 3_column_xs_
+  -
+    breakpoint_id: dds_premium.xs
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: 3_column_xsx2_
+  -
+    breakpoint_id: dds_premium.xxs
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: 3_column_xxs_
+  -
+    breakpoint_id: dds_premium.xxs
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: 3_column_xxsx2_
+breakpoint_group: dds_premium
+fallback_image_style: large

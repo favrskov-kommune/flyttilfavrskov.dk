@@ -1,0 +1,61 @@
+uuid: 8c0c3d00-2a49-44c4-8365-f358a2c4262f
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.large
+    - image.style.wide_lg_
+    - image.style.wide_md_
+    - image.style.wide_sm_
+    - image.style.wide_xl_
+    - image.style.wide_xs_
+    - image.style.wide_xs_x2_
+    - image.style.wide_xxs_
+    - image.style.wide_xxsx2_
+  theme:
+    - dds_premium
+id: wide
+label: Wide
+image_style_mappings:
+  -
+    breakpoint_id: dds_premium.xl
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: wide_xl_
+  -
+    breakpoint_id: dds_premium.lg
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: wide_lg_
+  -
+    breakpoint_id: dds_premium.md
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: wide_md_
+  -
+    breakpoint_id: dds_premium.sm
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: wide_sm_
+  -
+    breakpoint_id: dds_premium.xs
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: wide_xs_
+  -
+    breakpoint_id: dds_premium.xs
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: wide_xs_x2_
+  -
+    breakpoint_id: dds_premium.xxs
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: wide_xxs_
+  -
+    breakpoint_id: dds_premium.xxs
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: wide_xxsx2_
+breakpoint_group: dds_premium
+fallback_image_style: large

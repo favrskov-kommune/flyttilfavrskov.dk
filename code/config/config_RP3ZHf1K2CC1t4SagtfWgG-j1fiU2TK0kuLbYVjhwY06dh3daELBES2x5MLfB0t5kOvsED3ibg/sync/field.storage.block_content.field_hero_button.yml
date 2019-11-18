@@ -1,0 +1,24 @@
+uuid: 6a7069b1-dc85-46a7-9762-87020de89918
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_layout_block_hero
+  module:
+    - block_content
+    - dds_content
+_core:
+  default_config_hash: gZ-UitHbcFWeRQH32xz2syqnrM5uWfA2yXsYC0meKSk
+id: block_content.field_hero_button
+field_name: field_hero_button
+entity_type: block_content
+type: dds_link_with_target
+settings: {  }
+module: dds_content
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

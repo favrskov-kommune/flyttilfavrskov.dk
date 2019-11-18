@@ -1,0 +1,25 @@
+uuid: 60f51e82-e21d-46eb-8c50-0bfec797d226
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_layout_block_news_list
+  module:
+    - block_content
+_core:
+  default_config_hash: 7Akgnp9tkf2RW5eGPHfy1TqG2CWwDynTBJk-lGgprEY
+id: block_content.field_newslist_limit
+field_name: field_newslist_limit
+entity_type: block_content
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

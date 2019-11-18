@@ -1,0 +1,26 @@
+uuid: 0dc152a3-c807-4965-9441-762c0fc8b1ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image
+    - field.storage.block_content.field_image_format
+  enforced:
+    module:
+      - dds_layout_block_image
+  module:
+    - options
+_core:
+  default_config_hash: MkX3gPD8fqUxHct2RZ6GBKLNiC7NrnvOdmgOckPmQVw
+id: block_content.image.field_image_format
+field_name: field_image_format
+entity_type: block_content
+bundle: image
+label: Format
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,28 @@
+uuid: 37d93f22-27aa-4c02-9337-33f3a8e528d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.button
+    - field.storage.block_content.field_button
+  enforced:
+    module:
+      - dds_layout_block_button
+  module:
+    - dds_content
+_core:
+  default_config_hash: FgyTtJQQcZBA0xObH8maBbcryiB-1CnzTZHnlEQk1V0
+id: block_content.button.field_button
+field_name: field_button
+entity_type: block_content
+bundle: button
+label: Button
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: '17'
+  title: '2'
+field_type: dds_link_with_target

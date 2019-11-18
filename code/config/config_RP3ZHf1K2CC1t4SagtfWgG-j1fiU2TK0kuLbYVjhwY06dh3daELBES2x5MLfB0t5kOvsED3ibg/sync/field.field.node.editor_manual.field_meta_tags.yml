@@ -1,0 +1,25 @@
+uuid: fbd1c330-f484-4ab4-9277-9c38549d55ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.editor_manual
+  module:
+    - metatag
+_core:
+  default_config_hash: Bfj7_UJns0WcmuSKB19drkyPaf8NZZXzBKNmDd7Oq-0
+id: node.editor_manual.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: editor_manual
+label: 'Meta data'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'a:0:{}'
+default_value_callback: ''
+settings: {  }
+field_type: metatag

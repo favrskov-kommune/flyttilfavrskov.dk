@@ -1,0 +1,17 @@
+uuid: 505d4c9d-3ee7-4726-a226-c3f198dd94ec
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: inline_navigation_1_1_xs_
+label: 'Inline navigation (1:1) (XS)'
+effects:
+  e90eaf8f-2ba1-4334-929b-6a0e97466577:
+    uuid: e90eaf8f-2ba1-4334-929b-6a0e97466577
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 305
+      height: 305
+      crop_type: focal_point

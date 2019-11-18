@@ -1,0 +1,24 @@
+uuid: 6ac8fe5b-8144-42a0-bae9-dca4e8f71791
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.news_list
+    - field.storage.block_content.field_newslist_headline
+  enforced:
+    module:
+      - dds_layout_block_news_list
+_core:
+  default_config_hash: V_C9WpWI9ZenfinNIO2dPDkga5eHfmEX3gY-5Ao4d3A
+id: block_content.news_list.field_newslist_headline
+field_name: field_newslist_headline
+entity_type: block_content
+bundle: news_list
+label: Headline
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

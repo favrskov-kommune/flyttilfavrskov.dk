@@ -1,0 +1,22 @@
+uuid: 4073041d-558c-42d8-968d-4d4bd7500f3c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: dds_editor_manual_pattern
+label: 'Editor Manual Pattern'
+type: 'canonical_entities:node'
+pattern: 'manual/[node:title]'
+selection_criteria:
+  c36f0196-95fb-40aa-b2da-109dc055a4f7:
+    id: node_type
+    bundles:
+      editor_manual: editor_manual
+    negate: false
+    context_mapping:
+      node: node
+    uuid: c36f0196-95fb-40aa-b2da-109dc055a4f7
+selection_logic: and
+weight: 0
+relationships: {  }
