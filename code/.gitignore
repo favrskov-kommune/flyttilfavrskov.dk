@@ -62,7 +62,8 @@ webroot/update.php
 webroot/web.config
 webroot/sites/example.settings.local.php
 webroot/sites/example.sites.php
-webroot/sites/default*
+webroot/sites/default/default.settings.php
+webroot/sites/default/default.services.yml
 
 
 */node_modules
