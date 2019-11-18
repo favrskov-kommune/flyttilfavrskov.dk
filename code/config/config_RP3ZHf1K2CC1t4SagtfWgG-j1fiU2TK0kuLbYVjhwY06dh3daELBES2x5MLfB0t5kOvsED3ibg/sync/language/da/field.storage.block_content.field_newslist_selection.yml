@@ -1,0 +1,6 @@
+settings:
+  allowed_values:
+    -
+      label: 'Vælg kategori'
+    -
+      label: 'Vælg manuelt'

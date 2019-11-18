@@ -1,0 +1,6 @@
+settings:
+  allowed_values:
+    -
+      label: 'Vælg overordnet side'
+    -
+      label: 'Vælg specifikke sider'

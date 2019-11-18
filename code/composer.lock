@@ -1438,16 +1438,16 @@
         },
         {
             "name": "doctrine/cache",
-            "version": "1.9.0",
+            "version": "1.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "c15dcd24b756f9e52ea7c3ae8227354f3628f11a"
+                "reference": "89a5c76c39c292f7798f964ab3c836c3f8192a55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/c15dcd24b756f9e52ea7c3ae8227354f3628f11a",
-                "reference": "c15dcd24b756f9e52ea7c3ae8227354f3628f11a",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/89a5c76c39c292f7798f964ab3c836c3f8192a55",
+                "reference": "89a5c76c39c292f7798f964ab3c836c3f8192a55",
                 "shasum": ""
             },
             "require": {
@@ -1517,7 +1517,7 @@
                 "riak",
                 "xcache"
             ],
-            "time": "2019-11-11T10:31:52+00:00"
+            "time": "2019-11-15T14:31:57+00:00"
         },
         {
             "name": "doctrine/collections",
@@ -6219,10 +6219,10 @@
         },
         {
             "name": "novicell/dds_layouts",
-            "version": "1.1.13",
+            "version": "1.1.14",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_SD6Ag/novicelldds_layouts-1-1-13.zip",
+                "url": "https://packages.drupal.dk/php/~/up/ver_1ST2R3/novicelldds_layouts-1-1-14.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -6263,10 +6263,10 @@
         },
         {
             "name": "novicell/dds_news",
-            "version": "1.1.1",
+            "version": "1.1.2",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_BlVNe/novicelldds_news-1-1-1.zip",
+                "url": "https://packages.drupal.dk/php/~/up/ver_NfWwg/novicelldds_news-1-1-2.zip",
                 "reference": null,
                 "shasum": null
             },
