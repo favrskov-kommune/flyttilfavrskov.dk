@@ -27,7 +27,7 @@
             flex-direction: column;
 
             @media (--viewport-md-min) {
-              flex-direction: row;
+                flex-direction: row;
             }
         }
     }
