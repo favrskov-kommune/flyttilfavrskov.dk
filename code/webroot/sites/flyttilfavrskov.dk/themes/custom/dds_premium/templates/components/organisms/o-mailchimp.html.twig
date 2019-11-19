@@ -1,0 +1,7 @@
+<div{{ attributes.addClass('newsletter-signup') }}>
+  <h2 class="newsletter-signup__title">{{ headline }}</h2>
+  {% if text %}
+  <div class="newsletter-signup__text">{{ text }}</div>
+  {% endif %}
+  {{ content }}
+</div>
