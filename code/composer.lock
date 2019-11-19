@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e041fbae7c930d3677c30cce59c6b71d",
+    "content-hash": "8dd5e5278d53d5194a2399b323b45632",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1118,6 +1118,7 @@
             ],
             "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
             "homepage": "https://github.com/container-interop/container-interop",
+            "abandoned": "psr/container",
             "time": "2017-02-14T19:40:03+00:00"
         },
         {
@@ -3048,7 +3049,8 @@
                 },
                 "patches_applied": {
                     "(#2999491) Allow creation of reuseable inline blocks": "https://www.drupal.org/files/issues/2019-07-17/drupal8-layout-builder-reusable-2999491-24.patch",
-                    "(#3042190) Creating a block that uses Ajax adds multiple blocks": "https://www.drupal.org/files/issues/2019-05-04/3042190-3.patch"
+                    "(#3042190) Creating a block that uses Ajax adds multiple blocks": "https://www.drupal.org/files/issues/2019-05-04/3042190-3.patch",
+                    "(#3094397) Attributes key missing hash or pound sign in seven": "https://www.drupal.org/files/issues/2019-11-14/3094397-3.patch"
                 }
             },
             "autoload": {
@@ -6022,10 +6024,10 @@
         },
         {
             "name": "novicell/dds_content",
-            "version": "1.3.2",
+            "version": "1.3.3",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_1lYhks/novicelldds_content-1-3-2.zip",
+                "url": "https://packages.drupal.dk/php/~/up/ver_Y7UXJ/novicelldds_content-1-3-3.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -6073,10 +6075,10 @@
         },
         {
             "name": "novicell/dds_editors",
-            "version": "1.0.7",
+            "version": "1.0.8",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_1Tw7GG/novicelldds_editors-1-0-7.zip",
+                "url": "https://packages.drupal.dk/php/~/up/ver_25gIpD/novicelldds_editors-1-0-8.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -6117,16 +6119,17 @@
         },
         {
             "name": "novicell/dds_layouts",
-            "version": "1.1.15",
+            "version": "1.1.16",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_ldgmP/novicelldds_layouts-1-1-15.zip",
+                "url": "https://packages.drupal.dk/php/~/up/ver_1GCVjE/novicelldds_layouts-1-1-16.zip",
                 "reference": null,
                 "shasum": null
             },
             "require": {
                 "drupal/inline_block_title_automatic": "^1.0@alpha",
                 "drupal/layout_builder_modal": "^1.0@alpha",
+                "drupal/paragraphs": "^1.10",
                 "novicell/dds_entity_data": "^1.1"
             },
             "type": "drupal-module"
@@ -6161,10 +6164,10 @@
         },
         {
             "name": "novicell/dds_news",
-            "version": "1.1.2",
+            "version": "1.1.3",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_NfWwg/novicelldds_news-1-1-2.zip",
+                "url": "https://packages.drupal.dk/php/~/up/ver_sq11W/novicelldds_news-1-1-3.zip",
                 "reference": null,
                 "shasum": null
             },
