@@ -15,7 +15,7 @@ field_name: field_accordion_show_more
 entity_type: block_content
 bundle: accordion
 label: 'Show more label'
-description: ''
+description: 'If you add more than 5 elements to the accordion, only the first five elements will be shown initially and a "Read more" button for revealing the remaining elements will appear.'
 required: false
 translatable: false
 default_value: {  }

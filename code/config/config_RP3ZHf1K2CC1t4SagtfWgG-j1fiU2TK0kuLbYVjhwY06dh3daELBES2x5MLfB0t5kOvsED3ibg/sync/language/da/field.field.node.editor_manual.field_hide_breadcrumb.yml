@@ -1,4 +1,4 @@
-label: 'Hide breadcrumb'
+label: 'Skjul brødkrummer på denne side'
 settings:
   on_label: 'On'
   off_label: 'Off'
