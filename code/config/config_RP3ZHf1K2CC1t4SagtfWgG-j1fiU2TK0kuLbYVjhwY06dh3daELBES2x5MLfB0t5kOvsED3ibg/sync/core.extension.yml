@@ -52,9 +52,7 @@ module:
   entity_clone: 0
   entity_hierarchy: 0
   entity_hierarchy_breadcrumb: 0
-  entity_reference_layout: 0
   entity_reference_revisions: 0
-  erl_paragraphs: 0
   field: 0
   field_group: 0
   field_ui: 0

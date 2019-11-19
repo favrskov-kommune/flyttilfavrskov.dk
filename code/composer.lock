@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e5c8d153e2338d5959732b172cef8c47",
+    "content-hash": "2bf4b6ec867698f08b67035e0c33291b",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3459,114 +3459,6 @@
             }
         },
         {
-            "name": "drupal/entity_reference_layout",
-            "version": "dev-1.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/entity_reference_layout.git",
-                "reference": "3c6a14b4628a2c43f5aa269843e34c07c18a8ae0"
-            },
-            "require": {
-                "drupal/core": "*",
-                "drupal/paragraphs": "^1.6"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0-alpha3+1-dev",
-                    "datestamp": "1573147689",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "justin2pin",
-                    "homepage": "https://www.drupal.org/user/278450"
-                }
-            ],
-            "description": "Entity reference field with layouts",
-            "homepage": "https://www.drupal.org/project/entity_reference_layout",
-            "keywords": [
-                "Drupal"
-            ],
-            "support": {
-                "source": "http://cgit.drupalcode.org/entity_reference_layout",
-                "issues": "https://www.drupal.org/project/issues/entity_reference_layout"
-            }
-        },
-        {
-            "name": "drupal/entity_reference_revisions",
-            "version": "1.7.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/entity_reference_revisions.git",
-                "reference": "8.x-1.7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/entity_reference_revisions-8.x-1.7.zip",
-                "reference": "8.x-1.7",
-                "shasum": "4e3b849b0d984cd3c0a4330c9aa4cb16bf1f79f6"
-            },
-            "require": {
-                "drupal/core": "~8.0"
-            },
-            "require-dev": {
-                "drupal/diff": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.7",
-                    "datestamp": "1570284187",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Berdir",
-                    "homepage": "https://www.drupal.org/user/214652"
-                },
-                {
-                    "name": "Frans",
-                    "homepage": "https://www.drupal.org/user/514222"
-                },
-                {
-                    "name": "jeroen.b",
-                    "homepage": "https://www.drupal.org/user/1853532"
-                },
-                {
-                    "name": "miro_dietiker",
-                    "homepage": "https://www.drupal.org/user/227761"
-                }
-            ],
-            "description": "Adds a Entity Reference field type with revision support.",
-            "homepage": "https://www.drupal.org/project/entity_reference_revisions",
-            "support": {
-                "source": "https://git.drupalcode.org/project/entity_reference_revisions"
-            }
-        },
-        {
             "name": "drupal/field_group",
             "version": "3.0.0-rc1",
             "source": {
@@ -4250,149 +4142,6 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/monolog",
                 "issues": "http://drupal.org/project/issues/monolog"
-            }
-        },
-        {
-            "name": "drupal/paragraphs",
-            "version": "1.10.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/paragraphs.git",
-                "reference": "8.x-1.10"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/paragraphs-8.x-1.10.zip",
-                "reference": "8.x-1.10",
-                "shasum": "12f96d90940df1c870bbe4cb97a8260169045911"
-            },
-            "require": {
-                "drupal/core": "~8",
-                "drupal/entity_reference_revisions": "~1.3"
-            },
-            "require-dev": {
-                "drupal/block_field": "~1.0",
-                "drupal/ctools": "3.x-dev",
-                "drupal/diff": "~1.0",
-                "drupal/entity_browser": "2.x-dev",
-                "drupal/entity_usage": "2.x-dev",
-                "drupal/field_group": "3.x-dev",
-                "drupal/inline_entity_form": "~1.0",
-                "drupal/paragraphs-paragraphs_library": "*",
-                "drupal/replicate": "~1.0",
-                "drupal/search_api": "~1.0",
-                "drupal/search_api_db": "*"
-            },
-            "suggest": {
-                "drupal/entity_browser": "Recommended for an improved user experience when using the Paragraphs library module"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.10",
-                    "datestamp": "1572617586",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                },
-                "patches_applied": {
-                    "(#2901390) Integrity constraint violation: 1048 Column 'langcode' cannot be null": "https://www.drupal.org/files/issues/2019-08-10/paragraphs-set_langcode_widgets-290139_updated.patch"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Berdir",
-                    "homepage": "https://www.drupal.org/user/214652"
-                },
-                {
-                    "name": "Frans",
-                    "homepage": "https://www.drupal.org/user/514222"
-                },
-                {
-                    "name": "Primsi",
-                    "homepage": "https://www.drupal.org/user/282629"
-                },
-                {
-                    "name": "jeroen.b",
-                    "homepage": "https://www.drupal.org/user/1853532"
-                },
-                {
-                    "name": "jstoller",
-                    "homepage": "https://www.drupal.org/user/99012"
-                },
-                {
-                    "name": "miro_dietiker",
-                    "homepage": "https://www.drupal.org/user/227761"
-                }
-            ],
-            "description": "Enables the creation of Paragraphs entities.",
-            "homepage": "https://www.drupal.org/project/paragraphs",
-            "support": {
-                "source": "https://git.drupalcode.org/project/paragraphs"
-            }
-        },
-        {
-            "name": "drupal/paragraphs_asymmetric_translation_widgets",
-            "version": "1.0.0-beta2",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/paragraphs_asymmetric_translation_widgets.git",
-                "reference": "8.x-1.0-beta2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/paragraphs_asymmetric_translation_widgets-8.x-1.0-beta2.zip",
-                "reference": "8.x-1.0-beta2",
-                "shasum": "dd631ec9c18a4986463fb065fcb90d0f6af4704a"
-            },
-            "require": {
-                "drupal/core": "~8",
-                "drupal/paragraphs": "~1.3"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0-beta2",
-                    "datestamp": "1558966687",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Grayle",
-                    "homepage": "https://www.drupal.org/user/3145497"
-                },
-                {
-                    "name": "efpapado",
-                    "homepage": "https://www.drupal.org/user/1009348"
-                },
-                {
-                    "name": "weseze",
-                    "homepage": "https://www.drupal.org/user/417521"
-                }
-            ],
-            "description": "Extends the paragraphs field widgets to support asymmetric translations.",
-            "homepage": "https://www.drupal.org/project/paragraphs_asymmetric_translation_widgets",
-            "support": {
-                "source": "https://git.drupalcode.org/project/paragraphs_asymmetric_translation_widgets"
             }
         },
         {
@@ -6106,7 +5855,9 @@
             "version": "2.0.8",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/d/novicell%2Fdds/novicell%2Fdds-2.0.8"
+                "url": "https://packages.drupal.dk/php/~/d/novicell%2Fdds/novicell%2Fdds-2.0.8",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "php": ">=5.6.0"
@@ -6125,7 +5876,9 @@
             "version": "1.3.2",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_1lYhks/novicelldds_content-1-3-2.zip"
+                "url": "https://packages.drupal.dk/php/~/up/ver_1lYhks/novicelldds_content-1-3-2.zip",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "drupal/autosave_form": "~1.0",
@@ -6143,7 +5896,9 @@
             "version": "2.2.7",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_23uh7v/novicelldds_content_hierarchy-2-2-7.zip"
+                "url": "https://packages.drupal.dk/php/~/up/ver_23uh7v/novicelldds_content_hierarchy-2-2-7.zip",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "drupal/ctools": "~3.0",
@@ -6158,7 +5913,9 @@
             "version": "2.1.0",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/d/novicell%2Fdds_cookieinfo/novicell%2Fdds_cookieinfo-2.1.0"
+                "url": "https://packages.drupal.dk/php/~/d/novicell%2Fdds_cookieinfo/novicell%2Fdds_cookieinfo-2.1.0",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "novicell/dds_site_settings": "^2.0"
@@ -6170,7 +5927,9 @@
             "version": "1.0.7",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_1Tw7GG/novicelldds_editors-1-0-7.zip"
+                "url": "https://packages.drupal.dk/php/~/up/ver_1Tw7GG/novicelldds_editors-1-0-7.zip",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "drupal/role_delegation": "^1.0"
@@ -6182,7 +5941,9 @@
             "version": "1.6.3",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_1o1Nbg/novicelldds_elasticsearch-1-6-3.zip"
+                "url": "https://packages.drupal.dk/php/~/up/ver_1o1Nbg/novicelldds_elasticsearch-1-6-3.zip",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "drupal/elasticsearch_connector": "^6.0@alpha",
@@ -6196,7 +5957,9 @@
             "version": "1.1.0",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/d/novicell%2Fdds_entity_data/novicell%2Fdds_entity_data-1.1.0"
+                "url": "https://packages.drupal.dk/php/~/d/novicell%2Fdds_entity_data/novicell%2Fdds_entity_data-1.1.0",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "novicell/dds": "^2.0"
@@ -6208,7 +5971,9 @@
             "version": "1.1.15",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_ldgmP/novicelldds_layouts-1-1-15.zip"
+                "url": "https://packages.drupal.dk/php/~/up/ver_ldgmP/novicelldds_layouts-1-1-15.zip",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "drupal/inline_block_title_automatic": "^1.0@alpha",
@@ -6222,7 +5987,9 @@
             "version": "2.2.2",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_1xQtZ8/novicelldds_media-2-2-2.zip"
+                "url": "https://packages.drupal.dk/php/~/up/ver_1xQtZ8/novicelldds_media-2-2-2.zip",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "drupal/ctools": "^3.0",
@@ -6237,7 +6004,9 @@
             "version": "1.2.1",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/d/novicell%2Fdds_monitor/novicell%2Fdds_monitor-1.2.1"
+                "url": "https://packages.drupal.dk/php/~/d/novicell%2Fdds_monitor/novicell%2Fdds_monitor-1.2.1",
+                "reference": null,
+                "shasum": null
             },
             "type": "drupal-module"
         },
@@ -6246,34 +6015,12 @@
             "version": "1.1.2",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_NfWwg/novicelldds_news-1-1-2.zip"
+                "url": "https://packages.drupal.dk/php/~/up/ver_NfWwg/novicelldds_news-1-1-2.zip",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "novicell/dds_content": "~1.0"
-            },
-            "type": "drupal-module"
-        },
-        {
-            "name": "novicell/dds_paragraph_widgets",
-            "version": "2.2.6",
-            "dist": {
-                "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_10K5V5/novicelldds_paragraph_widgets-2-2-6.zip"
-            },
-            "require": {
-                "drupal/paragraphs": "^1.6"
-            },
-            "type": "drupal-module"
-        },
-        {
-            "name": "novicell/dds_paragraphs",
-            "version": "2.3.6",
-            "dist": {
-                "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_1h5Qm/novicelldds_paragraphs-2-3-6.zip"
-            },
-            "require": {
-                "drupal/paragraphs": "^1.6"
             },
             "type": "drupal-module"
         },
@@ -6282,7 +6029,9 @@
             "version": "2.0.17",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_1J7bkL/novicelldds_premium_installer-2-0-17.zip"
+                "url": "https://packages.drupal.dk/php/~/up/ver_1J7bkL/novicelldds_premium_installer-2-0-17.zip",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "drupal/admin_toolbar": "~1.17",
@@ -6298,7 +6047,9 @@
             "version": "1.0.3",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_KshRf/novicelldds_search-1-0-3.zip"
+                "url": "https://packages.drupal.dk/php/~/up/ver_KshRf/novicelldds_search-1-0-3.zip",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "drupal/search_api_exclude_entity": "^1.0",
@@ -6311,7 +6062,9 @@
             "version": "1.0.4",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_16aE20/novicelldds_seo-1-0-4.zip"
+                "url": "https://packages.drupal.dk/php/~/up/ver_16aE20/novicelldds_seo-1-0-4.zip",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "drupal/gtm": "^1.1",
@@ -6329,7 +6082,9 @@
             "version": "2.1.5",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_1y3PGv/novicelldds_site_settings-2-1-5.zip"
+                "url": "https://packages.drupal.dk/php/~/up/ver_1y3PGv/novicelldds_site_settings-2-1-5.zip",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "drupal/site_settings": "^1.13",
@@ -6342,7 +6097,9 @@
             "version": "1.0.5",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_1S5HbX/novicelldds_translation-1-0-5.zip"
+                "url": "https://packages.drupal.dk/php/~/up/ver_1S5HbX/novicelldds_translation-1-0-5.zip",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "drupal/layout_builder_at": "^2.10"
@@ -11007,10 +10764,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "drupal/entity_reference_layout": 20,
-        "drupal/paragraphs_asymmetric_translation_widgets": 10
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
