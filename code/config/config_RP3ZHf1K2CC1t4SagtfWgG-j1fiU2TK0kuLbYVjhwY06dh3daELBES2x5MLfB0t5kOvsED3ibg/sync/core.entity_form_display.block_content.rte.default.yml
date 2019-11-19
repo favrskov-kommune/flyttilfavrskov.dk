@@ -18,26 +18,13 @@ bundle: rte
 mode: default
 content:
   field_text:
-    weight: 27
+    weight: 0
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
     region: content
-  info:
-    type: string_textfield
-    weight: -5
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  langcode:
-    type: language_select
-    weight: 2
-    region: content
-    settings:
-      include_locked: true
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  info: true
+  langcode: true

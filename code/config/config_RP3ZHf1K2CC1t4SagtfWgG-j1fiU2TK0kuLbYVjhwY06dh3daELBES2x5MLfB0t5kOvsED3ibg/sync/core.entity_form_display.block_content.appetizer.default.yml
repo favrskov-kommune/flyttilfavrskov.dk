@@ -25,7 +25,7 @@ bundle: appetizer
 mode: default
 content:
   field_appetizer_cta:
-    weight: 27
+    weight: 5
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -34,7 +34,7 @@ content:
     type: dds_link_with_target
     region: content
   field_appetizer_headline:
-    weight: 28
+    weight: 0
     settings:
       size: 60
       placeholder: ''
@@ -43,19 +43,19 @@ content:
     region: content
   field_appetizer_image:
     type: media_library_widget
-    weight: 29
+    weight: 1
     settings:
       media_types: {  }
     third_party_settings: {  }
     region: content
   field_appetizer_orientation:
-    weight: 30
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_appetizer_text:
-    weight: 31
+    weight: 3
     settings:
       rows: 5
       placeholder: ''
@@ -63,24 +63,11 @@ content:
     type: text_textarea
     region: content
   field_appetizer_text_alignment:
-    weight: 32
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
-  info:
-    type: string_textfield
-    weight: -5
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  langcode:
-    type: language_select
-    weight: 2
-    region: content
-    settings:
-      include_locked: true
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  info: true
+  langcode: true
