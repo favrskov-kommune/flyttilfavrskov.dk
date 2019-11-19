@@ -6119,10 +6119,10 @@
         },
         {
             "name": "novicell/dds_layouts",
-            "version": "1.1.16",
+            "version": "1.1.17",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_1GCVjE/novicelldds_layouts-1-1-16.zip",
+                "url": "https://packages.drupal.dk/php/~/up/ver_eKrrU/novicelldds_layouts-1-1-17.zip",
                 "reference": null,
                 "shasum": null
             },
