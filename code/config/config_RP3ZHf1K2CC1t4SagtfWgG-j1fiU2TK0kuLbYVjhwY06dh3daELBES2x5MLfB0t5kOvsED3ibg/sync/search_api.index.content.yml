@@ -35,6 +35,8 @@ field_settings:
       view_mode:
         'entity:node':
           basic_page: default
+          editor_manual: ''
+          news_item: default
           special_page: default
   title:
     label: Title
@@ -73,9 +75,11 @@ processor_settings:
   html_filter:
     all_fields: true
     fields:
+      - ancestors
       - rendered_item
       - title
       - type
+      - url
     title: true
     alt: true
     tags:
@@ -89,6 +93,7 @@ processor_settings:
     weights:
       preprocess_index: -15
       preprocess_query: -15
+  language_with_fallback: {  }
   rendered_item: {  }
   search_api_exclude_entity_processor:
     fields:
