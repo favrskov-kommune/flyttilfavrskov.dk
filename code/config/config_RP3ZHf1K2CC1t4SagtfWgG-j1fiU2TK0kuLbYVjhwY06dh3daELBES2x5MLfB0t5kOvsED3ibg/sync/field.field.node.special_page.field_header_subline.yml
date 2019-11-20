@@ -1,10 +1,12 @@
-uuid: 6c888774-8841-4a6e-8b54-58ba2d40279e
+uuid: 7b3dafef-0de0-4552-bf3c-e446ca9f5df2
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_header_subline
     - node.type.special_page
+  module:
+    - text
 _core:
   default_config_hash: fCG0ke_xdyZK5vCqPVO2C3gz7DUR4KIKfwdoIGQNScw
 id: node.special_page.field_header_subline
@@ -18,4 +20,4 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: string
+field_type: text_long

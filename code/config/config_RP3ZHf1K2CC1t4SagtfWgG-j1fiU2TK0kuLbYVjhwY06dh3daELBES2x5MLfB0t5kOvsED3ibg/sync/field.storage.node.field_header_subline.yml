@@ -1,4 +1,4 @@
-uuid: 56c43617-78d9-4726-9738-14ef1edda93e
+uuid: 083bd63b-1904-4625-84ac-b554e0f1eba7
 langcode: en
 status: true
 dependencies:
@@ -7,17 +7,15 @@ dependencies:
       - dds_content
   module:
     - node
+    - text
 _core:
   default_config_hash: q6-URA2DTFPpucdUiAK1vitctEUiW3bB2-Fz5ABWxG0
 id: node.field_header_subline
 field_name: field_header_subline
 entity_type: node
-type: string
-settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
-module: core
+type: text_long
+settings: {  }
+module: text
 locked: false
 cardinality: 1
 translatable: true
