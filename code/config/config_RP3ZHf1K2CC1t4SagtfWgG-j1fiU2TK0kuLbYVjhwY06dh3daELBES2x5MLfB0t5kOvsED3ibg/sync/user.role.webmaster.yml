@@ -9,7 +9,7 @@ _core:
   default_config_hash: '-fGgKkUUKttakWjgwfEFV9bhBI3iaUwq6hrjwAI9xCs'
 id: webmaster
 label: Webmaster
-weight: 3
+weight: -7
 is_admin: null
 permissions:
   - 'access administration pages'
@@ -41,6 +41,7 @@ permissions:
   - 'configure editable editor_manual node layout overrides'
   - 'configure editable news_item node layout overrides'
   - 'configure editable special_page node layout overrides'
+  - 'create and edit custom blocks'
   - 'create basic_page content'
   - 'create dds_file media'
   - 'create dds_image media'
