@@ -5,8 +5,8 @@ dependencies: {  }
 _core:
   default_config_hash: qUgYjFyoRJM_2wudOJvVzw4YsQwhTOQDowKDSVWKJv4
 id: anonymous
-label: 'Anonymous user'
-weight: 0
+label: 'Anonym bruger'
+weight: -10
 is_admin: false
 permissions:
   - 'access content'
