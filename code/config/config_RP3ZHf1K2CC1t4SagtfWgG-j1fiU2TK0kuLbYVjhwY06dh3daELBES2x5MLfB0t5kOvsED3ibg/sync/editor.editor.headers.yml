@@ -1,0 +1,41 @@
+uuid: d6df7a6f-1dbc-4649-8911-0e2d24ef8407
+langcode: da
+status: true
+dependencies:
+  config:
+    - filter.format.headers
+  module:
+    - ckeditor
+format: headers
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatering
+          items:
+            - Bold
+            - Italic
+        -
+          name: Links
+          items:
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: Værktøjer
+          items:
+            - Source
+  plugins:
+    stylescombo:
+      styles: ''
+    language:
+      language_list: un
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

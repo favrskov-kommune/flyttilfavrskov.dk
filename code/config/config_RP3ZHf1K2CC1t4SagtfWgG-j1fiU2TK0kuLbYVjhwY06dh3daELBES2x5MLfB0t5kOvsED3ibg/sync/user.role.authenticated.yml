@@ -12,4 +12,5 @@ permissions:
   - 'access content'
   - 'access shortcuts'
   - 'use text format basic_html'
+  - 'use text format headers'
   - 'view media'

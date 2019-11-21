@@ -6,7 +6,15 @@ dependencies:
     - field.storage.node.field_header_subline
     - node.type.special_page
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    headers: headers
+    restricted_html: '0'
+    basic_html: '0'
+    full_html: '0'
+    plain_text: '0'
 _core:
   default_config_hash: fCG0ke_xdyZK5vCqPVO2C3gz7DUR4KIKfwdoIGQNScw
 id: node.special_page.field_header_subline

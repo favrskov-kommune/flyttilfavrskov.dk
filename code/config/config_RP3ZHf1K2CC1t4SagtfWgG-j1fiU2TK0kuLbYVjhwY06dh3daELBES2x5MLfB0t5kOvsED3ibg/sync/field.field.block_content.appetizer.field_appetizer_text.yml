@@ -9,7 +9,15 @@ dependencies:
     module:
       - dds_layout_block_appetizer
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    basic_html: basic_html
+    restricted_html: '0'
+    headers: '0'
+    full_html: '0'
+    plain_text: '0'
 _core:
   default_config_hash: mFC58UtrZ_bQdud9WJ5ZIdMH6xB9fL0HRxHVbp4dLns
 id: block_content.appetizer.field_appetizer_text
