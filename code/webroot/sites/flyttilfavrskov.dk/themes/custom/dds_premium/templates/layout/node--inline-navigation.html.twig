@@ -70,7 +70,7 @@
  *   in different view modes.
  */
 #}
-<a href="{{ url }}" class="inline-navigation-item">
+<a {{ attributes.addClass('inline-navigation-item') }} href="{{ url }}">
   <figure{{ image_container_attribute.addClass('inline-navigation-item__image').addClass(not image ? 'inline-navigation-item__image--fallback') }}>
     {% if image %}
       {{ image|responsive_image('inline_navigation_1_1', 'lazyload') }}
