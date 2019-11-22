@@ -1,0 +1,19 @@
+uuid: 6fee993d-e74b-4c07-993c-4f552c903643
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_list_description
+    - node.type.news_item
+id: node.news_item.field_list_description
+field_name: field_list_description
+entity_type: node
+bundle: news_item
+label: 'List description'
+description: 'Used when the page is shown on lists, e.g. inline navigation and news list. If empty, the subline from the page header will be used, if there is one.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.special_page.field_header_subline
     - field.field.node.special_page.field_header_text_color
     - field.field.node.special_page.field_hide_breadcrumb
+    - field.field.node.special_page.field_list_description
     - field.field.node.special_page.field_meta_tags
     - field.field.node.special_page.field_parent
     - field.field.node.special_page.field_search_api_exclude
@@ -39,6 +40,7 @@ hidden:
   field_header_subline: true
   field_header_text_color: true
   field_hide_breadcrumb: true
+  field_list_description: true
   field_meta_tags: true
   field_parent: true
   field_search_api_exclude: true
