@@ -27,7 +27,7 @@ display:
             format_custom_true: Published
             format_custom_false: Unpublished
         changed:
-          label: Updated
+          label: Opdateret
         operations:
           label: Operations
       filters:
@@ -53,7 +53,7 @@ display:
       title: Indhold
       empty:
         area_text_custom:
-          content: 'No content available.'
+          content: 'Der blev ikke fundet noget indhold'
     display_title: Master
   page_1:
     display_title: Page

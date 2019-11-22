@@ -28,7 +28,7 @@ display:
           label: Bloktype
           separator: ', '
         changed:
-          label: Updated
+          label: Opdateret
         operations:
           label: Operations
       filters:

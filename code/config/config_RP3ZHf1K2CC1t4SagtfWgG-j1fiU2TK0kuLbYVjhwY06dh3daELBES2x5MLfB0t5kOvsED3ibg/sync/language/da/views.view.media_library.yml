@@ -97,7 +97,7 @@ display:
         uid:
           label: Author
         changed:
-          label: Updated
+          label: Opdateret
       filters:
         name:
           expose:

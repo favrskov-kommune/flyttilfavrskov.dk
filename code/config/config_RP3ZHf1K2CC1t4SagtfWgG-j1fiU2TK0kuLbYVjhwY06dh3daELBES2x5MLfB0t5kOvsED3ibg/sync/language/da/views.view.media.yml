@@ -43,7 +43,7 @@ display:
             format_custom_false: Unpublished
           separator: ', '
         changed:
-          label: Updated
+          label: Opdateret
           separator: ', '
         operations:
           label: Operations

@@ -17,7 +17,7 @@ display:
       title: 'Seneste indhold'
       empty:
         area_text_custom:
-          content: 'No content available.'
+          content: 'Der blev ikke fundet noget indhold'
       use_more_text: Mere
   block_1:
     display_title: Blok

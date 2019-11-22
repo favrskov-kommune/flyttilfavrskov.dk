@@ -31,7 +31,7 @@ content:
     type: entity_reference_paragraphs
     weight: 1
     settings:
-      title: Paragraf
+      title: Paragraph
       title_plural: Paragraphs
       edit_mode: closed
       add_mode: dropdown
