@@ -6,9 +6,6 @@ dependencies:
     - field.field.site_setting_entity.footer.field_content_center
     - field.field.site_setting_entity.footer.field_content_left
     - field.field.site_setting_entity.footer.field_content_right
-    - field.field.site_setting_entity.footer.field_header_center
-    - field.field.site_setting_entity.footer.field_header_left
-    - field.field.site_setting_entity.footer.field_header_right
     - site_settings.site_setting_entity_type.footer
   module:
     - field_group
@@ -87,30 +84,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
-    region: content
-  field_header_center:
-    weight: 5
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_header_left:
-    weight: 4
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_header_right:
-    weight: 5
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
     region: content
   fieldset:
     type: string_textfield

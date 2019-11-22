@@ -6,9 +6,6 @@ dependencies:
     - field.field.site_setting_entity.footer.field_content_center
     - field.field.site_setting_entity.footer.field_content_left
     - field.field.site_setting_entity.footer.field_content_right
-    - field.field.site_setting_entity.footer.field_header_center
-    - field.field.site_setting_entity.footer.field_header_left
-    - field.field.site_setting_entity.footer.field_header_right
     - site_settings.site_setting_entity_type.footer
   module:
     - text
@@ -40,30 +37,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
-    region: content
-  field_header_center:
-    weight: 2
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_header_left:
-    weight: 1
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_header_right:
-    weight: 3
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
     region: content
   fieldset:
     label: above
