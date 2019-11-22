@@ -81,8 +81,8 @@
     {% endif %}
   </figure>
   <h3 class="inline-navigation-item__title">{{ label }}</h3>
-  {% if field_header_subline %}
-    <p class="inline-navigation-item__text">{{ field_header_subline }}</p>
+  {% if inline_navigation_teaser %}
+    <p class="inline-navigation-item__text">{{ inline_navigation_teaser }}</p>
   {% endif %}
   <span class="text-link">{{ 'Read more'|t({}, {'context' : 'premium inline-navigation'}) }}</span>
 </a>
