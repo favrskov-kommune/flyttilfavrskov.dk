@@ -14,6 +14,7 @@ is_admin: null
 permissions:
   - 'access administration pages'
   - 'access content overview'
+  - 'access contextual links'
   - 'access dds_media_browser entity browser pages'
   - 'access files overview'
   - 'access kint'
