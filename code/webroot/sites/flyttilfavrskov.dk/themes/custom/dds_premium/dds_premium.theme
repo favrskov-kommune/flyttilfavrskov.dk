@@ -249,6 +249,8 @@ function dds_premium_preprocess_node__inline_navigation(array &$variables) {
   }
   if ($node->hasField('field_list_description') && !$node->get('field_list_description')->isEmpty()) {
     $variables['inline_navigation_teaser'] = $node->get('field_list_description')->value;
+  } else if ($node->bundle() == 'news_item' && $node->hasField('field_teaser') && !$node->get('field_teaser')->isEmpty()) {
+    $variables['inline_navigation_teaser'] = strip_tags($node->get('field_teaser')->value);
   } else if ($node->hasField('field_header_subline') && !$node->get('field_header_subline')->isEmpty()) {
     $variables['inline_navigation_teaser'] = strip_tags($node->get('field_header_subline')->value);
   }

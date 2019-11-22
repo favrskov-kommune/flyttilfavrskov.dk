@@ -1,2 +1,2 @@
 label: 'Liste beskrivelse'
-description: 'Bruges når siden vises på lister. F.eks. i inline navigation og på nyhedslister. Hvis beskrivelsen ikke udfyldes, vises headerens underoverskrift, hvis denne er udfyldt.'
+description: 'Bruges når siden vises på lister. F.eks. i inline navigation og på nyhedslister. Hvis beskrivelsen ikke udfyldes, vises manchet i stedet. Hvis manchet ikke er udfyldt, vises headerens underoverskrift i stedet.'
