@@ -81,8 +81,8 @@
     {% endif %}
   </figure>
   <h3 class="inline-navigation-item__title">{{ label }}</h3>
-  {% if node.hasField('field_header_subline') %}
-    <p class="inline-navigation-item__text">{{ node.field_header_subline.value }}</p>
+  {% if field_header_subline %}
+    <p class="inline-navigation-item__text">{{ field_header_subline }}</p>
   {% endif %}
   <span class="text-link">{{ 'Read more'|t({}, {'context' : 'premium inline-navigation'}) }}</span>
 </a>

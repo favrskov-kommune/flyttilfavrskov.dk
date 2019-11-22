@@ -13,7 +13,7 @@
       <div class="{{ hero_position[position] }}">
         <div{{ content_attributes.addClass('hero__content') }}>
           <h1 class="hero__title">{{ title }}</h1>
-          <p class="hero__description">{{ teaser }}</p>
+          <div class="hero__description">{{ teaser }}</div>
           {% if cta.url and cta.title %}
             {% include '@dds_premium/components/molecules/m-cta.html.twig' with {
               'url': cta.url,

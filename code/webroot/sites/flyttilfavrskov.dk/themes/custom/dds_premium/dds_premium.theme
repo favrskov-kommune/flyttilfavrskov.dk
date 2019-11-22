@@ -247,6 +247,9 @@ function dds_premium_preprocess_node__inline_navigation(array &$variables) {
       'uri' => $image_uri,
     ];
   }
+  if ($node->hasField('field_header_subline') && !$node->get('field_header_subline')->isEmpty()) {
+    $variables['field_header_subline'] = strip_tags($node->get('field_header_subline')->value);
+  }
 }
 
 /**
@@ -710,7 +713,7 @@ function _create_hero(ContentEntityInterface $entity, array $fields): array {
   ];
 
   if (isset($fields['teaser']) && $entity->hasField($fields['teaser']) && !$entity->get($fields['teaser'])->isEmpty()) {
-    $hero['teaser'] = $entity->get($fields['teaser'])->value;
+    $hero['teaser'] = ['#markup' => $entity->get($fields['teaser'])->value];
   }
 
   if (isset($fields['cta']) && $entity->hasField($fields['cta']) && !$entity->get($fields['cta'])->isEmpty()) {

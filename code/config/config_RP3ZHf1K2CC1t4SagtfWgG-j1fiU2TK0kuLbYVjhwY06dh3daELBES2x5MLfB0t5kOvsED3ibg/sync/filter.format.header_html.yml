@@ -1,11 +1,11 @@
-uuid: 1a856f57-7503-4efa-a92f-49a06ccfb449
-langcode: da
+uuid: 0461e91b-35d0-447d-be3c-ece055455236
+langcode: en
 status: true
 dependencies:
   module:
     - media
-name: Headers
-format: headers
+name: 'Header HTML'
+format: header_html
 weight: 0
 filters:
   filter_html:
@@ -17,12 +17,3 @@ filters:
       allowed_html: '<a href hreflang> <em> <strong> '
       filter_html_help: false
       filter_html_nofollow: false
-  media_embed:
-    id: media_embed
-    provider: media
-    status: false
-    weight: 100
-    settings:
-      default_view_mode: default
-      allowed_media_types: {  }
-      allowed_view_modes: {  }

@@ -10,7 +10,7 @@ dependencies:
     - text
 third_party_settings:
   allowed_formats:
-    headers: headers
+    header_html: header_html
     restricted_html: '0'
     basic_html: '0'
     full_html: '0'

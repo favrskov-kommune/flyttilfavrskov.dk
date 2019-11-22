@@ -1,19 +1,19 @@
-uuid: d6df7a6f-1dbc-4649-8911-0e2d24ef8407
-langcode: da
+uuid: 283bb66d-8256-4bbb-be96-e413736f0216
+langcode: en
 status: true
 dependencies:
   config:
-    - filter.format.headers
+    - filter.format.header_html
   module:
     - ckeditor
-format: headers
+format: header_html
 editor: ckeditor
 settings:
   toolbar:
     rows:
       -
         -
-          name: Formatering
+          name: Format
           items:
             - Bold
             - Italic
@@ -23,7 +23,7 @@ settings:
             - DrupalLink
             - DrupalUnlink
         -
-          name: Værktøjer
+          name: Tools
           items:
             - Source
   plugins:
