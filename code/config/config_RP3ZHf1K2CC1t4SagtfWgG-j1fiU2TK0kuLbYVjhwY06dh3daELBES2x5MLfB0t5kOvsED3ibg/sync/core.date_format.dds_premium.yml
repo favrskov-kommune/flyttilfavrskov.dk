@@ -1,0 +1,8 @@
+uuid: 664abc39-5c9b-4639-a649-82eca748c87c
+langcode: en
+status: true
+dependencies: {  }
+id: dds_premium
+label: 'DDS Premium standard date'
+locked: false
+pattern: 'F j Y'

@@ -10,7 +10,7 @@ field_name: field_list_description
 entity_type: node
 bundle: news_item
 label: 'List description'
-description: 'Used when the page is shown on lists, e.g. inline navigation and news list. If empty, the subline from the page header will be used, if there is one.'
+description: 'Used when the page is shown on lists, e.g. inline navigation and news list. If empty, teaser will be used. If that is also empty, the subline from the page header will be used.'
 required: false
 translatable: true
 default_value: {  }

@@ -1,0 +1,2 @@
+label: Nyhedsside
+pattern: 'nyheder/[node:title]'

@@ -15,8 +15,8 @@
     {% include '@dds_premium/components/molecules/m-cta.html.twig' with {
       'type': 'button',
       'text': show_more_text,
-      'attributes': create_attribute().setAttribute('@click.prevent', 'displayHiddenItems')
+      'attributes': create_attribute().setAttribute('@click.prevent', 'displayHiddenItems').addClass('button--center')
     } %}
-    {% endif %}
   </div>
+  {% endif %}
 </div>
