@@ -463,7 +463,7 @@ function dds_premium_preprocess_layout_block__accordion(array &$variables) {
       $variables['items'][] = [
         'id' => $item->id(),
         'headline' => $item->get('field_accordion_item_headline')->value,
-        'text' => $item->get('field_accordion_item_text')->value,
+        'text' => ['#markup' => $item->get('field_accordion_item_text')->value],
       ];
     }
   }
