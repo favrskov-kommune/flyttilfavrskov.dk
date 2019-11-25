@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
         vim \
         curl \
         imagemagick \
+        sendmail \
         zlib1g-dev && \
     rm -rf /var/lib/apt/lists/*
 
@@ -28,6 +29,8 @@ RUN a2enmod rewrite && \
         calendar \
         zip && \
         ( yes | pecl install xdebug )
+
+COPY php.ini /usr/local/etc/php/conf.d/php-overwrite.ini
 
 #Shell setup
 RUN echo 'alias ll="ls -lah"' >> ~/.bashrc
