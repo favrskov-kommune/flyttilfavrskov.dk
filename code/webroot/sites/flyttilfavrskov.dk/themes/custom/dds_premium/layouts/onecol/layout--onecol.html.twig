@@ -26,6 +26,14 @@
     <div {{ region_attributes.content.addClass('layout__region') }}>
       {{ content.content }}
     </div>
+  {% elseif settings.column_width == 'narrow' %}
+    <div {{ region_attributes.content.addClass(['container', 'layout__region']) }}>
+      <div class="row">
+        <div class="col-xs-12 col-md-8 col-md-offset-2">
+          {{ content.content }}
+        </div>
+      </div>
+    </div>
   {% else %}
     <div {{ region_attributes.content.addClass(['container', 'layout__region']) }}>
       {{ content.content }}

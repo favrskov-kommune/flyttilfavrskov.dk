@@ -43,13 +43,5 @@
 ] %}
 
 <div {{ attributes.addClass(classes) }}>
-  {% if layout.layout_id == 'layout_onecol' %}
-    <div class="row">
-      <div class="col-xs-12 col-md-8 col-md-offset-2">
-        {{ fields.field_text }}
-      </div>
-    </div>
-  {% else %}
-    {{ fields.field_text }}
-  {% endif %}
+  {{ fields.field_text }}
 </div>
