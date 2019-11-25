@@ -1,0 +1,33 @@
+uuid: 3c67836c-8960-408a-b340-f9d4785e3726
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_parent
+    - node.type.area
+    - node.type.parcelling
+  module:
+    - entity_hierarchy
+id: node.parcelling.field_parent
+field_name: field_parent
+entity_type: node
+bundle: parcelling
+label: Parent
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      area: area
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: parcelling
+  weight_min: -50
+  weight_max: 50
+  weight_label: Vægt
+field_type: entity_reference_hierarchy

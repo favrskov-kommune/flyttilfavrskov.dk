@@ -1,0 +1,29 @@
+uuid: cf0195f9-2aa9-4377-96df-02f00b0da14a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_subline
+    - node.type.area
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    header_html: header_html
+    restricted_html: '0'
+    basic_html: '0'
+    full_html: '0'
+    plain_text: '0'
+id: node.area.field_header_subline
+field_name: field_header_subline
+entity_type: node
+bundle: area
+label: Subline
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,23 @@
+uuid: b8fec1c4-e63f-4946-b5e8-063837f82da3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_orientation
+    - node.type.parcelling
+  module:
+    - options
+id: node.parcelling.field_header_orientation
+field_name: field_header_orientation
+entity_type: node
+bundle: parcelling
+label: 'Header text orientation'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

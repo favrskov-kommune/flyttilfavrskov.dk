@@ -1,0 +1,23 @@
+uuid: 70de400a-55f0-479e-bdd4-f9fc286001c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_color_theme
+    - node.type.parcelling
+  module:
+    - options
+id: node.parcelling.field_header_color_theme
+field_name: field_header_color_theme
+entity_type: node
+bundle: parcelling
+label: 'Header color theme'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: primary
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e50f8906f25d53e50eb1da1cd2600cfb",
+    "content-hash": "326814084cdb902857e50e8cfae78c1e",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -6188,7 +6188,9 @@
             "version": "2.2.8",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_2hqFwa/novicelldds_content_hierarchy-2-2-8.zip"
+                "url": "https://packages.drupal.dk/php/~/up/ver_2hqFwa/novicelldds_content_hierarchy-2-2-8.zip",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "drupal/ctools": "~3.0",
@@ -6203,7 +6205,9 @@
             "version": "2.1.0",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/d/novicell%2Fdds_cookieinfo/novicell%2Fdds_cookieinfo-2.1.0"
+                "url": "https://packages.drupal.dk/php/~/d/novicell%2Fdds_cookieinfo/novicell%2Fdds_cookieinfo-2.1.0",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "novicell/dds_site_settings": "^2.0"
@@ -6215,7 +6219,9 @@
             "version": "1.0.8",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_25gIpD/novicelldds_editors-1-0-8.zip"
+                "url": "https://packages.drupal.dk/php/~/up/ver_25gIpD/novicelldds_editors-1-0-8.zip",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "drupal/role_delegation": "^1.0"
@@ -6227,7 +6233,9 @@
             "version": "1.6.3",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_1o1Nbg/novicelldds_elasticsearch-1-6-3.zip"
+                "url": "https://packages.drupal.dk/php/~/up/ver_1o1Nbg/novicelldds_elasticsearch-1-6-3.zip",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "drupal/elasticsearch_connector": "^6.0@alpha",
@@ -6241,7 +6249,9 @@
             "version": "1.1.1",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_1EbiwH/novicelldds_entity_data-1-1-1.zip"
+                "url": "https://packages.drupal.dk/php/~/up/ver_1EbiwH/novicelldds_entity_data-1-1-1.zip",
+                "reference": null,
+                "shasum": null
             },
             "type": "drupal-module"
         },
@@ -6268,7 +6278,9 @@
             "version": "2.2.2",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_1xQtZ8/novicelldds_media-2-2-2.zip"
+                "url": "https://packages.drupal.dk/php/~/up/ver_1xQtZ8/novicelldds_media-2-2-2.zip",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "drupal/ctools": "^3.0",
@@ -6283,7 +6295,9 @@
             "version": "1.2.1",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/d/novicell%2Fdds_monitor/novicell%2Fdds_monitor-1.2.1"
+                "url": "https://packages.drupal.dk/php/~/d/novicell%2Fdds_monitor/novicell%2Fdds_monitor-1.2.1",
+                "reference": null,
+                "shasum": null
             },
             "type": "drupal-module"
         },
@@ -6292,7 +6306,9 @@
             "version": "1.1.4",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_1k2yyI/novicelldds_news-1-1-4.zip"
+                "url": "https://packages.drupal.dk/php/~/up/ver_1k2yyI/novicelldds_news-1-1-4.zip",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "novicell/dds_content": "~1.0"
@@ -6304,7 +6320,9 @@
             "version": "2.0.17",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_1J7bkL/novicelldds_premium_installer-2-0-17.zip"
+                "url": "https://packages.drupal.dk/php/~/up/ver_1J7bkL/novicelldds_premium_installer-2-0-17.zip",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "drupal/admin_toolbar": "~1.17",
@@ -6320,7 +6338,9 @@
             "version": "1.0.3",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_KshRf/novicelldds_search-1-0-3.zip"
+                "url": "https://packages.drupal.dk/php/~/up/ver_KshRf/novicelldds_search-1-0-3.zip",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "drupal/search_api_exclude_entity": "^1.0",
@@ -6333,7 +6353,9 @@
             "version": "1.0.4",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_16aE20/novicelldds_seo-1-0-4.zip"
+                "url": "https://packages.drupal.dk/php/~/up/ver_16aE20/novicelldds_seo-1-0-4.zip",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "drupal/gtm": "^1.1",
@@ -6351,7 +6373,9 @@
             "version": "2.1.6",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_itia1/novicelldds_site_settings-2-1-6.zip"
+                "url": "https://packages.drupal.dk/php/~/up/ver_itia1/novicelldds_site_settings-2-1-6.zip",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "drupal/site_settings": "^1.13",
@@ -6364,7 +6388,9 @@
             "version": "1.0.5",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_1S5HbX/novicelldds_translation-1-0-5.zip"
+                "url": "https://packages.drupal.dk/php/~/up/ver_1S5HbX/novicelldds_translation-1-0-5.zip",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "drupal/layout_builder_at": "^2.10"
