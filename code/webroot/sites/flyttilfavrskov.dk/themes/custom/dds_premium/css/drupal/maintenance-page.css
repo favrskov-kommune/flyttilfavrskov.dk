@@ -19,10 +19,10 @@ div.maintenance-page {
   div.maintenance-page {
     margin-top: 40px;
   }
-  .header {
+  body.maintenance-page .header {
     display: none;
   }
-  body {
+  body.maintenance-page {
     padding: 0;
   }
 }
