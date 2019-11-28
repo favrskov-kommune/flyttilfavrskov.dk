@@ -12,6 +12,8 @@ dependencies:
     - field.field.node.parcelling.field_hide_breadcrumb
     - field.field.node.parcelling.field_list_description
     - field.field.node.parcelling.field_meta_tags
+    - field.field.node.parcelling.field_parcelling_identifier
+    - field.field.node.parcelling.field_parcelling_parcels
     - field.field.node.parcelling.field_parent
     - field.field.node.parcelling.field_search_api_exclude
     - field.field.node.parcelling.field_teaser
@@ -23,6 +25,7 @@ dependencies:
     - field_group
     - media_library
     - metatag
+    - paragraphs
     - path
     - scheduler
     - search_api_exclude_entity
@@ -136,6 +139,26 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
+    region: content
+  field_parcelling_identifier:
+    weight: 28
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_parcelling_parcels:
+    type: entity_reference_paragraphs
+    weight: 27
+    settings:
+      title: Paragraf
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
     region: content
   field_parent:
     type: entity_reference_hierarchy_select

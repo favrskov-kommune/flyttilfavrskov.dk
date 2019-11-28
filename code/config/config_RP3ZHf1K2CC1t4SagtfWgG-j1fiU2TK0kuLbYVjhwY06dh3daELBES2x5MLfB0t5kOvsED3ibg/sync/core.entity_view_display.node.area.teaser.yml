@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.area.field_area_identifier
+    - field.field.node.area.field_area_type_identifier
     - field.field.node.area.field_header_background
     - field.field.node.area.field_header_color_theme
     - field.field.node.area.field_header_cta
@@ -31,6 +33,8 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_area_identifier: true
+  field_area_type_identifier: true
   field_header_background: true
   field_header_color_theme: true
   field_header_cta: true

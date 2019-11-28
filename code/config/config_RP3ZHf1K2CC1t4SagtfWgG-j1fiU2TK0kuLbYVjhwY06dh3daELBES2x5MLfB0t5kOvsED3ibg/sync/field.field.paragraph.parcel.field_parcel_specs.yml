@@ -1,0 +1,28 @@
+uuid: bc550929-4d7b-44b2-8fd5-6da6a1153c1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_parcel_specs
+    - media.type.dds_file
+    - paragraphs.paragraphs_type.parcel
+id: paragraph.parcel.field_parcel_specs
+field_name: field_parcel_specs
+entity_type: paragraph
+bundle: parcel
+label: Specifications
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      dds_file: dds_file
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

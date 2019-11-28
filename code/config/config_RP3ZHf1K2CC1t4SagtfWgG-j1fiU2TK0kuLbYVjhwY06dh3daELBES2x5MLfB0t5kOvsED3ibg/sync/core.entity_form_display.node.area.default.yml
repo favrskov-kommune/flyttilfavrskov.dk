@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.area.field_area_identifier
+    - field.field.node.area.field_area_type_identifier
     - field.field.node.area.field_header_background
     - field.field.node.area.field_header_color_theme
     - field.field.node.area.field_header_cta
@@ -74,6 +76,22 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_area_identifier:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_area_type_identifier:
+    weight: 28
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_header_background:
     weight: 3
     settings:

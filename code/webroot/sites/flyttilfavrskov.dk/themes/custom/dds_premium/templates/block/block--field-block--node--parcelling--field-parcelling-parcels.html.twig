@@ -1,0 +1,39 @@
+{% set classes = [
+  'layout-block',
+  view_mode ? 'layout-block--view-mode-' ~ view_mode|clean_class,
+  'parcel_list'
+] %}
+
+
+<div{{ attributes.addClass(classes) }}>
+  {% if items.available %}
+    <div class="row">
+      <div class="col-xs-12">
+        <h3>{{ 'Available parcels'|t }}</h3>
+      </div>
+      {% for item in items.available %}
+        {{ item }}
+      {% endfor %}
+    </div>
+  {% endif %}
+  {% if items.reserved %}
+    <div class="row">
+      <div class="col-xs-12">
+        <h3>{{ 'Reserved parcels'|t }}</h3>
+      </div>
+      {% for item in items.reserved %}
+        {{ item }}
+      {% endfor %}
+    </div>
+  {% endif %}
+  {% if items.sold %}
+    <div class="row">
+      <div class="col-xs-12">
+        <h3>{{ 'Sold parcels'|t }}</h3>
+      </div>
+      {% for item in items.sold %}
+        {{ item }}
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>

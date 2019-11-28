@@ -1,0 +1,9 @@
+uuid: 79475b58-3825-4409-9e57-3b862bc16fa0
+langcode: en
+status: true
+dependencies: {  }
+id: parcel
+label: Parcel
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

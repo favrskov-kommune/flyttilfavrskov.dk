@@ -1,0 +1,65 @@
+uuid: 624d7a34-58a9-4b1f-8698-5c99985a3793
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.parcel.field_parcel_address
+    - field.field.paragraph.parcel.field_parcel_area
+    - field.field.paragraph.parcel.field_parcel_identifier
+    - field.field.paragraph.parcel.field_parcel_price
+    - field.field.paragraph.parcel.field_parcel_specs
+    - field.field.paragraph.parcel.field_parcel_status
+    - paragraphs.paragraphs_type.parcel
+  module:
+    - media_library
+id: paragraph.parcel.default
+targetEntityType: paragraph
+bundle: parcel
+mode: default
+content:
+  field_parcel_address:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_parcel_area:
+    weight: 2
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_parcel_identifier:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_parcel_price:
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_parcel_specs:
+    type: media_library_widget
+    weight: 4
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_parcel_status:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true

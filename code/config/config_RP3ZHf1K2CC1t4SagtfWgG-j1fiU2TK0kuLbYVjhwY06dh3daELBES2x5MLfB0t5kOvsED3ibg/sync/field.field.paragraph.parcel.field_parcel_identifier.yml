@@ -1,0 +1,19 @@
+uuid: 0f8253ce-6816-4de3-b099-3797f55a89d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_parcel_identifier
+    - paragraphs.paragraphs_type.parcel
+id: paragraph.parcel.field_parcel_identifier
+field_name: field_parcel_identifier
+entity_type: paragraph
+bundle: parcel
+label: 'External identifier'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
