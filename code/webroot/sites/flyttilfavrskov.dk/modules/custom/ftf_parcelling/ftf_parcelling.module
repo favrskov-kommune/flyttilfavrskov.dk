@@ -42,7 +42,7 @@ function ftf_parcelling_preprocess_paragraph__parcel(&$variables) {
   /** @var \Drupal\media\Entity\Media $media_file */
   $media_file = $paragraph->field_parcel_specs->entity;
   if($media_file) {
-    $variables['parcel_test'] = Link::fromTextAndUrl($media_file->label(), Url::fromUri($media_file->field_media_file->entity->url()))->toRenderable();
-    $variables['parcel_test']['#attributes']['class'] = 'parcel-document-link';
+    $variables['parcel_specs'] = Link::fromTextAndUrl($media_file->label(), Url::fromUri($media_file->field_media_file->entity->url()))->toRenderable();
+    $variables['parcel_specs']['#attributes']['class'] = 'parcel-document-link';
   }
 }

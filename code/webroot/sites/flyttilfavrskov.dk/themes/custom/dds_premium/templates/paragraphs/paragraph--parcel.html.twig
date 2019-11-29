@@ -9,9 +9,6 @@
     <div class="parcel-line parcel-price"><span class="parcel-line-label">{{ 'Asking price'|t }}</span><span class="parcel-line-value">{{ parcel_price }}</span></div>
   </div>
   <div class="parcel-documents">
-    {% if parcel_specs %}
-      <div class="parcel-document"><a href="{{ parcel_specs.url }}" {{ parcel_specs.attributes }}>{{ parcel_specs.label }}</a></div>
-    {% endif %}
-    {{ parcel_test }}
+    {{ parcel_specs }}
   </div>
 </div>

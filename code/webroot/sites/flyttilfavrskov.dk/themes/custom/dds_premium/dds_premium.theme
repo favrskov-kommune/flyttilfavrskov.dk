@@ -2,6 +2,7 @@
 
 use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Link;
 use Drupal\Core\Url;
 use Drupal\block\Entity\Block;
 use Drupal\Core\Template\Attribute;
@@ -597,6 +598,25 @@ function dds_premium_preprocess_layout_block__usp_item(&$variables) {
       else {
         $variables['image'] = $variables['content']['field_image'];
       }
+    }
+  }
+}
+
+/**
+ * Accordion paragraph preprocess.
+ *
+ * @param array $variables
+ *   Template variables.
+ */
+function dds_premium_preprocess_layout_block__document_list(array &$variables) {
+  $entity = $variables['entity'];
+  $items = $entity->get('field_media_documents');
+  if (!empty($items)) {
+    foreach ($items as $item) {
+      $item = $item->entity;
+      $link = Link::fromTextAndUrl($item->label(), Url::fromUri($item->field_media_file->entity->url()))->toRenderable();
+      $link['#attributes']['class'] = ['document-link'];
+      $variables['documents'][] = $link;
     }
   }
 }
