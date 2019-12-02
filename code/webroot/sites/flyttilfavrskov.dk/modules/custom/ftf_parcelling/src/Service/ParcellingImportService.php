@@ -34,6 +34,8 @@ class ParcellingImportService {
    */
   public function startParcellingImport() {
 
+    $this->deleteAllParcellingNodes();die;
+
     $this->logger->notice('Starting import');
 
     $parcelling_identifiers = $this->fetchCurrentParcellingIdentifiers();
@@ -170,6 +172,16 @@ class ParcellingImportService {
     return $return;
   }
 
+  protected function deleteAllParcellingNodes() {
+    $nids = \Drupal::entityQuery('node')
+      ->condition('type', 'parcelling')
+      ->execute();
+    $nodes = Node::loadMultiple($nids);
+    foreach ($nodes as $node) {
+      $node->delete();
+    }
+
+  }
 
 
 }

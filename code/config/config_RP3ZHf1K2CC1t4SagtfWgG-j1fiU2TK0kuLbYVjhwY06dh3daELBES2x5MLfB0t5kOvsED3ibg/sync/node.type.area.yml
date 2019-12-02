@@ -25,7 +25,7 @@ third_party_settings:
     unpublish_required: false
     unpublish_revision: false
     publish_past_date_created: false
-name: Area/City
+name: City
 type: area
 description: ''
 help: ''

@@ -1,0 +1,20 @@
+uuid: e8519042-27e2-4d1b-953a-f4a97e7ed99d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - site_settings
+id: site_setting_entity.field_type_storparcel
+field_name: field_type_storparcel
+entity_type: site_setting_entity
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

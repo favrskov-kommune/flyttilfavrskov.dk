@@ -39,7 +39,7 @@ class ParcelImportService {
 
   public function startParcelImport() {
 
-//    $this->deleteAllParcelParagraphs();
+    $this->deleteAllParcelParagraphs();die;
 
     $this->logger->notice('Starting import');
     $parcelling_identifiers = $this->fetchCurrentParcellingIdentifiers();

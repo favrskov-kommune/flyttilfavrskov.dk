@@ -18,11 +18,7 @@ class AreaImportService {
   /**
    * Hardcoded array should be changed into something dynamic
    */
-  protected $mapAreaTypes = [
-    'bolig' => 13,
-    'erhverv' => 19,
-    'storparcel' => 24,
-  ];
+  protected $mapAreaTypes;
 
   /**
    * ParcelImportService constructor.
@@ -32,6 +28,16 @@ class AreaImportService {
   public function __construct(Connection $connection) {
     $this->database = $connection;
     $this->logger = \Drupal::logger('ftf_area_import');
+
+    $site_settings_loader = \Drupal::service('site_settings.loader');
+    $site_settings = $site_settings_loader->loadByFieldset('site_settings');
+    $parcelling_import_settings = $site_settings['parcelling_import_settings'];
+    $this->mapAreaTypes = [
+      'bolig' => $parcelling_import_settings['field_type_bolig'],
+      'erhverv' => $parcelling_import_settings['field_type_erhverv'],
+      'storparcel' => $parcelling_import_settings['field_type_storparcel'],
+    ];
+
   }
 
   /**
@@ -40,6 +46,8 @@ class AreaImportService {
    * @return array
    */
   public function startAreaImport() {
+
+    $this->deleteAllAreaNodes();die;
 
     $this->logger->notice('Starting import');
 
@@ -81,7 +89,6 @@ class AreaImportService {
    * @return \Drupal\Core\Entity\EntityInterface|null
    */
   private function createAreaNode($area) {
-    //todo: change to something more dynamic
     $parent_id = false;
     if(isset($this->mapAreaTypes[$area->type])) {
       $parent_id = $this->mapAreaTypes[$area->type];
@@ -151,5 +158,14 @@ class AreaImportService {
     return $return;
   }
 
+  protected function deleteAllAreaNodes() {
+    $nids = \Drupal::entityQuery('node')
+      ->condition('type', 'area')
+      ->execute();
+    $nodes = Node::loadMultiple($nids);
+    foreach ($nodes as $node) {
+      $node->delete();
+    }
+  }
 
 }
