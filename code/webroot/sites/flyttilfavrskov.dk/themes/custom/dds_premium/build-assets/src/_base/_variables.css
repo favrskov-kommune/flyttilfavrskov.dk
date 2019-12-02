@@ -7,10 +7,10 @@
   ********************/
     --theme-background-color: #fff;
     --theme-color: #474747;
-    --theme-button-background-color: #00655d;
+    --theme-button-background-color: #006c72;
     --theme-button-color: #fff;
-    --theme-link-color: #00655d;
-    --theme-divider-background-color: #00655d;
+    --theme-link-color: #006c72;
+    --theme-divider-background-color: #006c72;
     --theme-accordion-border-color: #e7ebe3;
     --theme-accordion-background-color: #e7ebe3;
     --theme-accordion-text-color: #474747;
@@ -65,7 +65,7 @@
     /* Meta menu */
     --meta-menu-height: 40px;
     --meta-menu-background-color: #f7f7f7;
-    --meta-menu-text-color: #00655d;
+    --meta-menu-text-color: #006c72;
 
     /* Button */
     --button-border-radius: 33px;
