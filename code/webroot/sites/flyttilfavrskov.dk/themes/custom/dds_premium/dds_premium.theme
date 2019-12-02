@@ -247,6 +247,7 @@ function dds_premium_preprocess_node__inline_navigation(array &$variables) {
       'uri' => $image_uri,
     ];
   }
+
   if ($node->hasField('field_list_description') && !$node->get('field_list_description')->isEmpty()) {
     $variables['inline_navigation_teaser'] = $node->get('field_list_description')->value;
   } else if ($node->bundle() == 'news_item' && $node->hasField('field_teaser') && !$node->get('field_teaser')->isEmpty()) {
@@ -268,7 +269,6 @@ function dds_premium_preprocess_image(array &$variables) {
     $implode = implode(' ', $classes);
     $explode = explode(' ', $implode);
     if (!empty($explode) && in_array('lazyload', $explode)) {
-//      kint($variables);
       $variables['attributes']['data-src'] = $variables['attributes']['src'];
       $variables['attributes']['data-query-obj'] = '{}';
       unset($variables['attributes']['src']);
@@ -478,7 +478,6 @@ function dds_premium_preprocess_layout_block__accordion(array &$variables) {
 function dds_premium_preprocess_layout_block__hero(array &$variables) {
   /** @var Drupal\paragraphs\Entity\Paragraph $paragraph */
   $entity = $variables['entity'];
-
   $variables['hero'] = _create_hero($entity, [
     'title' => 'field_hero_headline',
     'background_image' => 'field_hero_background',
@@ -533,10 +532,9 @@ function dds_premium_preprocess_layout_block___video(array &$variables) {
 function dds_premium_preprocess_layout_block__appetizer(array &$variables) {
   $variables['image_figure_attributes'] = new Attribute();
 
-  /** @var Drupal\paragraphs\Entity\Paragraph $paragraph */
-  $paragraph = $variables['entity'];
-  if ($paragraph->hasField('field_appetizer_cta') && !$paragraph->get('field_appetizer_cta')->isEmpty()) {
-    $cta = $paragraph->get('field_appetizer_cta')->getValue();
+  $entity = $variables['entity'];
+  if ($entity->hasField('field_appetizer_cta') && !$entity->get('field_appetizer_cta')->isEmpty()) {
+    $cta = $entity->get('field_appetizer_cta')->getValue();
     /** @var Drupal\Core\Template\Attribute $attribute */
     $variables['cta'] = _modify_cta(reset($cta));
   }
@@ -565,8 +563,13 @@ function dds_premium_preprocess_layout_block__appetizer(array &$variables) {
   }
 }
 
-function dds_premium_preprocess_layout_block__usp_item(&$variables) {
-  /** @var \Drupal\paragraphs\Entity\Paragraph $item */
+/**
+ * USP item preprocess.
+ *
+ * @param array $variables
+ *   Template variables.
+ */
+function dds_premium_preprocess_layout_block__usp_item(array &$variables) {
   $item = $variables['entity'];
 
   if ($item->hasField('field_headline') && !$item->field_headline->isEmpty()) {
@@ -604,8 +607,6 @@ function dds_premium_preprocess_layout_block__usp_item(&$variables) {
 /**
  * Search results.
  *
- * @todo Add image style when we know the size.
- *
  * @param array $variables
  *   Template variables.
  */
@@ -629,7 +630,7 @@ function dds_premium_preprocess_search_page__results(array &$variables) {
  * Create hero.
  *
  * @param Drupal\Core\Entity\ContentEntityInterface $entity
- *   Could eg. be a node or a paragraph.
+ *   Could eg. be a node or a block.
  * @param array $fields
  *   Mapping array containing fields from the entity.
  *
@@ -701,7 +702,7 @@ function _create_hero(ContentEntityInterface $entity, array $fields): array {
     $content_attributes->addClass('hero__content--medium');
   }
 
-  if ($entity instanceof \Drupal\paragraphs\Entity\Paragraph) {
+  if ($entity instanceof \Drupal\block_content\Entity\BlockContent) {
     $attributes->addClass('hero--small');
     $content_attributes->addClass('hero__content--small');
   }

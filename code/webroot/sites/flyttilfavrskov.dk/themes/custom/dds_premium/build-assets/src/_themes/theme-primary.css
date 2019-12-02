@@ -1,11 +1,11 @@
 .theme-primary {
     --theme-background-color: #c6d9df;
-    --theme-color: #00655d;
-    --theme-button-background-color: #00655d;
+    --theme-color: #006c72;
+    --theme-button-background-color: #006c72;
     --theme-button-color: #fff;
     --theme-link-color: #fff;
     --theme-divider-background-color: #fff;
     --theme-input-border: #fff;
-    --theme-input-color-marked: #00655d;
+    --theme-input-color-marked: #006c72;
     --theme-background-svg-background-color: #b5d2db;
 }
