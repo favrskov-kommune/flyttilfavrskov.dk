@@ -1,0 +1,23 @@
+uuid: 3024d69c-85a7-471c-89db-718a85d47315
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_text_color
+    - node.type.parcelling
+  module:
+    - options
+id: node.parcelling.field_header_text_color
+field_name: field_header_text_color
+entity_type: node
+bundle: parcelling
+label: 'Text color'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: light
+default_value_callback: ''
+settings: {  }
+field_type: list_string

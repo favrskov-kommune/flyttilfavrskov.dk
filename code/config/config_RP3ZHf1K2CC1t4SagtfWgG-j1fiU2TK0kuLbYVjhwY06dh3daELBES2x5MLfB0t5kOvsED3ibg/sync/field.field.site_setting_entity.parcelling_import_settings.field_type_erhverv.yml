@@ -1,0 +1,30 @@
+uuid: b48a3933-6f94-4a23-a143-831d6dc2055d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_type_erhverv
+    - node.type.basic_page
+    - node.type.special_page
+    - site_settings.site_setting_entity_type.parcelling_import_settings
+id: site_setting_entity.parcelling_import_settings.field_type_erhverv
+field_name: field_type_erhverv
+entity_type: site_setting_entity
+bundle: parcelling_import_settings
+label: Erhverv
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      basic_page: basic_page
+      special_page: special_page
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: basic_page
+field_type: entity_reference

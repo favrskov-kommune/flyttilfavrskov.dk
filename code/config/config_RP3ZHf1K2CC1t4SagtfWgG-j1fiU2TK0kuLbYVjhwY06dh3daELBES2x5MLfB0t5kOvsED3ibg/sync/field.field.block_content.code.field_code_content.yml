@@ -1,0 +1,19 @@
+uuid: 6adf9b60-72a2-41e4-9bd4-195221fd37ae
+langcode: da
+status: true
+dependencies:
+  config:
+    - block_content.type.code
+    - field.storage.block_content.field_code_content
+id: block_content.code.field_code_content
+field_name: field_code_content
+entity_type: block_content
+bundle: code
+label: Code
+description: 'Beware, anything you write in this field, will be outputted on the website. Use cautiously at your own risk.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

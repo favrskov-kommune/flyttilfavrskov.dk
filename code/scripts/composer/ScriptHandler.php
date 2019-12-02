@@ -59,14 +59,14 @@ class ScriptHandler {
    * @param Event $event
    */
   public static function askForRemovingGitDirs(Event $event) {
-    if ($event->getIO()->askConfirmation('<question>Do you want to delete all .git dirs in (vendor/, webroot/modules/, webroot/themes/, webroot/libraries/, webroot/profiles/) [Y/n] - (default is Y) ? </question>', TRUE)) {
+//    if ($event->getIO()->askConfirmation('<question>Do you want to delete all .git dirs in (vendor/, webroot/modules/, webroot/themes/, webroot/libraries/, webroot/profiles/) [Y/n] - (default is Y) ? </question>', TRUE)) {
       shell_exec('cd vendor/ && find . -type d | grep .git | xargs rm -rf');
       shell_exec('cd webroot/modules/ && find . -type d | grep .git | xargs rm -rf');
       shell_exec('cd webroot/themes/ && find . -type d | grep .git | xargs rm -rf');
       shell_exec('cd webroot/libraries/ && find . -type d | grep .git | xargs rm -rf');
       shell_exec('cd webroot/profiles/ && find . -type d | grep .git | xargs rm -rf');
       $event->getIO()->write("<info>Now all .git dirs in (vendor/, webroot/modules/, webroot/themes/, webroot/libraries/, webroot/profiles/) are deleted!</info>");
-    }
+//    }
   }
 
   /**

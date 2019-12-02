@@ -1,0 +1,29 @@
+uuid: 434ab468-d5f8-4686-a376-58ca71cd06d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_subline
+    - node.type.parcelling
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    header_html: header_html
+    restricted_html: '0'
+    basic_html: '0'
+    full_html: '0'
+    plain_text: '0'
+id: node.parcelling.field_header_subline
+field_name: field_header_subline
+entity_type: node
+bundle: parcelling
+label: Subline
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

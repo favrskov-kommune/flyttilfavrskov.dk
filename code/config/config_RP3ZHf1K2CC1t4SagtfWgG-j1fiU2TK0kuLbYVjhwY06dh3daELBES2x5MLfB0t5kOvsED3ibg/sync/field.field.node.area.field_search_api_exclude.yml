@@ -1,0 +1,23 @@
+uuid: ec7c47c5-b7dd-40de-a7cb-b3ef20d86eaf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_search_api_exclude
+    - node.type.area
+  module:
+    - search_api_exclude_entity
+id: node.area.field_search_api_exclude
+field_name: field_search_api_exclude
+entity_type: node
+bundle: area
+label: Exclude
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: false
+default_value_callback: ''
+settings: {  }
+field_type: search_api_exclude_entity

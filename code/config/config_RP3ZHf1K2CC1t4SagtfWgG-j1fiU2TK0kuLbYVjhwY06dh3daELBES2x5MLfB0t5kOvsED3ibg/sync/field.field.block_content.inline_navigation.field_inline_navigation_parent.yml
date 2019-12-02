@@ -5,7 +5,11 @@ dependencies:
   config:
     - block_content.type.inline_navigation
     - field.storage.block_content.field_inline_navigation_parent
+    - node.type.area
     - node.type.basic_page
+    - node.type.editor_manual
+    - node.type.news_item
+    - node.type.parcelling
     - node.type.special_page
   enforced:
     module:
@@ -27,6 +31,10 @@ settings:
   handler_settings:
     target_bundles:
       basic_page: basic_page
+      news_item: news_item
+      area: area
+      parcelling: parcelling
+      editor_manual: editor_manual
       special_page: special_page
     sort:
       field: _none

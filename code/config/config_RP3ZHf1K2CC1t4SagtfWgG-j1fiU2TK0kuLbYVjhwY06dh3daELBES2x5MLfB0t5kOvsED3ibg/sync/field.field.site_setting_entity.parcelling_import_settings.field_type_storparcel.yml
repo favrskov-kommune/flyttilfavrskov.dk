@@ -1,0 +1,30 @@
+uuid: 22492395-6526-4d2a-ab12-eaa1ee53d9e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_type_storparcel
+    - node.type.basic_page
+    - node.type.special_page
+    - site_settings.site_setting_entity_type.parcelling_import_settings
+id: site_setting_entity.parcelling_import_settings.field_type_storparcel
+field_name: field_type_storparcel
+entity_type: site_setting_entity
+bundle: parcelling_import_settings
+label: Storparcel
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      basic_page: basic_page
+      special_page: special_page
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: basic_page
+field_type: entity_reference

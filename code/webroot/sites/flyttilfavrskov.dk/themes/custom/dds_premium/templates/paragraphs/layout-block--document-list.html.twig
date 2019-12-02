@@ -1,0 +1,38 @@
+{% set classes = [
+  'layout-block',
+  'document-list',
+  view_mode ? 'layout-block--view-mode-' ~ view_mode|clean_class,
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+<h3>{{ 'Documents'|t }}</h3>
+{% include '@dds_premium/components/molecules/m-link-list.html.twig' with {
+  'links': documents
+} %}
+</div>
+
+<style>
+.document-list ul {
+  list-style-type: none;
+  padding: 0px;
+}
+.document-list li {
+  padding: 20px 0;
+}
+  .document-list a {
+    color: #474747;
+    line-height: 50px;
+  }
+.document-list a:hover,
+.document-list a:active {
+  color: #00655d;
+}
+  .document-list a::before {
+    content: "\00a0";
+    height: 50px;
+    width: 50px;
+    background: #00655d;
+    display: inline-block;
+    margin: 0 25px 0 0;
+  }
+</style>

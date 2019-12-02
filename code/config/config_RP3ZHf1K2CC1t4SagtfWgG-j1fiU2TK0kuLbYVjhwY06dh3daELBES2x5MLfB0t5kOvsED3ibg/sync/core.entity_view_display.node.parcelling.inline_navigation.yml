@@ -1,0 +1,52 @@
+uuid: 52fd9543-bded-4cc9-80f6-546642592b49
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.inline_navigation
+    - field.field.node.parcelling.field_header_background
+    - field.field.node.parcelling.field_header_color_theme
+    - field.field.node.parcelling.field_header_cta
+    - field.field.node.parcelling.field_header_orientation
+    - field.field.node.parcelling.field_header_subline
+    - field.field.node.parcelling.field_header_text_color
+    - field.field.node.parcelling.field_hide_breadcrumb
+    - field.field.node.parcelling.field_list_description
+    - field.field.node.parcelling.field_meta_tags
+    - field.field.node.parcelling.field_parcelling_identifier
+    - field.field.node.parcelling.field_parcelling_parcels
+    - field.field.node.parcelling.field_parent
+    - field.field.node.parcelling.field_search_api_exclude
+    - field.field.node.parcelling.field_teaser
+    - field.field.node.parcelling.layout_builder__layout
+    - node.type.parcelling
+  module:
+    - user
+id: node.parcelling.inline_navigation
+targetEntityType: node
+bundle: parcelling
+mode: inline_navigation
+content:
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_header_background: true
+  field_header_color_theme: true
+  field_header_cta: true
+  field_header_orientation: true
+  field_header_subline: true
+  field_header_text_color: true
+  field_hide_breadcrumb: true
+  field_list_description: true
+  field_meta_tags: true
+  field_parcelling_identifier: true
+  field_parcelling_parcels: true
+  field_parent: true
+  field_search_api_exclude: true
+  field_teaser: true
+  langcode: true
+  layout_builder__layout: true
+  search_api_excerpt: true

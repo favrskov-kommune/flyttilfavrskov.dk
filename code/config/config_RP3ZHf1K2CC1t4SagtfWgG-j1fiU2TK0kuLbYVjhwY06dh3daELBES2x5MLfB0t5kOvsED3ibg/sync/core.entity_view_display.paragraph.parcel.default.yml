@@ -1,0 +1,70 @@
+uuid: be359f6a-e083-46c9-b58c-1870d0d35aa5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.parcel.field_parcel_address
+    - field.field.paragraph.parcel.field_parcel_area
+    - field.field.paragraph.parcel.field_parcel_identifier
+    - field.field.paragraph.parcel.field_parcel_price
+    - field.field.paragraph.parcel.field_parcel_specs
+    - field.field.paragraph.parcel.field_parcel_status
+    - paragraphs.paragraphs_type.parcel
+  module:
+    - options
+id: paragraph.parcel.default
+targetEntityType: paragraph
+bundle: parcel
+mode: default
+content:
+  field_parcel_address:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_parcel_area:
+    weight: 1
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: false
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_parcel_identifier:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_parcel_price:
+    weight: 2
+    label: hidden
+    settings:
+      thousand_separator: .
+      prefix_suffix: false
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_parcel_specs:
+    type: entity_reference_label
+    weight: 3
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_parcel_status:
+    type: list_key
+    weight: 4
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,2 @@
+label: 'Liste beskrivelse'
+description: 'Bruges når siden vises på lister. F.eks. i inline navigation og på nyhedslister. Hvis beskrivelsen ikke udfyldes, vises headerens underoverskrift, hvis denne er udfyldt.'

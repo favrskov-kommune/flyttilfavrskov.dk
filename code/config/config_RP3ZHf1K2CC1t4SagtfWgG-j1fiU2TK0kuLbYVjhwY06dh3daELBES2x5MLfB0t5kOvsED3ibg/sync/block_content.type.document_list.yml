@@ -1,0 +1,8 @@
+uuid: 736e4271-98b4-4994-adbc-b4fb5dbb1e0d
+langcode: en
+status: true
+dependencies: {  }
+id: document_list
+label: 'Document list'
+revision: 0
+description: ''

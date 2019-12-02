@@ -1,0 +1,23 @@
+uuid: cd433efa-4a64-46aa-ac75-16e4fca754d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hide_breadcrumb
+    - node.type.parcelling
+id: node.parcelling.field_hide_breadcrumb
+field_name: field_hide_breadcrumb
+entity_type: node
+bundle: parcelling
+label: 'Hide breadcrumb'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

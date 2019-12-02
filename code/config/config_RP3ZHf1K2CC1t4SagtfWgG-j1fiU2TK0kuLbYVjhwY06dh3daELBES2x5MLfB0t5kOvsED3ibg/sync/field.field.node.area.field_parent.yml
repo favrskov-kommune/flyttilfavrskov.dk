@@ -1,0 +1,35 @@
+uuid: d933c0a9-00a1-47c5-a18e-f164dc9ed0bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_parent
+    - node.type.area
+    - node.type.basic_page
+    - node.type.special_page
+  module:
+    - entity_hierarchy
+id: node.area.field_parent
+field_name: field_parent
+entity_type: node
+bundle: area
+label: Parent
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      basic_page: basic_page
+      special_page: special_page
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: area
+  weight_min: -50
+  weight_max: 50
+  weight_label: Weight
+field_type: entity_reference_hierarchy
