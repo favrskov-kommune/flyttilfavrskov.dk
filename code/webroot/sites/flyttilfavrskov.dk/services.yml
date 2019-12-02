@@ -174,6 +174,9 @@ parameters:
     supportsCredentials: false
 
   monolog.channel_handlers:
+    ftf_parcel_import: ['ftf_parcelling']
+    ftf_parcelling_import: ['ftf_parcelling']
+    ftf_area_import: ['ftf_parcelling']
     content: ['rotating_file_content']
     default: ['rotating_file_drupal']
 services:
@@ -183,3 +186,6 @@ services:
   monolog.handler.rotating_file_content:
     class: Monolog\Handler\RotatingFileHandler
     arguments: ['../logs/content.log', 30, 0]
+  monolog.handler.ftf_parcelling:
+    class: Monolog\Handler\RotatingFileHandler
+    arguments: ['../logs/parcel_import.log', 14, 100]

@@ -1,0 +1,23 @@
+uuid: 6154705c-bbbe-4057-b102-563dbe1c95fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_cta
+    - node.type.parcelling
+  module:
+    - dds_content
+id: node.parcelling.field_header_cta
+field_name: field_header_cta
+entity_type: node
+bundle: parcelling
+label: 'Header CTA'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: '17'
+  title: '2'
+field_type: dds_link_with_target

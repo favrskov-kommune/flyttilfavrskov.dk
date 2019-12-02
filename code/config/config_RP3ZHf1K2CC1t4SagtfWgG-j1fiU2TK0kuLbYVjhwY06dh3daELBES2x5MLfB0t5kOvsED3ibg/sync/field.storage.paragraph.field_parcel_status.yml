@@ -1,0 +1,36 @@
+uuid: 7217f14c-4174-4adc-8bb7-5965b5c32cde
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_parcel_status
+field_name: field_parcel_status
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: available
+      label: Available
+    -
+      value: reserved
+      label: Reserved
+    -
+      value: sold
+      label: Sold
+    -
+      value: pending
+      label: Pending
+    -
+      value: unknown
+      label: Unknown
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

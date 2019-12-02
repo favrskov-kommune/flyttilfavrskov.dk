@@ -76,4 +76,3 @@ logs/*
 
 # ignored configurations
 config/*/sync/mailchimp_signup.mailchimp_signup.*.yml
-config/*/sync/system.menu.*.yml

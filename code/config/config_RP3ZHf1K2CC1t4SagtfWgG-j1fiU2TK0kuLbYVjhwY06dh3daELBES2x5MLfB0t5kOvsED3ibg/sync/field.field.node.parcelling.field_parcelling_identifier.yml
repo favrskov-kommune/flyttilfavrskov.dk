@@ -1,0 +1,19 @@
+uuid: 5ac5bafe-a744-4fc0-96fa-211140297a15
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_parcelling_identifier
+    - node.type.parcelling
+id: node.parcelling.field_parcelling_identifier
+field_name: field_parcelling_identifier
+entity_type: node
+bundle: parcelling
+label: 'External identifier'
+description: 'This identifier should correspond to a parcelling ID in GIS. It is needed for the system to correctly map imported parcels to the corresponding parcellings.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

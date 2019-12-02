@@ -1,0 +1,8 @@
+uuid: 99e81cda-2de8-4500-91dc-56705239cf22
+langcode: en
+status: true
+dependencies: {  }
+id: parcelling_import_settings
+label: 'Parcelling import settings'
+fieldset: 'Site settings'
+multiple: false

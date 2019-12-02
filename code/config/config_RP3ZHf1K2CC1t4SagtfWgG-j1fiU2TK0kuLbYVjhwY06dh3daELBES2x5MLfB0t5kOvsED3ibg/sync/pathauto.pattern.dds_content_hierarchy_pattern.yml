@@ -9,15 +9,17 @@ label: 'Content Hierarchy Pattern'
 type: 'canonical_entities:node'
 pattern: '[node:ancestors-joined-path]/[node:title]'
 selection_criteria:
-  55c00b48-efa9-492c-b3bd-424674c77096:
+  b9007af9-5718-4343-911d-10cfe14133f4:
     id: node_type
     bundles:
+      area: area
       basic_page: basic_page
+      parcelling: parcelling
       special_page: special_page
     negate: false
     context_mapping:
       node: node
-    uuid: 55c00b48-efa9-492c-b3bd-424674c77096
+    uuid: b9007af9-5718-4343-911d-10cfe14133f4
 selection_logic: and
 weight: 0
 relationships: {  }

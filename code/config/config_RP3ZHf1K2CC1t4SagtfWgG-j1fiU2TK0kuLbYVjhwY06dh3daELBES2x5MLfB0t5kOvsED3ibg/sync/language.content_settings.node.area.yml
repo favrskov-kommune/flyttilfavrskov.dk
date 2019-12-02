@@ -1,0 +1,11 @@
+uuid: 82f422d9-3129-4e28-a116-47d4e6b0e412
+langcode: da
+status: true
+dependencies:
+  config:
+    - node.type.area
+id: node.area
+target_entity_type_id: node
+target_bundle: area
+default_langcode: da
+language_alterable: false

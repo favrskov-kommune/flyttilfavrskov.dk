@@ -1,0 +1,11 @@
+uuid: a5eb505c-300c-4306-88e9-244c1a843e54
+langcode: da
+status: true
+dependencies:
+  config:
+    - node.type.parcelling
+id: node.parcelling
+target_entity_type_id: node
+target_bundle: parcelling
+default_langcode: da
+language_alterable: false

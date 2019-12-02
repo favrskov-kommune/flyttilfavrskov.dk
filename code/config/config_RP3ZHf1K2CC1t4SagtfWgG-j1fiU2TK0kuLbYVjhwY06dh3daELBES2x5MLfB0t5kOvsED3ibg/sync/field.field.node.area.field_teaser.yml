@@ -1,0 +1,19 @@
+uuid: ffb86d64-807c-4f38-a588-c6e54e79935d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser
+    - node.type.area
+id: node.area.field_teaser
+field_name: field_teaser
+entity_type: node
+bundle: area
+label: Teaser
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

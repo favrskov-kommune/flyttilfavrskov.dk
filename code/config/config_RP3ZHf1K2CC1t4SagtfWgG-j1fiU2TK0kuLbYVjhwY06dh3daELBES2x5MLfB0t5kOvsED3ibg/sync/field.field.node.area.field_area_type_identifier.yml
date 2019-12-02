@@ -1,0 +1,19 @@
+uuid: fbf58ff3-64c1-4b18-bacc-cd7aa9d8eaa1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_area_type_identifier
+    - node.type.area
+id: node.area.field_area_type_identifier
+field_name: field_area_type_identifier
+entity_type: node
+bundle: area
+label: 'Type identifier'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

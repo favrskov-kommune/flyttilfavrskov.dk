@@ -1,0 +1,23 @@
+uuid: 531bac7f-6733-4872-8c91-66c2b2c55831
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_color_theme
+    - node.type.area
+  module:
+    - options
+id: node.area.field_header_color_theme
+field_name: field_header_color_theme
+entity_type: node
+bundle: area
+label: 'Header color theme'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: primary
+default_value_callback: ''
+settings: {  }
+field_type: list_string

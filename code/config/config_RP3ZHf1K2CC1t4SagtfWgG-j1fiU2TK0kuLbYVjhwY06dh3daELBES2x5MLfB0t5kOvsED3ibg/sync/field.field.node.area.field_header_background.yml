@@ -1,0 +1,30 @@
+uuid: e73990a5-1733-4d8e-a53c-36414737643d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_background
+    - media.type.dds_image
+    - media.type.dds_video
+    - node.type.area
+id: node.area.field_header_background
+field_name: field_header_background
+entity_type: node
+bundle: area
+label: 'Header background'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      dds_image: dds_image
+      dds_video: dds_video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

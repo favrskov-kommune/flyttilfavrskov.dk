@@ -1,0 +1,48 @@
+<?php
+
+use Drupal\Core\Link;
+use Drupal\Core\Url;
+
+
+/**
+ * Implements hook_cron().
+ */
+function ftf_parcelling_cron() {
+  $parcel_import = \Drupal::service('ftf_parcelling.parcel_import');
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ftf_parcelling_preprocess_block(&$variables) {
+  if($variables['plugin_id'] == 'field_block:node:parcelling:field_parcelling_parcels') {
+    $items = ['available' => [], 'reserved' => [], 'sold' => []];
+    $content = $variables['content'];
+    $i = 0;
+    while (array_key_exists($i, $content)) {
+      $paragraph = $content[$i]['#paragraph'];
+      $items[$paragraph->field_parcel_status->value][] = $content[$i];
+      $i ++;
+    }
+    $variables['items'] = $items;
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ftf_parcelling_preprocess_paragraph__parcel(&$variables) {
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['paragraph'];
+  $variables['parcel_address'] = $paragraph->field_parcel_address->value;
+  $variables['parcel_status'] = $paragraph->field_parcel_status->value;
+  $variables['parcel_price'] = $paragraph->field_parcel_price->value;
+  $variables['parcel_area'] = $paragraph->field_parcel_area->value;
+
+  /** @var \Drupal\media\Entity\Media $media_file */
+  $media_file = $paragraph->field_parcel_specs->entity;
+  if($media_file) {
+    $variables['parcel_specs'] = Link::fromTextAndUrl($media_file->label(), Url::fromUri($media_file->field_media_file->entity->url()))->toRenderable();
+    $variables['parcel_specs']['#attributes']['class'] = 'parcel-document-link';
+  }
+}

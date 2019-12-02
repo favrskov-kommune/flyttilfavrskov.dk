@@ -1,9 +1,8 @@
 .footer {
     background-image: url('/sites/flyttilfavrskov.dk/themes/custom/dds_premium/build-assets/dist/images/footer.png');
-    min-height: 298px;
     background-repeat: no-repeat;
     background-position: 50% top;
-    padding-top: 150px;
+    padding-top: 227px;
     position: relative;
 
     &__inner {
@@ -32,17 +31,6 @@
             &:last-child {
                 margin-bottom: 0;
             }
-        }
-
-        &::before {
-            content: '';
-            background-color: var(--color-primary);
-            width: 100%;
-            height: 11px;
-            display: block;
-            position: absolute;
-            top: 139px;
-            max-width: calc(50% - 800px);
         }
     }
 }
