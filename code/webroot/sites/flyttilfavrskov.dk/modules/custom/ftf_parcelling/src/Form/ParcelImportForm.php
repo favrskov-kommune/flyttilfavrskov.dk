@@ -3,22 +3,10 @@
 namespace Drupal\ftf_parcelling\Form;
 
 use Drupal\Core\Form\FormBase;
-use Drupal\ftf_parcelling\Service\AreaImportService;
 use Drupal\ftf_parcelling\Service\ParcelImportService;
-use Drupal\ftf_parcelling\Service\ParcellingImportService;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class ParcelImportForm extends FormBase {
-
-  /**
-   * @var \Drupal\ftf_parcelling\Service\AreaImportService
-   */
-  protected $area_import_service;
-
-  /**
-   * @var \Drupal\ftf_parcelling\Service\ParcellingImportService
-   */
-  protected $parcelling_import_service;
 
   /**
    * @var \Drupal\ftf_parcelling\Service\ParcelImportService
@@ -28,13 +16,9 @@ class ParcelImportForm extends FormBase {
   /**
    * ParcelImportForm constructor.
    *
-   * @param \Drupal\ftf_parcelling\Service\AreaImportService $area_import_service
-   * @param \Drupal\ftf_parcelling\Service\ParcellingImportService $parcelling_import_service
    * @param \Drupal\ftf_parcelling\Service\ParcelImportService $parcel_import_service
    */
-  public function __construct(AreaImportService $area_import_service, ParcellingImportService $parcelling_import_service, ParcelImportService $parcel_import_service) {
-    $this->area_import_service = $area_import_service;
-    $this->parcelling_import_service = $parcelling_import_service;
+  public function __construct(ParcelImportService $parcel_import_service) {
     $this->parcel_import_service = $parcel_import_service;
   }
 
@@ -45,8 +29,6 @@ class ParcelImportForm extends FormBase {
    */
   public static function create(ContainerInterface $container) {
     return new static(
-      $container->get('ftf_parcelling.area_import'),
-      $container->get('ftf_parcelling.parcelling_import'),
       $container->get('ftf_parcelling.parcel_import')
     );
   }
@@ -85,9 +67,6 @@ class ParcelImportForm extends FormBase {
       '#title' => $this->t('Delete all courses'),
     ];
     */
-    $this->area_import_service->startAreaImport();
-    $this->parcelling_import_service->startParcellingImport();
-    $this->parcel_import_service->startParcelImport();
 
     $form['import'] = [
       '#type' => 'submit',
@@ -113,7 +92,8 @@ class ParcelImportForm extends FormBase {
       //delete parcel data
     }
     else {
-      $response = $this->import_service->startParcelImport();
+      $response = $this->parcel_import_service->startImport();
+
       if ($response['status']) {
         \Drupal::messenger()->addStatus($response['message']);
       }

@@ -1,10 +1,4 @@
 services:
-  ftf_parcelling.area_import:
-    class: Drupal\ftf_parcelling\Service\AreaImportService
-    arguments: ['@database']
-  ftf_parcelling.parcelling_import:
-    class: Drupal\ftf_parcelling\Service\ParcellingImportService
-    arguments: ['@database']
   ftf_parcelling.parcel_import:
     class: Drupal\ftf_parcelling\Service\ParcelImportService
     arguments: ['@database']
