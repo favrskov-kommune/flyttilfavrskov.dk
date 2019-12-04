@@ -24,6 +24,12 @@ function ftf_parcelling_preprocess_block(&$variables) {
       $items[$paragraph->field_parcel_status->value][] = $content[$i];
       $i ++;
     }
+    foreach ($items as $key => $parcels) {
+      usort($parcels, function ($a, $b) {
+        return strnatcmp($a['#paragraph']->field_parcel_address->value, $b['#paragraph']->field_parcel_address->value);
+      });
+      $items[$key] = $parcels;
+    }
     $variables['items'] = $items;
   }
 }
