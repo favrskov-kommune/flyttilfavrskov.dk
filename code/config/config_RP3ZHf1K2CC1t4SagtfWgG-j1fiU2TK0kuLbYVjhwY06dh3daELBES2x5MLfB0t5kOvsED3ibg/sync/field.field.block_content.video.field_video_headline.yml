@@ -1,0 +1,24 @@
+uuid: 156d28e8-d2a3-468b-a1ea-4872c07f1133
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.video
+    - field.storage.block_content.field_video_headline
+  enforced:
+    module:
+      - dds_layout_block_video
+_core:
+  default_config_hash: EaNsfChxSYK3DzSBQBlxr7sn6z5U7a9PUf5puGSBP9o
+id: block_content.video.field_video_headline
+field_name: field_video_headline
+entity_type: block_content
+bundle: video
+label: Headline
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

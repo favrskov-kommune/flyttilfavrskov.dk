@@ -1,15 +1,15 @@
-uuid: 57ed1e91-8f6e-40bb-a0d4-0315fd291f4d
-langcode: en
+uuid: ad4adc65-1195-439e-9d94-db13e941eb96
+langcode: da
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_parcel_area
+    - field.storage.paragraph.field_parcel_sqm_price
     - paragraphs.paragraphs_type.parcel
-id: paragraph.parcel.field_parcel_area
-field_name: field_parcel_area
+id: paragraph.parcel.field_parcel_sqm_price
+field_name: field_parcel_sqm_price
 entity_type: paragraph
 bundle: parcel
-label: Area
+label: 'Price pr m2'
 description: ''
 required: false
 translatable: false

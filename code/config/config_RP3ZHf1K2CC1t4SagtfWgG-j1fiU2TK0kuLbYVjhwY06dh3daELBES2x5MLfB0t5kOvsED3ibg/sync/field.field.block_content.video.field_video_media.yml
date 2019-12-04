@@ -1,0 +1,33 @@
+uuid: c38baef0-66a8-4eb7-a8f2-740d8f8a0311
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.video
+    - field.storage.block_content.field_video_media
+    - media.type.dds_video
+  enforced:
+    module:
+      - dds_layout_block_video
+_core:
+  default_config_hash: MNCwhzFIMNwsXLkFOd-0s73GClG6aywy-faI1Eqr9Sg
+id: block_content.video.field_video_media
+field_name: field_video_media
+entity_type: block_content
+bundle: video
+label: Video
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      dds_video: dds_video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,18 +1,41 @@
-<div class="col-xs-12 col-md-4 parcel-wrapper">
-  <div class="parcel-header">
-    <div class="parcel-address">{{ parcel_address }}</div>
-    <div class="parcel-status">{{ parcel_status|capitalize|t }}</div>
-    {% if parcel_group %}<div class="parcel-group">{{ parcel_group }}</div>{% endif %}
-  </div>
-  <div class="parcel-information">
-    <div class="parcel-line parcel-area"><span class="parcel-line-label">{{ 'Area (m2)'|t }}</span> <span class="parcel-line-value">{{ parcel_area }}</span></div>
-    {% if parcel_min_price %}<div class="parcel-line parcel-price"><span class="parcel-line-label">{{ 'Minimum price'|t }}</span> <span class="parcel-line-value">{{ parcel_min_price }}</span></div>{% endif %}
-    {% if parcel_price %}<div class="parcel-line parcel-price"><span class="parcel-line-label">{{ 'Asking price'|t }}</span> <span class="parcel-line-value">{{ parcel_price }}</span></div>{% endif %}
-    {% if parcel_sqm_price %}<div class="parcel-line parcel-price"><span class="parcel-line-label">{{ 'Square meter price'|t }}</span> <span class="parcel-line-value">{{ parcel_sqm_price }}</span></div>{% endif %}
-  </div>
-  {% if parcel_specs %}
-    <div class="parcel-documents">
-      {{ parcel_specs }}
+<div class="col-xs-12 col-md-4">
+  <div class="parcel-wrapper">
+    <div class="parcel-header">
+      <div class="parcel-status {{ parcel_status }}">{{ parcel_status|capitalize|t }}</div>
+      <div class="parcel-address">{{ parcel_address }}</div>
+      {% if parcel_group %}<div class="parcel-group">{{ parcel_group }}</div>{% endif %}
     </div>
-  {% endif %}
+    <div class="parcel-information">
+      <div class="parcel-line parcel-area"><span class="parcel-line-label">{{ 'Area (m2)'|t }}</span> <span class="parcel-line-value">{{ parcel_area }}</span></div>
+      {% if parcel_min_price %}<div class="parcel-line parcel-price"><span class="parcel-line-label">{{ 'Minimum price'|t }}</span> <span class="parcel-line-value">{{ parcel_min_price|number_format(0, ',', '.') }}</span></div>{% endif %}
+      {% if parcel_price %}<div class="parcel-line parcel-price"><span class="parcel-line-label">{{ 'Asking price'|t }}</span> <span class="parcel-line-value">{{ parcel_price|number_format(0, ',', '.') }}</span></div>{% endif %}
+      {% if parcel_sqm_price %}<div class="parcel-line parcel-price"><span class="parcel-line-label">{{ 'Square meter price'|t }}</span> <span class="parcel-line-value">{{ parcel_sqm_price|number_format(0, ',', '.') }}</span></div>{% endif %}
+    </div>
+    {% if parcel_specs %}
+      <div class="parcel-documents">
+        {{ parcel_specs }}
+      </div>
+    {% endif %}
+  </div>
 </div>
+
+<style>
+  .parcel-wrapper {
+    border: 1px solid #aaaaaa;
+    padding: 30px;
+    margin: 50px 0 50px 0;
+  }
+  .parcel-status {
+    float: right;
+  }
+  .parcel-address {
+    font-weight: bold;
+  }
+  .parcel-group {
+    color: #aaaaaa;
+    font-style: italic;
+  }
+  .parcel-line-value {
+    float: right;
+  }
+</style>

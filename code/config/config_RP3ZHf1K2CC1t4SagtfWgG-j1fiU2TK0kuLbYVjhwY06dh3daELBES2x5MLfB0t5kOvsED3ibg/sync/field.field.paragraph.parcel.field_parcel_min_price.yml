@@ -1,15 +1,15 @@
-uuid: 57ed1e91-8f6e-40bb-a0d4-0315fd291f4d
-langcode: en
+uuid: 9cab2f32-a5e3-4a43-905b-ab337b59db9f
+langcode: da
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_parcel_area
+    - field.storage.paragraph.field_parcel_min_price
     - paragraphs.paragraphs_type.parcel
-id: paragraph.parcel.field_parcel_area
-field_name: field_parcel_area
+id: paragraph.parcel.field_parcel_min_price
+field_name: field_parcel_min_price
 entity_type: paragraph
 bundle: parcel
-label: Area
+label: 'Minimum price'
 description: ''
 required: false
 translatable: false

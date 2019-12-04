@@ -5,9 +5,12 @@ dependencies:
   config:
     - field.field.paragraph.parcel.field_parcel_address
     - field.field.paragraph.parcel.field_parcel_area
+    - field.field.paragraph.parcel.field_parcel_group
     - field.field.paragraph.parcel.field_parcel_identifier
+    - field.field.paragraph.parcel.field_parcel_min_price
     - field.field.paragraph.parcel.field_parcel_price
     - field.field.paragraph.parcel.field_parcel_specs
+    - field.field.paragraph.parcel.field_parcel_sqm_price
     - field.field.paragraph.parcel.field_parcel_status
     - paragraphs.paragraphs_type.parcel
   module:
@@ -32,6 +35,14 @@ content:
     third_party_settings: {  }
     type: number
     region: content
+  field_parcel_group:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_parcel_identifier:
     weight: 5
     settings:
@@ -39,6 +50,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_parcel_min_price:
+    weight: 6
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
     region: content
   field_parcel_price:
     weight: 3
@@ -53,6 +71,13 @@ content:
     settings:
       media_types: {  }
     third_party_settings: {  }
+    region: content
+  field_parcel_sqm_price:
+    weight: 7
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
     region: content
   field_parcel_status:
     weight: 1
