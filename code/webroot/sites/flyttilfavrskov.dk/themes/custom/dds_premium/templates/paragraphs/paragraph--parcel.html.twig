@@ -6,10 +6,10 @@
       {% if parcel_group %}<div class="parcel-group">{{ parcel_group }}</div>{% endif %}
     </div>
     <div class="parcel-information">
-      <div class="parcel-line parcel-area"><span class="parcel-line-label">{{ 'Area (m2)'|t }}</span> <span class="parcel-line-value">{{ parcel_area }}</span></div>
-      {% if parcel_min_price %}<div class="parcel-line parcel-price"><span class="parcel-line-label">{{ 'Minimum price'|t }}</span> <span class="parcel-line-value">{{ parcel_min_price|number_format(0, ',', '.') }}</span></div>{% endif %}
-      {% if parcel_price %}<div class="parcel-line parcel-price"><span class="parcel-line-label">{{ 'Asking price'|t }}</span> <span class="parcel-line-value">{{ parcel_price|number_format(0, ',', '.') }}</span></div>{% endif %}
-      {% if parcel_sqm_price %}<div class="parcel-line parcel-price"><span class="parcel-line-label">{{ 'Square meter price'|t }}</span> <span class="parcel-line-value">{{ parcel_sqm_price|number_format(0, ',', '.') }}</span></div>{% endif %}
+      <div class="parcel-line parcel-area"><span class="parcel-line-label">{{ 'Size'|t }}</span> <span class="parcel-line-value">{{ parcel_area|number_format(0, ',', '.') }} m&sup2;</span></div>
+      {% if parcel_min_price %}<div class="parcel-line parcel-price"><span class="parcel-line-label">{{ 'Minimum price'|t }}</span> <span class="parcel-line-value">{{ parcel_min_price|number_format(0, ',', '.') }} kr.</span></div>{% endif %}
+      {% if parcel_price %}<div class="parcel-line parcel-price"><span class="parcel-line-label">{{ 'Asking price'|t }}</span> <span class="parcel-line-value">{{ parcel_price|number_format(0, ',', '.') }} kr.</span></div>{% endif %}
+      {% if parcel_sqm_price %}<div class="parcel-line parcel-price"><span class="parcel-line-label">{{ 'Square meter price'|t }}</span> <span class="parcel-line-value">{{ parcel_sqm_price }} kr.</span></div>{% endif %}
     </div>
     {% if parcel_specs %}
       <div class="parcel-documents">
