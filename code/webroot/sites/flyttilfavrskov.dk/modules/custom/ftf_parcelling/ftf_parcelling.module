@@ -45,7 +45,7 @@ function ftf_parcelling_preprocess_paragraph__parcel(&$variables) {
   $variables['parcel_status'] = $paragraph->field_parcel_status->value;
   $variables['parcel_price'] = $paragraph->field_parcel_price->value > 0 ? $paragraph->field_parcel_price->value : null;
   $variables['parcel_min_price'] = $paragraph->field_parcel_min_price->value > 0 ? $paragraph->field_parcel_min_price->value : null;
-  $variables['parcel_sqm_price'] = $paragraph->field_parcel_sqm_price->value > 0 ? $paragraph->field_parcel_sqm_price->value : null;
+  $variables['parcel_sqm_price'] = $paragraph->field_parcel_price_sqm->value != '' ? $paragraph->field_parcel_price_sqm->value : null;
   $variables['parcel_area'] = $paragraph->field_parcel_area->value;
 
   /** @var \Drupal\media\Entity\Media $media_file */

@@ -1,16 +1,17 @@
-uuid: 2a879642-2a1e-42c9-827a-120b5b8acbaa
-langcode: da
+uuid: e7299e9a-685b-45e0-bfb8-77e92eda8f39
+langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
-id: paragraph.field_parcel_sqm_price
-field_name: field_parcel_sqm_price
+id: paragraph.field_parcel_price_sqm
+field_name: field_parcel_price_sqm
 entity_type: paragraph
-type: integer
+type: string
 settings:
-  unsigned: false
-  size: normal
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
 module: core
 locked: false
 cardinality: 1

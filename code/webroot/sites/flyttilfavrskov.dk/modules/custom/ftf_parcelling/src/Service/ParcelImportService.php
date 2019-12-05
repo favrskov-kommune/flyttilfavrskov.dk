@@ -101,14 +101,14 @@ class ParcelImportService {
   private function importAreas() {
     $data = $this->getAreaData();
     foreach ($data as $area) {
-      if($area->type != '' && $area->bynavn != '') {
+      if($area->type != '' && $area->bynavn_kode != '') {
         if(isset($this->identifiers[$area->type])) {
-          if(!isset($this->identifiers[$area->type]['areas'][$area->bynavn])) {
+          if(!isset($this->identifiers[$area->type]['areas'][$area->bynavn_kode])) {
             $this->logger->notice('Create area node');
             /** @var Node $node */
             $node = $this->createAreaNode($this->identifiers[$area->type]['nid'], $area);
             if($node) {
-              $this->identifiers[$area->type]['areas'][$area->bynavn] = ['nid' => $node->id(), 'parcellings' => []];
+              $this->identifiers[$area->type]['areas'][$area->bynavn_kode] = ['nid' => $node->id(), 'parcellings' => []];
             }
           }
         }
@@ -135,7 +135,7 @@ class ParcelImportService {
           'status' => 0
         ]);
         $node->set('field_area_type_identifier', (string) $area->type);
-        $node->set('field_area_identifier', (string) $area->bynavn);
+        $node->set('field_area_identifier', (string) $area->bynavn_kode);
         $node->set('field_parent', $parent_id);
 
         $node->save();
@@ -156,14 +156,14 @@ class ParcelImportService {
   private function importParcellings() {
     $data = $this->getAreaData();
     foreach ($data as $area) {
-      if($area->type != '' && $area->bynavn != '' && $area->udstyk_navn != '') {
-        if(isset($this->identifiers[$area->type]) && isset($this->identifiers[$area->type]['areas'][$area->bynavn])) {
-          if(!isset($this->identifiers[$area->type]['areas'][$area->bynavn]['parcellings'][$area->udstyk_navn])) {
+      if($area->type != '' && $area->bynavn_kode != '' && $area->udstyk_navn_kode != '') {
+        if(isset($this->identifiers[$area->type]) && isset($this->identifiers[$area->type]['areas'][$area->bynavn_kode])) {
+          if(!isset($this->identifiers[$area->type]['areas'][$area->bynavn_kode]['parcellings'][$area->udstyk_navn_kode])) {
             $this->logger->notice('Create parcelling node');
             /** @var Node $node */
-            $node = $this->createParcellingNode($this->identifiers[$area->type]['areas'][$area->bynavn]['nid'], $area);
+            $node = $this->createParcellingNode($this->identifiers[$area->type]['areas'][$area->bynavn_kode]['nid'], $area);
             if($node) {
-              $this->identifiers[$area->type]['areas'][$area->bynavn]['parcellings'][$area->udstyk_navn] = ['nid' => $node->id(), 'parcels' => []];
+              $this->identifiers[$area->type]['areas'][$area->bynavn_kode]['parcellings'][$area->udstyk_navn_kode] = ['nid' => $node->id(), 'parcels' => []];
             }
           }
         }
@@ -189,13 +189,13 @@ class ParcelImportService {
           'status' => 0
         ]);
         $node->set('title', $area->udstyk_navn);
-        $node->set('field_parcelling_identifier', $area->udstyk_navn);
+        $node->set('field_parcelling_identifier', $area->udstyk_navn_kode);
         $node->set('field_parent', $parent_id);
 
         $node->save();
         return $node;
       } catch (EntityStorageException $e) {
-        $this->logger->error('Failed to create node', ['type' => $area->type, 'bynavn' => $area->bynavn]);
+        $this->logger->error('Failed to create parcelling node');
       }
     }
     return null;
@@ -225,18 +225,18 @@ class ParcelImportService {
     foreach ($parcels as $parcel) {
       if ($parcel->objectid > 0) {
         $parcel_identifier = $type.'_'.intval($parcel->objectid);
-        if(isset($this->identifiers[$type]['areas'][$parcel->bynavn])) {
-          if(isset($this->identifiers[$type]['areas'][$parcel->bynavn]['parcellings'][$parcel->udstyk_navn])) {
-            if(!isset($this->identifiers[$type]['areas'][$parcel->bynavn]['parcellings'][$parcel->udstyk_navn]['parcels'][$parcel_identifier])) {
+        if(isset($this->identifiers[$type]['areas'][$parcel->bynavn_kode])) {
+          if(isset($this->identifiers[$type]['areas'][$parcel->bynavn_kode]['parcellings'][$parcel->udstyk_navn_kode])) {
+            if(!isset($this->identifiers[$type]['areas'][$parcel->bynavn_kode]['parcellings'][$parcel->udstyk_navn_kode]['parcels'][$parcel_identifier])) {
               $this->logger->notice('Create parcel paragraph');
               /** @var Paragraph $paragraph */
-              $paragraph = $this->createParcel($this->identifiers[$type]['areas'][$parcel->bynavn]['parcellings'][$parcel->udstyk_navn]['nid'], $parcel_identifier, $parcel);
+              $paragraph = $this->createParcel($this->identifiers[$type]['areas'][$parcel->bynavn_kode]['parcellings'][$parcel->udstyk_navn_kode]['nid'], $parcel_identifier, $parcel);
               if($paragraph) {
-                $this->identifiers[$type]['areas'][$parcel->bynavn]['parcellings'][$parcel->udstyk_navn]['parcels'][$parcel_identifier] = ['pid' => $paragraph->id(), 'processed' => true];
+                $this->identifiers[$type]['areas'][$parcel->bynavn_kode]['parcellings'][$parcel->udstyk_navn_kode]['parcels'][$parcel_identifier] = ['pid' => $paragraph->id(), 'processed' => true];
               }
             } else {
-              $this->updateParcelParagraph($this->identifiers[$type]['areas'][$parcel->bynavn]['parcellings'][$parcel->udstyk_navn]['parcels'][$parcel_identifier]['pid'], $parcel);
-              $this->identifiers[$type]['areas'][$parcel->bynavn]['parcellings'][$parcel->udstyk_navn]['parcels'][$parcel_identifier]['processed'] = true;
+              $this->updateParcelParagraph($this->identifiers[$type]['areas'][$parcel->bynavn_kode]['parcellings'][$parcel->udstyk_navn_kode]['parcels'][$parcel_identifier]['pid'], $parcel);
+              $this->identifiers[$type]['areas'][$parcel->bynavn_kode]['parcellings'][$parcel->udstyk_navn_kode]['parcels'][$parcel_identifier]['processed'] = true;
             }
           }
         }
@@ -319,9 +319,9 @@ class ParcelImportService {
       $entity->set('field_parcel_identifier', $parcel_identifier);
       $entity->set('field_parcel_address', trim($parcel_data->vejnavn.' '.$parcel_data->husnr));
       $entity->set('field_parcel_area', (int) $parcel_data->grundareal);
-      $entity->set('field_parcel_price', (int) $parcel_data->pris);
+      $entity->set('field_parcel_price', (int) $parcel_data->salgspris);
       $entity->set('field_parcel_min_price', (int) $parcel_data->mindste_pris);
-      $entity->set('field_parcel_sqm_price', (int) $parcel_data->kvm_pris);
+      $entity->set('field_parcel_price_sqm', (int) $parcel_data->kvm_pris);
       $entity->set('field_parcel_status', $status);
       if($parcel_data->omraade != '') {
         $entity->set('field_parcel_group', (string) $parcel_data->omraade);
@@ -361,7 +361,7 @@ class ParcelImportService {
         $paragraph->set('field_parcel_area', $field_parcel_area);
         $update = true;
       }
-      $field_parcel_price = (int) $parcel_data->pris;
+      $field_parcel_price = (int) $parcel_data->salgspris;
       if($paragraph->field_parcel_price->value != $field_parcel_price) {
         $paragraph->set('field_parcel_price', $field_parcel_price);
         $update = true;
@@ -371,9 +371,9 @@ class ParcelImportService {
         $paragraph->set('field_parcel_min_price', $field_parcel_min_price);
         $update = true;
       }
-      $field_parcel_sqm_price = (int) $parcel_data->kvm_pris;
-      if($paragraph->field_parcel_sqm_price->value != $field_parcel_sqm_price) {
-        $paragraph->set('field_parcel_sqm_price', $field_parcel_sqm_price);
+      $field_parcel_price_sqm = (string) $parcel_data->kvm_pris;
+      if($paragraph->field_parcel_price_sqm->value != $field_parcel_price_sqm) {
+        $paragraph->set('field_parcel_price_sqm', $field_parcel_price_sqm);
         $update = true;
       }
       $field_parcel_status = isset($this->mapStatusValues[$parcel_data->salg_status]) ? $this->mapStatusValues[$parcel_data->salg_status] : $this->mapStatusValues['unknown'];
