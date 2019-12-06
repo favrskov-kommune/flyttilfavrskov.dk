@@ -1,0 +1,26 @@
+uuid: e2238f84-863f-4126-9efc-d09ab29ef98d
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_layout_block_video
+  module:
+    - block_content
+_core:
+  default_config_hash: jTPLQDXpdNbYqPVfP67Ry9-TYgs_HWmOiljxFVQ1Urk
+id: block_content.field_video_subline
+field_name: field_video_subline
+entity_type: block_content
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

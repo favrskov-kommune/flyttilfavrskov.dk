@@ -1,0 +1,13 @@
+uuid: e0ae6a59-4ac2-4c09-9897-2bdd4b464915
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_layout_block_video
+_core:
+  default_config_hash: 1vFgB5rxqJ0kcAWVLaunKK7apgPjCSrUv33nuKOiLSI
+id: video
+label: Video
+revision: 0
+description: 'A block containing a video.'

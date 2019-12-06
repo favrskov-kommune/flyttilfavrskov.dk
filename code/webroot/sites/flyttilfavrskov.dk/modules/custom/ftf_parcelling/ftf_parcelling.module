@@ -24,6 +24,12 @@ function ftf_parcelling_preprocess_block(&$variables) {
       $items[$paragraph->field_parcel_status->value][] = $content[$i];
       $i ++;
     }
+    foreach ($items as $key => $parcels) {
+      usort($parcels, function ($a, $b) {
+        return strnatcmp($a['#paragraph']->field_parcel_address->value, $b['#paragraph']->field_parcel_address->value);
+      });
+      $items[$key] = $parcels;
+    }
     $variables['items'] = $items;
   }
 }
@@ -34,9 +40,12 @@ function ftf_parcelling_preprocess_block(&$variables) {
 function ftf_parcelling_preprocess_paragraph__parcel(&$variables) {
   /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
   $paragraph = $variables['paragraph'];
+  $variables['parcel_group'] = $paragraph->field_parcel_group->value != '' ? $paragraph->field_parcel_group->value : null;
   $variables['parcel_address'] = $paragraph->field_parcel_address->value;
   $variables['parcel_status'] = $paragraph->field_parcel_status->value;
-  $variables['parcel_price'] = $paragraph->field_parcel_price->value;
+  $variables['parcel_price'] = $paragraph->field_parcel_price->value > 0 ? $paragraph->field_parcel_price->value : null;
+  $variables['parcel_min_price'] = $paragraph->field_parcel_min_price->value > 0 ? $paragraph->field_parcel_min_price->value : null;
+  $variables['parcel_sqm_price'] = $paragraph->field_parcel_price_sqm->value != '' ? $paragraph->field_parcel_price_sqm->value : null;
   $variables['parcel_area'] = $paragraph->field_parcel_area->value;
 
   /** @var \Drupal\media\Entity\Media $media_file */

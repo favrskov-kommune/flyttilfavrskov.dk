@@ -42,6 +42,7 @@ module:
   dds_layout_block_quote: 0
   dds_layout_block_rte: 0
   dds_layout_block_slideshow: 0
+  dds_layout_block_video: 0
   dds_layouts: 0
   dds_media: 0
   dds_news: 0
