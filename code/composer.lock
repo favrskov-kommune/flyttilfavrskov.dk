@@ -6260,10 +6260,10 @@
         },
         {
             "name": "novicell/dds_layouts",
-            "version": "1.2.1",
+            "version": "1.2.2",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_29jVgr/novicelldds_layouts-1-2-1.zip",
+                "url": "https://packages.drupal.dk/php/~/up/ver_2bF4ao/novicelldds_layouts-1-2-2.zip",
                 "reference": null,
                 "shasum": null
             },
