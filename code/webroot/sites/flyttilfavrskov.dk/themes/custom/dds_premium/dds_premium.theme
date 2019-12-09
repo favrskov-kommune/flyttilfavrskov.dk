@@ -617,6 +617,7 @@ function dds_premium_preprocess_layout_block__document_list(array &$variables) {
       $item = $item->entity;
       $link = Link::fromTextAndUrl($item->label(), Url::fromUri($item->field_media_file->entity->url()))->toRenderable();
       $link['#attributes']['class'] = ['document-link'];
+      $link['#attributes']['target'] = ['_blank'];
       $variables['documents'][] = $link;
     }
   }
