@@ -32,6 +32,7 @@
     "drupal/console": "^1.8",
     "drupal/core": "~8.8",
     "drupal/mailchimp": "^1.11",
+    "drupal/redirect": "^1.4",
     "drupal/view_unpublished": "^1.0",
     "drush/drush": "^9.0",
     "novicell/dds_content": "~1.0",
