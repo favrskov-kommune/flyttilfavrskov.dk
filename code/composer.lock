@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "925734add0e096ab9d3a10871a048f58",
+    "content-hash": "2f6bd29727e730679bdec389c4a8d219",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -6273,10 +6273,10 @@
         },
         {
             "name": "novicell/dds_editors",
-            "version": "1.0.10",
+            "version": "1.1.0",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_1Jwt0a/novicelldds_editors-1-0-10.zip",
+                "url": "https://packages.drupal.dk/php/~/up/ver_TlTvA/novicelldds_editors-1-1-0.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -6315,10 +6315,10 @@
         },
         {
             "name": "novicell/dds_layouts",
-            "version": "1.2.2",
+            "version": "1.3.0",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_2bF4ao/novicelldds_layouts-1-2-2.zip",
+                "url": "https://packages.drupal.dk/php/~/up/ver_1DROtZ/novicelldds_layouts-1-3-0.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -6408,16 +6408,17 @@
         },
         {
             "name": "novicell/dds_seo",
-            "version": "1.1.0",
+            "version": "1.2.1",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_1HeYuZ/novicelldds_seo-1-1-0.zip",
+                "url": "https://packages.drupal.dk/php/~/up/ver_FXpjj/novicelldds_seo-1-2-1.zip",
                 "reference": null,
                 "shasum": null
             },
             "require": {
                 "drupal/gtm": "^1.1",
                 "drupal/hreflang": "^1.1",
+                "drupal/redirect": "^1.0",
                 "drupal/seo_checklist": "^4.1",
                 "drupal/simple_sitemap": "^3.3"
             },
