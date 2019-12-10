@@ -9,7 +9,7 @@ id: node.parcelling.field_parcelling_identifier
 field_name: field_parcelling_identifier
 entity_type: node
 bundle: parcelling
-label: 'External identifier'
+label: 'GIS minimap'
 description: 'This identifier should correspond to a parcelling ID in GIS. It is needed for the system to correctly map imported parcels to the corresponding parcellings.'
 required: false
 translatable: false

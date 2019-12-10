@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.rte
     - field.field.node.parcelling.field_header_background
     - field.field.node.parcelling.field_header_color_theme
     - field.field.node.parcelling.field_header_cta
@@ -35,6 +34,33 @@ third_party_settings:
         layout_settings:
           label: ''
           color_theme: none
+          column_spacing: none
+          column_width: narrow
+        components:
+          e9bdc2sfegsegsefesefsef:
+            uuid: e9bdc2sfegsegsefesefsef
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:parcelling:field_parcelling_identifier'
+              formatter:
+                type: string
+                weight: 1
+                region: content
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          color_theme: none
           column_spacing: normal
           column_width: normal
         components:
@@ -48,7 +74,7 @@ third_party_settings:
               id: 'field_block:node:parcelling:field_parcelling_parcels'
               formatter:
                 type: entity_reference_revisions_entity_view
-                label: above
+                label: hidden
                 settings:
                   view_mode: default
                   link: ''
@@ -61,10 +87,18 @@ targetEntityType: node
 bundle: parcelling
 mode: default
 content:
+  field_parcelling_identifier:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
   field_parcelling_parcels:
     type: entity_reference_revisions_entity_view
     weight: 1
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''

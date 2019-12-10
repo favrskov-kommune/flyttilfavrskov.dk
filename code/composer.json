@@ -118,7 +118,8 @@
     "patches": {
       "drupal/core": {
         "(#2999491) Allow creation of reuseable inline blocks": "https://www.drupal.org/files/issues/2019-07-17/drupal8-layout-builder-reusable-2999491-24.patch",
-        "(#3042190) Creating a block that uses Ajax adds multiple blocks": "https://www.drupal.org/files/issues/2019-05-04/3042190-3.patch"
+        "(#3042190) Creating a block that uses Ajax adds multiple blocks": "https://www.drupal.org/files/issues/2019-05-04/3042190-3.patch",
+        "(#2449895) Imported PO files have no public URL but have a link at admin/content/files": "https://www.drupal.org/files/issues/2019-10-31/2449895-63.patch"
       },
       "drupal/paragraphs": {
         "(#2901390) Integrity constraint violation: 1048 Column 'langcode' cannot be null": "https://www.drupal.org/files/issues/2019-08-10/paragraphs-set_langcode_widgets-290139_updated.patch"

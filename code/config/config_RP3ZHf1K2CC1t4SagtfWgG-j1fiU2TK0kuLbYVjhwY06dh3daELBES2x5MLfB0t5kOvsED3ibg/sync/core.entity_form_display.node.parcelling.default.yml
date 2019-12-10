@@ -25,6 +25,7 @@ dependencies:
     - field_group
     - media_library
     - metatag
+    - paragraphs
     - path
     - scheduler
     - search_api_exclude_entity
@@ -139,6 +140,18 @@ content:
     third_party_settings: {  }
     type: metatag_firehose
     region: content
+  field_parcelling_parcels:
+    type: entity_reference_paragraphs
+    weight: 13
+    region: content
+    settings:
+      title: Paragraf
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: parcel
+    third_party_settings: {  }
   field_parent:
     type: entity_reference_hierarchy_select
     weight: 11
@@ -214,7 +227,6 @@ content:
     third_party_settings: {  }
 hidden:
   field_parcelling_identifier: true
-  field_parcelling_parcels: true
   field_teaser: true
   layout_builder__layout: true
   promote: true

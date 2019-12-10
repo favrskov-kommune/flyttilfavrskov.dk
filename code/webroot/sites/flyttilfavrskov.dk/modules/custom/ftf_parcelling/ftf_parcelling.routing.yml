@@ -4,4 +4,4 @@ ftf_parcelling.parcel_import:
     _title: 'Import Parcel Data'
     _form: '\Drupal\ftf_parcelling\Form\ParcelImportForm'
   requirements:
-    _permission: 'administer settings'
+    _permission: 'access administration pages'

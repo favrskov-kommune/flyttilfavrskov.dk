@@ -25,7 +25,6 @@ module:
   dds_content_hierarchy: 0
   dds_content_hierarchy_breadcrumb: 0
   dds_content_hierarchy_path: 0
-  dds_cookieinfo: 0
   dds_editor_manual: 0
   dds_editors: 0
   dds_elasticsearch: 0
@@ -89,6 +88,7 @@ module:
   path_alias: 0
   quickedit: 0
   rdf: 0
+  redirect: 0
   responsive_image: 0
   role_delegation: 0
   scheduler: 0

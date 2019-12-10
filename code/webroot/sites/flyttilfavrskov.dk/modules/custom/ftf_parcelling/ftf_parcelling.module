@@ -32,6 +32,14 @@ function ftf_parcelling_preprocess_block(&$variables) {
     }
     $variables['items'] = $items;
   }
+  if($variables['plugin_id'] == 'field_block:node:parcelling:field_parcelling_identifier') {
+    $node = $variables['content']['#object'];
+    $parcelling_id = $node->field_parcelling_identifier->value;
+    $parcelling_type = $node->field_parent->entity->field_area_type_identifier->value;
+    $parcelling_type = $parcelling_type == 'bolig' ? 'byggegrund' : $parcelling_type;
+    $variables['#attached']['library'][] = 'ftf_parcelling/ftf_parcelling.minimap';
+    $variables['#attached']['drupalSettings']['ftf_parcelling'] = ['parcelling_type' => $parcelling_type, 'parcelling_id' => $parcelling_id];
+  }
 }
 
 /**

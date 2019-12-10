@@ -36,7 +36,7 @@ body {
     }
 
     @media (--viewport-lg-min) {
-        padding-top: calc(var(--header-height) + var(--meta-menu-height));
+        padding-top: calc(var(--header-height));
     }
 
     &.no-scroll {
