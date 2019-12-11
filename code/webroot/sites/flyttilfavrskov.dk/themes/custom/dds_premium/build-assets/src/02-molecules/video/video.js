@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
           const oldSrc = regex.exec(newIframe)[1];
 
-          const newSrc = `${oldSrc}&autoplay=1&showinfo=0&autohide=1`; // We need to set this ourselves, otherwise we are not sure it is gonna play.
+          const newSrc = `${oldSrc}&autoplay=1&showinfo=0&autohide=1&mute=1`; // We need to set this ourselves, otherwise we are not sure it is gonna play.
 
           newIframe = newIframe.replace(oldSrc, newSrc);
 

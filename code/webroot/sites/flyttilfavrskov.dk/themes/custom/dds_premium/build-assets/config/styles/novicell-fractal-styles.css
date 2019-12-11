@@ -78,3 +78,12 @@ a:active {
 .Prose tr td:last-child {
     width: 100%;
 }
+
+.has-js #site h1, .has-js #site h2, .has-js #site h3, .has-js #site h4, .has-js #site h5 {
+    margin-bottom: 0;
+}
+
+.has-js #site {
+    padding-top: 0;
+    padding-bottom: 0;
+}

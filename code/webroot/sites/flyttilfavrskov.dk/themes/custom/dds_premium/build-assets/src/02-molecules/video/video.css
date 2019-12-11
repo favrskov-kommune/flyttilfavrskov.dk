@@ -13,14 +13,6 @@
         color: white;
     }
 
-    @media (--viewport-ms-max) {
-        height: 100vh;
-    }
-
-    @media (--viewport-sm-min) {
-        max-height: 700px;
-    }
-
     &::before {
         @media (--viewport-sm-min) {
             content: '';

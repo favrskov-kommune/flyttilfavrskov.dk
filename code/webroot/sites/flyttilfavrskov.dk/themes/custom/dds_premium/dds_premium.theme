@@ -306,6 +306,7 @@ function dds_premium_preprocess_maintenance_page(array &$variables) {
  */
 function dds_premium_preprocess_dds_cookieinfo(array &$variables) {
   $variables['section_attributes']->addClass('theme')
+    ->addClass('section')
     ->addClass('theme-secondary');
 }
 
@@ -342,6 +343,16 @@ function dds_premium_preprocess_input(array &$variables) {
   if (in_array($type, $excluded_types)) {
     $variables['attributes']['class'][] = 'input';
   }
+}
+
+/**
+ * Textarea preprocess.
+ *
+ * @param array $variables
+ *   Template variables.
+ */
+function dds_premium_preprocess_textarea(array &$variables) {
+  $variables['attributes']['class'][] = 'textarea';
 }
 
 /**
@@ -495,7 +506,7 @@ function dds_premium_preprocess_layout_block__hero(array &$variables) {
  * @param array $variables
  *   Template variables.
  */
-function dds_premium_preprocess_layout_block___video(array &$variables) {
+function dds_premium_preprocess_layout_block__video(array &$variables) {
   $video_oembed = ['url' => 'null', 'oEmbed' => 'null'];
   if (Drupal::hasService('dds_media.media_helper')) {
     /** @var Drupal\dds_media\MediaHelper $service */
@@ -509,7 +520,7 @@ function dds_premium_preprocess_layout_block___video(array &$variables) {
   $layout_id = $variables['layout']['layout_id'];
   $layout_settings = $variables['layout']['settings'];
 
-  if ($layout_id === 'layout_onecol' && $layout_settings['column_width'] === 'fullwidth') {
+  if ($layout_id === 'layout_onecol' && isset($layout_settings['column_width']) && $layout_settings['column_width'] === 'fullwidth') {
     $variables['image_style'] = 'wide';
   }
   elseif ($layout_id === 'layout_onecol') {
@@ -606,6 +617,8 @@ function dds_premium_preprocess_layout_block__usp_item(array &$variables) {
 }
 
 /**
+ * Document list.
+ *
  * @param array $variables
  *   Template variables.
  */
@@ -613,12 +626,14 @@ function dds_premium_preprocess_layout_block__document_list(array &$variables) {
   $entity = $variables['entity'];
   $items = $entity->get('field_media_documents');
   if (!empty($items)) {
+    /** @var \Drupal\media\Entity\Media $item */
     foreach ($items as $item) {
       $item = $item->entity;
-      $link = Link::fromTextAndUrl($item->label(), Url::fromUri($item->field_media_file->entity->url()))->toRenderable();
-      $link['#attributes']['class'] = ['document-link'];
-      $link['#attributes']['target'] = ['_blank'];
-      $variables['documents'][] = $link;
+      $variables['links'][] = [
+        'title' => $item->label(),
+        'url' => Url::fromUri($item->field_media_file->entity->url())->toString(),
+        'icon' => 'document',
+      ];
     }
   }
 }

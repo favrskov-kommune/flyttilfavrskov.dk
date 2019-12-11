@@ -1,5 +1,6 @@
 import NovicellLazyLoad from 'novicell-lazyload';
 import debounce from 'lodash/debounce';
+import Vue from 'vue';
 
 // This is the global JS file that will be accessible from any component
 
@@ -28,3 +29,11 @@ document.addEventListener('lazybeforeunveil', (event) => {
 window.addEventListener('resize', () => {
   debounce(lazy.checkImages);
 }, 100, false);
+
+// Disable vue and change its config
+if (process.env.NODE_ENV === 'production') {
+  Vue.config.productionTip = false;
+  Vue.config.devtools = false;
+  Vue.config.debug = false;
+  Vue.config.silent = true;
+}

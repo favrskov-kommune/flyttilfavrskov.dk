@@ -1,7 +1,16 @@
-  {% if links %}
-    <ul>
-      {% for link in links %}
-        <li>{{ link }}</li>
-      {% endfor %}
-    </ul>
-  {% endif %}
+{% if links %}
+  <ul class="link-list">
+    {% for link in links %}
+      <li class="link-list__item">
+        <a{{ (not link.attributes ? create_attribute() : link.attributes).setAttribute('href', link.url).addClass('link-list__link').setAttribute('target', '_blank') }}>
+          {% if link.icon %}
+            {% include '@dds_premium/components/atoms/a-svg-icon.html.twig' with {
+              'svgIconName': link.icon
+            } %}
+          {% endif %}
+          {{ link.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}
