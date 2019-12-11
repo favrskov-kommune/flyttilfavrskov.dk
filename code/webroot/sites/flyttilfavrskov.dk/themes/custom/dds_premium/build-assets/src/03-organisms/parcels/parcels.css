@@ -8,7 +8,7 @@
 
         &::after {
             content: '';
-            background: linear-gradient(transparent, var(--theme-background-color) 80%);
+            background: linear-gradient(rgba(255,255,255,0.8), var(--theme-background-color) 80%);
             height: 70%;
             width: 100%;
             position: absolute;
