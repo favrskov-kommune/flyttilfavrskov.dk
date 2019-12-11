@@ -17,6 +17,7 @@ import '@/03-organisms/search-overlay/search-overlay';
 import '@/03-organisms/hero/hero';
 import '@/03-organisms/inline-navigation/inline-navigation';
 import '@/03-organisms/accordion/accordion';
+import '@/03-organisms/parcels/parcels';
 
 const lazy = new NovicellLazyLoad({
   includeWebp: true, // optional

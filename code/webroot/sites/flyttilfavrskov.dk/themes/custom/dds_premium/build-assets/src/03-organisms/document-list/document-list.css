@@ -1,12 +1,3 @@
 .document-list {
 
-    &__headline {
-        margin-bottom: 27px;
-    }
-
-    .link-list {
-        &__link {
-            color: #474747;
-        }
-    }
 }

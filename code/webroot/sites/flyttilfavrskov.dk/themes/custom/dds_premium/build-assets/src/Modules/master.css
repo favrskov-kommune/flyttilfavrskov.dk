@@ -45,6 +45,7 @@
 @import '../02-molecules/divider/divider.css';
 @import '../02-molecules/breadcrumb/breadcrumb.css';
 @import '../02-molecules/link-list/link-list.css';
+@import '../02-molecules/parcel/parcel.css';
 
 /* Organisms */
 @import '../03-organisms/header/header.css';
@@ -57,4 +58,4 @@
 @import '../03-organisms/accordion/accordion.css';
 @import '../03-organisms/footer/footer.css';
 @import '../03-organisms/newsletter-signup/newsletter-signup.css';
-@import '../03-organisms/document-list/document-list.css';
+@import '../03-organisms/parcels/parcels.css';
