@@ -18,7 +18,7 @@
       {% if contacts|length > 0 %}
         <div class="row">
           {% for contact in contacts %}
-            <div class="col-xs-6 col-md-2 {{ loop.first ? 'col-md-offset-1' }}">
+            <div class="col-xs-12 col-sm-6 col-lg-3 col-md-offset-1">
               <address vocab="http://schema.org/" typeof="Organization">
                 <div class="burger-menu-contact-info">
                   <h3 class="burger-menu-contact-info__title" property="name">{{ contact.title }}</h3>
