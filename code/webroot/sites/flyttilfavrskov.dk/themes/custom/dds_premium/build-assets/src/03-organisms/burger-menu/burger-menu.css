@@ -80,7 +80,7 @@
     line-height: 36px;
     margin-bottom: 30px;
     position: relative;
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
@@ -151,15 +151,19 @@
         align-items: center;
 
         .icon--arrow-line-down {
-            width: 32px;
-            height: 32px;
+            width: 42px;
+            height: 42px;
             transition: transform 0.3s;
             will-change: transform;
             padding: 8px;
             margin-left: 5px;
+            position: absolute;
+            left: -60px;
+            fill: var(--color-primary);
 
-            @media (--viewport-lg-min) {
-                transform: rotate(-90deg);
+            @media (--viewport-md-min) {
+                position: relative;
+                left: 0;
             }
         }
     }

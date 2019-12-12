@@ -1,5 +1,4 @@
 import Vue from 'vue';
-import HoverIntent from 'hoverintent';
 
 document.addEventListener('DOMContentLoaded', () => {
   const burgerMenu = document.getElementById('js-burger-menu');
@@ -17,31 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
         burger.addEventListener('click', () => {
           this.openBurgerMenu();
         });
-
-        if (window.innerWidth >= 1200) {
-          this.setupHoverIntent();
-        }
       },
       methods: {
         triggerSubNavigation(e) {
+          e.preventDefault();
           const trigger = e.currentTarget;
           const parent = trigger.closest('.js-burger-menu-list-item');
 
           parent.classList.toggle(showSubNavigationClass);
-        },
-        setupHoverIntent() {
-          const burgerMenuListItems = this.$el.querySelectorAll('.js-burger-menu-list-item');
-          for (let i = 0; i < burgerMenuListItems.length; i += 1) {
-            const currentItem = burgerMenuListItems[i];
-            HoverIntent(currentItem, () => {
-              currentItem.classList.add(showSubNavigationClass);
-            }, () => {
-              currentItem.classList.remove(showSubNavigationClass);
-            }).options({
-              timeout: 400,
-              interval: 55,
-            });
-          }
         },
         openBurgerMenu() {
           this.isOpen = true;
