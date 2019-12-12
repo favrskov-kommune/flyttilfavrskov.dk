@@ -3,33 +3,6 @@
         margin-bottom: 50px;
     }
 
-    &__elements {
-        position: relative;
-
-        &::after {
-            content: '';
-            background: linear-gradient(rgba(255,255,255,0.8), var(--theme-background-color) 80%);
-            height: 70%;
-            width: 100%;
-            position: absolute;
-            bottom: 0;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s;
-        }
-
-        .row {
-            margin-left: -25px;
-            margin-right: -25px;
-
-            & [class^="col-"] {
-                padding-right: 25px;
-                padding-left: 25px;
-                margin-bottom: 30px;
-            }
-        }
-    }
-
     &__group {
         /* Add margin to all except the last group */
         &:not(:last-child) {
@@ -84,6 +57,33 @@
         }
     }
 
+    &__elements {
+        position: relative;
+
+        &::after {
+            content: '';
+            background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0.7) 10%, var(--theme-background-color));
+            height: 70%;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+
+        .row {
+            margin-left: -25px;
+            margin-right: -25px;
+
+            & [class^="col-"] {
+                padding-right: 25px;
+                padding-left: 25px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+
     &__toggle-text {
         color: var(--theme-link-color);
         text-decoration: underline;
@@ -106,7 +106,6 @@
             border-top: 0;
             border-right: 0;
             margin-bottom: 4px;
-            transition: transform 0.3s;
         }
 
         &--active {
