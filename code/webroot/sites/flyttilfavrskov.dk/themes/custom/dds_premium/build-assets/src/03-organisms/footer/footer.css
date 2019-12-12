@@ -1,9 +1,14 @@
 .footer {
     background-image: url('/sites/flyttilfavrskov.dk/themes/custom/dds_premium/build-assets/dist/images/footer.png');
     background-repeat: no-repeat;
-    background-position: 50% top;
+    background-position: 52% top;
+    background-position-y: top;
     padding-top: 227px;
     position: relative;
+
+    @media (--viewport-sm-min){
+        background-position: 50% top;
+    }
 
     &__inner {
         padding-top: 70px;
