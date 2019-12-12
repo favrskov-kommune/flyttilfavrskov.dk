@@ -521,7 +521,7 @@ function dds_premium_preprocess_layout_block__video(array &$variables) {
   $layout_settings = $variables['layout']['settings'];
 
   if ($layout_id === 'layout_onecol' && isset($layout_settings['column_width']) && $layout_settings['column_width'] === 'fullwidth') {
-    $variables['image_style'] = 'wide';
+    $variables['image_style'] = 'full_width_16_9';
   }
   elseif ($layout_id === 'layout_onecol') {
     $variables['image_style'] = '1_column';
