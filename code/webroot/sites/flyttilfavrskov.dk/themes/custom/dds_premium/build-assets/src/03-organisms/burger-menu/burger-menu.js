@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
           e.preventDefault();
           const trigger = e.currentTarget;
           const parent = trigger.closest('.js-burger-menu-list-item');
+          this.hideSubNavigations();
 
           parent.classList.toggle(showSubNavigationClass);
         },
@@ -36,6 +37,12 @@ document.addEventListener('DOMContentLoaded', () => {
           document.removeEventListener('keydown', this.handleEsc);
           document.removeEventListener('click', this.handleClickOutside);
           document.body.classList.remove('no-scroll');
+        },
+        hideSubNavigations() {
+          const items = document.querySelectorAll('.js-burger-menu-list-item');
+          for (let i = 0; i < items.length; i += 1) {
+            items[i].classList.remove(showSubNavigationClass);
+          }
         },
         handleEsc(e) {
           if (e.keyCode === 27) {
