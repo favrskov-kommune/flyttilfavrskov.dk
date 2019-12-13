@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
           e.preventDefault();
           const trigger = e.currentTarget;
           const parent = trigger.closest('.js-burger-menu-list-item');
-          this.hideSubNavigations();
+          this.hideSubNavigations(parent);
 
           parent.classList.toggle(showSubNavigationClass);
         },
@@ -38,9 +38,12 @@ document.addEventListener('DOMContentLoaded', () => {
           document.removeEventListener('click', this.handleClickOutside);
           document.body.classList.remove('no-scroll');
         },
-        hideSubNavigations() {
+        hideSubNavigations(parent) {
           const items = document.querySelectorAll('.js-burger-menu-list-item');
           for (let i = 0; i < items.length; i += 1) {
+            if (parent === items[i]) {
+              continue;
+            }
             items[i].classList.remove(showSubNavigationClass);
           }
         },
