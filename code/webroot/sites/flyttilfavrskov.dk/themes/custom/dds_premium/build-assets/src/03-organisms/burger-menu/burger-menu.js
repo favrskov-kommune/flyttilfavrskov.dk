@@ -41,10 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
         hideSubNavigations(parent) {
           const items = document.querySelectorAll('.js-burger-menu-list-item');
           for (let i = 0; i < items.length; i += 1) {
-            if (parent === items[i]) {
-              continue;
+            if (parent !== items[i]) {
+              items[i].classList.remove(showSubNavigationClass);
             }
-            items[i].classList.remove(showSubNavigationClass);
           }
         },
         handleEsc(e) {

@@ -6,7 +6,7 @@
     padding-top: 227px;
     position: relative;
 
-    @media (--viewport-sm-min){
+    @media (--viewport-sm-min) {
         background-position: 50% top;
     }
 

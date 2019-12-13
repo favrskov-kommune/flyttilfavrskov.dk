@@ -22,10 +22,7 @@
 
     &__inner {
         height: 100vh;
-        display: flex;
-        flex-direction: column;
-        padding: 100px 0;
-        justify-content: space-between;
+        padding: 100px 0 100px 50px;
     }
 
     &__close {
@@ -72,13 +69,12 @@
 .burger-menu-list {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 0 30px;
     color: #232323;
     font-size: 30px;
     font-weight: 700;
     letter-spacing: 0.2px;
     line-height: 36px;
-    margin-bottom: 30px;
     position: relative;
     display: flex;
     flex-direction: column;

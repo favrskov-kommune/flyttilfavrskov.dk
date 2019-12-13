@@ -62,7 +62,7 @@
 
         &::after {
             content: '';
-            background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0.7) 10%, var(--theme-background-color));
+            background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7) 10%, var(--theme-background-color));
             height: 70%;
             width: 100%;
             position: absolute;
@@ -111,7 +111,7 @@
         &--active {
             display: block;
 
-            &:after {
+            &::after {
                 transform: rotate(135deg);
                 margin-bottom: -8px;
             }
