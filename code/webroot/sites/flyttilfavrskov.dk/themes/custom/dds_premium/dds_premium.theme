@@ -697,7 +697,13 @@ function _create_hero(ContentEntityInterface $entity, array $fields): array {
   if (isset($fields['background_image']) && $entity->hasField($fields['background_image']) && !$entity->get($fields['background_image'])->isEmpty()) {
     /** @var Drupal\media\Entity\Media $media */
     $media = $entity->get($fields['background_image'])->entity;
-    if (!empty($media) && $media->hasField('field_media_image')) {
+    if (!empty($media) && $media->hasField('field_media_video_url')) {
+      //this is an amazon video
+      $video_oembed['url'] = $media->field_media_video_url->value;
+      $video_oembed['oEmbed'] = ['html' => '<iframe width="500" height="500" src="'.$video_oembed['url'].'"></iframe>'];
+      $background_image_uri = $media->field_media_image->entity->getFileUri();
+    }
+    elseif (!empty($media) && $media->hasField('field_media_image')) {
       /** @var Drupal\file\Entity\File $file */
       if (!empty($file = $media->get('field_media_image')->entity)) {
         $background_image_uri = $file->getFileUri() ?? '';
