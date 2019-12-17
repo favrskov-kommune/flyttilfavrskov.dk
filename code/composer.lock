@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2f6bd29727e730679bdec389c4a8d219",
+    "content-hash": "5e1c40881adfbad20132f7908a0de16a",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2561,17 +2561,17 @@
         },
         {
             "name": "drupal/config_ignore",
-            "version": "2.1.0",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/config_ignore.git",
-                "reference": "8.x-2.1"
+                "reference": "8.x-2.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/config_ignore-8.x-2.1.zip",
-                "reference": "8.x-2.1",
-                "shasum": "07e00684930706632b3f2fc2a7433ffdae57cde7"
+                "url": "https://ftp.drupal.org/files/projects/config_ignore-8.x-2.2.zip",
+                "reference": "8.x-2.2",
+                "shasum": "18af5772087b90dd4b83c2c6e292d8ea2f8834e0"
             },
             "require": {
                 "drupal/config_filter": "1.*",
@@ -2583,8 +2583,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.1",
-                    "datestamp": "1507706044",
+                    "version": "8.x-2.2",
+                    "datestamp": "1576528386",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2606,6 +2606,10 @@
                     "name": "Fabian Bircher",
                     "homepage": "https://www.drupal.org/u/bircher",
                     "role": "Maintainer"
+                },
+                {
+                    "name": "tlyngej",
+                    "homepage": "https://www.drupal.org/user/413139"
                 }
             ],
             "description": "Ignore certain configuration during import.",
@@ -3154,7 +3158,8 @@
                 "patches_applied": {
                     "(#2999491) Allow creation of reuseable inline blocks": "https://www.drupal.org/files/issues/2019-07-17/drupal8-layout-builder-reusable-2999491-24.patch",
                     "(#3042190) Creating a block that uses Ajax adds multiple blocks": "https://www.drupal.org/files/issues/2019-05-04/3042190-3.patch",
-                    "(#2449895) Imported PO files have no public URL but have a link at admin/content/files": "https://www.drupal.org/files/issues/2019-10-31/2449895-63.patch"
+                    "(#2449895) Imported PO files have no public URL but have a link at admin/content/files": "https://www.drupal.org/files/issues/2019-10-31/2449895-63.patch",
+                    "(#3099441) Missing hash in attributes key in Seven (another one)": "https://www.drupal.org/files/issues/2019-12-07/3099441-2.patch"
                 }
             },
             "autoload": {
@@ -6367,10 +6372,10 @@
         },
         {
             "name": "novicell/dds_layouts",
-            "version": "1.3.3",
+            "version": "1.4.0",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_1kdI07/novicelldds_layouts-1-3-3.zip",
+                "url": "https://packages.drupal.dk/php/~/up/ver_CyEpI/novicelldds_layouts-1-4-0.zip",
                 "reference": null,
                 "shasum": null
             },
