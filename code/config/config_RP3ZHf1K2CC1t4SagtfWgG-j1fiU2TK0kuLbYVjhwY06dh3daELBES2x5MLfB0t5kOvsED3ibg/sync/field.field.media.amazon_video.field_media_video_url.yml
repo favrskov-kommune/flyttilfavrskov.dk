@@ -1,0 +1,19 @@
+uuid: 9669dd03-e99b-4bc8-9571-d6e5c1b66de0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_video_url
+    - media.type.amazon_video
+id: media.amazon_video.field_media_video_url
+field_name: field_media_video_url
+entity_type: media
+bundle: amazon_video
+label: 'Video URL'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

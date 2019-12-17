@@ -1,0 +1,11 @@
+uuid: b5fce402-bbc6-4742-84c3-4128f5f39fbe
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.amazon_video
+id: media.amazon_video
+target_entity_type_id: media
+target_bundle: amazon_video
+default_langcode: site_default
+language_alterable: false

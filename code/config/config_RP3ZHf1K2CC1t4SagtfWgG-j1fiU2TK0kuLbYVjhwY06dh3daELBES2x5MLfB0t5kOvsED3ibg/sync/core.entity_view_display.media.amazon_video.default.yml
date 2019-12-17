@@ -1,0 +1,40 @@
+uuid: 26269ac6-dbed-4581-b270-28e6eaebef63
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.amazon_video.field_media_image
+    - field.field.media.amazon_video.field_media_video_url
+    - image.style.large
+    - media.type.amazon_video
+  module:
+    - image
+id: media.amazon_video.default
+targetEntityType: media
+bundle: amazon_video
+mode: default
+content:
+  field_media_image:
+    label: visually_hidden
+    weight: 0
+    settings:
+      image_style: large
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_media_video_url:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true
