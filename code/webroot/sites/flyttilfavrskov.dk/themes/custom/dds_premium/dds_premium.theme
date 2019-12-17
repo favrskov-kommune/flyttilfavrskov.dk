@@ -508,7 +508,12 @@ function dds_premium_preprocess_layout_block__hero(array &$variables) {
  */
 function dds_premium_preprocess_layout_block__video(array &$variables) {
   $video_oembed = ['url' => 'null', 'oEmbed' => 'null'];
-  if (Drupal::hasService('dds_media.media_helper')) {
+  if(isset($variables['fields']['field_video_media']['field_media_video_url'])){
+    //this is an amazon video
+    //this should probably be changed into something else, but I don't know what
+    $video_oembed['url'] = $variables['fields']['field_video_media']['field_media_video_url']['#markup'];
+    $video_oembed['oEmbed'] = ['html' => '<iframe width="500" height="500" src="'.$video_oembed['url'].'"></iframe>'];
+  } else if (Drupal::hasService('dds_media.media_helper')) {
     /** @var Drupal\dds_media\MediaHelper $service */
     $service = Drupal::service('dds_media.media_helper');
     $video_data = $service->get_video_data($variables['fields']['field_video_media']['field_media_video_embed']['#markup']);
