@@ -1,12 +1,12 @@
-uuid: 7372d0f2-f94d-4d32-b256-4b745b4ca96e
+uuid: 6c874207-3b82-4c54-b61e-cf95540fbb16
 langcode: en
 status: true
 dependencies:
   module:
-    - paragraphs
-id: paragraph.field_parcel_group
-field_name: field_parcel_group
-entity_type: paragraph
+    - block_content
+id: block_content.field_gis_minimap_id
+field_name: field_gis_minimap_id
+entity_type: block_content
 type: string
 settings:
   max_length: 255

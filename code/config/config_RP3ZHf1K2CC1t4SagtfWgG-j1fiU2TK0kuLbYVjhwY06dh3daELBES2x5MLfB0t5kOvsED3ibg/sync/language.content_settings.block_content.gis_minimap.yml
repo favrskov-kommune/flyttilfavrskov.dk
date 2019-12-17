@@ -1,0 +1,11 @@
+uuid: 6cf5063c-3886-4602-bfe6-f00fef921128
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.gis_minimap
+id: block_content.gis_minimap
+target_entity_type_id: block_content
+target_bundle: gis_minimap
+default_langcode: site_default
+language_alterable: false
