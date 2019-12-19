@@ -508,11 +508,9 @@ function dds_premium_preprocess_layout_block__hero(array &$variables) {
  */
 function dds_premium_preprocess_layout_block__video(array &$variables) {
   $video_oembed = ['url' => 'null', 'oEmbed' => 'null'];
-  if(isset($variables['fields']['field_video_media']['field_media_video_url'])){
-    //this is an amazon video
-    //this should probably be changed into something else, but I don't know what
+  if (isset($variables['fields']['field_video_media']['field_media_video_url'])){
     $video_oembed['url'] = $variables['fields']['field_video_media']['field_media_video_url']['#markup'];
-    $video_oembed['oEmbed'] = ['html' => '<iframe width="500" height="500" src="'.$video_oembed['url'].'"></iframe>'];
+    $video_oembed['oEmbed'] = ['html' => '<video width="560" height="315" autoplay controls><source src="'.$video_oembed['url'].'" type="video/mp4"></video>'];
   } else if (Drupal::hasService('dds_media.media_helper')) {
     /** @var Drupal\dds_media\MediaHelper $service */
     $service = Drupal::service('dds_media.media_helper');
@@ -698,9 +696,8 @@ function _create_hero(ContentEntityInterface $entity, array $fields): array {
     /** @var Drupal\media\Entity\Media $media */
     $media = $entity->get($fields['background_image'])->entity;
     if (!empty($media) && $media->hasField('field_media_video_url')) {
-      //this is an amazon video
       $video_oembed['url'] = $media->field_media_video_url->value;
-      $video_oembed['oEmbed'] = ['html' => '<iframe width="500" height="500" src="'.$video_oembed['url'].'"></iframe>'];
+      $video_oembed['oEmbed'] = ['html' => '<video width="560" height="315" autoplay loop muted><source src="'.$video_oembed['url'].'" type="video/mp4"></video>'];
       $background_image_uri = $media->field_media_image->entity->getFileUri();
     }
     elseif (!empty($media) && $media->hasField('field_media_image')) {

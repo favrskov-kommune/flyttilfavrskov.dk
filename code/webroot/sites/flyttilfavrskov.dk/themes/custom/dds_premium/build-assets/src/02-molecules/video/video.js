@@ -33,21 +33,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       } else {
         playIcon.addEventListener('click', (e) => {
-          let newIframe = JSON.parse(videoData).oEmbed.html;
-          newIframe = newIframe.replace('mute=1', 'mute=0');
-          newIframe = newIframe.replace('controls=0', 'controls=1');
-          newIframe = newIframe.replace('showinfo=0', 'showinfo=1');
-          const regex = /<iframe.*?src="(.*?)"/;
-
-          const oldSrc = regex.exec(newIframe)[1];
-
-          const newSrc = `${oldSrc}&autoplay=1&showinfo=0&autohide=1&mute=1`; // We need to set this ourselves, otherwise we are not sure it is gonna play.
-
-          newIframe = newIframe.replace(oldSrc, newSrc);
-
-          e.currentTarget.parentNode.classList.add('video--hide-content');
-
-          iframeWrapper.innerHTML = newIframe;
+          const oembed = JSON.parse(videoData).oEmbed;
+          if (oembed !== 'null' && oembed !== null) {
+            if (oembed.html.indexOf('iframe') > -1) {
+              oembed.html = oembed.html.replace('mute=1', 'mute=0');
+              oembed.html = oembed.html.replace('controls=0', 'controls=1');
+              oembed.html = oembed.html.replace('showinfo=0', 'showinfo=1');
+              const regex = /<iframe.*?src="(.*?)"/;
+              const oldSrc = regex.exec(oembed.html)[1];
+              const newSrc = `${oldSrc}&autoplay=1&showinfo=0&autohide=1&mute=1`; // We need to set this ourselves, otherwise we are not sure it is gonna play.
+              oembed.html = oembed.html.replace(oldSrc, newSrc);
+            }
+            e.currentTarget.parentNode.classList.add('video--hide-content');
+            iframeWrapper.innerHTML = oembed.html;
+          }
         });
       }
     }
