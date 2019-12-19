@@ -1,11 +1,11 @@
 (function (drupalSettings) {
-  if(drupalSettings.ftf_parcelling.parcelling_type && drupalSettings.ftf_parcelling.parcelling_id) {
-    new ParcelMap('parcel-map-body', drupalSettings.ftf_parcelling.parcelling_type, drupalSettings.ftf_parcelling.parcelling_id);
+  let parcelling = drupalSettings.ftf_parcelling;
+  if (parcelling.parcelling_type && parcelling.parcelling_id) {
+    new ParcelMap('parcel-map-body', parcelling.parcelling_type, parcelling.parcelling_id);
   }
-  if(drupalSettings.ftf_parcelling.gis_minimap) {
-    for(let key in drupalSettings.ftf_parcelling.gis_minimap) {
-      MiniMap.createMiniMap({mapDiv: 'gis_minimap_'+key, minimapId: drupalSettings.ftf_parcelling.gis_minimap[key]});
-
+  if (parcelling.gis_minimap) {
+    for (let key in parcelling.gis_minimap) {
+      MiniMap.createMiniMap({mapDiv: 'gis_minimap_' + key, minimapId: parcelling.gis_minimap[key]});
     }
   }
 })(drupalSettings);

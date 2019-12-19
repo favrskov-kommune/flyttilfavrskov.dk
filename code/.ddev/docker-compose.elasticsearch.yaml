@@ -1,0 +1,32 @@
+version: '3.6'
+services:
+  elasticsearch:
+    container_name: ddev-${DDEV_SITENAME}-elasticsearch
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.8.5
+    environment:
+      - node.name=${DDEV_SITENAME}-es01
+      - discovery.type=single-node
+      - cluster.name=docker-${DDEV_SITENAME}-es-cluster
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - esdata01:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+    labels:
+      com.ddev.site-name: ${DDEV_SITENAME}
+      com.ddev.platform: ddev
+      com.ddev.app-type: elasticsearch
+      com.ddev.approot: $DDEV_APPROOT
+  web:
+    links:
+      - elasticsearch:elasticsearch
+
+volumes:
+  esdata01:
+    driver: local
+    name: "${DDEV_SITENAME}-es"
