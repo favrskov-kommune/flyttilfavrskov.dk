@@ -693,7 +693,7 @@ function _create_hero(ContentEntityInterface $entity, array $fields): array {
     /** @var Drupal\media\Entity\Media $media */
     $media = $entity->get($fields['background_image'])->entity;
     if(!empty($media)) {
-      if($media->bundle() == 'dds_cdn_video' || 'dds_video') {
+      if($media->bundle() == 'dds_cdn_video' || $media->bundle() == 'dds_video') {
         if (Drupal::hasService('dds_media.media_helper')) {
           /** @var Drupal\dds_media\MediaHelper $service */
           $service = Drupal::service('dds_media.media_helper');
