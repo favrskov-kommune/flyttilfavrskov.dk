@@ -1,0 +1,19 @@
+uuid: a63f9e9b-5c52-4b0f-9ee5-fa41adb14ee2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_cdn_video
+    - media.type.dds_cdn_video
+id: media.dds_cdn_video.field_media_cdn_video
+field_name: field_media_cdn_video
+entity_type: media
+bundle: dds_cdn_video
+label: 'CDN Video URL'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

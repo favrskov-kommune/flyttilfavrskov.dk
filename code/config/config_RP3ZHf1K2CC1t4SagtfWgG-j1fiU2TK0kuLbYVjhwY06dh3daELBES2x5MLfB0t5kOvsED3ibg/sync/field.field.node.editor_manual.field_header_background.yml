@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_header_background
-    - media.type.amazon_video
+    - media.type.dds_cdn_video
     - media.type.dds_image
     - media.type.dds_video
     - node.type.editor_manual
@@ -25,7 +25,7 @@ settings:
   handler_settings:
     target_bundles:
       dds_image: dds_image
-      amazon_video: amazon_video
+      dds_cdn_video: dds_cdn_video
       dds_video: dds_video
     sort:
       field: _none

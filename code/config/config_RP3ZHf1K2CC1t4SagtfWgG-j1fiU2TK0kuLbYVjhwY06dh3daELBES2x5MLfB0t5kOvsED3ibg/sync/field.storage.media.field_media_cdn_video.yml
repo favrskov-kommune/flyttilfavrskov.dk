@@ -1,11 +1,12 @@
-uuid: 892460a7-1877-48d0-9ed5-28c769ceb95b
+uuid: 1c1bf728-38b6-4111-95f6-17a790ffcf6d
 langcode: en
 status: true
 dependencies:
-  module:
-    - media
-id: media.field_media_video_url
-field_name: field_media_video_url
+  enforced:
+    module:
+      - dds_media
+id: media.field_media_cdn_video
+field_name: field_media_cdn_video
 entity_type: media
 type: string
 settings:

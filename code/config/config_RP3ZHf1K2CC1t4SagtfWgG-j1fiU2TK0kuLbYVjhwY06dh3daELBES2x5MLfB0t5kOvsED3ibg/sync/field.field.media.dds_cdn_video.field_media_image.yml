@@ -1,16 +1,16 @@
-uuid: 3b06b79b-301a-4249-95d9-acb10c9c40ac
+uuid: 68c5c9e5-0eac-4dd3-b0d8-bfdf74439ebb
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.media.field_media_image
-    - media.type.amazon_video
+    - media.type.dds_cdn_video
   module:
     - image
-id: media.amazon_video.field_media_image
+id: media.dds_cdn_video.field_media_image
 field_name: field_media_image
 entity_type: media
-bundle: amazon_video
+bundle: dds_cdn_video
 label: 'Video preview image'
 description: ''
 required: true

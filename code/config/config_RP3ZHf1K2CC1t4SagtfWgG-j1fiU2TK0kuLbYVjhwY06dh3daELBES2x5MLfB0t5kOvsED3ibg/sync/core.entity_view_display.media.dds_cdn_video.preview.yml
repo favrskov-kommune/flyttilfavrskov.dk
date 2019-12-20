@@ -1,0 +1,35 @@
+uuid: 378a82f2-a9fb-467a-ac22-b78a563e3ae2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.preview
+    - field.field.media.dds_cdn_video.field_media_category
+    - field.field.media.dds_cdn_video.field_media_image
+    - image.style.thumbnail
+    - media.type.dds_cdn_video
+  module:
+    - image
+id: media.dds_cdn_video.preview
+targetEntityType: media
+bundle: dds_cdn_video
+mode: preview
+content:
+  thumbnail:
+    type: image
+    weight: 0
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: ''
+    region: content
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_media_category: true
+  field_media_cdn_video: true
+  field_media_image: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  uid: true

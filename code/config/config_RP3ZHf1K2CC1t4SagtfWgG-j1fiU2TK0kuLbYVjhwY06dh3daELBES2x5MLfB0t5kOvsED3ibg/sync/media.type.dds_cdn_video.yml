@@ -1,0 +1,16 @@
+uuid: fa49e0d1-1dc6-46b8-a428-d15b412268a8
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_media
+id: dds_cdn_video
+label: 'CDN Video'
+description: 'Use this for video files hosted on external CDN services'
+source: dds_media_cdn_video
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_cdn_video
+field_map: {  }
