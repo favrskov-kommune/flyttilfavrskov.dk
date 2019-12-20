@@ -15,7 +15,13 @@ field_name: field_video_text_color
 entity_type: block_content
 type: list_string
 settings:
-  allowed_values: {  }
+  allowed_values:
+    -
+      value: dark
+      label: Mørk
+    -
+      value: light
+      label: Lys
   allowed_values_function: ''
 module: options
 locked: false

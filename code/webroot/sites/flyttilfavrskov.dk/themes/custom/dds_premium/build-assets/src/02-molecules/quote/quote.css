@@ -1,7 +1,7 @@
 .quote {
     font-weight: 300;
-    font-size: 30px;
-    line-height: 45px;
+    font-size: 25px;
+    line-height: 34px;
     position: relative;
     max-width: 750px;
     text-align: center;
@@ -26,8 +26,7 @@
     }
 
     &__author {
-        padding-left: 40px;
-        font-size: 25px;
+        font-size: 20px;
         font-style: italic;
         margin-top: 10px;
         color: #8b8b8f;

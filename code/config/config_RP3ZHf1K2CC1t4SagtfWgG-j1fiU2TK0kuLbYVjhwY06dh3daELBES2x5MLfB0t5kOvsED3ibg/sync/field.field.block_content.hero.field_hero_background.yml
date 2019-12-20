@@ -5,6 +5,7 @@ dependencies:
   config:
     - block_content.type.hero
     - field.storage.block_content.field_hero_background
+    - media.type.dds_cdn_video
     - media.type.dds_image
     - media.type.dds_video
   enforced:
@@ -27,6 +28,7 @@ settings:
   handler_settings:
     target_bundles:
       dds_image: dds_image
+      dds_cdn_video: dds_cdn_video
       dds_video: dds_video
     sort:
       field: _none

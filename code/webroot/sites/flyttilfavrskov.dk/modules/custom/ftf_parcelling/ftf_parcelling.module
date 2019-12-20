@@ -3,7 +3,6 @@
 use Drupal\Core\Link;
 use Drupal\Core\Url;
 
-
 /**
  * Implements hook_cron().
  */
@@ -22,7 +21,7 @@ function ftf_parcelling_preprocess_block(&$variables) {
     while (array_key_exists($i, $content)) {
       $paragraph = $content[$i]['#paragraph'];
       $items[$paragraph->field_parcel_status->value][] = $content[$i];
-      $i ++;
+      $i++;
     }
     foreach ($items as $key => $parcels) {
       usort($parcels, function ($a, $b) {
@@ -33,13 +32,30 @@ function ftf_parcelling_preprocess_block(&$variables) {
     $variables['items'] = $items;
   }
   if($variables['plugin_id'] == 'field_block:node:parcelling:field_parcelling_identifier') {
-    $node = $variables['content']['#object'];
-    $parcelling_id = $node->field_parcelling_identifier->value;
-    $parcelling_type = $node->field_parent->entity->field_area_type_identifier->value;
-    $parcelling_type = $parcelling_type == 'bolig' ? 'byggegrund' : $parcelling_type;
-    $variables['#attached']['library'][] = 'ftf_parcelling/ftf_parcelling.minimap';
-    $variables['#attached']['drupalSettings']['ftf_parcelling'] = ['parcelling_type' => $parcelling_type, 'parcelling_id' => $parcelling_id];
+    if (isset($variables['content']['#object'])) {
+      $node = $variables['content']['#object'];
+      $parcelling_id = $node->field_parcelling_identifier->value;
+      $parcelling_type = $node->field_parent->entity->field_area_type_identifier->value;
+      $parcelling_type = $parcelling_type == 'bolig' ? 'byggegrund' : $parcelling_type;
+      $variables['#attached']['library'][] = 'ftf_parcelling/ftf_parcelling.minimap';
+      $variables['#attached']['drupalSettings']['ftf_parcelling']['parcelling_type'] = $parcelling_type;
+      $variables['#attached']['drupalSettings']['ftf_parcelling']['parcelling_id'] = $parcelling_id;
+    }
   }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ftf_parcelling_preprocess_layout_block__gis_minimap(&$variables) {
+  $block = $variables['entity'];
+  $map_id = $block->field_gis_minimap_id->value;
+  if($map_id) {
+    $variables['#attached']['library'][] = 'ftf_parcelling/ftf_parcelling.minimap';
+    $variables['#attached']['drupalSettings']['ftf_parcelling']['gis_minimap'][$block->id()] = $map_id;
+    $variables['gis_block_id'] = $block->id();
+  }
+
 }
 
 /**
@@ -59,7 +75,10 @@ function ftf_parcelling_preprocess_paragraph__parcel(&$variables) {
   /** @var \Drupal\media\Entity\Media $media_file */
   $media_file = $paragraph->field_parcel_specs->entity;
   if($media_file) {
-    $variables['parcel_specs'] = Link::fromTextAndUrl($media_file->label(), Url::fromUri($media_file->field_media_file->entity->url()))->toRenderable();
-    $variables['parcel_specs']['#attributes']['class'] = 'parcel-document-link';
+    $variables['parcel_specs'] = [
+      'title' => $media_file->label(),
+      'url' => Url::fromUri($media_file->field_media_file->entity->url())->toString(),
+      'icon' => 'document',
+    ];
   }
 }

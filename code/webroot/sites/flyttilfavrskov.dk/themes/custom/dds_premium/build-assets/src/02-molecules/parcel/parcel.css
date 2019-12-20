@@ -1,0 +1,87 @@
+.parcel {
+    background: #fff;
+    border: 1px solid #c4c4c4;
+    padding: 44px 35px 33px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__group {
+        width: 100%;
+        margin-top: 5px;
+        color: #000;
+    }
+
+    &__status {
+        margin-left: auto;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        color: #000;
+
+        &::before {
+            content: '';
+            height: 14px;
+            width: 14px;
+            border-radius: 50%;
+            display: block;
+            margin-right: 12px;
+        }
+
+        &--available::before {
+            background: var(--color-primary);
+        }
+
+        &--reserved::before {
+            background: #ee8027;
+        }
+
+        &--pending::before,
+        &--sold::before {
+            background: #bd2424;
+        }
+
+        &--unknown::before {
+            background: #ccc;
+        }
+    }
+
+    &__address {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 24px;
+        margin-top: 2px;
+        padding-right: 20px;
+    }
+
+    &__line {
+        display: flex;
+        justify-content: space-between;
+        padding: 7px 0;
+        border-bottom: 1px solid #c4c4c4;
+        color: #000;
+    }
+
+    &__information {
+        margin-bottom: 30px;
+        margin-top: 20px;
+    }
+
+    &__documents {
+        margin-top: auto;
+
+        .link-list__item {
+            margin-bottom: 0;
+        }
+
+        .link-list__link .icon {
+            margin-right: 20px;
+        }
+    }
+}

@@ -29,7 +29,6 @@
 @import '../01-atoms/button/button.css';
 @import '../01-atoms/headline/headline.css';
 @import '../01-atoms/text-link/text-link.css';
-/* @import '../01-atoms/rte/rte.css'; */
 
 /* Molecules */
 @import '../02-molecules/image-slideshow/image-slideshow.css';
@@ -45,6 +44,8 @@
 @import '../02-molecules/sub-navigation/sub-navigation.css';
 @import '../02-molecules/divider/divider.css';
 @import '../02-molecules/breadcrumb/breadcrumb.css';
+@import '../02-molecules/link-list/link-list.css';
+@import '../02-molecules/parcel/parcel.css';
 
 /* Organisms */
 @import '../03-organisms/header/header.css';
@@ -57,3 +58,5 @@
 @import '../03-organisms/accordion/accordion.css';
 @import '../03-organisms/footer/footer.css';
 @import '../03-organisms/newsletter-signup/newsletter-signup.css';
+@import '../03-organisms/parcels/parcels.css';
+@import '../03-organisms/map/map.css';

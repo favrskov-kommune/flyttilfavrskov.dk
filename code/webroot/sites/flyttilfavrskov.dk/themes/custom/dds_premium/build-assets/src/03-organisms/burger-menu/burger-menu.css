@@ -22,10 +22,7 @@
 
     &__inner {
         height: 100vh;
-        display: flex;
-        flex-direction: column;
-        padding: 100px 0;
-        justify-content: space-between;
+        padding: 100px 0 100px 50px;
     }
 
     &__close {
@@ -72,15 +69,14 @@
 .burger-menu-list {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 0 30px;
     color: #232323;
     font-size: 30px;
     font-weight: 700;
     letter-spacing: 0.2px;
     line-height: 36px;
-    margin-bottom: 30px;
     position: relative;
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
@@ -151,15 +147,19 @@
         align-items: center;
 
         .icon--arrow-line-down {
-            width: 32px;
-            height: 32px;
+            width: 42px;
+            height: 42px;
             transition: transform 0.3s;
             will-change: transform;
             padding: 8px;
             margin-left: 5px;
+            position: absolute;
+            left: -60px;
+            fill: var(--color-primary);
 
-            @media (--viewport-lg-min) {
-                transform: rotate(-90deg);
+            @media (--viewport-md-min) {
+                position: relative;
+                left: 0;
             }
         }
     }

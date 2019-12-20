@@ -1,0 +1,8 @@
+uuid: 8ae35afb-dcf7-44fb-b2d0-11699874a72b
+langcode: en
+status: true
+dependencies: {  }
+id: gis_minimap
+label: 'GIS MiniMap'
+revision: 0
+description: ''

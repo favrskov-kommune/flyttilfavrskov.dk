@@ -1,0 +1,29 @@
+uuid: a5878956-19dd-4f80-b853-e2e7b017e989
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_category
+    - media.type.dds_cdn_video
+    - taxonomy.vocabulary.media_categories
+id: media.dds_cdn_video.field_media_category
+field_name: field_media_category
+entity_type: media
+bundle: dds_cdn_video
+label: 'Medie kategori'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      media_categories: media_categories
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
