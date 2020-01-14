@@ -8,6 +8,9 @@ RUN apt-get update && apt-get install -y \
         vim \
         curl \
         imagemagick \
+        mysql-client \
+        cron \
+        wget \
         sendmail \
         zlib1g-dev && \
     rm -rf /var/lib/apt/lists/*
