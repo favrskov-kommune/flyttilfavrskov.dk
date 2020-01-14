@@ -43,6 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
               const oldSrc = regex.exec(oembed.html)[1];
               const newSrc = `${oldSrc}&autoplay=1&showinfo=0&autohide=1&mute=1`; // We need to set this ourselves, otherwise we are not sure it is gonna play.
               oembed.html = oembed.html.replace(oldSrc, newSrc);
+            } else if (oembed.html.indexOf('video') > -1) {
+              oembed.html = oembed.html.replace('<video', '<video autoplay muted');
             }
             e.currentTarget.parentNode.classList.add('video--hide-content');
             iframeWrapper.innerHTML = oembed.html;

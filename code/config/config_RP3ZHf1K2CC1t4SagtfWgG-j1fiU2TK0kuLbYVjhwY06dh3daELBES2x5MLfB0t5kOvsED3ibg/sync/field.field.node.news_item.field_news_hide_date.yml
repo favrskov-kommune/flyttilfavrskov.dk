@@ -1,0 +1,23 @@
+uuid: 7af04eb2-4864-4ed9-b6e1-41450ff4cc98
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_news_hide_date
+    - node.type.news_item
+id: node.news_item.field_news_hide_date
+field_name: field_news_hide_date
+entity_type: node
+bundle: news_item
+label: 'Hide date'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

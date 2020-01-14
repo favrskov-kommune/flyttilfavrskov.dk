@@ -4,10 +4,10 @@ status: true
 dependencies:
   config:
     - image.style.large
-    - image.style.list_view_xs_
     - image.style.list_view_lg_
     - image.style.list_view_md_
     - image.style.list_view_sm_
+    - image.style.list_view_xs_
     - image.style.list_view_xsx2_
     - image.style.list_view_xxs_
     - image.style.list_view_xxsx2_
@@ -40,7 +40,7 @@ image_style_mappings:
     breakpoint_id: dds_premium.xs
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: list_view_
+    image_mapping: list_view_xs_
   -
     breakpoint_id: dds_premium.xs
     multiplier: 2x

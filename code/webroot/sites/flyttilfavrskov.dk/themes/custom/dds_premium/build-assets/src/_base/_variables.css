@@ -29,7 +29,7 @@
 
     /* Layout
   ********************/
-    --container-width: 1600px;
+    --container-width: 1560px;
     --text-width: 1240px;
     --grid-section-spacing: 100px;
     --grid-section-spacing--mobile: calc(var(--grid-section-spacing) / 2);

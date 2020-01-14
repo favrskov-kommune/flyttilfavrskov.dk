@@ -16,7 +16,7 @@ services:
     volumes:
       - esdata01:/usr/share/elasticsearch/data
     ports:
-      - 9200:9200
+      - 9200
     labels:
       com.ddev.site-name: ${DDEV_SITENAME}
       com.ddev.platform: ddev

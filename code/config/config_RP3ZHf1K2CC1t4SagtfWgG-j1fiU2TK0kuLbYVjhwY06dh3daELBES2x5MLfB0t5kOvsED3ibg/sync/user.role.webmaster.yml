@@ -30,6 +30,7 @@ permissions:
   - 'add global paragraph entities'
   - 'administer blocks'
   - 'administer content'
+  - 'administer mailchimp'
   - 'administer mailchimp signup entities'
   - 'administer menu'
   - 'administer nodes'
