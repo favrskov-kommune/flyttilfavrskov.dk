@@ -14,3 +14,4 @@ permissions:
   - 'use text format basic_html'
   - 'use text format header_html'
   - 'view media'
+  - 'view search pages'
