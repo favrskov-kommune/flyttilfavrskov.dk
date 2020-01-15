@@ -17,26 +17,26 @@
 <div{{ attributes.addClass('container') }}>
   <div class="search-page">
     <div class="search-page__title">
-      {% if title %}
-        <h2>{{ title }}</h2>
+      {% if search_title %}
+        <h2>{{ search_title }}</h2>
       {% endif %}
     </div>
     <div class="search-page__no-of-results">
-      {% if content.no_of_results %}
-        <p>{{ content.no_of_results }}</p>
+      {% if no_of_results %}
+        <p>{{ no_of_results }}</p>
       {% endif %}
     </div>
     <div class="search-page__form">
-      {% if content.form %}
-        {{- content.form -}}
+      {% if form %}
+        {{- form -}}
       {% endif %}
     </div>
     {{ content.facets }}
     <div class="search-page__results">
-      {{ content.results }}
+      {{ results }}
     </div>
     <div class="search-page__pager">
-      {{ content.pager }}
+      {{ pager }}
     </div>
   </div>
 </div>

@@ -75,6 +75,7 @@ module:
   link: 0
   locale: 0
   mailchimp: 0
+  mailchimp_lists: 0
   mailchimp_signup: 0
   media: 0
   media_library: 0
