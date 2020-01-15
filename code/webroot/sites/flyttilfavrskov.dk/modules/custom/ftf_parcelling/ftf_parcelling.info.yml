@@ -5,3 +5,6 @@ core: 8.x
 version: 1.0.0
 package: 'Flyt Til Favrskov'
 dependencies: {  }
+
+interface translation project: ftf_parcelling
+interface translation server pattern: sites/flyttilfavrskov.dk/modules/custom/ftf_parcelling/translations/%language.po
