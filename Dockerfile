@@ -1,4 +1,4 @@
-FROM drupal:8.7.7-apache AS base
+FROM drupal:8.7.10-apache AS base
 RUN apt-get update && apt-get install -y \
         git \
         libicu-dev \
@@ -8,7 +8,8 @@ RUN apt-get update && apt-get install -y \
         vim \
         curl \
         imagemagick \
-        sendmail \
+        msmtp \
+        mysql-client \
         zlib1g-dev && \
     rm -rf /var/lib/apt/lists/*
 
@@ -44,11 +45,11 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
 
 COPY code/ /src
 WORKDIR /src
-RUN chown -R www-data:www-data /src /var/www
 
-COPY entrypoint.sh .
 USER root
+
 RUN chmod +x entrypoint.sh
+RUN chown -R www-data:www-data /src /var/www
 
 USER www-data
 COPY apache2.conf /etc/apache2/apache2.conf
