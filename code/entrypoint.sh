@@ -1,7 +1,6 @@
 #!/bin/sh
 
 vendor/drush/drush/drush config-set system.file path.temporary /tmp/
-vendor/drush/drush/drush cr
 
 if [ $1 = "https" ]; then
 	a2enmod ssl
