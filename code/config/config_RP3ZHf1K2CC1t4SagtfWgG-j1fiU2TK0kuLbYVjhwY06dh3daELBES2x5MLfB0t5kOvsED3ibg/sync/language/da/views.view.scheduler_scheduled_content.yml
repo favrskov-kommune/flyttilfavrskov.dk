@@ -21,19 +21,19 @@ display:
         node_bulk_form:
           action_title: Handling
         title:
-          label: Title
+          label: Titel
           separator: ', '
         type:
           label: Indholdstype
           separator: ', '
         name:
-          label: Author
+          label: Forfatter
           separator: ', '
         status:
           label: Status
           settings:
-            format_custom_true: Published
-            format_custom_false: Unpublished
+            format_custom_true: Publiceret
+            format_custom_false: Afpubliceret
           separator: ', '
         publish_on:
           label: 'Udgiv den'
@@ -42,27 +42,27 @@ display:
           label: 'Afpublicér den'
           separator: ', '
         operations:
-          label: Operations
+          label: Handlinger
       filters:
         title:
           expose:
-            label: Title
+            label: Titel
         type:
           expose:
-            label: 'Content type'
+            label: Indholdstype
         status:
           expose:
             label: Status
           group_info:
-            label: 'Published status'
+            label: 'Publiceret status'
             group_items:
               1:
-                title: Published
+                title: Publiceret
               2:
-                title: Unpublished
+                title: Afpubliceret
         langcode:
           expose:
-            label: Language
+            label: Sprog
       title: 'Planlagt indhold'
       empty:
         area_text_custom:

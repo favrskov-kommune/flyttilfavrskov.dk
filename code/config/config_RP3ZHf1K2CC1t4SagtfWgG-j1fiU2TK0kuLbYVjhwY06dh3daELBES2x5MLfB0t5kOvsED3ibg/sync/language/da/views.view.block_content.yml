@@ -14,8 +14,8 @@ display:
       pager:
         options:
           tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
+            previous: '‹ Forrige'
+            next: 'Næste ›'
           expose:
             items_per_page_label: 'Antal elementer'
             items_per_page_options_all_label: '- Alle -'
@@ -30,7 +30,7 @@ display:
         changed:
           label: Opdateret
         operations:
-          label: Operations
+          label: Handlinger
       filters:
         info:
           expose:
@@ -43,7 +43,7 @@ display:
         area_text_custom:
           content: 'Der er ingen tilpassede blokke tilgængeligt.'
   page_1:
-    display_title: Page
+    display_title: Side
     display_options:
       menu:
         title: 'Brugerdefineret blokbibliotek'

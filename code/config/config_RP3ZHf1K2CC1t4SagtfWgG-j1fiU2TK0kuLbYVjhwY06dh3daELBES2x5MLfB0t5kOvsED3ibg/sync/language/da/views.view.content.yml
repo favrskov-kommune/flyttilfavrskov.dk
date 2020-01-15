@@ -13,47 +13,47 @@ display:
       pager:
         options:
           tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
-            first: '« First'
-            last: 'Last »'
+            previous: '‹ Forrige'
+            next: 'Næste ›'
+            first: '« Første'
+            last: 'Sidste »'
       fields:
         title:
-          label: Title
+          label: Titel
         type:
-          label: 'Content type'
+          label: Indholdstype
           separator: ', '
         name:
-          label: Author
+          label: Forfatter
         status:
           label: Status
           settings:
-            format_custom_true: Published
-            format_custom_false: Unpublished
+            format_custom_true: Publiceret
+            format_custom_false: Afpubliceret
         changed:
           label: Opdateret
         operations:
-          label: Operations
+          label: Handlinger
       filters:
         title:
           expose:
-            label: Title
+            label: Titel
         type:
           expose:
-            label: 'Content type'
+            label: Indholdstype
         status:
           expose:
             label: Status
           group_info:
-            label: 'Published status'
+            label: 'Publiceret status'
             group_items:
               1:
-                title: Published
+                title: Publiceret
               2:
-                title: Unpublished
+                title: Afpubliceret
         langcode:
           expose:
-            label: Language
+            label: Sprog
       title: Indhold
       empty:
         area_text_custom:
@@ -66,4 +66,4 @@ display:
       tab_options:
         title: Indhold
         description: 'Find og håndtér indhold'
-    display_title: Page
+    display_title: Side

@@ -1,6 +1,6 @@
 third_party_settings:
   field_group:
     group_page_header:
-      label: 'Page header'
+      label: 'Side header'
     group_header_cta:
       label: 'Header knap'
