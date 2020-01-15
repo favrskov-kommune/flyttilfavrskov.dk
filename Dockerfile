@@ -1,4 +1,4 @@
-FROM drupal:8.7.7-apache AS base
+FROM drupal:8.8.1-apache AS base
 RUN apt-get update && apt-get install -y \
         git \
         libicu-dev \
@@ -8,12 +8,11 @@ RUN apt-get update && apt-get install -y \
         vim \
         curl \
         imagemagick \
+        msmtp \
         mysql-client \
         cron \
         wget \
-        sendmail-bin \
         sensible-mda \
-        sendmail \
         zlib1g-dev && \
     rm -rf /var/lib/apt/lists/*
 
@@ -32,8 +31,7 @@ RUN a2enmod rewrite && \
         pdo \
         pdo_mysql \
         calendar \
-        zip && \
-        ( yes | pecl install xdebug )
+        zip
 
 COPY php.ini /usr/local/etc/php/conf.d/php-overwrite.ini
 
@@ -49,11 +47,12 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
 
 COPY code/ /src
 WORKDIR /src
-RUN chown -R www-data:www-data /src /var/www
 
-COPY entrypoint.sh .
+COPY code/entrypoint.sh .
 USER root
+
 RUN chmod +x entrypoint.sh
+RUN chown -R www-data:www-data /src /var/www
 
 USER www-data
 COPY apache2.conf /etc/apache2/apache2.conf
@@ -64,10 +63,11 @@ FROM base AS http
 USER root
 ENTRYPOINT ["./entrypoint.sh", "http"]
 
+
 FROM base AS https
 ENV APP_ENV=$env
 # Install libraries
-RUN composer install --optimize-autoloader && \
+RUN composer install --optimize-autoloader --no-dev && \
     cd webroot/sites/flyttilfavrskov.dk/themes/custom/dds_premium/build-assets/ &&\
     npm install && \
     npm run build:prod
