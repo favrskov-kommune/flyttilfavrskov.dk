@@ -1,31 +1,31 @@
 <div class="parcel">
   <div class="parcel__header">
     <div class="parcel__address">{{ address }}</div>
-    <div class="parcel__status parcel__status--{{ status }}">{{ status|capitalize|t }}</div>
+    <div class="parcel__status parcel__status--{{ status }}">{{ status|capitalize|t({}, {'context': 'ftf_parcelling'}) }}</div>
   </div>
   {% if group %}
     <div class="parcel__group">{{ group }}</div>
   {% endif %}
   <div class="parcel__information">
     <div class="parcel__line">
-      <div class="parcel__line-label">{{ 'Size'|t }}</div>
+      <div class="parcel__line-label">{{ 'Size'|t({}, {'context': 'ftf_parcelling'}) }}</div>
       <div class="parcel__line-value">{{ area|number_format(0, ',', '.') }} m&sup2;</div>
     </div>
     {% if min_price %}
       <div class="parcel__line">
-        <div class="parcel__line-label">{{ 'Minimum price'|t }}</div>
+        <div class="parcel__line-label">{{ 'Minimum price'|t({}, {'context': 'ftf_parcelling'}) }}</div>
         <div class="parcel__line-value">{{ min_price|number_format(0, ',', '.') }} kr.</div>
       </div>
     {% endif %}
     {% if price %}
       <div class="parcel__line">
-        <div class="parcel__line-label">{{ 'Asking price'|t }}</div>
+        <div class="parcel__line-label">{{ 'Asking price'|t({}, {'context': 'ftf_parcelling'}) }}</div>
         <div class="parcel__line-value">{{ price|number_format(0, ',', '.') }} kr.</div>
       </div>
     {% endif %}
     {% if sqm_price %}
       <div class="parcel__line">
-        <div class="parcel__line-label">{{ 'Square meter price'|t }}</div>
+        <div class="parcel__line-label">{{ 'Square meter price'|t({}, {'context': 'ftf_parcelling'}) }}</div>
         <div class="parcel__line-value">{{ sqm_price|number_format(0, ',', '.') }} kr.</div>
       </div>
     {% endif %}

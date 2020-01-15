@@ -1,0 +1,11 @@
+<?php
+
+
+/**
+ * Implements hook_locale_translation_projects_alter().
+ */
+function ftf_core_locale_translation_projects_alter(&$projects) {
+  $module_handler = \Drupal::service('module_handler');
+  $path = $module_handler->getModule('ftf_core')->getPath();
+  $projects['ftf_core']['info']['interface translation server pattern'] = $path . '/translations/%language.po';
+}
