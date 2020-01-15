@@ -59,6 +59,11 @@ COPY apache2.conf /etc/apache2/apache2.conf
 ARG env
 ENV APP_ENV=$env
 
+FROM base AS http
+USER root
+ENTRYPOINT ["./entrypoint.sh", "http"]
+
+
 FROM base AS https
 ENV APP_ENV=$env
 # Install libraries
@@ -68,7 +73,3 @@ RUN composer install --optimize-autoloader --no-dev && \
     npm run build:prod
 USER root
 ENTRYPOINT ["./entrypoint.sh", "https"]
-
-FROM base AS http
-USER root
-ENTRYPOINT ["./entrypoint.sh", "http"]
