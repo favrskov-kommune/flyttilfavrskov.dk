@@ -934,7 +934,7 @@ msgid "Operations"
 msgstr "Handlinger"
 
 msgid "There are no custom blocks available."
-msgstr "Der er ingen tilpassede blokke tilgængeligt."
+msgstr "Der er ingen tilgængelige brugerdefinerede blokke."
 
 msgid "Find and manage content."
 msgstr "Find og håndtér indhold."
@@ -27487,16 +27487,19 @@ msgid "The default theme."
 msgstr "Standard theme."
 
 msgid "custom block"
-msgstr "tilpasset blok"
+msgstr "brugerdefineret blok"
+
+msgid "Create @entity_type"
+msgstr "Opret ny @entity_type"
 
 msgid "custom blocks"
-msgstr "tilpassede blokke"
+msgstr "brugerdefinerede blokke"
 
 msgid "custom block type"
-msgstr "tilpasset bloktype"
+msgstr "brugerdefineret blok type"
 
 msgid "custom block types"
-msgstr "tilpassede bloktyper"
+msgstr "brugerdefineret blok typer"
 
 msgid "Block property"
 msgstr "Blok egenskab"
