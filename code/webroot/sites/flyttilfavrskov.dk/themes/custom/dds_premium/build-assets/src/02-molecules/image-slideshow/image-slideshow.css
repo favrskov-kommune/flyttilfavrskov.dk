@@ -3,6 +3,14 @@
     position: relative;
     cursor: grab;
     width: 100%;
+
+    .flickity-viewport {
+        overflow: hidden;
+    }
+}
+
+.image-slideshow {
+    outline: none;
 }
 
 .image-slideshow-slide {
