@@ -4,14 +4,24 @@ status: true
 dependencies:
   config:
     - block_content.type.document_list
+    - field.field.block_content.document_list.field_links
     - field.field.block_content.document_list.field_media_documents
   module:
+    - link
     - media_library
 id: block_content.document_list.default
 targetEntityType: block_content
 bundle: document_list
 mode: default
 content:
+  field_links:
+    weight: 26
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
   field_media_documents:
     type: media_library_widget
     weight: 0

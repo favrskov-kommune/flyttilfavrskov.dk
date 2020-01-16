@@ -4,12 +4,27 @@ status: true
 dependencies:
   config:
     - block_content.type.document_list
+    - field.field.block_content.document_list.field_links
     - field.field.block_content.document_list.field_media_documents
+  module:
+    - link
 id: block_content.document_list.default
 targetEntityType: block_content
 bundle: document_list
 mode: default
 content:
+  field_links:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
   field_media_documents:
     type: entity_reference_entity_view
     weight: 0

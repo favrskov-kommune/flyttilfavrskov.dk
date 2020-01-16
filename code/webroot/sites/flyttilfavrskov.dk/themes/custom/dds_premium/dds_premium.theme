@@ -623,15 +623,39 @@ function dds_premium_preprocess_layout_block__usp_item(array &$variables) {
  *   Template variables.
  */
 function dds_premium_preprocess_layout_block__document_list(array &$variables) {
+  /** @var \Drupal\block_content\Entity\BlockContent $entity */
   $entity = $variables['entity'];
-  $items = $entity->get('field_media_documents');
-  if (!empty($items)) {
+  $links = [];
+  if ($entity->hasField('field_media_documents') && !$entity->get('field_media_documents')->isEmpty()) {
     /** @var \Drupal\media\Entity\Media $item */
-    foreach ($items as $item) {
+    foreach ($entity->get('field_media_documents') as $item) {
       $item = $item->entity;
+      if (!empty($item)) {
+        $links[] = [
+          'title' => $item->label(),
+          'url' => $item->field_media_file->entity->url(),
+        ];
+      }
+    }
+  }
+  if ($entity->hasField('field_links') && !$entity->get('field_links')->isEmpty()) {
+    /** @var \Drupal\link\Plugin\Field\FieldType\LinkItem $item */
+    foreach ($entity->get('field_links') as $item) {
+      $data = $item->getValue();
+      if (!empty($data)) {
+        $links[] = [
+          'title' => $data['title'],
+          'url' => $data['uri']
+        ];
+      }
+    }
+  }
+
+  if (!empty($links)) {
+    foreach ($links as $link) {
       $variables['links'][] = [
-        'title' => $item->label(),
-        'url' => Url::fromUri($item->field_media_file->entity->url())->toString(),
+        'title' => $link['title'],
+        'url' => Url::fromUri($link['url'])->toString(),
         'icon' => 'document',
       ];
     }
