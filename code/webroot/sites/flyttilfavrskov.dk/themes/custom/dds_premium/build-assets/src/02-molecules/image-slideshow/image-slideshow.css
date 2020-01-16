@@ -14,7 +14,7 @@
     position: relative;
 
     @media (--viewport-md-min) {
-        height: 700px;
+        height: 450px;
     }
 
     &::before {
