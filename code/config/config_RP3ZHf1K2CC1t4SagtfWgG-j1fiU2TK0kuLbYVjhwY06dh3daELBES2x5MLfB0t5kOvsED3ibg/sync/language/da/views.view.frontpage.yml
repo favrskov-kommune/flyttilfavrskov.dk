@@ -22,12 +22,12 @@ display:
             items_per_page_options_all_label: '- Alle -'
             offset_label: Forskydning
           tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
-            first: '« First'
-            last: 'Last »'
+            previous: '‹ Forrige'
+            next: 'Næste ›'
+            first: '« Første'
+            last: 'Sidste »'
     display_title: Master
   feed_1:
     display_title: Feed
   page_1:
-    display_title: Page
+    display_title: Side

@@ -17,10 +17,10 @@ display:
             items_per_page_options_all_label: '- Alle -'
             offset_label: Forskydning
           tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
-            first: '« First'
-            last: 'Last »'
+            previous: '‹ Forrige'
+            next: 'Næste ›'
+            first: '« Første'
+            last: 'Sidste »'
       fields:
         media_bulk_form:
           action_title: Handling
@@ -34,19 +34,19 @@ display:
           label: Type
           separator: ', '
         uid:
-          label: Author
+          label: Forfatter
           separator: ', '
         status:
           label: Status
           settings:
-            format_custom_true: Published
-            format_custom_false: Unpublished
+            format_custom_true: Publiceret
+            format_custom_false: Afpubliceret
           separator: ', '
         changed:
           label: Opdateret
           separator: ', '
         operations:
-          label: Operations
+          label: Handlinger
       filters:
         name:
           expose:
@@ -58,15 +58,15 @@ display:
           expose:
             label: Sandt
           group_info:
-            label: 'Published status'
+            label: 'Publiceret status'
             group_items:
               1:
-                title: Published
+                title: Publiceret
               2:
-                title: Unpublished
+                title: Afpubliceret
         langcode:
           expose:
-            label: Language
+            label: Sprog
       title: Media
       empty:
         area_text_custom:

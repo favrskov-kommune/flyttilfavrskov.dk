@@ -16,4 +16,4 @@ regions:
   burgermenu: Burgermenu
 
 interface translation project: dds_premium
-interface translation server pattern: dds_premium/translations/%language.po
+interface translation server pattern: sites/flyttilfavrskov.dk/themes/custom/dds_premium/translations/%language.po

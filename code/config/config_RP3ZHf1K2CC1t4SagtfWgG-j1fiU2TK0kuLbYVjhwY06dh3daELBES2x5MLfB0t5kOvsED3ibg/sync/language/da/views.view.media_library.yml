@@ -27,12 +27,12 @@ display:
           expose:
             label: Publiceringsstatus
           group_info:
-            label: Published
+            label: Publiceret
             group_items:
               1:
-                title: Published
+                title: Publiceret
               2:
-                title: Unpublished
+                title: Afpubliceret
         name:
           expose:
             label: Name
@@ -43,7 +43,7 @@ display:
             label: 'Medie type'
         langcode:
           expose:
-            label: Language
+            label: Sprog
       sorts:
         created:
           expose:
@@ -59,7 +59,7 @@ display:
         area_text_custom:
           content: 'Ingen tilgængelige media'
   page:
-    display_title: Page
+    display_title: Side
     display_options:
       fields:
         media_bulk_form:
@@ -95,7 +95,7 @@ display:
         name:
           label: Name
         uid:
-          label: Author
+          label: Forfatter
         changed:
           label: Opdateret
       filters:

@@ -22,15 +22,15 @@ display:
             next: ››
       fields:
         title:
-          label: Title
+          label: Titel
         name:
-          label: Author
+          label: Forfatter
         changed:
           label: 'Seneste opdatering'
   attachment_1:
     display_title: Bilag
   page_1:
-    display_title: Page
+    display_title: Side
     display_options:
       menu:
         title: Ordliste

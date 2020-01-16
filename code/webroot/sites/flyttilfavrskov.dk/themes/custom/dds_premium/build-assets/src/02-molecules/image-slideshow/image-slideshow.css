@@ -3,6 +3,14 @@
     position: relative;
     cursor: grab;
     width: 100%;
+
+    .flickity-viewport {
+        overflow: hidden;
+    }
+}
+
+.image-slideshow {
+    outline: none;
 }
 
 .image-slideshow-slide {
@@ -14,7 +22,7 @@
     position: relative;
 
     @media (--viewport-md-min) {
-        height: 700px;
+        height: 450px;
     }
 
     &::before {

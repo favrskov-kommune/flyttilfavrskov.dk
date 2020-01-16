@@ -24,6 +24,7 @@
     }
   ],
   "require": {
+    "php": "^7.2",
     "composer/installers": "^1.2",
     "cweagans/composer-patches": "^1.6.5",
     "drupal-composer/drupal-scaffold": "^2.5",
@@ -34,6 +35,7 @@
     "drupal/mailchimp": "^1.11",
     "drupal/view_unpublished": "^1.0",
     "drush/drush": "^9.0",
+    "elasticsearch/elasticsearch": "^7.0",
     "novicell/dds_content": "~1.0",
     "novicell/dds_content_hierarchy": "~2.1",
     "novicell/dds_cookieinfo": "~2.0",

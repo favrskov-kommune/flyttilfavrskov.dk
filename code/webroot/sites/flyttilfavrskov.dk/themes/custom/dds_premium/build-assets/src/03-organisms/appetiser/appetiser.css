@@ -9,7 +9,7 @@
 
     &:not(.appetiser--small) {
         @media (--viewport-md-min) {
-            min-height: 900px;
+            min-height: 450px;
         }
     }
 

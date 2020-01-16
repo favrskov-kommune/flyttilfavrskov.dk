@@ -4,6 +4,15 @@ use Drupal\Core\Link;
 use Drupal\Core\Url;
 
 /**
+ * Implements hook_locale_translation_projects_alter().
+ */
+function ftf_parcelling_locale_translation_projects_alter(&$projects) {
+  $module_handler = \Drupal::service('module_handler');
+  $path = $module_handler->getModule('ftf_parcelling')->getPath();
+  $projects['ftf_parcelling']['info']['interface translation server pattern'] = $path . '/translations/%language.po';
+}
+
+/**
  * Implements hook_cron().
  */
 function ftf_parcelling_cron() {

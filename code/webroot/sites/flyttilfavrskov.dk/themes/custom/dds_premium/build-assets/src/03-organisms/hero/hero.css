@@ -145,6 +145,8 @@
         }
     }
 
+    /*
+    If this changes, then the wide image style needs to be changed also
     &:not(&--medium, &--small) {
         @media (--viewport-ms-min) {
             height: 580px;
@@ -157,5 +159,5 @@
         @media (--viewport-md-min) {
             height: 800px;
         }
-    }
+    }*/
 }

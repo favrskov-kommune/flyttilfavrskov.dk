@@ -14,8 +14,8 @@ display:
       pager:
         options:
           tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
+            previous: '‹ Forrige'
+            next: 'Næste ›'
           expose:
             items_per_page_label: 'Antal elementer'
             items_per_page_options_all_label: '- Alle -'
@@ -67,8 +67,8 @@ display:
       pager:
         options:
           tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
+            previous: '‹ Forrige'
+            next: 'Næste ›'
           expose:
             items_per_page_label: 'Antal elementer'
             items_per_page_options_all_label: '- Alle -'

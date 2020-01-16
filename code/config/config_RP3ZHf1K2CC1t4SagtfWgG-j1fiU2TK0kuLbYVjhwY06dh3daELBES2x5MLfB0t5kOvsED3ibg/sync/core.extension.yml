@@ -61,6 +61,7 @@ module:
   file: 0
   filter: 0
   focal_point: 0
+  ftf_core: 0
   ftf_parcelling: 0
   gtm: 0
   help: 0
