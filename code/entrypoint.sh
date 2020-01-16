@@ -1,11 +1,9 @@
 #!/bin/sh
 
-vendor/drush/drush/drush config-set system.file path.temporary /tmp/
-
 if [ $1 = "https" ]; then
 	a2enmod ssl
 	/etc/init.d/apache2 reload
-  (crontab -l -u root; echo "* * * * * wget -O - -q -t 1 https://$DOMAIN/cron/$CRON_HASH >> /var/log/curlcron.log") | crontab
+  (crontab -l -u root; echo "*/5 * * * * wget -O - -q -t 1 https://$DOMAIN/cron/$CRON_HASH >> /var/log/curlcron.log") | crontab
   echo "$(hostname -i)\t$(hostname) $(hostname).localhost" >> /etc/hosts
   cron
 fi
