@@ -30710,3 +30710,9 @@ msgstr ""
 "href=\":export\">eksportere</a> strenge for offline redigering i en desktop "
 "Gettext translation editor.) Søgninger kan blive begrænset af specifikke "
 "sprog."
+
+msgid "Vertical align content"
+msgstr "Lodret justering af indhold"
+
+msgid "Vertical align content for this layout"
+msgstr "Lodret justering af indhold til dette layout"
