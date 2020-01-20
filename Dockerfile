@@ -52,7 +52,7 @@ COPY code/entrypoint.sh .
 USER root
 
 RUN chmod +x entrypoint.sh
-RUN chown -R www-data:www-data /src /var/www
+RUN chown -R www-data:www-data /src
 
 USER www-data
 COPY apache2.conf /etc/apache2/apache2.conf
