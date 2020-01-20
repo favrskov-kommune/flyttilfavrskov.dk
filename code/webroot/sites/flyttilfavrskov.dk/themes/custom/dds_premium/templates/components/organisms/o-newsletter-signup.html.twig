@@ -1,7 +1,10 @@
 <div{{ attributes.addClass('newsletter-signup') }}>
-  <h2 class="newsletter-signup__title">{{ title }}</h2>
-  {% if text %}
-    <div class="newsletter-signup__text">{{ text }}</div>
-  {% endif %}
-  {{ content }}
+  {% include '@dds_premium/components/atoms/a-svg-background.html.twig' %}
+  <div class="newsletter-signup__inner">
+    <h2 class="newsletter-signup__title">{{ title }}</h2>
+    {% if text %}
+      <div class="newsletter-signup__text">{{ text }}</div>
+    {% endif %}
+    {{ content }}
+  </div>
 </div>
