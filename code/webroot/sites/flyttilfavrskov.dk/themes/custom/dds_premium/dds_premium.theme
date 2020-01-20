@@ -299,6 +299,34 @@ function dds_premium_preprocess_maintenance_page(array &$variables) {
 }
 
 /**
+ * Add alt and title to site branding.
+ *
+ * @param array $variables
+ *   Template variables.
+ */
+function dds_premium_preprocess_block__sitebranding(&$variables) {
+  /**
+   * @todo Maybe we should add this to site settings?
+   */
+  $variables['alt'] = 'Favrskov Kommune Grundsalg - Boliggrunde, Erhvervsgrunde & Storparceller';
+  $variables['title'] = 'Favrskov';
+}
+
+/**
+ * Add alt and title to site branding mobile.
+ *
+ * @param array $variables
+ *   Template variables.
+ */
+function dds_premium_preprocess_block__sitebranding_mobile(&$variables) {
+  /**
+   * @todo Maybe we should add this to site settings?
+   */
+  $variables['alt'] = 'Favrskov Kommune Grundsalg - Boliggrunde, Erhvervsgrunde & Storparceller';
+  $variables['title'] = 'Favrskov';
+}
+
+/**
  * Add theme information to cooke info.
  *
  * @param array $variables
