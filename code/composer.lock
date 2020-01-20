@@ -6521,13 +6521,7 @@
             "version": "1.3.12",
             "dist": {
                 "type": "zip",
-<<<<<<< Updated upstream
-                "url": "https://packages.drupal.dk/php/~/up/ver_31ukZ/novicelldds_content-1-3-12.zip",
-                "reference": null,
-                "shasum": null
-=======
-                "url": "https://packages.drupal.dk/php/~/up/ver_2d3KRz/novicelldds_content-1-3-11.zip"
->>>>>>> Stashed changes
+                "url": "https://packages.drupal.dk/php/~/up/ver_31ukZ/novicelldds_content-1-3-12.zip"
             },
             "require": {
                 "drupal/allowed_formats": "~1.2",
@@ -6619,13 +6613,7 @@
             "version": "1.5.0",
             "dist": {
                 "type": "zip",
-<<<<<<< Updated upstream
-                "url": "https://packages.drupal.dk/php/~/up/ver_1OPKRv/novicelldds_layouts-1-5-0.zip",
-                "reference": null,
-                "shasum": null
-=======
-                "url": "https://packages.drupal.dk/php/~/up/ver_2A9JR/novicelldds_layouts-1-4-9.zip"
->>>>>>> Stashed changes
+                "url": "https://packages.drupal.dk/php/~/up/ver_1OPKRv/novicelldds_layouts-1-5-0.zip"
             },
             "require": {
                 "drupal/core": "^8.8",
@@ -6642,13 +6630,7 @@
             "version": "2.4.0",
             "dist": {
                 "type": "zip",
-<<<<<<< Updated upstream
-                "url": "https://packages.drupal.dk/php/~/up/ver_I5lhz/novicelldds_media-2-4-0.zip",
-                "reference": null,
-                "shasum": null
-=======
-                "url": "https://packages.drupal.dk/php/~/up/ver_imwS2/novicelldds_media-2-3-1.zip"
->>>>>>> Stashed changes
+                "url": "https://packages.drupal.dk/php/~/up/ver_I5lhz/novicelldds_media-2-4-0.zip"
             },
             "require": {
                 "drupal/ctools": "^3.0",
@@ -7430,12 +7412,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ruflin/Elastica.git",
-                "reference": "e8614a2309ee2fe0491718eddc0ec8e717300c15"
+                "reference": "1dd1d02ba8e043593d4eeb15c12faa0270085bc4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ruflin/Elastica/zipball/e8614a2309ee2fe0491718eddc0ec8e717300c15",
-                "reference": "e8614a2309ee2fe0491718eddc0ec8e717300c15",
+                "url": "https://api.github.com/repos/ruflin/Elastica/zipball/1dd1d02ba8e043593d4eeb15c12faa0270085bc4",
+                "reference": "1dd1d02ba8e043593d4eeb15c12faa0270085bc4",
                 "shasum": ""
             },
             "require": {
@@ -7481,7 +7463,7 @@
                 "client",
                 "search"
             ],
-            "time": "2020-01-20T08:32:04+00:00"
+            "time": "2020-01-20T11:10:17+00:00"
         },
         {
             "name": "stack/builder",
