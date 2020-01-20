@@ -43,6 +43,7 @@
     "novicell/dds_media": "~2.0",
     "novicell/dds_monitor": "~1.0",
     "novicell/dds_news": "^1.1",
+    "novicell/dds_performance": "^1.0",
     "novicell/dds_premium_installer": "~2.0",
     "novicell/dds_search": "~1.0",
     "novicell/dds_seo": "~1.0",

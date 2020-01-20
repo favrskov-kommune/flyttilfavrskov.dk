@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9d47b967566aca6fed9a746631d103e2",
+    "content-hash": "02574fb9d98a6dfeb33380f083b80227",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2360,6 +2360,91 @@
             }
         },
         {
+            "name": "drupal/advagg",
+            "version": "4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/advagg.git",
+                "reference": "8.x-4.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/advagg-8.x-4.0.zip",
+                "reference": "8.x-4.0",
+                "shasum": "2987efa3922fd9fc4931cf853de3104092ff236e"
+            },
+            "require": {
+                "drupal/core": "^8.6"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-4.x": "4.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-4.0",
+                    "datestamp": "1560358534",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Carper (mikeytown2)",
+                    "homepage": "https://www.drupal.org/u/mikeytown2",
+                    "role": "Creator, Maintainer"
+                },
+                {
+                    "name": "Nick Wilde (nickwilde)",
+                    "homepage": "https://www.drupal.org/u/nickwilde",
+                    "email": "design@briarmoon.ca",
+                    "role": "Drupal 8 Port/maintainer"
+                },
+                {
+                    "name": "doublejosh",
+                    "homepage": "https://www.drupal.org/user/199720"
+                },
+                {
+                    "name": "iamcarrico",
+                    "homepage": "https://www.drupal.org/user/1300542"
+                },
+                {
+                    "name": "markcarver",
+                    "homepage": "https://www.drupal.org/user/501638"
+                },
+                {
+                    "name": "mikeytown2",
+                    "homepage": "https://www.drupal.org/user/282446"
+                },
+                {
+                    "name": "rupl",
+                    "homepage": "https://www.drupal.org/user/411999"
+                },
+                {
+                    "name": "thalles",
+                    "homepage": "https://www.drupal.org/user/3589086"
+                }
+            ],
+            "description": "Improved aggregation of CSS/JS files to speed up page load times.",
+            "homepage": "https://drupal.org/project/advagg",
+            "support": {
+                "source": "https://cgit.drupalcode.org/advagg",
+                "issues": "https://drupal.org/project/issues/advagg",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
             "name": "drupal/allowed_formats",
             "version": "1.2.0",
             "source": {
@@ -3866,6 +3951,109 @@
             }
         },
         {
+            "name": "drupal/imageapi_optimize",
+            "version": "2.0.0-alpha4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/imageapi_optimize.git",
+                "reference": "8.x-2.0-alpha4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/imageapi_optimize-8.x-2.0-alpha4.zip",
+                "reference": "8.x-2.0-alpha4",
+                "shasum": "2e5525f8b1f58b9ef505fece615beae256c62b0c"
+            },
+            "require": {
+                "drupal/core": "^8.2"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.0-alpha4",
+                    "datestamp": "1535477197",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Deciphered",
+                    "homepage": "https://www.drupal.org/user/103796"
+                },
+                {
+                    "name": "Steven Jones",
+                    "homepage": "https://www.drupal.org/user/99644"
+                },
+                {
+                    "name": "jcisio",
+                    "homepage": "https://www.drupal.org/user/210762"
+                }
+            ],
+            "description": "Define pipelines for image optimization and provide integration with core image styles.",
+            "homepage": "https://www.drupal.org/project/imageapi_optimize",
+            "support": {
+                "source": "https://git.drupalcode.org/project/imageapi_optimize"
+            }
+        },
+        {
+            "name": "drupal/imageapi_optimize_resmushit",
+            "version": "1.0.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/imageapi_optimize_resmushit.git",
+                "reference": "8.x-1.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/imageapi_optimize_resmushit-8.x-1.0-beta1.zip",
+                "reference": "8.x-1.0-beta1",
+                "shasum": "da4162b44a4df6b93632840e55ae7b26adbc1e36"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "drupal/imageapi_optimize": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta1",
+                    "datestamp": "1535657580",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Steven Jones",
+                    "homepage": "https://www.drupal.org/user/99644"
+                }
+            ],
+            "description": "Provide a reSmush.it optimizer for ImageAPI Optimize.",
+            "homepage": "https://www.drupal.org/project/imageapi_optimize_resmushit",
+            "support": {
+                "source": "https://git.drupalcode.org/project/imageapi_optimize_resmushit"
+            }
+        },
+        {
             "name": "drupal/inline_block_title_automatic",
             "version": "1.0.0-alpha1",
             "source": {
@@ -4243,6 +4431,53 @@
             }
         },
         {
+            "name": "drupal/minifyhtml",
+            "version": "1.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/minifyhtml.git",
+                "reference": "8.x-1.9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/minifyhtml-8.x-1.9.zip",
+                "reference": "8.x-1.9",
+                "shasum": "6852e6e52d77c06f51783876a4f4ab38fd1a1fb2"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.9",
+                    "datestamp": "1576075986",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "slydevil",
+                    "homepage": "https://www.drupal.org/user/1846786"
+                }
+            ],
+            "description": "Minify the contents of the Drupal page",
+            "homepage": "https://www.drupal.org/project/minifyhtml",
+            "support": {
+                "source": "https://git.drupalcode.org/project/minifyhtml"
+            }
+        },
+        {
             "name": "drupal/monolog",
             "version": "1.3.0",
             "source": {
@@ -4508,6 +4743,65 @@
             "homepage": "https://www.drupal.org/project/redirect",
             "support": {
                 "source": "https://git.drupalcode.org/project/redirect"
+            }
+        },
+        {
+            "name": "drupal/redis",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/redis.git",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/redis-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "6b8847a0816a6e400d495aed1e9dde4c594d6e2b"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "suggest": {
+                "predis/predis": "^1.1.1"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1568275684",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Drupal\\redis\\": "src"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "pounard",
+                    "homepage": "https://www.drupal.org/user/240164"
+                }
+            ],
+            "description": "Provide a module placeholder, for using as dependency for module that needs Redis.",
+            "homepage": "https://www.drupal.org/project/redis",
+            "support": {
+                "source": "https://git.drupalcode.org/project/redis"
             }
         },
         {
@@ -6227,9 +6521,13 @@
             "version": "1.3.12",
             "dist": {
                 "type": "zip",
+<<<<<<< Updated upstream
                 "url": "https://packages.drupal.dk/php/~/up/ver_31ukZ/novicelldds_content-1-3-12.zip",
                 "reference": null,
                 "shasum": null
+=======
+                "url": "https://packages.drupal.dk/php/~/up/ver_2d3KRz/novicelldds_content-1-3-11.zip"
+>>>>>>> Stashed changes
             },
             "require": {
                 "drupal/allowed_formats": "~1.2",
@@ -6249,9 +6547,7 @@
             "version": "2.2.10",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_1hZmp5/novicelldds_content_hierarchy-2-2-10.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://packages.drupal.dk/php/~/up/ver_1hZmp5/novicelldds_content_hierarchy-2-2-10.zip"
             },
             "require": {
                 "drupal/ctools": "~3.0",
@@ -6266,9 +6562,7 @@
             "version": "2.1.2",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_DdMRk/novicelldds_cookieinfo-2-1-2.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://packages.drupal.dk/php/~/up/ver_DdMRk/novicelldds_cookieinfo-2-1-2.zip"
             },
             "require": {
                 "novicell/dds_site_settings": "^2.0"
@@ -6280,9 +6574,7 @@
             "version": "1.1.0",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_TlTvA/novicelldds_editors-1-1-0.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://packages.drupal.dk/php/~/up/ver_TlTvA/novicelldds_editors-1-1-0.zip"
             },
             "require": {
                 "drupal/allowed_formats": "^1.2",
@@ -6295,9 +6587,7 @@
             "version": "1.7.0",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_FxNIG/novicelldds_elasticsearch-1-7-0.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://packages.drupal.dk/php/~/up/ver_FxNIG/novicelldds_elasticsearch-1-7-0.zip"
             },
             "require": {
                 "drupal/elasticsearch_connector": ">=5.0 <= 7.0",
@@ -6311,9 +6601,7 @@
             "version": "1.1.1",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_1EbiwH/novicelldds_entity_data-1-1-1.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://packages.drupal.dk/php/~/up/ver_1EbiwH/novicelldds_entity_data-1-1-1.zip"
             },
             "type": "drupal-module"
         },
@@ -6322,9 +6610,7 @@
             "version": "1.5.0",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_1xonEN/novicelldds_icons-1-5-0.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://packages.drupal.dk/php/~/up/ver_1xonEN/novicelldds_icons-1-5-0.zip"
             },
             "type": "drupal-module"
         },
@@ -6333,9 +6619,13 @@
             "version": "1.5.0",
             "dist": {
                 "type": "zip",
+<<<<<<< Updated upstream
                 "url": "https://packages.drupal.dk/php/~/up/ver_1OPKRv/novicelldds_layouts-1-5-0.zip",
                 "reference": null,
                 "shasum": null
+=======
+                "url": "https://packages.drupal.dk/php/~/up/ver_2A9JR/novicelldds_layouts-1-4-9.zip"
+>>>>>>> Stashed changes
             },
             "require": {
                 "drupal/core": "^8.8",
@@ -6352,9 +6642,13 @@
             "version": "2.4.0",
             "dist": {
                 "type": "zip",
+<<<<<<< Updated upstream
                 "url": "https://packages.drupal.dk/php/~/up/ver_I5lhz/novicelldds_media-2-4-0.zip",
                 "reference": null,
                 "shasum": null
+=======
+                "url": "https://packages.drupal.dk/php/~/up/ver_imwS2/novicelldds_media-2-3-1.zip"
+>>>>>>> Stashed changes
             },
             "require": {
                 "drupal/ctools": "^3.0",
@@ -6368,9 +6662,7 @@
             "version": "1.2.1",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/d/novicell%2Fdds_monitor/novicell%2Fdds_monitor-1.2.1",
-                "reference": null,
-                "shasum": null
+                "url": "https://packages.drupal.dk/php/~/d/novicell%2Fdds_monitor/novicell%2Fdds_monitor-1.2.1"
             },
             "type": "drupal-module"
         },
@@ -6379,12 +6671,26 @@
             "version": "1.1.6",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_1wQFpq/novicelldds_news-1-1-6.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://packages.drupal.dk/php/~/up/ver_1wQFpq/novicelldds_news-1-1-6.zip"
             },
             "require": {
                 "novicell/dds_content": "~1.0"
+            },
+            "type": "drupal-module"
+        },
+        {
+            "name": "novicell/dds_performance",
+            "version": "1.0.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://packages.drupal.dk/php/~/up/ver_10iOej/novicelldds_performance-1-0-1.zip"
+            },
+            "require": {
+                "drupal/advagg": "^4.0",
+                "drupal/imageapi_optimize": "^2.0",
+                "drupal/imageapi_optimize_resmushit": "^1.0",
+                "drupal/minifyhtml": "^1.8",
+                "drupal/redis": "^1.0"
             },
             "type": "drupal-module"
         },
@@ -6393,9 +6699,7 @@
             "version": "2.0.19",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_Cp3Lw/novicelldds_premium_installer-2-0-19.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://packages.drupal.dk/php/~/up/ver_Cp3Lw/novicelldds_premium_installer-2-0-19.zip"
             },
             "require": {
                 "drupal/admin_toolbar": "^2.0",
@@ -6411,9 +6715,7 @@
             "version": "1.2.0",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_mkR7C/novicelldds_search-1-2-0.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://packages.drupal.dk/php/~/up/ver_mkR7C/novicelldds_search-1-2-0.zip"
             },
             "require": {
                 "drupal/search_api_exclude_entity": "^1.0",
@@ -6426,9 +6728,7 @@
             "version": "1.2.1",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_FXpjj/novicelldds_seo-1-2-1.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://packages.drupal.dk/php/~/up/ver_FXpjj/novicelldds_seo-1-2-1.zip"
             },
             "require": {
                 "drupal/gtm": "^1.1",
@@ -6447,9 +6747,7 @@
             "version": "2.1.7",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_Oh6nY/novicelldds_site_settings-2-1-7.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://packages.drupal.dk/php/~/up/ver_Oh6nY/novicelldds_site_settings-2-1-7.zip"
             },
             "require": {
                 "drupal/site_settings": "^1.13",
@@ -6462,9 +6760,7 @@
             "version": "1.0.5",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_1S5HbX/novicelldds_translation-1-0-5.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://packages.drupal.dk/php/~/up/ver_1S5HbX/novicelldds_translation-1-0-5.zip"
             },
             "require": {
                 "drupal/layout_builder_at": "^2.10"
