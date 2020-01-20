@@ -28,16 +28,16 @@
 
 {% if site_logo %}
   {% include '@dds_premium/components/molecules/m-logo.html.twig' with {
-    'attributes': attributes.setAttribute('title', 'Home'|t({}, {'context' : 'premium'})).setAttribute('rel', 'home'),
+    'attributes': attributes.setAttribute('title', title).setAttribute('rel', 'home'),
     'href': path('<front>'),
     'logo_path': site_logo,
-    'alt':  'Home'|t
+    'alt':  alt
   } %}
 {% endif %}
 
 {% if site_name %}
   {% include '@dds_premium/components/molecules/m-logo.html.twig' with {
-    'attributes': attributes.setAttribute('title', 'Home'|t({}, {'context' : 'premium'})).setAttribute('rel', 'home'),
+    'attributes': attributes.setAttribute('title', title).setAttribute('rel', 'home'),
     'href': path('<front>'),
     'site_name': site_name
   } %}
