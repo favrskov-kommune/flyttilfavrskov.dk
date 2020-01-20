@@ -323,6 +323,7 @@ class ParcelImportService {
       $entity->set('field_parcel_min_price', (int) $parcel_data->mindste_pris);
       $entity->set('field_parcel_price_sqm', (int) $parcel_data->kvm_pris);
       $entity->set('field_parcel_status', $status);
+      $entity->set('field_parcel_type', (substr($parcel_identifier, 0, strpos($parcel_identifier, '_'))));
       if($parcel_data->omraade != '') {
         $entity->set('field_parcel_group', (string) $parcel_data->omraade);
       }
@@ -384,6 +385,11 @@ class ParcelImportService {
       $field_parcel_group = (string) $parcel_data->omraade;
       if($paragraph->field_parcel_group->value != $field_parcel_group) {
         $paragraph->set('field_parcel_group', $field_parcel_group);
+        $update = true;
+      }
+      $field_parcel_type = (substr($paragraph->field_parcel_identifier->value, 0, strpos($paragraph->field_parcel_identifier->value, '_')));
+      if($paragraph->field_parcel_type->value != $field_parcel_type) {
+        $paragraph->set('field_parcel_type', $field_parcel_type);
         $update = true;
       }
 
