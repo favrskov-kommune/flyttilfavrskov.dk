@@ -1,0 +1,14 @@
+/**
+ * @file
+ * Visual styling for form in the off-canvas dialog.
+ */
+
+#drupal-off-canvas .checkbox + .label:before,
+#drupal-off-canvas .checkbox + .label:after {
+    content: none;
+}
+
+#drupal-off-canvas .form-item .description {
+    margin-left: auto;
+}
+

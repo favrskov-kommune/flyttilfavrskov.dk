@@ -9,3 +9,15 @@ function ftf_core_locale_translation_projects_alter(&$projects) {
   $path = $module_handler->getModule('ftf_core')->getPath();
   $projects['ftf_core']['info']['interface translation server pattern'] = $path . '/translations/%language.po';
 }
+
+/**
+ * Layout alter - Change and remove definitions.
+ *
+ * @param $definitions
+ */
+function ftf_core_layout_alter(&$definitions) {
+  // Two column
+  $definitions['layout_twocol_section']->setClass('\Drupal\ftf_core\Plugin\Layout\TwoColumnLayout');
+  // Three column
+  $definitions['layout_threecol_section']->setClass('\Drupal\ftf_core\Plugin\Layout\ThreeColumnLayout');
+}

@@ -1,0 +1,15 @@
+uuid: 631114d3-aacc-468b-a3d5-01734807f792
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dds_monitor
+_core:
+  default_config_hash: XraWG6hL6499a04N_LH6jr_6cWar1Benl4bPHZxP7W4
+id: monitor
+label: Monitor
+weight: 5
+is_admin: null
+permissions:
+  - 'access dds monitor feed'

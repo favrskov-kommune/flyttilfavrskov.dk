@@ -28,7 +28,7 @@
 
 <section {{ attributes.addClass(classes) }}>
   <div class="container">
-    <div class="row middle-xs">
+    <div{{ create_attribute({'class': 'row'}).addClass(settings.vertical_align ? 'middle-xs') }}>
       <div {{ region_attributes.first.addClass([columns[settings.column_widths].left, 'layout__region']) }}>
         {{ content.first }}
       </div>
