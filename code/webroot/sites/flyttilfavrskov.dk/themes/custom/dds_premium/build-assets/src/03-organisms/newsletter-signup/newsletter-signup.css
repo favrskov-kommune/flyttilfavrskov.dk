@@ -1,10 +1,16 @@
 .newsletter-signup {
     position: relative;
-    width: 100%;
-    min-height: 330px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    padding: 40px 0;
+    overflow: hidden;
+
+    &__inner {
+        position: relative;
+        width: 100%;
+        min-height: 330px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
 
     &__title {
         text-align: center;
