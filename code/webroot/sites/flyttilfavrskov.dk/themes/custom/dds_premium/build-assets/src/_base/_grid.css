@@ -35,6 +35,7 @@
         fill: var(--theme-background-svg-background-color);
         background: var(--theme-background-color);
         transform: translateX(-50%);
+        width: 100%;
     }
 }
 

@@ -12,6 +12,7 @@ dependencies:
     - field.field.paragraph.parcel.field_parcel_price_sqm
     - field.field.paragraph.parcel.field_parcel_specs
     - field.field.paragraph.parcel.field_parcel_status
+    - field.field.paragraph.parcel.field_parcel_type
     - paragraphs.paragraphs_type.parcel
   module:
     - media_library
@@ -36,7 +37,7 @@ content:
     type: number
     region: content
   field_parcel_group:
-    weight: 8
+    weight: 7
     settings:
       size: 60
       placeholder: ''
@@ -66,7 +67,7 @@ content:
     type: number
     region: content
   field_parcel_price_sqm:
-    weight: 9
+    weight: 8
     settings:
       size: 60
       placeholder: ''
@@ -88,4 +89,5 @@ content:
     region: content
 hidden:
   created: true
+  field_parcel_type: true
   status: true

@@ -5,9 +5,13 @@
     position: relative;
     max-width: 750px;
     text-align: center;
-    margin: 0 auto;
+    margin: 13px auto 0;
     font-family: var(--base-font-family);
     letter-spacing: 0.24px;
+
+    @media (--viewport-md-min) {
+        margin-top: 0;
+    }
 
     & > p {
         display: inline;

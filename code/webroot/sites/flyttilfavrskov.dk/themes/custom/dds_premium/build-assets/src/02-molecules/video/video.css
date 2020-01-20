@@ -44,7 +44,7 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        z-index: 2;
+        z-index: 3;
         cursor: pointer;
         transition: opacity 0.3s;
 

@@ -33,6 +33,8 @@ RUN a2enmod rewrite && \
         calendar \
         zip
 
+RUN pecl install redis && docker-php-ext-enable redis
+
 COPY php.ini /usr/local/etc/php/conf.d/php-overwrite.ini
 
 #Shell setup
@@ -52,24 +54,24 @@ COPY code/entrypoint.sh .
 USER root
 
 RUN chmod +x entrypoint.sh
-RUN chown -R www-data:www-data /src /var/www
+RUN chown -R www-data:www-data /src
 
 USER www-data
 COPY apache2.conf /etc/apache2/apache2.conf
 ARG env
 ENV APP_ENV=$env
 
-FROM base AS http
-USER root
-ENTRYPOINT ["./entrypoint.sh", "http"]
-
 
 FROM base AS https
 ENV APP_ENV=$env
 # Install libraries
-RUN composer install --optimize-autoloader --no-dev && \
-    cd webroot/sites/flyttilfavrskov.dk/themes/custom/dds_premium/build-assets/ &&\
-    npm install && \
+RUN composer install --optimize-autoloader --no-dev
+RUN cd webroot/sites/flyttilfavrskov.dk/themes/custom/dds_premium/build-assets/ &&\
+    npm install --no-cache && \
     npm run build:prod
 USER root
 ENTRYPOINT ["./entrypoint.sh", "https"]
+
+FROM base AS http
+USER root
+ENTRYPOINT ["./entrypoint.sh", "http"]
