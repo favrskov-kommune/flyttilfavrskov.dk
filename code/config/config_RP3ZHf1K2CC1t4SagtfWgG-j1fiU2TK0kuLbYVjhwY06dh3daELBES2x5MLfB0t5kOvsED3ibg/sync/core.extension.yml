@@ -3,6 +3,10 @@ module:
   admin_toolbar_links_access_filter: 0
   admin_toolbar_tools: 0
   adminimal_admin_toolbar: 0
+  advagg: 0
+  advagg_bundler: 0
+  advagg_css_minify: 0
+  advagg_js_minify: 0
   allowed_formats: 0
   automated_cron: 0
   autosave_form: 0
@@ -47,6 +51,7 @@ module:
   dds_media: 0
   dds_monitor: 0
   dds_news: 0
+  dds_performance: 0
   dds_search: 0
   dds_seo: 0
   dds_site_settings: 0
@@ -70,6 +75,8 @@ module:
   history: 0
   hreflang: 0
   image: 0
+  imageapi_optimize: 0
+  imageapi_optimize_resmushit: 0
   inline_block_title_automatic: 0
   language: 0
   layout_builder: 0
@@ -84,6 +91,7 @@ module:
   media_library: 0
   menu_ui: 0
   metatag: 0
+  minifyhtml: 0
   monolog: 0
   node: 0
   options: 0
@@ -93,6 +101,7 @@ module:
   quickedit: 0
   rdf: 0
   redirect: 0
+  redis: 0
   responsive_image: 0
   role_delegation: 0
   scheduler: 0

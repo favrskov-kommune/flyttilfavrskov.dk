@@ -33,6 +33,8 @@ RUN a2enmod rewrite && \
         calendar \
         zip
 
+RUN pecl install redis && docker-php-ext-enable redis
+
 COPY php.ini /usr/local/etc/php/conf.d/php-overwrite.ini
 
 #Shell setup
