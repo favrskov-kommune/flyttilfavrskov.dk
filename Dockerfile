@@ -65,7 +65,7 @@ ENV APP_ENV=$env
 # Install libraries
 RUN composer install --optimize-autoloader --no-dev
 RUN cd webroot/sites/flyttilfavrskov.dk/themes/custom/dds_premium/build-assets/ &&\
-    npm install && \
+    npm install --no-cache && \
     npm run build:prod
 USER root
 ENTRYPOINT ["./entrypoint.sh", "https"]
