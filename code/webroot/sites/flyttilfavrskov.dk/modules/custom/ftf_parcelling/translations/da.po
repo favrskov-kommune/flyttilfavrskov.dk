@@ -71,3 +71,11 @@ msgstr "Reserveret"
 msgctxt "ftf_parcelling"
 msgid "Sold"
 msgstr "Solgt"
+
+msgctxt "ftf_parcelling"
+msgid "Size"
+msgstr "Areal"
+
+msgctxt "ftf_parcelling"
+msgid "incl. VAT"
+msgstr "inkl. moms"
