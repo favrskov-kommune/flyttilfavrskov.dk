@@ -16,7 +16,9 @@ function ftf_parcelling_locale_translation_projects_alter(&$projects) {
  * Implements hook_cron().
  */
 function ftf_parcelling_cron() {
+  /** @var \Drupal\ftf_parcelling\Service\ParcelImportService $parcel_import */
   $parcel_import = \Drupal::service('ftf_parcelling.parcel_import');
+  $parcel_import->run();
 }
 
 /**
