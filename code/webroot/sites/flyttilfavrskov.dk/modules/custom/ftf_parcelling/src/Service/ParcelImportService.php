@@ -1,6 +1,7 @@
 <?php
 namespace Drupal\ftf_parcelling\Service;
 
+use Drupal\Core\Cache\Cache;
 use Drupal\Core\Database\Connection;
 use Drupal\Core\Entity\EntityStorageException;
 use Drupal\node\Entity\Node;
@@ -48,6 +49,27 @@ class ParcelImportService {
     $this->logger = \Drupal::logger('ftf_parcel_import');
   }
 
+  /**
+   * Function that runs on cron hook
+   */
+  public function run() {
+
+    // We usually don't want to act every time cron runs (which could be every minute) so keep a time for the next run in the site state.
+    $next_execution = \Drupal::state()->get('ftf_parcelling.cron_data_import.next_execution', 0);
+
+    $request_time = \Drupal::time()->getRequestTime();
+
+    // If next execution time is passed
+    if ($request_time >= $next_execution) {
+      $updated_next_execution = strtotime(date('Y-m-d H:i', $request_time) . ':00') + (60 * 60);
+
+      if ($this->startImport()) {
+        \Drupal::state()->set('ftf_parcelling.cron_data_import.next_execution', $updated_next_execution);
+        $this->logger->notice('Set to run again '.date('Y-m-d H:i:s', $updated_next_execution));
+      }
+    }
+
+  }
 
   /**
    * Runs the import functionality
@@ -323,6 +345,7 @@ class ParcelImportService {
       $entity->set('field_parcel_min_price', (int) $parcel_data->mindste_pris);
       $entity->set('field_parcel_price_sqm', (int) $parcel_data->kvm_pris);
       $entity->set('field_parcel_status', $status);
+      $entity->set('field_parcel_type', (substr($parcel_identifier, 0, strpos($parcel_identifier, '_'))));
       if($parcel_data->omraade != '') {
         $entity->set('field_parcel_group', (string) $parcel_data->omraade);
       }
@@ -384,6 +407,11 @@ class ParcelImportService {
       $field_parcel_group = (string) $parcel_data->omraade;
       if($paragraph->field_parcel_group->value != $field_parcel_group) {
         $paragraph->set('field_parcel_group', $field_parcel_group);
+        $update = true;
+      }
+      $field_parcel_type = (substr($paragraph->field_parcel_identifier->value, 0, strpos($paragraph->field_parcel_identifier->value, '_')));
+      if($paragraph->field_parcel_type->value != $field_parcel_type) {
+        $paragraph->set('field_parcel_type', $field_parcel_type);
         $update = true;
       }
 
