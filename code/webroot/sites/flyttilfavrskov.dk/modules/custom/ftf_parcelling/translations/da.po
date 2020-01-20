@@ -79,3 +79,7 @@ msgstr "Areal"
 msgctxt "ftf_parcelling"
 msgid "incl. VAT"
 msgstr "inkl. moms"
+
+msgctxt "ftf_parcelling"
+msgid "excl. VAT"
+msgstr "ekskl. moms"

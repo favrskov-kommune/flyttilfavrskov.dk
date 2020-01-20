@@ -16,7 +16,9 @@ function ftf_parcelling_locale_translation_projects_alter(&$projects) {
  * Implements hook_cron().
  */
 function ftf_parcelling_cron() {
+  /** @var \Drupal\ftf_parcelling\Service\ParcelImportService $parcel_import */
   $parcel_import = \Drupal::service('ftf_parcelling.parcel_import');
+  $parcel_import->run();
 }
 
 /**
@@ -80,6 +82,7 @@ function ftf_parcelling_preprocess_paragraph__parcel(&$variables) {
   $variables['parcel_min_price'] = $paragraph->field_parcel_min_price->value > 0 ? $paragraph->field_parcel_min_price->value : null;
   $variables['parcel_sqm_price'] = $paragraph->field_parcel_price_sqm->value != '' ? $paragraph->field_parcel_price_sqm->value : null;
   $variables['parcel_area'] = $paragraph->field_parcel_area->value;
+  $variables['parcel_type'] = $paragraph->field_parcel_type->value;
 
   /** @var \Drupal\media\Entity\Media $media_file */
   $media_file = $paragraph->field_parcel_specs->entity;
