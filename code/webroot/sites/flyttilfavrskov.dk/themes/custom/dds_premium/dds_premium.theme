@@ -536,10 +536,11 @@ function dds_premium_preprocess_layout_block__hero(array &$variables) {
  */
 function dds_premium_preprocess_layout_block__video(array &$variables) {
   $video_oembed = ['url' => 'null', 'oEmbed' => 'null'];
-  if (Drupal::hasService('dds_media.media_helper')) {
+  $video_media = $variables['fields']['field_video_media'];
+  if (!empty($video_media) && Drupal::hasService('dds_media.media_helper')) {
     /** @var Drupal\dds_media\MediaHelper $service */
     $service = Drupal::service('dds_media.media_helper');
-    $video_data = $service->get_video_data_from_media($variables['fields']['field_video_media']->getEntity());
+    $video_data = $service->get_video_data_from_media($video_media->getEntity());
     $video_oembed['url'] = $video_data['url'];
     $video_oembed['oEmbed'] = ['html' => $video_data['player']];
   }
