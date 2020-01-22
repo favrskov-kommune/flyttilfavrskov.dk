@@ -87,21 +87,25 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [{
-          loader: MiniCssExtractPlugin.loader, // creates style nodes from JS strings
-          options: {
-            publicPath: options.mainSettings.dist + cssDistFolderName,
-          },
-        }, {
-          loader: "css-loader", // translates CSS into CommonJS
-        }, {
-          loader: "postcss-loader", // compiles Sass to CSS
-          options: {
-            config: {
-              path: options.fullConfigsPath + '/styles/',
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader, // creates style nodes from JS strings
+            options: {
+              publicPath: options.mainSettings.dist + cssDistFolderName,
             },
           },
-        }],
+          {
+            loader: "css-loader", // translates CSS into CommonJS
+          },
+          {
+            loader: "postcss-loader", // compiles Sass to CSS
+            options: {
+              config: {
+                path: options.fullConfigsPath + '/styles/',
+              },
+            },
+          }
+        ],
       },
       {
         test: /\.m?js$/,
