@@ -1,6 +1,6 @@
 cache:
   page:
-    max_age: 0
+    max_age: 86400
 css:
   preprocess: true
   gzip: true
@@ -15,3 +15,5 @@ js:
 stale_file_threshold: 2592000
 _core:
   default_config_hash: b2cssrj-lOmATIbdehfCqfCFgVR0qCdxxWhwqa2KBVQ
+dds_performance:
+  generate_images: null
