@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: '1'
-label: Search
+label: Søg
 path: search
 index: content
 limit: 10
