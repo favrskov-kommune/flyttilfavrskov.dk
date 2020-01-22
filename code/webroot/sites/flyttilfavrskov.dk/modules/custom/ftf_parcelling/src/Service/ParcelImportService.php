@@ -65,7 +65,7 @@ class ParcelImportService {
 
       if ($this->startImport()) {
         \Drupal::state()->set('ftf_parcelling.cron_data_import.next_execution', $updated_next_execution);
-        $this->logger->notice('Set to run again '.date('Y-m-d H:i:s', $updated_next_execution));
+        $this->logger->notice('Import was run. Set to run again '.date('Y-m-d H:i:s', $updated_next_execution));
       }
     }
 
@@ -80,21 +80,21 @@ class ParcelImportService {
 //    $this->deleteAllParcellingNodes();
 //    $this->deleteAllAreaNodes();
 
-    $this->logger->notice('Starting import');
+    $this->logger->debug('Starting import');
 
-    $this->logger->notice('Getting current data identifiers');
+    $this->logger->debug('Getting current data identifiers');
     $this->fetchCurrentDataIdentifiers();
 
-    $this->logger->notice('Importing areas');
+    $this->logger->debug('Importing areas');
     $this->importAreas();
 
-    $this->logger->notice('Importing parcellings');
+    $this->logger->debug('Importing parcellings');
     $this->importParcellings();
 
-    $this->logger->notice('Importing parcel data');
+    $this->logger->debug('Importing parcel data');
     $this->importParcelFeeds();
 
-    $this->logger->notice('Import done');
+    $this->logger->debug('Import done');
 
     return [
       'status' => true,
@@ -110,7 +110,7 @@ class ParcelImportService {
    */
   private function getAreaData() {
     if(!isset($this->areaData)) {
-      $this->logger->notice('Getting area data from feed');
+      $this->logger->debug('Getting area data from feed');
       $this->areaData = $this->getDataFromFeed('https://webkort.favrskov.dk/spatialmap?page=grundsalg-get-omraade');
     }
     return $this->areaData;
@@ -242,7 +242,7 @@ class ParcelImportService {
    * @param $feed
    */
   private function importParcels($type, $feed) {
-    $this->logger->notice('Getting parcel data from '.$type.' feed');
+    $this->logger->debug('Getting parcel data from '.$type.' feed');
     $parcels = $this->getDataFromFeed($feed);
     foreach ($parcels as $parcel) {
       if ($parcel->objectid > 0) {
@@ -416,7 +416,7 @@ class ParcelImportService {
       }
 
       if($update) {
-        $this->logger->notice('Updating parcel paragraph');
+        $this->logger->debug('Updating parcel paragraph');
         $paragraph->save();
       }
 

@@ -188,4 +188,4 @@ services:
     arguments: ['../logs/content.log', 30, 0]
   monolog.handler.ftf_parcelling:
     class: Monolog\Handler\RotatingFileHandler
-    arguments: ['../logs/parcel_import.log', 14, 100]
+    arguments: ['../logs/parcel_import.log', 14, 200]
