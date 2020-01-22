@@ -10,128 +10,114 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 
 // Project options
 const options = require('../../config');
-const rootFolder = options.root_folder;
 const moduleDir = options.mainSettings.modulesDir;
 const env = process.env.NODE_ENV || 'development';
 const scriptsDistFolderName = '/scripts'; // This folder will be inside dist
 const cssDistFolderName = '/css'; // This folder will be inside dist
 
 // Find all files JS from modules directory
-let filesInModulesDir = glob.sync(moduleDir);
+const filesInModulesDir = glob.sync(moduleDir);
 const allEntries = () => {
-    manyEntries = {};
-    for (const index in filesInModulesDir) {
-        manyEntries[path.basename(filesInModulesDir[index], '.js')] = filesInModulesDir[index]
-    }
-    if (filesInModulesDir.length > 0) {
-        return manyEntries;
-    } else {
-        console.log('- - - - - No files to bundle!!!');
-        return;
-    }
+  const manyEntries = {};
+  for (const index in filesInModulesDir) {
+    manyEntries[path.basename(filesInModulesDir[index], '.js')] = filesInModulesDir[index];
+  }
+  return manyEntries;
+};
+
+const plugins = [];
+if (env !== 'production') {
+  plugins.push(new BundleAnalyzerPlugin({
+    analyzerMode: 'static',
+    logLevel: 'silent',
+    openAnalyzer: false,
+  }));
 }
+plugins.push(new MiniCssExtractPlugin({
+  // Options similar to the same options in webpackOptions.output
+  // both options are optional
+  filename: '../' + cssDistFolderName + '/[name].css',
+  // chunkFilename: '[id].css',
+}));
+plugins.push(new VueLoaderPlugin());
 
 module.exports = {
-    mode: env,
-    watch: false,
-    entry: allEntries(),
-    output: {
-        path: options.mainSettings.dist + scriptsDistFolderName,
-        filename: '[name].bundle.js'
-    },
-    optimization: {
-        splitChunks: {
-            cacheGroups: {
-                commons: {
-                    test: /[\\/]node_modules[\\/]/,
-                    name: 'vendor',
-                    chunks: 'initial'
-                }
-            }
+  mode: env,
+  watch: false,
+  entry: allEntries(),
+  output: {
+    path: options.mainSettings.dist + scriptsDistFolderName,
+    filename: '[name].bundle.js',
+  },
+  optimization: {
+    splitChunks: false,
+    minimizer: [
+      new TerserPlugin({
+        sourceMap: true,
+        terserOptions: {
+          ecma: 8,
+          mangle: false,
+          keep_classnames: true,
+          keep_fnames: true
         },
-        runtimeChunk: {
-            name: 'manifest'
-        },
-        minimizer: [
-            new TerserPlugin({
-                sourceMap: true,
-                terserOptions: {
-                    ecma: 8,
-                    mangle: false,
-                    keep_classnames: true,
-                    keep_fnames: true
-                }
-            })
-        ]
-    },
-    plugins: [
-        new BundleAnalyzerPlugin({
-            analyzerMode: 'disabled',
-            logLevel: 'silent',
-            analyzerMode: 'static',
-            openAnalyzer: false
-        }),
-        new MiniCssExtractPlugin({
-            // Options similar to the same options in webpackOptions.output
-            // both options are optional
-            filename: '../' + cssDistFolderName + '/[name].css',
-            // chunkFilename: '[id].css',
-        }),
-        new VueLoaderPlugin()
+      }),
     ],
-    resolve: {
-        alias: {
-          vue: 'vue/dist/vue.js',
-          '@': options.sourceRootFolder
-        }
+  },
+  plugins,
+  resolve: {
+    alias: {
+      vue: 'vue/dist/vue.js',
+      '@': options.sourceRootFolder,
     },
-    module: {
-        rules: [{
-                // enfore ensures that eslint-loader runs before babel or any other loaders
-                enforce: 'pre',
-                test: /\.js$/,
-                exclude: /node_modules/,
-                loader: 'eslint-loader',
-                options: {
-                    emitWarning: true,
-                    failonError: false,
-                    fix: true,
-                    configFile: options.fullConfigsPath + '/scripts/.eslintrc',
-                }
+  },
+  module: {
+    rules: [
+      {
+        // enfore ensures that eslint-loader runs before babel or any other loaders
+        enforce: 'pre',
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
+        options: {
+          emitWarning: true,
+          failonError: false,
+          fix: true,
+          configFile: options.fullConfigsPath + '/scripts/.eslintrc',
+        },
+      },
+      {
+        test: /\.css$/,
+        use: [{
+          loader: MiniCssExtractPlugin.loader, // creates style nodes from JS strings
+          options: {
+            publicPath: options.mainSettings.dist + cssDistFolderName,
+          },
+        }, {
+          loader: "css-loader", // translates CSS into CommonJS
+        }, {
+          loader: "postcss-loader", // compiles Sass to CSS
+          options: {
+            config: {
+              path: options.fullConfigsPath + '/styles/',
             },
-            {
-                test: /\.css$/,
-                use: [{
-                    loader: MiniCssExtractPlugin.loader, // creates style nodes from JS strings
-                    options: {
-                        publicPath: options.mainSettings.dist + cssDistFolderName
-                    }
-                }, {
-                    loader: "css-loader" // translates CSS into CommonJS
-                }, {
-                    loader: "postcss-loader", // compiles Sass to CSS
-                    options: {
-                        config: {
-                            path: options.fullConfigsPath + '/styles/'
-                        }
-                    }
-                }]
-            },
-            {
-                test: /\.m?js$/,
-                exclude: /(node_modules|bower_components)/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        cwd: options.fullConfigsPath,
-                        presets: ['@babel/preset-env']
-                    }
-                }
-            },
-            {
-                test: /\.vue$/,
-                loader: 'vue-loader'
-            }
-        ]
-    }
+          },
+        }],
+      },
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            cwd: options.fullConfigsPath,
+            presets: ['@babel/preset-env'],
+          },
+        },
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader',
+      },
+    ],
+  },
 };
