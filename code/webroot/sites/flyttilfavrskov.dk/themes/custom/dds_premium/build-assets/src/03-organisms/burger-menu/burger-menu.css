@@ -133,6 +133,7 @@
 
 .burger-menu-list-item {
     font-family: var(--heading-font-family);
+    position: relative;
 
     @media (--viewport-md-max) {
         display: flex;
