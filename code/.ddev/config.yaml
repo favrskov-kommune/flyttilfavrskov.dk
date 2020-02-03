@@ -1,5 +1,5 @@
-APIVersion: v1.12.0
-name: favrskov
+APIVersion: v1.12.2
+name: flyttilfavrskov
 type: drupal8
 docroot: webroot
 php_version: "7.2"
@@ -9,16 +9,17 @@ router_https_port: "443"
 xdebug_enabled: false
 additional_hostnames: []
 additional_fqdns: []
-mariadb_version: "10.2"
-nfs_mount_enabled: false
+mysql_version: "8.0"
+nfs_mount_enabled: true
 provider: default
-project_tld: dk.local.drupal08.novicell.dk
-use_dns_when_possible: false
+mailhog_port: "8300"
+project_tld: test
+use_dns_when_possible: true
 timezone: Europe/Copenhagen
 
 
-# This config.yaml was created with ddev version v1.12.0
-# webimage: drud/ddev-webserver:v1.12.1
+# This config.yaml was created with ddev version v1.12.2
+# webimage: drud/ddev-webserver:v1.12.2
 # dbimage: drud/ddev-dbserver-mariadb-10.2:v1.12.0
 # dbaimage: drud/phpmyadmin:v1.12.0
 # bgsyncimage: drud/ddev-bgsync:v1.12.0

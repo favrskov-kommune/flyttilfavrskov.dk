@@ -793,11 +793,11 @@ $databases['default']['default'] = array (
 
 $config['mailchimp.settings']['api_key'] = getenv('MAILCHIMP_API_KEY');
 
-if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-  include $app_root . '/' . $site_path . '/settings.local.php';
-}
-
 // Automatically generated include for settings managed by ddev.
 if (file_exists($app_root . '/sites/default/settings.ddev.php')) {
   include $app_root . '/sites/default/settings.ddev.php';
+}
+
+if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+  include $app_root . '/' . $site_path . '/settings.local.php';
 }
