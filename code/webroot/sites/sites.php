@@ -55,8 +55,16 @@
  * @see \Drupal\Core\DrupalKernel::getSitePath()
  * @see https://www.drupal.org/documentation/install/multi-site
  */
+
 $domain = getenv('DOMAIN');
-$sites[$domain] = 'flyttilfavrskov.dk';
+if($domain) {
+  $sites[$domain] = 'flyttilfavrskov.dk';
+}
+
+$ddev_domain = getenv('VIRTUAL_HOST');
+if($ddev_domain) {
+  $sites[$ddev_domain]  = 'flyttilfavrskov.dk';
+}
 
 if (file_exists(__DIR__ . '/sites.local.php')) {
   include __DIR__ . '/sites.local.php';

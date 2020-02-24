@@ -8,9 +8,9 @@ id: node
 label: Content
 tags:
   title: '[node:title] | [site:name]'
-  description: '[node:field_teaser]'
   canonical_url: '[node:url]'
+  description: '[ftf_core:ftf_core_primary_description]'
   image_src: '[dds_content:dds_content_primary_image]'
   og_image: '[dds_content:dds_content_primary_image]'
-  og_description: '[node:field_teaser]'
+  og_description: '[ftf_core:ftf_core_primary_description]'
   og_title: '[node:title] | [site:name]'

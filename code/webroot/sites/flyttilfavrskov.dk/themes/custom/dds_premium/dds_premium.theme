@@ -9,6 +9,15 @@ use Drupal\Core\Template\Attribute;
 use Drupal\node\NodeInterface;
 
 /**
+ * Implements hook_library_info_alter().
+ */
+function dds_premium_library_info_alter(&$libraries, $extension) {
+  if($extension == 'dds_premium') {
+    $libraries['master']['version'] = time();
+  }
+}
+
+/**
  * Add theme suggestion to menus.
  *
  * @param array $suggestions

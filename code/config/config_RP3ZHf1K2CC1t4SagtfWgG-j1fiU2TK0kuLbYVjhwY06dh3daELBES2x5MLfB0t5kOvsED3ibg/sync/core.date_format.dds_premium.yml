@@ -5,4 +5,4 @@ dependencies: {  }
 id: dds_premium
 label: 'DDS Premium standard date'
 locked: false
-pattern: 'F j Y'
+pattern: 'j. F Y'
