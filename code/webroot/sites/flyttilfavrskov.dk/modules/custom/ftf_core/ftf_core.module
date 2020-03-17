@@ -21,3 +21,11 @@ function ftf_core_layout_alter(&$definitions) {
   // Three column
   $definitions['layout_threecol_section']->setClass('\Drupal\ftf_core\Plugin\Layout\ThreeColumnLayout');
 }
+
+/**
+ * Implements hook_page_attachments().
+ */
+function ftf_core_page_attachments(array &$attachments) {
+  $attachments['#attached']['library'][] = 'ftf_core/ftf_core.cookiebot_head';
+  $attachments['#attached']['library'][] = 'ftf_core/ftf_core.cookiebot_body';
+}
