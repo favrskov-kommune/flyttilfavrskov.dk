@@ -1,0 +1,24 @@
+#<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="bb014a72-0672-471f-81f9-41b6df94bb55" data-blockingmode="auto" type="text/javascript"></script>
+ftf_core.cookiebot_head:
+  version: 1.0
+  header: true
+  js:
+    https://consent.cookiebot.com/uc.js:
+      type: external
+      attributes:
+        id: 'Cookiebot'
+        data-cbid: 'bb014a72-0672-471f-81f9-41b6df94bb55'
+        data-blockingmode: auto
+        type: 'text/javascript'
+#<script id="CookieDeclaration" src="https://consent.cookiebot.com/bb014a72-0672-471f-81f9-41b6df94bb55/cd.js" type="text/javascript" async></script>
+ftf_core.cookiebot_body:
+  version: 1.0
+  js:
+    https://consent.cookiebot.com/bb014a72-0672-471f-81f9-41b6df94bb55/cd.js:
+      type: external
+      attributes:
+        id: 'CookieDeclaration'
+        async: true
+        type: 'text/javascript'
+
+
