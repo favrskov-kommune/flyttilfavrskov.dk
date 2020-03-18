@@ -27,5 +27,5 @@ function ftf_core_layout_alter(&$definitions) {
  */
 function ftf_core_page_attachments(array &$attachments) {
   $attachments['#attached']['library'][] = 'ftf_core/ftf_core.cookiebot_head';
-  $attachments['#attached']['library'][] = 'ftf_core/ftf_core.cookiebot_body';
+//  $attachments['#attached']['library'][] = 'ftf_core/ftf_core.cookiebot_body';
 }

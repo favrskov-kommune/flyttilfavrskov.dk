@@ -10,14 +10,14 @@ ftf_core.cookiebot_head:
         data-cbid: 'bb014a72-0672-471f-81f9-41b6df94bb55'
         type: 'text/javascript'
 #<script id="CookieDeclaration" src="https://consent.cookiebot.com/bb014a72-0672-471f-81f9-41b6df94bb55/cd.js" type="text/javascript" async></script>
-ftf_core.cookiebot_body:
-  version: 1.0
-  js:
-    https://consent.cookiebot.com/bb014a72-0672-471f-81f9-41b6df94bb55/cd.js:
-      type: external
-      attributes:
-        id: 'CookieDeclaration'
-        async: true
-        type: 'text/javascript'
+#ftf_core.cookiebot_body:
+#  version: 1.0
+#  js:
+#    https://consent.cookiebot.com/bb014a72-0672-471f-81f9-41b6df94bb55/cd.js:
+#      type: external
+#      attributes:
+#        id: 'CookieDeclaration'
+#        async: true
+#        type: 'text/javascript'
 
 
