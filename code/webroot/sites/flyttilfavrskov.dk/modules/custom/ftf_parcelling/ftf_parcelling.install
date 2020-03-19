@@ -6,7 +6,7 @@ use Drupal\paragraphs\Entity\Paragraph;
  * Hacky import of data lost in parcelling sync on March 16th 2020
  */
 function ftf_parcelling_update_8001() {
-
+/*
   $pids = \Drupal::entityQuery('paragraph')
     ->condition('type', 'parcel')
     ->execute();
@@ -164,4 +164,5 @@ function ftf_parcelling_update_8001() {
       }
     }
   }
+*/
 }
