@@ -266,16 +266,16 @@ class ParcelImportService {
     }
 
     //delete any remaining parcels
-    foreach ($this->identifiers[$type]['areas'] as $area) {
-      foreach ($area['parcellings'] as $parcelling) {
-        foreach ($parcelling['parcels'] as $parcel) {
-          if($parcel['processed'] == false) {
-            $this->logger->notice('Delete parcel paragraph');
-            $this->deleteParcel($parcel['pid']);
-          }
-        }
-      }
-    }
+//    foreach ($this->identifiers[$type]['areas'] as $area) {
+//      foreach ($area['parcellings'] as $parcelling) {
+//        foreach ($parcelling['parcels'] as $parcel) {
+//          if($parcel['processed'] == false) {
+//            $this->logger->notice('Delete parcel paragraph');
+//            $this->deleteParcel($parcel['pid']);
+//          }
+//        }
+//      }
+//    }
   }
 
 
