@@ -18,7 +18,7 @@ dependencies:
     - field.field.node.news_item.layout_builder__layout
     - node.type.news_item
   module:
-    - dds_content
+    - dds_link_field
     - field_group
     - media_library
     - metatag
