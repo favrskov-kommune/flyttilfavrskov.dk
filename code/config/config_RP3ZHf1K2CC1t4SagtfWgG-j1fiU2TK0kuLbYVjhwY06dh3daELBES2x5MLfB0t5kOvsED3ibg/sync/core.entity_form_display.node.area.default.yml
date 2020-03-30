@@ -20,8 +20,8 @@ dependencies:
     - field.field.node.area.layout_builder__layout
     - node.type.area
   module:
-    - dds_content
     - dds_content_hierarchy
+    - dds_link_field
     - field_group
     - media_library
     - metatag
