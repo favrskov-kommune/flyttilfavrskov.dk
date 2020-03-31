@@ -7,6 +7,7 @@ dependencies:
       - dds_editors
   module:
     - editor
+    - media
 _core:
   default_config_hash: IbyjE6f_Tn2rLxyCrunC3-3AAith35MqdwRGqsTcpAk
 name: 'Basic HTML'
@@ -19,7 +20,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol type start> <li> <dl> <dt> <dd> <h2 id class> <h3 id class> <h4 id class> <h5 id class> <h6 id class> <p class=""> <br> <span> <img src alt data-entity-type data-entity-uuid data-align data-caption width height> <h1 id class> <pre>'
+      allowed_html: '<a href hreflang target> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol type start> <li> <dl> <dt> <dd> <h2 id class=""> <h3 id class=""> <h4 id class=""> <h5 id class=""> <h6 id class=""> <p class=""> <br> <span> <img src alt data-entity-type data-entity-uuid data-align data-caption width height> <h1 id class=""> <pre>'
       filter_html_help: false
       filter_html_nofollow: false
   filter_align:
@@ -46,3 +47,12 @@ filters:
     status: true
     weight: 11
     settings: {  }
+  media_embed:
+    id: media_embed
+    provider: media
+    status: false
+    weight: 100
+    settings:
+      default_view_mode: default
+      allowed_media_types: {  }
+      allowed_view_modes: {  }

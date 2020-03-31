@@ -9,7 +9,7 @@ router_https_port: "443"
 xdebug_enabled: false
 additional_hostnames: []
 additional_fqdns: []
-mysql_version: "8.0"
+mariadb_version: "10.2"
 nfs_mount_enabled: true
 provider: default
 mailhog_port: "8300"
