@@ -19,12 +19,18 @@ content:
   account:
     weight: -10
     region: content
+    settings: {  }
+    third_party_settings: {  }
   contact:
     weight: 5
     region: content
+    settings: {  }
+    third_party_settings: {  }
   language:
     weight: 0
     region: content
+    settings: {  }
+    third_party_settings: {  }
   path:
     type: path
     weight: 30
