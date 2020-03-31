@@ -61,6 +61,7 @@ module:
   dds_site_settings: 0
   dynamic_page_cache: 0
   editor: 0
+  editor_advanced_link: 0
   elasticsearch_connector: 0
   entity_clone: 0
   entity_hierarchy: 0
