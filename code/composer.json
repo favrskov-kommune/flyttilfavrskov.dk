@@ -51,6 +51,7 @@
     "novicell/dds_seo": "~1.0",
     "novicell/dds_site_settings": "~2.0",
     "novicell/dds_translation": "^1.0",
+    "ongr/elasticsearch-dsl": "6.1.0",
     "symfony/filesystem": "~3.0",
     "zaporylie/composer-drupal-optimizations": "^1.1"
   },
