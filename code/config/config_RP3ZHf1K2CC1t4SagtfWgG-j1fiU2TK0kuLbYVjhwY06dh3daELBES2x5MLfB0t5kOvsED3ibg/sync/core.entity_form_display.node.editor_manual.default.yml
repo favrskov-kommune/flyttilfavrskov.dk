@@ -16,7 +16,7 @@ dependencies:
     - field.field.node.editor_manual.layout_builder__layout
     - node.type.editor_manual
   module:
-    - dds_content
+    - dds_link_field
     - field_group
     - media_library
     - metatag

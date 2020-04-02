@@ -32,6 +32,7 @@
     "drupal/config_ignore": "^2.1",
     "drupal/console": "^1.8",
     "drupal/core": "~8.8",
+    "drupal/editor_advanced_link": "^1.6",
     "drupal/mailchimp": "^1.11",
     "drupal/view_unpublished": "^1.0",
     "drush/drush": "^9.0",
@@ -39,6 +40,7 @@
     "novicell/dds_content": "~1.0",
     "novicell/dds_content_hierarchy": "~2.1",
     "novicell/dds_cookieinfo": "~2.0",
+    "novicell/dds_dynamic_key_value": "^1.1",
     "novicell/dds_editors": "~1.0",
     "novicell/dds_media": "~2.0",
     "novicell/dds_monitor": "~1.0",
@@ -122,8 +124,7 @@
       "drupal/core": {
         "(#2999491) Allow creation of reuseable inline blocks": "https://www.drupal.org/files/issues/2019-07-17/drupal8-layout-builder-reusable-2999491-24.patch",
         "(#3042190) Creating a block that uses Ajax adds multiple blocks": "https://www.drupal.org/files/issues/2019-05-04/3042190-3.patch",
-        "(#2449895) Imported PO files have no public URL but have a link at admin/content/files": "https://www.drupal.org/files/issues/2019-10-31/2449895-63.patch",
-        "(#3099441) Missing hash in attributes key in Seven (another one)": "https://www.drupal.org/files/issues/2019-12-07/3099441-2.patch"
+        "(#2449895) Imported PO files have no public URL but have a link at admin/content/files": "https://www.drupal.org/files/issues/2019-10-31/2449895-63.patch"
       },
       "drupal/paragraphs": {
         "(#2901390) Integrity constraint violation: 1048 Column 'langcode' cannot be null": "https://www.drupal.org/files/issues/2019-08-10/paragraphs-set_langcode_widgets-290139_updated.patch"
