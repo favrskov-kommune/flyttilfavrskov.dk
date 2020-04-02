@@ -4521,7 +4521,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.12",
-                    "datestamp": "1585576662",
+                    "datestamp": "1585646341",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6768,10 +6768,10 @@
         },
         {
             "name": "novicell/dds_media",
-            "version": "2.4.0",
+            "version": "2.5.0",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_I5lhz/novicelldds_media-2-4-0.zip"
+                "url": "https://packages.drupal.dk/php/~/up/ver_1YdMMQ/novicelldds_media-2-5-0.zip"
             },
             "require": {
                 "drupal/ctools": "^3.0",

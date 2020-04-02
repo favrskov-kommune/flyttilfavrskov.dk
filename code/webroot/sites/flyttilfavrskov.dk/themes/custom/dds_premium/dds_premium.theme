@@ -915,3 +915,22 @@ function _modify_cta(array $cta, Attribute $cta_attributes = NULL): array {
   $cta['attributes'] = $cta_attributes;
   return $cta;
 }
+
+/**
+ * Add style tag with object positions.
+ *
+ * @param array $variables
+ *   Template variables.
+ */
+function dds_premium_preprocess_responsive_image(&$variables) {
+  if (isset($variables['img_element']) && isset($variables['uri'])) {
+    $uri = $variables['uri'];
+    /** @var Drupal\dds_media\MediaHelper $service */
+    $service = Drupal::service('dds_media.media_helper');
+    $data = $service->get_media_focal_point($uri, file_create_url($uri));
+    if ($data['active']) {
+      $variables['img_element']['#attributes']['style'] = 'object-position:' . $data['x'] . '% ' . $data['y'] . '%;';
+    }
+  }
+}
+
