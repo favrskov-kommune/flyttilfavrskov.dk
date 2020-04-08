@@ -2,6 +2,8 @@ FROM drupal:8.8.1-apache AS base
 RUN apt-get update && apt-get install -y \
         git \
         libicu-dev \
+        libmagickwand-dev \
+        libmagickcore-dev \
         openssh-client \
         sudo \
         libzip-dev \
@@ -33,6 +35,8 @@ RUN a2enmod rewrite && \
         calendar \
         zip
 
+RUN pecl install imagick && docker-php-ext-enable imagick
+
 RUN pecl install redis && docker-php-ext-enable redis
 
 COPY php.ini /usr/local/etc/php/conf.d/php-overwrite.ini
@@ -55,6 +59,7 @@ USER root
 
 RUN chmod +x entrypoint.sh
 RUN chown -R www-data:www-data /src
+RUN chown www-data:www-data /var/www
 
 USER www-data
 COPY apache2.conf /etc/apache2/apache2.conf
@@ -64,10 +69,12 @@ ENV APP_ENV=$env
 
 FROM base AS https
 ENV APP_ENV=$env
+ARG github_token
+RUN composer config -g github-oauth.github.com $github_token
 # Install libraries
-RUN composer install --optimize-autoloader --no-dev
+RUN composer install --optimize-autoloader --no-dev --no-interaction
 RUN cd webroot/sites/flyttilfavrskov.dk/themes/custom/dds_premium/build-assets/ &&\
-    npm install --no-cache && \
+    npm ci && \
     npm run build:prod
 USER root
 ENTRYPOINT ["./entrypoint.sh", "https"]
