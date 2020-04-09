@@ -1,7 +1,6 @@
 module:
   admin_toolbar: 0
   admin_toolbar_links_access_filter: 0
-  admin_toolbar_search: 0
   admin_toolbar_tools: 0
   adminimal_admin_toolbar: 0
   advagg: 0
@@ -17,7 +16,6 @@ module:
   block_content: 0
   breakpoint: 0
   ckeditor: 0
-  color_field: 0
   config: 0
   config_filter: 0
   config_ignore: 0
@@ -28,11 +26,10 @@ module:
   ctools: 0
   datetime: 0
   dbal: 0
+  dds_content: 0
   dds_content_hierarchy: 0
   dds_content_hierarchy_breadcrumb: 0
   dds_content_hierarchy_path: 0
-  dds_dynamic_color: 0
-  dds_dynamic_key_value: 0
   dds_editor_manual: 0
   dds_editors: 0
   dds_elasticsearch: 0
@@ -94,6 +91,7 @@ module:
   mailchimp_signup: 0
   media: 0
   media_library: 0
+  media_pdf_thumbnail: 0
   menu_ui: 0
   metatag: 0
   metatag_open_graph: 0
@@ -126,7 +124,6 @@ module:
   views_ui: 0
   menu_link_content: 1
   pathauto: 1
-  dds_content: 10
   views: 10
   paragraphs: 11
   dds_layout_blocks: 100
