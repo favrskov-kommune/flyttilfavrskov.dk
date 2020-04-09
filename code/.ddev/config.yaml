@@ -9,7 +9,7 @@ router_https_port: "443"
 xdebug_enabled: false
 additional_hostnames: []
 additional_fqdns: []
-mysql_version: "8.0"
+mariadb_version: 10.2
 nfs_mount_enabled: true
 provider: default
 mailhog_port: "8300"
@@ -17,7 +17,7 @@ project_tld: test
 use_dns_when_possible: true
 timezone: Europe/Copenhagen
 disable_settings_management: true
-
+webimage_extra_packages: [libmagickcore-dev]
 
 # This config.yaml was created with ddev version v1.13.1
 # webimage: drud/ddev-webserver:v1.13.1
