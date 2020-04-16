@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3e25acabe57a67321984a02e8f137d78",
+    "content-hash": "ffef4934b5da64b58fa5866281325139",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -169,28 +169,31 @@
         },
         {
             "name": "composer/installers",
-            "version": "v1.8.0",
+            "version": "v1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "7d610d50aae61ae7ed6675e58efeabdf279bb5e3"
+                "reference": "b93bcf0fa1fccb0b7d176b0967d969691cd74cca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/7d610d50aae61ae7ed6675e58efeabdf279bb5e3",
-                "reference": "7d610d50aae61ae7ed6675e58efeabdf279bb5e3",
+                "url": "https://api.github.com/repos/composer/installers/zipball/b93bcf0fa1fccb0b7d176b0967d969691cd74cca",
+                "reference": "b93bcf0fa1fccb0b7d176b0967d969691cd74cca",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "^1.0"
+                "composer-plugin-api": "^1.0 || ^2.0"
             },
             "replace": {
                 "roundcube/plugin-installer": "*",
                 "shama/baton": "*"
             },
             "require-dev": {
-                "composer/composer": "1.0.*@dev",
-                "phpunit/phpunit": "^4.8.36"
+                "composer/composer": "1.6.* || 2.0.*@dev",
+                "composer/semver": "1.0.* || 2.0.*@dev",
+                "phpunit/phpunit": "^4.8.36",
+                "sebastian/comparator": "^1.2.4",
+                "symfony/process": "^2.3"
             },
             "type": "composer-plugin",
             "extra": {
@@ -289,7 +292,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2020-02-07T10:39:20+00:00"
+            "time": "2020-04-07T06:57:05+00:00"
         },
         {
             "name": "composer/semver",
@@ -1368,16 +1371,16 @@
         },
         {
             "name": "doctrine/annotations",
-            "version": "1.10.0",
+            "version": "1.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "233e36632422cfc5cc499f14ad6c1476b50cb7b1"
+                "reference": "5eb79f3dbdffed6544e1fc287572c0f462bd29bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/233e36632422cfc5cc499f14ad6c1476b50cb7b1",
-                "reference": "233e36632422cfc5cc499f14ad6c1476b50cb7b1",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/5eb79f3dbdffed6544e1fc287572c0f462bd29bb",
+                "reference": "5eb79f3dbdffed6544e1fc287572c0f462bd29bb",
                 "shasum": ""
             },
             "require": {
@@ -1433,7 +1436,7 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2020-04-02T08:15:55+00:00"
+            "time": "2020-04-02T12:33:25+00:00"
         },
         {
             "name": "doctrine/cache",
@@ -3111,16 +3114,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.8.4",
+            "version": "8.8.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "34e59fcf702c1b3c497bbd6e92e68e546c5d15b8"
+                "reference": "e22cfc3adf1dac7a92452287a7d8602f3c27b68f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/34e59fcf702c1b3c497bbd6e92e68e546c5d15b8",
-                "reference": "34e59fcf702c1b3c497bbd6e92e68e546c5d15b8",
+                "url": "https://api.github.com/repos/drupal/core/zipball/e22cfc3adf1dac7a92452287a7d8602f3c27b68f",
+                "reference": "e22cfc3adf1dac7a92452287a7d8602f3c27b68f",
                 "shasum": ""
             },
             "require": {
@@ -3342,7 +3345,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2020-03-18T16:26:33+00:00"
+            "time": "2020-04-02T19:01:19+00:00"
         },
         {
             "name": "drupal/crop",
@@ -3906,17 +3909,17 @@
         },
         {
             "name": "drupal/focal_point",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/focal_point.git",
-                "reference": "8.x-1.3"
+                "reference": "8.x-1.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/focal_point-8.x-1.3.zip",
-                "reference": "8.x-1.3",
-                "shasum": "f5b2ee49853fdcea7b4273a8c2d0c210be24de54"
+                "url": "https://ftp.drupal.org/files/projects/focal_point-8.x-1.4.zip",
+                "reference": "8.x-1.4",
+                "shasum": "8e377f61d0f590f7f89663ea3e841e56a3c14f5c"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -3927,12 +3930,9 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-1.3",
-                    "datestamp": "1584797652",
+                    "version": "8.x-1.4",
+                    "datestamp": "1586396577",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4410,6 +4410,9 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "(FAVR2-107) Change LoggerChannel to LoggeChannelInterface": "./patches/FAVR2-107-mailchimp-multiple-emails.patch"
                 }
             },
             "autoload": {
@@ -4431,12 +4434,12 @@
                     "homepage": "https://www.drupal.org/user/369147"
                 },
                 {
-                    "name": "gcb",
-                    "homepage": "https://www.drupal.org/user/1682976"
+                    "name": "brendanthinkshout",
+                    "homepage": "https://www.drupal.org/user/3578399"
                 },
                 {
-                    "name": "julia.leah.ford",
-                    "homepage": "https://www.drupal.org/user/3590443"
+                    "name": "gcb",
+                    "homepage": "https://www.drupal.org/user/1682976"
                 },
                 {
                     "name": "levelos",
@@ -4447,22 +4450,6 @@
                     "homepage": "https://www.drupal.org/user/39079"
                 },
                 {
-                    "name": "nrackleff",
-                    "homepage": "https://www.drupal.org/user/463332"
-                },
-                {
-                    "name": "rjacobsen0",
-                    "homepage": "https://www.drupal.org/user/3578420"
-                },
-                {
-                    "name": "ruscoe",
-                    "homepage": "https://www.drupal.org/user/2722087"
-                },
-                {
-                    "name": "samuel.mortenson",
-                    "homepage": "https://www.drupal.org/user/2582268"
-                },
-                {
                     "name": "tauno",
                     "homepage": "https://www.drupal.org/user/105595"
                 }
@@ -4471,6 +4458,63 @@
             "homepage": "http://drupal.org/project/mailchimp",
             "support": {
                 "source": "https://git.drupalcode.org/project/mailchimp"
+            }
+        },
+        {
+            "name": "drupal/media_pdf_thumbnail",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/media_pdf_thumbnail.git",
+                "reference": "8.x-2.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/media_pdf_thumbnail-8.x-2.2.zip",
+                "reference": "8.x-2.2",
+                "shasum": "2a84083361e8e58ffa9f5631f7e8989bc117de17"
+            },
+            "require": {
+                "drupal/core": "*",
+                "ext-imagick": "*",
+                "spatie/pdf-to-image": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.2",
+                    "datestamp": "1575803280",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "patches_applied": {
+                    "(#3107542) Support regenerating thumbnails on any media type with file field": "https://www.drupal.org/files/issues/2020-01-20/media_pdf_thumbnail-support-thumbnail-regeneration-any-media-type-with-file-field.patch",
+                    "(FAVR2-103) Change LoggerChannel to LoggeChannelInterface": "./patches/FAVR2-103-media-pdf-thumbnail-change-logger-channel.patch"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "sgostanyan",
+                    "homepage": "https://www.drupal.org/user/3569364"
+                }
+            ],
+            "description": "Media PDF Thumbnail",
+            "homepage": "https://www.drupal.org/project/media_pdf_thumbnail",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/media_pdf_thumbnail",
+                "issues": "http://drupal.org/project/issues/media_pdf_thumbnail"
             }
         },
         {
@@ -5045,20 +5089,20 @@
         },
         {
             "name": "drupal/search_api",
-            "version": "1.15.0",
+            "version": "1.16.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/search_api.git",
-                "reference": "8.x-1.15"
+                "reference": "8.x-1.16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/search_api-8.x-1.15.zip",
-                "reference": "8.x-1.15",
-                "shasum": "12c13141adb6b687fe36781ac9269a49ef810323"
+                "url": "https://ftp.drupal.org/files/projects/search_api-8.x-1.16.zip",
+                "reference": "8.x-1.16",
+                "shasum": "59bf49fd506d532b0da62e30165d06057ab90013"
             },
             "require": {
-                "drupal/core": "^8.6"
+                "drupal/core": "^8.7.4"
             },
             "conflict": {
                 "drupal/search_api_solr": "2.* || 3.0 || 3.1"
@@ -5075,12 +5119,9 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-1.15",
-                    "datestamp": "1573122785",
+                    "version": "8.x-1.16",
+                    "datestamp": "1586374699",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5113,7 +5154,7 @@
             "description": "Provides a generic framework for modules offering search capabilities.",
             "homepage": "https://www.drupal.org/project/search_api",
             "support": {
-                "source": "http://git.drupal.org/project/search_api.git",
+                "source": "https://git.drupalcode.org/project/search_api",
                 "issues": "https://www.drupal.org/project/issues/search_api",
                 "irc": "irc://irc.freenode.org/drupal-search-api"
             }
@@ -6185,94 +6226,6 @@
                 "url"
             ],
             "time": "2019-07-01T23:21:34+00:00"
-        },
-        {
-            "name": "jakub-onderka/php-console-color",
-            "version": "v0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/JakubOnderka/PHP-Console-Color.git",
-                "reference": "d5deaecff52a0d61ccb613bb3804088da0307191"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/JakubOnderka/PHP-Console-Color/zipball/d5deaecff52a0d61ccb613bb3804088da0307191",
-                "reference": "d5deaecff52a0d61ccb613bb3804088da0307191",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "jakub-onderka/php-code-style": "1.0",
-                "jakub-onderka/php-parallel-lint": "1.0",
-                "jakub-onderka/php-var-dump-check": "0.*",
-                "phpunit/phpunit": "~4.3",
-                "squizlabs/php_codesniffer": "1.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "JakubOnderka\\PhpConsoleColor\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-2-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Jakub Onderka",
-                    "email": "jakub.onderka@gmail.com"
-                }
-            ],
-            "time": "2018-09-29T17:23:10+00:00"
-        },
-        {
-            "name": "jakub-onderka/php-console-highlighter",
-            "version": "v0.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/JakubOnderka/PHP-Console-Highlighter.git",
-                "reference": "9f7a229a69d52506914b4bc61bfdb199d90c5547"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/JakubOnderka/PHP-Console-Highlighter/zipball/9f7a229a69d52506914b4bc61bfdb199d90c5547",
-                "reference": "9f7a229a69d52506914b4bc61bfdb199d90c5547",
-                "shasum": ""
-            },
-            "require": {
-                "ext-tokenizer": "*",
-                "jakub-onderka/php-console-color": "~0.2",
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "jakub-onderka/php-code-style": "~1.0",
-                "jakub-onderka/php-parallel-lint": "~1.0",
-                "jakub-onderka/php-var-dump-check": "~0.1",
-                "phpunit/phpunit": "~4.0",
-                "squizlabs/php_codesniffer": "~1.5"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "JakubOnderka\\PhpConsoleHighlighter\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jakub Onderka",
-                    "email": "acci@acci.cz",
-                    "homepage": "http://www.acci.cz/"
-                }
-            ],
-            "description": "Highlight PHP code in terminal",
-            "time": "2018-09-29T18:48:56+00:00"
         },
         {
             "name": "league/container",
@@ -7444,23 +7397,22 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.10.2",
+            "version": "v0.10.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "573c2362c3cdebe846b4adae4b630eecb350afd8"
+                "reference": "2bde2fa03e05dff0aee834598b951d6fc7c6fe02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/573c2362c3cdebe846b4adae4b630eecb350afd8",
-                "reference": "573c2362c3cdebe846b4adae4b630eecb350afd8",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/2bde2fa03e05dff0aee834598b951d6fc7c6fe02",
+                "reference": "2bde2fa03e05dff0aee834598b951d6fc7c6fe02",
                 "shasum": ""
             },
             "require": {
                 "dnoegel/php-xdg-base-dir": "0.1.*",
                 "ext-json": "*",
                 "ext-tokenizer": "*",
-                "jakub-onderka/php-console-highlighter": "0.4.*|0.3.*",
                 "nikic/php-parser": "~4.0|~3.0|~2.0|~1.3",
                 "php": "^8.0 || ^7.0 || ^5.5.9",
                 "symfony/console": "~5.0|~4.0|~3.0|^2.4.2|~2.3.10",
@@ -7468,7 +7420,7 @@
             },
             "require-dev": {
                 "bamarni/composer-bin-plugin": "^1.2",
-                "hoa/console": "~3.16|~2.15"
+                "hoa/console": "3.17.*"
             },
             "suggest": {
                 "ext-pcntl": "Enabling the PCNTL extension makes PsySH a lot happier :)",
@@ -7513,7 +7465,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2020-03-21T06:55:27+00:00"
+            "time": "2020-04-07T06:44:48+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -7659,6 +7611,56 @@
                 "search"
             ],
             "time": "2020-03-23T15:41:48+00:00"
+        },
+        {
+            "name": "spatie/pdf-to-image",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/pdf-to-image.git",
+                "reference": "67136abe0db0540b4f29bb461389917ffa1b7e37"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/pdf-to-image/zipball/67136abe0db0540b4f29bb461389917ffa1b7e37",
+                "reference": "67136abe0db0540b4f29bb461389917ffa1b7e37",
+                "shasum": ""
+            },
+            "require": {
+                "ext-imagick": "*",
+                "php": "^7.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\PdfToImage\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Convert a pdf to an image",
+            "homepage": "https://github.com/spatie/pdf-to-image",
+            "keywords": [
+                "convert",
+                "image",
+                "pdf",
+                "pdf-to-image",
+                "spatie"
+            ],
+            "time": "2020-01-08T00:13:23+00:00"
         },
         {
             "name": "stack/builder",
@@ -11677,6 +11679,5 @@
     "platform": {
         "php": "^7.2"
     },
-    "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "platform-dev": []
 }

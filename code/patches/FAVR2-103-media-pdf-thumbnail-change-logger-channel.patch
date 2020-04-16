@@ -1,0 +1,28 @@
+Index: src/Manager/MediaPdfThumbnailImagickManager.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/Manager/MediaPdfThumbnailImagickManager.php	(revision e6bdef57ac7cda67e2a537ff727a6eff08a9adfe)
++++ src/Manager/MediaPdfThumbnailImagickManager.php	(date 1585732045101)
+@@ -2,7 +2,7 @@
+ 
+ namespace Drupal\media_pdf_thumbnail\Manager;
+ 
+-use Drupal\Core\Logger\LoggerChannel;
++use Drupal\Core\Logger\LoggerChannelInterface;
+ use Spatie\PdfToImage\Pdf;
+ 
+ /**
+@@ -17,9 +17,9 @@
+   /**
+    * MediaPdfThumbnailImagickManager constructor.
+    *
+-   * @param \Drupal\Core\Logger\LoggerChannel $loggerChannel
++   * @param \Drupal\Core\Logger\LoggerChannelInterface $loggerChannel
+    */
+-  public function __construct(LoggerChannel $loggerChannel) {
++  public function __construct(LoggerChannelInterface $loggerChannel) {
+     $this->logger = $loggerChannel;
+   }
+ 
