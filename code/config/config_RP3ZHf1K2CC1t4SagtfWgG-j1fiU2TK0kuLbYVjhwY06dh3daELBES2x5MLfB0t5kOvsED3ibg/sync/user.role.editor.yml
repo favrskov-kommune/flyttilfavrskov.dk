@@ -108,6 +108,7 @@ permissions:
   - 'schedule publishing of nodes'
   - 'update any media'
   - 'update media'
+  - 'use admin toolbar search'
   - 'view all media revisions'
   - 'view any unpublished area content'
   - 'view any unpublished basic_page content'

@@ -212,7 +212,7 @@ function dds_premium_preprocess_region__burgermenu(array &$variables) {
 function dds_premium_preprocess_page(array &$variables) {
   if (isset($variables['node'])) {
     /** @var Drupal\node\Entity\Node $node */
-    if (!empty($node = $variables['node'])) {
+    if (!empty($node = $variables['node']) && $node instanceof ContentEntityInterface) {
       $variables['hero'] = _create_hero($node, [
         'title' => 'title',
         'background_image' => 'field_header_background',
@@ -527,14 +527,16 @@ function dds_premium_preprocess_layout_block__accordion(array &$variables) {
 function dds_premium_preprocess_layout_block__hero(array &$variables) {
   /** @var Drupal\paragraphs\Entity\Paragraph $paragraph */
   $entity = $variables['entity'];
-  $variables['hero'] = _create_hero($entity, [
-    'title' => 'field_hero_headline',
-    'background_image' => 'field_hero_background',
-    'text_color' => 'field_hero_color',
-    'orientation' => 'field_hero_orientation',
-    'teaser' => 'field_hero_subline',
-    'cta' => 'field_hero_button',
-  ]);
+  if($entity instanceof ContentEntityInterface) {
+    $variables['hero'] = _create_hero($entity, [
+      'title' => 'field_hero_headline',
+      'background_image' => 'field_hero_background',
+      'text_color' => 'field_hero_color',
+      'orientation' => 'field_hero_orientation',
+      'teaser' => 'field_hero_subline',
+      'cta' => 'field_hero_button',
+    ]);
+  }
 }
 
 /**
