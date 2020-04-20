@@ -12,6 +12,9 @@ type: list_string
 settings:
   allowed_values:
     -
+      value: upcoming
+      label: Upcoming
+    -
       value: available
       label: Available
     -

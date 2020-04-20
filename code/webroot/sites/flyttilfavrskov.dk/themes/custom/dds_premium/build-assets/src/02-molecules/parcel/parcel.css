@@ -50,6 +50,9 @@
         &--unknown::before {
             background: #ccc;
         }
+        &--upcoming::before {
+            background: #8EA2A4;
+        }
     }
 
     &__address {
