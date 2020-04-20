@@ -26,7 +26,7 @@ function ftf_parcelling_cron() {
  */
 function ftf_parcelling_preprocess_block(&$variables) {
   if($variables['plugin_id'] == 'field_block:node:parcelling:field_parcelling_parcels') {
-    $items = ['available' => [], 'reserved' => [], 'sold' => []];
+    $items = ['upcoming' => [], 'available' => [], 'reserved' => [], 'sold' => []];
     $content = $variables['content'];
     $i = 0;
     while (array_key_exists($i, $content)) {

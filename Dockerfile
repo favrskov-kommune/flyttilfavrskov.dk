@@ -72,7 +72,7 @@ ENV APP_ENV=$env
 ARG github_token
 RUN composer config -g github-oauth.github.com $github_token
 # Install libraries
-RUN composer install --optimize-autoloader --no-dev --no-interaction
+RUN composer install --optimize-autoloader --no-dev --no-interaction --no-progress
 RUN cd webroot/sites/flyttilfavrskov.dk/themes/custom/dds_premium/build-assets/ &&\
     npm ci && \
     npm run build:prod

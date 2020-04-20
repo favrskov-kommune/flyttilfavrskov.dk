@@ -32,6 +32,7 @@ class ParcelImportService {
    * @var array
    */
   protected $mapStatusValues = [
+    'Kommende' => 'upcoming',
     'Ledig' => 'available',
     'Reserveret' => 'reserved',
     'Solgt' => 'sold',
