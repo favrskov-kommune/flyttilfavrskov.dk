@@ -26,4 +26,13 @@
       {% endfor %}
     </parcel-group>
   {% endif %}
+  {% if items.upcoming %}
+    <parcel-group title="{{ 'Upcoming parcels'|t({}, {'context': 'ftf_parcelling'}) }}" items-count="{{ items.upcoming|length }}" show-text="{{ 'See more upcoming parcels'|t({}, {'context': 'ftf_parcelling'}) }}" hide-text="{{ 'See fewer upcoming parcels'|t({}, {'context': 'ftf_parcelling'}) }}">
+      {% for item in items.upcoming %}
+        <div class="col-xs-12 col-md-6 col-lg-4">
+          {{ item }}
+        </div>
+      {% endfor %}
+    </parcel-group>
+  {% endif %}
 </div>
