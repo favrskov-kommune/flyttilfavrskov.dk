@@ -20,6 +20,7 @@ permissions:
   - 'access kint'
   - 'access media overview'
   - 'access site reports'
+  - 'access site setting browser_info'
   - 'access site setting contact_info'
   - 'access site setting cookieinfo'
   - 'access site setting footer'
