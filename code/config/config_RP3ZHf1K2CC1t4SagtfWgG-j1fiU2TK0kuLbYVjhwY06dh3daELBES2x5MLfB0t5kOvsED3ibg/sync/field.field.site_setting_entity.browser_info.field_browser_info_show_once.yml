@@ -1,0 +1,25 @@
+uuid: 1a05d436-46b2-4db4-9daa-6a2c25cb0924
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_browser_info_show_once
+    - site_settings.site_setting_entity_type.browser_info
+_core:
+  default_config_hash: XLha3nRBvWULuPhco0nx25q0Wad8nxJLSPKKg0QIu84
+id: site_setting_entity.browser_info.field_browser_info_show_once
+field_name: field_browser_info_show_once
+entity_type: site_setting_entity
+bundle: browser_info
+label: 'Show only once'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

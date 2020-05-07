@@ -1,0 +1,87 @@
+uuid: f27292fe-ad35-48ba-98f6-294dde7986da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.site_setting_entity.browser_info.field_browser_info_body
+    - field.field.site_setting_entity.browser_info.field_browser_info_close
+    - field.field.site_setting_entity.browser_info.field_browser_info_header
+    - field.field.site_setting_entity.browser_info.field_browser_info_open
+    - field.field.site_setting_entity.browser_info.field_browser_info_show_once
+    - site_settings.site_setting_entity_type.browser_info
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: sWMAaMppJqFe--zbzsfo2iwP-j5X71_6ZUQEelGkpuk
+id: site_setting_entity.browser_info.default
+targetEntityType: site_setting_entity
+bundle: browser_info
+mode: default
+content:
+  field_browser_info_body:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_browser_info_close:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_browser_info_header:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_browser_info_open:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_browser_info_show_once:
+    weight: 5
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  fieldset:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  search_api_excerpt: true

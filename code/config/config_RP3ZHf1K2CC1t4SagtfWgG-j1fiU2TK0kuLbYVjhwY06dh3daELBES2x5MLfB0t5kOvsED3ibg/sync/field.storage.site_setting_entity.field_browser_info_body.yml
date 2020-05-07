@@ -1,0 +1,24 @@
+uuid: 37bda506-21a0-4794-abbc-95a9081da4f1
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - ftf_browser_info
+  module:
+    - site_settings
+    - text
+_core:
+  default_config_hash: 8-WqvZB8okw_C7H25zxO-lpXI3JZtN_HTt0Y8lCkLX0
+id: site_setting_entity.field_browser_info_body
+field_name: field_browser_info_body
+entity_type: site_setting_entity
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
