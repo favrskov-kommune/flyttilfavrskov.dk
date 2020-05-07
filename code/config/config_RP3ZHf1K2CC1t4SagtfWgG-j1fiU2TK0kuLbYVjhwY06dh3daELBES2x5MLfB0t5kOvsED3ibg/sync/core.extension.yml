@@ -73,6 +73,7 @@ module:
   file: 0
   filter: 0
   focal_point: 0
+  ftf_browser_info: 0
   ftf_core: 0
   ftf_parcelling: 0
   gtm: 0
@@ -88,6 +89,7 @@ module:
   layout_builder_modal: 0
   layout_discovery: 0
   link: 0
+  linkit: 0
   locale: 0
   mailchimp: 0
   mailchimp_lists: 0

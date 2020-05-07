@@ -1,0 +1,26 @@
+uuid: d7e43994-a6f2-4ee2-a514-cfb9c86a5177
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - ftf_browser_info
+  module:
+    - site_settings
+_core:
+  default_config_hash: qt2Uafwgr1mkQrGIS-LeI8sfXazI28J8qf1c1FkwarY
+id: site_setting_entity.field_browser_info_open
+field_name: field_browser_info_open
+entity_type: site_setting_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

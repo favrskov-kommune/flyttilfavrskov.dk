@@ -1,0 +1,9 @@
+name: 'FlytTilFavrskov Browserinfo Pop-up'
+type: module
+description: 'Add a info popup that shows an IE11 disclaimer.'
+core: 8.x
+package: 'Flyt Til Favrskov'
+version: 1.0.0
+dependencies:
+  - dds_site_settings
+

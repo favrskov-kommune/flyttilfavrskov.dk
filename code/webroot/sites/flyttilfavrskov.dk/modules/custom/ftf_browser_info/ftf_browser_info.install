@@ -1,0 +1,43 @@
+<?php
+
+function ftf_browser_info_install() {
+  //create site settings entity
+  try {
+
+    $site_setting = \Drupal\site_settings\Entity\SiteSettingEntity::create([
+      'type' => 'browser_info',
+      'langcode' => 'en',
+      'user_id' => 1,
+      'name' => 'Browserinfo',
+      'fieldset' => 'Site settings',
+      'status' => 1,
+      'field_browser_info_header' => 'Forældet Browser',
+      'field_browser_info_body' => '<p>Du bruger en forældet browser. Vi anbefaler at du opdaterer til en nyere og mere sikker browser. Vores website er ikke udviklet til at understøtte denne og det kan opføre sig uforudsigeligt.</p>',
+      'field_browser_info_open' => 'Forældet browser',
+      'field_browser_info_close' => 'Luk beskeden',
+      'field_browser_info_show_once' => true
+    ]);
+    $site_setting->save();
+
+  } catch (Exception $e) {
+    //do something?
+  }
+
+
+}
+
+function ftf_browser_info_uninstall() {
+  try {
+
+    $ids = \Drupal::entityQuery('site_setting_entity')->condition('type','browser_info')->execute();
+    if ($ids) {
+      $site_settings = \Drupal\site_settings\Entity\SiteSettingEntity::loadMultiple($ids);
+      foreach ($site_settings as $setting) {
+        $setting->delete();
+      }
+    }
+
+  } catch (\Drupal\Core\Entity\EntityStorageException $e) {
+    error_log($e->getMessage());
+  }
+}

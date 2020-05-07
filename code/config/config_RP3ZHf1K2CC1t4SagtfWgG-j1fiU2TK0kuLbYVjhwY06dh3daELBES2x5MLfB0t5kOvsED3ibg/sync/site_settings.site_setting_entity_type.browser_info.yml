@@ -1,0 +1,13 @@
+uuid: 61818076-d6ad-4b17-95cd-cc2d7ff52c22
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - ftf_browser_info
+_core:
+  default_config_hash: xtycW2fDDWBCo0LJKxL68H7Di9ssf1sEX5HBth3q558
+id: browser_info
+label: 'Browser disclaimer'
+fieldset: 'Site settings'
+multiple: false

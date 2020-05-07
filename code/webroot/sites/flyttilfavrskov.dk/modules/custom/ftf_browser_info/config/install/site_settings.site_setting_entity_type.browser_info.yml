@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - ftf_browser_info
+id: browser_info
+label: 'Browser disclaimer'
+fieldset: 'Site settings'
+multiple: false

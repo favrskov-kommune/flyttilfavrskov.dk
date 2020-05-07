@@ -1,0 +1,23 @@
+uuid: b1f43be4-afaf-41f0-8e10-e662cfd3f229
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_browser_info_body
+    - site_settings.site_setting_entity_type.browser_info
+  module:
+    - text
+_core:
+  default_config_hash: f4mVwCXg2bxARxH2D-Tu2BJb65aT0PirVWUMfXSGWsU
+id: site_setting_entity.browser_info.field_browser_info_body
+field_name: field_browser_info_body
+entity_type: site_setting_entity
+bundle: browser_info
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
