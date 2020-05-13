@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_browser_info_show_once
+    - site_settings.site_setting_entity_type.browser_info
+id: site_setting_entity.browser_info.field_browser_info_show_once
+field_name: field_browser_info_show_once
+entity_type: site_setting_entity
+bundle: browser_info
+label: 'Show only once'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

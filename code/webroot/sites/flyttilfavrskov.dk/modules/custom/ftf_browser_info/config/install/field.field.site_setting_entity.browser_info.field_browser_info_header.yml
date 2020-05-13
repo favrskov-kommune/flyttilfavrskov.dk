@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_browser_info_header
+    - site_settings.site_setting_entity_type.browser_info
+id: site_setting_entity.browser_info.field_browser_info_header
+field_name: field_browser_info_header
+entity_type: site_setting_entity
+bundle: browser_info
+label: Header
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

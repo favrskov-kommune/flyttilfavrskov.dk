@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - site_settings
+  enforced:
+    module:
+      - ftf_browser_info
+id: site_setting_entity.field_browser_info_header
+field_name: field_browser_info_header
+entity_type: site_setting_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,18 @@
+<button class="browser-info__open" id="browser-info-open">
+  {{ open }}
+</button>
+<section{{ section_attributes.setAttribute('id', 'browser-info').addClass('browser-info') }}>
+  <div class="browser-info__inner">
+    <div class="browser-info__text">
+      {% if title %}
+        <h3 class="browser-info__headline">{{ title }}</h3>
+      {% endif %}
+      {% if body %}
+        <div class="browser-info__body">{{ body.value | raw }}</div>
+      {% endif %}
+      <button class="browser-info__close" id="browser-info-close">
+        {{ close }}
+      </button>
+    </div>
+  </div>
+</section>

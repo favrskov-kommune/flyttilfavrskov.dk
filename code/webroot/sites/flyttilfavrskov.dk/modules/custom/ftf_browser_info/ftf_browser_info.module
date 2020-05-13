@@ -1,0 +1,65 @@
+<?php
+
+use Drupal\Core\Template\Attribute;
+
+
+/**
+ * Implement hook_theme
+ * @param $existing
+ * @param $type
+ * @param $theme
+ * @param $path
+ * @return array
+ */
+function ftf_browser_info_theme($existing, $type, $theme, $path) {
+  return array(
+    'ftf_browser_info' => array(
+      'variables' => array(
+        'title' => NULL,
+        'body' => NULL,
+        'open' => NULL,
+        'close' => NULL,
+        'section_attributes' => []
+      )
+    )
+  );
+}
+
+
+/**
+ * @param array $page_bottom
+ */
+function ftf_browser_info_page_bottom(array &$page_bottom) {
+
+  // Get current theme
+  $theme = \Drupal::theme()->getActiveTheme()->getName();
+
+  // Get system theme settings
+  $config = \Drupal::config('system.theme');
+
+  if ($theme != $config->get('admin')) {
+
+    /** @var \Drupal\site_settings\SiteSettingsLoader $site_settings_loader */
+    $site_settings_loader = \Drupal::service('site_settings.loader');
+    $site_settings = $site_settings_loader->loadByFieldset('site_settings');
+    $section_attributes = new Attribute();
+
+    if (!empty($browser_info = $site_settings['browser_info'])) {
+      $page_bottom['ftf_browser_info'] = [
+        '#theme' => 'ftf_browser_info',
+        '#title' => $browser_info['field_browser_info_header'],
+        '#body' => $browser_info['field_browser_info_body'],
+        '#open' => $browser_info['field_browser_info_open'],
+        '#close' => $browser_info['field_browser_info_close'],
+        '#section_attributes' => $section_attributes,
+        '#attached' => [
+          'library' => 'ftf_browser_info/ftf_browser_info',
+          'drupalSettings' => ['browserinfo' => ['browserinfo_behavior' => isset($browser_info['field_browser_info_show_once']) && $browser_info['field_browser_info_show_once'] == 1 ? 'display_once' : 'display_until_accepted']] //display_once
+        ],
+        '#cache' => [
+          'tags' => ['site_settings_set:site_settings']
+        ]
+      ];
+    }
+  }
+}

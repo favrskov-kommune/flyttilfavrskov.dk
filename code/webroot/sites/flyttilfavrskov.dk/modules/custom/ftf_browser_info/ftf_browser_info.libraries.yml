@@ -1,0 +1,11 @@
+ftf_browser_info:
+  version: 1.x
+  css:
+      theme:
+        css/ftf_browser_info.css: {}
+  js:
+    js/ftf_browser_info.js: {attributes: {data-cookieconsent: 'ignore'}}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
