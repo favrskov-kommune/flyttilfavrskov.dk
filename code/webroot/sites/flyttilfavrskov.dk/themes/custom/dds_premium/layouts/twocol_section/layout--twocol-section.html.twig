@@ -36,7 +36,7 @@
       </div>
     {% endif %}
     <div{{ create_attribute({'class': 'row'}).addClass(settings.vertical_align ? 'middle-xs') }}>
-      <div {{ region_attributes.first.addClass([columns[settings.column_widths].left, 'layout__region', 'layout__region--first']) }}>
+      <div {{ region_attributes.first.addClass([columns[settings.column_widths].left, 'layout__region', 'layout__region--first']).addClass(content.second ? ['pb-xs', 'pb-0-md']) }}>
         {{ content.first }}
       </div>
       <div {{ region_attributes.second.addClass([columns[settings.column_widths].right, 'layout__region', 'layout__region--second']) }}>
