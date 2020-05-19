@@ -30,10 +30,10 @@
       </div>
     {% endif %}
     <div{{ create_attribute({'class': 'row'}).addClass(settings.vertical_align ? 'middle-xs') }}>
-      <div {{ region_attributes.first.addClass(['col-xs-12', 'col-md-4', 'layout__region', 'layout__region--first']) }}>
+      <div {{ region_attributes.first.addClass(['col-xs-12', 'col-md-4', 'layout__region', 'layout__region--first']).addClass(content.second or content.third ? ['pb-xs', 'pb-0-md']) }}>
         {{ content.first }}
       </div>
-      <div {{ region_attributes.second.addClass(['col-xs-12', 'col-md-4', 'layout__region', 'layout__region--second']) }}>
+      <div {{ region_attributes.second.addClass(['col-xs-12', 'col-md-4', 'layout__region', 'layout__region--second']).addClass(content.third ? ['pb-xs', 'pb-0-md']) }}>
         {{ content.second }}
       </div>
       <div {{ region_attributes.third.addClass(['col-xs-12', 'col-md-4', 'layout__region', 'layout__region--third']) }}>
