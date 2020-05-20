@@ -270,6 +270,10 @@
     order: 1;
 }
 
+.pb-xs {
+    padding-bottom: var(--half-gutter-width);
+}
+
 @media (--viewport-ms-min) {
     .col-ms,
     .col-ms-1,
@@ -458,6 +462,14 @@
 
     .last-ms {
         order: 1;
+    }
+
+    .pb-ms {
+        padding-bottom: var(--half-gutter-width);
+    }
+
+    .pb-0-ms {
+        padding-bottom: 0;
     }
 }
 
@@ -650,6 +662,14 @@
     .last-sm {
         order: 1;
     }
+
+    .pb-sm {
+        padding-bottom: var(--half-gutter-width);
+    }
+
+    .pb-0-sm {
+        padding-bottom: 0;
+    }
 }
 
 @media (--viewport-md-min) {
@@ -841,6 +861,14 @@
     .last-md {
         order: 1;
     }
+
+    .pb-md {
+        padding-bottom: var(--half-gutter-width);
+    }
+
+    .pb-0-md {
+        padding-bottom: 0;
+    }
 }
 
 @media (--viewport-lg-min) {
@@ -1031,5 +1059,13 @@
 
     .last-lg {
         order: 1;
+    }
+
+    .pb-lg {
+        padding-bottom: var(--half-gutter-width);
+    }
+
+    .pb-0-lg {
+        padding-bottom: 0;
     }
 }
