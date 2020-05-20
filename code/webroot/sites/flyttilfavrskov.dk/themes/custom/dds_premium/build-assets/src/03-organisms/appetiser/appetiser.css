@@ -31,9 +31,9 @@
         @media (--viewport-md-min) {
             width: 50%;
             height: 100%;
-            max-width: 500px;
             flex-grow: 0;
             flex-shrink: 1;
+            max-width: 570px;
         }
     }
 
@@ -93,8 +93,7 @@
         .appetiser__content {
             width: 100%;
             max-width: none;
-            padding-top: 0;
-            padding-bottom: 0;
+            padding: 0;
         }
     }
 
@@ -107,7 +106,17 @@
 
         .appetiser__content {
             @media (--viewport-md-min) {
-                margin-left: calc(50% + 100px);
+                margin-left: 50%;
+                padding-left: 100px;
+            }
+        }
+    }
+
+    &--image-right {
+        .appetiser__content {
+            @media (--viewport-md-min) {
+                margin-right: 50%;
+                padding-right: 100px;
             }
         }
     }
