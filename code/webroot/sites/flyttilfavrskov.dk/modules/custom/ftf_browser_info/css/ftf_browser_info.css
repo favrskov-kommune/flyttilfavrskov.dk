@@ -13,6 +13,7 @@
   transform: translate3d(0, 100%, 0);
   opacity: 0;
   z-index: 999;
+  display: none;
 }
 .browser-info__inner {
   box-shadow: 0px 0px 10px rgba(35,35,35,.2);
@@ -105,6 +106,7 @@ body.browser-info-show .browser-info {
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   opacity: 1;
+  display: block;
 }
 body.browser-info-show .browser-info-open {
   opacity: 0;
