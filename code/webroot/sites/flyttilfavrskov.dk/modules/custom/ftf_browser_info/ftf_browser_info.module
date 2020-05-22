@@ -57,7 +57,7 @@ function ftf_browser_info_page_bottom(array &$page_bottom) {
           'drupalSettings' => ['browserinfo' => ['browserinfo_behavior' => isset($browser_info['field_browser_info_show_once']) && $browser_info['field_browser_info_show_once'] == 1 ? 'display_once' : 'display_until_accepted']] //display_once
         ],
         '#cache' => [
-          'tags' => ['site_settings_set:site_settings']
+          'tags' => ['site_settings_set:Site settings']
         ]
       ];
     }
