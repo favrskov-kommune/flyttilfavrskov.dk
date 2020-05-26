@@ -84,6 +84,14 @@ function ftf_parcelling_preprocess_paragraph__parcel(&$variables) {
   $variables['parcel_area'] = $paragraph->field_parcel_area->value;
   $variables['parcel_type'] = $paragraph->field_parcel_type->value;
 
+  if($paragraph->hasField('field_banner_text') && !$paragraph->get('field_banner_text')->isEmpty()) {
+    if($paragraph->field_banner_text->value != '') {
+      $variables['parcel_banner_text'] = $paragraph->field_banner_text->value;
+      $variables['parcel_banner_color'] = !$paragraph->get('field_banner_color')->isEmpty() ? $paragraph->field_banner_color->value : 'd1e0dc';
+      $variables['parcel_banner_text_color'] = !$paragraph->get('field_banner_text_color')->isEmpty() ? $paragraph->field_banner_text_color->value : '474747';
+    }
+  }
+
   /** @var \Drupal\media\Entity\Media $media_file */
   $media_file = $paragraph->field_parcel_specs->entity;
   if($media_file) {

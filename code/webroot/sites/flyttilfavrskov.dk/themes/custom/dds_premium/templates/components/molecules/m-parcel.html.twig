@@ -43,4 +43,11 @@
       } %}
     </div>
   {% endif %}
+  {% if parcel_banner_text %}
+    <div class="parcel__banner">
+      <div class="parcel__banner-inner" style="background-color:#{{ parcel_banner_color }}; color:#{{ parcel_banner_text_color }}">
+        {{ parcel_banner_text }}
+      </div>
+    </div>
+  {% endif %}
 </div>
