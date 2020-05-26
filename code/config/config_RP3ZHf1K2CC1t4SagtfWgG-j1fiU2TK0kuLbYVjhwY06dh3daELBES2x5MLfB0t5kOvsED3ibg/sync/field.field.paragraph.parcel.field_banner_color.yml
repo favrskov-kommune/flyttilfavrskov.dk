@@ -9,7 +9,7 @@ id: paragraph.parcel.field_banner_color
 field_name: field_banner_color
 entity_type: paragraph
 bundle: parcel
-label: 'Banner color'
+label: 'Banner background color'
 description: 'Insert hex color-code without #'
 required: false
 translatable: false
