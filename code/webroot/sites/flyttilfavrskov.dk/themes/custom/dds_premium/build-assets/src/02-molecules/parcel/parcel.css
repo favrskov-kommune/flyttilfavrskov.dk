@@ -80,6 +80,13 @@
     &__documents {
         margin-top: auto;
 
+        &--max-width {
+            .link-list__item {
+                word-break: break-word;
+                padding-right: 100px;
+            }
+        }
+
         .link-list__item {
             margin-bottom: 0;
         }
@@ -88,31 +95,30 @@
             margin-right: 20px;
         }
     }
+
     &__banner {
         position: absolute;
         bottom: 0;
         right: 0;
-        height: 150px;
-        width: 150px;
+        height: 119px;
+        width: 140px;
         overflow: hidden;
-
 
         &-inner {
             width: 200px;
-            padding: 0 40px;
+            padding: 0 43px;
             height: 46px;
-            line-height: 46px;
-            text-align: center;
-            font-weight: bold;
+            line-height: 1.3;
+            font-weight: 700;
             font-size: 14px;
-            -webkit-transform: rotate(-40deg);
-            -moz-transform: rotate(-40deg);
-            -ms-transform: rotate(-40deg);
-            -o-transform: rotate(-40deg);
             transform: rotate(-40deg);
             position: absolute;
-            bottom: 23px;
+            bottom: 24px;
             right: -50px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
         }
     }
 }
