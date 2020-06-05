@@ -280,7 +280,9 @@ $config_directories = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '7ACy4vXh8jxlwvFqE_xdFDEkse13yIz8Fv1J7KgRWLY0OYwxKFYe5LL8tBI0H1SyLtlRyLc0Iw';
+// For security reasons, this should not be in git
+// I have added a new hash to the settings.local.php file
+//$settings['hash_salt'] = '7ACy4vXh8jxlwvFqE_xdFDEkse13yIz8Fv1J7KgRWLY0OYwxKFYe5LL8tBI0H1SyLtlRyLc0Iw
 
 /**
  * Deployment identifier.
