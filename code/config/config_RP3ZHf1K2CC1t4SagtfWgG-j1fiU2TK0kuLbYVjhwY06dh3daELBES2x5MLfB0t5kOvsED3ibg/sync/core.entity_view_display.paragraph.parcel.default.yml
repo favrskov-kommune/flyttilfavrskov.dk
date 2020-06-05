@@ -3,6 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.parcel.field_banner_color
+    - field.field.paragraph.parcel.field_banner_text
+    - field.field.paragraph.parcel.field_banner_text_color
     - field.field.paragraph.parcel.field_parcel_address
     - field.field.paragraph.parcel.field_parcel_area
     - field.field.paragraph.parcel.field_parcel_group
@@ -21,6 +24,30 @@ targetEntityType: paragraph
 bundle: parcel
 mode: default
 content:
+  field_banner_color:
+    weight: 11
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_banner_text:
+    weight: 12
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_banner_text_color:
+    weight: 13
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_parcel_address:
     weight: 0
     label: hidden

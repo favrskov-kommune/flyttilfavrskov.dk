@@ -59,6 +59,7 @@
 
     &__elements {
         position: relative;
+        overflow: hidden;
 
         &::after {
             content: '';
