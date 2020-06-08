@@ -37,10 +37,17 @@
     {% endif %}
   </div>
   {% if specs %}
-    <div class="parcel__documents">
+    <div class="parcel__documents {{ parcel_banner_text ? 'parcel__documents--max-width' }}">
       {% include '@dds_premium/components/molecules/m-link-list.html.twig' with {
         'links': [specs]
       } %}
+    </div>
+  {% endif %}
+  {% if parcel_banner_text %}
+    <div class="parcel__banner">
+      <div class="parcel__banner-inner" style="background-color:#{{ parcel_banner_color }}; color:#{{ parcel_banner_text_color }}">
+        {{ parcel_banner_text }}
+      </div>
     </div>
   {% endif %}
 </div>

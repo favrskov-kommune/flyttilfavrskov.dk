@@ -14,10 +14,14 @@
 
     &__title {
         text-align: center;
+        padding-left: 25px;
+        padding-right: 25px;
     }
 
     &__text {
         margin-top: 10px;
+        padding-left: 25px;
+        padding-right: 25px;
     }
 
     form {
@@ -44,8 +48,10 @@
         padding-right: 25px;
         margin-top: 20px;
 
-        @media (--viewport-md-min) {
-            width: 50%;
+        &:not(.form-item-mailchimp-lists-gdpr-consent) {
+            @media (--viewport-md-min) {
+                width: 50%;
+            }
         }
 
         input {
