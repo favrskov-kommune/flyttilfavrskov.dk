@@ -5714,12 +5714,12 @@
             "version": "0.9.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/njh/easyrdf.git",
+                "url": "https://github.com/easyrdf/easyrdf.git",
                 "reference": "acd09dfe0555fbcfa254291e433c45fdd4652566"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/njh/easyrdf/zipball/acd09dfe0555fbcfa254291e433c45fdd4652566",
+                "url": "https://api.github.com/repos/easyrdf/easyrdf/zipball/acd09dfe0555fbcfa254291e433c45fdd4652566",
                 "reference": "acd09dfe0555fbcfa254291e433c45fdd4652566",
                 "shasum": ""
             },
@@ -7064,10 +7064,10 @@
         },
         {
             "name": "novicell/dds_layouts",
-            "version": "1.7.0",
+            "version": "1.8.0",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_kIJ5/novicelldds_layouts-1-7-0.zip"
+                "url": "https://packages.drupal.dk/php/~/up/ver_AcpNC/novicelldds_layouts-1-8-0.zip"
             },
             "require": {
                 "drupal/core": "^8.8",
@@ -7079,7 +7079,15 @@
                 "npm-asset/countup": "~1.9.3",
                 "oomphinc/composer-installers-extender": "^1.1"
             },
-            "type": "drupal-module"
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Novicell DDS Layouts",
+            "homepage": "https://www.novicell.dk",
+            "keywords": [
+                "Novicell"
+            ]
         },
         {
             "name": "novicell/dds_media",
