@@ -709,6 +709,22 @@ function dds_premium_preprocess_layout_block__document_list(array &$variables) {
 function dds_premium_preprocess_layout_block__code(array &$variables) {
   $variables['layout_builder_mode'] = strpos(Drupal::routeMatch()->getRouteName(), 'layout_builder') === 0;
 }
+
+/**
+ * Submenu layout block preprocess.
+ *
+ * @param array $variables
+ *   Template variables.
+ */
+function dds_premium_preprocess_layout_block__submenu(array &$variables) {
+  foreach ($variables['fields']['field_links'] as $link) {
+    $link['attributes'] = new Attribute();
+    $link['attributes']->addClass('button');
+    $variables['links'][] = $link;
+  }
+//  kint($variables);die;
+}
+
 /**
  * Search results.
  *

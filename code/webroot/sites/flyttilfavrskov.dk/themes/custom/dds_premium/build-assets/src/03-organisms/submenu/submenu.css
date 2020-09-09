@@ -1,0 +1,9 @@
+.layout-block--submenu {
+    .link-list {
+        text-align: center;
+        &__item {
+            display: inline-block;
+            margin: 10px;
+        }
+    }
+}

@@ -20,7 +20,7 @@
   'section--spacing-bottom-' ~ settings.column_spacing_bottom
 ] %}
 
-<section {{ attributes.addClass(classes) }}>
+<section {{ attributes.addClass(classes).setAttribute('id', settings.section_id|clean_id) }}>
   <div class="container">
     {% if header and header is not empty %}
       <div class="row">

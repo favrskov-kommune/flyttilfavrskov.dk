@@ -1,0 +1,21 @@
+{
+  "title": "Submenu",
+  "context": {
+    "links": {
+      "links": [
+        {
+          "title": "Link 1",
+          "url": "#",
+        },
+        {
+          "title": "Link 2",
+          "url": "#",
+        },
+        {
+          "title": "Link 3",
+          "url": "#",
+        }
+      ]
+    }
+  }
+}

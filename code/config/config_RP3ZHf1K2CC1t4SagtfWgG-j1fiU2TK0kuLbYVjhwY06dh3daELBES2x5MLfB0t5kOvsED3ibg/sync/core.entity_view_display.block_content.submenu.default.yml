@@ -1,0 +1,29 @@
+uuid: 3e93cee2-d247-4892-8b19-d54f57831a06
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.submenu
+    - field.field.block_content.submenu.field_links
+  module:
+    - link
+id: block_content.submenu.default
+targetEntityType: block_content
+bundle: submenu
+mode: default
+content:
+  field_links:
+    weight: 0
+    label: hidden
+    settings:
+      trim_length: 120
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link_separate
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true
