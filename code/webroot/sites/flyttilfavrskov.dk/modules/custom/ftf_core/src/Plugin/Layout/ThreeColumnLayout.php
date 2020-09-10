@@ -23,7 +23,7 @@ class ThreeColumnLayout extends DDSThreeColumnLayout {
       '#type' => 'textfield',
       '#title' => $this->t('Section ID'),
       '#default_value' => $this->configuration['section_id'],
-      '#description' => 'Should only contain lowercase letters, numbers and hyphens.'
+      '#description' => $this->t('Should only contain lowercase letters, numbers and hyphens.')
     ];
 
     return $form;
