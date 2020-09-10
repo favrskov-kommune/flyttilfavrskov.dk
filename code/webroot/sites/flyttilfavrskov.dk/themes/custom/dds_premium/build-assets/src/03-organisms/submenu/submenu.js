@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const element = document.getElementById(hash);
       if (hash.length > 0 && element) {
         e.preventDefault();
-        const topPosition = element.getBoundingClientRect().top - getHeaderHeight();
+        const topPosition = (element.getBoundingClientRect().top + window.pageYOffset) - getHeaderHeight();
         animateScrollTo(topPosition, {
           speed: 200,
         });
