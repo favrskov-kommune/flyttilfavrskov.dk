@@ -5,15 +5,15 @@
       "links": [
         {
           "title": "Link 1",
-          "url": "#",
+          "url": "http://localhost:3000/components/detail/article#test"
         },
         {
           "title": "Link 2",
-          "url": "#",
+          "url": "http://localhost:3000/components/detail/article#test1"
         },
         {
           "title": "Link 3",
-          "url": "#",
+          "url": "http://localhost:3000/components/detail/article#test2"
         }
       ]
     }

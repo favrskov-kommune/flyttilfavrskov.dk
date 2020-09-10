@@ -718,11 +718,8 @@ function dds_premium_preprocess_layout_block__code(array &$variables) {
  */
 function dds_premium_preprocess_layout_block__submenu(array &$variables) {
   foreach ($variables['fields']['field_links'] as $link) {
-    $link['attributes'] = new Attribute();
-    $link['attributes']->addClass('button');
     $variables['links'][] = $link;
   }
-//  kint($variables);die;
 }
 
 /**
