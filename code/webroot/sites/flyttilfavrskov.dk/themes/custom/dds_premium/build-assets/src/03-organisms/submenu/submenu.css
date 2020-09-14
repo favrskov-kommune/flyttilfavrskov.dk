@@ -11,6 +11,11 @@
             scrollbar-width: none;
             -ms-overflow-style: none;
 
+            /* Chrome sub pixel fix */
+            @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+                transform: rotate(-0.0000000001deg);
+            }
+
             &::-webkit-scrollbar {
                 display: none;
             }
