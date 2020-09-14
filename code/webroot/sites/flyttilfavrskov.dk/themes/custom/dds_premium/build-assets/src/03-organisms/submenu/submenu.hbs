@@ -1,5 +1,11 @@
 <div class="submenu">
     <nav class="submenu__navigation js-submenu">
-        {{ render '@link-list' links }}
+        {{#each links }}
+            <a href="{{ url }}">
+                {{ title }}
+            </a>
+        {{/each}}
+        <div class="js-submenu-shadow-left submenu__shadow-left"></div>
+        <div class="js-submenu-shadow-right submenu__shadow-right"></div>
     </nav>
 </div>

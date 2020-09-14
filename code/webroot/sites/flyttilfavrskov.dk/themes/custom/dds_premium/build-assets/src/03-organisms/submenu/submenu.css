@@ -1,65 +1,76 @@
 .submenu {
     &__navigation {
-        .link-list {
-            border-bottom: 1px solid var(--theme-divider-background-color);
-            padding-bottom: 15px;
-            padding-top: 15px;
-            font-size: 18px;
-            text-align: center;
+        border-bottom: 1px solid var(--theme-divider-background-color);
+        padding-bottom: 15px;
+        padding-top: 15px;
+        font-size: 18px;
+        text-align: center;
+        white-space: nowrap;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        position: relative;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 700;
+            letter-spacing: 0.45px;
+            filter: none;
+            margin: 0 14px;
+            display: inline-block;
             white-space: nowrap;
-            overflow-x: auto;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
+            color: #474747;
 
-            /* Chrome sub pixel fix */
-            @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
-                transform: rotate(-0.0000000001deg);
+            &:hover::after {
+                width: 100%;
             }
 
-            &::-webkit-scrollbar {
-                display: none;
+            &::after {
+                content: "";
+                background-color: color-mod(var(--theme-divider-background-color) alpha(50%));
+                height: 1px;
+                width: 0;
+                transition: width 0.4s ease-in;
+                display: block;
+                margin-top: -1px;
             }
+        }
+    }
 
-            background-image:
-                 linear-gradient(to right, var(--theme-background-color), var(--theme-background-color)),
-                 linear-gradient(to right, var(--theme-background-color), var(--theme-background-color)),
-                 linear-gradient(to right, rgba(0,0,0,.10), rgba(255,255,255,0)),
-                 linear-gradient(to left, rgba(0,0,0,.10), rgba(255,255,255,0));
+    &__shadow-right {
+        height: 100%;
+        width: 50px;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        background: linear-gradient(270deg, color-mod(black alpha(10%)) ,hsla(0,0%,100%,0));
+        right: 0;
+        will-change: transform;
+        display: none;
 
-             background-position: left center, right center, left center, right center;
-             background-repeat: no-repeat;
-             background-size: 22px 100%, 22px 100%, 25px 100%, 25px 100%;
-             background-attachment: local, local, scroll, scroll;
+        &.active {
+            display: block;
+        }
+    }
 
-            &__item {
-                margin-bottom: 0;
-                display: inline-block;
-                white-space: nowrap;
+    &__shadow-left {
+        height: 100%;
+        width: 50px;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        background: linear-gradient(90deg, color-mod(black alpha(10%)), hsla(0,0%,100%,0));
+        left: 0;
+        will-change: transform;
+        display: none;
 
-                a {
-                    text-decoration: none;
-                    font-size: 17px;
-                    display: block;
-                    font-weight: 700;
-                    letter-spacing: 0.45px;
-                    filter: none;
-                    margin: 0 14px;
-
-                    &:hover::after {
-                        width: 100%;
-                    }
-
-                    &::after {
-                        content: "";
-                        background-color: color-mod(var(--theme-divider-background-color) alpha(50%));
-                        height: 1px;
-                        width: 0;
-                        transition: width 0.4s ease-in;
-                        display: block;
-                        margin-top: -1px;
-                    }
-                }
-            }
+        &.active {
+            display: block;
         }
     }
 }
