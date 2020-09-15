@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\Core\Site\Settings;
+
 
 /**
  * Implements hook_locale_translation_projects_alter().
@@ -16,6 +18,8 @@ function ftf_core_locale_translation_projects_alter(&$projects) {
  * @param $definitions
  */
 function ftf_core_layout_alter(&$definitions) {
+  // One column
+  $definitions['layout_onecol']->setClass('\Drupal\ftf_core\Plugin\Layout\OneColumnLayout');
   // Two column
   $definitions['layout_twocol_section']->setClass('\Drupal\ftf_core\Plugin\Layout\TwoColumnLayout');
   // Three column
@@ -26,6 +30,8 @@ function ftf_core_layout_alter(&$definitions) {
  * Implements hook_page_attachments().
  */
 function ftf_core_page_attachments(array &$attachments) {
-  $attachments['#attached']['library'][] = 'ftf_core/ftf_core.cookiebot_head';
+  if (Settings::get('ftf_core.enable_cookiebot', TRUE)) {
+    $attachments['#attached']['library'][] = 'ftf_core/ftf_core.cookiebot_head';
+  }
 //  $attachments['#attached']['library'][] = 'ftf_core/ftf_core.cookiebot_body';
 }
