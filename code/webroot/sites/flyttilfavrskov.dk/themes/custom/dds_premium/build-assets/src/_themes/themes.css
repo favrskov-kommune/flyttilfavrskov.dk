@@ -11,6 +11,19 @@
         color: var(--theme-button-color);
     }
 
+    .submenu {
+        &__navigation {
+            border-bottom-color: var(--theme-divider-background-color);
+
+            a {
+                &::after {
+                    background-color: var(--theme-divider-background-color);
+                }
+            }
+        }
+    }
+
+
     .divider::before {
         background-color: var(--theme-divider-background-color);
     }
