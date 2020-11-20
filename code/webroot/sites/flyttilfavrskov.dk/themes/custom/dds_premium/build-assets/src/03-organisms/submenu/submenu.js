@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
   handleShadow(submenus, true, false);
   window.addEventListener('resize', debounce(() => {
     handleShadow(submenus, false, true);
-  }, 100), {passive: true});
+  }, 100), { passive: true });
 
   for (let i = 0; i < links.length; i += 1) {
     const link = links[i];
