@@ -61,7 +61,7 @@ if($domain) {
   $sites[$domain] = 'flyttilfavrskov.dk';
 }
 
-$ddev_domain = getenv('VIRTUAL_HOST');
+$ddev_domain = getenv('DDEV_HOSTNAME');
 if($ddev_domain) {
   $sites[$ddev_domain]  = 'flyttilfavrskov.dk';
 }
