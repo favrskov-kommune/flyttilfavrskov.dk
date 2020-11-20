@@ -30,7 +30,6 @@
     "drupal-composer/drupal-scaffold": "^2.5",
     "drupal/allowed_formats": "^1.2",
     "drupal/config_ignore": "^2.1",
-    "drupal/console": "^1.8",
     "drupal/core": "~8.8",
     "drupal/editor_advanced_link": "^1.6",
     "drupal/mailchimp": "^1.11",
