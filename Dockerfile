@@ -48,7 +48,7 @@ RUN echo "export PATH=\$PATH:/src/vendor/drush/drush" >> ~/.bashrc
 #Composer setup
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
    && php -r "if (hash_file('sha384', 'composer-setup.php') === trim(file_get_contents('https://composer.github.io/installer.sig'))) { echo 'Installer verified'; } else { echo 'Mismatching hashes'; unlink('composer-setup.php'); }" \
-   && php composer-setup.php --filename=composer --install-dir=/usr/local/bin \
+   && php composer-setup.php --version=1.10.17 --filename=composer --install-dir=/usr/local/bin \
    && rm composer-setup.php
 
 COPY code/ /src
