@@ -5,17 +5,17 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 ===================================================================
 --- mailchimp.module	(revision f59b20615a264f0c4a726fb543472e11bf03ddda)
 +++ mailchimp.module	(date 1588838711583)
-@@ -540,15 +540,15 @@
+@@ -549,15 +549,15 @@
            ];
          }
-         // Update the member
+         // Update the member.
 -        $result = $mc_lists->addOrUpdateMember($list_id, $email, $parameters);
 -        if (!isset($result->id)) {
 -          \Drupal::logger('mailchimp')
--                 ->warning('A problem occurred setting marketing permissions for {email} on list {list}.', [
--                     'email' => $email,
--                     'list'  => $list_id,
--                   ]
+-            ->warning('A problem occurred setting marketing permissions for {email} on list {list}.', [
+-              'email' => $email,
+-              'list'  => $list_id,
+-            ]
 -                 );
 -        }
 +//        $result = $mc_lists->addOrUpdateMember($list_id, $email, $parameters);
