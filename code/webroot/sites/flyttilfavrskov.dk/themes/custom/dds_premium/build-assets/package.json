@@ -78,6 +78,7 @@
         "webpack-cli": "3.3.0"
     },
     "dependencies": {
+        "animated-scroll-to": "^2.0.10",
         "flickity": "^2.2.1",
         "flickity-as-nav-for": "^2.0.1",
         "flickity-fade": "^1.0.0",

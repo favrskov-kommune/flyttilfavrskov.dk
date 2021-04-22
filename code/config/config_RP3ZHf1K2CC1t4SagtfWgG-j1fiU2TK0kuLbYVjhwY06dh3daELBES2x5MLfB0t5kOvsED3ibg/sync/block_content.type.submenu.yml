@@ -1,0 +1,8 @@
+uuid: 04d0efe7-e2a3-44e8-b162-2591147ff45f
+langcode: en
+status: true
+dependencies: {  }
+id: submenu
+label: Submenu
+revision: 0
+description: ''
