@@ -14,10 +14,9 @@ RUN apk add --no-cache --virtual .build-deps \
         make \
     && apk add --no-cache imagemagick-dev imagemagick \
     && pecl install imagick \
-    && apk del .build-deps \
-    && docker-php-ext-install imagemagick
+    && apk del .build-deps
 
-#RUN echo "extension=imagick.so" > /usr/local/etc/php/conf.d/imagick.ini
+RUN echo "extension=imagick.so" > /usr/local/etc/php/conf.d/imagick.ini
 
 RUN apk add --no-cache libpng libpng-dev libjpeg-turbo-dev libwebp-dev zlib-dev libxpm-dev && docker-php-ext-install gd && apk del libpng-dev libjpeg-turbo-dev libwebp-dev zlib-dev libxpm-dev
 #RUN echo "extension=gd.so" > /usr/local/etc/php/conf.d/gd.ini
