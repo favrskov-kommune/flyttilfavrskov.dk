@@ -1,6 +1,21 @@
-# are these necessary, since they are placed outside the code folder?
-Dockerfile
-docker-compose.yaml
+# Meta files
+**/.git
 .git
 .idea
-*/node_modules
+.gitignore
+.ddev
+deployer
+
+# Node dependencies
+**/node_modules
+node_modules
+**/build-assets/dist
+
+# Php dependencies
+**/vendor
+vendor
+
+# Local folders
+sql
+logs
+webroot/sites/*/files

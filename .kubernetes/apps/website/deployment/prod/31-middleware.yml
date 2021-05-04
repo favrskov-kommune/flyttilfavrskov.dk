@@ -1,0 +1,20 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: redirect-domain
+  namespace: flyttilfavrskov
+spec:
+  redirectRegex:
+    regex: "^https?://(?:www\\.)?(?:flyttilfavrskov.dk|prod.flyttilfavrskov.drupal.dk)(.*)"
+    replacement: "https://prod.flyttilfavrskov.drupal.dk$1"
+    #permanent: true
+
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: gzip-compress
+  namespace: flyttilfavrskov
+spec:
+  compress: {}
