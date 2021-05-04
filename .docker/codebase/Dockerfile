@@ -1,4 +1,4 @@
-FROM composer:1.10.22 as website-build
+FROM composer:1.10.17 as website-build
 
 # Install system dependencies
 RUN apk add --no-cache \
