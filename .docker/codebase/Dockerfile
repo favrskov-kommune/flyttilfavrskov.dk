@@ -6,8 +6,8 @@ RUN apk add --no-cache \
   nodejs=12.22.1-r0 \
   npm
 
-RUN yum install ImageMagick ImageMagick-devel \
-  && yum install pcre-devel
+RUN apk --no-cache add imagemagick \
+  && apk --no-cache add file
 
 # Set root folder
 WORKDIR /app
