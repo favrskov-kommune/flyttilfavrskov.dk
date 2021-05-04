@@ -9,7 +9,7 @@ RUN apk add --no-cache \
 RUN apk --no-cache add pcre-dev ${PHPIZE_DEPS} \
   && pecl install xdebug \
   && docker-php-ext-enable xdebug \
-  && apk del pcre-dev ${PHPIZE_DEPS}
+  && apk del pcre-dev ${PHPIZE_DEPS} \
   && docker-php-ext-enable imagick
 
 # Set root folder
