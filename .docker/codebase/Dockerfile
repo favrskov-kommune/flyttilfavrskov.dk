@@ -25,7 +25,8 @@ ADD composer.json \
   /app/
 COPY scripts/composer /app/scripts/composer
 #COPY assets /app/assets
-RUN composer install --ignore-platform-reqs --optimize-autoloader --no-dev --no-interaction --no-progress --prefer-dist
+#RUN composer install --ignore-platform-reqs --optimize-autoloader --no-dev --no-interaction --no-progress --prefer-dist
+RUN composer install --optimize-autoloader --no-dev --no-interaction --no-progress
 
 # Build frontend
 COPY webroot/sites/flyttilfavrskov.dk/themes/custom/dds_premium/build-assets /app/webroot/sites/flyttilfavrskov.dk/themes/custom/dds_premium/build-assets

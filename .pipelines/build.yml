@@ -73,8 +73,8 @@ pool:
 jobs:
   - job: codebase
     displayName: Codebase
-    variables:
-      - group: codebase-variables
+#    variables:
+#      - group: codebase-variables
     steps:
       - task: CopyFiles@2
         displayName: Copy kubernetes deployment config
