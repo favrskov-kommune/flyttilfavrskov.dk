@@ -14,6 +14,8 @@ RUN yum install -y \
   openssl \
   && yum clean all
 
+RUN pecl install imagick && docker-php-ext-enable imagick
+
 # Copy conf
 COPY .docker/apache/etc/httpd/conf.d/*.conf /etc/httpd/conf.d/
 

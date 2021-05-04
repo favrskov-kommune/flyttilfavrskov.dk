@@ -5,6 +5,9 @@ FROM ${CODEBASE_IMAGE} AS codebase
 # Build runtime
 FROM novicell.azurecr.io/php:7.4-fpm-newrelic
 
+# Install system dependencies
+RUN pecl install imagick && docker-php-ext-enable imagick
+
 # Set workdir
 WORKDIR /app
 
