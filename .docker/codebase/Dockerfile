@@ -10,6 +10,7 @@ RUN apk --no-cache add pcre-dev ${PHPIZE_DEPS} \
   && pecl install imagick \
   && pecl install imagick-devel \
   && docker-php-ext-enable imagick \
+  && docker-php-ext-enable imagick-devel \
   && apk del pcre-dev ${PHPIZE_DEPS}
 
 # echo "extension=imagick.so" > /etc/php.d/20-imagick.ini
