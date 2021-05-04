@@ -13,10 +13,13 @@ RUN apk add --no-cache --virtual .build-deps \
         g++ \
         make \
     && apk add --no-cache imagemagick-dev imagemagick \
+    && apk add --no-cache gd \
     && pecl install imagick \
+    && pecl install gd \
     && apk del .build-deps
 
 RUN echo "extension=imagick" > /usr/local/etc/php/conf.d/imagick.ini
+RUN echo "extension=gd" > /usr/local/etc/php/conf.d/gd.ini
 
 # Set root folder
 WORKDIR /app
