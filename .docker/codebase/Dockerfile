@@ -7,7 +7,10 @@ RUN apk add --no-cache \
   npm
 
 RUN apk --no-cache add imagemagick \
-  && apk --no-cache add file
+  && apk --no-cache add file \
+  && pecl install imagick \
+  && pecl install imagick-devel \
+  && docker-php-ext-enable imagick \
 
 # Set root folder
 WORKDIR /app
