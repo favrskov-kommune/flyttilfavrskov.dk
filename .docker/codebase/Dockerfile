@@ -25,7 +25,7 @@ RUN apk add --no-cache --virtual .build-deps \
 #  && pecl install imagick-devel \
 #  && docker-php-ext-enable imagick
 #
-RUN echo "extension=imagick" > /etc/php/conf.d/imagick.ini
+RUN echo "extension=imagick" > /etc/php7/conf.d/imagick.ini
 #
 #RUN rm -rf /tmp/pear; apk del autoconf g++ make;
 
