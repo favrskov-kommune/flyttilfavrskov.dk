@@ -3,7 +3,7 @@ FROM composer:1.10.17 as website-build
 # Install system dependencies
 RUN apk add --no-cache \
   --repository http://dl-cdn.alpinelinux.org/alpine/v3.12/main/ \
-  nodejs=12.21.1 \
+  nodejs=12.22.1-r0 \
   npm
 
 # Set root folder
