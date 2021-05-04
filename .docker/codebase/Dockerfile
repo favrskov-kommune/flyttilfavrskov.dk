@@ -7,11 +7,15 @@ RUN apk add --no-cache \
   npm
 
 # Install image preview generator tools
+RUN apk --no-cache add autoconf g++ make
+
 RUN apk add --no-cache file
 RUN apk --update add imagemagick \
   && pecl install imagick \
   && pecl install imagick-devel \
-  && docker-php-ext-enable imagick \
+  && docker-php-ext-enable imagick
+
+RUN rm -rf /tmp/pear; apk del autoconf g++ make;
 #RUN echo "extension=imagick.so" > /etc/php.d/20-imagick.ini
 
 #RUN apt-get update && apt-get install -y \
