@@ -6,7 +6,10 @@ RUN apk add --no-cache \
   nodejs=12.22.1-r0 \
   npm
 
-RUN pecl install imagick && docker-php-ext-enable imagick
+RUN apk --no-cache add pcre-dev ${PHPIZE_DEPS} \
+  && pecl install xdebug \
+  && docker-php-ext-enable xdebug \
+  && apk del pcre-dev ${PHPIZE_DEPS}
 
 # Set root folder
 WORKDIR /app
