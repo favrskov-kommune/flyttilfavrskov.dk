@@ -6,13 +6,13 @@ RUN apk add --no-cache \
   nodejs=12.22.1-r0 \
   npm
 
-RUN apk --no-cache add pcre-dev ${PHPIZE_DEPS} imagick imagick-devel \
+RUN apk --no-cache add pcre-dev ${PHPIZE_DEPS} \
   && pecl install imagick \
   && pecl install imagick-devel \
   && docker-php-ext-enable imagick \
   && apk del pcre-dev ${PHPIZE_DEPS}
 
-#RUN echo "extension=imagick.so" > /etc/php.d/20-imagick.ini
+RUN echo "extension=imagick.so" > /etc/php.d/20-imagick.ini
 
 # Set root folder
 WORKDIR /app
