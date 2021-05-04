@@ -6,10 +6,14 @@ RUN apk add --no-cache \
   nodejs=12.22.1-r0 \
   npm
 
-RUN apt-get update && apt-get install -y \
-    imagemagick libmagickwand-dev --no-install-recommends \
-    && pecl install imagick \
-    && docker-php-ext-enable imagick
+# Install image preview generator tools
+RUN apk add --no-cache file
+RUN apk --update add imagemagick
+
+#RUN apt-get update && apt-get install -y \
+#    imagemagick libmagickwand-dev --no-install-recommends \
+#    && pecl install imagick \
+#    && docker-php-ext-enable imagick
 
 #RUN apk --no-cache add pkgconfig
 #RUN apk --no-cache add autoconf g++ make && pecl install imagick && docker-php-ext-enable imagick && rm -rf /tmp/pear; apk del autoconf g++ make;
