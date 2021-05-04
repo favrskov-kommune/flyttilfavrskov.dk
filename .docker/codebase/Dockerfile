@@ -6,19 +6,28 @@ RUN apk add --no-cache \
   nodejs=12.22.1-r0 \
   npm
 
+RUN apk add --no-cache --virtual .build-deps \
+        libxml2-dev \
+        shadow \
+        autoconf \
+        g++ \
+        make \
+    && apk add --no-cache imagemagick-dev imagemagick \
+    && pecl install imagick-beta \
+    && apk del .build-deps
+
 # Install image preview generator tools
-RUN apk --no-cache add autoconf g++ make
-
-RUN apk add --no-cache file
-RUN apk --update add imagemagick \
-  && pecl install imagick \
-  && pecl install imagick-devel \
-  && docker-php-ext-enable imagick \
-  && docker-php-ext-enable imagick-devel
-
-RUN echo "extension=imagick" > /etc/php/conf.d/imagick.ini
-
-RUN rm -rf /tmp/pear; apk del autoconf g++ make;
+#RUN apk --no-cache add autoconf g++ make
+#
+#RUN apk add --no-cache file
+#RUN apk --update add imagemagick \
+#  && pecl install imagick \
+#  && pecl install imagick-devel \
+#  && docker-php-ext-enable imagick
+#
+##RUN echo "extension=imagick" > /etc/php/conf.d/imagick.ini
+#
+#RUN rm -rf /tmp/pear; apk del autoconf g++ make;
 
 #RUN apt-get update && apt-get install -y \
 #    imagemagick libmagickwand-dev --no-install-recommends \
