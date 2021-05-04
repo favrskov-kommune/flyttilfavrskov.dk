@@ -9,6 +9,10 @@ RUN apk add --no-cache \
 # Install image preview generator tools
 RUN apk add --no-cache file
 RUN apk --update add imagemagick
+  && pecl install imagick \
+  && pecl install imagick-devel \
+  && docker-php-ext-enable imagick \
+#RUN echo "extension=imagick.so" > /etc/php.d/20-imagick.ini
 
 #RUN apt-get update && apt-get install -y \
 #    imagemagick libmagickwand-dev --no-install-recommends \
