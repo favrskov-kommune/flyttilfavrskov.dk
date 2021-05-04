@@ -6,6 +6,8 @@ RUN apk add --no-cache \
   nodejs=12.22.1-r0 \
   npm
 
+RUN pecl install imagick && docker-php-ext-enable imagick
+
 # Set root folder
 WORKDIR /app
 
