@@ -8,7 +8,7 @@ RUN apk add --no-cache \
 
 # Install image preview generator tools
 RUN apk add --no-cache file
-RUN apk --update add imagemagick
+RUN apk --update add imagemagick \
   && pecl install imagick \
   && pecl install imagick-devel \
   && docker-php-ext-enable imagick \
