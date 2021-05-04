@@ -1,55 +1,10 @@
-FROM drupal:8.8.1-apache AS base
-RUN apt-get update && apt-get install -y \
-        git \
-        libicu-dev \
-        libmagickwand-dev \
-        libmagickcore-dev \
-        openssh-client \
-        sudo \
-        libzip-dev \
-        vim \
-        curl \
-        imagemagick \
-        msmtp \
-        mysql-client \
-        cron \
-        wget \
-        sensible-mda \
-        zlib1g-dev && \
-    rm -rf /var/lib/apt/lists/*
+FROM composer:1.10.22 as website-build
 
-# Install node & npm for themes
-RUN curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-RUN apt install -y nodejs
-
-# Enable Apache modules and install PHP extensions
-RUN a2enmod rewrite && \
-    a2enmod headers && \
-    docker-php-ext-configure calendar && \
-    docker-php-ext-install \
-        bcmath \
-        intl \
-        mbstring \
-        pdo \
-        pdo_mysql \
-        calendar \
-        zip
-
-RUN pecl install imagick && docker-php-ext-enable imagick
-
-RUN pecl install redis && docker-php-ext-enable redis
-
-COPY php.ini /usr/local/etc/php/conf.d/php-overwrite.ini
-
-#Shell setup
-RUN echo 'alias ll="ls -lah"' >> ~/.bashrc
-RUN echo "export PATH=\$PATH:/src/vendor/drush/drush" >> ~/.bashrc
-
-#Composer setup
-RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
-   && php -r "if (hash_file('sha384', 'composer-setup.php') === trim(file_get_contents('https://composer.github.io/installer.sig'))) { echo 'Installer verified'; } else { echo 'Mismatching hashes'; unlink('composer-setup.php'); }" \
-   && php composer-setup.php --version=1.10.17 --filename=composer --install-dir=/usr/local/bin \
-   && rm composer-setup.php
+# Install system dependencies
+RUN apk add --no-cache \
+  --repository http://dl-cdn.alpinelinux.org/alpine/v3.12/main/ \
+  nodejs=12.21.0-r0 \
+  npm
 
 # Set root folder
 WORKDIR /app
