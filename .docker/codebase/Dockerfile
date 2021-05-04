@@ -12,36 +12,11 @@ RUN apk add --no-cache --virtual .build-deps \
         autoconf \
         g++ \
         make \
-    && apk add --no-cache imagemagick-dev imagemagick \
-    && pecl install imagick-beta \
+    && apk add --no-cache imagemagick \
+    && pecl install imagick \
     && apk del .build-deps
 
-# Install image preview generator tools
-#RUN apk --no-cache add autoconf g++ make
-#
-#RUN apk add --no-cache file
-#RUN apk --update add imagemagick \
-#  && pecl install imagick \
-#  && pecl install imagick-devel \
-#  && docker-php-ext-enable imagick
-#
 RUN echo "extension=imagick" > /usr/local/etc/php/conf.d/imagick.ini
-#
-#RUN rm -rf /tmp/pear; apk del autoconf g++ make;
-
-#RUN apt-get update && apt-get install -y \
-#    imagemagick libmagickwand-dev --no-install-recommends \
-#    && pecl install imagick \
-#    && docker-php-ext-enable imagick
-
-#RUN apk --no-cache add pkgconfig
-#RUN apk --no-cache add autoconf g++ make && pecl install imagick && docker-php-ext-enable imagick && rm -rf /tmp/pear; apk del autoconf g++ make;
-
-#RUN apk --no-cache add imagemagick \
-#  && apk --no-cache add file \
-#  && pecl install imagick \
-#  && pecl install imagick-devel \
-#  && docker-php-ext-enable imagick \
 
 # Set root folder
 WORKDIR /app
