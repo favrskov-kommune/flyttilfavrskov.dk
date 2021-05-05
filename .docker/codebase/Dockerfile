@@ -45,6 +45,7 @@ RUN composer install --optimize-autoloader --no-dev --no-interaction --no-progre
 
 # Build frontend
 COPY webroot/sites/flyttilfavrskov.dk/themes/custom/dds_premium/build-assets /app/webroot/sites/flyttilfavrskov.dk/themes/custom/dds_premium/build-assets
+COPY webroot/sites/flyttilfavrskov.dk/themes/custom/dds_premium/css /app/webroot/sites/flyttilfavrskov.dk/themes/custom/dds_premium/css
 RUN cd /app/webroot/sites/flyttilfavrskov.dk/themes/custom/dds_premium/build-assets \
     && npm run build:prod
 
