@@ -44,8 +44,7 @@ COPY scripts/composer /app/scripts/composer
 RUN composer install --optimize-autoloader --no-dev --no-interaction --no-progress
 
 # Build frontend
-COPY webroot/sites/flyttilfavrskov.dk/themes/custom/dds_premium/build-assets /app/webroot/sites/flyttilfavrskov.dk/themes/custom/dds_premium/build-assets
-COPY webroot/sites/flyttilfavrskov.dk/themes/custom/dds_premium/css /app/webroot/sites/flyttilfavrskov.dk/themes/custom/dds_premium/css
+COPY webroot/sites/flyttilfavrskov.dk/themes/custom/dds_premium /app/webroot/sites/flyttilfavrskov.dk/themes/custom/dds_premium
 RUN cd /app/webroot/sites/flyttilfavrskov.dk/themes/custom/dds_premium/build-assets \
     && npm run build:prod
 
