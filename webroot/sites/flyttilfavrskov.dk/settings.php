@@ -283,6 +283,9 @@ $config_directories = [];
 // For security reasons, this should not be in git
 // I have added a new hash to the settings.local.php file
 //$settings['hash_salt'] = '7ACy4vXh8jxlwvFqE_xdFDEkse13yIz8Fv1J7KgRWLY0OYwxKFYe5LL8tBI0H1SyLtlRyLc0Iw
+if (!empty(getenv('HASH_SALT'))) {
+  $settings['hash_salt'] = getenv('HASH_SALT');
+}
 
 /**
  * Deployment identifier.
@@ -785,7 +788,7 @@ if (extension_loaded('redis') && !empty(getenv('REDIS_HOST'))) {
   $settings['redis.connection']['host'] = getenv('REDIS_HOST');
   $settings['redis.connection']['port'] = '6379';
   $settings['cache']['default'] = 'cache.backend.redis';
-  $settings['cache_prefix'] = 'beierholm_';
+  $settings['cache_prefix'] = 'flyttilfavrskov_';
 }
 
 $settings['reverse_proxy'] = TRUE;
