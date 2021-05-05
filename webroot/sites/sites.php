@@ -56,9 +56,9 @@
  * @see https://www.drupal.org/documentation/install/multi-site
  */
 
-$domain = getenv('DOMAIN');
-if($domain) {
-  $sites[$domain] = 'flyttilfavrskov.dk';
+$external_domains = explode(',', getenv('EXTERNAL_DOMAINS'));
+foreach($external_domains as $external_domain){
+  $sites[$external_domain] = 'flyttilfavrskov.dk';
 }
 
 $ddev_domain = getenv('DDEV_HOSTNAME');

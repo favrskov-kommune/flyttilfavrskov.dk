@@ -780,6 +780,23 @@ $settings['entity_update_backup'] = TRUE;
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
 
+if (extension_loaded('redis') && !empty(getenv('REDIS_HOST'))) {
+  $settings['redis.connection']['interface'] = 'PhpRedis';
+  $settings['redis.connection']['host'] = getenv('REDIS_HOST');
+  $settings['redis.connection']['port'] = '6379';
+  $settings['cache']['default'] = 'cache.backend.redis';
+  $settings['cache_prefix'] = 'beierholm_';
+}
+
+$settings['reverse_proxy'] = TRUE;
+$settings['reverse_proxy_addresses'] = [$_SERVER['REMOTE_ADDR']];
+$settings['reverse_proxy_trusted_headers'] = Request::HEADER_X_FORWARDED_ALL;
+
+$config['config_split.config_split.develop']['status'] = strtolower(getenv('CONFIG_SPLIT_DEVELOPMENT')) === 'true';
+
+$settings['file_private_path'] = $app_root . '/../private-files';
+$settings['trusted_host_patterns'] = explode(',', getenv('TRUSTED_HOST_PATTERNS'));
+
 $settings['config_sync_directory'] = '../config/config_RP3ZHf1K2CC1t4SagtfWgG-j1fiU2TK0kuLbYVjhwY06dh3daELBES2x5MLfB0t5kOvsED3ibg/sync';
 
 $databases['default']['default'] = array (
