@@ -19,7 +19,7 @@ class DDSSiteInstallCommands extends DrushCommands
       if(getenv('SITES_FOLDER')) {
         //this is probably running in a docker container
         $dds_project_domain = getenv('SITES_FOLDER');
-        $input->setOption('db-url', 'mysql://'.getenv('DB_USER').':'.getenv('DB_PASS').'@'.getenv('DB_HOST').':'.getenv('DB_PORT').'/'.getenv('DB_NAME'));
+        $input->setOption('db-url', 'mysql://'.getenv('DB_USER').':'.getenv('DB_PASS').'@'.getenv('DB_HOST').':'.getenv('DB_PORT').'/'.getenv('DB_SCHEMA'));
         $input->setOption('sites-subdir', $dds_project_domain);
 
       } else {

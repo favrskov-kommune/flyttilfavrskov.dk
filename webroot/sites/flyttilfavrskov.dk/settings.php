@@ -804,7 +804,7 @@ $settings['trusted_host_patterns'] = explode(',', getenv('TRUSTED_HOST_PATTERNS'
 $settings['config_sync_directory'] = '../config/config_RP3ZHf1K2CC1t4SagtfWgG-j1fiU2TK0kuLbYVjhwY06dh3daELBES2x5MLfB0t5kOvsED3ibg/sync';
 
 $databases['default']['default'] = array (
-  'database' => getenv('DB_NAME'),
+  'database' => getenv('DB_SCHEMA'),
   'username' => getenv('DB_USER'),
   'password' => getenv('DB_PASS'),
   'prefix' => '',
