@@ -1,6 +1,6 @@
 #!/bin/bash
 
-/release/mount_drupal_drives.sh
+/release/mount_drupal_folders.sh
 
 # Configure NewRelic
 if [ "$NEWRELIC_LICENSE_KEY" != "" -a "$NEWRELIC_PROJECT_NAME" != "" ] ; then sed -i \
