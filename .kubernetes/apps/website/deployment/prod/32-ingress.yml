@@ -21,8 +21,8 @@ spec:
           namespace: flyttilfavrskov
       services:
         - name: website-apache-svc
-          passHostHeader: true
           namespace: flyttilfavrskov
+          passHostHeader: true
           port: 80
 
 ---
@@ -48,7 +48,7 @@ spec:
           namespace: flyttilfavrskov
       services:
         - name: website-apache-svc
-          passHostHeader: true
           namespace: flyttilfavrskov
+          passHostHeader: true
           port: 80
 

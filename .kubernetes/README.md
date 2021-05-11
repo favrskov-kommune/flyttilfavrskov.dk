@@ -4,14 +4,14 @@
 
 ```bash
 # Add secret with Storage Account credentials
-kubectl create secret generic azure-storage-secret --namespace favrskov --type=Opaque \
+kubectl create secret generic azure-storage-secret --namespace flyttilfavrskov --type=Opaque \
     --from-literal azurestorageaccountname="<ACCOUNT-NAME>" \
     --from-literal azurestorageaccountkey="<ACCESS-KEY>"
 ```
 
 ```bash
 # Add secret with Premium Storage Account credentials
-kubectl create secret generic azure-premium-storage-secret --namespace favrskov --type=Opaque \
+kubectl create secret generic azure-premium-storage-secret --namespace flyttilfavrskov --type=Opaque \
     --from-literal azurestorageaccountname="<ACCOUNT-NAME>" \
     --from-literal azurestorageaccountkey="<ACCESS-KEY>"
 ```

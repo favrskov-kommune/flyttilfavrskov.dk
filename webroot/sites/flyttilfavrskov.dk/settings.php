@@ -792,6 +792,23 @@ if (extension_loaded('redis') && !empty(getenv('REDIS_HOST'))) {
   $settings['cache_prefix'] = 'flyttilfavrskov_';
 }
 
+/**
+ * Elasticsearch configuration.
+ */
+if (!empty(getenv('ELASTICSEARCH_HOST')) && !empty(getenv('ELASTICSEARCH_PROTOCOL')) && !empty(getenv('ELASTICSEARCH_PORT'))) {
+  $config['search_api.server.elasticsearch']['backend_config']['host'] = getenv('ELASTICSEARCH_HOST');
+  $config['search_api.server.elasticsearch']['backend_config']['port'] = getenv('ELASTICSEARCH_PORT');
+  $config['elasticsearch_connector.cluster.content']['url'] = getenv('ELASTICSEARCH_PROTOCOL') . '://' . getenv('ELASTICSEARCH_HOST') . ':' . getenv('ELASTICSEARCH_PORT');
+
+  if (!empty(getenv('ELASTICSEARCH_AUTH_USERNAME')) && !empty(getenv('ELASTICSEARCH_AUTH_PASSWORD'))) {
+    $config['elasticsearch_connector.cluster.content']['options']['use_authentication'] = TRUE;
+    $config['elasticsearch_connector.cluster.content']['options']['authentication_type'] = 'Basic';
+    $config['elasticsearch_connector.cluster.content']['options']['username'] = getenv('ELASTICSEARCH_AUTH_USERNAME');
+    $config['elasticsearch_connector.cluster.content']['options']['password'] = getenv('ELASTICSEARCH_AUTH_PASSWORD');
+  }
+}
+
+// Ensure https behind load balancer
 $settings['reverse_proxy'] = TRUE;
 $settings['reverse_proxy_addresses'] = [$_SERVER['REMOTE_ADDR']];
 $settings['reverse_proxy_trusted_headers'] = Request::HEADER_X_FORWARDED_ALL;

@@ -6,7 +6,7 @@ metadata:
   name: website-php
   namespace: flyttilfavrskov
 spec:
-  replicas: 1
+  replicas: 4
 
   # Define deployment strategy to allow unavailable
   strategy:
@@ -71,7 +71,7 @@ spec:
 
       containers:
         - name: php
-          image: acrfavrskov.azurecr.io/flyttilfavrskov-php:1.0.0-feature.kubernetes.57
+          image: acrfavrskov.azurecr.io/flyttilfavrskov-php:1.0.0-feature.kubernetes.59
           ports:
             - containerPort: 9000
           securityContext:
