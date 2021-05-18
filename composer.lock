@@ -6770,10 +6770,10 @@
         },
         {
             "name": "novicell/dds_search",
-            "version": "1.6.0",
+            "version": "1.7.0",
             "dist": {
                 "type": "zip",
-                "url": "https://packages.drupal.dk/php/~/up/ver_22taQa/novicelldds_search-1-6-0.zip"
+                "url": "https://packages.drupal.dk/php/~/up/ver_1zFNt8/novicelldds_search-1-7-0.zip"
             },
             "require": {
                 "drupal/search_api_exclude_entity": "^1.0",
