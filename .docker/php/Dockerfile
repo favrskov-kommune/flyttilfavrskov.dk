@@ -8,7 +8,8 @@ FROM novicell.azurecr.io/php:7.4-fpm-newrelic
 # Set workdir
 WORKDIR /app
 
-# Copy configurations
+# Setup configurations
+# RUN rm -rf /usr/local/etc/php/conf.d/zz-*.ini
 COPY .docker/php/usr/local/etc/php/conf.d/*.ini /usr/local/etc/php/conf.d/
 COPY .docker/php/usr/local/etc/php-fpm.d/*.conf /usr/local/etc/php-fpm.d/
 COPY .docker/php/usr/local/etc/smtp/*.conf /usr/local/etc/smtp/
