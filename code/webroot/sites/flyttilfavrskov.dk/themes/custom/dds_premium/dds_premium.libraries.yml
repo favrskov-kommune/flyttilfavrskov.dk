@@ -5,3 +5,4 @@ master:
       build-assets/dist/css/master.min.css: { minified: true }
   js:
     build-assets/dist/scripts/app.bundle.js: { preprocess: false }
+    scripts/sleeknote.js: { preprocess: true, attributes: { id: sleeknoteScript } }
