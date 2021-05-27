@@ -27,10 +27,12 @@
     "php": "^7.2",
     "composer/installers": "^1.2",
     "cweagans/composer-patches": "^1.6.5",
-    "drupal-composer/drupal-scaffold": "^2.5",
+    "drupal/core-composer-scaffold": "^8.8",
+    "drupal/core-project-message": "^8.8",
+    "drupal/core-vendor-hardening": "^8.8",
     "drupal/allowed_formats": "^1.2",
     "drupal/config_ignore": "^2.1",
-    "drupal/core": "~8.8",
+    "drupal/core": "^8.8",
     "drupal/editor_advanced_link": "^1.6",
     "drupal/mailchimp": "^1.11",
     "drupal/media_pdf_thumbnail": "^2.2",
@@ -53,6 +55,7 @@
     "novicell/dds_tools": "^1.2",
     "novicell/dds_translation": "^1.0",
     "ongr/elasticsearch-dsl": "6.1.0",
+    "oomphinc/composer-installers-extender": "^2.0",
     "symfony/filesystem": "~3.0",
     "zaporylie/composer-drupal-optimizations": "^1.1"
   },
@@ -72,6 +75,7 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "config": {
+    "optimize-autoloader": true,
     "sort-packages": true
   },
   "autoload": {
@@ -79,23 +83,15 @@
       "scripts/composer/ScriptHandler.php"
     ]
   },
-  "scripts": {
-    "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-    "pre-install-cmd": [
-      "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-    ],
-    "pre-update-cmd": [
-      "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-    ],
-    "post-install-cmd": [
-      "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-      "DrupalProject\\composer\\ScriptHandler::askForRemovingGitDirs"
-    ],
-    "post-update-cmd": [
-      "DrupalProject\\composer\\ScriptHandler::askForRemovingGitDirs"
-    ]
-  },
   "extra": {
+    "drupal-scaffold": {
+      "allowed-packages": [
+        "drupal/core"
+      ],
+      "locations": {
+        "web-root": "webroot/"
+      }
+    },
     "installer-types": [
       "npm-asset",
       "bower-asset"
