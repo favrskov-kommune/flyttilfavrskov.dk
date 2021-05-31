@@ -1,0 +1,63 @@
+---
+apiVersion: batch/v1
+kind: Job
+
+metadata:
+  name: website-config-import
+  namespace: flyttilfavrskov
+spec:
+  backoffLimit: 4
+  template:
+    spec:
+      restartPolicy: Never
+
+      volumes:
+        - name: files-public-azfp
+          persistentVolumeClaim:
+            claimName: files-public-azfp-pvc
+
+        - name: log-azfp
+          persistentVolumeClaim:
+            claimName: log-azfp-pvc
+
+        - name: files-private-azf
+          persistentVolumeClaim:
+            claimName: files-private-azf-pvc
+
+        - name: files-cache
+          persistentVolumeClaim:
+            claimName: files-cache-longhorn-pvc
+
+      containers:
+        - name: php
+          image: acrfavrskov.azurecr.io/flyttilfavrskov-php:kubernetes-1.0.12
+          securityContext:
+            runAsUser: 0
+            privileged: true
+            capabilities:
+              add:
+                - SYS_ADMIN # Enabled to bind mounts correctly
+
+          volumeMounts:
+            - name: files-public-azfp
+              mountPath: /app/webroot/sites/flyttilfavrskov.dk/files
+
+            - name: log-azfp
+              mountPath: /mnt/logs
+              subPath: website # Store under website subdir on mounted storage
+
+            - name: files-private-azf
+              mountPath: /app/private-files
+
+            - name: files-cache
+              mountPath: /mnt/cache
+              subPath: cache # Store under cache subdir on mounted storage
+
+          envFrom:
+            - configMapRef:
+                name: php-env
+            - secretRef:
+                name: akvs-drupal
+
+          command: ["/release/entrypoint.config_import.sh"]
+

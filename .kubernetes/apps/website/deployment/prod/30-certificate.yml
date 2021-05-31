@@ -1,0 +1,18 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+
+metadata:
+  name: website-cert
+  namespace: flyttilfavrskov
+spec:
+  secretName: website-cert
+  issuerRef:
+    name: letsencrypt-production
+    kind: ClusterIssuer
+  commonName: flyttilfavrskov.dk
+  dnsNames:
+    - flyttilfavrskov.dk
+    - www.flyttilfavrskov.dk
+    - oplev.favrskov.dk
+    - prod.flyttilfavrskov.drupal.dk
