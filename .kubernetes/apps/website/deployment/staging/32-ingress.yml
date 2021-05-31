@@ -1,0 +1,54 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+
+metadata:
+  name: website-ingress-unsecure
+  namespace: flyttilfavrskov
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`staging.flyttilfavrskov.drupal.dk`) && PathPrefix(`/`)
+      kind: Rule
+      priority: 1
+      middlewares:
+        - name: redirect-https
+          namespace: traefik
+        - name: redirect-domain
+          namespace: flyttilfavrskov
+        - name: gzip-compress
+          namespace: flyttilfavrskov
+      services:
+        - name: website-apache-svc
+          namespace: flyttilfavrskov
+          passHostHeader: true
+          port: 80
+
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+
+metadata:
+  name: website-ingress
+  namespace: flyttilfavrskov
+spec:
+  entryPoints:
+    - websecure
+  tls:
+    secretName: website-cert
+  routes:
+    - match: Host(`staging.flyttilfavrskov.drupal.dk`) && PathPrefix(`/`)
+      kind: Rule
+      priority: 2
+      middlewares:
+        - name: redirect-domain
+          namespace: flyttilfavrskov
+        - name: gzip-compress
+          namespace: flyttilfavrskov
+      services:
+        - name: website-apache-svc
+          namespace: flyttilfavrskov
+          passHostHeader: true
+          port: 80
+
