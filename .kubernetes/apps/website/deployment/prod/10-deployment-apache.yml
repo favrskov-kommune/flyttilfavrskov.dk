@@ -63,7 +63,7 @@ spec:
 
       containers:
         - name: apache
-          image: acrfavrskov.azurecr.io/flyttilfavrskov-apache:1.0.0-feature.kubernetes.59
+          image: acrfavrskov.azurecr.io/flyttilfavrskov-apache:1.0.0-feature.kubernetes.71
           ports:
             - containerPort: 80
           securityContext:

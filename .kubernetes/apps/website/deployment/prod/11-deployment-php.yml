@@ -71,7 +71,7 @@ spec:
 
       containers:
         - name: php
-          image: acrfavrskov.azurecr.io/flyttilfavrskov-php:1.0.0-feature.kubernetes.59
+          image: acrfavrskov.azurecr.io/flyttilfavrskov-php:1.0.0-feature.kubernetes.71
           ports:
             - containerPort: 9000
           securityContext:
@@ -97,7 +97,7 @@ spec:
 
           resources:
             requests:
-              cpu: 250m
+              cpu: 100m
               memory: 512Mi
 
           volumeMounts:

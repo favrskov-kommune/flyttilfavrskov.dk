@@ -6,9 +6,9 @@ metadata:
   namespace: flyttilfavrskov
 spec:
   redirectRegex:
-    regex: "^https?://(?:www\\.)?(?:flyttilfavrskov.dk|prod.flyttilfavrskov.drupal.dk)(.*)"
-    replacement: "https://prod.flyttilfavrskov.drupal.dk$1"
-    #permanent: true
+    regex: "^https?://(?:www\\.)?(?:flyttilfavrskov.dk|oplev.favrskov.dk|prod.flyttilfavrskov.drupal.dk)(.*)"
+    replacement: "https://flyttilfavrskov.dk$1"
+    permanent: true
 
 ---
 apiVersion: traefik.containo.us/v1alpha1

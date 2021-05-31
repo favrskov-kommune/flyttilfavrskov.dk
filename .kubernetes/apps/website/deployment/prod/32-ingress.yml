@@ -9,7 +9,7 @@ spec:
   entryPoints:
     - web
   routes:
-    - match: Host(`flyttilfavrskov.dk`, `www.flyttilfavrskov.dk`, `prod.flyttilfavrskov.drupal.dk`) && PathPrefix(`/`)
+    - match: Host(`flyttilfavrskov.dk`, `www.flyttilfavrskov.dk`, `oplev.favrskov.dk`, `prod.flyttilfavrskov.drupal.dk`) && PathPrefix(`/`)
       kind: Rule
       priority: 1
       middlewares:
@@ -38,7 +38,7 @@ spec:
   tls:
     secretName: website-cert
   routes:
-    - match: Host(`flyttilfavrskov.dk`, `www.flyttilfavrskov.dk`, `prod.flyttilfavrskov.drupal.dk`) && PathPrefix(`/`)
+    - match: Host(`flyttilfavrskov.dk`, `www.flyttilfavrskov.dk`, `oplev.favrskov.dk`, `prod.flyttilfavrskov.drupal.dk`) && PathPrefix(`/`)
       kind: Rule
       priority: 2
       middlewares:

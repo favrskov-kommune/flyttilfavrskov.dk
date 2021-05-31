@@ -10,9 +10,9 @@ spec:
   issuerRef:
     name: letsencrypt-production
     kind: ClusterIssuer
-  commonName: prod.flyttilfavrskov.drupal.dk
+  commonName: flyttilfavrskov.dk
   dnsNames:
+    - flyttilfavrskov.dk
+    - www.flyttilfavrskov.dk
+    - oplev.favrskov.dk
     - prod.flyttilfavrskov.drupal.dk
-#    - flyttilfavrskov.dk
-#    - www.flyttilfavrskov.dk
-
