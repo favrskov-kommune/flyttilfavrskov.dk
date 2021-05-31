@@ -40,7 +40,7 @@ spec:
 
           volumeMounts:
             - name: files-public-azfp
-              mountPath: /app/webroot/sites/favrskov.dk/files
+              mountPath: /app/webroot/sites/flyttilfavrskov.dk/files
 
             - name: log-azfp
               mountPath: /mnt/logs
