@@ -4,16 +4,18 @@ status: true
 dependencies:
   config:
     - image.style.thumbnail
+    - taxonomy.vocabulary.media_categories
   module:
     - image
     - media
+    - taxonomy
     - user
 _core:
   default_config_hash: rRzAWaXpJGYA2gPG6BmGxy8gfFd4srCc-LQY3JB6tR8
 id: media
 label: Media
 module: views
-description: ''
+description: 'Find and manage media.'
 tag: ''
 base_table: media_field_data
 base_field: mid
@@ -44,11 +46,11 @@ display:
         options:
           submit_button: Filter
           reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          reset_button_label: Gendan
+          exposed_sorts_label: 'Sortér efter'
           expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_asc_label: Stigende
+          sort_desc_label: Faldende
       pager:
         type: full
         options:
@@ -58,17 +60,17 @@ display:
           total_pages: null
           expose:
             items_per_page: false
-            items_per_page_label: 'Items per page'
+            items_per_page_label: 'Antal elementer'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
+            items_per_page_options_all_label: '- Alle -'
             offset: false
-            offset_label: Offset
+            offset_label: Forskydning
           tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
-            first: '« First'
-            last: 'Last »'
+            previous: '‹ Forrige'
+            next: 'Næste ›'
+            first: '« Første'
+            last: 'Sidste »'
           quantity: 9
       style:
         type: table
@@ -184,7 +186,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          action_title: Action
+          action_title: Handling
           include_exclude: exclude
           selected_actions: {  }
           entity_type: media
@@ -374,7 +376,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Author
+          label: Forfatter
           exclude: false
           alter:
             alter_text: false
@@ -484,8 +486,8 @@ display:
           type: boolean
           settings:
             format: custom
-            format_custom_true: Published
-            format_custom_false: Unpublished
+            format_custom_true: Udgivet
+            format_custom_false: 'Ikke udgivet'
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -506,7 +508,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Updated
+          label: Opdateret
           exclude: false
           alter:
             alter_text: false
@@ -573,7 +575,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Operations
+          label: Handlinger
           exclude: false
           alter:
             alter_text: false
@@ -716,7 +718,7 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: 'True'
+            label: Sandt
             description: null
             use_operator: false
             operator: status_op
@@ -730,7 +732,7 @@ display:
             operator_list: {  }
           is_grouped: true
           group_info:
-            label: 'Published status'
+            label: Publiceringsstatus
             description: ''
             identifier: status
             optional: true
@@ -741,16 +743,55 @@ display:
             default_group_multiple: {  }
             group_items:
               1:
-                title: Published
+                title: Udgivet
                 operator: '='
                 value: '1'
               2:
-                title: Unpublished
+                title: 'Ikke udgivet'
                 operator: '='
                 value: '0'
           plugin_id: boolean
           entity_type: media
           entity_field: status
+        status_extra:
+          id: status_extra
+          table: media_field_data
+          field: status_extra
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: ''
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: media
+          plugin_id: media_status
         langcode:
           id: langcode
           table: media_field_data
@@ -764,7 +805,7 @@ display:
           exposed: true
           expose:
             operator_id: langcode_op
-            label: Language
+            label: Sprog
             description: ''
             use_operator: false
             operator: langcode_op
@@ -794,45 +835,56 @@ display:
           entity_type: media
           entity_field: langcode
           plugin_id: language
-        status_extra:
-          group_info:
-            widget: select
-            group_items: {  }
-            multiple: false
-            description: ''
-            default_group_multiple: {  }
-            default_group: All
-            label: ''
-            identifier: ''
-            optional: true
-            remember: false
-          group: 1
+        field_media_category_target_id:
+          id: field_media_category_target_id
+          table: media__field_media_category
+          field: field_media_category_target_id
           relationship: none
-          exposed: false
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
           expose:
-            use_operator: false
-            remember: false
-            operator_id: ''
-            multiple: false
+            operator_id: field_media_category_target_id_op
+            label: 'Medie kategori'
             description: ''
-            required: false
-            label: ''
+            use_operator: false
+            operator: field_media_category_target_id_op
             operator_limit_selection: false
-            operator: ''
-            identifier: ''
             operator_list: {  }
+            identifier: field_media_category_target_id
+            required: false
+            remember: false
+            multiple: false
             remember_roles:
               authenticated: authenticated
-          entity_type: media
-          value: ''
-          field: status_extra
+              anonymous: '0'
+              editor: '0'
+              webmaster: '0'
+              administrator: '0'
+              monitor: '0'
+            reduce: false
           is_grouped: false
-          admin_label: ''
-          operator: '='
-          table: media_field_data
-          plugin_id: media_status
-          id: status_extra
-          group_type: group
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: media_categories
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
       sorts:
         created:
           id: created
@@ -862,7 +914,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: 'No media available.'
+          content: 'Ingen tilgængelige media'
           plugin_id: text_custom
       relationships: {  }
       arguments: {  }

@@ -43,5 +43,7 @@
 ] %}
 
 <div {{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
   <div class="map-container" id="gis_minimap_{{ gis_block_id }}"></div>
 </div>
