@@ -134,6 +134,11 @@ jobs:
     dependsOn: codebase
     steps:
       - task: Docker@2
+        displayName: Login
+        inputs:
+          containerRegistry: $(sharedRegistry)
+          command: login
+      - task: Docker@2
         displayName: Build codebase
         inputs:
           containerRegistry: $(projectRegistry)
@@ -163,3 +168,8 @@ jobs:
           command: push
           tags: |
             $(Build.BuildNumber)
+      - task: Docker@2
+        displayName: Logout
+        inputs:
+          containerRegistry: $(sharedRegistry)
+          command: logout
