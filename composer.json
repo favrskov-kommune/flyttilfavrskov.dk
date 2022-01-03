@@ -27,27 +27,27 @@
     "php": "^7.4",
     "composer/installers": "^1.2",
     "cweagans/composer-patches": "^1.6.5",
-    "drupal/core-composer-scaffold": "^8.8",
-    "drupal/core-project-message": "^8.8",
-    "drupal/core-vendor-hardening": "^8.8",
-    "drupal/allowed_formats": "^1.2",
+    "drupal/core-composer-scaffold": "^9.0",
+    "drupal/core-project-message": "^9.0",
+    "drupal/core-vendor-hardening": "^9.0",
+    "drupal/allowed_formats": "^1.3",
     "drupal/config_ignore": "^2.1",
-    "drupal/core": "^8.8",
+    "drupal/core": "^9.0",
     "drupal/editor_advanced_link": "^1.6",
     "drupal/mailchimp": "^1.11",
-    "drupal/media_pdf_thumbnail": "^2.2",
+    "drupal/media_pdf_thumbnail": "^3.7",
     "drupal/view_unpublished": "^1.0",
-    "drush/drush": "^9.0",
+    "drush/drush": "^10.0",
     "elasticsearch/elasticsearch": "^7.0",
     "novicell/dds_content": "~1.0",
-    "novicell/dds_content_hierarchy": "~2.1",
+    "novicell/dds_content_hierarchy": "~2.3",
     "novicell/dds_cookieinfo": "~2.0",
     "novicell/dds_dynamic_key_value": "^1.1",
     "novicell/dds_editors": "~1.0",
     "novicell/dds_media": "~2.0",
     "novicell/dds_monitor": "~1.0",
     "novicell/dds_news": "^1.1",
-    "novicell/dds_performance": "^1.0",
+    "novicell/dds_performance": "^1.1",
     "novicell/dds_premium_installer": "~2.0",
     "novicell/dds_search": "~1.0",
     "novicell/dds_seo": "~1.0",
@@ -60,14 +60,8 @@
     "zaporylie/composer-drupal-optimizations": "^1.1"
   },
   "require-dev": {
-    "behat/mink": "~1.7",
-    "behat/mink-goutte-driver": "~1.2",
-    "jcalderonzumba/gastonjs": "~1.0.2",
-    "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
-    "mikey179/vfsstream": "~1.2",
-    "phpunit/phpunit": "~4.8",
-    "symfony/css-selector": "~2.8",
-    "drupal/devel": "~1.0"
+      "drupal/devel": "~4.0",
+      "kint-php/kint": "^3.3"
   },
   "conflict": {
     "drupal/drupal": "*"
@@ -76,7 +70,16 @@
   "prefer-stable": true,
   "config": {
     "optimize-autoloader": true,
-    "sort-packages": true
+    "sort-packages": true,
+    "allow-plugins": {
+      "cweagans/composer-patches": true,
+      "drupal/core-composer-scaffold": true,
+      "drupal/core-project-message": true,
+      "drupal/core-vendor-hardening": true,
+      "composer/installers": true,
+      "zaporylie/composer-drupal-optimizations": true,
+      "oomphinc/composer-installers-extender": true
+    }
   },
   "autoload": {
     "classmap": [

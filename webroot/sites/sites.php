@@ -62,8 +62,13 @@ foreach($external_domains as $external_domain){
 }
 
 $ddev_domain = getenv('DDEV_HOSTNAME');
+
 if($ddev_domain) {
-  $sites[$ddev_domain]  = 'flyttilfavrskov.dk';
+  $domains = explode(',', $ddev_domain);
+
+  foreach ($domains as $domain) {
+    $sites[$domain]  = 'flyttilfavrskov.dk';
+  }
 }
 
 if (file_exists(__DIR__ . '/sites.local.php')) {

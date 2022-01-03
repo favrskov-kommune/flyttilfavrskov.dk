@@ -4,6 +4,7 @@ description: 'DDS Premium theme'
 package: Drupal Design Suite
 version: VERSION
 core: '8.x'
+base theme: false
 
 libraries:
   - dds_premium/master
