@@ -76,3 +76,4 @@ logs/*
 
 # ignored configurations
 config/*/sync/mailchimp_signup.mailchimp_signup.*.yml
+/deployer/hosts.yml
