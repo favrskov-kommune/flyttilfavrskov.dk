@@ -79,27 +79,27 @@ task('success', function(){
   ->setPrivate();
 
 // Slack
-#before('slack:notify', 'slack:notify:init');
-#before('slack:notify:init', 'deploy:drupal:pre_deploy');
-#before('deploy', 'slack:notify');
-#before('deploy', 'deploy:drupal:pre_deploy');
-#after('deploy', 'success');
-#after('success', 'slack:notify:success');
-#before('slack:notify:success', 'slack:notify:success:init');
+before('slack:notify', 'slack:notify:init');
+before('slack:notify:init', 'deploy:drupal:pre_deploy');
+before('deploy', 'slack:notify');
+before('deploy', 'deploy:drupal:pre_deploy');
+after('deploy', 'success');
+after('success', 'slack:notify:success');
+before('slack:notify:success', 'slack:notify:success:init');
 
 // Additional Drupal release stuff
 #after('deploy:shared', 'deploy:maintenance_mode:enable');
 after('deploy:update_code', 'deploy:composer:install');
-#before('deploy:symlink', 'deploy:db:dump');
-#before('cleanup', 'deploy:db:cleanup');
-#before('cleanup', 'deploy:drupal:post_deploy_updates');
-#after('deploy:drupal:post_deploy_updates', 'deploy:maintenance_mode:disable');
+before('deploy:symlink', 'deploy:db:dump');
+before('cleanup', 'deploy:db:cleanup');
+before('cleanup', 'deploy:drupal:post_deploy_updates');
+after('deploy:drupal:post_deploy_updates', 'deploy:maintenance_mode:disable');
 
 // [Optional] if deploy fails automatically unlock.
-#after('deploy:failed', 'deploy:db:rollback');
-#after('deploy:failed', 'rollback');
-#after('deploy:failed', 'deploy:maintenance_mode:disable');
-#after('deploy:failed', 'slack:notify:failed');
-#after('deploy:failed', 'slack:notify');
-#after('deploy:failed', 'deploy:unlock');
+after('deploy:failed', 'deploy:db:rollback');
+after('deploy:failed', 'rollback');
+after('deploy:failed', 'deploy:maintenance_mode:disable');
+after('deploy:failed', 'slack:notify:failed');
+after('deploy:failed', 'slack:notify');
+after('deploy:failed', 'deploy:unlock');
 
