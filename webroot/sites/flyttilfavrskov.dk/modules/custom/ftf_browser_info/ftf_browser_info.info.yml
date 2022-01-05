@@ -1,7 +1,7 @@
 name: 'FlytTilFavrskov Browserinfo Pop-up'
 type: module
 description: 'Add a info popup that shows an IE11 disclaimer.'
-core: 8.x
+core_version_requirement: ^8.8 || ^9
 package: 'Flyt Til Favrskov'
 version: 1.0.0
 dependencies:

@@ -673,7 +673,7 @@ function dds_premium_preprocess_layout_block__document_list(array &$variables) {
       if (!empty($item)) {
         $links[] = [
           'title' => $item->label(),
-          'url' => $item->field_media_file->entity->url(),
+          'url' => 'internal:/' . $item->field_media_file->entity->createFileUrl(),
         ];
       }
     }
