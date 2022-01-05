@@ -78,7 +78,6 @@ module:
   ftf_parcelling: 0
   gtm: 0
   help: 0
-  history: 0
   hreflang: 0
   image: 0
   imageapi_optimize: 0
@@ -107,7 +106,6 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
-  quickedit: 0
   rdf: 0
   redirect: 0
   redis: 0
