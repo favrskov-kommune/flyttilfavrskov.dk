@@ -1,7 +1,7 @@
 name: 'Parcelling'
 type: module
 description: 'Provides functionality for handling parcels'
-core: 8.x
+core_version_requirement: ^8.8 || ^9
 version: 1.0.0
 package: 'Flyt Til Favrskov'
 dependencies: {  }

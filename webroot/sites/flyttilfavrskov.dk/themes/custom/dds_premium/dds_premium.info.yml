@@ -3,7 +3,7 @@ type: theme
 description: 'DDS Premium theme'
 package: Drupal Design Suite
 version: VERSION
-core: '8.x'
+core_version_requirement: ^8.8 || ^9
 base theme: false
 
 libraries:
