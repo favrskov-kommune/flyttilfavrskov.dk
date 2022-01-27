@@ -6,7 +6,7 @@ _core:
   default_config_hash: tuxiS9vQkHoq0RbmOyN0hHFM0mxUMUenRu_C5U7-Y-0
 cluster_id: content
 name: Content
-url: 'http://elastic:9200'
+url: 'http://localhost:9200'
 options:
   multiple_nodes_connection: false
   use_authentication: 0

@@ -7,10 +7,10 @@
 
 namespace Deployer;
 
-desc('Run composer install');
-task('deploy:composer:install', function () {
-  if(get('use_composer', false)) {
-    run('cd {{release_path}} && COMPOSER_MEMORY_LIMIT=-1 composer install --no-dev --no-interaction');
+desc('Run npm commands');
+task('deploy:npm:install', function () {
+  if(get('use_npm', false)) {
+    run('cd {{theme_exec_path_absolute}} && npm ci && npm run build:prod');
   }
 })
   ->setPrivate();
