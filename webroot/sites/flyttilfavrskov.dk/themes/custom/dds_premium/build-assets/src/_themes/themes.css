@@ -2,13 +2,8 @@
     background-color: var(--theme-background-color);
     color: var(--theme-color);
 
-    a {
+    a:not(.button) {
         color: var(--theme-link-color);
-    }
-
-    .button {
-        background-color: var(--theme-button-background-color);
-        color: var(--theme-button-color);
     }
 
     .submenu {
@@ -22,7 +17,6 @@
             }
         }
     }
-
 
     .divider::before {
         background-color: var(--theme-divider-background-color);

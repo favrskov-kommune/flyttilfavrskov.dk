@@ -221,6 +221,7 @@ function dds_premium_preprocess_page(array &$variables) {
         'color_theme' => 'field_header_color_theme',
         'teaser' => 'field_header_subline',
         'cta' => 'field_header_cta',
+        'show_search' => 'field_show_search',
       ]);
     }
   }
@@ -454,6 +455,11 @@ function dds_premium_preprocess_layout_block__button(array &$variables) {
     if ($entity->hasField('field_button_alignment') && !$entity->get('field_button_alignment')->isEmpty()) {
       $attribute->addClass('button--' . $entity->get('field_button_alignment')->value);
     }
+
+    if ($entity->hasField('field_call_to_action_color') && !$entity->get('field_call_to_action_color')->isEmpty()) {
+      $attribute->addClass('button--' . $entity->get('field_call_to_action_color')->value);
+    }
+
     $variables['cta'] = _modify_cta(reset($cta), $attribute);
   }
 }
@@ -535,6 +541,7 @@ function dds_premium_preprocess_layout_block__hero(array &$variables) {
       'orientation' => 'field_hero_orientation',
       'teaser' => 'field_hero_subline',
       'cta' => 'field_hero_button',
+      'show_search' => 'field_show_search'
     ]);
   }
 }
@@ -858,6 +865,11 @@ function _create_hero(ContentEntityInterface $entity, array $fields): array {
     $hero['cta'] = _modify_cta(reset($cta));
   }
 
+  if (isset($fields['show_search']) && $entity->hasField($fields['show_search']) && !$entity->get($fields['show_search'])->isEmpty()) {
+    $search = $entity->get($fields['show_search'])->getValue()[0]['value'];
+    $hero['show_search'] = $search;
+  }
+
   if (!empty($background_image_uri)) {
     $hero['background_image'] = [
       'title' => '',
@@ -866,7 +878,6 @@ function _create_hero(ContentEntityInterface $entity, array $fields): array {
       'uri' => $background_image_uri,
     ];
   }
-
   return $hero;
 }
 

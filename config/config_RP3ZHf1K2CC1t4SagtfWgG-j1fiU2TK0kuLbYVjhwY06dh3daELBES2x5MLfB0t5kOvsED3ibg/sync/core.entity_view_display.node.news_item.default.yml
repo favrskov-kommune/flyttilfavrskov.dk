@@ -22,8 +22,8 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: true
     enabled: true
+    allow_custom: true
 _core:
   default_config_hash: lnuayA_I5fb5qX2rerEzYZom5aJ2dBP_rpmVeIMYNvk
 id: node.news_item.default

@@ -2,13 +2,13 @@ uuid: 5d6b56ae-551e-4c6c-a95d-bc8d06c518c0
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - dds_layout_block_accordion
   module:
     - block_content
     - entity_reference_revisions
     - paragraphs
+  enforced:
+    module:
+      - dds_layout_block_accordion
 _core:
   default_config_hash: XZeIJpO2KzYvr7ok7GlDb5RlC6JWVOhXK5XoaCnlprI
 id: block_content.field_accordion_items

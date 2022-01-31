@@ -2,11 +2,11 @@ uuid: 8d7a8e65-7401-4a10-9b25-87666b3f6df7
 langcode: en
 status: true
 dependencies:
+  module:
+    - site_settings
   enforced:
     module:
       - ftf_browser_info
-  module:
-    - site_settings
 _core:
   default_config_hash: lxhOJDmOP7MBY1tAIS8SEv20Gd5wj_GDK1QdZRaqPYU
 id: site_setting_entity.field_browser_info_show_once

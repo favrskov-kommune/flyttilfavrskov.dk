@@ -2,12 +2,12 @@ uuid: d69e0cf0-e825-4d58-b885-d2b798ad55c7
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - dds_content
   module:
     - menu_ui
     - scheduler
+  enforced:
+    module:
+      - dds_content
 third_party_settings:
   menu_ui:
     available_menus:
@@ -18,13 +18,13 @@ third_party_settings:
     fields_display_mode: vertical_tab
     publish_enable: true
     publish_past_date: error
+    publish_past_date_created: false
     publish_required: false
     publish_revision: false
     publish_touch: true
     unpublish_enable: true
     unpublish_required: false
     unpublish_revision: false
-    publish_past_date_created: false
 name: City
 type: area
 description: ''

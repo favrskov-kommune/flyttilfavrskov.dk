@@ -1,14 +1,10 @@
+/**
+ * Type: Theme.
+ * Green theme.
+ */
+
 .theme-green {
-    --theme-background-color: #1fc8a9;
-    --theme-color: #ffefe5;
-    --theme-button-background-color: #ffefe5;
-    --theme-button-color: #1fc8a9;
-    --theme-link-color: #ffefe5;
-    --theme-divider-background-color: #ffefe5;
-    --theme-accordion-border-color: #1fc8a9;
-    --theme-accordion-background-color: #fff;
-    --theme-accordion-text-color: #000;
-    --theme-input-border: #fff;
-    --theme-input-color-marked: #ffefe5;
-    --theme-background-svg-background-color: rgba(255, 255, 255, 0.5);
+  --theme-background-color: var(--color-primary);
+  --theme-contact-block-item-background: var(--color-white);
+  --theme-contact-block-item-box-shadow: 0 4px 44px rgba(0, 0, 0, .1);
 }

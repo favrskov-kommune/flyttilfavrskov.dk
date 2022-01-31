@@ -2,11 +2,11 @@ uuid: 06c11c44-6ccf-42d4-98c6-702fefb9eeab
 langcode: en
 status: true
 dependencies:
+  module:
+    - block_content
   enforced:
     module:
       - dds_layout_block_accordion
-  module:
-    - block_content
 _core:
   default_config_hash: HDhc_-aMD-Gemw4nc6Z-mlSald_iwUmz0HbF1ruI6tk
 id: block_content.field_accordion_show_more
@@ -15,8 +15,8 @@ entity_type: block_content
 type: string
 settings:
   max_length: 255
-  is_ascii: false
   case_sensitive: false
+  is_ascii: false
 module: core
 locked: false
 cardinality: 1

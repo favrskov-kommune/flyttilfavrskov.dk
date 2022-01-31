@@ -5,11 +5,11 @@ dependencies:
   config:
     - block_content.type.appetizer
     - field.storage.block_content.field_appetizer_text_alignment
+  module:
+    - options
   enforced:
     module:
       - dds_layout_block_appetizer
-  module:
-    - options
 _core:
   default_config_hash: 0abSe4c6lioMloqoRUBAyuc7nrwOa8lSyTgBBFXWAbU
 id: block_content.appetizer.field_appetizer_text_alignment

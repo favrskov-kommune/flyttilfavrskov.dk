@@ -2,11 +2,11 @@ uuid: a77ad089-5777-4093-a370-9fa9246afe57
 langcode: en
 status: true
 dependencies:
+  module:
+    - block_content
   enforced:
     module:
       - dds_layout_block_appetizer
-  module:
-    - block_content
 _core:
   default_config_hash: QZ2NWIbsM39xF44NYZc5vU74RVYCdzhdKytipPvY6dg
 id: block_content.field_appetizer_headline
@@ -15,8 +15,8 @@ entity_type: block_content
 type: string
 settings:
   max_length: 255
-  is_ascii: false
   case_sensitive: false
+  is_ascii: false
 module: core
 locked: false
 cardinality: 1

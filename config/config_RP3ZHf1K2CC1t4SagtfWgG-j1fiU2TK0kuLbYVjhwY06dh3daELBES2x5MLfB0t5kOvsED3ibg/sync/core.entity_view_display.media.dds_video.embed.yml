@@ -19,13 +19,13 @@ content:
   field_media_video_embed:
     type: oembed
     label: hidden
-    weight: 8
     settings:
       responsive: true
       width: 854
       height: 480
       autoplay: true
     third_party_settings: {  }
+    weight: 8
     region: content
 hidden:
   created: true

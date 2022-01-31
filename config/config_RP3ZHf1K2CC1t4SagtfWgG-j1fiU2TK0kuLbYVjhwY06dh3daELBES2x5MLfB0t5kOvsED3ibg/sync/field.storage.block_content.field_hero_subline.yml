@@ -2,11 +2,11 @@ uuid: a91c1bc4-2b0d-4215-a23b-9ae642d10440
 langcode: en
 status: true
 dependencies:
+  module:
+    - block_content
   enforced:
     module:
       - dds_layout_block_hero
-  module:
-    - block_content
 _core:
   default_config_hash: UinxCeMU5RaZ8qXtJ4mgShzOABch408AluEwpgIw9rc
 id: block_content.field_hero_subline
@@ -15,8 +15,8 @@ entity_type: block_content
 type: string
 settings:
   max_length: 255
-  is_ascii: false
   case_sensitive: false
+  is_ascii: false
 module: core
 locked: false
 cardinality: 1

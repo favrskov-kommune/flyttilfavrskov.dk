@@ -7,11 +7,11 @@ dependencies:
     - field.field.block_content.accordion.field_accordion_headline
     - field.field.block_content.accordion.field_accordion_items
     - field.field.block_content.accordion.field_accordion_show_more
+  module:
+    - paragraphs
   enforced:
     module:
       - dds_layout_block_accordion
-  module:
-    - paragraphs
 _core:
   default_config_hash: 0xyAeIv7_ftnPpqe2FO5su-IIen8nBlySYCzEd9xtp8
 id: block_content.accordion.default
@@ -20,16 +20,17 @@ bundle: accordion
 mode: default
 content:
   field_accordion_headline:
+    type: string_textfield
     weight: 0
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_accordion_items:
     type: entity_reference_paragraphs
     weight: 1
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -38,15 +39,14 @@ content:
       form_display_mode: default
       default_paragraph_type: accordion_item
     third_party_settings: {  }
-    region: content
   field_accordion_show_more:
+    type: string_textfield
     weight: 2
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
 hidden:
   info: true
   langcode: true

@@ -2,12 +2,12 @@ uuid: dc72bdb4-4f3b-4875-8e1c-deb8fdb50c98
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - dds_editors
   module:
     - editor
     - media
+  enforced:
+    module:
+      - dds_editors
 _core:
   default_config_hash: IbyjE6f_Tn2rLxyCrunC3-3AAith35MqdwRGqsTcpAk
 name: 'Basic HTML'
@@ -54,5 +54,5 @@ filters:
     weight: 100
     settings:
       default_view_mode: default
-      allowed_media_types: {  }
       allowed_view_modes: {  }
+      allowed_media_types: {  }

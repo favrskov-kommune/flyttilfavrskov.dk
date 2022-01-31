@@ -5,11 +5,11 @@ dependencies:
   config:
     - block_content.type.button
     - field.storage.block_content.field_button
+  module:
+    - dds_content
   enforced:
     module:
       - dds_layout_block_button
-  module:
-    - dds_content
 _core:
   default_config_hash: FgyTtJQQcZBA0xObH8maBbcryiB-1CnzTZHnlEQk1V0
 id: block_content.button.field_button

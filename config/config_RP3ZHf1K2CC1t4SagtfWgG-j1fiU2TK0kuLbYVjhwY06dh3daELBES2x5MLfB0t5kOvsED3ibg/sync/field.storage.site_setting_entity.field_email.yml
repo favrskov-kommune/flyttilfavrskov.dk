@@ -2,11 +2,11 @@ uuid: 6ec5f764-1d06-414c-b619-d122ef3bab26
 langcode: en
 status: true
 dependencies:
+  module:
+    - site_settings
   enforced:
     module:
       - dds_site_settings
-  module:
-    - site_settings
 _core:
   default_config_hash: Hsgjj6gcxtzb68Bg1LUDlsVbln1IJL9hfvFVe1FjoZ0
 id: site_setting_entity.field_email

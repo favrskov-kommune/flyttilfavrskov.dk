@@ -2,11 +2,11 @@ uuid: 5a24fe4c-3ac3-4071-a22c-2cbf24fb0db3
 langcode: en
 status: true
 dependencies:
+  module:
+    - site_settings
   enforced:
     module:
       - dds_site_settings
-  module:
-    - site_settings
 _core:
   default_config_hash: tIyaTpj41wl_6_dpGkKCCqTXHdPp9NoyqemTPqUxU6E
 id: site_setting_entity.field_telephone
@@ -15,8 +15,8 @@ entity_type: site_setting_entity
 type: string
 settings:
   max_length: 255
-  is_ascii: false
   case_sensitive: false
+  is_ascii: false
 module: core
 locked: false
 cardinality: 1

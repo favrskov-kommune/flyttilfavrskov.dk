@@ -5,12 +5,12 @@ dependencies:
   config:
     - field.storage.paragraph.field_accordion_item_text
     - paragraphs.paragraphs_type.accordion_item
-  enforced:
-    module:
-      - dds_layout_block_accordion
   module:
     - allowed_formats
     - text
+  enforced:
+    module:
+      - dds_layout_block_accordion
 third_party_settings:
   allowed_formats:
     basic_html: basic_html

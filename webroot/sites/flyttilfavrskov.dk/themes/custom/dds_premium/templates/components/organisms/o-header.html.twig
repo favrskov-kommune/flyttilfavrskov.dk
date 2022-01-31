@@ -1,17 +1,21 @@
 <header class="header js-header">
-{#  {% include '@dds_premium/components/molecules/m-meta-menu.html.twig' with {#}
+  <div class="row">
+  {#  {% include '@dds_premium/components/molecules/m-meta-menu.html.twig' with {#}
 {#    'language_switcher': language_switcher,#}
 {#    'meta_menu': meta_menu#}
 {#  } %}#}
-  <div class="container">
-    <div class="header__inner">
+    <div class="header__logo col-xs-6 col-lg-2">
       {{ site_branding }}
+    </div>
+    <div class="header__inner header__navigation col-xs-12 col-lg-7">
       {{ main_navigation }}
-      {% if display_burger_toggle %}
-        {% include '@dds_premium/components/molecules/m-burger.html.twig' %}
-      {% endif %}
+    </div>
+    <div class="header__inner header__search-burger col-xs-6 col-xs-offset-0 col-lg-3 col-lg-offset-0">
       {% if display_search_toggle %}
         {% include '@dds_premium/components/molecules/m-search-toggle.html.twig' %}
+      {% endif %}
+      {% if display_burger_toggle %}
+        {% include '@dds_premium/components/molecules/m-burger.html.twig' %}
       {% endif %}
     </div>
   </div>

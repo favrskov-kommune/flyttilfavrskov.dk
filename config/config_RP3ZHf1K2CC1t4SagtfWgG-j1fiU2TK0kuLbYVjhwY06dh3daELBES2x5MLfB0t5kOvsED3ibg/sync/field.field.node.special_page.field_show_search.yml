@@ -1,0 +1,23 @@
+uuid: cf7aa20a-bd4b-4d93-a5af-4f81a7bed109
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_show_search
+    - node.type.special_page
+id: node.special_page.field_show_search
+field_name: field_show_search
+entity_type: node
+bundle: special_page
+label: 'Vis søgefelt'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -2,11 +2,11 @@ uuid: 99fb83ab-871b-4414-8966-dec2ce0382a3
 langcode: en
 status: true
 dependencies:
+  module:
+    - block_content
   enforced:
     module:
       - dds_layout_block_video
-  module:
-    - block_content
 _core:
   default_config_hash: LAdook0LH6Y8jojJl4bncWHSh6xkACVPe_DM061mILA
 id: block_content.field_video_headline
@@ -15,8 +15,8 @@ entity_type: block_content
 type: string
 settings:
   max_length: 255
-  is_ascii: false
   case_sensitive: false
+  is_ascii: false
 module: core
 locked: false
 cardinality: 1

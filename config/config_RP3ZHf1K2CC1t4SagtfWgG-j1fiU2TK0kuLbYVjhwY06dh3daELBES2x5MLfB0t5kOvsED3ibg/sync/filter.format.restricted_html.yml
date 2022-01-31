@@ -2,11 +2,11 @@ uuid: d86b4545-5cb6-4b52-9ce9-96fae36c5560
 langcode: en
 status: true
 dependencies:
+  module:
+    - media
   enforced:
     module:
       - dds_editors
-  module:
-    - media
 _core:
   default_config_hash: yMgiHhca0XtAeF41XW5Z9mznHf62RXjQSCk5d6rJQ6w
 name: 'Restricted HTML'
@@ -42,5 +42,5 @@ filters:
     weight: 100
     settings:
       default_view_mode: default
-      allowed_media_types: {  }
       allowed_view_modes: {  }
+      allowed_media_types: {  }

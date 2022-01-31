@@ -2,11 +2,11 @@ uuid: f509762f-f986-4469-8342-cd36d289cd31
 langcode: en
 status: true
 dependencies:
+  module:
+    - editor
   enforced:
     module:
       - dds_editors
-  module:
-    - editor
 _core:
   default_config_hash: 1KZgvgMjBgPJc4UPO2yR-zr8eqIbjVavFTt_O0Ajzvc
 name: 'Full HTML'

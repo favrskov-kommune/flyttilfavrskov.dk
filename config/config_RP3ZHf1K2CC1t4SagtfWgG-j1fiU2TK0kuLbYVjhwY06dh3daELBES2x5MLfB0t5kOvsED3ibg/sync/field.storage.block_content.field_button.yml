@@ -2,12 +2,12 @@ uuid: cfcc1226-2634-4ba9-937d-9dcb43f33b30
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - dds_layout_block_button
   module:
     - block_content
     - dds_content
+  enforced:
+    module:
+      - dds_layout_block_button
 _core:
   default_config_hash: _TGY1DBsrGA9q8vL_4uJM7ku7k8StyXJlQxQ44CInVk
 id: block_content.field_button

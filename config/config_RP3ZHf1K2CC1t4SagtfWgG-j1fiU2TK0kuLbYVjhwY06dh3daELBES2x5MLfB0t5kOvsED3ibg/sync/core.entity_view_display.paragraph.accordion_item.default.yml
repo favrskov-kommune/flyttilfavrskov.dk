@@ -6,11 +6,11 @@ dependencies:
     - field.field.paragraph.accordion_item.field_accordion_item_headline
     - field.field.paragraph.accordion_item.field_accordion_item_text
     - paragraphs.paragraphs_type.accordion_item
+  module:
+    - text
   enforced:
     module:
       - dds_layout_block_accordion
-  module:
-    - text
 _core:
   default_config_hash: VuOA0Wsmvr1xaPfxQ9smcp7libNxuLNAgkxvALFarlo
 id: paragraph.accordion_item.default
@@ -19,19 +19,19 @@ bundle: accordion_item
 mode: default
 content:
   field_accordion_item_headline:
-    weight: 0
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 0
     region: content
   field_accordion_item_text:
-    weight: 1
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 1
     region: content
 hidden:
   search_api_excerpt: true

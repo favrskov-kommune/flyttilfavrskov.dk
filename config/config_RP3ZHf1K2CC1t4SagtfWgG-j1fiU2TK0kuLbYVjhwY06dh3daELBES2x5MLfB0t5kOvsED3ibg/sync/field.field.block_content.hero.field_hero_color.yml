@@ -5,11 +5,11 @@ dependencies:
   config:
     - block_content.type.hero
     - field.storage.block_content.field_hero_color
+  module:
+    - options
   enforced:
     module:
       - dds_layout_block_hero
-  module:
-    - options
 _core:
   default_config_hash: LkYXDxeE9tLaYhAQScN40gTAwQxaoiLURvwmmGB2JQI
 id: block_content.hero.field_hero_color

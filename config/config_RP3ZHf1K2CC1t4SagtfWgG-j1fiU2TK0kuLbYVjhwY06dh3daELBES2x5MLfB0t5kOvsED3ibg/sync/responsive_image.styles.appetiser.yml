@@ -17,44 +17,44 @@ id: appetiser
 label: Appetiser
 image_style_mappings:
   -
+    image_mapping_type: image_style
+    image_mapping: appetiser_lg_
     breakpoint_id: dds_premium.xl
     multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: appetiser_lg_
-  -
     breakpoint_id: dds_premium.lg
     multiplier: 1x
-    image_mapping_type: image_style
-    image_mapping: appetiser_lg_
   -
-    breakpoint_id: dds_premium.md
-    multiplier: 1x
     image_mapping_type: image_style
     image_mapping: appetiser_md_
-  -
-    breakpoint_id: dds_premium.sm
+    breakpoint_id: dds_premium.md
     multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: appetiser_sm_
-  -
-    breakpoint_id: dds_premium.xs
+    breakpoint_id: dds_premium.sm
     multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: appetiser_xs_
-  -
     breakpoint_id: dds_premium.xs
-    multiplier: 2x
+    multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: appetiser_xsx2_
+    breakpoint_id: dds_premium.xs
+    multiplier: 2x
   -
-    breakpoint_id: dds_premium.xxs
-    multiplier: 1x
     image_mapping_type: image_style
     image_mapping: appetiser_xxs_
-  -
     breakpoint_id: dds_premium.xxs
-    multiplier: 2x
+    multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: appetiser_xxsx2_
+    breakpoint_id: dds_premium.xxs
+    multiplier: 2x
 breakpoint_group: dds_premium
 fallback_image_style: large

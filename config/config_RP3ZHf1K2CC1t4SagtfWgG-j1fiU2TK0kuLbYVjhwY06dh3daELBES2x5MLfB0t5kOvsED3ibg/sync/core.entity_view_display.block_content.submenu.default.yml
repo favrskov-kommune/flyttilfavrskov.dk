@@ -13,7 +13,7 @@ bundle: submenu
 mode: default
 content:
   field_links:
-    weight: 0
+    type: link_separate
     label: hidden
     settings:
       trim_length: 120
@@ -22,7 +22,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link_separate
+    weight: 0
     region: content
 hidden:
   langcode: true

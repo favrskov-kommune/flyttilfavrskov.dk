@@ -2,12 +2,12 @@ uuid: 4e02f01f-7836-44a9-bf39-47ee839f5f4d
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - dds_content_hierarchy
   module:
     - entity_hierarchy
     - node
+  enforced:
+    module:
+      - dds_content_hierarchy
 _core:
   default_config_hash: 1Wf1-lGGUXhaq6bdzqs3qzd4GDJspewtzvmqwkmI_Ic
 id: node.field_parent

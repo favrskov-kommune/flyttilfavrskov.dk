@@ -8,8 +8,8 @@ name: resmush_i
 label: reSmush.it
 processors:
   11d8b60a-334e-4653-b0b2-fb52de74d12d:
-    uuid: 11d8b60a-334e-4653-b0b2-fb52de74d12d
     id: resmushit
-    weight: 1
     data:
       quality: 90
+    weight: 1
+    uuid: 11d8b60a-334e-4653-b0b2-fb52de74d12d

@@ -5,11 +5,11 @@ dependencies:
   config:
     - block_content.type.hero
     - field.storage.block_content.field_hero_orientation
+  module:
+    - options
   enforced:
     module:
       - dds_layout_block_hero
-  module:
-    - options
 _core:
   default_config_hash: qslShzHozfgDTdP2u0lM35y_Cl2iq-GxrWin0xj-E1o
 id: block_content.hero.field_hero_orientation

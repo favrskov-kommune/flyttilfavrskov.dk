@@ -9,11 +9,11 @@ dependencies:
     - field.field.block_content.news_list.field_newslist_items
     - field.field.block_content.news_list.field_newslist_limit
     - field.field.block_content.news_list.field_newslist_selection
+  module:
+    - options
   enforced:
     module:
       - dds_layout_block_news_list
-  module:
-    - options
 _core:
   default_config_hash: k00fprKR6AcdXquUdppG3J5XBkC2P5zNIupTA9mQiUE
 id: block_content.news_list.default
@@ -22,44 +22,44 @@ bundle: news_list
 mode: default
 content:
   field_newslist_category:
-    weight: 2
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 2
     region: content
   field_newslist_headline:
-    weight: 0
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 0
     region: content
   field_newslist_items:
-    weight: 3
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 3
     region: content
   field_newslist_limit:
-    weight: 1
+    type: number_integer
     label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    type: number_integer
+    weight: 1
     region: content
   field_newslist_selection:
-    weight: 4
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 4
     region: content
 hidden:
   langcode: true

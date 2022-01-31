@@ -2,12 +2,12 @@ uuid: a47fa95b-c51a-4ee2-9432-b4959dddc712
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - dds_site_settings
   module:
     - node
     - site_settings
+  enforced:
+    module:
+      - dds_site_settings
 _core:
   default_config_hash: 95EnHHdbLXhlvy9iCvVKIlX3Kb1sX5rlYBoDeWXfZig
 id: site_setting_entity.field_403

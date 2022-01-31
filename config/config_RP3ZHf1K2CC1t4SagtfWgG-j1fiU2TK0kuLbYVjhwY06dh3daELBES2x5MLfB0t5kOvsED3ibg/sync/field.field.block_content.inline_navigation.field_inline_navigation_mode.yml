@@ -5,11 +5,11 @@ dependencies:
   config:
     - block_content.type.inline_navigation
     - field.storage.block_content.field_inline_navigation_mode
+  module:
+    - options
   enforced:
     module:
       - dds_layout_block_inline_navigation
-  module:
-    - options
 _core:
   default_config_hash: 3OdczZrFqDXx2nIJjNaRwQC0iNufFKc1Vew4TkPlb-I
 id: block_content.inline_navigation.field_inline_navigation_mode

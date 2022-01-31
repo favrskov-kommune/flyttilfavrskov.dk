@@ -2,11 +2,11 @@ uuid: 437e9187-5e52-4f1e-85c2-c70d7b47ba6f
 langcode: en
 status: true
 dependencies:
+  module:
+    - block_content
   enforced:
     module:
       - dds_layout_block_quote
-  module:
-    - block_content
 _core:
   default_config_hash: iZHCcuXmY4156V9EyZVKgagIY27DAh0_6c0_p1k_e8M
 id: block_content.field_quote_source
@@ -15,8 +15,8 @@ entity_type: block_content
 type: string
 settings:
   max_length: 255
-  is_ascii: false
   case_sensitive: false
+  is_ascii: false
 module: core
 locked: false
 cardinality: 1

@@ -2,12 +2,12 @@ uuid: 989387e6-d1ea-4074-8a80-f0b5ae5f43b6
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - dds_news
   module:
     - menu_ui
     - scheduler
+  enforced:
+    module:
+      - dds_news
 third_party_settings:
   menu_ui:
     available_menus:
@@ -18,13 +18,13 @@ third_party_settings:
     fields_display_mode: vertical_tab
     publish_enable: true
     publish_past_date: error
+    publish_past_date_created: false
     publish_required: false
     publish_revision: false
     publish_touch: true
     unpublish_enable: true
     unpublish_required: false
     unpublish_revision: false
-    publish_past_date_created: false
 _core:
   default_config_hash: 9H8T1b7qkkO2Ay8ypbbAcBFRQ_f9YGXFOFFphBQ9DqQ
 name: 'News item'

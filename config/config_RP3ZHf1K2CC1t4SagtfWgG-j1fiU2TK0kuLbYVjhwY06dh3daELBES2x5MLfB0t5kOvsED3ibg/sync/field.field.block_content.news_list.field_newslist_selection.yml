@@ -5,11 +5,11 @@ dependencies:
   config:
     - block_content.type.news_list
     - field.storage.block_content.field_newslist_selection
+  module:
+    - options
   enforced:
     module:
       - dds_layout_block_news_list
-  module:
-    - options
 _core:
   default_config_hash: DTUL7QTdxWQ6GXs7KMKX6bBbeC4bJ8K9pookGT16o2g
 id: block_content.news_list.field_newslist_selection

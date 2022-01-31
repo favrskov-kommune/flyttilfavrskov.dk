@@ -11,15 +11,15 @@ pattern: '[node:ancestors-joined-path]/[node:title]'
 selection_criteria:
   b9007af9-5718-4343-911d-10cfe14133f4:
     id: node_type
+    negate: false
+    uuid: b9007af9-5718-4343-911d-10cfe14133f4
+    context_mapping:
+      node: node
     bundles:
       area: area
       basic_page: basic_page
       parcelling: parcelling
       special_page: special_page
-    negate: false
-    context_mapping:
-      node: node
-    uuid: b9007af9-5718-4343-911d-10cfe14133f4
 selection_logic: and
 weight: 0
 relationships: {  }

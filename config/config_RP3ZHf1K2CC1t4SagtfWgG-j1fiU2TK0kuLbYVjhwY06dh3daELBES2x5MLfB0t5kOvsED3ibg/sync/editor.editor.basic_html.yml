@@ -4,11 +4,11 @@ status: true
 dependencies:
   config:
     - filter.format.basic_html
+  module:
+    - ckeditor
   enforced:
     module:
       - dds_editors
-  module:
-    - ckeditor
 _core:
   default_config_hash: 8B9LywQCCW7ofUYOz3n9qntIe6u3vYpj8x4DSuI2cJ4
 format: basic_html

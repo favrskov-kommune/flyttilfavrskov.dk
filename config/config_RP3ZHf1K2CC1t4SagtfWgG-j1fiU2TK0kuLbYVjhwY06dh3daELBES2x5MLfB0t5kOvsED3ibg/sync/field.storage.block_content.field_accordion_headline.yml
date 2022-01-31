@@ -2,11 +2,11 @@ uuid: a4d7cf9e-a746-466b-8112-404941f37fa5
 langcode: en
 status: true
 dependencies:
+  module:
+    - block_content
   enforced:
     module:
       - dds_layout_block_accordion
-  module:
-    - block_content
 _core:
   default_config_hash: cpxpN5RJrNeA9MxL70o3W_955GQ_Yy88zb23g9thnR8
 id: block_content.field_accordion_headline
@@ -15,8 +15,8 @@ entity_type: block_content
 type: string
 settings:
   max_length: 255
-  is_ascii: false
   case_sensitive: false
+  is_ascii: false
 module: core
 locked: false
 cardinality: 1

@@ -8,11 +8,11 @@ dependencies:
     - field.field.block_content.video.field_video_media
     - field.field.block_content.video.field_video_subline
     - field.field.block_content.video.field_video_text_color
+  module:
+    - options
   enforced:
     module:
       - dds_layout_block_video
-  module:
-    - options
 _core:
   default_config_hash: 9py9bzIXAVv6u9TwDrsLyY_VBO02yxLCy5JwQR9ufFw
 id: block_content.video.default
@@ -21,36 +21,36 @@ bundle: video
 mode: default
 content:
   field_video_headline:
-    weight: 0
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 0
     region: content
   field_video_media:
     type: entity_reference_entity_view
-    weight: 3
     label: above
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
+    weight: 3
     region: content
   field_video_subline:
-    weight: 1
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 1
     region: content
   field_video_text_color:
-    weight: 2
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 2
     region: content
 hidden:
   langcode: true

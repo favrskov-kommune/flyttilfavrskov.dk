@@ -2,12 +2,12 @@ uuid: ce34e684-a084-4f0b-936b-66264c1d6a7b
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - dds_layout_block_quote
   module:
     - block_content
     - media
+  enforced:
+    module:
+      - dds_layout_block_quote
 _core:
   default_config_hash: SsoBktuwv1xtrkUyoK63C5kLmp1voInuljZAvPW7jtA
 id: block_content.field_quote_image

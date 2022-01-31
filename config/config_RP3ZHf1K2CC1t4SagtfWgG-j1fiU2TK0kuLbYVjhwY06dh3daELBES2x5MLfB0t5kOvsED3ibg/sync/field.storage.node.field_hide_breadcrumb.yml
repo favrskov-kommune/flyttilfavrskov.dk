@@ -2,11 +2,11 @@ uuid: e077b4e1-91d9-438d-b035-5b5c234fd124
 langcode: en
 status: true
 dependencies:
+  module:
+    - node
   enforced:
     module:
       - dds_content
-  module:
-    - node
 _core:
   default_config_hash: JuSENIUo3BnlsRAl5B5cxyaWM139y6j2AvZtiuAwWak
 id: node.field_hide_breadcrumb

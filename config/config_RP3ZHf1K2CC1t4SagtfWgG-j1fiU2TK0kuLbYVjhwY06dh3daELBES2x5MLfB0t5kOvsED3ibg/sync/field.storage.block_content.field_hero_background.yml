@@ -2,12 +2,12 @@ uuid: d8310f75-20d1-4303-b940-40016ae79881
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - dds_layout_block_hero
   module:
     - block_content
     - media
+  enforced:
+    module:
+      - dds_layout_block_hero
 _core:
   default_config_hash: J7QAVFx43cejjAyfDBg0aAUjvuxuZcgtUUQY3lfcfkQ
 id: block_content.field_hero_background

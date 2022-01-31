@@ -2,12 +2,12 @@ uuid: 40402ebc-6c71-4c94-a9dd-ff996b98a9ba
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - dds_layout_block_inline_navigation
   module:
     - block_content
     - options
+  enforced:
+    module:
+      - dds_layout_block_inline_navigation
 _core:
   default_config_hash: KJAQzV0ZAZdGf12guJXQPnDZyrjaOn3AaJASznSUsxY
 id: block_content.field_inline_navigation_mode

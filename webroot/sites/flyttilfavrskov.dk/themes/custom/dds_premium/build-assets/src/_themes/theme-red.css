@@ -1,14 +1,10 @@
+/**
+ * Type: Theme.
+ * Red theme.
+ */
+
 .theme-red {
-    --theme-background-color: #ef3e4a;
-    --theme-color: #ffefe5;
-    --theme-button-background-color: #ffefe5;
-    --theme-button-color: #ef3e4a;
-    --theme-link-color: #ffefe5;
-    --theme-divider-background-color: #fff;
-    --theme-accordion-border-color: #ef3e4a;
-    --theme-accordion-background-color: #fff;
-    --theme-accordion-text-color: #000;
-    --theme-input-border: #fff;
-    --theme-input-color-marked: #ffefe5;
-    --theme-background-svg-background-color: rgba(255, 255, 255, 0.5);
+  --theme-background-color: var(--color-cta);
+  --theme-contact-block-item-background: var(--color-white);
+  --theme-contact-block-item-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 }

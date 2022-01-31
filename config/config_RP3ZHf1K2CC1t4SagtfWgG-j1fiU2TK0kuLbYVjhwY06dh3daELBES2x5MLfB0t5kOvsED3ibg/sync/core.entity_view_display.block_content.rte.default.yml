@@ -5,11 +5,11 @@ dependencies:
   config:
     - block_content.type.rte
     - field.field.block_content.rte.field_text
+  module:
+    - text
   enforced:
     module:
       - dds_layout_block_rte
-  module:
-    - text
 _core:
   default_config_hash: 44gPFUziwlzNGXOY09WJ9QP74zfBpCO29Xr58LgtNU0
 id: block_content.rte.default
@@ -18,11 +18,11 @@ bundle: rte
 mode: default
 content:
   field_text:
-    weight: 1
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 1
     region: content
 hidden:
   langcode: true

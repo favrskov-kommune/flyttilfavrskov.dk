@@ -2,6 +2,8 @@ uuid: 631114d3-aacc-468b-a3d5-01734807f792
 langcode: en
 status: true
 dependencies:
+  module:
+    - dds_monitor
   enforced:
     module:
       - dds_monitor

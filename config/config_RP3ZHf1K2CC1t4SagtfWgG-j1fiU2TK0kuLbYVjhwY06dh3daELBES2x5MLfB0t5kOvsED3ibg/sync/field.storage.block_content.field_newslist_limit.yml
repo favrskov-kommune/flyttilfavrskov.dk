@@ -2,11 +2,11 @@ uuid: 60f51e82-e21d-46eb-8c50-0bfec797d226
 langcode: en
 status: true
 dependencies:
+  module:
+    - block_content
   enforced:
     module:
       - dds_layout_block_news_list
-  module:
-    - block_content
 _core:
   default_config_hash: 7Akgnp9tkf2RW5eGPHfy1TqG2CWwDynTBJk-lGgprEY
 id: block_content.field_newslist_limit

@@ -8,21 +8,43 @@
     {{ background_image|responsive_image('wide', 'lazyload') }}
   {% endif %}
   <div class="hero__iframe-wrapper js-hero-iframe-wrapper"></div>
-  <div class="container">
-    <div class="row">
-      <div class="{{ hero_position[position] }}">
-        <div{{ content_attributes.addClass('hero__content') }}>
-          <h1 class="hero__title">{{ title }}</h1>
-          <div class="hero__description">{{ teaser }}</div>
-          {% if cta.url and cta.title %}
-            {% include '@dds_premium/components/molecules/m-cta.html.twig' with {
-              'url': cta.url,
-              'text': cta.title,
-              'attributes': cta.attributes
-            } %}
-          {% endif %}
+  {% if show_search == 1 %}
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-ms-10 col-md-8 col-lg-6 col-xs-offset-0 col-ms-offset-1 col-md-offset-2 col-lg-offset-3">
+          <div{{ (not content_attributes ? create_attribute() : content_attributes).addClass('hero__content') }}>
+            <form id="search-form" role="search" class="hero__search" action="/search" method="get">
+              <input type="search" name="keys" class="hero__search--text" id="js-search-input" placeholder="Søg her" aria-label="Search">
+              <button type="submit" class="hero__search--submit" aria-label="Submit search">
+                {% block content %}
+                  {% include '@dds_premium/components/atoms/a-svg-icon.html.twig' with {
+                    'attributes': '',
+                    'svgIconName': 'search'
+                  } %}
+                {% endblock %}
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  {% else %}
+    <div class="container">
+      <div class="row">
+        <div class="{{ hero_position[position] }}">
+          <div{{ content_attributes.addClass('hero__content') }}>
+            <h1 class="hero__title">{{ title }}</h1>
+            <div class="hero__description">{{ teaser }}</div>
+            {% if cta.url and cta.title %}
+              {% include '@dds_premium/components/molecules/m-cta.html.twig' with {
+                'url': cta.url,
+                'text': cta.title,
+                'attributes': cta.attributes
+              } %}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
 </div>

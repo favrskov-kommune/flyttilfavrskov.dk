@@ -2,11 +2,11 @@ uuid: e88335ed-22d7-43d9-a823-bc476202e472
 langcode: en
 status: true
 dependencies:
+  module:
+    - site_settings
   enforced:
     module:
       - dds_site_settings
-  module:
-    - site_settings
 _core:
   default_config_hash: Gc2rKYYSs1id6gEjE3Q7u5Me3_2vgWWZMnW_cxmhaVs
 id: site_setting_entity.field_address
@@ -15,8 +15,8 @@ entity_type: site_setting_entity
 type: string
 settings:
   max_length: 255
-  is_ascii: false
   case_sensitive: false
+  is_ascii: false
 module: core
 locked: false
 cardinality: 1

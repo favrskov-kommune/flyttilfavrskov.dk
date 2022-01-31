@@ -2,11 +2,11 @@ uuid: 2a8f9c3a-46e3-428c-9be9-28042f5c2b12
 langcode: en
 status: true
 dependencies:
+  module:
+    - media
   enforced:
     module:
       - dds_media
-  module:
-    - media
 _core:
   default_config_hash: WcjBTogEM6lBBVPcU8vrxXfVd6DIeP-CNIg2TFDIZCI
 id: media.field_media_video_embed
@@ -15,8 +15,8 @@ entity_type: media
 type: string
 settings:
   max_length: 255
-  is_ascii: false
   case_sensitive: false
+  is_ascii: false
 module: core
 locked: false
 cardinality: 1

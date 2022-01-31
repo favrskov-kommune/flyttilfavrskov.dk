@@ -2,13 +2,13 @@ uuid: 78a9c310-9bcc-4004-8505-6c4b83df1113
 langcode: en
 status: true
 dependencies:
+  config:
+    - search_api.server.elasticsearch
   module:
     - node
     - search_api
     - dds_search
     - search_api_exclude_entity
-  config:
-    - search_api.server.elasticsearch
 _core:
   default_config_hash: pwMPEkA4BNVyg7OEu4pR7rFsKLdEmi49lyk1EkNlo6k
 id: content
@@ -73,6 +73,9 @@ processor_settings:
   dds_ancestors: {  }
   dds_primary_image: {  }
   html_filter:
+    weights:
+      preprocess_index: -15
+      preprocess_query: -15
     all_fields: true
     fields:
       - ancestors
@@ -90,9 +93,6 @@ processor_settings:
       h3: 2
       strong: 2
       u: 1
-    weights:
-      preprocess_index: -15
-      preprocess_query: -15
   language_with_fallback: {  }
   rendered_item: {  }
   search_api_exclude_entity_processor:
@@ -103,6 +103,7 @@ tracker_settings:
   default:
     indexing_order: fifo
 options:
-  index_directly: true
   cron_limit: 50
+  index_directly: true
+  track_changes_in_references: true
 server: elasticsearch

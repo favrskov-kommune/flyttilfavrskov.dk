@@ -28,10 +28,10 @@ bundle: news_item
 mode: inline_navigation
 content:
   links:
-    weight: 100
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 100
+    region: content
 hidden:
   field_header_background: true
   field_header_color_theme: true

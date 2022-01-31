@@ -1,3 +1,13 @@
+/**
+ * Type: Organisms.
+ * Header.
+ */
+
+/* When user is logged in, we remove fixed from header */
+body.adminimal-admin-toolbar header.header {
+    position: relative;
+}
+
 .header {
     position: fixed;
     background-color: var(--header-background-color);
@@ -5,25 +15,65 @@
     font-weight: var(--header-font-weight);
     color: var(--header-text-color);
     width: 100%;
+    top: 0;
     left: 0;
-    bottom: 0;
     z-index: 100;
-    box-shadow: 0 25px 75px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 25px 75px rgba(0, 0, 0, .1);
+
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        order: 0;
+
+        @media (--viewport-md-max) {
+            order: 1;
+        }
+    }
+
+    @media (--viewport-md-max) {
+        &__navigation {
+            order: 3;
+        }
+
+        &__search-burger {
+            order: 2;
+        }
+    }
 
     @media (--viewport-lg-min) {
-        bottom: auto;
-        top: 0;
+        &__inner {
+            margin-top: calc(var(--meta-menu-height) - 1px);
+        }
     }
 
     &__inner {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         height: var(--header-height-mobile);
 
         @media (--viewport-lg-min) {
             height: var(--header-height);
-            justify-content: flex-end;
+            align-self: end;
+            justify-content: center;
         }
+
+        .burger {
+            order: 2;
+
+            @media (--viewport-lg-min) {
+                order: 0;
+            }
+        }
+    }
+
+    &__navigation,
+    &__search-burger {
+        padding: 0;
     }
 }

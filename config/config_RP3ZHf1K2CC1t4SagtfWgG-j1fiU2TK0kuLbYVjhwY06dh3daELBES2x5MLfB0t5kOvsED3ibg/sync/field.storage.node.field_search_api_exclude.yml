@@ -2,12 +2,12 @@ uuid: 700ea28b-3468-4b28-b21b-d4be83881b7c
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - dds_content
   module:
     - node
     - search_api_exclude_entity
+  enforced:
+    module:
+      - dds_content
 _core:
   default_config_hash: gwTdU8oD5QGjasPL3ob-MCthE6x1DIFWB4T5pEPEaLI
 id: node.field_search_api_exclude

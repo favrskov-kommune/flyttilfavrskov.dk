@@ -1,7 +1,14 @@
 uuid: 09994450-bb18-4c5a-9745-9cc6a694385b
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.restricted_html
+  module:
+    - dds_search
+    - filter
+    - media
+    - system
 _core:
   default_config_hash: qUgYjFyoRJM_2wudOJvVzw4YsQwhTOQDowKDSVWKJv4
 id: anonymous
@@ -10,7 +17,6 @@ weight: -10
 is_admin: false
 permissions:
   - 'access content'
-  - 'search content'
   - 'use text format restricted_html'
   - 'view media'
   - 'view search pages'

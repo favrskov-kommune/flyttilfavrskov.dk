@@ -4,11 +4,11 @@ status: true
 dependencies:
   config:
     - filter.format.full_html
+  module:
+    - ckeditor
   enforced:
     module:
       - dds_editors
-  module:
-    - ckeditor
 _core:
   default_config_hash: 0vrxYaDoiNNtT86SLgcJIetTYaP6z1PZFzo90xcnWts
 format: full_html

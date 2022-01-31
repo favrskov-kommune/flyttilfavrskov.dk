@@ -2,12 +2,12 @@ uuid: 1ea579f3-4871-4a7f-9810-b48a59976471
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - dds_content
   module:
     - media
     - node
+  enforced:
+    module:
+      - dds_content
 _core:
   default_config_hash: KslWPtMrTSePNxdw_7k97Y-9XmiPN0oQfMh2KoHyFec
 id: node.field_header_background

@@ -10,13 +10,13 @@ dependencies:
     - field.field.block_content.appetizer.field_appetizer_orientation
     - field.field.block_content.appetizer.field_appetizer_text
     - field.field.block_content.appetizer.field_appetizer_text_alignment
-  enforced:
-    module:
-      - dds_layout_block_appetizer
   module:
     - dds_content
     - options
     - text
+  enforced:
+    module:
+      - dds_layout_block_appetizer
 _core:
   default_config_hash: V52zApRYNrx45A-v_ABeavLrKm7HKdce3UsatatKAbw
 id: block_content.appetizer.default
@@ -25,49 +25,49 @@ bundle: appetizer
 mode: default
 content:
   field_appetizer_cta:
-    weight: 1
+    type: dds_link_with_target
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: dds_link_with_target
+    weight: 1
     region: content
   field_appetizer_headline:
-    weight: 2
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 2
     region: content
   field_appetizer_image:
     type: entity_reference_entity_view
-    weight: 3
     label: above
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
+    weight: 3
     region: content
   field_appetizer_orientation:
-    weight: 4
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 4
     region: content
   field_appetizer_text:
-    weight: 5
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 5
     region: content
   field_appetizer_text_alignment:
-    weight: 6
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 6
     region: content
 hidden:
   langcode: true

@@ -5,11 +5,11 @@ dependencies:
   config:
     - block_content.type.appetizer
     - field.storage.block_content.field_appetizer_orientation
+  module:
+    - options
   enforced:
     module:
       - dds_layout_block_appetizer
-  module:
-    - options
 _core:
   default_config_hash: fSddp75h8ewg8nOoQdQcZ3P2V9ROmWlYV0xEau36zvI
 id: block_content.appetizer.field_appetizer_orientation

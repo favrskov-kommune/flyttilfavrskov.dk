@@ -5,11 +5,11 @@ dependencies:
   config:
     - block_content.type.appetizer
     - field.storage.block_content.field_appetizer_cta
+  module:
+    - dds_content
   enforced:
     module:
       - dds_layout_block_appetizer
-  module:
-    - dds_content
 _core:
   default_config_hash: I8Dk7QnUuvqbcRmxKw0sZciiQT3sZSXhZoM5wJPNJ3s
 id: block_content.appetizer.field_appetizer_cta

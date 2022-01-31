@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.basic_page.field_meta_tags
     - field.field.node.basic_page.field_parent
     - field.field.node.basic_page.field_search_api_exclude
+    - field.field.node.basic_page.field_show_search
     - field.field.node.basic_page.field_teaser
     - field.field.node.basic_page.layout_builder__layout
     - node.type.basic_page
@@ -28,10 +29,10 @@ bundle: basic_page
 mode: inline_navigation
 content:
   links:
-    weight: 100
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 100
+    region: content
 hidden:
   field_header_background: true
   field_header_color_theme: true
@@ -44,6 +45,7 @@ hidden:
   field_meta_tags: true
   field_parent: true
   field_search_api_exclude: true
+  field_show_search: true
   field_teaser: true
   langcode: true
   layout_builder__layout: true

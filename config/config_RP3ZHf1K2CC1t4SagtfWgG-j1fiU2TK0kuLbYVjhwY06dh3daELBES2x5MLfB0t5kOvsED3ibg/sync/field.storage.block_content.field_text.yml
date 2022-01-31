@@ -2,12 +2,12 @@ uuid: 0345e979-0bd6-489c-a926-b742c76918e7
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - dds_layout_block_rte
   module:
     - block_content
     - text
+  enforced:
+    module:
+      - dds_layout_block_rte
 _core:
   default_config_hash: Fde164gCRqwygIY-oaNyAGt-VdGDpvuQBMqSACFeZoQ
 id: block_content.field_text

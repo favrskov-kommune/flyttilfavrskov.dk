@@ -26,52 +26,62 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: true
     enabled: true
+    allow_custom: true
     sections:
       -
         layout_id: layout_onecol
         layout_settings:
           label: ''
+          context_mapping: {  }
+          column_widths: null
           color_theme: none
-          column_spacing: none
+          column_spacing_top: medium
+          column_spacing_bottom: medium
           column_width: narrow
+          section_id: ''
+          column_spacing: none
         components:
           e9bdc2sfegsegsefesefsef:
             uuid: e9bdc2sfegsegsefesefsef
             region: content
             configuration:
+              id: 'field_block:node:parcelling:field_parcelling_identifier'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:parcelling:field_parcelling_identifier'
               formatter:
                 type: string
-                weight: 1
-                region: content
                 label: hidden
                 settings:
                   link_to_entity: false
                 third_party_settings: {  }
-            additional: {  }
+                weight: 1
+                region: content
             weight: 0
+            additional: {  }
         third_party_settings: {  }
       -
         layout_id: layout_onecol
         layout_settings:
           label: ''
+          context_mapping: {  }
+          column_widths: null
           color_theme: none
-          column_spacing: normal
+          column_spacing_top: medium
+          column_spacing_bottom: medium
           column_width: normal
+          section_id: ''
+          column_spacing: normal
         components:
           e9bdc29f-be7f-4926-8a96-40b1fe55a00e:
             uuid: e9bdc29f-be7f-4926-8a96-40b1fe55a00e
             region: content
             configuration:
+              id: 'field_block:node:parcelling:field_parcelling_parcels'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:parcelling:field_parcelling_parcels'
               formatter:
                 type: entity_reference_revisions_entity_view
                 label: hidden
@@ -79,8 +89,8 @@ third_party_settings:
                   view_mode: default
                   link: ''
                 third_party_settings: {  }
-            additional: {  }
             weight: 0
+            additional: {  }
         third_party_settings: {  }
 id: node.parcelling.default
 targetEntityType: node
@@ -89,20 +99,20 @@ mode: default
 content:
   field_parcelling_identifier:
     type: string
-    weight: 1
-    region: content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 1
+    region: content
   field_parcelling_parcels:
     type: entity_reference_revisions_entity_view
-    weight: 1
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    weight: 1
     region: content
 hidden:
   field_header_background: true

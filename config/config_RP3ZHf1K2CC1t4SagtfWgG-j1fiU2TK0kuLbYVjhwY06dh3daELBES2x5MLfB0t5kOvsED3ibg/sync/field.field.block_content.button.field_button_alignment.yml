@@ -5,11 +5,11 @@ dependencies:
   config:
     - block_content.type.button
     - field.storage.block_content.field_button_alignment
+  module:
+    - options
   enforced:
     module:
       - dds_layout_block_button
-  module:
-    - options
 _core:
   default_config_hash: o7T-evp_r_px_xwSwFYgFhif5-B4xDPjio7FjNDmoY0
 id: block_content.button.field_button_alignment

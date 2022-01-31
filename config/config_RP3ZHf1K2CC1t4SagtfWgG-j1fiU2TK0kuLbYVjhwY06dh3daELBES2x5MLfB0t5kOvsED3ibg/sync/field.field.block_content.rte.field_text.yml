@@ -5,12 +5,12 @@ dependencies:
   config:
     - block_content.type.rte
     - field.storage.block_content.field_text
-  enforced:
-    module:
-      - dds_layout_block_rte
   module:
     - allowed_formats
     - text
+  enforced:
+    module:
+      - dds_layout_block_rte
 third_party_settings:
   allowed_formats:
     basic_html: basic_html

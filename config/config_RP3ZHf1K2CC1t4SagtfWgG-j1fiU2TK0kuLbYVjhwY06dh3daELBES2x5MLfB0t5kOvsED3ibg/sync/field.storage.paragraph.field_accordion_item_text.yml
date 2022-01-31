@@ -2,12 +2,12 @@ uuid: 73f0779c-3f17-4ab6-a46b-bfee36f7c63c
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - dds_layout_block_accordion
   module:
     - paragraphs
     - text
+  enforced:
+    module:
+      - dds_layout_block_accordion
 _core:
   default_config_hash: l3MYUp4QRP63yAAwOnnWLXeWUKJ2bSzQSz_BdPdsFO8
 id: paragraph.field_accordion_item_text

@@ -2,11 +2,11 @@ uuid: 800734e6-1236-42eb-89b6-bd66cda109e3
 langcode: en
 status: true
 dependencies:
+  module:
+    - block_content
   enforced:
     module:
       - dds_layout_block_quote
-  module:
-    - block_content
 _core:
   default_config_hash: a_Phoa_1WUgymVFGBt8an-f68b4tPLbU2EY-jCEYLB0
 id: block_content.field_quote_text

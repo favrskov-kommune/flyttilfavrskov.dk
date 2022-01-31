@@ -2,12 +2,12 @@ uuid: 32a24a34-fcfa-494a-be6f-9f294ddfd100
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - dds_content
   module:
     - node
     - options
+  enforced:
+    module:
+      - dds_content
 _core:
   default_config_hash: DxPEjoo-aoATz9JlGtz2RBs3Sv_DWABy1i3L6Cp315Y
 id: node.field_header_orientation

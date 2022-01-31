@@ -18,44 +18,44 @@ id: wide
 label: Wide
 image_style_mappings:
   -
-    breakpoint_id: dds_premium.xl
-    multiplier: 1x
     image_mapping_type: image_style
     image_mapping: wide_xl_
-  -
-    breakpoint_id: dds_premium.lg
+    breakpoint_id: dds_premium.xl
     multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: wide_lg_
-  -
-    breakpoint_id: dds_premium.md
+    breakpoint_id: dds_premium.lg
     multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: wide_md_
-  -
-    breakpoint_id: dds_premium.sm
+    breakpoint_id: dds_premium.md
     multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: wide_sm_
-  -
-    breakpoint_id: dds_premium.xs
+    breakpoint_id: dds_premium.sm
     multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: wide_xs_
-  -
     breakpoint_id: dds_premium.xs
-    multiplier: 2x
+    multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: wide_xs_x2_
+    breakpoint_id: dds_premium.xs
+    multiplier: 2x
   -
-    breakpoint_id: dds_premium.xxs
-    multiplier: 1x
     image_mapping_type: image_style
     image_mapping: wide_xxs_
-  -
     breakpoint_id: dds_premium.xxs
-    multiplier: 2x
+    multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: wide_xxsx2_
+    breakpoint_id: dds_premium.xxs
+    multiplier: 2x
 breakpoint_group: dds_premium
 fallback_image_style: large

@@ -2,6 +2,44 @@ uuid: a01ec82a-eeb9-4ac3-9a30-84f389d6a8be
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_display.node.area.default
+    - core.entity_view_display.node.basic_page.default
+    - core.entity_view_display.node.editor_manual.default
+    - core.entity_view_display.node.news_item.default
+    - core.entity_view_display.node.parcelling.default
+    - core.entity_view_display.node.special_page.default
+    - media.type.dds_file
+    - media.type.dds_image
+    - media.type.dds_video
+    - node.type.area
+    - node.type.basic_page
+    - node.type.editor_manual
+    - node.type.news_item
+    - node.type.parcelling
+    - node.type.special_page
+    - taxonomy.vocabulary.media_categories
+    - taxonomy.vocabulary.news_categories
+  module:
+    - admin_toolbar_search
+    - block
+    - contextual
+    - dds_site_settings
+    - entity_clone
+    - file
+    - layout_builder
+    - mailchimp
+    - mailchimp_signup
+    - media
+    - node
+    - path
+    - redirect
+    - scheduler
+    - site_settings
+    - system
+    - taxonomy
+    - toolbar
+    - view_unpublished
   enforced:
     module:
       - dds_editors
@@ -15,22 +53,17 @@ permissions:
   - 'access administration pages'
   - 'access content overview'
   - 'access contextual links'
-  - 'access dds_media_browser entity browser pages'
   - 'access files overview'
-  - 'access kint'
   - 'access media overview'
   - 'access site reports'
   - 'access site setting browser_info'
   - 'access site setting contact_info'
-  - 'access site setting cookieinfo'
   - 'access site setting footer'
   - 'access site settings overview'
   - 'access taxonomy overview'
   - 'access toolbar'
   - 'access user profiles'
-  - 'add global paragraph entities'
   - 'administer blocks'
-  - 'administer content'
   - 'administer mailchimp'
   - 'administer mailchimp signup entities'
   - 'administer menu'
@@ -66,7 +99,6 @@ permissions:
   - 'delete any parcelling content'
   - 'delete basic_page revisions'
   - 'delete editor_manual revisions'
-  - 'delete global paragraph entities'
   - 'delete media'
   - 'delete news_item revisions'
   - 'delete own basic_page content'
@@ -79,7 +111,6 @@ permissions:
   - 'delete parcelling revisions'
   - 'delete terms in media_categories'
   - 'delete terms in news_categories'
-  - 'dropzone upload files'
   - 'edit any area content'
   - 'edit any basic_page content'
   - 'edit any dds_file media'
@@ -89,8 +120,6 @@ permissions:
   - 'edit any news_item content'
   - 'edit any parcelling content'
   - 'edit any special_page content'
-  - 'edit entity reference layout plugin config'
-  - 'edit global paragraph entities'
   - 'edit own area content'
   - 'edit own basic_page content'
   - 'edit own dds_file media'

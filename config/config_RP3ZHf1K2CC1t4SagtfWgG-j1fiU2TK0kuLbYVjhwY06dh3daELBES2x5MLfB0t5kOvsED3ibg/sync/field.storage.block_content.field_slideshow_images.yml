@@ -2,12 +2,12 @@ uuid: 75a8b205-2ce2-445a-9448-ee1b35ae2391
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - dds_layout_block_slideshow
   module:
     - block_content
     - media
+  enforced:
+    module:
+      - dds_layout_block_slideshow
 _core:
   default_config_hash: MMwx_RrngoeeORigaymjZEYYNMddpMN5WpT1BcoYFvM
 id: block_content.field_slideshow_images

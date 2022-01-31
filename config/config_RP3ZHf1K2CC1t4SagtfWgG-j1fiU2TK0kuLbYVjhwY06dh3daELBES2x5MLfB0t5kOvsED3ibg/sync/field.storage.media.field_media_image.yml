@@ -2,13 +2,13 @@ uuid: fe9de2f2-b61d-47f4-b086-01c0b33b903d
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - dds_media
   module:
     - file
     - image
     - media
+  enforced:
+    module:
+      - dds_media
 _core:
   default_config_hash: bVocmsHSR1JBfVlN_KdpGpveuYC3BvDtT-CYjsneKRg
 id: media.field_media_image
@@ -16,16 +16,16 @@ field_name: field_media_image
 entity_type: media
 type: image
 settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
   default_image:
     uuid: null
     alt: ''
     title: ''
     width: null
     height: null
-  target_type: file
-  display_field: false
-  display_default: false
-  uri_scheme: public
 module: image
 locked: false
 cardinality: 1

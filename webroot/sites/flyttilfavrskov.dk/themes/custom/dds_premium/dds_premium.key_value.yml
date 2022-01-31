@@ -1,0 +1,15 @@
+color_themes:
+  primary:
+    name: Primary
+  secondary:
+    name: Seccondary
+  douce:
+    name: Douce
+  grayblue:
+    name: Gray
+  mint:
+    name: Mint
+  red:
+    name: Red
+  green:
+    name: Green

@@ -10,12 +10,12 @@ dependencies:
     - field.field.block_content.hero.field_hero_headline
     - field.field.block_content.hero.field_hero_orientation
     - field.field.block_content.hero.field_hero_subline
-  enforced:
-    module:
-      - dds_layout_block_hero
   module:
     - dds_content
     - options
+  enforced:
+    module:
+      - dds_layout_block_hero
 _core:
   default_config_hash: Zv2NFqENo4fWywZoGqYSX3WK3I5hCgEw5zk8WVUyVB0
 id: block_content.hero.default
@@ -25,49 +25,49 @@ mode: default
 content:
   field_hero_background:
     type: entity_reference_entity_view
-    weight: 0
     label: above
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
+    weight: 0
     region: content
   field_hero_button:
-    weight: 1
+    type: dds_link_with_target
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: dds_link_with_target
+    weight: 1
     region: content
   field_hero_color:
-    weight: 4
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 4
     region: content
   field_hero_headline:
-    weight: 2
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 2
     region: content
   field_hero_orientation:
-    weight: 5
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 5
     region: content
   field_hero_subline:
-    weight: 3
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 3
     region: content
 hidden:
   langcode: true

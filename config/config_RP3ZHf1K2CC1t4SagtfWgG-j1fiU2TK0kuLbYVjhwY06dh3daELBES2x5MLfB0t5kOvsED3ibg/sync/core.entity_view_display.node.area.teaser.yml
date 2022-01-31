@@ -28,10 +28,10 @@ bundle: area
 mode: teaser
 content:
   links:
-    weight: 100
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 100
+    region: content
 hidden:
   field_area_identifier: true
   field_area_type_identifier: true

@@ -20,8 +20,8 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: true
     enabled: true
+    allow_custom: true
 _core:
   default_config_hash: 4j7pdYkril9-3vDhPSeUUDoJwpxxbryu0ZlyFAGxi2Q
 id: node.editor_manual.default

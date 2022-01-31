@@ -6,11 +6,12 @@ dependencies:
     - block_content.type.button
     - field.field.block_content.button.field_button
     - field.field.block_content.button.field_button_alignment
+    - field.field.block_content.button.field_call_to_action_color
+  module:
+    - dds_link_field
   enforced:
     module:
       - dds_layout_block_button
-  module:
-    - dds_content
 _core:
   default_config_hash: MjwWPuVZ9CXs2oHkuuufBwWY2c3D07n-7mx-I_ktxNs
 id: block_content.button.default
@@ -19,20 +20,26 @@ bundle: button
 mode: default
 content:
   field_button:
+    type: dds_link_with_target
     weight: 0
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
       target_blank: 0
     third_party_settings: {  }
-    type: dds_link_with_target
-    region: content
   field_button_alignment:
+    type: options_select
     weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
+  field_call_to_action_color:
     type: options_select
+    weight: 26
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   info: true
   langcode: true

@@ -2,12 +2,12 @@ uuid: bbc4167f-7334-458e-b7e8-a93b8f07bf27
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - dds_media
   module:
     - file
     - media
+  enforced:
+    module:
+      - dds_media
 _core:
   default_config_hash: aoDpAkInYJQ0NpumKR9Cl4m_DM5L_RGbaCjTJOyle2M
 id: media.field_media_file

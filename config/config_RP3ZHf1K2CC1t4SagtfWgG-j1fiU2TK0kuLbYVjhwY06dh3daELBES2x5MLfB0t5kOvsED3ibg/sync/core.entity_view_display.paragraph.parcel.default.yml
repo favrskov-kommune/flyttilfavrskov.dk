@@ -25,110 +25,110 @@ bundle: parcel
 mode: default
 content:
   field_banner_color:
-    weight: 11
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 11
     region: content
   field_banner_text:
-    weight: 12
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 12
     region: content
   field_banner_text_color:
-    weight: 13
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 13
     region: content
   field_parcel_address:
-    weight: 0
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 0
     region: content
   field_parcel_area:
-    weight: 1
+    type: number_integer
     label: hidden
     settings:
       thousand_separator: ''
       prefix_suffix: false
     third_party_settings: {  }
-    type: number_integer
+    weight: 1
     region: content
   field_parcel_group:
-    weight: 8
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 8
     region: content
   field_parcel_identifier:
-    weight: 5
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 5
     region: content
   field_parcel_min_price:
-    weight: 6
+    type: number_integer
     label: hidden
     settings:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    type: number_integer
+    weight: 6
     region: content
   field_parcel_price:
-    weight: 2
+    type: number_integer
     label: hidden
     settings:
       thousand_separator: .
       prefix_suffix: false
     third_party_settings: {  }
-    type: number_integer
+    weight: 2
     region: content
   field_parcel_price_sqm:
-    weight: 9
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 9
     region: content
   field_parcel_specs:
     type: entity_reference_label
-    weight: 3
     label: hidden
     settings:
       link: true
     third_party_settings: {  }
+    weight: 3
     region: content
   field_parcel_status:
     type: list_key
-    weight: 4
-    region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 4
+    region: content
   field_parcel_type:
-    weight: 10
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 10
     region: content
 hidden:
   search_api_excerpt: true

@@ -5,11 +5,11 @@ dependencies:
   config:
     - block_content.type.image
     - field.storage.block_content.field_image_format
+  module:
+    - options
   enforced:
     module:
       - dds_layout_block_image
-  module:
-    - options
 _core:
   default_config_hash: MkX3gPD8fqUxHct2RZ6GBKLNiC7NrnvOdmgOckPmQVw
 id: block_content.image.field_image_format

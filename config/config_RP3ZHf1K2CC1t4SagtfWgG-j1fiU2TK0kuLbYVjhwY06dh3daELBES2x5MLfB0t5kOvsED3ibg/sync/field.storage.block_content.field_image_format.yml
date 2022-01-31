@@ -2,12 +2,12 @@ uuid: 7e993dd6-079a-4a3e-8269-43307e53024c
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - dds_layout_block_image
   module:
     - block_content
     - options
+  enforced:
+    module:
+      - dds_layout_block_image
 _core:
   default_config_hash: OYzRMHC5eRZTSiLD1p9eQ7UfUTUGkp0OvwzeYVsCTNE
 id: block_content.field_image_format

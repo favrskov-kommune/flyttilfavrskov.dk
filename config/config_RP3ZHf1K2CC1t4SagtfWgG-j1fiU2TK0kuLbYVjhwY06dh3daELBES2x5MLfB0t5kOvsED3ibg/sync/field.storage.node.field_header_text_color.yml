@@ -2,12 +2,12 @@ uuid: a9d27ace-5772-4799-b66a-35ee0e1935ce
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - dds_content
   module:
     - node
     - options
+  enforced:
+    module:
+      - dds_content
 _core:
   default_config_hash: tjSwmaPq1fMC6pTMayYcSuFhQ-N6hB3MTScnQNVX7Bs
 id: node.field_header_text_color

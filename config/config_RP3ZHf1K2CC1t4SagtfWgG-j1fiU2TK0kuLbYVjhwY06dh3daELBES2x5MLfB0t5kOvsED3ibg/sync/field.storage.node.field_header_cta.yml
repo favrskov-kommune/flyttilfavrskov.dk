@@ -2,12 +2,12 @@ uuid: 1789b743-e30b-4037-a102-993254f65f21
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - dds_content
   module:
     - dds_content
     - node
+  enforced:
+    module:
+      - dds_content
 _core:
   default_config_hash: zAyfFtA2YIf-1iH_5nARlmYkgwPMZfbWSoFjtVCBDZc
 id: node.field_header_cta

@@ -5,11 +5,11 @@ dependencies:
   config:
     - block_content.type.hero
     - field.storage.block_content.field_hero_button
+  module:
+    - dds_content
   enforced:
     module:
       - dds_layout_block_hero
-  module:
-    - dds_content
 _core:
   default_config_hash: KbNf5QvCsCRYh7SY0bmB9v8n6PezxaWxh1pGtzt87uk
 id: block_content.hero.field_hero_button

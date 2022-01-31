@@ -2,12 +2,12 @@ uuid: 7601311b-fe90-4b62-9a9b-3aafa8373b2f
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - dds_layout_block_appetizer
   module:
     - block_content
     - media
+  enforced:
+    module:
+      - dds_layout_block_appetizer
 _core:
   default_config_hash: wh2WEXAUNlR8aVxVU0jc0seoZ5hLIrWlEJRZiw2J-gI
 id: block_content.field_appetizer_image

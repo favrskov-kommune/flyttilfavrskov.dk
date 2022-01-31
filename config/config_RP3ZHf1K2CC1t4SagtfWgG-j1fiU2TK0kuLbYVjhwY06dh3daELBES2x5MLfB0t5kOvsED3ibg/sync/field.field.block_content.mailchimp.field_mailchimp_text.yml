@@ -5,12 +5,12 @@ dependencies:
   config:
     - block_content.type.mailchimp
     - field.storage.block_content.field_mailchimp_text
-  enforced:
-    module:
-      - dds_layout_block_mailchimp
   module:
     - allowed_formats
     - text
+  enforced:
+    module:
+      - dds_layout_block_mailchimp
 third_party_settings:
   allowed_formats:
     basic_html: basic_html

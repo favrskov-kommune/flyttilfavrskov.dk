@@ -2,12 +2,12 @@ uuid: 8d1f47d1-e02e-4736-a9e3-bdb29ff9c2db
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - dds_layout_block_mailchimp
   module:
     - block_content
     - text
+  enforced:
+    module:
+      - dds_layout_block_mailchimp
 _core:
   default_config_hash: ZlSJvXPQYBE3UGpPHDofFPkGssh6In_0YggJO1G0YoM
 id: block_content.field_mailchimp_text

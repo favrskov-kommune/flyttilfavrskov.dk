@@ -5,11 +5,11 @@ dependencies:
   config:
     - block_content.type.video
     - field.storage.block_content.field_video_text_color
+  module:
+    - options
   enforced:
     module:
       - dds_layout_block_video
-  module:
-    - options
 _core:
   default_config_hash: PEkXRJ1kcEQC6fSTfUzqYZmGo9fx2nKsHpJ5_CrWpoU
 id: block_content.video.field_video_text_color

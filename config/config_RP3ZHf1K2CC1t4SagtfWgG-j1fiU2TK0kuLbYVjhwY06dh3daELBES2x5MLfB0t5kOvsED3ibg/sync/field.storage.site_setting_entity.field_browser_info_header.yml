@@ -2,11 +2,11 @@ uuid: b768ec8a-1823-4cfe-976d-dce7e995e7de
 langcode: en
 status: true
 dependencies:
+  module:
+    - site_settings
   enforced:
     module:
       - ftf_browser_info
-  module:
-    - site_settings
 _core:
   default_config_hash: D9F0ZOqrGYm0Qr9vHx5I3Nzs2Pu8jXmEqVzcGdg75a8
 id: site_setting_entity.field_browser_info_header
@@ -15,8 +15,8 @@ entity_type: site_setting_entity
 type: string
 settings:
   max_length: 255
-  is_ascii: false
   case_sensitive: false
+  is_ascii: false
 module: core
 locked: false
 cardinality: 1

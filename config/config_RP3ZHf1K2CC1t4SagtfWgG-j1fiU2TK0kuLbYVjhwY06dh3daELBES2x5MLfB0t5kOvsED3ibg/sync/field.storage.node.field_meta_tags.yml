@@ -2,12 +2,12 @@ uuid: 4c276bb7-22c8-4083-8987-38b543d5f1c6
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - dds_content
   module:
     - metatag
     - node
+  enforced:
+    module:
+      - dds_content
 _core:
   default_config_hash: AWfqysFGDI5lNDbBt7tK_UPd8dhvZyTN8vqOPhcAyfc
 id: node.field_meta_tags

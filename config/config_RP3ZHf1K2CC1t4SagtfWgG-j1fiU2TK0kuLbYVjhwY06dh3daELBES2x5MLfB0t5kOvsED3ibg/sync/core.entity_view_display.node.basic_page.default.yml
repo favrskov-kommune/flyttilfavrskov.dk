@@ -14,23 +14,66 @@ dependencies:
     - field.field.node.basic_page.field_meta_tags
     - field.field.node.basic_page.field_parent
     - field.field.node.basic_page.field_search_api_exclude
+    - field.field.node.basic_page.field_show_search
     - field.field.node.basic_page.field_teaser
     - field.field.node.basic_page.layout_builder__layout
     - node.type.basic_page
   module:
     - layout_builder
+    - layout_discovery
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: true
     enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          column_widths: null
+          color_theme: none
+          column_spacing_top: medium
+          column_spacing_bottom: medium
+          column_width: normal
+          section_id: ''
+        components:
+          98fa0ed1-9046-4d2e-9a35-35ac7a6b1ea9:
+            uuid: 98fa0ed1-9046-4d2e-9a35-35ac7a6b1ea9
+            region: content
+            configuration:
+              id: 'field_block:node:basic_page:field_show_search'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: boolean
+                label: above
+                settings:
+                  format: default
+                  format_custom_false: ''
+                  format_custom_true: ''
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
 _core:
   default_config_hash: egoqekY7Y05ZVs89hslZON2V1Z_sugg5v0iduRo04NU
 id: node.basic_page.default
 targetEntityType: node
 bundle: basic_page
 mode: default
-content: {  }
+content:
+  field_show_search:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
   field_header_background: true
   field_header_color_theme: true

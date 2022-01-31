@@ -49,23 +49,40 @@
     /* Theme variables
     ****************/
     --color-primary: #006c72;
+    --color-primary-hover: #00595d;
     --color-link: var(--color-primary);
     --color-text: var(--theme-color);
+    --color-black: #000;
+    --color-white: #fff;
+    --color-gray: #e7ebe3;
+    --color-gray-secondary: #f2f4f0;
+    --color-gray-hover: #ced3c8;
+    --color-gray-medium: #666;
+    --color-gray-medium-secondary: #474747;
+    --color-gray-darker: #585858;
+    --color-gray-dark: #282828;
+    --color-error: #f00;
+    --color-cta: #d8204c;
+    --color-cta-hover: #c21d44;
+    --color-secondary: #8db2c3;
+    --color-secondary-light: #c6d9df;
+    --color-light-mint: #9bc2bd;
 
     /* Header */
-    --header-height: 95px;
-    --header-height-mobile: 80px;
-    --header-background-color: #fff;
-    --header-font-family: 'Arial', 'Helvetica', 'sans-serif';
-    --header-text-color: var(--color-text);
-    --header-font-weight: 400;
+    --header-height: 76px;
+    --header-height-mobile: 60px;
+    --header-font-family: "Arial", "Helvetica", "sans-serif";
+    --header-font-weight: bold;
+    --header-text-color: #232323;
     --header-selected-text-color: var(--color-primary);
-    --header-border-color: #ededed;
+    --header-border-color: #ced3c8;
+    --header-background-color: #fff;
 
     /* Meta menu */
-    --meta-menu-height: 40px;
+    --meta-menu-height: 44px;
+    --meta-menu-height-mobile: 32px;
     --meta-menu-background-color: #f7f7f7;
-    --meta-menu-text-color: #006c72;
+    --meta-menu-text-color: var(--color-primary);
 
     /* Button */
     --button-border-radius: 33px;

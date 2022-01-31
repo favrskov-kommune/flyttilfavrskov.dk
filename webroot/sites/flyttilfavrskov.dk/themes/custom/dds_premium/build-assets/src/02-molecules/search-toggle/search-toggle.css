@@ -1,38 +1,55 @@
+/**
+ * Type: Molecules.
+ * Search toggle.
+ */
+
 .search-toggle {
     cursor: pointer;
     flex-shrink: 0;
     flex-grow: 0;
     height: 100%;
+    width: 50%;
     display: inline-flex;
     align-items: center;
-    color: #232323;
-    letter-spacing: 0.37px;
-    transition: margin-left 0.2s;
-
-    @media (--viewport-md-max) {
-        width: 50%;
-        flex-shrink: 0;
-        flex-grow: 0;
-        font-size: 12px;
-        border-right: solid 1px var(--header-border-color);
-        justify-content: center;
-    }
+    justify-content: center;
+    text-decoration: none;
+    border-right: solid 1px var(--header-border-color);
+    border-top: solid 1px var(--header-border-color);
 
     @media (--viewport-lg-min) {
-        margin-left: 20px;
-        padding-left: 40px;
-        border-left: solid 1px #ee8027;
-        height: 72%;
+        height: 100%;
+        font-size: var(--base-font-size);
     }
 
-    @media (--viewport-xl-min) {
-        margin-left: 77px;
+    @media (--viewport-md-max) {
+        border-left: 1px solid var(--header-border-color);
     }
 
     .icon--search {
         width: 26px;
         height: 26px;
-        fill: var(--header-selected-text-color);
-        margin-right: 13px;
+        fill: var(--color-cta);
+        margin-right: 10px;
+
+        @media (--viewport-md-max) {
+            width: 22px;
+            height: 22px;
+        }
+    }
+
+    &__label {
+        font-family: var(--base-font-family);
+        font-weight: var(--base-font-weight);
+        font-size: var(--base-font-size-medium);
+        text-transform: uppercase;
+        color: var(--color-gray-medium);
+
+        @media (--viewport-md-max) {
+            font-size: var(--base-font-size-small);
+        }
+
+        @media (--viewport-xs-max) {
+            display: none;
+        }
     }
 }

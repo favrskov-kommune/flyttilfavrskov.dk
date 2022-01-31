@@ -17,25 +17,25 @@ bundle: dds_image
 mode: default
 content:
   field_media_category:
+    type: entity_reference_autocomplete_tags
     weight: 2
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
-    type: entity_reference_autocomplete_tags
-    region: content
   field_media_image:
     type: image_focal_point
     weight: 1
+    region: content
     settings:
-      preview_image_style: media_library
       progress_indicator: throbber
+      preview_image_style: media_library
       preview_link: true
       offsets: '50,50'
     third_party_settings: {  }
-    region: content
   langcode:
     type: language_select
     weight: 2

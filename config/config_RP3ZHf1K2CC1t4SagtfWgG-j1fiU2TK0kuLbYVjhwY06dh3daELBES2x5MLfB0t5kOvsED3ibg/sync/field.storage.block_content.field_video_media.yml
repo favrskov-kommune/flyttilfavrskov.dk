@@ -2,12 +2,12 @@ uuid: 730f3a12-a837-4e8a-be81-deeb660823fe
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - dds_layout_block_video
   module:
     - block_content
     - media
+  enforced:
+    module:
+      - dds_layout_block_video
 _core:
   default_config_hash: WZDw4kZ7s9KDN_xH_GSPVL-YnrkOPDsf55uaHcGJTLs
 id: block_content.field_video_media
