@@ -1,7 +1,7 @@
 .theme-secondary {
     --theme-background-color: #e7ebe3;
     --theme-color: #474747;
-    --theme-button-background-color: #db6010;
+    --theme-button-background-color: var(--color-cta);
     --theme-button-color: #fff;
     --theme-link-color: #474747;
     --theme-divider-background-color: #fff;

@@ -42,7 +42,7 @@
         height: 16px;
         display: none;
         position: relative;
-        right: 16%;
+        right: 36px;
     }
 
     &.active {
