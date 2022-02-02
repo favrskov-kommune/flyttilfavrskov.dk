@@ -97,7 +97,7 @@ function ftf_parcelling_preprocess_paragraph__parcel(&$variables) {
   if($media_file) {
     $variables['parcel_specs'] = [
       'title' => $media_file->label(),
-      'url' => Url::fromUri($media_file->field_media_file->entity->createFileUrl())->toString(),
+      'url' => $media_file->field_media_file->entity->createFileUrl(),
       'icon' => 'document',
     ];
   }
