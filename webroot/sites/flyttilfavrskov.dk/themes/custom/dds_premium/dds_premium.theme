@@ -684,6 +684,7 @@ function dds_premium_preprocess_layout_block__document_list(array &$variables) {
       $data = $item->getValue();
       if (!empty($data)) {
         $links[] = [
+          'type' => 'link',
           'title' => $data['title'],
           'url' => $data['uri']
         ];
@@ -693,9 +694,11 @@ function dds_premium_preprocess_layout_block__document_list(array &$variables) {
 
   if (!empty($links)) {
     foreach ($links as $link) {
+      $url = ($link['type'] === 'link') ? Url::fromUri($link['url']) : Url::fromUserInput($link['url']);
+
       $variables['links'][] = [
         'title' => $link['title'],
-        'url' => urldecode(Url::fromUserInput($link['url'])->toString()),
+        'url' => urldecode($url->toString()),
         'icon' => 'document',
       ];
     }
