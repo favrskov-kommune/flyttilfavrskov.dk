@@ -673,7 +673,7 @@ function dds_premium_preprocess_layout_block__document_list(array &$variables) {
       if (!empty($item)) {
         $links[] = [
           'title' => $item->label(),
-          'url' => 'internal:/' . $item->field_media_file->entity->createFileUrl(),
+          'url' => $item->field_media_file->entity->createFileUrl(),
         ];
       }
     }
@@ -695,7 +695,7 @@ function dds_premium_preprocess_layout_block__document_list(array &$variables) {
     foreach ($links as $link) {
       $variables['links'][] = [
         'title' => $link['title'],
-        'url' => Url::fromUri($link['url'])->toString(),
+        'url' => urldecode(Url::fromUserInput($link['url'])->toString()),
         'icon' => 'document',
       ];
     }
