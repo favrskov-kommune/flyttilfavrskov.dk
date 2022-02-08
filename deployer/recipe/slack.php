@@ -1,41 +1,34 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: mma
- * Date: 03/11/2017
- * Time: 14.29
- */
-
 namespace Deployer;
 
 use Deployer\Exception\GracefulShutdownException;
 use Deployer\Utility\Httpie;
 
-desc('Custom tasks to handle failed deployment');
-task('slack:notify:failed', function () {
-  if (!get('slack_webhook', false)) {
+set('disable_slack', false);
+
+desc('Process slack notification');
+task('slack:notify', function () {
+  if (get('disable_slack')) {
     return;
   }
 
-  set('slack_text', 'Deploy to *{{target}}* failed');
-
   $attachment = [
-    'title' => get('slack_title'),
+    'title' => get('application', 'Unknown project'),
     'text' => get('slack_text'),
-    'color' => 'CF423F',
+    'color' => get('slack_color'),
     'mrkdwn_in' => ['text'],
   ];
 
   Httpie::post(get('slack_webhook'))->body(['attachments' => [$attachment]])->send();
 })
-  ->once()
-  //  ->shallow()
-  ->setPrivate()
-;
+  ->shallow()
+  ->setPrivate();
 
-desc('Custom tasks to initiate slack messages');
-task('slack:notify:init', function () {
-  set('slack_webhook', 'https://hooks.slack.com/services/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');
+desc('Send slack notification about initiating deployment');
+task('slack:notify:start', function () {
+  if (get('disable_slack')) {
+    return;
+  }
 
   set('slack_color', 'E6E6E6');
 
@@ -45,19 +38,56 @@ task('slack:notify:init', function () {
     throw new GracefulShutdownException('You need to specify Git user.name and user.email in your Git configuration.');
   }
   $git_user = !empty($git_name) ? (!empty($git_email) ? $git_name.' <'.$git_email.'>' : $git_name) : $git_email;
+
   set('slack_text', '_'.$git_user.'_ is deploying `{{branch}}` branch to *{{target}}*');
 
 })
   ->once()
-  ->shallow()
   ->setPrivate()
 ;
 
-task('slack:notify:success:init', function(){
+
+desc('Send slack notification about successful deployment');
+task('slack:notify:success', function () {
+  if (get('disable_slack')) {
+    return;
+  }
+
   set('slack_color', '4AB441');
+  set('slack_text', 'Deploy to *{{target}}* successful');
+
 })
   ->once()
-  ->shallow()
+  ->setPrivate();
+
+desc('Send slack notification about failed deployment');
+task('slack:notify:failed', function () {
+  if (get('disable_slack')) {
+    return;
+  }
+
+  set('slack_color', 'CF423F');
+  set('slack_text', 'Deploy to *{{target}}* failed');
+
+})
+  ->once()
+  ->setPrivate();
+
+task('slack:check', function () {
+  if (!get('disable_slack') && !get('slack_webhook', false)) {
+    if(askConfirmation('No slack-hook found. Would you like to continue without sending slack notifications?')){
+      set('disable_slack', true);
+    } else {
+      throw new GracefulShutdownException('Cancelling deploy');
+    }
+  }
+})
+  ->once()
   ->setPrivate();
 
 
+after('slack:notify:start', 'slack:notify');
+
+after('slack:notify:success', 'slack:notify');
+
+after('slack:notify:failed', 'slack:notify');
