@@ -4,7 +4,16 @@
  */
 
 .theme-red {
-  --theme-background-color: var(--color-cta);
-  --theme-contact-block-item-background: var(--color-white);
-  --theme-contact-block-item-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    --theme-background-color: var(--color-cta);
+    --theme-color: var(--color-black);
+    --theme-link-color: var(--color-black);
+    --theme-divider-background-color: var(--color-black);
+    --theme-accordion-border-color: var(--color-primary);
+    --theme-accordion-background-color: var(--color-white);
+    --theme-accordion-text-color: var(--color-black);
+    --theme-input-border: #e5e3de;
+    --theme-input-color-marked: var(--color-primary);
+    --theme-input-background-color: var(--color-white);
+    --theme-button-background-color: var(--color-cta);
+    --theme-button-color: var(--color-white);
 }

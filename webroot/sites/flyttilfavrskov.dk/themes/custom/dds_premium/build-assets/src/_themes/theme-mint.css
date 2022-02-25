@@ -1,22 +1,14 @@
-/**
- * Type: Theme.
- * Mint theme.
- */
-
 .theme-mint {
-  --theme-background-color: var(--color-light-mint);
-  --theme-accordion-border-color: var(--color-primary);
-  --theme-accordion-background-color: var(--color-white);
-  --theme-accordion-toggle-text-color: var(--color-black);
-  --theme-pager-previous-background-color: var(--color-white);
-  --theme-pager-previous-link-color: var(--color-primary);
-  --theme-pager-next-background-color: var(--color-primary);
-  --theme-pager-next-link-color: var(--color-white);
-  --theme-pager-active-link-color: var(--color-white);
-  --theme-pager-active-background-color: var(--color-cta);
-  --theme-pager-link-color: var(--color-black);
-  --theme-pager-previous-arrow-color: var(--color-primary);
-  --theme-pager-next-arrow-color: var(--color-white);
-  --theme-contact-block-item-background: var(--color-white);
-  --theme-contact-block-item-box-shadow: 0 4px 44px rgba(0, 0, 0, .1);
+    --theme-background-color: var(--color-light-mint);
+    --theme-color: var(--color-black);
+    --theme-link-color: var(--color-black);
+    --theme-divider-background-color: var(--color-black);
+    --theme-accordion-border-color: var(--color-primary);
+    --theme-accordion-background-color: var(--color-white);
+    --theme-accordion-text-color: var(--color-black);
+    --theme-input-border: #e5e3de;
+    --theme-input-color-marked: var(--color-primary);
+    --theme-input-background-color: var(--color-white);
+    --theme-button-background-color: var(--color-cta);
+    --theme-button-color: var(--color-white);
 }

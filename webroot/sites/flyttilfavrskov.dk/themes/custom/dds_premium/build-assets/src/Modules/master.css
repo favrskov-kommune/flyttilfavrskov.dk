@@ -1,10 +1,11 @@
 /* Themes */
 @import '../_themes/themes.css';
 @import '../_themes/theme-blue.css';
-@import '../_themes/theme-red.css';
+@import '../_themes/theme-douce.css';
+@import '../_themes/theme-grayblue.css';
+@import '../_themes/theme-mint.css';
 @import '../_themes/theme-yellow.css';
 @import '../_themes/theme-seashell.css';
-@import '../_themes/theme-green.css';
 @import '../_themes/theme-gray-1.css';
 @import '../_themes/theme-gray-2.css';
 @import '../_themes/theme-gray-3.css';
