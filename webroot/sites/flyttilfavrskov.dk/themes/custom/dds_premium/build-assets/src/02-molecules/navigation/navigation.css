@@ -90,24 +90,17 @@
     }
 
     &__link {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
         height: 100%;
         position: relative;
         text-decoration: none;
-        font-size: var(--base-font-size-medium);
         font-weight: var(--header-font-weight);
         color: var(--color-white);
         text-align: center;
-        line-height: var(--header-height-mobile);
         transition: background-color .3s;
-
-        @media (--viewport-lg-min) {
-            line-height: var(--header-height
-            );
-            font-size: var(--base-font-size-large
-            );
-        }
 
         &::after {
             content: '';

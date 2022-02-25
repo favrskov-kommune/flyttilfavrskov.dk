@@ -14,7 +14,10 @@
     justify-content: center;
     text-decoration: none;
     border-right: solid 1px var(--header-border-color);
-    border-top: solid 1px var(--header-border-color);
+
+    @media (--viewport-lg-min) {
+        border-top: solid 1px var(--header-border-color);
+    }
 
     @media (--viewport-lg-min) {
         height: 100%;
@@ -40,13 +43,8 @@
     &__label {
         font-family: var(--base-font-family);
         font-weight: var(--base-font-weight);
-        font-size: var(--base-font-size-medium);
         text-transform: uppercase;
         color: var(--color-gray-medium);
-
-        @media (--viewport-md-max) {
-            font-size: var(--base-font-size-small);
-        }
 
         @media (--viewport-xs-max) {
             display: none;

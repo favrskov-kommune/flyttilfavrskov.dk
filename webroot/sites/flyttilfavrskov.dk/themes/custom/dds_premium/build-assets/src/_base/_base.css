@@ -29,14 +29,10 @@ body {
     position: relative;
     width: 100%;
     margin: 0;
-    padding: 0;
+    padding-top: var(--header-height-mobile);
 
-    @media (--viewport-md-max) {
-        padding-bottom: var(--header-height-mobile);
-    }
-
-    @media (--viewport-lg-min) {
-        padding-top: calc(var(--header-height));
+    @media (--viewport-sm-min) {
+        padding-top: var(--header-height);
     }
 
     &.no-scroll {

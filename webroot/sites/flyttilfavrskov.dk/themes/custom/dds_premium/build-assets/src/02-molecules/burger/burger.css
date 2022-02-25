@@ -13,7 +13,10 @@
     width: 50%;
     height: 100%;
     text-decoration: none;
-    border-top: solid 1px var(--header-border-color);
+
+    @media (--viewport-lg-min) {
+        border-top: solid 1px var(--header-border-color);
+    }
 
     &__lines {
         margin-top: -1px;
@@ -41,16 +44,11 @@
     }
 
     &__label {
-        font-size: var(--base-font-size-medium);
         font-family: var(--base-font-family);
         font-weight: var(--base-font-weight);
         color: var(--color-gray-medium);
         text-transform: uppercase;
         margin-left: 15px;
-
-        @media (--viewport-md-max) {
-            font-size: var(--base-font-size-small);
-        }
 
         @media (--viewport-xs-max) {
             display: none;
