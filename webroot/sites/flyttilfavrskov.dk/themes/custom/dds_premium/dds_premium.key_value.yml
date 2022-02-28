@@ -2,10 +2,10 @@ color_themes:
   primary:
     name: Primary
   secondary:
-    name: Seccondary
+    name: Secondary
   douce:
     name: Douce
   grayblue:
-    name: Gray
+    name: Gray/Blue
   mint:
     name: Mint
