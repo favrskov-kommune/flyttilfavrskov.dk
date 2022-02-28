@@ -72,6 +72,7 @@ processor_settings:
   aggregated_field: {  }
   dds_ancestors: {  }
   dds_primary_image: {  }
+  entity_status: {  }
   html_filter:
     weights:
       preprocess_index: -15
