@@ -83,7 +83,7 @@
         "flickity-as-nav-for": "^2.0.1",
         "flickity-fade": "^1.0.0",
         "hoverintent": "^2.2.1",
-        "lodash": "^4.17.15",
+        "lodash": "^4.17.21",
         "novicell-lazyload": "^2.1.6",
         "vue": "^2.6.10"
     },
