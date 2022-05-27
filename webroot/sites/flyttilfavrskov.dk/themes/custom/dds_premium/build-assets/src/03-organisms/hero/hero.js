@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
             oembed.html = oembed.html.replace(oldSrc, newSrc);
           } else if (oembed.html.indexOf('video') > -1) {
             oembed.html = oembed.html.replace('<video', '<video autoplay playsinline loop muted');
+            oembed.html = oembed.html.replace('controls>', '>');
           }
           iframeWrapper.innerHTML = oembed.html;
         }
