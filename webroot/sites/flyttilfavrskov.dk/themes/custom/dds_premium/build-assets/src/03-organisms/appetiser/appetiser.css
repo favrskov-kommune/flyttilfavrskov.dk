@@ -18,6 +18,10 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
+
+        @media (--viewport-sm-max) {
+            order: 2;
+        }
     }
 
     &__content {
@@ -56,6 +60,8 @@
         background-size: cover;
 
         @media (--viewport-sm-max) {
+            order: 1;
+
             &::before {
                 content: '';
                 padding-top: 56.25%;
