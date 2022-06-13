@@ -1,0 +1,11 @@
+uuid: 1d831ca9-fd81-4a47-8662-e79b03577a17
+langcode: da
+status: true
+dependencies:
+  config:
+    - block_content.type.spacer
+id: block_content.spacer
+target_entity_type_id: block_content
+target_bundle: spacer
+default_langcode: site_default
+language_alterable: false

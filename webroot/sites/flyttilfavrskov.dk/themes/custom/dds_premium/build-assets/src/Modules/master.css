@@ -47,6 +47,7 @@
 @import '../02-molecules/breadcrumb/breadcrumb.css';
 @import '../02-molecules/link-list/link-list.css';
 @import '../02-molecules/parcel/parcel.css';
+@import '../02-molecules/spacer/spacer.css';
 
 /* Organisms */
 @import '../03-organisms/header/header.css';

@@ -1,0 +1,34 @@
+uuid: 923c90d1-2f6a-4172-9ef1-91d411df3b7e
+langcode: da
+status: true
+dependencies:
+  config:
+    - block_content.type.spacer
+    - field.field.block_content.spacer.field_height
+id: block_content.spacer.default
+targetEntityType: block_content
+bundle: spacer
+mode: default
+content:
+  field_height:
+    type: options_select
+    weight: 26
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }
