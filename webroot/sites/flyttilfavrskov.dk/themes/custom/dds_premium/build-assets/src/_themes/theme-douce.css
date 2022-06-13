@@ -9,6 +9,6 @@
     --theme-input-border: #e5e3de;
     --theme-input-color-marked: var(--color-primary);
     --theme-input-background-color: var(--color-white);
-    --theme-button-background-color: var(--color-white);
-    --theme-button-color: var(--color-black);
+    --theme-button-background-color: var(--color-magenta);
+    --theme-button-color: var(--color-white);
 }
