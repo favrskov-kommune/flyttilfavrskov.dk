@@ -834,6 +834,10 @@ function _create_hero(ContentEntityInterface $entity, array $fields): array {
     ->addClass(($orientation !== 'left' ? 'hero--' . $orientation : ''))
     ->addClass($text_color != 'dark' ? 'hero--inverted' : '');
 
+  if ($video_oembed['url'] !== 'null') {
+    $attributes->addClass('hero--has-video');
+  }
+
   if (isset($fields['title']) && $entity->hasField($fields['title']) && !$entity->get($fields['title'])->isEmpty()) {
     $title = $entity->get($fields['title'])->value;
   }

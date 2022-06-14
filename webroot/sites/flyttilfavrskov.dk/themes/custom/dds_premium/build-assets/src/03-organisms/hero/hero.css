@@ -17,6 +17,14 @@
         z-index: 1;
     }
 
+    &.hero--has-video {
+        height: unset;
+
+        .row, .hero__content {
+            height: 100%;
+        }
+    }
+
     iframe,
     video {
         position: absolute;
