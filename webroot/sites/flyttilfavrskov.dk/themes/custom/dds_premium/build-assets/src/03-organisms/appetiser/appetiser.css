@@ -13,6 +13,17 @@
         }
     }
 
+    &.appetiser--full-width {
+        .container {
+            max-width: none;
+        }
+
+        .appetiser__content {
+            max-width: none;
+            align-items: center;
+        }
+    }
+
     &__content-wrapper {
         width: 100%;
         display: flex;

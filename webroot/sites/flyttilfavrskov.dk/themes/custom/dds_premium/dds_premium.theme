@@ -606,6 +606,7 @@ function dds_premium_preprocess_layout_block__appetizer(array &$variables) {
   }
 
   if ($layout_id === 'layout_onecol' && isset($layout_settings['column_width']) && $layout_settings['column_width'] === 'fullwidth') {
+    $variables['attributes']['class'][] = 'appetiser--full-width';
     $variables['image_style'] = 'appetiser_wide';
   }
   elseif ($layout_id === 'layout_onecol') {
