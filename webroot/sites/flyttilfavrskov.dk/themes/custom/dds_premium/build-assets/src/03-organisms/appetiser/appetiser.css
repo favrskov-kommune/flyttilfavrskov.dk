@@ -19,8 +19,9 @@
         }
 
         .appetiser__content {
-            max-width: none;
             align-items: center;
+            max-width: none;
+            text-align: center;
         }
     }
 
