@@ -6,7 +6,7 @@ a.button {
     cursor: pointer;
     text-decoration: none;
     border-radius: var(--button-border-radius);
-    height: var(--button-height);
+    min-height: var(--button-height);
     padding: var(--button-padding);
     background-color: var(--theme-button-background-color);
     color: var(--theme-button-color);
