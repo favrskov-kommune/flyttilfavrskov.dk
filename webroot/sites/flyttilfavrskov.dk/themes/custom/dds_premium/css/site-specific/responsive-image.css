@@ -10,6 +10,11 @@
 .hero.hero--image-added img {
     object-fit: cover;
     width: 100%;
+
+    @media (--viewport-ms-max) {
+        height: 0;
+        padding-bottom: 56.25%;
+    }
 }
 
 .hero.hero--image-added .container {

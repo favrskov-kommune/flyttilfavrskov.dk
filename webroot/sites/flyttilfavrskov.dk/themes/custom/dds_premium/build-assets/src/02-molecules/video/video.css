@@ -14,13 +14,11 @@
     }
 
     &::before {
-        @media (--viewport-sm-min) {
-            content: '';
-            display: block;
-            float: left;
-            padding-top: 56.25%;
-            z-index: -1;
-        }
+        content: '';
+        display: block;
+        float: left;
+        padding-top: 56.25%;
+        z-index: -1;
     }
 
     iframe,
