@@ -109,8 +109,8 @@
 .col-xs-offset-12 {
     box-sizing: border-box;
     flex: 0 0 auto;
-    padding-right: var(--half-gutter-width);
-    padding-left: var(--half-gutter-width);
+    padding-right: var(--half-gutter-width--mobile);
+    padding-left: var(--half-gutter-width--mobile);
 }
 
 .col-xs {
