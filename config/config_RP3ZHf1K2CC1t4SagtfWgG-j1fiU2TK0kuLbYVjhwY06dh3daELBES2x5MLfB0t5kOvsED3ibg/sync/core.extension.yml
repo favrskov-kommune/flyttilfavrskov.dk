@@ -30,6 +30,7 @@ module:
   ctools: 0
   datetime: 0
   dbal: 0
+  dblog: 0
   dds_content_hierarchy: 0
   dds_content_hierarchy_breadcrumb: 0
   dds_content_hierarchy_path: 0
@@ -103,7 +104,7 @@ module:
   metatag: 0
   metatag_open_graph: 0
   minifyhtml: 0
-  dblog: 0
+  mysql: 0
   node: 0
   options: 0
   page_cache: 0
