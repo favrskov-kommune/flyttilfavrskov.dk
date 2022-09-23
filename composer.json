@@ -24,7 +24,7 @@
     }
   ],
   "require": {
-    "php": "^7.4",
+    "php": "^8.1",
     "composer/installers": "^1.2",
     "cweagans/composer-patches": "^1.6.5",
     "deployer/deployer": "^6.3",
@@ -40,7 +40,6 @@
     "drupal/media_pdf_thumbnail": "^3.8",
     "drupal/view_unpublished": "^1.0",
     "drush/drush": "^10.0",
-    "elasticsearch/elasticsearch": "^7.0",
     "novicell/dds_content": "~1.0",
     "novicell/dds_content_hierarchy": "~2.3",
     "novicell/dds_cookieinfo": "~2.0",
@@ -51,12 +50,10 @@
     "novicell/dds_news": "^1.1",
     "novicell/dds_performance": "^1.1",
     "novicell/dds_premium_installer": "~2.0",
-    "novicell/dds_search": "~1.0",
     "novicell/dds_seo": "~1.0",
     "novicell/dds_site_settings": "~2.0",
     "novicell/dds_tools": "^1.2",
     "novicell/dds_translation": "^1.0",
-    "ongr/elasticsearch-dsl": "6.1.0",
     "oomphinc/composer-installers-extender": "^2.0",
     "symfony/filesystem": "~3.0",
     "zaporylie/composer-drupal-optimizations": "^1.1"
