@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "52b0041b789a298bebdbcb764183ee94",
+    "content-hash": "ba2c6275b9ec24ad5c405067fd8f48b4",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1143,9 +1143,6 @@
                 "url": "https://api.github.com/repos/deployphp/recipes/zipball/4c2470771249fbff55eb56429c29d74590768fa0",
                 "reference": "4c2470771249fbff55eb56429c29d74590768fa0",
                 "shasum": ""
-            },
-            "replace": {
-                "deployer/recipes": "self.version"
             },
             "require-dev": {
                 "deployer/deployer": "^6.3"
@@ -2984,6 +2981,76 @@
             }
         },
         {
+            "name": "drupal/elasticsearch_connector",
+            "version": "7.0.0-alpha3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/elasticsearch_connector.git",
+                "reference": "8.x-7.0-alpha3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/elasticsearch_connector-8.x-7.0-alpha3.zip",
+                "reference": "8.x-7.0-alpha3",
+                "shasum": "0752fc8b83479d10cdf314fc4225f6de17cc08e9"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "makinacorpus/php-lucene": "^1.0.2",
+                "nodespark/des-connector": "7.x-dev"
+            },
+            "require-dev": {
+                "behat/mink-selenium2-driver": "^1.3",
+                "bex/behat-screenshot": "^1.2",
+                "drupal/coder": "^8.2",
+                "drupal/drupal-extension": "master-dev",
+                "drupal/search_api": "^1.4",
+                "phpmd/phpmd": "^2.6",
+                "phpmetrics/phpmetrics": "^2.3"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-7.0-alpha3",
+                    "datestamp": "1602658539",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Nikolay Ignatov",
+                    "homepage": "http://www.nodespark.com",
+                    "email": "nignatov@nodespark.com",
+                    "role": "Creator and Maintainer"
+                },
+                {
+                    "name": "See other contributors",
+                    "homepage": "https://www.drupal.org/node/2159059/committers"
+                },
+                {
+                    "name": "sokru",
+                    "homepage": "https://www.drupal.org/user/388235"
+                },
+                {
+                    "name": "ygerasimov",
+                    "homepage": "https://www.drupal.org/user/257311"
+                }
+            ],
+            "description": "Elasticsearch Connector module for Drupal.",
+            "homepage": "https://www.drupal.org/project/elasticsearch_connector",
+            "support": {
+                "source": "https://github.com/nodespark/elasticsearch_connector",
+                "issues": "https://www.drupal.org/project/issues/elasticsearch_connector"
+            }
+        },
+        {
             "name": "drupal/entity_clone",
             "version": "1.0.0-beta7",
             "source": {
@@ -3798,17 +3865,17 @@
         },
         {
             "name": "drupal/media_pdf_thumbnail",
-            "version": "3.8.0-rc5",
+            "version": "3.7.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/media_pdf_thumbnail.git",
-                "reference": "8.x-3.8-rc5"
+                "reference": "8.x-3.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/media_pdf_thumbnail-8.x-3.8-rc5.zip",
-                "reference": "8.x-3.8-rc5",
-                "shasum": "568acbdef4c5e184293671cd34c38785ee9b9613"
+                "url": "https://ftp.drupal.org/files/projects/media_pdf_thumbnail-8.x-3.7.zip",
+                "reference": "8.x-3.7",
+                "shasum": "006c91cd4d84f02ebb419f582e0bf816973924f9"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -3818,11 +3885,11 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.8-rc5",
-                    "datestamp": "1622041469",
+                    "version": "8.x-3.7",
+                    "datestamp": "1605365309",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -4405,6 +4472,123 @@
             }
         },
         {
+            "name": "drupal/search_api",
+            "version": "1.25.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/search_api.git",
+                "reference": "8.x-1.25"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/search_api-8.x-1.25.zip",
+                "reference": "8.x-1.25",
+                "shasum": "823bf5a6010cd08c7d1b287fcd855fbf81140e39"
+            },
+            "require": {
+                "drupal/core": "^9.2 || ^10.0"
+            },
+            "conflict": {
+                "drupal/search_api_solr": "2.* || 3.0 || 3.1"
+            },
+            "require-dev": {
+                "drupal/language_fallback_fix": "@dev",
+                "drupal/search_api_autocomplete": "@dev",
+                "drupal/search_api_db": "*"
+            },
+            "suggest": {
+                "drupal/facets": "Adds the ability to create faceted searches.",
+                "drupal/search_api_autocomplete": "Allows adding autocomplete suggestions to search fields.",
+                "drupal/search_api_solr": "Adds support for using Apache Solr as a backend."
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.25",
+                    "datestamp": "1658149514",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9 || ^10"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas Seidl",
+                    "homepage": "https://www.drupal.org/u/drunken-monkey"
+                },
+                {
+                    "name": "Nick Veenhof",
+                    "homepage": "https://www.drupal.org/u/nick_vh"
+                },
+                {
+                    "name": "See other contributors",
+                    "homepage": "https://www.drupal.org/node/790418/committers"
+                }
+            ],
+            "description": "Provides a generic framework for modules offering search capabilities.",
+            "homepage": "https://www.drupal.org/project/search_api",
+            "support": {
+                "source": "https://git.drupalcode.org/project/search_api",
+                "issues": "https://www.drupal.org/project/issues/search_api",
+                "irc": "irc://irc.freenode.org/drupal-search-api"
+            }
+        },
+        {
+            "name": "drupal/search_api_exclude_entity",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/search_api_exclude_entity.git",
+                "reference": "8.x-1.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/search_api_exclude_entity-8.x-1.3.zip",
+                "reference": "8.x-1.3",
+                "shasum": "a4b8fd96bceedf4f6cff382f531585613325a702"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "drupal/search_api": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.3",
+                    "datestamp": "1603201534",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "beltofte",
+                    "homepage": "https://www.drupal.org/user/151799"
+                }
+            ],
+            "description": "Exclude one or more entities from being indexed in Search API.",
+            "homepage": "https://www.drupal.org/project/search_api_exclude_entity",
+            "support": {
+                "source": "https://git.drupalcode.org/project/search_api_exclude_entity"
+            }
+        },
+        {
             "name": "drupal/simple_sitemap",
             "version": "3.11.0",
             "source": {
@@ -4854,6 +5038,73 @@
             "time": "2022-06-18T20:57:19+00:00"
         },
         {
+            "name": "elasticsearch/elasticsearch",
+            "version": "v7.17.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elastic/elasticsearch-php.git",
+                "reference": "1890f9d7fde076b5a3ddcf579a802af05b2e781b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elastic/elasticsearch-php/zipball/1890f9d7fde076b5a3ddcf579a802af05b2e781b",
+                "reference": "1890f9d7fde076b5a3ddcf579a802af05b2e781b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": ">=1.3.7",
+                "ezimuel/ringphp": "^1.1.2",
+                "php": "^7.3 || ^8.0",
+                "psr/log": "^1|^2|^3"
+            },
+            "require-dev": {
+                "ext-yaml": "*",
+                "ext-zip": "*",
+                "mockery/mockery": "^1.2",
+                "phpstan/phpstan": "^0.12",
+                "phpunit/phpunit": "^9.3",
+                "squizlabs/php_codesniffer": "^3.4",
+                "symfony/finder": "~4.0"
+            },
+            "suggest": {
+                "ext-curl": "*",
+                "monolog/monolog": "Allows for client-level logging and tracing"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/autoload.php"
+                ],
+                "psr-4": {
+                    "Elasticsearch\\": "src/Elasticsearch/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0",
+                "LGPL-2.1-only"
+            ],
+            "authors": [
+                {
+                    "name": "Zachary Tong"
+                },
+                {
+                    "name": "Enrico Zimuel"
+                }
+            ],
+            "description": "PHP Client for Elasticsearch",
+            "keywords": [
+                "client",
+                "elasticsearch",
+                "search"
+            ],
+            "support": {
+                "issues": "https://github.com/elastic/elasticsearch-php/issues",
+                "source": "https://github.com/elastic/elasticsearch-php/tree/v7.17.0"
+            },
+            "time": "2022-02-03T13:40:04+00:00"
+        },
+        {
             "name": "enlightn/security-checker",
             "version": "v1.10.0",
             "source": {
@@ -4918,6 +5169,116 @@
                 "source": "https://github.com/enlightn/security-checker/tree/v1.10.0"
             },
             "time": "2022-02-21T22:40:16+00:00"
+        },
+        {
+            "name": "ezimuel/guzzlestreams",
+            "version": "3.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ezimuel/guzzlestreams.git",
+                "reference": "abe3791d231167f14eb80d413420d1eab91163a8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ezimuel/guzzlestreams/zipball/abe3791d231167f14eb80d413420d1eab91163a8",
+                "reference": "abe3791d231167f14eb80d413420d1eab91163a8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Stream\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Fork of guzzle/streams (abandoned) to be used with elasticsearch-php",
+            "homepage": "http://guzzlephp.org/",
+            "keywords": [
+                "Guzzle",
+                "stream"
+            ],
+            "support": {
+                "source": "https://github.com/ezimuel/guzzlestreams/tree/3.0.1"
+            },
+            "time": "2020-02-14T23:11:50+00:00"
+        },
+        {
+            "name": "ezimuel/ringphp",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ezimuel/ringphp.git",
+                "reference": "92b8161404ab1ad84059ebed41d9f757e897ce74"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ezimuel/ringphp/zipball/92b8161404ab1ad84059ebed41d9f757e897ce74",
+                "reference": "92b8161404ab1ad84059ebed41d9f757e897ce74",
+                "shasum": ""
+            },
+            "require": {
+                "ezimuel/guzzlestreams": "^3.0.1",
+                "php": ">=5.4.0",
+                "react/promise": "~2.0"
+            },
+            "replace": {
+                "guzzlehttp/ringphp": "self.version"
+            },
+            "require-dev": {
+                "ext-curl": "*",
+                "phpunit/phpunit": "~9.0"
+            },
+            "suggest": {
+                "ext-curl": "Guzzle will use specific adapters if cURL is present"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Ring\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Fork of guzzle/RingPHP (abandoned) to be used with elasticsearch-php",
+            "support": {
+                "source": "https://github.com/ezimuel/ringphp/tree/1.2.0"
+            },
+            "time": "2021-11-16T11:51:30+00:00"
         },
         {
             "name": "grasmash/expander",
@@ -5594,16 +5955,16 @@
         },
         {
             "name": "laminas/laminas-servicemanager",
-            "version": "3.17.0",
+            "version": "3.16.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-servicemanager.git",
-                "reference": "360be5f16955dd1edbcce1cfaa98ed82a17f02ec"
+                "reference": "863c66733740cd36ebf5e700f4258ef2c68a2a24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-servicemanager/zipball/360be5f16955dd1edbcce1cfaa98ed82a17f02ec",
-                "reference": "360be5f16955dd1edbcce1cfaa98ed82a17f02ec",
+                "url": "https://api.github.com/repos/laminas/laminas-servicemanager/zipball/863c66733740cd36ebf5e700f4258ef2c68a2a24",
+                "reference": "863c66733740cd36ebf5e700f4258ef2c68a2a24",
                 "shasum": ""
             },
             "require": {
@@ -5625,7 +5986,7 @@
             },
             "require-dev": {
                 "composer/package-versions-deprecated": "^1.0",
-                "laminas/laminas-coding-standard": "~2.4.0",
+                "laminas/laminas-coding-standard": "~2.3.0",
                 "laminas/laminas-container-config-test": "^0.7",
                 "laminas/laminas-dependency-plugin": "^2.1.2",
                 "mikey179/vfsstream": "^1.6.10@alpha",
@@ -5681,7 +6042,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2022-09-22T11:33:46+00:00"
+            "time": "2022-07-27T14:58:17+00:00"
         },
         {
             "name": "laminas/laminas-stdlib",
@@ -5819,6 +6180,59 @@
                 }
             ],
             "time": "2021-02-22T09:20:06+00:00"
+        },
+        {
+            "name": "makinacorpus/php-lucene",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/makinacorpus/php-lucene-query.git",
+                "reference": "9ed20290de24cd7af05b4d465813be5541422067"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/makinacorpus/php-lucene-query/zipball/9ed20290de24cd7af05b4d465813be5541422067",
+                "reference": "9ed20290de24cd7af05b4d465813be5541422067",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan-deprecation-rules": "^1.0",
+                "phpunit/phpunit": "^9.5",
+                "squizlabs/php_codesniffer": "^3.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MakinaCorpus\\Lucene\\": "src/"
+                },
+                "exclude-from-classmap": [
+                    "src/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Pierre Rineau",
+                    "email": "pierre.rineau@makina-corpus.com"
+                },
+                {
+                    "name": "Makina Corpus",
+                    "homepage": "http://makina-corpus.com"
+                }
+            ],
+            "description": "Minimalistic, feature-rich, PHP Lucene syntax query builder",
+            "homepage": "http://github.com/makinacorpus/php-lucene",
+            "support": {
+                "issues": "https://github.com/makinacorpus/php-lucene-query/issues",
+                "source": "https://github.com/makinacorpus/php-lucene-query/tree/1.2.0"
+            },
+            "time": "2022-09-06T13:39:15+00:00"
         },
         {
             "name": "masterminds/html5",
@@ -6048,6 +6462,59 @@
             "time": "2022-09-04T07:30:47+00:00"
         },
         {
+            "name": "nodespark/des-connector",
+            "version": "7.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nodespark/des-connector.git",
+                "reference": "4b1dcd340055a137b4c84f21fa9614a3c2f3e64d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nodespark/des-connector/zipball/4b1dcd340055a137b4c84f21fa9614a3c2f3e64d",
+                "reference": "4b1dcd340055a137b4c84f21fa9614a3c2f3e64d",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2 || ^8.0",
+                "ruflin/elastica": "dev-master"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.4.1 || ^9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "nodespark\\DESConnector\\": "src/DESConnector/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1"
+            ],
+            "authors": [
+                {
+                    "name": "Nikolay Ignatov",
+                    "email": "nignatov@nodespark.com",
+                    "homepage": "http://www.nodespark.com",
+                    "role": "Creator and Maintainer"
+                },
+                {
+                    "name": "Lachezar Valchev",
+                    "email": "lachezar.valchev@gmail.com",
+                    "homepage": "https://drupal.org/u/lachezar.valchev",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "An abstraction library for Elasticsearch Connector module for Drupal.",
+            "homepage": "https://github.com/nodespark/des-connector",
+            "support": {
+                "issues": "https://github.com/nodespark/des-connector/issues",
+                "source": "https://github.com/nodespark/des-connector"
+            },
+            "time": "2022-07-13T13:24:24+00:00"
+        },
+        {
             "name": "novicell/dds_content",
             "version": "1.7.0",
             "dist": {
@@ -6156,6 +6623,28 @@
                 "GPL-2.0+"
             ],
             "description": "Novicell DDS Editors",
+            "homepage": "https://www.novicell.dk",
+            "keywords": [
+                "Novicell"
+            ]
+        },
+        {
+            "name": "novicell/dds_elasticsearch",
+            "version": "1.9.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://packages.drupal.dk/php/~/up/ver_yohwk/novicelldds_elasticsearch-1-9-0.zip"
+            },
+            "require": {
+                "drupal/elasticsearch_connector": ">=5.0 <= 7.0",
+                "drupal/search_api": "^1.0",
+                "ongr/elasticsearch-dsl": ">=6.0 < 8.0"
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Novicell elastic search integration",
             "homepage": "https://www.novicell.dk",
             "keywords": [
                 "Novicell"
@@ -6330,6 +6819,27 @@
             ]
         },
         {
+            "name": "novicell/dds_search",
+            "version": "1.8.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://packages.drupal.dk/php/~/up/ver_dfVmU/novicelldds_search-1-8-0.zip"
+            },
+            "require": {
+                "drupal/search_api_exclude_entity": "^1.0",
+                "novicell/dds_elasticsearch": "^1.6"
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Novicell DDS Search",
+            "homepage": "https://www.novicell.dk",
+            "keywords": [
+                "Novicell"
+            ]
+        },
+        {
             "name": "novicell/dds_seo",
             "version": "1.3.3",
             "dist": {
@@ -6434,6 +6944,119 @@
             ]
         },
         {
+            "name": "nyholm/dsn",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Nyholm/dsn.git",
+                "reference": "9445621b426bac8c0ca161db8cd700da00a4e618"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Nyholm/dsn/zipball/9445621b426bac8c0ca161db8cd700da00a4e618",
+                "reference": "9445621b426bac8c0ca161db8cd700da00a4e618",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "^5.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Nyholm\\Dsn\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tobias Nyholm",
+                    "email": "tobias.nyholm@gmail.com"
+                }
+            ],
+            "description": "Parse your DSN strings in a powerful and flexible way",
+            "homepage": "http://tnyholm.se",
+            "keywords": [
+                "database",
+                "dsn",
+                "dsn parser",
+                "parser"
+            ],
+            "support": {
+                "issues": "https://github.com/Nyholm/dsn/issues",
+                "source": "https://github.com/Nyholm/dsn/tree/2.0.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/Nyholm",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-11-18T09:23:29+00:00"
+        },
+        {
+            "name": "ongr/elasticsearch-dsl",
+            "version": "6.1",
+            "dist": {
+                "type": "path",
+                "url": "packages/elasticsearch-dsl",
+                "reference": "412ffe6c3a6763c2f567f3e4581523d3303b1571"
+            },
+            "require": {
+                "paragonie/random_compat": "*",
+                "php": "^8.0",
+                "symfony/serializer": "^3.0|^4.0|^5.0"
+            },
+            "require-dev": {
+                "elasticsearch/elasticsearch": "^6.0",
+                "phpunit/phpunit": "~6.0",
+                "squizlabs/php_codesniffer": "^3.0"
+            },
+            "suggest": {
+                "elasticsearch/elasticsearch": "This library is for elasticsearch/elasticsearch client to enhance it with DSL functionality."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "6.1": "6.1"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ONGR\\ElasticsearchDSL\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "ONGR\\ElasticsearchDSL\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "ONGR team",
+                    "homepage": "http://www.ongr.io"
+                }
+            ],
+            "description": "Elasticsearch DSL library",
+            "homepage": "http://ongr.io",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "oomphinc/composer-installers-extender",
             "version": "2.0.1",
             "source": {
@@ -6489,6 +7112,56 @@
                 "source": "https://github.com/oomphinc/composer-installers-extender/tree/2.0.1"
             },
             "time": "2021-12-15T12:32:42+00:00"
+        },
+        {
+            "name": "paragonie/random_compat",
+            "version": "v9.99.100",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/paragonie/random_compat.git",
+                "reference": "996434e5492cb4c3edcb9168db6fbb1359ef965a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/996434e5492cb4c3edcb9168db6fbb1359ef965a",
+                "reference": "996434e5492cb4c3edcb9168db6fbb1359ef965a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">= 7"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*|5.*",
+                "vimeo/psalm": "^1"
+            },
+            "suggest": {
+                "ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paragon Initiative Enterprises",
+                    "email": "security@paragonie.com",
+                    "homepage": "https://paragonie.com"
+                }
+            ],
+            "description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
+            "keywords": [
+                "csprng",
+                "polyfill",
+                "pseudorandom",
+                "random"
+            ],
+            "support": {
+                "email": "info@paragonie.com",
+                "issues": "https://github.com/paragonie/random_compat/issues",
+                "source": "https://github.com/paragonie/random_compat"
+            },
+            "time": "2020-10-15T08:29:30+00:00"
         },
         {
             "name": "pear/archive_tar",
@@ -7251,6 +7924,152 @@
                 "source": "https://github.com/ralouphie/getallheaders/tree/develop"
             },
             "time": "2019-03-08T08:55:37+00:00"
+        },
+        {
+            "name": "react/promise",
+            "version": "v2.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/reactphp/promise.git",
+                "reference": "234f8fd1023c9158e2314fa9d7d0e6a83db42910"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/reactphp/promise/zipball/234f8fd1023c9158e2314fa9d7d0e6a83db42910",
+                "reference": "234f8fd1023c9158e2314fa9d7d0e6a83db42910",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.3 || ^5.7 || ^4.8.36"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/functions_include.php"
+                ],
+                "psr-4": {
+                    "React\\Promise\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jan Sorgalla",
+                    "email": "jsorgalla@gmail.com",
+                    "homepage": "https://sorgalla.com/"
+                },
+                {
+                    "name": "Christian Lück",
+                    "email": "christian@clue.engineering",
+                    "homepage": "https://clue.engineering/"
+                },
+                {
+                    "name": "Cees-Jan Kiewiet",
+                    "email": "reactphp@ceesjankiewiet.nl",
+                    "homepage": "https://wyrihaximus.net/"
+                },
+                {
+                    "name": "Chris Boden",
+                    "email": "cboden@gmail.com",
+                    "homepage": "https://cboden.dev/"
+                }
+            ],
+            "description": "A lightweight implementation of CommonJS Promises/A for PHP",
+            "keywords": [
+                "promise",
+                "promises"
+            ],
+            "support": {
+                "issues": "https://github.com/reactphp/promise/issues",
+                "source": "https://github.com/reactphp/promise/tree/v2.9.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/WyriHaximus",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/clue",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-02-11T10:27:51+00:00"
+        },
+        {
+            "name": "ruflin/elastica",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ruflin/Elastica.git",
+                "reference": "c1a49d53f23fa4d931658f074d862ab71edb512d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ruflin/Elastica/zipball/c1a49d53f23fa4d931658f074d862ab71edb512d",
+                "reference": "c1a49d53f23fa4d931658f074d862ab71edb512d",
+                "shasum": ""
+            },
+            "require": {
+                "elasticsearch/elasticsearch": "^7.10",
+                "ext-json": "*",
+                "nyholm/dsn": "^2.0.0",
+                "php": "^7.2 || ^8.0",
+                "psr/log": "^1.0 || ^2.0 || ^3.0",
+                "symfony/deprecation-contracts": "^2.2 || ^3.0",
+                "symfony/polyfill-php73": "^1.19"
+            },
+            "require-dev": {
+                "aws/aws-sdk-php": "^3.155",
+                "guzzlehttp/guzzle": "^6.3 || ^7.2",
+                "phpstan/phpstan": "^1.5",
+                "phpstan/phpstan-phpunit": "^1.1",
+                "phpunit/phpunit": "^8.5.8 || ^9.4",
+                "symfony/phpunit-bridge": "^6.0"
+            },
+            "suggest": {
+                "aws/aws-sdk-php": "Allow using IAM authentication with Amazon ElasticSearch Service",
+                "guzzlehttp/guzzle": "Allow using guzzle as transport",
+                "monolog/monolog": "Logging request"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "7.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Elastica\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Ruflin",
+                    "homepage": "http://ruflin.com/"
+                }
+            ],
+            "description": "Elasticsearch Client",
+            "homepage": "http://elastica.io/",
+            "keywords": [
+                "client",
+                "search"
+            ],
+            "support": {
+                "issues": "https://github.com/ruflin/Elastica/issues",
+                "source": "https://github.com/ruflin/Elastica/tree/master"
+            },
+            "time": "2022-09-05T07:53:34+00:00"
         },
         {
             "name": "spatie/pdf-to-image",
@@ -10688,17 +11507,17 @@
         },
         {
             "name": "drupal/devel",
-            "version": "4.2.0",
+            "version": "4.1.5",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/devel.git",
-                "reference": "4.2.0"
+                "reference": "4.1.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/devel-4.2.0.zip",
-                "reference": "4.2.0",
-                "shasum": "8beda0a39f412aa593f489d9c6c52d49162c7b30"
+                "url": "https://ftp.drupal.org/files/projects/devel-4.1.5.zip",
+                "reference": "4.1.5",
+                "shasum": "7d0b4397215f615a67ba80aab777e93918d497f9"
             },
             "require": {
                 "doctrine/common": "^2.7",
@@ -10717,8 +11536,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "4.2.0",
-                    "datestamp": "1663879913",
+                    "version": "4.1.5",
+                    "datestamp": "1646072825",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -10836,5 +11655,5 @@
         "php": "^8.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.3.0"
 }
