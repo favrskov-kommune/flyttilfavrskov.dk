@@ -61,6 +61,7 @@
     "ongr/elasticsearch-dsl": "6.1",
     "oomphinc/composer-installers-extender": "^2.0",
     "symfony/filesystem": "~3.0",
+    "vlucas/phpdotenv": "^5.3",
     "zaporylie/composer-drupal-optimizations": "^1.1",
     "deployer/deployer": "^6.3",
     "deployer/recipes": "^6.1"
