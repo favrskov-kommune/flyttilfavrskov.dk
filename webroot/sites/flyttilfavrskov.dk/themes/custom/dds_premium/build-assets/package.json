@@ -1,13 +1,6 @@
 {
-    "name": "novicell-frontend",
-    "description": "Novicells Default Frontend Package - used in all Novicell related projects as a base front-end framework.",
-    "version": "5.0.0",
-    "homepage": "http://www.novicell.dk",
-    "author": "Novicell",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Novicell/novicell-frontend.git"
-    },
+    "name": "premium-frontend",
+    "description": "Premium frontend.",
     "config": {
         "DIST": "dist",
         "CSS_MODULES": "src/Modules/*.css"
@@ -33,10 +26,10 @@
         "buildDrupal": "node config/drupal/babel-minify.js",
         "generateFavicon": "cross-env-shell real-favicon generate config/favicon/faviconDescription.json $npm_package_config_DIST/favicons/faviconData.json $npm_package_config_DIST/favicons"
     },
+    "license": "MIT",
     "fractal": {
         "main": "config/fractal.js"
     },
-    "license": "MIT",
     "devDependencies": {
         "@babel/cli": "7.2.3",
         "@babel/core": "7.4.0",
@@ -71,11 +64,11 @@
         "svg-sprite": "1.5.0",
         "terser-webpack-plugin": "^2.1.3",
         "uglify-js": "3.5.3",
-        "vue-loader": "15.7.0",
-        "vue-template-compiler": "2.6.10",
-        "webpack": "4.29.6",
-        "webpack-bundle-analyzer": "^3.5.2",
-        "webpack-cli": "3.3.0"
+        "vue-loader": "^15.9.7",
+        "vue-template-compiler": "^2.6.14",
+        "webpack": "^5.38.1",
+        "webpack-bundle-analyzer": "^4.4.2",
+        "webpack-cli": "^4.7.2"
     },
     "dependencies": {
         "animated-scroll-to": "^2.0.10",
