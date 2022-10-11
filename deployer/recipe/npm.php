@@ -9,10 +9,8 @@ namespace Deployer;
 
 desc('Run npm commands');
 task('deploy:npm:install', function () {
-  if(get('use_npm', false)) {
-    run('cd {{theme_exec_path_absolute}} && npm ci && npm run build:prod');
-  }
+    if (get('use_npm', false)) {
+        run('cd {{theme_exec_path_absolute}} && npm ci && npm run build:prod');
+    }
 })
   ->setPrivate();
-
-
