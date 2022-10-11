@@ -36,6 +36,11 @@ body.adminimal-admin-toolbar header.header {
         align-items: center;
         order: 0;
 
+        @media (--viewport-lg-min) {
+            padding-right: var(--half-gutter-width--mobile);
+            padding-left: var(--half-gutter-width--mobile);
+        }
+
         @media (--viewport-md-max) {
             order: 1;
         }
