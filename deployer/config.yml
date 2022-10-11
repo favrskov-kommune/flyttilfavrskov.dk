@@ -1,0 +1,40 @@
+.base: &base
+  application: flyttilfavrskov
+  roles: app
+  branch: develop
+  slack_webhook: ""
+  drupal_site: "flyttilfavrskov.dk"
+  docroot: 'webroot'
+  repository: "https://github.com/favrskov-kommune/flyttilfavrskov.dk.git"
+  git_tty: true
+  shared_dirs:
+    - 'webroot/sites/flyttilfavrskov.dk/files'
+  shared_files:
+    - 'webroot/sites/flyttilfavrskov.dk/settings.local.php'
+    - 'webroot/sites/flyttilfavrskov.dk/services.local.yml'
+    - 'webroot/sites/sites.local.php'
+    - '.env'
+  writable_dirs:
+    - 'webroot/sites/flyttilfavrskov.dk/files'
+  allow_anonymous_stats: false
+  keep_releases: 5
+  drupal_core_version: 9
+  use_locale_update: true
+  use_composer: true
+  use_npm: true
+  theme_exec_path: sites/flyttilfavrskov.dk/themes/custom/dds_premium/build-assets
+prod:
+  <<: *base
+  branch: master
+  deploy_path: /var/www/flyttilfavrskov.dk
+  hostname: '81.95.247.233'
+  user: favrskov
+  disable_slack: true
+staging:
+  <<: *base
+  branch: develop
+  deploy_path: /data/www/vhost/staging.flyttilfavrskov.drupal.dk
+  hostname: '81.95.247.117'
+  user: favrskov
+  disable_slack: true
+  keep_releases: 2
