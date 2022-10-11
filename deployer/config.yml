@@ -28,13 +28,13 @@ prod:
   branch: master
   deploy_path: /var/www/flyttilfavrskov.dk
   hostname: '81.95.247.233'
-  user: favrskov
+  user: flyttilfavrskov
   disable_slack: true
 staging:
   <<: *base
   branch: develop
   deploy_path: /data/www/staging.flyttilfavrskov.drupal.dk
   hostname: '81.95.247.117'
-  user: favrskov
+  user: flyttilfavrskov
   disable_slack: true
   keep_releases: 2
