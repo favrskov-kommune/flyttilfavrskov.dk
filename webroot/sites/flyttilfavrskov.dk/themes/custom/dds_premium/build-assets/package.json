@@ -78,7 +78,7 @@
         "hoverintent": "^2.2.1",
         "lodash": "^4.17.15",
         "novicell-lazyload": "^2.1.6",
-        "vue": "^2.6.10"
+        "vue": "^2.6.14"
     },
     "bin": {
         "createComponent": "./config/createComponent/index.js"
