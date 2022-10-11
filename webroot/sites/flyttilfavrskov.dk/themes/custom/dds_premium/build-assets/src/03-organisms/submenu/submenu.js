@@ -23,20 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
     return scrollWidth - scrollLeft === width;
   }
 
-  function handleShadow(submenus, scroll, resize) {
-    for (let i = 0; i < submenus.length; i += 1) {
-      const submenu = submenus[i];
-      if (scroll) {
-        toggleShadow(submenu);
-        submenu.addEventListener('scroll', () => {
-          toggleShadow(submenu);
-        }, false);
-      } else if (resize) {
-        toggleShadow(submenu);
-      }
-    }
-  }
-
   function toggleShadow(submenu) {
     const shadowRight = submenu.parentNode.querySelector('.js-submenu-shadow-right');
     const shadowLeft = submenu.parentNode.querySelector('.js-submenu-shadow-left');
@@ -54,6 +40,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  function handleShadow(submenuArray, scroll, resize) {
+    for (let i = 0; i < submenuArray.length; i += 1) {
+      const submenu = submenuArray[i];
+      if (scroll) {
+        toggleShadow(submenu);
+        submenu.addEventListener('scroll', () => {
+          toggleShadow(submenu);
+        }, false);
+      } else if (resize) {
+        toggleShadow(submenu);
+      }
+    }
+  }
+
   handleShadow(submenus, true, false);
   window.addEventListener('resize', debounce(() => {
     handleShadow(submenus, false, true);
@@ -66,7 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const element = document.getElementById(hash);
       if (hash.length > 0 && element) {
         e.preventDefault();
-        const topPosition = (element.getBoundingClientRect().top + window.pageYOffset) - getHeaderHeight();
+        const yOffset = window.pageYOffset;
+        const topPosition = (element.getBoundingClientRect().top + yOffset) - getHeaderHeight();
         animateScrollTo(topPosition, {
           speed: 200,
         });
