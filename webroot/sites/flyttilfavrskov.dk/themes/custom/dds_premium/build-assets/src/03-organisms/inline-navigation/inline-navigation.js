@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < inlineNavigations.length; i += 1) {
       const current = inlineNavigations[i];
 
-
       if (window.innerWidth < 768) {
         setTimeout(() => {
           const flkty = new Flickity(current, {
