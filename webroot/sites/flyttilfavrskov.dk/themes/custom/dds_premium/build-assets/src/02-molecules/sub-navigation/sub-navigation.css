@@ -82,16 +82,17 @@
                 transform: translateX(5px);
             }
         }
-
-        .icon--arrow-right {
-            fill: var(--header-selected-text-color);
-            width: 8px;
-            height: 15px;
-            transition: transform 0.3s;
-            will-change: transform;
-            margin-left: 20px;
-            flex-shrink: 0;
-        }
     }
 }
+
+.sub-navigation .icon--arrow-right {
+    fill: var(--header-selected-text-color);
+    width: 8px;
+    height: 15px;
+    transition: transform 0.3s;
+    will-change: transform;
+    margin-left: 20px;
+    flex-shrink: 0;
+}
+
 
