@@ -138,6 +138,9 @@
       "drupal/paragraphs": {
         "(#2901390) Integrity constraint violation: 1048 Column 'langcode' cannot be null": "https://www.drupal.org/files/issues/2019-08-10/paragraphs-set_langcode_widgets-290139_updated.patch"
       },
+      "drupal/advagg": {
+        "(#3258389) PHP 8.1 deprecations warnings: Passing null to parameter (stripos, rtrim)": "https://www.drupal.org/files/issues/2022-10-11/3258389-47.patch"
+      },
       "drupal/mailchimp":{
         "(FAVR2-107) Change LoggerChannel to LoggeChannelInterface": "./patches/FAVR2-107-mailchimp-multiple-emails.patch"
       }
