@@ -8,6 +8,7 @@
   repository: "https://github.com/favrskov-kommune/flyttilfavrskov.dk.git"
   git_tty: true
   shared_dirs:
+    - 'private-files'
     - 'webroot/sites/flyttilfavrskov.dk/files'
   shared_files:
     - 'webroot/sites/flyttilfavrskov.dk/settings.local.php'
@@ -15,6 +16,7 @@
     - 'webroot/sites/sites.local.php'
     - '.env'
   writable_dirs:
+    - 'private-files'
     - 'webroot/sites/flyttilfavrskov.dk/files'
   allow_anonymous_stats: false
   keep_releases: 5
