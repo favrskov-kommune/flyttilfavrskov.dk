@@ -1,5 +1,6 @@
 <?php
 
+use Drupal\Core\Extension\Extension;
 use Drupal\Core\Site\Settings;
 
 
@@ -34,4 +35,17 @@ function ftf_core_page_attachments(array &$attachments) {
     $attachments['#attached']['library'][] = 'ftf_core/ftf_core.cookiebot_head';
   }
 //  $attachments['#attached']['library'][] = 'ftf_core/ftf_core.cookiebot_body';
+}
+
+/**
+ * Implements hook_system_info_alter().
+ *
+ * @param array $info
+ * @param Extension $file
+ * @param $type
+ */
+function ftf_core_system_info_alter(array &$info, Extension $file, $type) {
+  if (empty($info['project']) && in_array($info['name'], ['DDS Content', 'DDS Performance', 'DDS Premium'])) {
+    $info['dependencies'] = [];
+  }
 }
