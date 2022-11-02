@@ -25,20 +25,19 @@
     }
 
     form {
-        display: flex;
         width: 100%;
         max-width: 990px;
         margin: 0 -25px;
         flex-direction: column;
+    }
 
-        > div:first-child {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
+    form > div:first-child {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
 
-            @media (--viewport-md-min) {
-                flex-direction: row;
-            }
+        @media (--viewport-md-min) {
+            flex-direction: row;
         }
     }
 
@@ -48,7 +47,7 @@
         padding-right: 25px;
         margin-top: 20px;
 
-        &:not(.form-item-mailchimp-lists-gdpr-consent) {
+        &:not(.form-item-mailchimp-lists-gdpr-consent) {
             @media (--viewport-md-min) {
                 width: 50%;
             }
