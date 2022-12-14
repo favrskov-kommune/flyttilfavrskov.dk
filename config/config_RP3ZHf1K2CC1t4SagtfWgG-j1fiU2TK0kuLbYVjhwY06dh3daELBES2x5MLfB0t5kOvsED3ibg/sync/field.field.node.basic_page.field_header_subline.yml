@@ -10,11 +10,8 @@ dependencies:
     - text
 third_party_settings:
   allowed_formats:
-    header_html: header_html
-    restricted_html: '0'
-    basic_html: '0'
-    full_html: '0'
-    plain_text: '0'
+    allowed_formats:
+      - header_html
 _core:
   default_config_hash: 9VvaJC4bEczxROEUs3GS8UhPNs9j04voOxYZq5Mypbc
 id: node.basic_page.field_header_subline
