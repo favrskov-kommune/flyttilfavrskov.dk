@@ -10,11 +10,8 @@ dependencies:
     - text
 third_party_settings:
   allowed_formats:
-    header_html: header_html
-    restricted_html: '0'
-    basic_html: '0'
-    full_html: '0'
-    plain_text: '0'
+    allowed_formats:
+      - header_html
 _core:
   default_config_hash: h02GT855AOGPF2VspcqDxjcEUasrxyTbVSWRkE9HdHU
 id: node.news_item.field_header_subline

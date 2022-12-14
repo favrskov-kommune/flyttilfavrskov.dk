@@ -13,11 +13,8 @@ dependencies:
       - dds_layout_block_mailchimp
 third_party_settings:
   allowed_formats:
-    basic_html: basic_html
-    restricted_html: '0'
-    headers: '0'
-    full_html: '0'
-    plain_text: '0'
+    allowed_formats:
+      - basic_html
 _core:
   default_config_hash: CbjENQDW3DODxcqzFIHc8rNAEtvtiVvhsNohapBptFQ
 id: block_content.mailchimp.field_mailchimp_text

@@ -10,11 +10,8 @@ dependencies:
     - text
 third_party_settings:
   allowed_formats:
-    header_html: header_html
-    restricted_html: '0'
-    basic_html: '0'
-    full_html: '0'
-    plain_text: '0'
+    allowed_formats:
+      - header_html
 id: node.parcelling.field_header_subline
 field_name: field_header_subline
 entity_type: node
