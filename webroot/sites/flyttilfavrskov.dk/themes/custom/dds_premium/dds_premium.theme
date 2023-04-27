@@ -702,7 +702,7 @@ function dds_premium_preprocess_layout_block__document_list(array &$variables) {
 
   if (!empty($links)) {
     foreach ($links as $link) {
-      $url = ($link['type'] === 'link') ? Url::fromUri($link['url']) : Url::fromUserInput($link['url']);
+      $url = (isset($link['type']) && $link['type'] === 'link') ? Url::fromUri($link['url']) : Url::fromUserInput($link['url']);
 
       $variables['links'][] = [
         'title' => $link['title'],
