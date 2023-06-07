@@ -18,7 +18,13 @@
     }
 
     &.hero--has-video {
-        height: unset;
+        height: 0;
+        padding-bottom: 56.25%;
+
+        @media (--viewport-lg-min) {
+            height: 540px;
+            padding-bottom: 0;
+        }
 
         .row, .hero__content {
             height: 100%;
