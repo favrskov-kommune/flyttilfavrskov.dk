@@ -43,6 +43,7 @@
     "drupal/editor_advanced_link": "^2.0",
     "drupal/mailchimp": "^2.0",
     "drupal/media_pdf_thumbnail": "^3.7",
+    "drupal/upgrade_status": "^4.0",
     "drupal/view_unpublished": "^1.0",
     "drush/drush": "^10.0",
     "elasticsearch/elasticsearch": "^7.0",
